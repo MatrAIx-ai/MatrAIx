@@ -74,6 +74,15 @@ __all__ = [
     "OsAppEvalTasksResponse",
     "CuaEvalTask",
     "CuaEvalTasksResponse",
+    "SynthesisCategoryAttribute",
+    "SynthesisCategorySummary",
+    "SynthesisCategoryEdge",
+    "SynthesisOverviewResponse",
+    "SynthesisSubgraphNode",
+    "SynthesisSubgraphEdge",
+    "SynthesisSubgraphResponse",
+    "SynthesisNodeEdgeView",
+    "SynthesisNodeDetail",
 ]
 
 #: Domains the playground (and the rest of the Studio) supports. Mirrors the
@@ -945,3 +954,94 @@ class PersonaCohortDetailResponse(BaseModel):
     matchedCount: int
     personaIds: List[str] = Field(default_factory=list)
     personas: List[Dict[str, Any]] = Field(default_factory=list)
+
+
+# --------------------------------------------------------------------------- #
+# Synthesis Studio (Persona Full DAG browsing)
+# --------------------------------------------------------------------------- #
+class SynthesisCategoryAttribute(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    id: str
+    label: str
+    valuesCount: int
+    degree: int
+
+
+class SynthesisCategorySummary(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    name: str
+    nodeCount: int
+    attributeCount: int
+    helperCount: int
+    avgTopo: float
+    internalEdgeCount: int
+    attributes: List[SynthesisCategoryAttribute]
+
+
+class SynthesisCategoryEdge(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    source: str
+    target: str
+    count: int
+    weightSum: float
+
+
+class SynthesisOverviewResponse(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    categories: List[SynthesisCategorySummary]
+    edges: List[SynthesisCategoryEdge]
+    counts: Dict[str, int]
+
+
+class SynthesisSubgraphNode(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    id: str
+    label: str
+    category: str
+    layer: int
+    valuesCount: int
+    emit: bool
+    inDegree: int
+    outDegree: int
+
+
+class SynthesisSubgraphEdge(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    source: str
+    target: str
+    weight: float
+    relation: str
+
+
+class SynthesisSubgraphResponse(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    center: str
+    up: int
+    down: int
+    truncated: bool
+    nodes: List[SynthesisSubgraphNode]
+    edges: List[SynthesisSubgraphEdge]
+
+
+class SynthesisNodeEdgeView(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    id: str
+    label: str
+    relation: str
+    weight: float
+
+
+class SynthesisNodeDetail(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    id: str
+    label: str
+    category: str
+    description: str
+    type: str
+    values: List[str]
+    prior: List[float]
+    parents: List[str]
+    inDegree: int
+    outDegree: int
+    inEdges: List[SynthesisNodeEdgeView]
+    outEdges: List[SynthesisNodeEdgeView]

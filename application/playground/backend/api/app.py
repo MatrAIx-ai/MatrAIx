@@ -1158,6 +1158,50 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             ]
         }
 
+    # ----------------------------------------------------------------- #
+    # Synthesis Studio: Persona Full DAG browsing
+    # ----------------------------------------------------------------- #
+    @app.get(
+        "/api/synthesis/graph/overview",
+        response_model=schemas.SynthesisOverviewResponse,
+        tags=["synthesis"],
+    )
+    def synthesis_overview(services: AppState = Depends(get_services)):
+        """Category-level aggregate view of the Persona Full DAG."""
+        return services.persona_synthesis.overview()
+
+    @app.get(
+        "/api/synthesis/graph/subgraph",
+        response_model=schemas.SynthesisSubgraphResponse,
+        tags=["synthesis"],
+    )
+    def synthesis_subgraph(
+        node: str,
+        up: int = Query(1, ge=0, le=4),
+        down: int = Query(1, ge=0, le=4),
+        services: AppState = Depends(get_services),
+    ):
+        """Hop-limited local subgraph around one node, with topological layers."""
+        try:
+            return services.persona_synthesis.subgraph(node, up=up, down=down)
+        except KeyError:
+            raise HTTPException(status_code=404, detail=f"unknown graph node: {node}")
+
+    @app.get(
+        "/api/synthesis/nodes/{node_id}",
+        response_model=schemas.SynthesisNodeDetail,
+        tags=["synthesis"],
+    )
+    def synthesis_node_detail(
+        node_id: str,
+        services: AppState = Depends(get_services),
+    ):
+        """Full detail for one graph node: values, prior, and incident edges."""
+        try:
+            return services.persona_synthesis.node_detail(node_id)
+        except KeyError:
+            raise HTTPException(status_code=404, detail=f"unknown graph node: {node_id}")
+
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build
     # exists; in dev the Vite server serves the SPA and proxies /api here.

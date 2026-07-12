@@ -20,6 +20,7 @@ from typing import TYPE_CHECKING, Optional
 if TYPE_CHECKING:  # pragma: no cover - typing only
     from backend.service.harbor_job_service import HarborJobService
     from backend.service.persona_pool_service import PersonaPoolService
+    from backend.service.persona_synthesis_service import PersonaSynthesisService
 
 from backend.service.config import ConfigManager
 
@@ -39,6 +40,7 @@ class AppState:
     config: ConfigManager
     harbor_jobs: "HarborJobService"
     persona_pool: "PersonaPoolService"
+    persona_synthesis: "PersonaSynthesisService"
 
     def shutdown(self) -> None:
         """Release background resources."""
@@ -55,13 +57,16 @@ def build_state(catalog_path: Optional[str] = None) -> AppState:
     config = ConfigManager()
     from backend.service.harbor_job_service import HarborJobService
     from backend.service.persona_pool_service import PersonaPoolService
+    from backend.service.persona_synthesis_service import PersonaSynthesisService
 
     harbor_jobs = HarborJobService.from_repo()
     persona_pool = PersonaPoolService.from_repo(repo_root=harbor_jobs.repo_root)
+    persona_synthesis = PersonaSynthesisService.from_repo(harbor_jobs.repo_root)
     return AppState(
         config=config,
         harbor_jobs=harbor_jobs,
         persona_pool=persona_pool,
+        persona_synthesis=persona_synthesis,
     )
 
 
