@@ -43,7 +43,13 @@ class OracleAgent(BaseAgent):
         return "1.0.0"
 
     async def setup(self, environment: BaseEnvironment) -> None:
-        return
+        from harbor.utils.crew_personas import upload_crew_personas_for_task
+
+        await upload_crew_personas_for_task(
+            environment,
+            self._task.paths.task_dir,
+            logger=self.logger,
+        )
 
     def _resolve_solution_paths(self) -> tuple[Path, Path]:
         task_os = self._task.config.environment.os

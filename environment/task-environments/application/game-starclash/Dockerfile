@@ -31,9 +31,8 @@ RUN mkdir -p /logs /app/input /app/scripts /app/persona/datasets/bench-dev-sampl
 COPY scripts/ /app/scripts/
 COPY input/ /app/input/
 
-# Full persona dataset referenced by crew_manifest*.yaml's persona_paths
-# (e.g. "persona/datasets/bench-dev-sample/persona_0042.yaml"), placed as a
-# sibling of scripts/ so run_arena.py's own repo-root walk-up (it walks up
-# from its script directory looking for a "persona/datasets" directory)
-# resolves those relative paths correctly inside the container.
-COPY persona/ /app/persona/
+# Persona YAML is NOT copied here. Per application/README.md and
+# environment/README.md, profiles live under repo-root persona/datasets/ and
+# Harbor uploads crew_manifest persona_paths into /app/persona/... at trial
+# start (harbor.utils.crew_personas, same pattern as PersonaMixin's upload
+# of a single agent persona to /app/input/persona.yaml).

@@ -10,7 +10,7 @@ Multi-persona social simulation: several synthetic personas share one continuous
 | Brain (free smoke, no API key) | `MockArenaBrain` (`--brain mock`) |
 | Brain (vision / computer-use) | `BrowserVisionBrain` (`--brain vision`), needs `ANTHROPIC_API_KEY` + `uv run playwright install chromium` |
 | Brain (external decision-maker, e.g. no API key at all) | `FileBridgeBrain` (`--brain bridge`), needs `ARENA_BRIDGE_DIR` |
-| Persona | `persona/datasets/bench-dev-sample/persona_0042.yaml` (already referenced in the default `crew_manifest.yaml`) |
+| Persona | Repo-root `persona/datasets/bench-dev-sample/` (referenced in `input/crew_manifest*.yaml`; uploaded at Harbor trial start — **not** copied into the task or Docker image; see `application/README.md`) |
 
 Free smoke run, no API key required:
 
@@ -96,6 +96,16 @@ wait
 Compare `outcome_status`/success-rate and rubric scores (see `reporting.json`) across the resulting `/tmp/arena_meticulous_run/` vs `/tmp/arena_careless_run/` vs `/tmp/arena_mixed_run/` (`final_state.json` for the scoreboard, `game_log.json` for full reasoning trajectories) to see how detail-orientation composition shifts survival outcomes and reasoning-trajectory tone.
 
 `cog_detail_orientation` is just one of ~60 `cog_*` dimensions available per persona (see any file under `persona/datasets/bench-dev-sample/persona_*.yaml`) — the same filter-and-build-a-manifest approach works for any other dimension (e.g. `cog_risk_framing`, `cog_assertiveness`, `cog_patience`) to study a different persona-style research question.
+
+### Persona loading (repo convention)
+
+Per [`application/README.md`](../../README.md) and [`environment/README.md`](../../../environment/README.md):
+
+- Persona YAML lives under **repo-root** `persona/datasets/bench-dev-sample/`.
+- `input/crew_manifest*.yaml` lists `persona_paths` pointing at those files.
+- **Do not** copy persona YAML into `application/tasks/game-starclash/persona/` or the Docker image.
+- **Harbor trials** upload crew personas into `/app/persona/...` at agent setup (`harbor.utils.crew_personas`), the multi-file analogue of the single `persona_path` upload to `/app/input/persona.yaml` used by survey/chat tasks.
+- **Local runs** from the MatrAIx repo root resolve the same paths via `run_arena.py` directory walk-up.
 
 ## Output
 
