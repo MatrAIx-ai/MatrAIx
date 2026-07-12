@@ -14,9 +14,10 @@
 # Usage:  nohup bash scripts/run_full_harvest.sh > output/harvest_run.log 2>&1 &
 set -uo pipefail
 
-TASK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-REPO_ROOT="$(cd "$TASK_DIR/../../.." && pwd)"
-cd "$TASK_DIR"
+# BASE_DIR is the generation/ folder (this script lives in generation/scripts/).
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REPO_ROOT="$(cd "$BASE_DIR/../../../.." && pwd)"
+cd "$BASE_DIR"
 mkdir -p output
 
 if [ -f "$REPO_ROOT/.venv/bin/activate" ]; then

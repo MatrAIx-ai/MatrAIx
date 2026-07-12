@@ -24,7 +24,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── path setup (no editable install needed) ──────────────────────
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+# This file lives at <repo>/application/tasks/price-perturbation-survey/
+# generation/verify_pipeline.py — five levels down from the repo root.
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "environment" / "agents" / "personabench" / "agents"))
 
