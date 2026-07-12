@@ -222,6 +222,70 @@ def test_2025_rank_fields_are_mapped_deterministically(extractor_module):
     ) == []
 
 
+@pytest.mark.parametrize(
+    ("rank", "expected"),
+    [
+        (1, "Core value"),
+        (3, "Core value"),
+        (4, "Important"),
+        (6, "Important"),
+        (7, "Moderate"),
+        (10, "Moderate"),
+        (11, "Minor"),
+        (13, "Minor"),
+        (14, "Irrelevant"),
+        (16, "Irrelevant"),
+    ],
+)
+def test_2025_job_satisfaction_rank_boundaries(extractor_module, rank, expected):
+    assert extractor_module.map_2025_job_satisfaction_rank(rank) == expected
+
+
+def test_2025_job_satisfaction_fields_use_best_matching_rank(extractor_module):
+    row = {
+        "JobSatPoints_2": "1",
+        "JobSatPoints_3": "4",
+        "JobSatPoints_6": "8",
+        "JobSatPoints_8": "12",
+        "JobSatPoints_13": "14",
+        "JobSatPoints_14": "11",
+    }
+    fields = fields_by_id(
+        extractor_module.extract_2025_job_satisfaction_fields(
+            row, 2025, mapping_for(*row)
+        )
+    )
+
+    assert fields["val_independence"]["value"] == "Core value"
+    assert fields["val_community"]["value"] == "Important"
+    assert fields["val_personal_growth"]["value"] == "Moderate"
+    assert fields["val_security_stability"]["value"] == "Minor"
+    assert fields["val_recognition"]["value"] == "Minor"
+    assert all(
+        field["assignment_type"] == "structured_claim"
+        for field in fields.values()
+    )
+
+
+def test_2025_so_actions_choose_top_style_and_never_participated_wins(
+    extractor_module,
+):
+    actions = {"SO_Actions_4": "5", "SO_Actions_5": "2", "SO_Actions_6": "7"}
+    field = extractor_module.extract_2025_stackoverflow_participation_field(
+        actions, 2025, mapping_for(*actions)
+    )[0]
+    assert field["value"] == "Asks questions"
+    assert field["assignment_type"] == "summary_inference"
+
+    never_row = {**actions, "SOPartFreq": "I have never participated in Q&A"}
+    never_field = extractor_module.extract_2025_stackoverflow_participation_field(
+        never_row, 2025, mapping_for(*never_row)
+    )[0]
+    assert never_field["value"] == "Does not participate"
+    assert never_field["assignment_type"] == "direct"
+    assert never_field["confidence"] == 1.0
+
+
 def test_deterministic_fields_replace_model_values(extractor_module):
     generated = [
         {
@@ -343,6 +407,8 @@ def test_prompt_rank_guidance_is_year_specific_and_semantic(extractor_module):
     assert "TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks" in prompt_2025
     assert '1-2="Critical", 3-5="High", 6-9="Moderate"' in prompt_2025
     assert '1="Hard blocker", 2-3="Major concern"' in prompt_2025
+    assert '1-3="Core value", 4-6="Important"' in prompt_2025
+    assert "explicit never-participated evidence wins" in prompt_2025
     assert "ranked options themselves are those behaviors or strategies" in prompt_2025
     assert "Topical association alone is insufficient" in prompt_2025
 

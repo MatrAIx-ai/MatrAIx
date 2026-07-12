@@ -124,6 +124,25 @@ STACKOVERFLOW_2025_RANK_FIELD_MAP = {
     "TechOppose_11": ("coding_tool_alternative_sensitivity", "blocker"),
     "TechOppose_13": ("coding_tool_obsolescence_blocker", "blocker"),
 }
+STACKOVERFLOW_2025_JOB_SAT_FIELD_MAP = {
+    "JobSatPoints_2": "val_independence",
+    "JobSatPoints_3": "val_community",
+    "JobSatPoints_6": "val_personal_growth",
+    "JobSatPoints_8": "val_security_stability",
+    "JobSatPoints_13": "val_recognition",
+    "JobSatPoints_14": "val_recognition",
+}
+STACKOVERFLOW_2025_SO_ACTION_STYLE_MAP = {
+    "SO_Actions_1": "Reads / searches only",
+    "SO_Actions_4": "Reads / searches only",
+    "SO_Actions_3": "Votes / bookmarks",
+    "SO_Actions_7": "Votes / bookmarks",
+    "SO_Actions_16": "Comments / discusses",
+    "SO_Actions_9": "Comments / discusses",
+    "SO_Actions_10": "Comments / discusses",
+    "SO_Actions_5": "Asks questions",
+    "SO_Actions_6": "Answers questions",
+}
 
 DEFAULT_MODEL = "Qwen/Qwen3.6-35B-A3B"
 DEFAULT_OUTPUT_TEMPLATE = "extraction_stackoverflow_v2_{year}.jsonl"
@@ -1130,6 +1149,100 @@ def extract_2025_rank_fields(
     return fields
 
 
+def map_2025_job_satisfaction_rank(rank: int) -> str:
+    """Map a 2025 job-satisfaction rank to the shared personal-value scale."""
+    if rank <= 3:
+        return "Core value"
+    if rank <= 6:
+        return "Important"
+    if rank <= 10:
+        return "Moderate"
+    if rank <= 13:
+        return "Minor"
+    return "Irrelevant"
+
+
+def extract_2025_job_satisfaction_fields(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Map only near-isomorphic 2025 job-satisfaction ranks to value fields."""
+    if year != 2025:
+        return []
+    candidates: dict[str, list[tuple[int, str]]] = {}
+    for column, field_id in STACKOVERFLOW_2025_JOB_SAT_FIELD_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        label = clean_value(
+            mapping.get(column, {}).get("description") or column,
+            max_chars=1_000,
+        )
+        candidates.setdefault(field_id, []).append(
+            (rank, f"{column} - {label}: {rank}")
+        )
+    fields: list[dict[str, Any]] = []
+    for field_id, ranked_evidence in candidates.items():
+        rank, evidence = min(ranked_evidence, key=lambda item: item[0])
+        fields.append(
+            {
+                "field_id": field_id,
+                "value": map_2025_job_satisfaction_rank(rank),
+                "confidence": 0.9,
+                "evidence": evidence,
+                "assignment_type": "structured_claim",
+            }
+        )
+    return fields
+
+
+def extract_2025_stackoverflow_participation_field(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Map explicit non-participation or the top-ranked 2025 SO action to style."""
+    if year != 2025:
+        return []
+    participation = row.get("SOPartFreq")
+    if is_present(participation) and "never participated" in str(
+        participation
+    ).casefold():
+        label = clean_value(
+            mapping.get("SOPartFreq", {}).get("description") or "SOPartFreq",
+            max_chars=1_000,
+        )
+        return [
+            {
+                "field_id": "stackoverflow_participation_style",
+                "value": "Does not participate",
+                "confidence": 1.0,
+                "evidence": f"SOPartFreq - {label}: {clean_value(participation)}",
+                "assignment_type": "direct",
+            }
+        ]
+
+    candidates: list[tuple[int, str, str]] = []
+    for column, style in STACKOVERFLOW_2025_SO_ACTION_STYLE_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        label = clean_value(
+            mapping.get(column, {}).get("description") or column,
+            max_chars=1_000,
+        )
+        candidates.append((rank, style, f"{column} - {label}: {rank}"))
+    if not candidates:
+        return []
+    rank, style, evidence = min(candidates, key=lambda item: item[0])
+    return [
+        {
+            "field_id": "stackoverflow_participation_style",
+            "value": style,
+            "confidence": 0.9,
+            "evidence": evidence,
+            "assignment_type": "summary_inference",
+        }
+    ]
+
+
 def reconcile_ai_fields(
     fields: list[dict[str, Any]],
     row: dict[str, Any],
@@ -1279,6 +1392,8 @@ def build_stackoverflow_prompt(
             "- YEAR-SPECIFIC: A 2025 rank expresses relative order among the listed items, not an absolute rating or intensity score.",
             '- YEAR-SPECIFIC: For mapped TechEndorse importance fields, use the deterministic buckets 1-2="Critical", 3-5="High", 6-9="Moderate", 10-12="Low", and 13+="Not a factor".',
             '- YEAR-SPECIFIC: For mapped TechOppose blocker fields, use the deterministic buckets 1="Hard blocker", 2-3="Major concern", 4-7="Moderate concern", 8-12="Minor concern", and 13+="Not a concern".',
+            '- YEAR-SPECIFIC: For near-isomorphic JobSat value fields, use 1-3="Core value", 4-6="Important", 7-10="Moderate", 11-13="Minor", and 14+="Irrelevant". Do not convert other JobSat ranks directly into skills or psychometric traits.',
+            "- YEAR-SPECIFIC: For Stack Overflow participation style, explicit never-participated evidence wins; otherwise use the lowest-ranked available SO_Actions activity as the preferred summary style.",
         ]
     else:
         year_specific_guidance = [
@@ -1861,15 +1976,31 @@ def extract_year(
                 deterministic_rank_fields = extract_2025_rank_fields(
                     row, work.year, work.mapping
                 )
+                deterministic_job_fields = extract_2025_job_satisfaction_fields(
+                    row, work.year, work.mapping
+                )
+                deterministic_so_fields = (
+                    extract_2025_stackoverflow_participation_field(
+                        row, work.year, work.mapping
+                    )
+                )
                 deterministic_fields = (
-                    deterministic_ai_fields + deterministic_rank_fields
+                    deterministic_ai_fields
+                    + deterministic_rank_fields
+                    + deterministic_job_fields
+                    + deterministic_so_fields
                 )
                 reserved_field_ids = (
                     STACKOVERFLOW_2025_AI_TASK_FIELD_IDS
                     if work.year == 2025
                     else frozenset()
                 ) | frozenset(
-                    field["field_id"] for field in deterministic_rank_fields
+                    field["field_id"]
+                    for field in (
+                        deterministic_rank_fields
+                        + deterministic_job_fields
+                        + deterministic_so_fields
+                    )
                 )
                 final_fields = overlay_deterministic_fields(
                     merged[row_index],
