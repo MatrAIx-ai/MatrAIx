@@ -1,7 +1,8 @@
 /**
  * Synthesis Studio: read-only browsing of the Persona Full DAG.
  *
- * Three panes: category overview graph → drill-down subgraph → detail rail.
+ * Three stacked, individually expandable panels:
+ * category overview graph → drill-down subgraph → detail rail.
  * Phase 1 of docs/superpowers/specs/2026-07-11-persona-dag-studio-design.md.
  */
 import { useState } from "react";
@@ -15,7 +16,7 @@ import { DrilldownGraph } from "./DrilldownGraph";
 import { NodeDetailRail } from "./NodeDetailRail";
 import { FOCUS_RING } from "../cockpit/cockpitShared";
 import {
-  StudioGlassPanel,
+  ExpandableStudioPanel,
   StudioMeshShell,
   StudioPageFrame,
   StudioPageHeader,
@@ -53,8 +54,8 @@ export function SynthesisStudioView() {
               : "Loading the Persona Full DAG…"
           }
         />
-        <div className="grid min-h-0 flex-1 gap-4 lg:grid-cols-[minmax(0,5fr)_minmax(0,4fr)_minmax(0,3fr)]">
-          <StudioGlassPanel className="min-h-[420px] overflow-hidden">
+        <div className="flex flex-col gap-4">
+          <ExpandableStudioPanel title="Category overview">
             {overview ? (
               <CategoryOverviewGraph
                 overview={overview}
@@ -69,8 +70,8 @@ export function SynthesisStudioView() {
                 {overviewQuery.isError ? "Failed to load the graph overview." : "Loading…"}
               </div>
             )}
-          </StudioGlassPanel>
-          <StudioGlassPanel className="min-h-[420px] overflow-hidden">
+          </ExpandableStudioPanel>
+          <ExpandableStudioPanel title="Drill-down">
             {centerNode === null ? (
               <div className="grid h-full place-items-center px-6 text-center text-sm text-text-dim">
                 Pick a category, then an attribute, to see its dependency neighborhood.
@@ -129,8 +130,8 @@ export function SynthesisStudioView() {
                 </div>
               </div>
             )}
-          </StudioGlassPanel>
-          <StudioGlassPanel className="min-h-[420px] overflow-hidden">
+          </ExpandableStudioPanel>
+          <ExpandableStudioPanel title="Details">
             {selectedNode ? (
               <div className="flex h-full min-h-0 flex-col">
                 <button
@@ -164,7 +165,7 @@ export function SynthesisStudioView() {
                 Click a category to list its attributes.
               </div>
             )}
-          </StudioGlassPanel>
+          </ExpandableStudioPanel>
         </div>
       </StudioPageFrame>
     </StudioMeshShell>

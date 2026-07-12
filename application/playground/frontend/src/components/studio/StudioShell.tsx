@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 
 import { FOCUS_RING, Sym } from "../cockpit/cockpitShared";
 
@@ -66,6 +66,58 @@ export function StudioGlassPanel({
   className?: string;
 }) {
   return <div className={`glass-panel overflow-hidden rounded-xl ${className}`}>{children}</div>;
+}
+
+/**
+ * Glass panel with a title bar and an expand/restore toggle. The body sits at
+ * a fixed medium height by default and grows to most of the viewport when
+ * expanded; panels toggle independently.
+ */
+export function ExpandableStudioPanel({
+  title,
+  children,
+  className = "",
+}: {
+  title: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  return (
+    <div ref={rootRef} className={className}>
+      <StudioGlassPanel>
+        <div className="flex items-center justify-between border-b border-outline-dim px-4 py-2">
+          <span className="hud text-text-dim">{title}</span>
+          <button
+            type="button"
+            aria-label={expanded ? "Restore panel" : "Expand panel"}
+            title={expanded ? "Restore panel" : "Expand panel"}
+            onClick={() => {
+              setExpanded((previous) => {
+                const next = !previous;
+                if (next) {
+                  requestAnimationFrame(() => {
+                    rootRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+                  });
+                }
+                return next;
+              });
+            }}
+            className={`grid h-7 w-7 place-items-center rounded-md text-text-dim transition-colors hover:bg-surface hover:text-text-main motion-reduce:transition-none ${FOCUS_RING}`}
+          >
+            <Sym name={expanded ? "collapse_content" : "expand_content"} size={18} />
+          </button>
+        </div>
+        <div
+          className="min-h-0 overflow-hidden transition-[height] duration-300 ease-out motion-reduce:transition-none"
+          style={{ height: expanded ? "80vh" : 380 }}
+        >
+          {children}
+        </div>
+      </StudioGlassPanel>
+    </div>
+  );
 }
 
 export function StudioPageFrame({ children }: { children: ReactNode }) {
