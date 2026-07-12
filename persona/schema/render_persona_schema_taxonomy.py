@@ -16,10 +16,10 @@ categories, so it is a more detailed companion to the compact table.
 
 Run from the repository root:
 
-    uv run --extra viz python persona/synthesis/scripts/render_persona_schema_taxonomy.py
+    uv run --extra viz python persona/schema/render_persona_schema_taxonomy.py
 
 Writes ``persona_schema_taxonomy.png`` and ``persona_schema_taxonomy.pdf`` into
-``persona/synthesis/visualization/``.
+``persona/schema/``.
 """
 
 from __future__ import annotations
@@ -38,9 +38,9 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.path import Path as MplPath
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_GRAPH_PATH = REPO_ROOT / "persona" / "synthesis" / "graph" / "full_dag.json"
-DEFAULT_OUT_DIR = REPO_ROOT / "persona" / "synthesis" / "visualization"
+DEFAULT_OUT_DIR = REPO_ROOT / "persona" / "schema"
 
 # OFFICIAL taxonomy: 9 groups -> aspects -> categories, in table order.
 # Each group is (group display name, group colour, [aspect, ...]);
@@ -109,7 +109,7 @@ GROUPS = [
             ("Beliefs", "Worldview: Beliefs"),
         ]),
     ]),
-    ("Health and accessibility", "#59A14F", [
+    ("Health and accessibility", "#17A2B8", [
         ("Health", [
             ("Physical Health", "Health: Physical"),
             ("Fitness", "Health: Fitness"),
@@ -140,6 +140,14 @@ GROUPS = [
 ]
 
 TEXT_COLOR = "#111111"
+
+
+def _display_path(path: Path) -> str:
+    """Show a repo-relative path when possible, else the absolute path."""
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path.resolve())
 
 
 def _lighten(hex_color: str, factor: float) -> tuple[float, float, float]:
@@ -209,13 +217,13 @@ def render(graph_path: Path, out_dir: Path) -> None:
     y_leaf = [y - shift for y in y_leaf]
     span = max(y_leaf)
 
-    fig, ax = plt.subplots(figsize=(13, 0.34 * (span + 2) + 1.0))
+    fig, ax = plt.subplots(figsize=(13.5, 0.30 * (span + 2) + 1.0))
     ax.axis("off")
 
     x_group, w_group = 0.0, 3.9
     x_aspect, w_aspect = 4.9, 3.9
     x_leaf, w_leaf = 9.4, 4.2
-    leaf_h = 0.68
+    leaf_h = 0.66
 
     def draw_box(x, y, w, h, text, face, edge, size):
         ax.add_patch(FancyBboxPatch(
@@ -235,7 +243,7 @@ def render(graph_path: Path, out_dir: Path) -> None:
     # Category boxes (leaves).
     for i, (disp, count, color) in enumerate(leaf_meta):
         draw_box(x_leaf, y_leaf[i], w_leaf, leaf_h, f"{disp}  ({count})",
-                 _lighten(color, 0.80), color, size=9.0)
+                 _lighten(color, 0.80), color, size=11.0)
 
     # Aspect boxes (mid) at the mean y of their leaves, with brackets to leaves.
     aspect_y: list[float] = []
@@ -245,7 +253,7 @@ def render(graph_path: Path, out_dir: Path) -> None:
         label = _wrap(aspect_name, 20)
         n_lines = label.count("\n") + 1
         draw_box(x_aspect, y_mid, w_aspect, n_lines * 0.46 + 0.28, label,
-                 _lighten(color, 0.58), color, size=9.5)
+                 _lighten(color, 0.58), color, size=11.5)
         for i in idxs:
             connect(x_aspect + w_aspect, y_mid, x_leaf, y_leaf[i], color)
 
@@ -255,18 +263,18 @@ def render(graph_path: Path, out_dir: Path) -> None:
         label = f"{_wrap(group_name, 24)}\n({total})"
         n_lines = label.count("\n") + 1
         draw_box(x_group, y_mid, w_group, n_lines * 0.50 + 0.28, label,
-                 _lighten(color, 0.40), color, size=10.0)
+                 _lighten(color, 0.40), color, size=12.0)
         for a in aspect_idxs:
             connect(x_group + w_group, y_mid, x_aspect, aspect_y[a], color)
 
     # Column headers.
     top = span + 1.3
     ax.text(x_group + w_group / 2, top, "Group  (# attributes)",
-            ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
     ax.text(x_aspect + w_aspect / 2, top, "Aspect",
-            ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
     ax.text(x_leaf + w_leaf / 2, top, "Category  (# attributes)",
-            ha="center", va="center", fontsize=10.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
 
     ax.set_xlim(-0.4, x_leaf + w_leaf + 0.4)
     ax.set_ylim(-1.0, top + 1.0)
@@ -279,10 +287,9 @@ def render(graph_path: Path, out_dir: Path) -> None:
     plt.close(fig)
     grand_total = sum(total for _n, _c, total, _a in group_spans)
     print(
-        f"wrote {png_path.relative_to(REPO_ROOT)} and "
-        f"{pdf_path.relative_to(REPO_ROOT)} | groups={len(GROUPS)} "
-        f"aspects={len(aspect_spans)} categories={len(leaf_meta)} "
-        f"attributes={grand_total} (expect 1290)"
+        f"wrote {_display_path(png_path)} and {_display_path(pdf_path)} | "
+        f"groups={len(GROUPS)} aspects={len(aspect_spans)} "
+        f"categories={len(leaf_meta)} attributes={grand_total} (expect 1290)"
     )
 
 
