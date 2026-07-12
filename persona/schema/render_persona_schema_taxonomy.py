@@ -217,12 +217,12 @@ def render(graph_path: Path, out_dir: Path) -> None:
     y_leaf = [y - shift for y in y_leaf]
     span = max(y_leaf)
 
-    fig, ax = plt.subplots(figsize=(13.5, 0.30 * (span + 2) + 1.0))
+    fig, ax = plt.subplots(figsize=(14.5, 0.30 * (span + 2) + 1.0))
     ax.axis("off")
 
-    x_group, w_group = 0.0, 3.9
-    x_aspect, w_aspect = 4.9, 3.9
-    x_leaf, w_leaf = 9.4, 4.2
+    x_group, w_group = 0.0, 5.4
+    x_aspect, w_aspect = 6.4, 3.9
+    x_leaf, w_leaf = 10.9, 4.4
     leaf_h = 0.66
 
     def draw_box(x, y, w, h, text, face, edge, size):
@@ -262,7 +262,7 @@ def render(graph_path: Path, out_dir: Path) -> None:
         y_mid = float(np.mean([aspect_y[a] for a in aspect_idxs]))
         label = f"{_wrap(group_name, 24)}\n({total})"
         n_lines = label.count("\n") + 1
-        draw_box(x_group, y_mid, w_group, n_lines * 0.50 + 0.28, label,
+        draw_box(x_group, y_mid, w_group, n_lines * 0.62 + 0.42, label,
                  _lighten(color, 0.40), color, size=12.0)
         for a in aspect_idxs:
             connect(x_group + w_group, y_mid, x_aspect, aspect_y[a], color)
