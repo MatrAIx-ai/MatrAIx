@@ -1,7 +1,7 @@
 /**
  * TopBar: MatrAIx application header.
  *
- * Nav: Home · Playground · Runs · Persona World.
+ * Nav: Home · Playground · Runs · Persona World · Synthesis.
  */
 import { PreflightChip } from "./PreflightChip";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
@@ -15,9 +15,11 @@ export interface TopBarProps {
   onModeChange: (mode: StudioMode) => void;
   runsActive: boolean;
   storeActive: boolean;
+  synthesisActive: boolean;
   onOpenHome: () => void;
   onOpenRuns: () => void;
   onOpenPersonaStore: () => void;
+  onOpenSynthesis: () => void;
 }
 
 export function TopBar({
@@ -25,23 +27,31 @@ export function TopBar({
   onModeChange,
   runsActive,
   storeActive,
+  synthesisActive,
   onOpenHome,
   onOpenRuns,
   onOpenPersonaStore,
+  onOpenSynthesis,
 }: TopBarProps) {
   const { theme, toggle } = useTheme();
   const nextIsLight = theme === "dark";
 
   const nav: Array<{ key: string; label: string; active: boolean; onClick: () => void }> = [
-    { key: "home", label: "Home", active: mode === "home" && !runsActive && !storeActive, onClick: onOpenHome },
+    {
+      key: "home",
+      label: "Home",
+      active: mode === "home" && !runsActive && !storeActive && !synthesisActive,
+      onClick: onOpenHome,
+    },
     {
       key: "playground",
       label: "Playground",
-      active: mode === "playground" && !runsActive && !storeActive,
+      active: mode === "playground" && !runsActive && !storeActive && !synthesisActive,
       onClick: () => onModeChange("playground"),
     },
     { key: "runs", label: "Runs", active: runsActive, onClick: onOpenRuns },
     { key: "store", label: "Persona World", active: storeActive, onClick: onOpenPersonaStore },
+    { key: "synthesis", label: "Synthesis", active: synthesisActive, onClick: onOpenSynthesis },
   ];
 
   return (

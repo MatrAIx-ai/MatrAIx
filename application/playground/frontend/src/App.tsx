@@ -1,7 +1,7 @@
 /**
  * MatrAIx application shell.
  *
- * Routes: Home · Playground · Runs · Persona World.
+ * Routes: Home · Playground · Runs · Persona World · Synthesis.
  */
 import { useCallback, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -12,6 +12,7 @@ import { HomeView } from "@/components/HomeView";
 import { PersonaStoreView } from "@/components/PersonaStoreView";
 import { RunsView } from "@/components/RunsView";
 import { AppFooter } from "@/components/AppFooter";
+import { SynthesisStudioView } from "@/components/synthesis/SynthesisStudioView";
 
 import { api } from "@/lib/api";
 import { useUrlState } from "@/lib/useUrlState";
@@ -28,6 +29,7 @@ export default function App() {
   const activeHarborJobId = urlState.harborJob;
   const activeHarborTrialId = urlState.harborTrial;
   const storeViewActive = urlState.view === "store";
+  const synthesisViewActive = urlState.view === "synthesis";
   const runsViewActive =
     urlState.view === "runs" || activeHarborJobId !== null || activeHarborTrialId !== null;
 
@@ -51,6 +53,10 @@ export default function App() {
 
   const openPersonaStore = useCallback(() => {
     setUrlState({ view: "store", harborJob: null, harborTrial: null });
+  }, [setUrlState]);
+
+  const openSynthesis = useCallback(() => {
+    setUrlState({ view: "synthesis", harborJob: null, harborTrial: null });
   }, [setUrlState]);
 
   const openRunsList = useCallback(() => {
@@ -101,11 +107,13 @@ export default function App() {
 
   const shellFooterContext = storeViewActive
     ? "persona world"
-    : runsViewActive
-      ? "runs"
-      : mode === "playground"
-        ? playgroundFooter
-        : "home";
+    : synthesisViewActive
+      ? "synthesis"
+      : runsViewActive
+        ? "runs"
+        : mode === "playground"
+          ? playgroundFooter
+          : "home";
 
   const topBar = (
     <TopBar
@@ -113,11 +121,23 @@ export default function App() {
       onModeChange={setMode}
       runsActive={runsViewActive}
       storeActive={storeViewActive}
+      synthesisActive={synthesisViewActive}
       onOpenHome={openHome}
       onOpenRuns={openRunsList}
       onOpenPersonaStore={openPersonaStore}
+      onOpenSynthesis={openSynthesis}
     />
   );
+
+  if (synthesisViewActive) {
+    return (
+      <div className="flex h-screen flex-col">
+        {topBar}
+        <SynthesisStudioView />
+        <AppFooter context={shellFooterContext} />
+      </div>
+    );
+  }
 
   if (storeViewActive) {
     return (
