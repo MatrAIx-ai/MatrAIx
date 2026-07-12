@@ -1632,6 +1632,7 @@ def load_vllm(
         "max_model_len": args.max_model_len,
         "max_num_seqs": args.max_num_seqs,
         "enable_prefix_caching": True,
+        "language_model_only": True,
         "trust_remote_code": True,
         "seed": args.seed,
     }

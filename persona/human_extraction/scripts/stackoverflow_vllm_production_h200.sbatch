@@ -6,8 +6,8 @@
 #SBATCH --constraint=h200
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=96G
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
 #SBATCH --time=04:00:00
 #SBATCH --output=/scratch/yl6586/slurm_logs/slurm-%x-%j.out
 #SBATCH --error=/scratch/yl6586/slurm_logs/slurm-%x-%j.err
@@ -39,7 +39,7 @@ fi
 WORKDIR=/scratch/yl6586/MatrAIx
 SCRIPT="$WORKDIR/persona/human_extraction/scripts/extract_personas_stackoverflow_vllm_v2.py"
 SURVEY_ROOT="$WORKDIR/persona/human_extraction/data/stackoverflow_survey"
-OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v3_$YEAR.jsonl"
+OUTPUT="$SURVEY_ROOT/extraction_stackoverflow_v2_$YEAR.jsonl"
 IMAGE=/scratch/yl6586/containers/vllm-v0.19.0.sif
 
 HF_CACHE=/scratch/yl6586/.cache/huggingface
