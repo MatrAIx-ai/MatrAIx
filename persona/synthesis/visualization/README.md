@@ -87,3 +87,10 @@ Controls:
 Do not hand-edit `full_dag_overview.html`. Regenerate it with
 `render_graph_visualization.py` after changing `full_dag.json` or the
 visualization code, then commit both the script change and the generated HTML.
+
+## Interactive Studio
+
+An interactive browsing UI for this graph (category overview + per-node
+drill-down) lives in the Playground app: open the "Synthesis" tab, or
+`/?view=synthesis`, backed by `/api/synthesis/*`. This static HTML remains
+the offline, dependency-free snapshot.
