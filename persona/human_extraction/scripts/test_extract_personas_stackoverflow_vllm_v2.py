@@ -219,6 +219,66 @@ def test_prompt_rank_guidance_is_year_specific_and_semantic(extractor_module):
     assert "Topical association alone is insufficient" in prompt_2025
 
 
+def test_prompt_restores_high_precision_sparse_policy(extractor_module):
+    chunk = extractor_module.DimensionChunk(
+        chunk_id="precision_test",
+        label="Precision test",
+        description="Test conservative source-to-target guidance.",
+        source_categories=("Skills: Professional",),
+        dimensions=(
+            {
+                "id": "skill_debugging",
+                "label": "Debugging skill",
+                "description": "Demonstrated debugging proficiency.",
+                "values": ["None", "Beginner", "Intermediate", "Advanced", "Master"],
+            },
+        ),
+    )
+
+    prompt = extractor_module.build_stackoverflow_prompt(
+        "AIToolPlan to partially use AI - Planned AI tasks: Debugging", chunk, 2025
+    )
+
+    assert "Default decision: OMIT" in prompt
+    assert "An empty fields list is a correct result" in prompt
+    assert "Multiple weak proxies do not become strong evidence" in prompt
+    assert "Do not reuse one broad answer to fan out" in prompt
+    assert "Do not emit summary_inference" in prompt
+    assert "Task use is not task mastery" in prompt
+    assert "Tenure and job title" in prompt
+    assert "do not by themselves establish Advanced or Master" in prompt
+
+
+def test_prompt_blocks_observed_proxy_failure_modes(extractor_module):
+    chunk = extractor_module.DimensionChunk(
+        chunk_id="proxy_test",
+        label="Proxy test",
+        description="Test observed semantic overreach guidance.",
+        source_categories=("Demographic: Core",),
+        dimensions=(
+            {
+                "id": "primary_language",
+                "label": "Primary language",
+                "description": "Respondent's primary language.",
+                "values": ["English", "Other"],
+            },
+        ),
+    )
+
+    prompt = extractor_module.build_stackoverflow_prompt(
+        "Country - Where do you live?: Netherlands", chunk, 2025
+    )
+
+    assert "Intent is not experience" in prompt
+    assert "Absence of evidence is not negative evidence" in prompt
+    assert "Country may support region only" in prompt
+    assert "Self-employed, contractor, or freelancer status" in prompt
+    assert "Compensation is individual compensation, not household income" in prompt
+    assert "generic dependents answer" in prompt
+    assert "Organization-level practices and installed tools" in prompt
+    assert "bucket crosses more than one allowed output range" in prompt
+
+
 @pytest.mark.parametrize("evidence", ["10", "8.5", "20%", "Yes", "No", "Employed"])
 def test_validator_rejects_bare_evidence_values(extractor_module, evidence):
     chunk = extractor_module.DimensionChunk(

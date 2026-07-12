@@ -1069,16 +1069,36 @@ def build_stackoverflow_prompt(
         "",
         "assignment_type values (Stack Overflow survey context):",
         "- direct: explicitly answered in a survey field, or a deterministic recoding of an explicit answer into an exactly matching allowed value.",
-        "- structured_claim: strongly supported by multiple concrete survey answers with little ambiguity.",
-        "- summary_inference: a cautious, low-confidence inference from multiple survey answers. Use sparingly."
+        "- structured_claim: a near-direct conclusion strongly supported by concrete survey answers that measure the same construct, with little ambiguity and no stereotype-based bridge.",
+        "- summary_inference: an indirect hypothesis. Do not emit summary_inference in this high-precision extraction; omit the dimension instead.",
         "",
         "Sparse extraction policy:",
         "- Return a sparse list: emit an object ONLY for dimensions that are clearly supported by the survey answers.",
         "- Do NOT try to cover every dimension. Missing attributes are better than weak or invented attributes.",
+        "- An empty fields list is a correct result when this chunk has no directly supported dimensions.",
+        "- Default decision: OMIT. Emit only after identifying survey evidence that measures the same construct as the target dimension and distinguishes the selected value from the other allowed values.",
         "- Omit unsupported dimensions entirely. Do not emit null values and do not emit unsupported placeholder objects.",
         "- Assign a value only when the survey response directly or strongly supports that exact dimension.",
         "- If the evidence is generic, indirect, stereotypical, or only weakly associated with the dimension, omit the dimension.",
+        "- Multiple weak proxies do not become strong evidence when combined. A plausible narrative or occupational stereotype is not a structured_claim.",
+        "- Do not reuse one broad answer to fan out into many loosely related dimensions. Each emitted field needs its own same-construct support.",
         '- If an allowed value is more specific than the survey answer, omit the dimension unless the specificity is explicit. For example, generic "Employed" does not prove "Full-time".',
+        "",
+        "High-precision source-to-target rules:",
+        "- Intent is not experience: WantToWorkWith, interested-in, admired, and future-plan answers may support preferences or intentions only. They do not establish current familiarity, proficiency, skill, habitual behavior, or actual usage.",
+        "- Task use is not task mastery: using or planning to use AI for debugging, review, writing, analytics, or another task does not establish proficiency in that task and does not identify the respondent's dominant method or problem profile.",
+        "- Tenure and job title may support role, seniority, and broad coding experience. They do not by themselves establish Advanced or Master proficiency in debugging, system design, mathematics, reasoning, writing, management, or other specific skills.",
+        "- Worked-with answers establish use or exposure. Do not infer Expert or Master from a technology list alone; use the least specific supported familiarity or proficiency value, or omit when the allowed scale cannot be justified.",
+        "- Current status is not complete history: an individual contributor is not proven to have no leadership or management skill; a current industry does not prove no experience in other industries; no current AI use does not prove every named AI product was never used.",
+        "- Absence of evidence is not negative evidence. Never emit None, Never, Absent, no experience, no mobility, or a similar negative value merely because the profile does not mention the construct.",
+        "- Country may support region only. It does not establish native language, language proficiency, nationality, cultural identity, immigration history, hometown mobility, adversity, or other personal history.",
+        "- Self-employed, contractor, or freelancer status does not establish company size, founder status, entrepreneurship history, or a solo organization unless the profile explicitly states it.",
+        "- Compensation is individual compensation, not household income. Do not map CompTotal to a household-income dimension.",
+        "- A generic dependents answer that combines children and elderly people supports caregiving only. It does not establish parenting, children's ages, elder-care status, or that both groups are cared for.",
+        "- Organization-level practices and installed tools do not automatically establish the respondent's personal coding style, review habit, debugging strategy, onboarding style, abstraction preference, or observability habit.",
+        "- Technology choices and professional roles do not establish stable personality traits, character strengths, psychological needs, moral foundations, learning pace, emotional state, or broad personal values unless the survey directly measures that construct.",
+        "- A people-manager or executive answer supports a management role, not a Signature or Strong leadership character trait without separate behavioral evidence.",
+        "- If a survey answer bucket crosses more than one allowed output range, omit the dimension rather than choosing one side of the boundary.",
         "",
         "Rules:",
         "- Read survey question and answer context carefully to determine the most specific and accurate value for each dimension.",
@@ -1093,9 +1113,8 @@ def build_stackoverflow_prompt(
         "- Topical association alone is insufficient. A rank about importance or interest does not by itself establish frequency, proficiency, demonstrated skill, actual habitual behavior, or a dominant strategy unless the question explicitly ranks that same behavior, skill, or strategy.",
         "- value MUST be exactly one of that dimension's allowed values, copied verbatim.",
         "- Use each field_id at most once.",
-        "- If multiple allowed values for one field_id are directly supported, emit exactly one.",
-        "- Choose the value with the strongest and most specific evidence. If still tied, choose the first supported value in that dimension's listed allowed-values order.",
-        "- A value chosen by catalog-order tie-breaking MUST use assignment_type summary_inference and confidence no greater than 0.6.",
+        "- Choose the single allowed value with the strongest and most specific same-construct evidence.",
+        "- If the evidence supports multiple allowed values equally or cannot distinguish among them, omit the dimension. Never use catalog order to resolve ambiguity.",
         "- Every emitted field MUST include grounded evidence supported by the current respondent profile. Evidence may be a short source quote or a faithful summary of one or more concrete answers.",
         "- A faithful evidence summary MUST preserve the source answers' meaning, including numerical value, ordering, time frame, and negation, and MUST NOT introduce facts that those answers do not support.",
         "- Evidence MUST NOT merely restate the selected persona value or conclusion as its own support.",
@@ -1107,7 +1126,7 @@ def build_stackoverflow_prompt(
         '- Required summary-evidence format: "<COLUMN_1>=<ANSWER_1>; <COLUMN_2>=<ANSWER_2>. Summary: <faithful summary supported by those answers>".',
         "- Text inside angle brackets in the two formats above is placeholder text only. Never copy those placeholders into evidence.",
         "- Every emitted field MUST include a confidence between 0 and 1. Use high confidence only for direct or strong evidence.",
-        "- Prefer direct and structured_claim assignments. Use summary_inference only for non-sensitive attributes backed by multiple concrete survey answers.",
+        "- Emit only direct and high-precision structured_claim assignments. Omit indirect summary_inference hypotheses.",
         "- Do not infer personality, worldview, family status, sensitive identity, health, politics, religion, income, or housing from generic developer-survey answers.",
         "- Do not infer missing demographics, gender, sexuality, health, disability, family status, religion, ethnicity, politics, income, housing, or socioeconomic status from country, age, job title, technology stack, or developer role unless explicitly answered.",
         "- Do not infer personality traits, values, hobbies, habits, or relationship attributes from technology choices alone.",
@@ -1385,11 +1404,11 @@ def retry_conversation(conversation: list[dict[str, str]]) -> list[dict[str, str
     retry[-1]["content"] += (
         "\n\nRETRY: The previous response failed strict validation. Return one complete "
         "JSON object matching this chunk's supplied schema. Keep fields sparse, use "
-        "each field ID at most once, and omit unsupported dimensions. If multiple "
-        "allowed values for one field ID are supported, choose the strongest and "
-        "most specific one; if still tied, choose the first supported value in the "
-        "listed allowed-values order, use assignment_type summary_inference with "
-        "confidence no greater than 0.6, and cite only evidence for that value. "
+        "each field ID at most once, and omit unsupported dimensions. Do not add "
+        "fields merely to replace rejected ones. Emit only direct or near-direct "
+        "same-construct assignments; omit indirect hypotheses, proxy-based skill or "
+        "trait claims, and any field whose allowed value remains ambiguous. "
+        "If multiple allowed values remain supported, omit that field. "
         "Every evidence string must explicitly cite current respondent source "
         "columns and their actual answer values; never cite an absent column."
     )
