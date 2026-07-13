@@ -721,6 +721,7 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+
     @app.delete(
         "/api/harbor/jobs/{job_name}",
         tags=["harbor-jobs"],
@@ -854,6 +855,7 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+
     @app.get(
         "/api/harbor/jobs/{job_name}/trials/{trial_name}/instruction",
         tags=["harbor-jobs"],
@@ -959,6 +961,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
                 dimension_filters=body.dimensionFilters,
                 stratify_fields=body.stratifyFields,
                 sample_size_per_value_group=body.sampleSizePerValueGroup,
+                task_path=body.taskPath,
+                auto_ensure_strategy_pool=body.autoEnsureStrategyPool,
             )
         except ValueError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc

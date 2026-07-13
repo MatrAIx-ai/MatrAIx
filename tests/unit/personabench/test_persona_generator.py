@@ -14,6 +14,32 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 MANIFEST = REPO_ROOT / "persona" / "datasets" / "bench-dev-sample" / "manifest.json"
 
 
+def test_generate_dimensions_respects_fixed_life_stage_without_age() -> None:
+    """Fixed life_stage must pick a compatible age (no empty seniority lists)."""
+    import random
+
+    from personabench.persona_consistency import LIFE_STAGE_BY_AGE, validate_dimensions
+    from personabench.persona_generator import (
+        generate_persona_dimensions,
+        load_catalog_values,
+    )
+    from personabench.persona_consistency import load_dev_dimension_ids
+
+    catalog = load_catalog_values()
+    dev_ids = load_dev_dimension_ids()
+    rng = random.Random(0)
+    for life_stage in ("Student", "Mid-life", "Career change", "Retirement"):
+        dims = generate_persona_dimensions(
+            rng=rng,
+            catalog=catalog,
+            dev_dimension_ids=dev_ids,
+            fixed_dimensions={"life_stage": life_stage, "values_priority": "Autonomy"},
+        )
+        assert dims["life_stage"] == life_stage
+        assert life_stage in LIFE_STAGE_BY_AGE[dims["age_bracket"]]
+        assert validate_dimensions(dims) == []
+
+
 def test_validate_rejects_counterfactual_combo() -> None:
     errors = validate_dimensions(
         {
@@ -104,6 +130,55 @@ def test_top_up_strata_adds_consistent_personas() -> None:
         matches = [
             entry
             for entry in topped
+            if all(entry["dimensions"].get(k) == v for k, v in stratum.items())
+        ]
+        assert len(matches) >= 2
+        for entry in matches:
+            assert validate_dimensions(entry["dimensions"]) == []
+
+
+def test_build_filter_strata_cartesian() -> None:
+    from personabench.persona_generator import build_filter_strata
+
+    strata = build_filter_strata(
+        {
+            "age_bracket": ["25-34", "35-44"],
+            "life_stage": ["Early career"],
+        }
+    )
+    assert len(strata) == 2
+    assert {"age_bracket": "25-34", "life_stage": "Early career"} in strata
+    assert {"age_bracket": "35-44", "life_stage": "Early career"} in strata
+
+
+def test_generate_pool_strategy_top_up_only() -> None:
+    from personabench.persona_generator import (
+        build_filter_strata,
+        filter_feasible_strata,
+        generate_persona_pool,
+    )
+
+    strata = build_filter_strata(
+        {
+            "age_bracket": ["25-34", "35-44"],
+            "life_stage": ["Early career", "Mid-life"],
+        }
+    )
+    strata, dropped = filter_feasible_strata(strata)
+    assert dropped  # some age × life_stage pairs are inconsistent
+    assert strata
+    personas = generate_persona_pool(
+        count=0,
+        seed=7,
+        stratum_top_up=strata,
+        min_per_stratum=2,
+        include_smoke=False,
+    )
+    assert len(personas) >= 2 * len(strata)
+    for stratum in strata:
+        matches = [
+            entry
+            for entry in personas
             if all(entry["dimensions"].get(k) == v for k, v in stratum.items())
         ]
         assert len(matches) >= 2

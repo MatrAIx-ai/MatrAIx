@@ -303,9 +303,13 @@ function ChatbotEvalCockpit({
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
@@ -516,6 +520,7 @@ function ChatbotEvalCockpit({
           sampleSize: selectedPersonaIds.length,
           seed,
           personaModel,
+          personaPool,
           personaIds: selectedPersonaIds,
           nConcurrentTrials: Math.min(parallelTrials, selectedPersonaIds.length),
           mode: "auto",
@@ -540,6 +545,7 @@ function ChatbotEvalCockpit({
     seed,
     personaModel,
     parallelTrials,
+    personaPool,
     requestDomain,
     knownLaunchApplicationId,
     launchChatApplicationContext,
@@ -814,6 +820,7 @@ function ChatbotEvalCockpit({
       left={
         <PersonaSamplingRail
           taskType="chatbot"
+          taskPath={chatTaskPath || null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
           personaModelOptions={personaModelOptions}
@@ -823,6 +830,8 @@ function ChatbotEvalCockpit({
           onSelectedPersonaIdsChange={setSelectedPersonaIds}
           sampleSize={sampleSize}
           onSampleSizeChange={setSampleSize}
+          sampleSizePerValueGroup={sampleSizePerValueGroup}
+          onSampleSizePerValueGroupChange={setSampleSizePerValueGroup}
           seed={seed}
           filters={groupFilters}
           onFiltersChange={setGroupFilters}
@@ -832,6 +841,8 @@ function ChatbotEvalCockpit({
           taskPersonaStrategy={taskPersonaStrategy}
           useTaskDefaultStrategy={useTaskDefaultStrategy}
           onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
+          onPersonaPoolChange={setPersonaPool}
+          personaPool={personaPool}
           disabled={setupLocked}
         />
       }

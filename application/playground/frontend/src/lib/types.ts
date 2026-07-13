@@ -845,6 +845,8 @@ export interface PersonaPoolSampleResult {
     dimensions?: Record<string, string>;
   }>;
   stratifyFields?: string[];
+  poolEnsured?: boolean;
+  poolReused?: boolean;
 }
 
 export interface PersonaPoolPersonaCard {

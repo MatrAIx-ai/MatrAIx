@@ -836,6 +836,10 @@ class PersonaPoolSampleRequest(BaseModel):
     dimensionFilters: Optional[Dict[str, Any]] = None
     stratifyFields: Optional[List[str]] = None
     sampleSizePerValueGroup: Optional[int] = None
+    taskPath: Optional[str] = None
+    """Optional task path — used to tailor pool-coverage recovery / auto top-up."""
+    autoEnsureStrategyPool: bool = True
+    """When coverage fails, generate a local ``_generated`` filter pool and retry."""
 
 
 class PersonaPoolPersonaCard(BaseModel):
@@ -907,6 +911,8 @@ class PersonaPoolSampleResponse(BaseModel):
     seed: int
     personaIds: List[str]
     personas: List[Dict[str, Any]] = Field(default_factory=list)
+    poolEnsured: bool = False
+    poolReused: bool = False
 
 
 class PersonaCohortSaveRequest(BaseModel):

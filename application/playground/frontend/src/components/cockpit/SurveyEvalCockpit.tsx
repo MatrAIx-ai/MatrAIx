@@ -214,9 +214,13 @@ export function SurveyEvalCockpit({
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
@@ -375,6 +379,7 @@ export function SurveyEvalCockpit({
             sampleSize: selectedPersonaIds.length,
             seed,
             personaModel,
+            personaPool,
             personaIds: selectedPersonaIds,
             nConcurrentTrials: Math.min(parallelTrials, selectedPersonaIds.length),
             mode: "auto",
@@ -396,6 +401,7 @@ export function SurveyEvalCockpit({
     seed,
     personaModel,
     parallelTrials,
+    personaPool,
     handleRun,
   ]);
 
@@ -507,7 +513,7 @@ export function SurveyEvalCockpit({
 
   const surveyLiveContent =
     phase === "done" && !surveyResult && !runBusy ? (
-      <div className="rounded-md border border-outline bg-surface-lowest p-5 text-[13px] text-text-variant">
+      <div className="rounded-md border border-outline bg-surface-lowest p-5 text-[15px] text-text-variant">
         <p className="font-medium text-text-main">Survey finished, but no answers were loaded.</p>
         <p className="mt-2">
           {error ?? job?.error ?? "Try Reset and run again, or open this trial in Runs for the saved debrief."}
@@ -530,6 +536,7 @@ export function SurveyEvalCockpit({
       left={
         <PersonaSamplingRail
           taskType="survey"
+          taskPath={activeTaskPath || null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
           personaModelOptions={personaModelOptions}
@@ -539,6 +546,8 @@ export function SurveyEvalCockpit({
           onSelectedPersonaIdsChange={setSelectedPersonaIds}
           sampleSize={sampleSize}
           onSampleSizeChange={setSampleSize}
+          sampleSizePerValueGroup={sampleSizePerValueGroup}
+          onSampleSizePerValueGroupChange={setSampleSizePerValueGroup}
           seed={seed}
           filters={groupFilters}
           onFiltersChange={setGroupFilters}
@@ -548,6 +557,8 @@ export function SurveyEvalCockpit({
           taskPersonaStrategy={taskPersonaStrategy}
           useTaskDefaultStrategy={useTaskDefaultStrategy}
           onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
+          onPersonaPoolChange={setPersonaPool}
+          personaPool={personaPool}
           disabled={setupLocked}
         />
       }
@@ -710,7 +721,7 @@ function SurveyLive({
     <section className="space-y-4">
       {/* Header */}
       <div className="min-w-0">
-        <div className="hud mb-2 break-words text-[10px] text-primary">
+        <div className="hud mb-2 break-words text-[12px] text-primary">
           Survey · {humanizeToken(activeInstrument?.id ?? activeInstrument?.title ?? "questionnaire")}
         </div>
         <h2 className="font-display text-[22px] font-bold tracking-tight text-text-main">
@@ -742,7 +753,7 @@ function SurveyLive({
         </div>
       ) : running ? (
         instructionMarkdown?.trim() ? (
-          <div className="custom-scrollbar max-h-[480px] overflow-y-auto rounded-md border border-outline bg-surface-lowest p-4 text-[13px] text-text-main">
+          <div className="custom-scrollbar max-h-[480px] overflow-y-auto rounded-md border border-outline bg-surface-lowest p-4 text-[15px] text-text-main">
             <Markdown>{instructionMarkdown}</Markdown>
           </div>
         ) : (
@@ -757,11 +768,11 @@ function SurveyLive({
       {result && (
         <>
           <div className="flex items-center justify-center gap-2 pt-1">
-            <span className="hud text-[9px] text-text-dim">{answered} of {total} answered</span>
+            <span className="hud text-[11px] text-text-dim">{answered} of {total} answered</span>
             {total - answered > 0 && (
               <>
                 <span className="text-outline-dim">·</span>
-                <span className="hud text-[9px] text-text-dim">{total - answered} remaining</span>
+                <span className="hud text-[11px] text-text-dim">{total - answered} remaining</span>
               </>
             )}
           </div>
@@ -791,20 +802,20 @@ function SurveyAnswerCard({
     >
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <span className="hud text-[10px] text-text-dim">Q{index + 1}</span>
-          <span title={meta.tooltip} className={`hud rounded border px-1.5 py-0.5 text-[8px] ${meta.tone}`}>
+          <span className="hud text-[12px] text-text-dim">Q{index + 1}</span>
+          <span title={meta.tooltip} className={`hud rounded border px-1.5 py-0.5 text-[11px] ${meta.tone}`}>
             {meta.label}
           </span>
         </div>
         <Sym name="check_circle" fill={1} size={16} className="text-secondary" />
       </div>
-      <p className="mb-4 text-[13px] leading-relaxed text-text-main">{question?.prompt ?? answer.questionId}</p>
+      <p className="mb-4 text-[15px] leading-relaxed text-text-main">{question?.prompt ?? answer.questionId}</p>
 
       <AnswerValue answer={answer} question={question} />
 
       {(answer.rationale || confidence != null) && (
         <div className="mt-5 border-t border-outline pt-3.5">
-          <p className="font-mono text-[11px] leading-relaxed text-text-variant">
+          <p className="font-mono text-[13px] leading-relaxed text-text-variant">
             {answer.rationale ? `persona rationale: ${answer.rationale}` : "persona answered"}{" "}
             {confidence != null && <span className="text-text-variant">(conf {confidence.toFixed(2)})</span>}
           </p>
@@ -831,7 +842,7 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
             {scale.map((n) => (
               <span
                 key={n}
-                className={`grid h-11 w-11 shrink-0 place-items-center rounded-full border font-mono text-[13px] ${
+                className={`grid h-11 w-11 shrink-0 place-items-center rounded-full border font-mono text-[15px] ${
                   n === chosen
                     ? "border-primary bg-primary font-bold text-on-primary"
                     : "border-outline text-text-variant"
@@ -843,8 +854,8 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
           </div>
           {(lowLabel || highLabel) && (
             <div className="mt-2.5 flex items-center justify-between">
-              <span className="hud text-[8px] text-text-dim">{lowLabel}</span>
-              <span className="hud text-[8px] text-text-dim">{highLabel}</span>
+              <span className="hud text-[11px] text-text-dim">{lowLabel}</span>
+              <span className="hud text-[11px] text-text-dim">{highLabel}</span>
             </div>
           )}
         </div>
@@ -864,7 +875,7 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
     return (
       <div className="space-y-2">
         {multi && (
-          <p className="hud text-[8px] text-text-dim">Select all that apply · {selected.length} selected</p>
+          <p className="hud text-[11px] text-text-dim">Select all that apply · {selected.length} selected</p>
         )}
         {optionDetails.map((option) => {
           const isSelected = selected.includes(option.id);
@@ -893,14 +904,14 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
                 </span>
               )}
               <div className="min-w-0">
-                <span className={`block text-[12px] ${isSelected ? "font-medium text-text-main" : "text-text-variant"}`}>
+                <span className={`block text-[14px] ${isSelected ? "font-medium text-text-main" : "text-text-variant"}`}>
                   {option.label || option.id}
                 </span>
                 {option.label && option.label !== option.id ? (
-                  <span className="mt-0.5 block font-mono text-[10px] text-text-dim">{option.id}</span>
+                  <span className="mt-0.5 block font-mono text-[12px] text-text-dim">{option.id}</span>
                 ) : null}
                 {option.description ? (
-                  <span className="mt-0.5 block text-[10px] leading-relaxed text-text-dim">
+                  <span className="mt-0.5 block text-[12px] leading-relaxed text-text-dim">
                     {option.description}
                   </span>
                 ) : null}
@@ -915,7 +926,7 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
   if (type === "free_text") {
     return (
       <div className="rounded border border-outline bg-field p-4">
-        <p className="whitespace-pre-wrap text-[13px] leading-relaxed text-text-variant">
+        <p className="whitespace-pre-wrap text-[15px] leading-relaxed text-text-variant">
           {formatSurveyValue(answer.value) || "(no response)"}
         </p>
       </div>
@@ -925,7 +936,7 @@ function AnswerValue({ answer, question }: { answer: SurveyAnswer; question: Sur
   // Fallback for unknown types / missing question metadata.
   return (
     <div className="rounded border border-outline bg-field px-3 py-2.5">
-      <p className="font-mono text-[12px] text-text-main">{formatSurveyValue(answer.value) || "(no answer)"}</p>
+      <p className="font-mono text-[14px] text-text-main">{formatSurveyValue(answer.value) || "(no answer)"}</p>
     </div>
   );
 }
@@ -942,9 +953,9 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
         aria-expanded={open}
         className={`flex w-full items-center justify-between gap-2 border-b border-outline px-4 py-3 text-left transition-colors hover:bg-surface-low active:bg-surface-high ${FOCUS_RING}`}
       >
-        <span className="hud text-[10px] text-text-dim">Trajectory</span>
+        <span className="hud text-[12px] text-text-dim">Trajectory</span>
         <span className="flex items-center gap-2">
-          <span className="hud text-[9px] text-text-dim">{groups.length} steps</span>
+          <span className="hud text-[11px] text-text-dim">{groups.length} steps</span>
           <Sym name={open ? "expand_more" : "chevron_right"} size={18} className="text-text-dim" />
         </span>
       </button>
@@ -966,17 +977,17 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
                   className="rounded-md border border-outline bg-surface-lowest px-3 py-2.5"
                 >
                   <div className="mb-1 flex items-center gap-2">
-                    <span className="hud text-[9px] text-primary">{qIndex != null ? `Q${qIndex}` : "Q"}</span>
+                    <span className="hud text-[11px] text-primary">{qIndex != null ? `Q${qIndex}` : "Q"}</span>
                     {type ? (
-                      <span className={`hud rounded border px-1.5 py-0.5 text-[8px] ${surveyQuestionTypeChipClass(type)}`}>
+                      <span className={`hud rounded border px-1.5 py-0.5 text-[11px] ${surveyQuestionTypeChipClass(type)}`}>
                         {surveyQuestionTypeLabel(type)}
                       </span>
                     ) : null}
                   </div>
                   {prompt ? (
-                    <p className="text-[12px] leading-snug text-text-variant">{prompt}</p>
+                    <p className="text-[14px] leading-snug text-text-variant">{prompt}</p>
                   ) : null}
-                  <p className="mt-1.5 rounded border border-outline bg-field px-2.5 py-1.5 font-mono text-[11px] text-text-main break-words">
+                  <p className="mt-1.5 rounded border border-outline bg-field px-2.5 py-1.5 font-mono text-[13px] text-text-main break-words">
                     {value || "(no answer)"}
                   </p>
                 </div>
@@ -1002,10 +1013,10 @@ function TrajectoryFold({ events }: { events: SurveyTrajectoryEvent[] }) {
                 className="rounded-md border border-outline/70 bg-surface-low px-3 py-2"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[12px] font-medium text-text-main">{title}</span>
-                  <span className="shrink-0 font-mono text-[10px] text-text-dim">{event.timestamp}</span>
+                  <span className="text-[14px] font-medium text-text-main">{title}</span>
+                  <span className="shrink-0 font-mono text-[12px] text-text-dim">{event.timestamp}</span>
                 </div>
-                {detail ? <p className="mt-0.5 text-[11px] text-text-variant">{detail}</p> : null}
+                {detail ? <p className="mt-0.5 text-[13px] text-text-variant">{detail}</p> : null}
               </div>
             );
           })}
@@ -1032,11 +1043,11 @@ function ErrorCard({
         <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
         <div>
           <h2 className="font-semibold text-text-main">{title}</h2>
-          <p className="mt-1 text-[13px] text-text-variant">{body}</p>
+          <p className="mt-1 text-[15px] text-text-variant">{body}</p>
           <button
             type="button"
             onClick={onRetry}
-            className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[12px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
+            className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[14px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
           >
             <Sym name="refresh" size={15} />
             {retryLabel}

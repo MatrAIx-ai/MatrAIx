@@ -899,8 +899,11 @@ class HarborJobService:
                 seed=resolved_seed,
                 sources=resolved_sources,
                 dimension_filters=resolved_filters,
+                task_path=task_path,
+                auto_ensure_strategy_pool=True,
             )
             resolved_persona_ids = list(sampled["personaIds"])
+            resolved_pool = str(sampled.get("pool") or resolved_pool)
 
         task_slug = _slug(Path(task_path).name)
         resolved_job_name = job_name or "pg-{}-{}".format(task_slug, uuid.uuid4().hex[:8])

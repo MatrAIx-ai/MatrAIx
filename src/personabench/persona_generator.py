@@ -13,6 +13,7 @@ from personabench.persona_consistency import (
     CONSTRAINED_DIMENSIONS,
     load_dev_dimension_ids,
     load_dev_dimension_index_order,
+    allowed_age_brackets_for_life_stage,
     allowed_education,
     allowed_life_stages,
     allowed_seniorities,
@@ -74,7 +75,17 @@ def generate_persona_dimensions(
 ) -> dict[str, str]:
     """Sample one internally consistent dimension assignment."""
     fixed = dict(fixed_dimensions or {})
-    age = fixed.get("age_bracket") or age_bracket or _pick(rng, catalog["age_bracket"])
+    if fixed.get("age_bracket"):
+        age = fixed["age_bracket"]
+    elif age_bracket:
+        age = age_bracket
+    elif fixed.get("life_stage"):
+        # Fixed life_stage without age: pick a compatible bracket first so
+        # seniority / education lists are never empty (e.g. Student + 65+).
+        age = _pick(rng, allowed_age_brackets_for_life_stage(fixed["life_stage"]))
+    else:
+        age = _pick(rng, catalog["age_bracket"])
+
     life = fixed.get("life_stage") or _pick(rng, allowed_life_stages(age))
     seniority = fixed.get("seniority") or _pick(
         rng, allowed_seniorities(life_stage=life, age_bracket=age)
@@ -203,6 +214,85 @@ def build_probe_strata(
     return [{**confounders, probe_key: value} for value in probe_values]
 
 
+def build_filter_strata(
+    dimension_filters: dict[str, list[str]],
+    *,
+    max_strata: int = 256,
+) -> list[dict[str, str]]:
+    """Cartesian product of multi-value ``dimensionFilters`` → fixed strata cells.
+
+    Each cell is a ``dict[str, str]`` suitable for ``top_up_strata`` /
+    ``generate_persona_dimensions(fixed_dimensions=…)``. Empty filters yield
+    no strata (caller should require filters when generating from a strategy).
+
+    Callers should pass the result through ``filter_feasible_strata`` when
+    filters may combine constrained dimensions incompatibly (e.g. age × life_stage).
+    """
+    if not dimension_filters:
+        return []
+
+    dims = sorted(
+        (
+            (
+                str(dim).removeprefix("dimensions.").strip(),
+                [str(v).strip() for v in values if str(v).strip()],
+            )
+            for dim, values in dimension_filters.items()
+        ),
+        key=lambda item: item[0],
+    )
+    dims = [(dim, values) for dim, values in dims if dim and values]
+    if not dims:
+        return []
+
+    strata: list[dict[str, str]] = [{}]
+    for dim, values in dims:
+        next_strata: list[dict[str, str]] = []
+        for cell in strata:
+            for value in values:
+                next_strata.append({**cell, dim: value})
+                if len(next_strata) > max_strata:
+                    raise ValueError(
+                        f"dimensionFilters expand to more than {max_strata} strata; "
+                        "narrow filters or raise max_strata"
+                    )
+        strata = next_strata
+    return strata
+
+
+def filter_feasible_strata(
+    strata: list[dict[str, str]],
+    *,
+    catalog_path: str | Path | None = None,
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    """Keep strata that can produce a consistency-valid persona.
+
+    Returns ``(feasible, dropped)``. Dropped cells are usually incompatible
+    constrained-dimension combinations from a cartesian filter expand.
+    """
+    cat_path = str(catalog_path or DEFAULT_CATALOG_PATH)
+    catalog = load_catalog_values(cat_path)
+    dev_ids = load_dev_dimension_ids(catalog_path=cat_path)
+    rng = random.Random(0)
+    feasible: list[dict[str, str]] = []
+    dropped: list[dict[str, str]] = []
+    for stratum in strata:
+        try:
+            generate_persona_dimensions(
+                rng=rng,
+                catalog=catalog,
+                dev_dimension_ids=dev_ids,
+                catalog_path=cat_path,
+                age_bracket=stratum.get("age_bracket"),
+                fixed_dimensions=stratum,
+            )
+        except (RuntimeError, ValueError):
+            dropped.append(stratum)
+            continue
+        feasible.append(stratum)
+    return feasible, dropped
+
+
 def generate_persona_pool(
     *,
     count: int,
@@ -213,15 +303,22 @@ def generate_persona_pool(
     min_per_stratum: int = 0,
     persona_version: str = DEFAULT_PERSONA_VERSION,
     sources: tuple[str, ...] = PERSONA_SOURCES,
+    include_smoke: bool = True,
 ) -> list[dict[str, Any]]:
-    """Build *count* personas with roughly even age_bracket coverage."""
+    """Build *count* personas with roughly even age_bracket coverage.
+
+    ``count`` may be ``0`` when the caller only wants ``stratum_top_up`` cells
+    (e.g. task ``persona_strategy.json`` coverage pools).
+    """
+    if count < 0:
+        raise ValueError("count must be >= 0")
     cat_path = str(catalog_path or DEFAULT_CATALOG_PATH)
     catalog = load_catalog_values(cat_path)
     dev_ids = load_dev_dimension_ids(catalog_path=cat_path)
     rng = random.Random(seed)
     ages = catalog["age_bracket"]
-    per_age = count // len(ages)
-    extra = count % len(ages)
+    per_age = count // len(ages) if ages else 0
+    extra = count % len(ages) if ages else 0
 
     personas: list[dict[str, Any]] = []
     persona_index = 1
@@ -264,6 +361,9 @@ def generate_persona_pool(
     for entry in personas:
         entry["source"] = _pick_source(source_rng, sources)
 
+    if not include_smoke:
+        return personas
+
     smoke_rng = random.Random(seed + 42)
     smoke_dims = generate_persona_dimensions(
         rng=smoke_rng,
@@ -282,7 +382,14 @@ def generate_persona_pool(
         if entry["persona_id"] == smoke_persona_id:
             personas[index] = smoke_entry
             return personas
-    personas[int(smoke_persona_id) - 1] = smoke_entry
+    if not personas:
+        personas.append(smoke_entry)
+        return personas
+    smoke_index = int(smoke_persona_id) - 1
+    if 0 <= smoke_index < len(personas):
+        personas[smoke_index] = smoke_entry
+    else:
+        personas.append(smoke_entry)
     return personas
 
 

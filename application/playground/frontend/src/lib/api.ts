@@ -241,10 +241,16 @@ export const api = {
     dimensionFilters?: Record<string, string | string[]>;
     stratifyFields?: string[];
     sampleSizePerValueGroup?: number;
+    taskPath?: string;
+    autoEnsureStrategyPool?: boolean;
   }) =>
     request<PersonaPoolSampleResult>("/api/persona-pool/sample", {
       method: "POST",
-      body: JSON.stringify({ pool: PERSONA_BENCH_POOL, ...body }),
+      body: JSON.stringify({
+        pool: PERSONA_BENCH_POOL,
+        autoEnsureStrategyPool: true,
+        ...body,
+      }),
     }),
 
   listPersonaCohorts: () =>

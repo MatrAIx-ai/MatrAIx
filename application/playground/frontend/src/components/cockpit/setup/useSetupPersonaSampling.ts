@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import type { HarborCockpitTaskKind } from "@/lib/harborCockpitMappers";
 import type { ConfigOptionsResponse, PlaygroundPersona, TaskPersonaStrategy } from "@/lib/types";
+import { PERSONA_BENCH_POOL } from "@/lib/types";
 
 import {
   defaultPersonaSetup,
@@ -11,6 +12,7 @@ import {
   readCockpitPersonaSetup,
   setupFromPersonaStrategy,
   writeCockpitPersonaSetup,
+  type CockpitPersonaSetupRecord,
 } from "./cockpitPersonaSetupStorage";
 import {
   type PersonaDimensionFilters,
@@ -37,12 +39,19 @@ export function useSetupPersonaSampling(
   const [groupFilters, setGroupFilters] = useState<PersonaDimensionFilters>(initial.groupFilters);
   const [stratifyFields, setStratifyFields] = useState<string[]>(initial.stratifyFields);
   const [sampleSize, setSampleSize] = useState(initial.sampleSize);
+  const [sampleSizePerValueGroup, setSampleSizePerValueGroup] = useState(
+    initial.sampleSizePerValueGroup,
+  );
   const [seed] = useState(42);
   const [parallelTrials, setParallelTrials] = useState(initial.parallelTrials);
+  const [personaPool, setPersonaPool] = useState(initial.personaPool || PERSONA_BENCH_POOL);
   const [persona, setPersona] = useState<PlaygroundPersona | null>(null);
   const [taskPersonaStrategy, setTaskPersonaStrategy] = useState<TaskPersonaStrategy | null>(null);
   const [useTaskDefaultStrategy, setUseTaskDefaultStrategyState] = useState(
     initial.useTaskDefaultStrategy,
+  );
+  const [taskDefaultStrategyDismissed, setTaskDefaultStrategyDismissed] = useState(
+    initial.taskDefaultStrategyDismissed === true,
   );
   const hydratedPathRef = useRef<string | null>(null);
   const skipNextPersistRef = useRef(false);
@@ -58,16 +67,19 @@ export function useSetupPersonaSampling(
     staleTime: 60_000,
   });
 
-  const applySetupRecord = useCallback((record: ReturnType<typeof defaultPersonaSetup>) => {
+  const applySetupRecord = useCallback((record: CockpitPersonaSetupRecord) => {
     skipNextPersistRef.current = true;
     setSamplingMode(record.samplingMode);
     setSelectedPersonaIds(record.selectedPersonaIds);
     setGroupFilters(record.groupFilters);
     setStratifyFields(record.stratifyFields);
     setSampleSize(record.sampleSize);
+    setSampleSizePerValueGroup(record.sampleSizePerValueGroup);
     setPersonaModel(record.personaModel);
     setParallelTrials(record.parallelTrials);
+    setPersonaPool(record.personaPool || PERSONA_BENCH_POOL);
     setUseTaskDefaultStrategyState(record.useTaskDefaultStrategy);
+    setTaskDefaultStrategyDismissed(record.taskDefaultStrategyDismissed === true);
   }, []);
 
   const resetToTaskStrategy = useCallback(() => {
@@ -94,6 +106,8 @@ export function useSetupPersonaSampling(
         resetToTaskStrategy();
         return;
       }
+      // Explicit operator opt-out — do not confuse with pre-hydrate false.
+      setTaskDefaultStrategyDismissed(true);
       setUseTaskDefaultStrategyState(false);
     },
     [resetToTaskStrategy],
@@ -115,25 +129,32 @@ export function useSetupPersonaSampling(
     if (strategyQuery.isFetching || strategyQuery.isLoading) return;
 
     const stored = readCockpitPersonaSetup(taskKind, fallbackPersonaModel, path);
-    if (hasStoredPersonaSetup(path)) {
-      if (stored.useTaskDefaultStrategy && strategyQuery.data) {
-        const applied = setupFromPersonaStrategy(strategyQuery.data, fallbackPersonaModel, {
-          ...defaultPersonaSetup(fallbackPersonaModel),
-          personaModel: stored.personaModel,
-          parallelTrials: stored.parallelTrials,
-        });
-        applySetupRecord(applied);
-      } else {
-        applySetupRecord({
-          ...stored,
-          useTaskDefaultStrategy: stored.useTaskDefaultStrategy && Boolean(strategyQuery.data),
-        });
-      }
+    const strategy = strategyQuery.data;
+    const dismissed = stored.taskDefaultStrategyDismissed === true;
+
+    if (strategy && !dismissed) {
+      // Task has persona_strategy.json → default On (also repairs race-poisoned Off).
+      const applied = setupFromPersonaStrategy(strategy, fallbackPersonaModel, {
+        ...defaultPersonaSetup(fallbackPersonaModel),
+        personaModel: stored.personaModel,
+        parallelTrials: stored.parallelTrials,
+      });
+      applySetupRecord(applied);
       hydratedPathRef.current = path;
       return;
     }
 
-    const applied = setupFromPersonaStrategy(strategyQuery.data, fallbackPersonaModel, {
+    if (hasStoredPersonaSetup(path)) {
+      applySetupRecord({
+        ...stored,
+        useTaskDefaultStrategy: Boolean(strategy) && stored.useTaskDefaultStrategy,
+        taskDefaultStrategyDismissed: dismissed,
+      });
+      hydratedPathRef.current = path;
+      return;
+    }
+
+    const applied = setupFromPersonaStrategy(strategy, fallbackPersonaModel, {
       ...defaultPersonaSetup(fallbackPersonaModel),
       personaModel: stored.personaModel,
       parallelTrials: stored.parallelTrials,
@@ -151,6 +172,11 @@ export function useSetupPersonaSampling(
   ]);
 
   useEffect(() => {
+    // Do not persist the pre-hydrate default (useTaskDefaultStrategy=false) —
+    // that used to lock Task default strategy Off in localStorage forever.
+    if (!normalizedPath || hydratedPathRef.current !== normalizedPath) {
+      return;
+    }
     if (skipNextPersistRef.current) {
       skipNextPersistRef.current = false;
       return;
@@ -163,9 +189,12 @@ export function useSetupPersonaSampling(
         groupFilters,
         stratifyFields,
         sampleSize,
+        sampleSizePerValueGroup,
         parallelTrials,
         personaModel,
+        personaPool,
         useTaskDefaultStrategy,
+        taskDefaultStrategyDismissed,
       },
       normalizedPath,
     );
@@ -177,9 +206,12 @@ export function useSetupPersonaSampling(
     groupFilters,
     stratifyFields,
     sampleSize,
+    sampleSizePerValueGroup,
     parallelTrials,
     personaModel,
+    personaPool,
     useTaskDefaultStrategy,
+    taskDefaultStrategyDismissed,
   ]);
 
   useEffect(() => {
@@ -235,9 +267,13 @@ export function useSetupPersonaSampling(
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
