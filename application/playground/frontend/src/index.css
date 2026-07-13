@@ -53,8 +53,8 @@
 
   /* Type */
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --display: "Space Grotesk", var(--sans);
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --display: var(--sans);
+  --mono: var(--sans);
 
   /* Radii */
   --radius-sm: 4px;

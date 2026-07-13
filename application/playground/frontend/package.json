@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json && vite build",
     "preview": "vite preview",
+    "test:font": "node --test tests/font-contract.test.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
     "test:e2e:synthesis": "npm run build && playwright test e2e/synthesis-adjust-generate.spec.ts",
     "test:e2e:synthesis:headed": "npm run build && playwright test e2e/synthesis-adjust-generate.spec.ts --headed"

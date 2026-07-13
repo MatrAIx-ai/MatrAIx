@@ -1,13 +1,15 @@
 import type { Config } from "tailwindcss";
 
+const interFontFamily = ["Inter", "system-ui", "sans-serif"];
+
 /**
  * Tailwind theme for Playground — the "Playground" design system.
  *
  * Dark-first; tokens live in src/index.css as "R G B" triplets and are consumed
  * via rgb(var(--x)/<alpha-value>) so opacity utilities (bg-primary/10,
- * border-secondary/25) work for every color. Three faces only: font-sans
- * (Inter, default UI), font-display (Space Grotesk, headings + the Playground
- * wordmark), font-mono (JetBrains Mono, data + the uppercase `.hud` micro-label).
+ * border-secondary/25) work for every color. Inter is the single text face for
+ * font-sans, font-display, font-mono, and the uppercase `.hud` micro-label.
+ * Material Symbols remains the icon-font exception.
  *
  * Use the names directly in JSX, e.g. `bg-surface border border-outline
  * rounded-md text-text-variant font-mono`. The score-low/mid/high colors are
@@ -49,9 +51,9 @@ export default {
         "score-high": "rgb(var(--score-high) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: interFontFamily,
+        display: interFontFamily,
+        mono: interFontFamily,
       },
       borderRadius: {
         sm: "4px",

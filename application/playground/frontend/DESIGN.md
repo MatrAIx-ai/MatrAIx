@@ -10,7 +10,7 @@ Dark-first, restrained "mission control". Authoritative tokens live in `src/inde
 - **Status:** `danger` · `warn`. **Scores only:** `score-low|mid|high` (red→amber→mint) via `SCORE_BAND_CLASS` in `cockpit/cockpitShared.tsx` — never use the primary accent for a score.
 
 ## Type
-Three faces: **Inter** (`font-sans`, default UI) · **Space Grotesk** (`font-display`, headings + the `Playground` wordmark) · **JetBrains Mono** (`font-mono`, data + the uppercase `.hud` micro-label). Fixed rem-ish sizes (product register — not fluid clamps).
+One text face: **Inter** powers `font-sans`, `font-display`, `font-mono`, and the uppercase `.hud` micro-label. Material Symbols remains the icon-font exception. Fixed rem-ish sizes (product register — not fluid clamps).
 
 ## Utilities (in `index.css`)
 - `.panel` — bordered box with a top-left cyan corner bracket (signature; use on key panels, not everything).
