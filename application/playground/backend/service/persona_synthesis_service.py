@@ -701,6 +701,18 @@ class PersonaSynthesisService:
                     key = "gammaScale"
             elif exc.stage == "full_cpt" and gamma_scale != 1.0:
                 key = "gammaScale"
+            elif exc.stage == "aggregate":
+                for source, target, _category in exc.contributors:
+                    if (source, target) in edge_factors:
+                        key = f"overrides.edgeWeights.{source}->{target}"
+                        break
+                if key is None:
+                    for _source, _target, category in exc.contributors:
+                        if category in category_scales:
+                            key = f"overrides.categoryScales.{category}"
+                            break
+                if key is None and gamma_scale != 1.0:
+                    key = "gammaScale"
             if key is None:
                 raise
             raise SynthesisValidationError(str(exc), key=key) from exc

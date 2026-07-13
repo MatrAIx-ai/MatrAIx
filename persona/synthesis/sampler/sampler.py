@@ -24,6 +24,7 @@ _NIBBLE_MAX_VALUES = 16
 # shard is an independent gzip member, so concatenation stays a valid stream.
 _GZIP_LEVEL = 1
 _CODES_COMPRESSIONS = {"none", "gzip"}
+_FLOAT32_MAX = float(np.finfo(np.float32).max)
 
 
 class SamplerCompilationError(ValueError):
@@ -36,19 +37,21 @@ class SamplerCompilationError(ValueError):
         target: str,
         source: str | None = None,
         category: str | None = None,
+        contributors: tuple[tuple[str, str, str], ...] = (),
     ) -> None:
         self.stage = stage
         self.target = target
         self.source = source
         self.category = category
+        self.contributors = contributors
         if stage == "pairwise":
             location = f"{source}->{target}"
+            message = f"scaled pairwise evidence for {location}"
+        elif stage == "aggregate":
+            message = f"accumulated evidence for {target}"
         else:
-            location = target
-        super().__init__(
-            f"scaled {stage if stage == 'pairwise' else 'full-CPT'} evidence "
-            f"for {location} cannot be represented in float32"
-        )
+            message = f"scaled full-CPT evidence for {target}"
+        super().__init__(f"{message} cannot be represented in float32")
 
 
 def _scaled_evidence_table(
@@ -432,6 +435,26 @@ class PersonaForwardSampler:
             gamma = self.gamma[nid] * self._gamma_scale
             logprior32 = self.logprior[nid].astype(np.float32)
             plan = _NodePlan(nid=nid, k=k, logprior=np.ascontiguousarray(logprior32[:, None]))
+            evidence_lower = logprior32.astype(np.float64, copy=True)
+            evidence_upper = evidence_lower.copy()
+            contributors: List[tuple[str, str, str]] = []
+
+            def add_evidence_bounds(
+                table: np.ndarray,
+                contributor: tuple[str, str, str] | None = None,
+            ) -> None:
+                if contributor is not None and np.any(table != 0.0):
+                    contributors.append(contributor)
+                evidence_lower[:] += table.min(axis=1).astype(np.float64)
+                evidence_upper[:] += table.max(axis=1).astype(np.float64)
+                if (evidence_lower < -_FLOAT32_MAX).any() or (
+                    evidence_upper > _FLOAT32_MAX
+                ).any():
+                    raise SamplerCompilationError(
+                        stage="aggregate",
+                        target=nid,
+                        contributors=tuple(contributors),
+                    )
 
             for cpt in self.full_cpts.get(nid, []):
                 if not all(sampled_before(p, pos) for p in cpt["parents"]):
@@ -454,13 +477,15 @@ class PersonaForwardSampler:
                         stage="full_cpt",
                         target=nid,
                     )
+                compiled_lut = np.ascontiguousarray(lut.T)
                 plan.cpts.append(
                     (
                         tuple(cpt["parents"]),
                         tuple(int(m) for m in cpt["multipliers"]),
-                        np.ascontiguousarray(lut.T),
+                        compiled_lut,
                     )
                 )
+                add_evidence_bounds(compiled_lut)
 
             repl = self.replaced_parents[nid]
             for edge in self.in_edges.get(nid, []):
@@ -503,7 +528,12 @@ class PersonaForwardSampler:
                     target=nid,
                     category=category,
                 )
-                plan.edges.append((edge["source"], np.ascontiguousarray(scaled.T)))
+                compiled_lut = np.ascontiguousarray(scaled.T)
+                plan.edges.append((source, compiled_lut))
+                add_evidence_bounds(
+                    compiled_lut,
+                    (source, nid, category),
+                )
 
             for mask in self.masks.get(nid, []):
                 if any(len(allowed) == 0 for _, allowed in mask["condition"]):

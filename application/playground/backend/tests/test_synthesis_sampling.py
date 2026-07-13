@@ -19,6 +19,43 @@ from backend.tests.test_synthesis_sampling_contract import (  # noqa: E402
     SAMPLER_GRAPH,
 )
 
+AGGREGATE_OVERFLOW_GRAPH = {
+    "nodes": [
+        *[
+            {
+                "id": f"p{i}",
+                "label": f"P{i}",
+                "category": "Demo",
+                "values": ["0", "1"],
+                "prior": [0.5, 0.5],
+            }
+            for i in range(1, 4)
+        ],
+        {
+            "id": "t",
+            "label": "T",
+            "category": "Outcome",
+            "values": ["t0", "t1"],
+            "prior": [0.5, 0.5],
+        },
+    ],
+    "directed_proposal_edges": [
+        {
+            "source": f"p{i}",
+            "target": "t",
+            "edge_weight": 1.0,
+            "cpd": {
+                "type": "pairwise_conditional_matrix",
+                "source_values": ["0", "1"],
+                "target_values": ["t0", "t1"],
+                "P_target_given_source": [[0.25, 0.75], [0.25, 0.75]],
+            },
+        }
+        for i in range(1, 4)
+    ],
+    "proposal_view": {"topological_order": ["p1", "p2", "p3", "t"]},
+}
+
 
 @pytest.fixture()
 def service(tmp_path):
@@ -33,6 +70,19 @@ def service(tmp_path):
 def synthesis_client(client, app, service):
     app.state.services.persona_synthesis = service
     return client
+
+
+@pytest.fixture()
+def aggregate_overflow_service(tmp_path):
+    graph_path = tmp_path / "aggregate-overflow-graph.json"
+    graph_path.write_text(json.dumps(AGGREGATE_OVERFLOW_GRAPH), encoding="utf-8")
+    return PersonaSynthesisService(graph_path)
+
+
+@pytest.fixture()
+def aggregate_overflow_client(client, app, aggregate_overflow_service):
+    app.state.services.persona_synthesis = aggregate_overflow_service
+    return client, aggregate_overflow_service
 
 
 def test_pin_clamps_and_shifts_downstream(service):
@@ -302,4 +352,108 @@ def test_failed_compilation_is_not_cached_and_safe_retry_succeeds(service):
     )
     assert len(body["personas"]) == 1
     assert len(service._sampler_cache) == 1
+    assert service._sampler_inflight == {}
+
+
+ACCUMULATED_FLOAT32_MESSAGE = (
+    "accumulated evidence for t cannot be represented in float32"
+)
+
+
+def test_accumulated_category_evidence_reports_key_and_allows_safe_retry(
+    aggregate_overflow_service,
+):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        aggregate_overflow_service.sample(
+            n=1,
+            seed=7,
+            overrides={"categoryScales": {"Demo": 6e38}},
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": ACCUMULATED_FLOAT32_MESSAGE,
+        "key": "overrides.categoryScales.Demo",
+    }
+    assert aggregate_overflow_service._sampler_cache == {}
+    assert aggregate_overflow_service._sampler_inflight == {}
+
+    body = aggregate_overflow_service.sample(
+        n=1,
+        seed=7,
+        overrides={"categoryScales": {"Demo": 1.0}},
+        compare_baseline=False,
+    )
+    assert len(body["personas"]) == 1
+    assert len(aggregate_overflow_service._sampler_cache) == 1
+    assert aggregate_overflow_service._sampler_inflight == {}
+
+
+def test_accumulated_explicit_edges_take_deterministic_precedence(
+    aggregate_overflow_service,
+):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        aggregate_overflow_service.sample(
+            n=1,
+            seed=7,
+            overrides={
+                "edgeWeights": {
+                    "p1->t": 6e38,
+                    "p2->t": 6e38,
+                    "p3->t": 6e38,
+                },
+                "categoryScales": {"Demo": 1.0},
+            },
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": ACCUMULATED_FLOAT32_MESSAGE,
+        "key": "overrides.edgeWeights.p1->t",
+    }
+    assert aggregate_overflow_service._sampler_cache == {}
+    assert aggregate_overflow_service._sampler_inflight == {}
+
+
+def test_zero_edge_does_not_take_accumulated_category_error_precedence(
+    aggregate_overflow_service,
+):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        aggregate_overflow_service.sample(
+            n=1,
+            seed=7,
+            overrides={
+                "edgeWeights": {"p1->t": 0.0},
+                "categoryScales": {"Demo": 6e38},
+            },
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": ACCUMULATED_FLOAT32_MESSAGE,
+        "key": "overrides.categoryScales.Demo",
+    }
+    assert aggregate_overflow_service._sampler_cache == {}
+    assert aggregate_overflow_service._sampler_inflight == {}
+
+
+def test_accumulated_category_evidence_maps_to_exact_422(
+    aggregate_overflow_client,
+):
+    client, service = aggregate_overflow_client
+    response = client.post(
+        "/api/synthesis/sample",
+        json={
+            "n": 1,
+            "compareBaseline": False,
+            "overrides": {"categoryScales": {"Demo": 6e38}},
+        },
+    )
+
+    assert response.status_code == 422
+    assert response.json() == {
+        "message": ACCUMULATED_FLOAT32_MESSAGE,
+        "key": "overrides.categoryScales.Demo",
+    }
+    assert service._sampler_cache == {}
     assert service._sampler_inflight == {}

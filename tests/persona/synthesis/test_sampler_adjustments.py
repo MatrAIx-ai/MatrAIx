@@ -44,6 +44,43 @@ SAMPLER_GRAPH = {
     "proposal_view": {"topological_order": ["a", "b", "c"]},
 }
 
+MULTI_PARENT_OVERFLOW_GRAPH = {
+    "nodes": [
+        *[
+            {
+                "id": f"p{i}",
+                "label": f"P{i}",
+                "category": "Demo",
+                "values": ["0", "1"],
+                "prior": [0.5, 0.5],
+            }
+            for i in range(1, 4)
+        ],
+        {
+            "id": "t",
+            "label": "T",
+            "category": "Outcome",
+            "values": ["t0", "t1"],
+            "prior": [0.5, 0.5],
+        },
+    ],
+    "directed_proposal_edges": [
+        {
+            "source": f"p{i}",
+            "target": "t",
+            "edge_weight": 1.0,
+            "cpd": {
+                "type": "pairwise_conditional_matrix",
+                "source_values": ["0", "1"],
+                "target_values": ["t0", "t1"],
+                "P_target_given_source": [[0.25, 0.75], [0.25, 0.75]],
+            },
+        }
+        for i in range(1, 4)
+    ],
+    "proposal_view": {"topological_order": ["p1", "p2", "p3", "t"]},
+}
+
 
 def write_graph(tmp_path: Path, graph: dict | None = None) -> Path:
     path = tmp_path / "graph.json"
@@ -335,4 +372,25 @@ def test_zero_gamma_with_huge_finite_factors_compiles_exact_zero_evidence(tmp_pa
     b_plan = next(plan for plan in sampler._plan if plan.nid == "b")
     np.testing.assert_array_equal(
         b_plan.edges[0][1], np.zeros_like(b_plan.edges[0][1])
+    )
+
+
+def test_accumulated_finite_tables_raise_typed_compile_error(tmp_path):
+    with pytest.raises(ValueError) as exc_info:
+        PersonaForwardSampler(
+            write_graph(tmp_path, MULTI_PARENT_OVERFLOW_GRAPH),
+            SamplingConfig(seed=7),
+            overrides=SamplerOverrides(category_scales={"Demo": 6e38}),
+        )
+
+    error = exc_info.value
+    assert isinstance(error, sampler_package.SamplerCompilationError)
+    assert error.stage == "aggregate"
+    assert error.target == "t"
+    assert error.contributors == (
+        ("p1", "t", "Demo"),
+        ("p2", "t", "Demo"),
+    )
+    assert str(error) == (
+        "accumulated evidence for t cannot be represented in float32"
     )
