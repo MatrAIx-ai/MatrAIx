@@ -83,6 +83,12 @@ __all__ = [
     "SynthesisSubgraphResponse",
     "SynthesisNodeEdgeView",
     "SynthesisNodeDetail",
+    "SynthesisSampleOverrides",
+    "SynthesisSampleRequest",
+    "SynthesisMarginal",
+    "SynthesisSampleResponse",
+    "SynthesisRenderRequest",
+    "SynthesisRenderResponse",
 ]
 
 #: Domains the playground (and the rest of the Studio) supports. Mirrors the
@@ -1050,3 +1056,44 @@ class SynthesisNodeDetail(BaseModel):
     outDegree: int
     inEdges: List[SynthesisNodeEdgeView]
     outEdges: List[SynthesisNodeEdgeView]
+
+
+class SynthesisSampleOverrides(BaseModel):
+    edgeWeights: Dict[str, float] = Field(default_factory=dict)
+    nodePriors: Dict[str, List[float]] = Field(default_factory=dict)
+    categoryScales: Dict[str, float] = Field(default_factory=dict)
+
+
+class SynthesisSampleRequest(BaseModel):
+    n: int = Field(20, strict=True, ge=1, le=200)
+    seed: int = Field(42, strict=True, ge=0, le=9_007_199_254_740_991)
+    gammaScale: float = Field(1.0, ge=0.0)
+    pins: Dict[str, str] = Field(default_factory=dict)
+    overrides: SynthesisSampleOverrides = Field(default_factory=SynthesisSampleOverrides)
+    compareBaseline: bool = True
+
+
+class SynthesisMarginal(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    label: str
+    values: List[str]
+    freqs: List[float]
+
+
+class SynthesisSampleResponse(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    personas: List[Dict[str, str]]
+    baselinePersonas: Optional[List[Dict[str, str]]] = None
+    marginals: Dict[str, SynthesisMarginal]
+    baselineMarginals: Optional[Dict[str, SynthesisMarginal]] = None
+    effectiveConfig: Dict[str, Any]
+    flags: Dict[str, Any]
+
+
+class SynthesisRenderRequest(BaseModel):
+    attributes: Dict[str, str] = Field(default_factory=dict)
+
+
+class SynthesisRenderResponse(BaseModel):
+    model_config = ConfigDict(extra="allow")
+    text: str

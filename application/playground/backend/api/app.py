@@ -45,8 +45,10 @@ from pathlib import Path
 from typing import Any, AsyncIterator, Dict, List, Optional
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
+from fastapi.exception_handlers import request_validation_exception_handler
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request as StarletteRequest
 from starlette.responses import Response as StarletteResponse
@@ -56,7 +58,11 @@ from starlette.responses import Response as StarletteResponse
 import backend.api  # noqa: F401  (side effect: sys.path wiring)
 from backend.api import schemas
 from backend.api.deps import AppState, build_state, state_from_request
-from backend.service.persona_synthesis_service import UnknownNodeError
+from backend.service.persona_synthesis_service import (
+    SamplerUnavailableError,
+    SynthesisValidationError,
+    UnknownNodeError,
+)
 
 __all__ = ["create_app", "app", "preflight_checks", "catalog_item_view"]
 
@@ -534,6 +540,25 @@ def _web_dist_dir() -> str:
     return os.path.join(app_root, "frontend", "dist")
 
 
+def _synthesis_validation_key(error: Dict[str, Any]) -> str:
+    if error.get("type") == "json_invalid":
+        return "body"
+    location = list(error.get("loc", ()))
+    if location[:1] == ["body"]:
+        location = location[1:]
+    parts = [str(part) for part in location]
+    if parts[:2] == ["overrides", "nodePriors"] and len(parts) >= 3:
+        parts = parts[:3]
+    elif parts[:2] in [
+        ["overrides", "edgeWeights"],
+        ["overrides", "categoryScales"],
+    ] and len(parts) >= 3:
+        parts = parts[:3]
+    elif parts[:1] == ["pins"] and len(parts) >= 2:
+        parts = parts[:2]
+    return ".".join(parts) or "body"
+
+
 # --------------------------------------------------------------------------- #
 # App factory
 # --------------------------------------------------------------------------- #
@@ -564,6 +589,25 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         summary="Developer harness API for persona-driven chatbot evaluation.",
         lifespan=lifespan,
     )
+
+    @app.exception_handler(RequestValidationError)
+    async def synthesis_request_validation(
+        request: Request, exc: RequestValidationError
+    ):
+        if request.url.path not in {
+            "/api/synthesis/sample",
+            "/api/synthesis/render",
+        }:
+            return await request_validation_exception_handler(request, exc)
+        error = exc.errors()[0]
+        return JSONResponse(
+            status_code=422,
+            content={
+                "message": str(error.get("msg") or "Invalid request"),
+                "key": _synthesis_validation_key(error),
+            },
+        )
+
     app.state.services = state
 
     # --- CORS (Vite dev server) --------------------------------------- #
@@ -1202,6 +1246,45 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             return services.persona_synthesis.node_detail(node_id)
         except UnknownNodeError:
             raise HTTPException(status_code=404, detail=f"unknown graph node: {node_id}")
+
+    @app.post(
+        "/api/synthesis/sample",
+        response_model=schemas.SynthesisSampleResponse,
+        tags=["synthesis"],
+    )
+    def synthesis_sample(
+        body: schemas.SynthesisSampleRequest,
+        services: AppState = Depends(get_services),
+    ):
+        """Sample personas under pins/overrides, plus an optional same-seed baseline."""
+        try:
+            return services.persona_synthesis.sample(
+                n=body.n,
+                seed=body.seed,
+                gamma_scale=body.gammaScale,
+                pins=body.pins,
+                overrides=body.overrides.model_dump(),
+                compare_baseline=body.compareBaseline,
+            )
+        except SynthesisValidationError as exc:
+            return JSONResponse(
+                status_code=422,
+                content={"message": str(exc), "key": exc.key},
+            )
+        except SamplerUnavailableError as exc:
+            raise HTTPException(status_code=503, detail=str(exc))
+
+    @app.post(
+        "/api/synthesis/render",
+        response_model=schemas.SynthesisRenderResponse,
+        tags=["synthesis"],
+    )
+    def synthesis_render(
+        body: schemas.SynthesisRenderRequest,
+        services: AppState = Depends(get_services),
+    ):
+        """Render one persona attribute map to natural-language text."""
+        return services.persona_synthesis.render_text(body.attributes)
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build
