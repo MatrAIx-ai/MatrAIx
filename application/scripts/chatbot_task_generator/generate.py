@@ -35,16 +35,14 @@ def _parse_rules(rules_text: str) -> list[dict]:
     Format: one JSON object per line, each with keys:
       pattern (str, required), response (str, required), priority (int, optional, defaults to 0).
     """
-    import json as _json
-
     rules = []
     for line in rules_text.strip().split("\n"):
         line = line.strip()
         if not line:
             continue
         try:
-            rule = _json.loads(line)
-        except _json.JSONDecodeError:
+            rule = json.loads(line)
+        except json.JSONDecodeError:
             continue
         if not isinstance(rule, dict):
             continue
@@ -52,7 +50,10 @@ def _parse_rules(rules_text: str) -> list[dict]:
         response = rule.get("response", "").strip()
         if not pattern or not response:
             continue
-        priority = int(rule.get("priority", 0)) if "priority" in rule else 0
+        try:
+            priority = int(rule.get("priority", 0)) if "priority" in rule else 0
+        except (ValueError, TypeError):
+            priority = 0
         rules.append({"pattern": pattern, "response": response, "priority": priority})
     return rules
 
