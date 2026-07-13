@@ -102,6 +102,23 @@ class SamplingConfig:
     eps: float = EPS
 
 
+@dataclass(frozen=True)
+class SamplerOverrides:
+    """Compile-time graph adjustments, folded in during plan compilation.
+
+    ``edge_weight_factors`` multiplies individual pairwise-edge weights;
+    ``category_scales`` multiplies every pairwise edge whose source node is in
+    the category (composing with per-edge factors); ``node_priors`` replaces a
+    node's base prior (renormalized); ``gamma_scale`` multiplies every node's
+    compiled shrinkage gamma. Full-CPT weights are intentionally untouched.
+    """
+
+    edge_weight_factors: Mapping[tuple, float] = field(default_factory=dict)
+    node_priors: Mapping[str, tuple] = field(default_factory=dict)
+    category_scales: Mapping[str, float] = field(default_factory=dict)
+    gamma_scale: float = 1.0
+
+
 @dataclass
 class _NodePlan:
     """Precompiled per-node sampling step.
@@ -139,11 +156,24 @@ class PersonaForwardSampler:
     avoiding intermediate normalization passes.
     """
 
-    def __init__(self, graph_path: str | Path, config: SamplingConfig | None = None):
+    def __init__(
+        self,
+        graph_path: str | Path,
+        config: SamplingConfig | None = None,
+        *,
+        graph: Dict[str, Any] | None = None,
+        overrides: "SamplerOverrides | None" = None,
+    ):
         self.graph_path = Path(graph_path)
         self.config = config or SamplingConfig()
-        with self.graph_path.open("r", encoding="utf-8") as f:
-            self.graph: Dict[str, Any] = json.load(f)
+        self.overrides = overrides
+        self._gamma_scale = float(overrides.gamma_scale) if overrides is not None else 1.0
+        if self._gamma_scale < 0:
+            raise ValueError("gamma_scale must be >= 0")
+        if graph is None:
+            with self.graph_path.open("r", encoding="utf-8") as f:
+                graph = json.load(f)
+        self.graph: Dict[str, Any] = graph
         self.rng = np.random.default_rng(self.config.seed)
         self.nodes = {n["id"]: n for n in self.graph.get("nodes", [])}
         self.values = {nid: list(n.get("values", [])) for nid, n in self.nodes.items()}
@@ -155,10 +185,38 @@ class PersonaForwardSampler:
 
         self.in_edges = self._compile_pairwise_edges()
         self.full_cpts = self._compile_full_cpts()
+        # Ratios above are anchored to the graph prior; plans below use replacements.
+        self._apply_prior_overrides()
         self.masks = self._compile_masks()
         self.replaced_parents, self.gamma = self._compile_node_shrinkage()
         self.required_nodes = self._compile_required_nodes()
         self._compile_plan()
+
+    def _apply_prior_overrides(self) -> None:
+        """Replace proposal base priors after graph CPD ratios are compiled."""
+        if self.overrides is None:
+            return
+        for nid, dist in self.overrides.node_priors.items():
+            if nid not in self.nodes:
+                raise ValueError(f"prior override for unknown node: {nid!r}")
+            expected = len(self.values[nid])
+            if len(dist) != expected:
+                raise ValueError(
+                    f"prior override for {nid!r} must have {expected} entries"
+                )
+            self.prior[nid] = _normalize([float(p) for p in dist])
+            self.logprior[nid] = np.log(np.maximum(self.prior[nid], self.config.eps))
+
+    def _edge_override_factor(self, source: str, target: str) -> float:
+        overrides = self.overrides
+        factor = float(overrides.edge_weight_factors.get((source, target), 1.0))
+        category = self.nodes[source].get("category") or "Uncategorized"
+        factor *= float(overrides.category_scales.get(category, 1.0))
+        if not (factor >= 0.0):
+            raise ValueError(
+                f"edge weight factor for {source!r}->{target!r} must be >= 0"
+            )
+        return factor
 
     def _compile_pairwise_edges(self) -> Dict[str, List[Dict[str, Any]]]:
         out: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
@@ -317,7 +375,7 @@ class PersonaForwardSampler:
                 continue
             pos = topo_pos[nid]
             k = len(self.values[nid])
-            gamma = self.gamma[nid]
+            gamma = self.gamma[nid] * self._gamma_scale
             logprior32 = self.logprior[nid].astype(np.float32)
             plan = _NodePlan(nid=nid, k=k, logprior=np.ascontiguousarray(logprior32[:, None]))
 
@@ -340,7 +398,14 @@ class PersonaForwardSampler:
             for edge in self.in_edges.get(nid, []):
                 if edge["source"] in repl or not sampled_before(edge["source"], pos):
                     continue
-                scaled = ((gamma * edge["weight"]) * edge["logratio"]).astype(np.float32)
+                factor = (
+                    self._edge_override_factor(edge["source"], nid)
+                    if self.overrides is not None
+                    else 1.0
+                )
+                scaled = (
+                    (gamma * edge["weight"] * factor) * edge["logratio"]
+                ).astype(np.float32)
                 plan.edges.append((edge["source"], np.ascontiguousarray(scaled.T)))
 
             for mask in self.masks.get(nid, []):

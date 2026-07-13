@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from persona.synthesis.sampler import PersonaForwardSampler, SamplingConfig
+from persona.synthesis.sampler import PersonaForwardSampler, SamplerOverrides, SamplingConfig
 
 SAMPLER_GRAPH = {
     "nodes": [
@@ -119,3 +119,130 @@ def test_out_of_range_pin_raises(tmp_path):
     sampler = build(tmp_path)
     with pytest.raises(ValueError, match="out of range"):
         sampler.sample_indices(8, pins={"a": 5})
+
+
+def sample_all(sampler: PersonaForwardSampler, n: int = 64) -> dict:
+    return sampler.sample_indices(n, rng=np.random.default_rng(123))
+
+
+def assert_bit_identical(left: dict, right: dict) -> None:
+    assert left.keys() == right.keys()
+    for nid in left:
+        np.testing.assert_array_equal(left[nid], right[nid])
+
+
+def test_noop_overrides_bit_identical(tmp_path):
+    plain = sample_all(build(tmp_path))
+    noop = sample_all(build(tmp_path, overrides=SamplerOverrides()))
+    assert_bit_identical(plain, noop)
+
+
+def test_preparsed_graph_bit_identical(tmp_path):
+    path = write_graph(tmp_path)
+    graph = json.loads(path.read_text(encoding="utf-8"))
+    plain = sample_all(PersonaForwardSampler(path, SamplingConfig(seed=7)))
+    shared = sample_all(
+        PersonaForwardSampler(path, SamplingConfig(seed=7), graph=graph)
+    )
+    assert_bit_identical(plain, shared)
+
+
+def test_prior_override_renormalizes(tmp_path):
+    # [2, 2] normalizes to the baseline [0.5, 0.5]: identical tables.
+    plain = sample_all(build(tmp_path))
+    scaled = sample_all(
+        build(tmp_path, overrides=SamplerOverrides(node_priors={"a": (2.0, 2.0)}))
+    )
+    assert_bit_identical(plain, scaled)
+
+
+def test_prior_override_shifts_node(tmp_path):
+    sampler = build(tmp_path, overrides=SamplerOverrides(node_priors={"a": (0.0, 1.0)}))
+    idx = sampler.sample_indices(256, rng=np.random.default_rng(5))
+    assert (idx["a"] == 1).all()
+
+
+def test_prior_override_shifts_child_with_incoming_edge(tmp_path):
+    sampler = build(
+        tmp_path,
+        overrides=SamplerOverrides(node_priors={"b": (0.9, 0.1)}),
+    )
+    idx = sampler.sample_indices(
+        8000, pins={"a": 1}, rng=np.random.default_rng(5)
+    )
+    # Evidence ratios remain anchored to the graph prior [0.5, 0.5]:
+    # q(b1) ∝ 0.1 * (0.95 / 0.5), q(b0) ∝ 0.9 * (0.05 / 0.5).
+    assert frequency(idx["b"], 1) == pytest.approx(0.6786, abs=0.025)
+
+
+def test_category_scale_expands_to_per_edge_factors(tmp_path):
+    # Both a->b and b->c have source category "Demo".
+    by_category = sample_all(
+        build(tmp_path, overrides=SamplerOverrides(category_scales={"Demo": 0.0}))
+    )
+    by_edges = sample_all(
+        build(
+            tmp_path,
+            overrides=SamplerOverrides(
+                edge_weight_factors={("a", "b"): 0.0, ("b", "c"): 0.0}
+            ),
+        )
+    )
+    assert_bit_identical(by_category, by_edges)
+
+
+def test_category_scale_composes_with_edge_factor(tmp_path):
+    # 2.0 (category) * 0.5 (edge) == 1.0 on a->b; b->c keeps the 2.0 scale.
+    composed = build(
+        tmp_path,
+        overrides=SamplerOverrides(
+            category_scales={"Demo": 2.0}, edge_weight_factors={("a", "b"): 0.5}
+        ),
+    )
+    explicit = build(
+        tmp_path,
+        overrides=SamplerOverrides(
+            edge_weight_factors={("a", "b"): 1.0, ("b", "c"): 2.0}
+        ),
+    )
+    assert_bit_identical(sample_all(composed), sample_all(explicit))
+
+
+def test_category_scale_two_changes_downstream_marginal(tmp_path):
+    baseline = build(tmp_path)
+    scaled = build(
+        tmp_path,
+        overrides=SamplerOverrides(category_scales={"Demo": 2.0}),
+    )
+    baseline_idx = baseline.sample_indices(
+        8000, pins={"a": 1}, rng=np.random.default_rng(17)
+    )
+    scaled_idx = scaled.sample_indices(
+        8000, pins={"a": 1}, rng=np.random.default_rng(17)
+    )
+    assert frequency(baseline_idx["b"], 1) == pytest.approx(0.95, abs=0.02)
+    assert frequency(scaled_idx["b"], 1) > 0.99
+
+
+def test_edge_factor_zero_decouples(tmp_path):
+    sampler = build(tmp_path, overrides=SamplerOverrides(edge_weight_factors={("a", "b"): 0.0}))
+    idx = sampler.sample_indices(4000, pins={"a": 1}, rng=np.random.default_rng(9))
+    assert frequency(idx["b"], 1) == pytest.approx(0.5, abs=0.03)
+
+
+def test_gamma_scale_zero_reverts_to_priors(tmp_path):
+    sampler = build(tmp_path, overrides=SamplerOverrides(gamma_scale=0.0))
+    idx = sampler.sample_indices(4000, pins={"a": 1}, rng=np.random.default_rng(9))
+    assert frequency(idx["b"], 1) == pytest.approx(0.5, abs=0.03)
+
+
+def test_prior_override_validation(tmp_path):
+    with pytest.raises(ValueError, match="unknown node"):
+        build(tmp_path, overrides=SamplerOverrides(node_priors={"zz": (1.0,)}))
+    with pytest.raises(ValueError, match="must have 2 entries"):
+        build(tmp_path, overrides=SamplerOverrides(node_priors={"a": (1.0,)}))
+
+
+def test_negative_edge_factor_rejected(tmp_path):
+    with pytest.raises(ValueError, match="must be >= 0"):
+        build(tmp_path, overrides=SamplerOverrides(edge_weight_factors={("a", "b"): -1.0}))
