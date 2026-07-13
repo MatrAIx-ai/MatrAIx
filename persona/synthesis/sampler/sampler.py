@@ -384,10 +384,32 @@ class PersonaForwardSampler:
             [len(self.values[nid]) for nid in self.required_nodes]
         )
 
-    def sample_indices(self, n: int) -> Dict[str, np.ndarray]:
-        """Sample N personas and return integer-coded node values."""
+    def sample_indices(
+        self,
+        n: int,
+        *,
+        pins: Mapping[str, int] | None = None,
+        rng: "np.random.Generator | None" = None,
+    ) -> Dict[str, np.ndarray]:
+        """Sample N personas and return integer-coded node values.
+
+        ``pins`` maps node id -> value index; pinned nodes skip sampling and
+        are clamped to that index (do()-intervention), so downstream nodes
+        condition on the pin while upstream distributions are untouched.
+        ``rng`` overrides ``self.rng`` for stateless per-request draws.
+        """
         idx: Dict[str, np.ndarray] = {}
-        rng = self.rng
+        if rng is None:
+            rng = self.rng
+        pinned: Dict[str, int] = {}
+        for nid, value_index in (pins or {}).items():
+            if nid not in self.nodes:
+                raise ValueError(f"unknown pinned node: {nid!r}")
+            if not 0 <= int(value_index) < len(self.values[nid]):
+                raise ValueError(
+                    f"pin index out of range for {nid!r}: {value_index}"
+                )
+            pinned[nid] = int(value_index)
         out_dtype = self._index_dtype
         kmax = self._plan_max_k
         # All per-node work runs in reused value-major (k, n) views of these
@@ -403,6 +425,9 @@ class PersonaForwardSampler:
         sel = np.empty(n, dtype=np.int64)
 
         for plan in self._plan:
+            if plan.nid in pinned:
+                idx[plan.nid] = np.full(n, pinned[plan.nid], dtype=out_dtype)
+                continue
             k = plan.k
             rng.random(out=u)
 
@@ -469,6 +494,9 @@ class PersonaForwardSampler:
             idx[plan.nid] = sel.astype(out_dtype)
 
         for nid in self._prior_only_nodes:
+            if nid in pinned:
+                idx[nid] = np.full(n, pinned[nid], dtype=out_dtype)
+                continue
             idx[nid] = rng.choice(len(self.values[nid]), size=n, p=self.prior[nid]).astype(out_dtype)
         return idx
 
