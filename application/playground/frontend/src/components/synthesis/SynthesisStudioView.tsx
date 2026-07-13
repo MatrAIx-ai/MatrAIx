@@ -85,6 +85,23 @@ export function SynthesisStudioView() {
     staleTime: Infinity,
   });
   const overview = overviewQuery.data ?? null;
+  const overlayValues =
+    overlayIndex !== null && result ? result.personas[overlayIndex] ?? null : null;
+  const pinnedCategories = useMemo(() => {
+    if (!overview) return new Set<string>();
+    const byAttribute = new Map<string, string>();
+    for (const category of overview.categories) {
+      for (const attribute of category.attributes) {
+        byAttribute.set(attribute.id, category.name);
+      }
+    }
+    return new Set(
+      [...resultPinnedIds].flatMap((id) => {
+        const name = byAttribute.get(id);
+        return name ? [name] : [];
+      }),
+    );
+  }, [overview, resultPinnedIds]);
   const selectedCategoryData =
     overview?.categories.find((cat) => cat.name === selectedCategory) ?? null;
   const selectedCategoryHasOutgoing =
@@ -110,6 +127,8 @@ export function SynthesisStudioView() {
               <CategoryOverviewGraph
                 overview={overview}
                 selectedCategory={selectedCategory}
+                overlay={overlayValues}
+                pinnedCategories={pinnedCategories}
                 onSelectCategory={(name) => {
                   setSelectedCategory(name);
                   setSelectedNode(null);
@@ -166,6 +185,8 @@ export function SynthesisStudioView() {
                     <DrilldownGraph
                       subgraph={subgraphQuery.data}
                       selectedNode={selectedNode}
+                      overlay={overlayValues}
+                      pinnedIds={resultPinnedIds}
                       onSelectNode={setSelectedNode}
                       onRecenter={(id) => {
                         setCenterNode(id);
@@ -257,6 +278,7 @@ export function SynthesisStudioView() {
               pinnedIds={resultPinnedIds}
               overlayIndex={overlayIndex}
               onOverlayIndexChange={setOverlayIndex}
+              overlayEnabled
             />
           </ExpandableStudioPanel>
         </div>

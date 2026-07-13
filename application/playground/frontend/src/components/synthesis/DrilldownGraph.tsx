@@ -26,11 +26,15 @@ export function DrilldownGraph({
   selectedNode,
   onSelectNode,
   onRecenter,
+  overlay = null,
+  pinnedIds,
 }: {
   subgraph: SynthesisSubgraphResponse;
   selectedNode: string | null;
   onSelectNode: (id: string) => void;
   onRecenter: (id: string) => void;
+  overlay?: Record<string, string> | null;
+  pinnedIds?: ReadonlySet<string>;
 }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -252,7 +256,9 @@ export function DrilldownGraph({
           const isSelected = node.id === selectedNode;
           const isFocus = node.id === focus;
           const dimmed = focus !== null && !neighborIds.has(node.id);
-          const accessibleLabel = `${node.label} (${node.category}) — in ${node.inDegree} / out ${node.outDegree}${node.emit ? "" : " · latent/helper"}${isCenter ? " · current center" : ""}. Double-click or press Shift+Enter to recenter.`;
+          const overlayValue = overlay ? overlay[node.id] : undefined;
+          const isPinned = pinnedIds?.has(node.id) ?? false;
+          const accessibleLabel = `${node.label} (${node.category}) — in ${node.inDegree} / out ${node.outDegree}${node.emit ? "" : " · latent/helper"}${isCenter ? " · current center" : ""}${overlayValue !== undefined ? ` · sampled value ${overlayValue}` : ""}${isPinned ? " · pinned in this result" : ""}. Double-click or press Shift+Enter to recenter.`;
           return (
             <g
               key={node.id}
@@ -302,7 +308,9 @@ export function DrilldownGraph({
                       ? "rgb(var(--primary) / 0.14)"
                       : "rgb(var(--surface-high))",
                   stroke:
-                    isSelected || isCenter || isFocus
+                    isPinned
+                      ? "rgb(var(--warn))"
+                      : isSelected || isCenter || isFocus
                       ? "rgb(var(--primary))"
                       : "rgb(var(--outline))",
                   strokeWidth: isSelected ? 2 : isCenter || isFocus ? 1.6 : 1.2,
@@ -320,9 +328,15 @@ export function DrilldownGraph({
                 x={position.x + 10}
                 y={position.y + 31}
                 className="font-mono"
-                style={{ fontSize: 9.5, fill: "rgb(var(--text-dim))" }}
+                style={{
+                  fontSize: 9.5,
+                  fill:
+                    overlayValue !== undefined
+                      ? "rgb(var(--primary))"
+                      : "rgb(var(--text-dim))",
+                }}
               >
-                {truncate(node.id)}
+                {overlayValue !== undefined ? truncate(overlayValue) : truncate(node.id)}
               </text>
             </g>
           );

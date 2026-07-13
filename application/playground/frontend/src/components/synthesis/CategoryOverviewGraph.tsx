@@ -5,7 +5,8 @@
  * vertically relaxed ellipse. Node size encodes attribute count; aggregated
  * cross-category edges curve through the middle with width/opacity by edge
  * count. Always-on labels occupy collision-relaxed side columns connected by
- * leader lines, while color remains reserved for hover/selection.
+ * leader lines; primary and warn accents communicate interaction and sampled
+ * result state.
  */
 import { useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 
@@ -18,6 +19,8 @@ const LABEL_FONT_SIZE = 10.5;
 const BASE_LABEL_CHAR_WIDTH = 5.7;
 const MIN_LABEL_CHAR_WIDTH = 4.5;
 const LABEL_ROW_GAP = 18;
+const OVERLAY_LABEL_ROW_GAP = 30;
+const OVERLAY_LABEL_BOTTOM_RESERVE = 12;
 const CANVAS_PADDING = 12;
 const MIN_RING_X_RADIUS = 34;
 const LABEL_LEADER_GAP = 7;
@@ -112,22 +115,23 @@ function relaxLabelColumn(
   categories: PlacedCategory[],
   minimumY: number,
   maximumY: number,
+  rowGap: number,
 ): Map<string, number> {
   const ordered = [...categories].sort((left, right) => left.y - right.y);
   const positions = ordered.map((category) => clamp(category.y, minimumY, maximumY));
   for (let index = 1; index < positions.length; index += 1) {
-    positions[index] = Math.max(positions[index], positions[index - 1] + LABEL_ROW_GAP);
+    positions[index] = Math.max(positions[index], positions[index - 1] + rowGap);
   }
   if (positions.length > 0 && positions[positions.length - 1] > maximumY) {
     positions[positions.length - 1] = maximumY;
     for (let index = positions.length - 2; index >= 0; index -= 1) {
-      positions[index] = Math.min(positions[index], positions[index + 1] - LABEL_ROW_GAP);
+      positions[index] = Math.min(positions[index], positions[index + 1] - rowGap);
     }
   }
   if (positions.length > 0 && positions[0] < minimumY) {
     positions[0] = minimumY;
     for (let index = 1; index < positions.length; index += 1) {
-      positions[index] = Math.max(positions[index], positions[index - 1] + LABEL_ROW_GAP);
+      positions[index] = Math.max(positions[index], positions[index - 1] + rowGap);
     }
   }
   return new Map(ordered.map((category, index) => [category.name, positions[index]]));
@@ -137,10 +141,14 @@ export function CategoryOverviewGraph({
   overview,
   selectedCategory,
   onSelectCategory,
+  overlay = null,
+  pinnedCategories,
 }: {
   overview: SynthesisOverviewResponse;
   selectedCategory: string | null;
   onSelectCategory: (name: string | null) => void;
+  overlay?: Record<string, string> | null;
+  pinnedCategories?: ReadonlySet<string>;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [canvasSize, setCanvasSize] = useState<CanvasSize | null>(null);
@@ -171,6 +179,18 @@ export function CategoryOverviewGraph({
     observer.observe(container);
     return () => observer.disconnect();
   }, []);
+
+  const hasOverlayPreview = useMemo(
+    () =>
+      overlay !== null &&
+      overview.categories.some((category) =>
+        category.attributes.some((attribute) => overlay[attribute.id] !== undefined),
+      ),
+    [overlay, overview.categories],
+  );
+  const containerClassName = `h-[70vh] ${
+    hasOverlayPreview ? "min-h-[700px]" : "min-h-[620px]"
+  } max-h-[700px] w-full overflow-hidden`;
 
   const layout = useMemo(() => {
     if (!canvasSize) return null;
@@ -229,16 +249,23 @@ export function CategoryOverviewGraph({
     });
 
     const minimumLabelY = CANVAS_PADDING + LABEL_FONT_SIZE;
-    const maximumLabelY = height - CANVAS_PADDING - LABEL_FONT_SIZE;
+    const maximumLabelY =
+      height -
+      CANVAS_PADDING -
+      LABEL_FONT_SIZE -
+      (hasOverlayPreview ? OVERLAY_LABEL_BOTTOM_RESERVE : 0);
+    const labelRowGap = hasOverlayPreview ? OVERLAY_LABEL_ROW_GAP : LABEL_ROW_GAP;
     const leftLabels = relaxLabelColumn(
       placedCategories.filter((category) => category.labelSide === "left"),
       minimumLabelY,
       maximumLabelY,
+      labelRowGap,
     );
     const rightLabels = relaxLabelColumn(
       placedCategories.filter((category) => category.labelSide === "right"),
       minimumLabelY,
       maximumLabelY,
+      labelRowGap,
     );
     for (const category of placedCategories) {
       category.labelY =
@@ -252,7 +279,7 @@ export function CategoryOverviewGraph({
       labelCharWidth,
       byName: new Map(placedCategories.map((category) => [category.name, category])),
     };
-  }, [canvasSize, overview]);
+  }, [canvasSize, hasOverlayPreview, overview]);
 
   const maxEdgeCount = useMemo(
     () => Math.max(1, ...overview.edges.map((edge) => edge.count)),
@@ -264,7 +291,7 @@ export function CategoryOverviewGraph({
     return (
       <div
         ref={containerRef}
-        className="h-[70vh] min-h-[620px] max-h-[700px] w-full overflow-hidden"
+        className={containerClassName}
         aria-busy="true"
       />
     );
@@ -292,7 +319,7 @@ export function CategoryOverviewGraph({
   return (
     <div
       ref={containerRef}
-      className="h-[70vh] min-h-[620px] max-h-[700px] w-full overflow-hidden"
+      className={containerClassName}
     >
       <svg
         viewBox={`0 0 ${layout.width} ${layout.height}`}
@@ -374,7 +401,21 @@ export function CategoryOverviewGraph({
             category.r + EDGE_NODE_GAP,
           );
           const leaderControlX = (leaderStart.x + leaderEnd.x) / 2;
-          const accessibleLabel = `${category.name} — ${category.attributeCount} attributes / ${category.nodeCount} nodes`;
+          const summary = overview.categories.find((item) => item.name === category.name);
+          const overlayItems = overlay
+            ? (summary?.attributes ?? []).flatMap((attribute) => {
+                const value = overlay[attribute.id];
+                return value === undefined ? [] : [`${attribute.label}: ${value}`];
+              })
+            : [];
+          const fullOverlayPreview = overlayItems.join(" · ");
+          const overlayPreview =
+            fullOverlayPreview.length > 32
+              ? `${fullOverlayPreview.slice(0, 31)}…`
+              : fullOverlayPreview;
+          const isPinnedCategory = pinnedCategories?.has(category.name) ?? false;
+          const accessiblePreview = overlayItems.slice(0, 8).join(" · ");
+          const accessibleLabel = `${category.name} — ${category.attributeCount} attributes / ${category.nodeCount} nodes${overlayItems.length ? ` · ${overlayItems.length} sampled values: ${accessiblePreview}${overlayItems.length > 8 ? " · more values omitted" : ""}` : ""}${isPinnedCategory ? " · contains pinned attributes" : ""}`;
           return (
             <g
               key={category.name}
@@ -430,6 +471,20 @@ export function CategoryOverviewGraph({
                   transition: "fill 150ms ease-out, stroke 150ms ease-out",
                 }}
               />
+              {isPinnedCategory ? (
+                <circle
+                  cx={category.x}
+                  cy={category.y}
+                  r={category.r + 3.5}
+                  fill="none"
+                  pointerEvents="none"
+                  style={{
+                    stroke: "rgb(var(--warn))",
+                    strokeWidth: 1.4,
+                    strokeDasharray: "3 3",
+                  }}
+                />
+              ) : null}
               <text
                 x={category.labelX}
                 y={category.labelY}
@@ -448,6 +503,19 @@ export function CategoryOverviewGraph({
               >
                 {category.label}
               </text>
+              {overlayPreview ? (
+                <text
+                  x={category.labelX}
+                  y={category.labelY + 12}
+                  textAnchor={category.labelSide === "left" ? "start" : "end"}
+                  dominantBaseline="hanging"
+                  className="font-mono"
+                  pointerEvents="none"
+                  style={{ fontSize: 8.5, fill: "rgb(var(--primary))" }}
+                >
+                  {overlayPreview}
+                </text>
+              ) : null}
             </g>
           );
         })}
