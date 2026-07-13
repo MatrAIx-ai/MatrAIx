@@ -266,6 +266,15 @@ def allowed_life_stages(age_bracket: str) -> list[str]:
     return list(LIFE_STAGE_BY_AGE.get(age_bracket, []))
 
 
+def allowed_age_brackets_for_life_stage(life_stage: str) -> list[str]:
+    """Ages that can host *life_stage* (inverse of ``LIFE_STAGE_BY_AGE``)."""
+    return [
+        age
+        for age, stages in LIFE_STAGE_BY_AGE.items()
+        if life_stage in stages
+    ]
+
+
 def allowed_seniorities(*, life_stage: str, age_bracket: str) -> list[str]:
     age_bracket = _canonical_age_bracket(age_bracket)
     options = list(SENIORITY_BY_LIFE_STAGE.get(life_stage, []))
