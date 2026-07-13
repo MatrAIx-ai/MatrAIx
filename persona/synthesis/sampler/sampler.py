@@ -168,8 +168,8 @@ class PersonaForwardSampler:
         self.config = config or SamplingConfig()
         self.overrides = overrides
         self._gamma_scale = float(overrides.gamma_scale) if overrides is not None else 1.0
-        if self._gamma_scale < 0:
-            raise ValueError("gamma_scale must be >= 0")
+        if not math.isfinite(self._gamma_scale) or self._gamma_scale < 0:
+            raise ValueError("gamma_scale must be >= 0 and finite")
         if graph is None:
             with self.graph_path.open("r", encoding="utf-8") as f:
                 graph = json.load(f)
@@ -209,14 +209,19 @@ class PersonaForwardSampler:
 
     def _edge_override_factor(self, source: str, target: str) -> float:
         overrides = self.overrides
-        factor = float(overrides.edge_weight_factors.get((source, target), 1.0))
-        category = self.nodes[source].get("category") or "Uncategorized"
-        factor *= float(overrides.category_scales.get(category, 1.0))
-        if not (factor >= 0.0):
+        edge_factor = float(overrides.edge_weight_factors.get((source, target), 1.0))
+        if not math.isfinite(edge_factor) or edge_factor < 0.0:
             raise ValueError(
-                f"edge weight factor for {source!r}->{target!r} must be >= 0"
+                f"edge weight factor for {source!r}->{target!r} "
+                "must be >= 0 and finite"
             )
-        return factor
+        category = self.nodes[source].get("category") or "Uncategorized"
+        category_scale = float(overrides.category_scales.get(category, 1.0))
+        if not math.isfinite(category_scale) or category_scale < 0.0:
+            raise ValueError(
+                f"category scale for {category!r} must be >= 0 and finite"
+            )
+        return edge_factor * category_scale
 
     def _compile_pairwise_edges(self) -> Dict[str, List[Dict[str, Any]]]:
         out: Dict[str, List[Dict[str, Any]]] = defaultdict(list)

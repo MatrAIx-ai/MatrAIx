@@ -246,3 +246,36 @@ def test_prior_override_validation(tmp_path):
 def test_negative_edge_factor_rejected(tmp_path):
     with pytest.raises(ValueError, match="must be >= 0"):
         build(tmp_path, overrides=SamplerOverrides(edge_weight_factors={("a", "b"): -1.0}))
+
+
+@pytest.mark.parametrize(
+    ("edge_factor", "category_scale"),
+    [
+        (-1.0, 0.0),
+        (0.0, -1.0),
+        (-1.0, -1.0),
+        (float("nan"), 1.0),
+        (float("inf"), 1.0),
+        (float("-inf"), 1.0),
+        (1.0, float("nan")),
+        (1.0, float("inf")),
+        (1.0, float("-inf")),
+    ],
+)
+def test_factor_components_must_be_finite_and_nonnegative(
+    tmp_path, edge_factor, category_scale
+):
+    with pytest.raises(ValueError, match="must be >= 0 and finite"):
+        build(
+            tmp_path,
+            overrides=SamplerOverrides(
+                edge_weight_factors={("a", "b"): edge_factor},
+                category_scales={"Demo": category_scale},
+            ),
+        )
+
+
+@pytest.mark.parametrize("gamma_scale", [float("nan"), float("inf"), float("-inf")])
+def test_gamma_scale_must_be_finite(tmp_path, gamma_scale):
+    with pytest.raises(ValueError, match="gamma_scale must be >= 0 and finite"):
+        build(tmp_path, overrides=SamplerOverrides(gamma_scale=gamma_scale))
