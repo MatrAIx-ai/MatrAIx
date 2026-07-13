@@ -72,6 +72,8 @@ def _load_numpy():
 
 
 def _finite_nonnegative(raw: Any, *, key: str, label: str) -> float:
+    if isinstance(raw, bool):
+        raise SynthesisValidationError(f"{label} must be a number", key=key)
     try:
         value = float(raw)
     except (TypeError, ValueError, OverflowError):
@@ -435,7 +437,21 @@ class PersonaSynthesisService:
         """Sample personas under pins/overrides, with an optional same-seed baseline."""
         self._ensure_loaded()
         pins = dict(pins or {})
-        overrides = dict(overrides or {})
+        if overrides is None:
+            overrides = {}
+        elif not isinstance(overrides, Mapping):
+            raise SynthesisValidationError(
+                "overrides must be an object", key="overrides"
+            )
+        else:
+            overrides = dict(overrides)
+        allowed_override_sections = {"edgeWeights", "nodePriors", "categoryScales"}
+        for section in overrides:
+            if section not in allowed_override_sections:
+                raise SynthesisValidationError(
+                    f"unknown override section: {section}",
+                    key=f"overrides.{section}",
+                )
         edge_weights = dict(overrides.get("edgeWeights") or {})
         raw_node_priors = dict(overrides.get("nodePriors") or {})
         raw_category_scales = dict(overrides.get("categoryScales") or {})
@@ -451,6 +467,10 @@ class PersonaSynthesisService:
         if not isinstance(seed, int) or isinstance(seed, bool) or not 0 <= seed <= MAX_SAFE_SEED:
             raise SynthesisValidationError(
                 f"seed must be an integer between 0 and {MAX_SAFE_SEED}", key="seed"
+            )
+        if not isinstance(compare_baseline, bool):
+            raise SynthesisValidationError(
+                "compareBaseline must be a boolean", key="compareBaseline"
             )
         gamma_scale = _finite_nonnegative(
             gamma_scale, key="gammaScale", label="gammaScale"
@@ -553,6 +573,10 @@ class PersonaSynthesisService:
             if not isinstance(raw_dist, (list, tuple)):
                 raise SynthesisValidationError(
                     f"prior for {nid} must be an array", key=error_key
+                )
+            if any(isinstance(p, bool) for p in raw_dist):
+                raise SynthesisValidationError(
+                    f"prior weights for {nid} must be numbers", key=error_key
                 )
             try:
                 dist = [float(p) for p in raw_dist]

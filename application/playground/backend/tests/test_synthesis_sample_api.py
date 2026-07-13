@@ -107,6 +107,90 @@ def test_sample_integer_fields_reject_coercion(
     assert response.json()["key"] == field
 
 
+@pytest.mark.parametrize(
+    ("path", "payload", "key"),
+    [
+        ("/api/synthesis/sample", {"gammaScale": True}, "gammaScale"),
+        ("/api/synthesis/sample", {"gammaScale": "1"}, "gammaScale"),
+        (
+            "/api/synthesis/sample",
+            {"compareBaseline": "false"},
+            "compareBaseline",
+        ),
+        (
+            "/api/synthesis/sample",
+            {"overrides": {"edgeWeights": {"a->b": True}}},
+            "overrides.edgeWeights.a->b",
+        ),
+        (
+            "/api/synthesis/sample",
+            {"overrides": {"nodePriors": {"a": [True, 0]}}},
+            "overrides.nodePriors.a",
+        ),
+        (
+            "/api/synthesis/sample",
+            {"overrides": {"categoryScales": {"Demo": "2"}}},
+            "overrides.categoryScales.Demo",
+        ),
+        ("/api/synthesis/sample", {"unknown": 1}, "unknown"),
+        (
+            "/api/synthesis/sample",
+            {"overrides": {"unknown": {}}},
+            "overrides.unknown",
+        ),
+        ("/api/synthesis/render", {"attributes": {}, "unknown": 1}, "unknown"),
+    ],
+)
+def test_synthesis_recipe_wire_rejects_coercion_and_unknown_fields(
+    synthesis_client, monkeypatch, path, payload, key
+):
+    monkeypatch.setattr(
+        PersonaSynthesisService,
+        "sample",
+        lambda self, **kwargs: _sample_payload(),
+    )
+
+    response = synthesis_client.post(path, json=payload)
+
+    assert response.status_code == 422
+    assert set(response.json()) == {"message", "key"}
+    assert response.json()["key"] == key
+
+
+def test_synthesis_recipe_wire_accepts_integers_for_float_fields(
+    synthesis_client, monkeypatch
+):
+    captured = {}
+
+    def fake_sample(self, **kwargs):
+        captured.update(kwargs)
+        return _sample_payload()
+
+    monkeypatch.setattr(PersonaSynthesisService, "sample", fake_sample)
+
+    response = synthesis_client.post(
+        "/api/synthesis/sample",
+        json={
+            "n": 1,
+            "gammaScale": 2,
+            "overrides": {
+                "edgeWeights": {"a->b": 1},
+                "nodePriors": {"a": [1, 0]},
+                "categoryScales": {"Demo": 2},
+            },
+            "compareBaseline": False,
+        },
+    )
+
+    assert response.status_code == 200
+    assert captured["gamma_scale"] == 2.0
+    assert captured["overrides"] == {
+        "edgeWeights": {"a->b": 1.0},
+        "nodePriors": {"a": [1.0, 0.0]},
+        "categoryScales": {"Demo": 2.0},
+    }
+
+
 def test_nested_schema_error_maps_to_owning_override_key(synthesis_client):
     response = synthesis_client.post(
         "/api/synthesis/sample",

@@ -10,7 +10,10 @@ import pytest
 
 np = pytest.importorskip("numpy")
 
-from backend.service.persona_synthesis_service import PersonaSynthesisService  # noqa: E402
+from backend.service.persona_synthesis_service import (  # noqa: E402
+    PersonaSynthesisService,
+    SynthesisValidationError,
+)
 from backend.tests.test_synthesis_sampling_contract import (  # noqa: E402
     DIMS_FIXTURE,
     SAMPLER_GRAPH,
@@ -116,3 +119,31 @@ def test_effective_config_echo(service):
     assert config["n"] == 5 and config["seed"] == 4
     assert config["gammaScale"] == 1.5
     assert config["pins"] == {"a": "a0"}
+
+
+@pytest.mark.parametrize(
+    ("kwargs", "key"),
+    [
+        ({"gamma_scale": True}, "gammaScale"),
+        (
+            {"overrides": {"edgeWeights": {"a->b": True}}},
+            "overrides.edgeWeights.a->b",
+        ),
+        (
+            {"overrides": {"nodePriors": {"a": [True, 0.0]}}},
+            "overrides.nodePriors.a",
+        ),
+        (
+            {"overrides": {"categoryScales": {"Demo": True}}},
+            "overrides.categoryScales.Demo",
+        ),
+        ({"overrides": {"unknown": {}}}, "overrides.unknown"),
+        ({"overrides": []}, "overrides"),
+        ({"compare_baseline": "false"}, "compareBaseline"),
+    ],
+)
+def test_sample_rejects_malformed_recipe_inputs(service, kwargs, key):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        service.sample(n=1, seed=7, **kwargs)
+
+    assert exc_info.value.key == key

@@ -1059,12 +1059,14 @@ class SynthesisNodeDetail(BaseModel):
 
 
 class SynthesisSampleOverrides(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
     edgeWeights: Dict[str, float] = Field(default_factory=dict)
     nodePriors: Dict[str, List[float]] = Field(default_factory=dict)
     categoryScales: Dict[str, float] = Field(default_factory=dict)
 
 
 class SynthesisSampleRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
     n: int = Field(20, strict=True, ge=1, le=200)
     seed: int = Field(42, strict=True, ge=0, le=9_007_199_254_740_991)
     gammaScale: float = Field(1.0, ge=0.0)
@@ -1091,6 +1093,7 @@ class SynthesisSampleResponse(BaseModel):
 
 
 class SynthesisRenderRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
     attributes: Dict[str, str] = Field(default_factory=dict)
 
 
