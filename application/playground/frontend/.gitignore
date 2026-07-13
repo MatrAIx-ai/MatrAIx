@@ -6,6 +6,9 @@ dist
 dist-ssr
 *.tsbuildinfo
 
+# Playwright output
+test-results
+
 # logs
 *.log
 npm-debug.log*
