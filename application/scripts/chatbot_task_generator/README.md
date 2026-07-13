@@ -6,9 +6,9 @@ scaling effort.
 ## How it works
 
 1. **Fill in a row** in `chatbot_domains.csv` (or your own CSV)
-2. **Run the generator** — it creates a complete `application/tasks/<name>/` directory
-3. **Verify** — run the task's verifier
-4. **Ship** — the generated task is fully compatible with the task-spec baseline
+2. **Run the generator** -- it creates a complete `application/tasks/<name>/` directory
+3. **Verify** -- run the task's verifier
+4. **Ship** -- the generated task is fully compatible with the task-spec baseline
 
 No per-task server.py, Dockerfile, or Docker Compose changes needed.
 All system-prompt-simulated chatbots use the same shared sidecar
@@ -104,9 +104,9 @@ respond. No code changes needed between domains.
 
 The `chatbot_domains.csv` includes 6 approved chatbot proposals:
 
-- **Education** — AI Tutoring (concept-mastery adaptation)
-- **Legal** — Tenant Rights (jurisdiction-aware legal info)
-- **Travel** — Trip Change/Cancellation (bundled itinerary management)
-- **Real Estate** — Rental Eligibility (applicant pre-screening)
-- **Telecom** — Bill Dispute & Plan Change (billing + proration)
-- **Insurance** — Claim Filing (coverage estimation + evidence guidance)
+- **Education** -- AI Tutoring (concept-mastery adaptation)
+- **Legal** -- Tenant Rights (jurisdiction-aware legal info)
+- **Travel** -- Trip Change/Cancellation (bundled itinerary management)
+- **Real Estate** -- Rental Eligibility (applicant pre-screening)
+- **Telecom** -- Bill Dispute & Plan Change (billing + proration)
+- **Insurance** -- Claim Filing (coverage estimation + evidence guidance)
