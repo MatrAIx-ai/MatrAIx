@@ -5,15 +5,30 @@
  * category overview graph → drill-down subgraph → detail rail.
  * Phase 1 of docs/superpowers/specs/2026-07-11-persona-dag-studio-design.md.
  */
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
+import { useMutation, useQuery } from "@tanstack/react-query";
 
-import { api } from "@/lib/api";
-import type { SynthesisOverviewResponse, SynthesisSubgraphResponse } from "@/lib/types";
+import { ApiError, api } from "@/lib/api";
+import type {
+  SynthesisOverviewResponse,
+  SynthesisSampleResponse,
+  SynthesisSubgraphResponse,
+} from "@/lib/types";
+import { AdjustGeneratePanel } from "./AdjustGeneratePanel";
 import { CategoryAttributeList } from "./CategoryAttributeList";
 import { CategoryOverviewGraph } from "./CategoryOverviewGraph";
 import { DrilldownGraph } from "./DrilldownGraph";
 import { NodeDetailRail } from "./NodeDetailRail";
+import { ResultsPanel } from "./ResultsPanel";
+import {
+  DEFAULT_CONTROLS,
+  buildSampleRequest,
+  recipeKey,
+  recipeKeyForErrorKey,
+  upsertEntry,
+  type RecipeEntry,
+  type SamplingControls,
+} from "./recipe";
 import { FOCUS_RING } from "../cockpit/cockpitShared";
 import {
   ExpandableStudioPanel,
@@ -27,6 +42,37 @@ export function SynthesisStudioView() {
   const [centerNode, setCenterNode] = useState<string | null>(null);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [hops, setHops] = useState<{ up: number; down: number }>({ up: 1, down: 1 });
+  const [recipe, setRecipe] = useState<RecipeEntry[]>([]);
+  const [controls, setControls] = useState<SamplingControls>(DEFAULT_CONTROLS);
+  const [result, setResult] = useState<SynthesisSampleResponse | null>(null);
+  const [overlayIndex, setOverlayIndex] = useState<number | null>(null);
+  const sampleMutation = useMutation({
+    mutationFn: () => api.sampleSynthesis(buildSampleRequest(recipe, controls)),
+    onSuccess: (body) => {
+      setResult(body);
+      setOverlayIndex(null);
+    },
+  });
+  const upsert = (entry: RecipeEntry) =>
+    setRecipe((previous) => upsertEntry(previous, entry));
+  const removeEntry = (key: string) =>
+    setRecipe((previous) => previous.filter((entry) => recipeKey(entry) !== key));
+  const sampleError = (() => {
+    const raw = sampleMutation.error;
+    if (!raw) return null;
+    if (raw instanceof ApiError && raw.detail && typeof raw.detail === "object") {
+      const detail = raw.detail as { message?: string; key?: string };
+      return {
+        message: detail.message ?? raw.message,
+        key: detail.key ? recipeKeyForErrorKey(detail.key) : null,
+      };
+    }
+    return { message: raw instanceof Error ? raw.message : "Sampling failed", key: null };
+  })();
+  const resultPinnedIds = useMemo(
+    () => new Set(Object.keys(result?.effectiveConfig.pins ?? {})),
+    [result],
+  );
   const overviewQuery = useQuery<SynthesisOverviewResponse>({
     queryKey: ["synthesis", "overview"],
     queryFn: api.getSynthesisOverview,
@@ -41,6 +87,10 @@ export function SynthesisStudioView() {
   const overview = overviewQuery.data ?? null;
   const selectedCategoryData =
     overview?.categories.find((cat) => cat.name === selectedCategory) ?? null;
+  const selectedCategoryHasOutgoing =
+    selectedCategoryData !== null &&
+    (selectedCategoryData.internalEdgeCount > 0 ||
+      (overview?.edges.some((edge) => edge.source === selectedCategoryData.name) ?? false));
 
   return (
     <StudioMeshShell>
@@ -148,6 +198,22 @@ export function SynthesisStudioView() {
                       setCenterNode(id);
                       setSelectedNode(id);
                     }}
+                    onPinValue={(nodeId, label, value) =>
+                      upsert({ kind: "pin", nodeId, label, value })
+                    }
+                    onAdjustPrior={(nodeId, label, values, prior) =>
+                      upsert({ kind: "prior", nodeId, label, values, weights: [...prior] })
+                    }
+                    onAdjustEdge={(source, target, sourceLabel, targetLabel) =>
+                      upsert({
+                        kind: "edge",
+                        source,
+                        target,
+                        sourceLabel,
+                        targetLabel,
+                        factor: 1,
+                      })
+                    }
                   />
                 </div>
               </div>
@@ -159,12 +225,39 @@ export function SynthesisStudioView() {
                   setCenterNode(id);
                   setSelectedNode(id);
                 }}
+                onAdjustCategory={
+                  selectedCategoryHasOutgoing
+                    ? (name) => upsert({ kind: "category", category: name, factor: 1 })
+                    : undefined
+                }
               />
             ) : (
               <div className="grid h-full place-items-center px-6 text-center text-sm text-text-dim">
                 Click a category to list its attributes.
               </div>
             )}
+          </ExpandableStudioPanel>
+          <ExpandableStudioPanel title="Adjust & Generate">
+            <AdjustGeneratePanel
+              recipe={recipe}
+              onUpsert={upsert}
+              onRemove={removeEntry}
+              controls={controls}
+              onControlsChange={setControls}
+              onGenerate={() => sampleMutation.mutate()}
+              generating={sampleMutation.isPending}
+              error={sampleError}
+              helperPins={result?.flags.helperPins ?? []}
+            />
+          </ExpandableStudioPanel>
+          <ExpandableStudioPanel title="Results">
+            <ResultsPanel
+              result={result}
+              overview={overview}
+              pinnedIds={resultPinnedIds}
+              overlayIndex={overlayIndex}
+              onOverlayIndexChange={setOverlayIndex}
+            />
           </ExpandableStudioPanel>
         </div>
       </StudioPageFrame>

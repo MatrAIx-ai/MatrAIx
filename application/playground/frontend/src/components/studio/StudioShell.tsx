@@ -98,7 +98,13 @@ export function ExpandableStudioPanel({
                 const next = !previous;
                 if (next) {
                   requestAnimationFrame(() => {
-                    rootRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+                    const reduceMotion = window.matchMedia(
+                      "(prefers-reduced-motion: reduce)",
+                    ).matches;
+                    rootRef.current?.scrollIntoView({
+                      block: "nearest",
+                      behavior: reduceMotion ? "auto" : "smooth",
+                    });
                   });
                 }
                 return next;

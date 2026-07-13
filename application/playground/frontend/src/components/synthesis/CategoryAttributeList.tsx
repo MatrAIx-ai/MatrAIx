@@ -5,14 +5,16 @@
 import { useMemo, useState } from "react";
 
 import type { SynthesisCategorySummary } from "@/lib/types";
-import { FOCUS_RING } from "../cockpit/cockpitShared";
+import { FOCUS_RING, Sym } from "../cockpit/cockpitShared";
 
 export function CategoryAttributeList({
   category,
   onSelectAttribute,
+  onAdjustCategory,
 }: {
   category: SynthesisCategorySummary;
   onSelectAttribute: (id: string) => void;
+  onAdjustCategory?: (name: string) => void;
 }) {
   const [query, setQuery] = useState("");
 
@@ -33,6 +35,16 @@ export function CategoryAttributeList({
           {category.attributeCount} attributes · {category.helperCount} helper nodes ·{" "}
           {category.internalEdgeCount} internal edges
         </p>
+        {onAdjustCategory ? (
+          <button
+            type="button"
+            onClick={() => onAdjustCategory(category.name)}
+            className={`mt-1.5 flex items-center gap-1 rounded px-1.5 py-0.5 text-[11px] text-text-dim transition-colors hover:bg-surface hover:text-text-main motion-reduce:transition-none ${FOCUS_RING}`}
+          >
+            <Sym name="tune" size={13} />
+            Influence ×
+          </button>
+        ) : null}
       </div>
       <input
         type="search"

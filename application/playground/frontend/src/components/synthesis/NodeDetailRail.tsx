@@ -6,16 +6,18 @@ import { useQuery } from "@tanstack/react-query";
 
 import { api } from "@/lib/api";
 import type { SynthesisNodeDetail, SynthesisNodeEdgeView } from "@/lib/types";
-import { FOCUS_RING } from "../cockpit/cockpitShared";
+import { FOCUS_RING, Sym } from "../cockpit/cockpitShared";
 
 function EdgeList({
   title,
   edges,
   onJumpToNode,
+  onAdjustEdge,
 }: {
   title: string;
   edges: SynthesisNodeEdgeView[];
   onJumpToNode: (id: string) => void;
+  onAdjustEdge?: (edgeId: string, edgeLabel: string) => void;
 }) {
   if (edges.length === 0) return null;
   return (
@@ -23,17 +25,28 @@ function EdgeList({
       <div className="hud mb-1 text-text-dim">{title}</div>
       <ul className="space-y-0.5">
         {edges.map((edge) => (
-          <li key={edge.id}>
+          <li key={edge.id} className="flex items-center gap-1">
             <button
               type="button"
               onClick={() => onJumpToNode(edge.id)}
-              className={`flex w-full items-baseline justify-between gap-2 rounded px-2 py-1 text-left transition-colors hover:bg-surface-low motion-reduce:transition-none ${FOCUS_RING}`}
+              className={`flex min-w-0 flex-1 items-baseline justify-between gap-2 rounded px-2 py-1 text-left transition-colors hover:bg-surface-low motion-reduce:transition-none ${FOCUS_RING}`}
             >
               <span className="min-w-0 truncate text-xs text-text-variant">{edge.label}</span>
               <span className="flex-none font-mono text-[10px] text-text-dim">
                 w {edge.weight}
               </span>
             </button>
+            {onAdjustEdge ? (
+              <button
+                type="button"
+                aria-label={`Adjust weight for edge with ${edge.label}`}
+                title="Adjust edge weight"
+                onClick={() => onAdjustEdge(edge.id, edge.label)}
+                className={`grid h-6 w-6 flex-none place-items-center rounded text-text-dim transition-colors hover:bg-surface hover:text-text-main motion-reduce:transition-none ${FOCUS_RING}`}
+              >
+                <Sym name="tune" size={13} />
+              </button>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -44,9 +57,20 @@ function EdgeList({
 export function NodeDetailRail({
   nodeId,
   onJumpToNode,
+  onPinValue,
+  onAdjustPrior,
+  onAdjustEdge,
 }: {
   nodeId: string;
   onJumpToNode: (id: string) => void;
+  onPinValue?: (nodeId: string, label: string, value: string) => void;
+  onAdjustPrior?: (nodeId: string, label: string, values: string[], prior: number[]) => void;
+  onAdjustEdge?: (
+    source: string,
+    target: string,
+    sourceLabel: string,
+    targetLabel: string,
+  ) => void;
 }) {
   const detailQuery = useQuery<SynthesisNodeDetail>({
     queryKey: ["synthesis", "node", nodeId],
@@ -86,12 +110,25 @@ export function NodeDetailRail({
       </div>
       {detail.values.length > 0 ? (
         <div>
-          <div className="hud mb-1 text-text-dim">Base prior</div>
+          <div className="mb-1 flex items-center justify-between">
+            <div className="hud text-text-dim">Base prior</div>
+            {onAdjustPrior ? (
+              <button
+                type="button"
+                onClick={() =>
+                  onAdjustPrior(detail.id, detail.label, detail.values, detail.prior)
+                }
+                className={`rounded px-1.5 py-0.5 text-[10px] text-text-dim transition-colors hover:bg-surface hover:text-text-main motion-reduce:transition-none ${FOCUS_RING}`}
+              >
+                Adjust prior
+              </button>
+            ) : null}
+          </div>
           <ul className="space-y-1">
             {detail.values.map((value, index) => {
               const prior = detail.prior[index] ?? 0;
               return (
-                <li key={value} className="flex items-center gap-2">
+                <li key={`${index}:${value}`} className="flex items-center gap-2">
                   <span className="w-28 flex-none truncate text-xs text-text-variant" title={value}>
                     {value}
                   </span>
@@ -107,14 +144,45 @@ export function NodeDetailRail({
                   <span className="w-12 flex-none text-right font-mono text-[10px] text-text-dim">
                     {(prior * 100).toFixed(1)}%
                   </span>
+                  {onPinValue ? (
+                    <button
+                      type="button"
+                      aria-label={`Pin ${detail.label} to ${value}`}
+                      title="Pin this value"
+                      onClick={() => onPinValue(detail.id, detail.label, value)}
+                      className={`grid h-6 w-6 flex-none place-items-center rounded text-text-dim transition-colors hover:bg-surface hover:text-primary motion-reduce:transition-none ${FOCUS_RING}`}
+                    >
+                      <Sym name="push_pin" size={13} />
+                    </button>
+                  ) : null}
                 </li>
               );
             })}
           </ul>
         </div>
       ) : null}
-      <EdgeList title="Strongest incoming" edges={detail.inEdges} onJumpToNode={onJumpToNode} />
-      <EdgeList title="Strongest outgoing" edges={detail.outEdges} onJumpToNode={onJumpToNode} />
+      <EdgeList
+        title="Strongest incoming"
+        edges={detail.inEdges}
+        onJumpToNode={onJumpToNode}
+        onAdjustEdge={
+          onAdjustEdge
+            ? (edgeId, edgeLabel) =>
+                onAdjustEdge(edgeId, detail.id, edgeLabel, detail.label)
+            : undefined
+        }
+      />
+      <EdgeList
+        title="Strongest outgoing"
+        edges={detail.outEdges}
+        onJumpToNode={onJumpToNode}
+        onAdjustEdge={
+          onAdjustEdge
+            ? (edgeId, edgeLabel) =>
+                onAdjustEdge(detail.id, edgeId, detail.label, edgeLabel)
+            : undefined
+        }
+      />
     </div>
   );
 }
