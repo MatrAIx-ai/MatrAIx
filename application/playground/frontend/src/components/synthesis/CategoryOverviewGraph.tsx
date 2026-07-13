@@ -191,6 +191,9 @@ export function CategoryOverviewGraph({
   const containerClassName = `h-[70vh] ${
     hasOverlayPreview ? "min-h-[700px]" : "min-h-[620px]"
   } max-h-[700px] w-full overflow-hidden`;
+  const viewportClassName = hasOverlayPreview
+    ? "custom-scrollbar h-full min-h-0 w-full overflow-x-hidden overflow-y-auto"
+    : "contents";
 
   const layout = useMemo(() => {
     if (!canvasSize) return null;
@@ -289,11 +292,13 @@ export function CategoryOverviewGraph({
 
   if (!layout) {
     return (
-      <div
-        ref={containerRef}
-        className={containerClassName}
-        aria-busy="true"
-      />
+      <div className={viewportClassName}>
+        <div
+          ref={containerRef}
+          className={containerClassName}
+          aria-busy="true"
+        />
+      </div>
     );
   }
   const resolvedLayout = layout;
@@ -317,11 +322,12 @@ export function CategoryOverviewGraph({
   }
 
   return (
-    <div
-      ref={containerRef}
-      className={containerClassName}
-    >
-      <svg
+    <div className={viewportClassName}>
+      <div
+        ref={containerRef}
+        className={containerClassName}
+      >
+        <svg
         viewBox={`0 0 ${layout.width} ${layout.height}`}
         className="block h-full w-full"
         role="group"
@@ -519,7 +525,8 @@ export function CategoryOverviewGraph({
             </g>
           );
         })}
-      </svg>
+        </svg>
+      </div>
     </div>
   );
 }
