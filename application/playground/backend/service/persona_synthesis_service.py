@@ -11,15 +11,19 @@ request handlers instead.
 from __future__ import annotations
 
 import json
+import math
 import threading
-from collections import deque
+from collections import OrderedDict, deque
+from concurrent.futures import Future
 from copy import deepcopy
 from heapq import heappop, heappush
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Mapping, Optional, Tuple
 
 __all__ = [
     "PersonaSynthesisService",
+    "SamplerUnavailableError",
+    "SynthesisValidationError",
     "UnknownNodeError",
     "DEFAULT_GRAPH_RELPATH",
     "MAX_SUBGRAPH_NODES_PER_DIRECTION",
@@ -32,6 +36,51 @@ MAX_SUBGRAPH_NODES_PER_DIRECTION = 60
 
 #: Cap on the per-node edge lists in node detail payloads.
 MAX_DETAIL_EDGES = 20
+
+#: Upper bound for one synchronous sampling request.
+MAX_SAMPLE_N = 200
+
+#: Compiled override plans kept alive (LRU).
+_SAMPLER_CACHE_SIZE = 8
+
+# JavaScript Number.isSafeInteger upper bound; shared with API + frontend.
+MAX_SAFE_SEED = 9_007_199_254_740_991
+
+DEFAULT_DIMS_RELPATH = Path("persona") / "schema" / "dimensions.json"
+
+
+class SynthesisValidationError(ValueError):
+    """Invalid pins/overrides; ``key`` names the offending request field."""
+
+    def __init__(self, message: str, *, key: str) -> None:
+        super().__init__(message)
+        self.key = key
+
+
+class SamplerUnavailableError(RuntimeError):
+    """Sampling needs numpy + persona.synthesis.sampler in the server env."""
+
+
+def _load_numpy():
+    try:
+        import numpy
+    except ImportError as exc:  # pragma: no cover - env-dependent
+        raise SamplerUnavailableError(
+            "sampling requires numpy in the server environment"
+        ) from exc
+    return numpy
+
+
+def _finite_nonnegative(raw: Any, *, key: str, label: str) -> float:
+    try:
+        value = float(raw)
+    except (TypeError, ValueError):
+        raise SynthesisValidationError(f"{label} must be a number", key=key) from None
+    if not (math.isfinite(value) and value >= 0.0):
+        raise SynthesisValidationError(
+            f"{label} must be a finite number >= 0", key=key
+        )
+    return value
 
 
 class UnknownNodeError(KeyError):
@@ -49,20 +98,29 @@ def _is_attribute(node: Dict[str, Any]) -> bool:
 class PersonaSynthesisService:
     """Lazy, cached, thread-safe views over the Full DAG graph JSON."""
 
-    def __init__(self, graph_path: Path) -> None:
+    def __init__(self, graph_path: Path, dims_path: Optional[Path] = None) -> None:
         self._graph_path = Path(graph_path)
+        self._dims_path = Path(dims_path) if dims_path is not None else None
         self._lock = threading.Lock()
         self._loaded = False
+        self._graph: Optional[Dict[str, Any]] = None
         self._nodes_by_id: Dict[str, Dict[str, Any]] = {}
         self._out_edges: Dict[str, List[Dict[str, Any]]] = {}
         self._in_edges: Dict[str, List[Dict[str, Any]]] = {}
+        self._edge_pairs: set[Tuple[str, str]] = set()
+        self._categories: set[str] = set()
         self._topo_index: Dict[str, int] = {}
         self._edge_count = 0
         self._overview: Optional[Dict[str, Any]] = None
+        self._dims: Optional[Dict[str, Dict[str, Any]]] = None
+        self._sampler_lock = threading.Lock()
+        self._sampler_cache: "OrderedDict[str, Any]" = OrderedDict()
+        self._sampler_inflight: Dict[str, Future] = {}
 
     @classmethod
     def from_repo(cls, repo_root: Path) -> "PersonaSynthesisService":
-        return cls(Path(repo_root) / DEFAULT_GRAPH_RELPATH)
+        root = Path(repo_root)
+        return cls(root / DEFAULT_GRAPH_RELPATH, dims_path=root / DEFAULT_DIMS_RELPATH)
 
     # ------------------------------------------------------------------ load
     def _ensure_loaded(self) -> None:
@@ -89,6 +147,13 @@ class PersonaSynthesisService:
                     self._in_edges[target].append(edge)
                     kept += 1
             self._edge_count = kept
+            self._graph = graph
+            self._edge_pairs = {
+                (edge.get("source"), edge.get("target"))
+                for edges in self._out_edges.values()
+                for edge in edges
+            }
+            self._categories = {_category(node) for node in nodes}
             self._overview = self._build_overview()
             self._loaded = True
 
@@ -355,3 +420,267 @@ class PersonaSynthesisService:
                 edge_view(e, "target") for e in out_edges[:MAX_DETAIL_EDGES]
             ],
         }
+
+    # ----------------------------------------------------------- sampling
+    def sample(
+        self,
+        *,
+        n: int,
+        seed: int,
+        gamma_scale: float = 1.0,
+        pins: Optional[Mapping[str, str]] = None,
+        overrides: Optional[Mapping[str, Any]] = None,
+        compare_baseline: bool = True,
+    ) -> Dict[str, Any]:
+        """Sample personas under pins/overrides, with an optional same-seed baseline."""
+        self._ensure_loaded()
+        pins = dict(pins or {})
+        overrides = dict(overrides or {})
+        edge_weights = dict(overrides.get("edgeWeights") or {})
+        raw_node_priors = dict(overrides.get("nodePriors") or {})
+        raw_category_scales = dict(overrides.get("categoryScales") or {})
+
+        if not 1 <= int(n) <= MAX_SAMPLE_N:
+            raise SynthesisValidationError(
+                f"n must be between 1 and {MAX_SAMPLE_N}", key="n"
+            )
+        if not isinstance(seed, int) or isinstance(seed, bool) or not 0 <= seed <= MAX_SAFE_SEED:
+            raise SynthesisValidationError(
+                f"seed must be an integer between 0 and {MAX_SAFE_SEED}", key="seed"
+            )
+        gamma_scale = _finite_nonnegative(
+            gamma_scale, key="gammaScale", label="gammaScale"
+        )
+        pin_indices, helper_pins = self._validate_pins(pins)
+        edge_factors = self._validate_edge_weights(edge_weights)
+        node_priors = self._validate_node_priors(raw_node_priors)
+        category_scales = self._validate_category_scales(raw_category_scales)
+
+        adjusted = self._sampler_for(gamma_scale, edge_factors, node_priors, category_scales)
+        numpy = _load_numpy()
+        idx = adjusted.sample_indices(
+            int(n), pins=pin_indices, rng=numpy.random.default_rng(seed)
+        )
+        payload: Dict[str, Any] = {
+            "personas": [adjusted.decode_row(idx, i) for i in range(int(n))],
+            "marginals": self._marginals(adjusted, idx, int(n)),
+            "baselinePersonas": None,
+            "baselineMarginals": None,
+            "effectiveConfig": {
+                "n": int(n),
+                "seed": seed,
+                "gammaScale": gamma_scale,
+                "pins": pins,
+                "overrides": {
+                    "edgeWeights": {
+                        f"{source}->{target}": factor
+                        for (source, target), factor in edge_factors.items()
+                    },
+                    "nodePriors": node_priors,
+                    "categoryScales": category_scales,
+                },
+            },
+            "flags": {"helperPins": helper_pins},
+        }
+        if compare_baseline:
+            baseline = self._sampler_for(1.0, {}, {}, {})
+            baseline_idx = baseline.sample_indices(
+                int(n), rng=numpy.random.default_rng(seed)
+            )
+            payload["baselinePersonas"] = [
+                baseline.decode_row(baseline_idx, i) for i in range(int(n))
+            ]
+            payload["baselineMarginals"] = self._marginals(baseline, baseline_idx, int(n))
+        return payload
+
+    def _validate_pins(
+        self, pins: Mapping[str, str]
+    ) -> Tuple[Dict[str, int], List[str]]:
+        pin_indices: Dict[str, int] = {}
+        helper_pins: List[str] = []
+        for nid, value in pins.items():
+            node = self._nodes_by_id.get(nid)
+            if node is None:
+                raise SynthesisValidationError(
+                    f"unknown pinned node: {nid}", key=f"pins.{nid}"
+                )
+            values = list(node.get("values", []))
+            if value not in values:
+                raise SynthesisValidationError(
+                    f"unknown value {value!r} for {nid}", key=f"pins.{nid}"
+                )
+            pin_indices[nid] = values.index(value)
+            if not _is_attribute(node):
+                helper_pins.append(nid)
+        return pin_indices, sorted(helper_pins)
+
+    def _validate_edge_weights(
+        self, edge_weights: Mapping[str, Any]
+    ) -> Dict[Tuple[str, str], float]:
+        factors: Dict[Tuple[str, str], float] = {}
+        for key, raw in edge_weights.items():
+            error_key = f"overrides.edgeWeights.{key}"
+            source, sep, target = key.partition("->")
+            if not sep or not source or not target:
+                raise SynthesisValidationError(
+                    f"edge key must look like 'source->target': {key}", key=error_key
+                )
+            if (source, target) not in self._edge_pairs:
+                raise SynthesisValidationError(
+                    f"unknown edge: {key}", key=error_key
+                )
+            factor = _finite_nonnegative(
+                raw, key=error_key, label=f"edge factor for {key}"
+            )
+            factors[(source, target)] = factor
+        return factors
+
+    def _validate_node_priors(
+        self, node_priors: Mapping[str, Any]
+    ) -> Dict[str, List[float]]:
+        validated: Dict[str, List[float]] = {}
+        for nid, raw_dist in node_priors.items():
+            error_key = f"overrides.nodePriors.{nid}"
+            node = self._nodes_by_id.get(nid)
+            if node is None:
+                raise SynthesisValidationError(
+                    f"unknown node in prior override: {nid}", key=error_key
+                )
+            if not isinstance(raw_dist, (list, tuple)):
+                raise SynthesisValidationError(
+                    f"prior for {nid} must be an array", key=error_key
+                )
+            try:
+                dist = [float(p) for p in raw_dist]
+            except (TypeError, ValueError):
+                raise SynthesisValidationError(
+                    f"prior weights for {nid} must be numbers", key=error_key
+                ) from None
+            expected = len(node.get("values", []))
+            if len(dist) != expected:
+                raise SynthesisValidationError(
+                    f"prior for {nid} must have {expected} entries", key=error_key
+                )
+            if not all(math.isfinite(p) and p >= 0.0 for p in dist):
+                raise SynthesisValidationError(
+                    f"prior weights for {nid} must be finite numbers >= 0",
+                    key=error_key,
+                )
+            if sum(dist) <= 0.0:
+                raise SynthesisValidationError(
+                    f"prior for {nid} must have positive total mass", key=error_key
+                )
+            validated[nid] = dist
+        return validated
+
+    def _validate_category_scales(
+        self, category_scales: Mapping[str, Any]
+    ) -> Dict[str, float]:
+        validated: Dict[str, float] = {}
+        for name, raw in category_scales.items():
+            error_key = f"overrides.categoryScales.{name}"
+            if name not in self._categories:
+                raise SynthesisValidationError(
+                    f"unknown category: {name}", key=error_key
+                )
+            validated[name] = _finite_nonnegative(
+                raw, key=error_key, label=f"category scale for {name}"
+            )
+        return validated
+
+    def _sampler_for(
+        self,
+        gamma_scale: float,
+        edge_factors: Mapping[Tuple[str, str], float],
+        node_priors: Mapping[str, List[float]],
+        category_scales: Mapping[str, Any],
+    ):
+        key = json.dumps(
+            {
+                "gammaScale": gamma_scale,
+                "edgeWeights": {f"{s}->{t}": f for (s, t), f in edge_factors.items()},
+                "nodePriors": node_priors,
+                "categoryScales": category_scales,
+            },
+            sort_keys=True,
+        )
+        with self._sampler_lock:
+            cached = self._sampler_cache.get(key)
+            if cached is not None:
+                self._sampler_cache.move_to_end(key)
+                return cached
+            future = self._sampler_inflight.get(key)
+            owner = future is None
+            if owner:
+                future = Future()
+                self._sampler_inflight[key] = future
+        assert future is not None
+        if not owner:
+            return future.result()
+        try:
+            sampler = self._build_sampler(
+                gamma_scale, edge_factors, node_priors, category_scales
+            )
+        except BaseException as exc:
+            with self._sampler_lock:
+                self._sampler_inflight.pop(key, None)
+                future.set_exception(exc)
+            raise
+        with self._sampler_lock:
+            self._sampler_cache[key] = sampler
+            while len(self._sampler_cache) > _SAMPLER_CACHE_SIZE:
+                self._sampler_cache.popitem(last=False)
+            self._sampler_inflight.pop(key, None)
+            future.set_result(sampler)
+        return sampler
+
+    def _build_sampler(self, gamma_scale, edge_factors, node_priors, category_scales):
+        try:
+            from persona.synthesis.sampler import (
+                PersonaForwardSampler,
+                SamplerOverrides,
+                SamplingConfig,
+            )
+        except ImportError as exc:  # numpy (or the persona package) missing
+            raise SamplerUnavailableError(
+                "sampling requires numpy and persona.synthesis.sampler in the server environment"
+            ) from exc
+        overrides = SamplerOverrides(
+            edge_weight_factors=dict(edge_factors),
+            node_priors={nid: tuple(dist) for nid, dist in node_priors.items()},
+            category_scales={name: float(f) for name, f in category_scales.items()},
+            gamma_scale=float(gamma_scale),
+        )
+        return PersonaForwardSampler(
+            self._graph_path,
+            SamplingConfig(seed=0),
+            graph=self._graph,
+            overrides=overrides,
+        )
+
+    def _marginals(self, sampler, idx, n: int) -> Dict[str, Any]:
+        numpy = _load_numpy()
+        out: Dict[str, Any] = {}
+        for nid in sampler.emit_nodes:
+            codes = idx.get(nid)
+            if codes is None:
+                continue
+            values = sampler.values[nid]
+            freqs = numpy.bincount(codes, minlength=len(values)) / float(n)
+            out[nid] = {
+                "label": sampler.nodes[nid].get("label", nid),
+                "values": list(values),
+                "freqs": [round(float(f), 4) for f in freqs],
+            }
+        return out
+
+    # ------------------------------------------------------------- render
+    def render_text(self, attributes: Mapping[str, str]) -> Dict[str, str]:
+        """Render one persona attribute map to natural-language text."""
+        from persona.synthesis.render import DEFAULT_DIMS_PATH, load_dims, render
+
+        with self._lock:
+            if self._dims is None:
+                self._dims = load_dims(self._dims_path or DEFAULT_DIMS_PATH)
+            dims = self._dims
+        return {"text": render(dict(attributes), dims)}
