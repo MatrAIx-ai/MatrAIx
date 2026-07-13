@@ -668,6 +668,7 @@ class PersonaSynthesisService:
         try:
             from persona.synthesis.sampler import (
                 PersonaForwardSampler,
+                SamplerCompilationError,
                 SamplerOverrides,
                 SamplingConfig,
             )
@@ -681,12 +682,28 @@ class PersonaSynthesisService:
             category_scales={name: float(f) for name, f in category_scales.items()},
             gamma_scale=float(gamma_scale),
         )
-        return PersonaForwardSampler(
-            self._graph_path,
-            SamplingConfig(seed=0),
-            graph=self._graph,
-            overrides=overrides,
-        )
+        try:
+            return PersonaForwardSampler(
+                self._graph_path,
+                SamplingConfig(seed=0),
+                graph=self._graph,
+                overrides=overrides,
+            )
+        except SamplerCompilationError as exc:
+            key = None
+            if exc.stage == "pairwise":
+                edge = (exc.source, exc.target)
+                if edge in edge_factors:
+                    key = f"overrides.edgeWeights.{exc.source}->{exc.target}"
+                elif exc.category in category_scales:
+                    key = f"overrides.categoryScales.{exc.category}"
+                elif gamma_scale != 1.0:
+                    key = "gammaScale"
+            elif exc.stage == "full_cpt" and gamma_scale != 1.0:
+                key = "gammaScale"
+            if key is None:
+                raise
+            raise SynthesisValidationError(str(exc), key=key) from exc
 
     def _marginals(self, sampler, idx, n: int) -> Dict[str, Any]:
         numpy = _load_numpy()

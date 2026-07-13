@@ -29,6 +29,12 @@ def service(tmp_path):
     return PersonaSynthesisService(graph_path, dims_path=dims_path)
 
 
+@pytest.fixture()
+def synthesis_client(client, app, service):
+    app.state.services.persona_synthesis = service
+    return client
+
+
 def test_pin_clamps_and_shifts_downstream(service):
     body = service.sample(n=200, seed=1, pins={"a": "a1"})
     assert all(p["a"] == "a1" for p in body["personas"])
@@ -147,3 +153,153 @@ def test_sample_rejects_malformed_recipe_inputs(service, kwargs, key):
         service.sample(n=1, seed=7, **kwargs)
 
     assert exc_info.value.key == key
+
+
+PAIRWISE_FLOAT32_MESSAGE = (
+    "scaled pairwise evidence for a->b cannot be represented in float32"
+)
+
+
+@pytest.mark.parametrize(
+    ("payload", "key"),
+    [
+        (
+            {"overrides": {"edgeWeights": {"a->b": 1e100}}},
+            "overrides.edgeWeights.a->b",
+        ),
+        (
+            {"overrides": {"categoryScales": {"Demo": 1e100}}},
+            "overrides.categoryScales.Demo",
+        ),
+        (
+            {
+                "overrides": {
+                    "edgeWeights": {"a->b": 1e200},
+                    "categoryScales": {"Demo": 1e200},
+                }
+            },
+            "overrides.edgeWeights.a->b",
+        ),
+        ({"gammaScale": 1e100}, "gammaScale"),
+    ],
+)
+def test_unrepresentable_evidence_maps_to_exact_422(synthesis_client, payload, key):
+    response = synthesis_client.post(
+        "/api/synthesis/sample",
+        json={"n": 1, "compareBaseline": False, **payload},
+    )
+
+    assert response.status_code == 422
+    assert response.json() == {"message": PAIRWISE_FLOAT32_MESSAGE, "key": key}
+
+
+@pytest.mark.parametrize(
+    ("overrides", "key"),
+    [
+        (
+            {"edgeWeights": {"a->b": 1e100}},
+            "overrides.edgeWeights.a->b",
+        ),
+        (
+            {"categoryScales": {"Demo": 1e100}},
+            "overrides.categoryScales.Demo",
+        ),
+    ],
+)
+def test_unrepresentable_pairwise_evidence_reports_explicit_field(
+    service, overrides, key
+):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        service.sample(
+            n=1,
+            seed=7,
+            overrides=overrides,
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": PAIRWISE_FLOAT32_MESSAGE,
+        "key": key,
+    }
+
+
+def test_edge_key_precedes_category_key_for_composite_overflow(service):
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        service.sample(
+            n=1,
+            seed=7,
+            overrides={
+                "edgeWeights": {"a->b": 1e200},
+                "categoryScales": {"Demo": 1e200},
+            },
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": PAIRWISE_FLOAT32_MESSAGE,
+        "key": "overrides.edgeWeights.a->b",
+    }
+
+
+def test_gamma_overflow_in_full_cpt_reports_gamma_key(tmp_path):
+    graph = json.loads(json.dumps(SAMPLER_GRAPH))
+    graph["full_cpts"] = [
+        {
+            "target": "b",
+            "parents": ["a"],
+            "cpt_weight": 1.0,
+            "replace_pairwise_parent_edges": True,
+            "rows": [
+                {
+                    "parent_assignment": {"a": "a0"},
+                    "distribution": {"b0": 0.95, "b1": 0.05},
+                },
+                {
+                    "parent_assignment": {"a": "a1"},
+                    "distribution": {"b0": 0.05, "b1": 0.95},
+                },
+            ],
+        }
+    ]
+    graph_path = tmp_path / "full-cpt-graph.json"
+    graph_path.write_text(json.dumps(graph), encoding="utf-8")
+    full_cpt_service = PersonaSynthesisService(graph_path)
+
+    with pytest.raises(SynthesisValidationError) as exc_info:
+        full_cpt_service.sample(
+            n=1,
+            seed=7,
+            gamma_scale=1e100,
+            compare_baseline=False,
+        )
+
+    assert {"message": str(exc_info.value), "key": exc_info.value.key} == {
+        "message": (
+            "scaled full-CPT evidence for b cannot be represented in float32"
+        ),
+        "key": "gammaScale",
+    }
+
+
+def test_failed_compilation_is_not_cached_and_safe_retry_succeeds(service):
+    overrides = {"edgeWeights": {"a->b": 1e100}}
+    for _ in range(2):
+        with pytest.raises(SynthesisValidationError):
+            service.sample(
+                n=1,
+                seed=7,
+                overrides=overrides,
+                compare_baseline=False,
+            )
+        assert service._sampler_cache == {}
+        assert service._sampler_inflight == {}
+
+    body = service.sample(
+        n=1,
+        seed=7,
+        overrides={"edgeWeights": {"a->b": 1.0}},
+        compare_baseline=False,
+    )
+    assert len(body["personas"]) == 1
+    assert len(service._sampler_cache) == 1
+    assert service._sampler_inflight == {}

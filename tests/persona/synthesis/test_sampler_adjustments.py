@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+import persona.synthesis.sampler as sampler_package
 from persona.synthesis.sampler import PersonaForwardSampler, SamplerOverrides, SamplingConfig
 
 SAMPLER_GRAPH = {
@@ -279,3 +280,59 @@ def test_factor_components_must_be_finite_and_nonnegative(
 def test_gamma_scale_must_be_finite(tmp_path, gamma_scale):
     with pytest.raises(ValueError, match="gamma_scale must be >= 0 and finite"):
         build(tmp_path, overrides=SamplerOverrides(gamma_scale=gamma_scale))
+
+
+def test_unrepresentable_pairwise_evidence_raises_typed_compile_error(tmp_path):
+    with pytest.raises(ValueError) as exc_info:
+        build(
+            tmp_path,
+            overrides=SamplerOverrides(
+                edge_weight_factors={("a", "b"): 1e100},
+            ),
+        )
+
+    error = exc_info.value
+    assert isinstance(error, sampler_package.SamplerCompilationError)
+    assert error.stage == "pairwise"
+    assert error.source == "a"
+    assert error.target == "b"
+    assert error.category == "Demo"
+    assert str(error) == (
+        "scaled pairwise evidence for a->b cannot be represented in float32"
+    )
+
+
+def test_finite_edge_and_category_product_overflow_raises_compile_error(tmp_path):
+    with pytest.raises(ValueError) as exc_info:
+        build(
+            tmp_path,
+            overrides=SamplerOverrides(
+                edge_weight_factors={("a", "b"): 1e200},
+                category_scales={"Demo": 1e200},
+            ),
+        )
+
+    error = exc_info.value
+    assert isinstance(error, sampler_package.SamplerCompilationError)
+    assert (error.stage, error.source, error.target, error.category) == (
+        "pairwise",
+        "a",
+        "b",
+        "Demo",
+    )
+
+
+def test_zero_gamma_with_huge_finite_factors_compiles_exact_zero_evidence(tmp_path):
+    sampler = build(
+        tmp_path,
+        overrides=SamplerOverrides(
+            gamma_scale=0.0,
+            edge_weight_factors={("a", "b"): 1e200},
+            category_scales={"Demo": 1e200},
+        ),
+    )
+
+    b_plan = next(plan for plan in sampler._plan if plan.nid == "b")
+    np.testing.assert_array_equal(
+        b_plan.edges[0][1], np.zeros_like(b_plan.edges[0][1])
+    )

@@ -26,6 +26,53 @@ _GZIP_LEVEL = 1
 _CODES_COMPRESSIONS = {"none", "gzip"}
 
 
+class SamplerCompilationError(ValueError):
+    """A compiled evidence table cannot be represented by the sampler dtype."""
+
+    def __init__(
+        self,
+        *,
+        stage: str,
+        target: str,
+        source: str | None = None,
+        category: str | None = None,
+    ) -> None:
+        self.stage = stage
+        self.target = target
+        self.source = source
+        self.category = category
+        if stage == "pairwise":
+            location = f"{source}->{target}"
+        else:
+            location = target
+        super().__init__(
+            f"scaled {stage if stage == 'pairwise' else 'full-CPT'} evidence "
+            f"for {location} cannot be represented in float32"
+        )
+
+
+def _scaled_evidence_table(
+    logratio: np.ndarray,
+    scale: float,
+    *,
+    stage: str,
+    target: str,
+    source: str | None = None,
+    category: str | None = None,
+) -> np.ndarray:
+    """Scale evidence in float64, then reject a non-finite float32 table."""
+    with np.errstate(over="ignore", invalid="ignore"):
+        scaled = (np.float64(scale) * logratio).astype(np.float32)
+    if not np.isfinite(scaled).all():
+        raise SamplerCompilationError(
+            stage=stage,
+            target=target,
+            source=source,
+            category=category,
+        )
+    return scaled
+
+
 def _compress_payload(payload: np.ndarray, compression: str) -> bytes:
     if compression == "gzip":
         return gzip.compress(payload.reshape(-1).data, compresslevel=_GZIP_LEVEL, mtime=0)
@@ -207,7 +254,9 @@ class PersonaForwardSampler:
             self.prior[nid] = _normalize([float(p) for p in dist])
             self.logprior[nid] = np.log(np.maximum(self.prior[nid], self.config.eps))
 
-    def _edge_override_factor(self, source: str, target: str) -> float:
+    def _edge_override_components(
+        self, source: str, target: str
+    ) -> tuple[float, float, str]:
         overrides = self.overrides
         edge_factor = float(overrides.edge_weight_factors.get((source, target), 1.0))
         if not math.isfinite(edge_factor) or edge_factor < 0.0:
@@ -221,7 +270,7 @@ class PersonaForwardSampler:
             raise ValueError(
                 f"category scale for {category!r} must be >= 0 and finite"
             )
-        return edge_factor * category_scale
+        return edge_factor, category_scale, category
 
     def _compile_pairwise_edges(self) -> Dict[str, List[Dict[str, Any]]]:
         out: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
@@ -388,9 +437,23 @@ class PersonaForwardSampler:
                 if not all(sampled_before(p, pos) for p in cpt["parents"]):
                     continue
                 lut = np.zeros((cpt["code_space"], k), dtype=np.float32)
-                scale = gamma * cpt["weight"]
+                cpt_weight = cpt["weight"]
+                if not math.isfinite(cpt_weight) or cpt_weight < 0.0:
+                    raise ValueError(
+                        f"full-CPT weight for {nid!r} must be >= 0 and finite"
+                    )
+                if not math.isfinite(gamma) or gamma < 0.0:
+                    raise ValueError(
+                        f"compiled gamma for {nid!r} must be >= 0 and finite"
+                    )
+                scale = 0.0 if gamma == 0.0 or cpt_weight == 0.0 else gamma * cpt_weight
                 for code, logratio in cpt["lookup"].items():
-                    lut[code] = scale * logratio
+                    lut[code] = _scaled_evidence_table(
+                        logratio,
+                        scale,
+                        stage="full_cpt",
+                        target=nid,
+                    )
                 plan.cpts.append(
                     (
                         tuple(cpt["parents"]),
@@ -403,14 +466,43 @@ class PersonaForwardSampler:
             for edge in self.in_edges.get(nid, []):
                 if edge["source"] in repl or not sampled_before(edge["source"], pos):
                     continue
-                factor = (
-                    self._edge_override_factor(edge["source"], nid)
-                    if self.overrides is not None
-                    else 1.0
+                source = edge["source"]
+                edge_weight = edge["weight"]
+                if not math.isfinite(edge_weight) or edge_weight < 0.0:
+                    raise ValueError(
+                        f"edge weight for {source!r}->{nid!r} "
+                        "must be >= 0 and finite"
+                    )
+                if not math.isfinite(gamma) or gamma < 0.0:
+                    raise ValueError(
+                        f"compiled gamma for {nid!r} must be >= 0 and finite"
+                    )
+                if self.overrides is not None:
+                    edge_factor, category_scale, category = (
+                        self._edge_override_components(source, nid)
+                    )
+                else:
+                    edge_factor, category_scale = 1.0, 1.0
+                    category = self.nodes[source].get("category") or "Uncategorized"
+                if (
+                    gamma == 0.0
+                    or edge_weight == 0.0
+                    or edge_factor == 0.0
+                    or category_scale == 0.0
+                ):
+                    scale = 0.0
+                else:
+                    with np.errstate(over="ignore", invalid="ignore"):
+                        factor = np.float64(edge_factor) * np.float64(category_scale)
+                        scale = np.float64(gamma) * np.float64(edge_weight) * factor
+                scaled = _scaled_evidence_table(
+                    edge["logratio"],
+                    scale,
+                    stage="pairwise",
+                    source=source,
+                    target=nid,
+                    category=category,
                 )
-                scaled = (
-                    (gamma * edge["weight"] * factor) * edge["logratio"]
-                ).astype(np.float32)
                 plan.edges.append((edge["source"], np.ascontiguousarray(scaled.T)))
 
             for mask in self.masks.get(nid, []):
