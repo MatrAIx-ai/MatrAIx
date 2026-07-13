@@ -1,0 +1,36 @@
+version: "3.1"
+
+intents:
+  - greet
+  - account_recovery
+  - identity_concern
+  - frustrated
+  - ask_human
+  - acknowledge
+  - thank
+  - goodbye
+  - nlu_fallback
+
+responses:
+  utter_greet:
+    - text: "Hi, I can help with account recovery. Please describe the access problem without sharing passwords or payment details."
+  utter_recovery_options:
+    - text: "For account recovery, start with the email alias on the account. If password reset email is delayed, wait ten minutes, check spam, and request one new reset link. If that fails, I can escalate to a support specialist."
+  utter_privacy_boundary:
+    - text: "You do not need to share a password, full payment card, government ID, or real phone number here. A test email alias and the issue summary are enough for this sandbox flow."
+  utter_deescalate:
+    - text: "I understand this is frustrating. I can keep the steps short: verify the account email, try one reset link, then escalate if the message still does not arrive."
+  utter_handoff:
+    - text: "A human support handoff is appropriate if the reset link never arrives or if you suspect account takeover. Share only the account email alias and a short issue summary."
+  utter_acknowledge:
+    - text: "Got it. The safest next step is to continue with email verification and avoid sharing sensitive details in chat."
+  utter_thank:
+    - text: "You are welcome. Keep the recovery information limited to the fictional account alias for this task."
+  utter_goodbye:
+    - text: "Goodbye. I hope the recovery path is clear."
+  utter_fallback:
+    - text: "I may not have understood. Are you trying to recover account access, protect private information, or reach a human support specialist?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

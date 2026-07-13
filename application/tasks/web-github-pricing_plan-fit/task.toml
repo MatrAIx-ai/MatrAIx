@@ -1,0 +1,33 @@
+version = "1.0"
+artifacts = ["/app/output"]
+
+[task]
+name = "personabench/application-web-github-pricing-plan-fit"
+
+[metadata]
+difficulty = "easy"
+type = "web"
+domain = "software"
+tags = [
+  "github pricing",
+  "pricing comprehension",
+  "signup intent",
+  "plan comparison",
+  "live public website",
+]
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 900.0
+network_mode = "public"
+
+[environment]
+definition = "application/web-github-pricing_plan-fit"
+build_timeout_sec = 900.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
