@@ -202,7 +202,7 @@ export function AdjustGeneratePanel({
                         const weight = entry.weights[index] ?? 0;
                         const share = total > 0 ? weight / total : 0;
                         return (
-                          <li key={value} className="flex items-center gap-2">
+                          <li key={`${index}:${value}`} className="flex items-center gap-2">
                             <span
                               className="w-24 flex-none truncate text-[11px] text-text-variant"
                               title={value}
