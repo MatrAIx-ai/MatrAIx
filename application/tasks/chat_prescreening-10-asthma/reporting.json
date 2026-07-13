@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "task_outcome"
+      },
+      "summaryDirectives": [
+        {
+          "id": "task_outcome.reason_by_status",
+          "title": "Outcome reason by verdict correctness",
+          "targetFacetKey": "outcome_reason",
+          "groupByFacetKey": "outcome_status",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        },
+        {
+          "id": "task_outcome.reason_by_predicted_label",
+          "title": "Outcome reason by predicted eligibility label",
+          "targetFacetKey": "outcome_reason",
+          "groupByFacetKey": "predicted_label",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ]
+    }
+  ]
+}

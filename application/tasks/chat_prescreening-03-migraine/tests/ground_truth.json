@@ -1,0 +1,83 @@
+{
+ "protocol_id": "MIG-CARE-2026-003",
+ "cases": {
+  "G01": {
+   "sex": "female",
+   "age": 34,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "G02": {
+   "sex": "male",
+   "age": 65,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "G03": {
+   "sex": "female",
+   "age": 41,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "G04": {
+   "sex": "male",
+   "age": 29,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "G05": {
+   "sex": "female",
+   "age": 52,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "G06": {
+   "sex": "male",
+   "age": 45,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "G07": {
+   "sex": "female",
+   "age": 27,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3",
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "G08": {
+   "sex": "male",
+   "age": 58,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC3"
+   ]
+  },
+  "G09": {
+   "sex": "female",
+   "age": 38,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  }
+ }
+}

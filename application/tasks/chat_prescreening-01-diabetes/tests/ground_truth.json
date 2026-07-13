@@ -1,0 +1,152 @@
+{
+ "protocol_id": "DLC-T2D-2026-001",
+ "cases": {
+  "P01": {
+   "sex": "female",
+   "age": 52,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "P02": {
+   "sex": "male",
+   "age": 67,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "P03": {
+   "sex": "female",
+   "age": 29,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2"
+   ],
+   "criteria_unknown": []
+  },
+  "P04": {
+   "sex": "male",
+   "age": 79,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC1"
+   ],
+   "criteria_unknown": []
+  },
+  "P05": {
+   "sex": "female",
+   "age": 45,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "P06": {
+   "sex": "male",
+   "age": 58,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "P07": {
+   "sex": "female",
+   "age": 33,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "P08": {
+   "sex": "male",
+   "age": 61,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "P09": {
+   "sex": "female",
+   "age": 66,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "P10": {
+   "sex": "male",
+   "age": 49,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "P11": {
+   "sex": "female",
+   "age": 41,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC5"
+   ],
+   "criteria_unknown": []
+  },
+  "P12": {
+   "sex": "male",
+   "age": 57,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC3"
+   ]
+  },
+  "P13": {
+   "sex": "female",
+   "age": 63,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "EXC2"
+   ]
+  },
+  "P14": {
+   "sex": "male",
+   "age": 36,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "P15": {
+   "sex": "female",
+   "age": 72,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC4"
+   ],
+   "criteria_unknown": []
+  },
+  "P16": {
+   "sex": "male",
+   "age": 55,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3",
+    "EXC3",
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "P17": {
+   "sex": "female",
+   "age": 48,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  }
+ }
+}

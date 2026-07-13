@@ -1,0 +1,83 @@
+{
+ "protocol_id": "KNEE-MOVE-2026-005",
+ "cases": {
+  "K01": {
+   "sex": "female",
+   "age": 63,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "K02": {
+   "sex": "male",
+   "age": 80,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "K03": {
+   "sex": "female",
+   "age": 55,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC4"
+   ],
+   "criteria_unknown": []
+  },
+  "K04": {
+   "sex": "male",
+   "age": 68,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC4"
+   ],
+   "criteria_unknown": []
+  },
+  "K05": {
+   "sex": "female",
+   "age": 72,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "K06": {
+   "sex": "male",
+   "age": 59,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "K07": {
+   "sex": "female",
+   "age": 77,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC5",
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "K08": {
+   "sex": "male",
+   "age": 61,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC4"
+   ]
+  },
+  "K09": {
+   "sex": "female",
+   "age": 74,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  }
+ }
+}

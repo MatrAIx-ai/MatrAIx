@@ -1,0 +1,83 @@
+{
+ "protocol_id": "CPAP-COACH-2026-004",
+ "cases": {
+  "O01": {
+   "sex": "male",
+   "age": 54,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "O02": {
+   "sex": "female",
+   "age": 75,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "O03": {
+   "sex": "male",
+   "age": 47,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "O04": {
+   "sex": "female",
+   "age": 60,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2"
+   ],
+   "criteria_unknown": []
+  },
+  "O05": {
+   "sex": "male",
+   "age": 38,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "O06": {
+   "sex": "female",
+   "age": 66,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "O07": {
+   "sex": "male",
+   "age": 71,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2",
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "O08": {
+   "sex": "female",
+   "age": 57,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC2"
+   ]
+  },
+  "O09": {
+   "sex": "male",
+   "age": 51,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "protocol_id": "WATCH-AF-2026-009",
+ "cases": {
+  "A01": {
+   "sex": "female",
+   "age": 67,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "A02": {
+   "sex": "male",
+   "age": 85,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "A03": {
+   "sex": "female",
+   "age": 72,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2",
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "A04": {
+   "sex": "male",
+   "age": 63,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "A05": {
+   "sex": "female",
+   "age": 78,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "A06": {
+   "sex": "male",
+   "age": 48,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC1"
+   ],
+   "criteria_unknown": []
+  },
+  "A07": {
+   "sex": "female",
+   "age": 81,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2",
+    "EXC1",
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "A08": {
+   "sex": "male",
+   "age": 70,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC2"
+   ]
+  },
+  "A09": {
+   "sex": "female",
+   "age": 74,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  }
+ }
+}
