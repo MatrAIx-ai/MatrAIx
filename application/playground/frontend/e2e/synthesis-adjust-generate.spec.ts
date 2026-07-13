@@ -1,13 +1,4 @@
 import { expect, test, type Page } from "@playwright/test";
-import { mkdirSync, rmSync } from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-
-const here = path.dirname(fileURLToPath(import.meta.url));
-const shots = path.resolve(
-  here,
-  "../../../../docs/superpowers/specs/assets/2026-07-12-synthesis-adjust-generate",
-);
 const shotNames = ["1-adjust-generate.png", "2-distribution.png", "3-overlay.png"] as const;
 
 async function settleForScreenshot(page: Page): Promise<void> {
@@ -21,9 +12,8 @@ async function settleForScreenshot(page: Page): Promise<void> {
 
 test("pin, scale, generate, compare, render, overlay, and preserve results on error", async ({
   page,
-}) => {
-  mkdirSync(shots, { recursive: true });
-  for (const shotName of shotNames) rmSync(path.join(shots, shotName), { force: true });
+}, testInfo) => {
+  const screenshotPath = (name: (typeof shotNames)[number]) => testInfo.outputPath(name);
 
   const pageErrors: string[] = [];
   const consoleIssues: { type: string; text: string }[] = [];
@@ -58,6 +48,27 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
   expect(await page.title()).toBe("MatrAIx — simulate users across your applications");
   const heading = page.getByRole("heading", { level: 1 });
   await expect(heading).toHaveText("Persona DAG Studio");
+
+  const computedFonts = await page.evaluate(() => {
+    const monoProbe = document.createElement("span");
+    monoProbe.className = "font-mono";
+    document.body.append(monoProbe);
+    const readFont = (element: Element | null) =>
+      element ? getComputedStyle(element).fontFamily : "";
+    const result = {
+      body: readFont(document.body),
+      display: readFont(document.querySelector(".font-display")),
+      hud: readFont(document.querySelector(".hud")),
+      mono: readFont(monoProbe),
+      icons: readFont(document.querySelector(".material-symbols-outlined")),
+    };
+    monoProbe.remove();
+    return result;
+  });
+  for (const role of ["body", "display", "hud", "mono"] as const) {
+    expect(computedFonts[role]).toContain("Inter");
+  }
+  expect(computedFonts.icons).toContain("Material Symbols Outlined");
 
   const overviewGraph = page.getByRole("group", { name: "Persona DAG category overview" });
   await expect(overviewGraph).toBeVisible();
@@ -137,7 +148,7 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
     .locator("..");
   await adjustGenerateGlassPanel.scrollIntoViewIfNeeded();
   await settleForScreenshot(page);
-  await adjustGenerateGlassPanel.screenshot({ path: path.join(shots, shotNames[0]) });
+  await adjustGenerateGlassPanel.screenshot({ path: screenshotPath(shotNames[0]) });
 
   const pageRanges = [
     "1–10 of 50",
@@ -175,7 +186,7 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
     .getByText("Results", { exact: true })
     .locator("..")
     .locator("..");
-  await resultsGlassPanel.screenshot({ path: path.join(shots, shotNames[1]) });
+  await resultsGlassPanel.screenshot({ path: screenshotPath(shotNames[1]) });
 
   await personasTab.click();
   for (let pageIndex = 0; pageIndex < 4; pageIndex += 1) {
@@ -230,7 +241,7 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
   await settleForScreenshot(page);
   await categoryTitleBar
     .locator("..")
-    .screenshot({ path: path.join(shots, shotNames[2]) });
+    .screenshot({ path: screenshotPath(shotNames[2]) });
 
   await page.route("**/api/synthesis/sample", async (route) => {
     await route.fulfill({
