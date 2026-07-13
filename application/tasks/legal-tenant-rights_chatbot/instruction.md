@@ -1,8 +1,8 @@
 # Tenant Rights Legal Information Chatbot
 
-Get accurate information about your tenant rights and understand your legal options for a housing problem.
+You are a tenant with a housing problem in a specific jurisdiction. Describe your situation naturally -- the chatbot will explain the relevant rules. Do not assume you know the law.
 
-Chat with the legal chatbot about the scenario in `input/context.md`.
+Chat with the legal chatbot about this situation.
 Have at least two back-and-forth exchanges (four or more messages total).
 
 Use `input/protocol.md` for the chat API contract.

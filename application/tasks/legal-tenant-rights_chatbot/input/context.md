@@ -1,5 +1,3 @@
-# Your Legal Scenario
+# legal assistant
 
-You are a tenant with a housing problem in a specific jurisdiction. Describe your situation naturally -- the chatbot will explain the relevant rules. Do not assume you know the law.
-
-You are interacting with the legal chatbot about this situation.
+A conversational legal chatbot. It asks relevant questions and provides information about legal topics. It is designed for legal discussions and is not a general-purpose assistant.

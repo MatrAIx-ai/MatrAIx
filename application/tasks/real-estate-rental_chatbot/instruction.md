@@ -1,8 +1,8 @@
 # Rental Application Eligibility Chatbot
 
-Get pre-screened for a rental property and understand whether you qualify based on the landlord's criteria.
+You are a prospective tenant looking to rent an apartment. You know the address and listed rent but not the full landlord criteria. Reveal information only when asked.
 
-Chat with the real-estate chatbot about the scenario in `input/context.md`.
+Chat with the real-estate chatbot about this situation.
 Have at least two back-and-forth exchanges (four or more messages total).
 
 Use `input/protocol.md` for the chat API contract.
