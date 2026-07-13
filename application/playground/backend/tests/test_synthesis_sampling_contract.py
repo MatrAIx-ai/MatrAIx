@@ -119,6 +119,15 @@ def test_n_out_of_bounds(service):
     expect_key(lambda: service.sample(n=201, seed=1), "n")
 
 
+@pytest.mark.parametrize(
+    "n",
+    [True, 1.9, "5", object(), float("inf")],
+    ids=["bool", "float", "string", "object", "infinity"],
+)
+def test_n_requires_a_strict_integer(service, n):
+    expect_key(lambda: service.sample(n=n, seed=1), "n")
+
+
 def test_seed_out_of_bounds(service):
     expect_key(lambda: service.sample(n=5, seed=-1), "seed")
     expect_key(
@@ -130,6 +139,50 @@ def test_seed_out_of_bounds(service):
 def test_render_text_uses_dims(service):
     body = service.render_text({"b": "b0"})
     assert body == {"text": "Interests: their b is b0."}
+
+
+def test_huge_edge_factor_reports_field_key(service):
+    expect_key(
+        lambda: service.sample(
+            n=5,
+            seed=1,
+            overrides={"edgeWeights": {"a->b": 10**400}},
+        ),
+        "overrides.edgeWeights.a->b",
+    )
+
+
+def test_huge_category_scale_reports_field_key(service):
+    expect_key(
+        lambda: service.sample(
+            n=5,
+            seed=1,
+            overrides={"categoryScales": {"Demo": 10**400}},
+        ),
+        "overrides.categoryScales.Demo",
+    )
+
+
+def test_huge_prior_weight_reports_field_key(service):
+    expect_key(
+        lambda: service.sample(
+            n=5,
+            seed=1,
+            overrides={"nodePriors": {"a": [10**400, 1]}},
+        ),
+        "overrides.nodePriors.a",
+    )
+
+
+def test_overflowing_prior_total_reports_field_key(service):
+    expect_key(
+        lambda: service.sample(
+            n=5,
+            seed=1,
+            overrides={"nodePriors": {"a": [1.5e308, 1e308]}},
+        ),
+        "overrides.nodePriors.a",
+    )
 
 
 def test_backend_and_renderer_import_when_numpy_is_blocked():

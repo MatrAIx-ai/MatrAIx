@@ -74,7 +74,7 @@ def _load_numpy():
 def _finite_nonnegative(raw: Any, *, key: str, label: str) -> float:
     try:
         value = float(raw)
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, OverflowError):
         raise SynthesisValidationError(f"{label} must be a number", key=key) from None
     if not (math.isfinite(value) and value >= 0.0):
         raise SynthesisValidationError(
@@ -440,9 +440,13 @@ class PersonaSynthesisService:
         raw_node_priors = dict(overrides.get("nodePriors") or {})
         raw_category_scales = dict(overrides.get("categoryScales") or {})
 
-        if not 1 <= int(n) <= MAX_SAMPLE_N:
+        if (
+            not isinstance(n, int)
+            or isinstance(n, bool)
+            or not 1 <= n <= MAX_SAMPLE_N
+        ):
             raise SynthesisValidationError(
-                f"n must be between 1 and {MAX_SAMPLE_N}", key="n"
+                f"n must be an integer between 1 and {MAX_SAMPLE_N}", key="n"
             )
         if not isinstance(seed, int) or isinstance(seed, bool) or not 0 <= seed <= MAX_SAFE_SEED:
             raise SynthesisValidationError(
@@ -459,15 +463,15 @@ class PersonaSynthesisService:
         adjusted = self._sampler_for(gamma_scale, edge_factors, node_priors, category_scales)
         numpy = _load_numpy()
         idx = adjusted.sample_indices(
-            int(n), pins=pin_indices, rng=numpy.random.default_rng(seed)
+            n, pins=pin_indices, rng=numpy.random.default_rng(seed)
         )
         payload: Dict[str, Any] = {
-            "personas": [adjusted.decode_row(idx, i) for i in range(int(n))],
-            "marginals": self._marginals(adjusted, idx, int(n)),
+            "personas": [adjusted.decode_row(idx, i) for i in range(n)],
+            "marginals": self._marginals(adjusted, idx, n),
             "baselinePersonas": None,
             "baselineMarginals": None,
             "effectiveConfig": {
-                "n": int(n),
+                "n": n,
                 "seed": seed,
                 "gammaScale": gamma_scale,
                 "pins": pins,
@@ -485,12 +489,12 @@ class PersonaSynthesisService:
         if compare_baseline:
             baseline = self._sampler_for(1.0, {}, {}, {})
             baseline_idx = baseline.sample_indices(
-                int(n), rng=numpy.random.default_rng(seed)
+                n, rng=numpy.random.default_rng(seed)
             )
             payload["baselinePersonas"] = [
-                baseline.decode_row(baseline_idx, i) for i in range(int(n))
+                baseline.decode_row(baseline_idx, i) for i in range(n)
             ]
-            payload["baselineMarginals"] = self._marginals(baseline, baseline_idx, int(n))
+            payload["baselineMarginals"] = self._marginals(baseline, baseline_idx, n)
         return payload
 
     def _validate_pins(
@@ -552,7 +556,7 @@ class PersonaSynthesisService:
                 )
             try:
                 dist = [float(p) for p in raw_dist]
-            except (TypeError, ValueError):
+            except (TypeError, ValueError, OverflowError):
                 raise SynthesisValidationError(
                     f"prior weights for {nid} must be numbers", key=error_key
                 ) from None
@@ -566,9 +570,11 @@ class PersonaSynthesisService:
                     f"prior weights for {nid} must be finite numbers >= 0",
                     key=error_key,
                 )
-            if sum(dist) <= 0.0:
+            total = sum(dist)
+            if not math.isfinite(total) or total <= 0.0:
                 raise SynthesisValidationError(
-                    f"prior for {nid} must have positive total mass", key=error_key
+                    f"prior for {nid} must have finite positive total mass",
+                    key=error_key,
                 )
             validated[nid] = dist
         return validated
