@@ -25,6 +25,9 @@ import type {
   OsAppEvalTasksResponse,
   SynthesisNodeDetail,
   SynthesisOverviewResponse,
+  SynthesisRenderResponse,
+  SynthesisSampleRequest,
+  SynthesisSampleResponse,
   SynthesisSubgraphResponse,
 } from "./types";
 import { PERSONA_BENCH_POOL } from "./types";
@@ -54,7 +57,12 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const data = text ? JSON.parse(text) : null;
   if (!response.ok) {
     const detail = data && typeof data === "object" && "detail" in data ? data.detail : data;
-    const message = typeof detail === "string" ? detail : response.statusText;
+    const objectMessage =
+      detail && typeof detail === "object" && "message" in detail
+        ? String(detail.message)
+        : null;
+    const message =
+      typeof detail === "string" ? detail : objectMessage ?? response.statusText;
     throw new ApiError(response.status, message || "Request failed", detail);
   }
   return data as T;
@@ -103,6 +111,16 @@ export const api = {
     ),
   getSynthesisNode: (id: string) =>
     request<SynthesisNodeDetail>(`/api/synthesis/nodes/${encodeURIComponent(id)}`),
+  sampleSynthesis: (body: SynthesisSampleRequest) =>
+    request<SynthesisSampleResponse>("/api/synthesis/sample", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  renderSynthesisPersona: (attributes: Record<string, string>) =>
+    request<SynthesisRenderResponse>("/api/synthesis/render", {
+      method: "POST",
+      body: JSON.stringify({ attributes }),
+    }),
   listChatbotEvalTasks: () => request<ChatbotEvalTasksResponse>("/api/chatbot-eval/tasks"),
 
   listHarborJobs: () => request<HarborJobsListResponse>("/api/harbor/jobs"),

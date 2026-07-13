@@ -1001,3 +1001,43 @@ export interface SynthesisNodeDetail {
   inEdges: SynthesisNodeEdgeView[];
   outEdges: SynthesisNodeEdgeView[];
 }
+
+export interface SynthesisSampleOverrides {
+  edgeWeights: Record<string, number>;
+  nodePriors: Record<string, number[]>;
+  categoryScales: Record<string, number>;
+}
+
+export interface SynthesisSampleRequest {
+  n: number;
+  seed: number;
+  gammaScale: number;
+  pins: Record<string, string>;
+  overrides: SynthesisSampleOverrides;
+  compareBaseline: boolean;
+}
+
+export interface SynthesisMarginal {
+  label: string;
+  values: string[];
+  freqs: number[];
+}
+
+export interface SynthesisSampleResponse {
+  personas: Record<string, string>[];
+  baselinePersonas?: Record<string, string>[] | null;
+  marginals: Record<string, SynthesisMarginal>;
+  baselineMarginals?: Record<string, SynthesisMarginal> | null;
+  effectiveConfig: {
+    n: number;
+    seed: number;
+    gammaScale: number;
+    pins: Record<string, string>;
+    overrides: SynthesisSampleOverrides;
+  };
+  flags: { helperPins: string[] };
+}
+
+export interface SynthesisRenderResponse {
+  text: string;
+}
