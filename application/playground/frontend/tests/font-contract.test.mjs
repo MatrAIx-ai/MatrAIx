@@ -23,4 +23,9 @@ test("Inter is the only configured text face", async () => {
   assert.match(css, /--sans: "Inter"/);
   assert.match(css, /--display: var\(--sans\)/);
   assert.match(css, /--mono: var\(--sans\)/);
+  assert.match(css, /\.hud\s*\{[^}]*font-family:\s*var\(--mono\);/s);
+  assert.match(
+    css,
+    /\.material-symbols-outlined\s*\{[^}]*font-family:\s*"Material Symbols Outlined";/s,
+  );
 });
