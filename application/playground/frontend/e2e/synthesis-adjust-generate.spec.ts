@@ -27,10 +27,20 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
 
   const pageErrors: string[] = [];
   const consoleIssues: { type: string; text: string }[] = [];
+  const failedResponses: { method: string; pathname: string; status: number }[] = [];
   page.on("pageerror", (error) => pageErrors.push(error.stack ?? error.message));
   page.on("console", (message) => {
     if (message.type() === "warning" || message.type() === "error") {
       consoleIssues.push({ type: message.type(), text: message.text() });
+    }
+  });
+  page.on("response", (response) => {
+    if (response.status() >= 400) {
+      failedResponses.push({
+        method: response.request().method(),
+        pathname: new URL(response.url()).pathname,
+        status: response.status(),
+      });
     }
   });
 
@@ -76,7 +86,7 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
 
   await page.getByRole("spinbutton", { name: "Personas" }).fill("50");
   const generate = page.getByRole("button", { name: "Generate" });
-  await Promise.all([
+  const [successfulSampleResponse] = await Promise.all([
     page.waitForResponse(
       (response) =>
         response.request().method() === "POST" &&
@@ -85,6 +95,28 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
     ),
     generate.click(),
   ]);
+  const successfulSampleRequest = successfulSampleResponse.request().postDataJSON();
+  expect(successfulSampleRequest).toMatchObject({
+    n: 50,
+    pins: {
+      region: "North America",
+      age_bracket: "25-34",
+    },
+    overrides: {
+      categoryScales: { "Demographic: Core": 2 },
+    },
+  });
+  const successfulSampleBody = await successfulSampleResponse.json();
+  expect(successfulSampleBody.effectiveConfig).toMatchObject({
+    n: 50,
+    pins: {
+      region: "North America",
+      age_bracket: "25-34",
+    },
+    overrides: {
+      categoryScales: { "Demographic: Core": 2 },
+    },
+  });
   const personasTab = page.getByRole("tab", { name: "Personas (50)" });
   await expect(personasTab).toBeVisible();
   await expect(page.getByText("1–10 of 50", { exact: true })).toBeVisible();
@@ -248,10 +280,18 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
 
   await expect(frameworkOverlays).toHaveCount(0);
   expect(pageErrors).toEqual([]);
+  expect(failedResponses).toEqual([
+    { method: "POST", pathname: "/api/synthesis/sample", status: 503 },
+    { method: "POST", pathname: "/api/synthesis/sample", status: 422 },
+  ]);
   const expectedFailure =
     /^Failed to load resource: the server responded with a status of (422|503) \([^)]*\)$/;
-  const unexpectedConsoleIssues = consoleIssues.filter(
-    (issue) => issue.type !== "error" || !expectedFailure.test(issue.text),
-  );
-  expect(unexpectedConsoleIssues).toEqual([]);
+  expect(consoleIssues).toHaveLength(2);
+  const consoleFailureStatuses = consoleIssues.map((issue) => {
+    expect(issue.type).toBe("error");
+    const match = expectedFailure.exec(issue.text);
+    expect(match, `Unexpected console failure: ${issue.text}`).not.toBeNull();
+    return Number(match?.[1]);
+  });
+  expect(consoleFailureStatuses.sort((left, right) => left - right)).toEqual([422, 503]);
 });
