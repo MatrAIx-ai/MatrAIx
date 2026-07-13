@@ -22,6 +22,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterator, Sequence
 
+try:
+    from persona.human_extraction.scripts import (
+        extract_personas_stackoverflow_vllm_v2 as _shared_policy,
+    )
+except ModuleNotFoundError:  # Direct script execution adds this directory to sys.path.
+    import extract_personas_stackoverflow_vllm_v2 as _shared_policy
+
 
 def find_repo_root(script_path: Path) -> Path:
     script_dir = script_path.resolve().parent
@@ -1573,6 +1580,15 @@ def retry_conversation(conversation: list[dict[str, str]]) -> list[dict[str, str
         "deliberation, self-correction, candidate comparison, or prompt discussion."
     )
     return retry
+
+
+# V3 changes chunk granularity and manifest handling, not extraction semantics.
+# Keep prompt, validation, retry, and semantic filtering identical to V2 so the
+# two runtimes cannot silently drift in persona quality policy.
+validate_chunk_payload = _shared_policy.validate_chunk_payload
+build_stackoverflow_prompt = _shared_policy.build_stackoverflow_prompt
+filter_semantic_overreach = _shared_policy.filter_semantic_overreach
+retry_conversation = _shared_policy.retry_conversation
 
 
 def log_salvaged_generation(
