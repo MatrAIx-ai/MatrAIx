@@ -28,6 +28,7 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
   const pageErrors: string[] = [];
   const consoleIssues: { type: string; text: string }[] = [];
   const failedResponses: { method: string; pathname: string; status: number }[] = [];
+  const samplePostRequests: string[] = [];
   page.on("pageerror", (error) => pageErrors.push(error.stack ?? error.message));
   page.on("console", (message) => {
     if (message.type() === "warning" || message.type() === "error") {
@@ -41,6 +42,14 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
         pathname: new URL(response.url()).pathname,
         status: response.status(),
       });
+    }
+  });
+  page.on("request", (request) => {
+    if (
+      request.method() === "POST" &&
+      new URL(request.url()).pathname === "/api/synthesis/sample"
+    ) {
+      samplePostRequests.push(request.url());
     }
   });
 
@@ -93,8 +102,10 @@ test("pin, scale, generate, compare, render, overlay, and preserve results on er
         new URL(response.url()).pathname === "/api/synthesis/sample" &&
         response.status() === 200,
     ),
-    generate.click(),
+    generate.dblclick(),
   ]);
+  await page.waitForLoadState("networkidle");
+  expect(samplePostRequests).toHaveLength(1);
   const successfulSampleRequest = successfulSampleResponse.request().postDataJSON();
   expect(successfulSampleRequest).toMatchObject({
     n: 50,

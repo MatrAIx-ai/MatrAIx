@@ -5,12 +5,13 @@
  * category overview graph → drill-down subgraph → detail rail.
  * Phase 1 of docs/superpowers/specs/2026-07-11-persona-dag-studio-design.md.
  */
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
 import { ApiError, api } from "@/lib/api";
 import type {
   SynthesisOverviewResponse,
+  SynthesisSampleRequest,
   SynthesisSampleResponse,
   SynthesisSubgraphResponse,
 } from "@/lib/types";
@@ -46,13 +47,23 @@ export function SynthesisStudioView() {
   const [controls, setControls] = useState<SamplingControls>(DEFAULT_CONTROLS);
   const [result, setResult] = useState<SynthesisSampleResponse | null>(null);
   const [overlayIndex, setOverlayIndex] = useState<number | null>(null);
+  const generationInFlightRef = useRef(false);
   const sampleMutation = useMutation({
-    mutationFn: () => api.sampleSynthesis(buildSampleRequest(recipe, controls)),
+    mutationFn: (request: SynthesisSampleRequest) => api.sampleSynthesis(request),
     onSuccess: (body) => {
       setResult(body);
       setOverlayIndex(null);
     },
+    onSettled: () => {
+      generationInFlightRef.current = false;
+    },
   });
+  const generate = () => {
+    if (generationInFlightRef.current) return;
+    const request = buildSampleRequest(recipe, controls);
+    generationInFlightRef.current = true;
+    sampleMutation.mutate(request);
+  };
   const upsert = (entry: RecipeEntry) =>
     setRecipe((previous) => upsertEntry(previous, entry));
   const removeEntry = (key: string) =>
@@ -265,7 +276,7 @@ export function SynthesisStudioView() {
               onRemove={removeEntry}
               controls={controls}
               onControlsChange={setControls}
-              onGenerate={() => sampleMutation.mutate()}
+              onGenerate={generate}
               generating={sampleMutation.isPending}
               error={sampleError}
               helperPins={result?.flags.helperPins ?? []}
