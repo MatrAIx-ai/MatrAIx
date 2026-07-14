@@ -2,7 +2,7 @@
 
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
-source $HOME/.local/bin/env
+export PATH="$HOME/.local/bin:$PATH"
 
 # Use uv to run Python with the MCP client library
 uv run --with mcp python3 << 'EOF'
