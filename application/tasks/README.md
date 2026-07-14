@@ -19,8 +19,11 @@ Generated job recipes land under `configs/jobs/` (see [QUICKSTART.md](../QUICKST
   Match `[environment].local_compose` sidecars `chatbot-*-sidecar_<sut>` when present.
 - **`example-web-*`** — reference web tasks for Playwright, browser-use, Cocoa,
   and CUA style browsing flows.
+- **`example-computer-use-*`** — reference os-app / computer-use tasks.
+- **`os-app-ios_*` / `os-app-macos_*` / `os-app-linux_*`** — real application
+  os-app tasks (e.g. `os-app-ios_news-subscription-decision`).
 - **Your task** — `application/tasks/<your-task-name>/` (use `survey_*` / `chat_*`
-  / `web-*` conventions above when it is a real benchmark task).
+  / `web-*` / `os-app-*` conventions above when it is a real benchmark task).
 
 ## New Task
 

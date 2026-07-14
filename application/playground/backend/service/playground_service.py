@@ -1,6 +1,6 @@
 """Run a playground as a background job with live progress.
 
-Persona-eval execution is serialized process-globally (`_RUN_LOCK`) because the
+Playground execution is serialized process-globally (`_RUN_LOCK`) because the
 underlying recommender resources and process-level environment are expensive and
 partly shared across runs.
 """

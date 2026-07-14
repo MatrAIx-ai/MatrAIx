@@ -727,7 +727,7 @@ export async function exportBatchReportPdf(
 
     pdf.setProperties({
       title: `MatrAIx Persona-Task Batch Report - ${meta.jobName}`,
-      subject: "Persona evaluation batch report",
+      subject: "Playground batch report",
       author: "MatrAIx",
       creator: "MatrAIx Playground",
       keywords: ["MatrAIx", "persona", "task", "batch report", meta.applicationType || "eval"]

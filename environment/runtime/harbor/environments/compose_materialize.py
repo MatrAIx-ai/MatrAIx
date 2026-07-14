@@ -64,9 +64,9 @@ def materialize_persona_with_local_compose(
     shutil.copy2(compose_source, dest_dir / "docker-compose.yaml")
 
     for child in local_compose_dir.iterdir():
-        if child.name in {"docker-compose.yaml", ".persona_eval_sidecar"}:
-            continue
-        if child.name.startswith("."):
+        # Skip the Harbor compose (already copied) and helper/dot dirs such as
+        # ``.playground_sidecar`` (host-only standalone compose for Playground).
+        if child.name == "docker-compose.yaml" or child.name.startswith("."):
             continue
         target = dest_dir / child.name
         if child.is_dir():

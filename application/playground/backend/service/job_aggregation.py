@@ -23,9 +23,6 @@ SUMMARY_GROUP_BY_MODES = frozenset({"none", "categorical", "numeric_band"})
 JUDGE_GROUP_BY_MODES = SUMMARY_GROUP_BY_MODES
 REPORTING_LLM_ENABLE_ENV = "PLAYGROUND_REPORTING_ENABLE_LLM"
 REPORTING_LLM_MODEL_ENV = "PLAYGROUND_REPORTING_LLM_MODEL"
-# Legacy aliases (pre-Playground rename).
-_LEGACY_REPORTING_LLM_ENABLE_ENV = "PERSONAEVAL_REPORTING_ENABLE_LLM"
-_LEGACY_REPORTING_LLM_MODEL_ENV = "PERSONAEVAL_REPORTING_LLM_MODEL"
 DEFAULT_REPORTING_LLM_MODEL = "openai/gpt-4o-mini"
 
 
@@ -1133,7 +1130,6 @@ def _build_reporting_view(payload: dict[str, Any]) -> dict[str, Any]:
         "llmEnabled": _reporting_llm_enabled(None),
         "model": (
             os.environ.get(REPORTING_LLM_MODEL_ENV)
-            or os.environ.get(_LEGACY_REPORTING_LLM_MODEL_ENV)
             or DEFAULT_REPORTING_LLM_MODEL
         ).strip()
         or DEFAULT_REPORTING_LLM_MODEL,
@@ -1206,8 +1202,6 @@ def _reporting_llm_enabled(enable_llm: bool | None) -> bool:
     if enable_llm is not None:
         return enable_llm
     raw = os.environ.get(REPORTING_LLM_ENABLE_ENV, "").strip().lower()
-    if not raw:
-        raw = os.environ.get(_LEGACY_REPORTING_LLM_ENABLE_ENV, "").strip().lower()
     return raw in {"1", "true", "yes", "on"}
 
 
@@ -1216,7 +1210,6 @@ def _reporting_llm_client(client: Any | None) -> Any | None:
         return client
     model = (
         os.environ.get(REPORTING_LLM_MODEL_ENV)
-        or os.environ.get(_LEGACY_REPORTING_LLM_MODEL_ENV)
         or DEFAULT_REPORTING_LLM_MODEL
     ).strip() or DEFAULT_REPORTING_LLM_MODEL
     provider, bare_model = _normalize_reporting_model(model)

@@ -1,0 +1,20 @@
+---
+description: Do not use "persona eval" / PersonaEval branding terminology
+alwaysApply: true
+---
+
+# Prefer MatrAIx product language
+
+Do **not** use the phrases or branding:
+
+- "persona eval"
+- "persona-eval"
+- `persona_eval`
+- "PersonaEval"
+
+Use MatrAIx / Playground / Harbor / chatbot / survey / os-app language instead.
+
+Host-only standalone compose for chatbot sidecars lives under
+``.playground_sidecar/`` (not any `persona_eval*` path). Prefer names like
+`chatbot sidecar`, `local compose`, or `.playground_sidecar` when documenting
+or adding new identifiers.
