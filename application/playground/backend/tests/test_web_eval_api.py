@@ -24,21 +24,21 @@ class _FakeWebEvalService:
         self._view: Dict[str, Any] = {
             "jobId": "web_fake123",
             "applicationType": "web",
-            "taskId": "web-ecommerce-platform_product-discovery",
-            "taskTitle": "Ecommerce product discovery",
-            "siteName": "Northstar Home Goods",
-            "siteUrl": "http://ecommerce-web:8000/",
+            "taskId": "example-web-playwright-quote-choice",
+            "taskTitle": "Quote choice",
+            "siteName": "quotes.toscrape.com",
+            "siteUrl": "https://quotes.toscrape.com/",
             "personaId": "Nemotron_01B0D4D4",
             "personaName": "Persona One",
             "status": "done",
             "phase": None,
             "webResult": {
-                "selectedProductId": "desk-002",
-                "selectedProductName": "FocusDesk Pro",
+                "selectedProductId": "quote-42",
+                "selectedProductName": "Famous quote",
                 "needSatisfaction": 8,
                 "easeOfUse": 7,
                 "overallExperienceRating": 8,
-                "reason": "The comparison table made the product tradeoffs clear.",
+                "reason": "The shortlist matched the assigned preference.",
                 "createdAt": "2026-06-24T00:00:00Z",
                 "valid": True,
             },
@@ -47,7 +47,7 @@ class _FakeWebEvalService:
                     {
                         "step": 1,
                         "source": "agent",
-                        "message": "I will compare workspace products and choose one.",
+                        "message": "I will browse quotes and choose one.",
                         "screenshotFile": "screenshot_ep0.webp",
                         "screenshotUrl": (
                             "/api/web-eval/jobs/web_fake123/screenshots/"
@@ -56,7 +56,7 @@ class _FakeWebEvalService:
                         "actions": [
                             {
                                 "name": "navigate",
-                                "arguments": {"url": "http://ecommerce-web:8000/"},
+                                "arguments": {"url": "https://quotes.toscrape.com/"},
                             }
                         ],
                     }
@@ -65,7 +65,7 @@ class _FakeWebEvalService:
                     "steps": [
                         {
                             "source": "agent",
-                            "message": "I will compare workspace products and choose one.",
+                            "message": "I will browse quotes and choose one.",
                         }
                     ]
                 },
@@ -80,13 +80,13 @@ class _FakeWebEvalService:
     def list_tasks(self) -> list[dict[str, Any]]:
         return [
             {
-                "id": "web-ecommerce-platform_product-discovery",
-                "title": "Ecommerce product discovery",
-                "siteName": "Northstar Home Goods",
-                "siteUrl": "http://ecommerce-web:8000/",
-                "description": "Browse a task-hosted ecommerce site and report the shopping experience.",
-                "outputArtifact": "ecommerce_interaction.json",
-                "submissionProfile": "playground_final_json",
+                "id": "example-web-playwright-quote-choice",
+                "title": "Quote choice",
+                "siteName": "quotes.toscrape.com",
+                "siteUrl": "https://quotes.toscrape.com/",
+                "description": "Browse quotes and report a preference.",
+                "outputArtifact": "quote_choice.json",
+                "submissionProfile": "quote_choice",
             }
         ]
 
@@ -132,8 +132,8 @@ def test_list_web_eval_tasks(client, fake_web_eval):
     resp = client.get("/api/web-eval/tasks")
     assert resp.status_code == 200, resp.text
     body = resp.json()
-    assert body["tasks"][0]["id"] == "web-ecommerce-platform_product-discovery"
-    assert body["tasks"][0]["siteName"] == "Northstar Home Goods"
+    assert body["tasks"][0]["id"] == "example-web-playwright-quote-choice"
+    assert body["tasks"][0]["siteName"] == "quotes.toscrape.com"
 
 
 def test_start_web_eval_returns_job_id(client, fake_web_eval):
@@ -141,7 +141,7 @@ def test_start_web_eval_returns_job_id(client, fake_web_eval):
         "/api/web-eval",
         json={
             "personaId": "Nemotron_01B0D4D4",
-            "taskId": "web-ecommerce-platform_product-discovery",
+            "taskId": "example-web-playwright-quote-choice",
             "personaModel": "anthropic/claude-haiku-4-5",
         },
     )
@@ -150,7 +150,7 @@ def test_start_web_eval_returns_job_id(client, fake_web_eval):
     assert fake_web_eval.started == [
         {
             "personaId": "Nemotron_01B0D4D4",
-            "taskId": "web-ecommerce-platform_product-discovery",
+            "taskId": "example-web-playwright-quote-choice",
             "personaModel": "anthropic/claude-haiku-4-5",
             "createdAt": fake_web_eval.started[0]["createdAt"],
         }
@@ -163,9 +163,9 @@ def test_get_web_eval_job_returns_result_trace_and_prompts(client, fake_web_eval
     assert resp.status_code == 200, resp.text
     body = resp.json()
     assert body["applicationType"] == "web"
-    assert body["taskId"] == "web-ecommerce-platform_product-discovery"
+    assert body["taskId"] == "example-web-playwright-quote-choice"
     assert body["status"] == "done"
-    assert body["webResult"]["selectedProductId"] == "desk-002"
+    assert body["webResult"]["selectedProductId"] == "quote-42"
     assert body["webResult"]["needSatisfaction"] == 8
     assert body["trace"]["events"][0]["actions"][0]["name"] == "navigate"
     assert body["trace"]["events"][0]["screenshotFile"] == "screenshot_ep0.webp"

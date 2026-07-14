@@ -11,13 +11,16 @@ Generated job recipes land under `configs/jobs/` (see [QUICKSTART.md](../QUICKST
 
 - **`example-*`** — reference tasks in the repo (copy from these). For surveys, only
   **`example-survey_product-feedback`** is the reference; other `survey_*` folders are
-  real application benchmark tasks.
+  real application benchmark tasks. Chat references are
+  **`example-chat-api_*`** / **`example-chat-mcp_*`**.
 - **`survey_*`** — application survey tasks.
-- **`recommender-agent_chat_api`** — clean import of the MatrAIx recommender
-  chat task with an environment-side HTTP sidecar for smoke runs.
+- **`chat_*`** — application chatbot tasks, named after the SUT chatbot
+  (e.g. `chat_recai`, `chat_openbb`, `chat_multi-agent-medical-assistant`).
+  Match `[environment].local_compose` sidecars `chatbot-*-sidecar_<sut>` when present.
 - **`example-web-*`** — reference web tasks for Playwright, browser-use, Cocoa,
   and CUA style browsing flows.
-- **Your task** — `application/tasks/<your-task-name>/` (any folder name you choose).
+- **Your task** — `application/tasks/<your-task-name>/` (use `survey_*` / `chat_*`
+  / `web-*` conventions above when it is a real benchmark task).
 
 ## New Task
 
@@ -29,11 +32,17 @@ the scenario, task metadata, and verifier.
 3. Update `[metadata]` with `type`, `domain`, `difficulty`, and task-specific `tags`.
 4. For survey tasks, keep `[environment].definition = "application/shared-survey-form"`
    and put task-owned docs under `application/tasks/<your-task-name>/input/`.
-5. For chat and browser tasks, keep contributor-facing docs under the task
-   folder itself (`input/` when useful), and prefer an existing shared runtime under
-   `environment/task-environments/application/shared-*` when the execution model
-   already matches your task. Only create a task-specific environment when the
-   sidecar topology, browser stack, or app host is genuinely new.
+5. For chat tasks, set `[environment].definition = "application/shared-chat-persona"`.
+   Choose the sidecar by the **persona-facing protocol** (what UserSim / the agent
+   actually calls), not by every backend the product uses internally:
+   - persona talks HTTP chat → `chatbot-api-sidecar_<sut>` + `transport: sidecar_http`
+   - persona talks MCP chat tools → `chatbot-mcp-sidecar_<sut>` + `transport: mcp`
+   Reference the folder with `[environment].local_compose`, or point at an external
+   URL in `input/chatbot.yaml`. Example of HTTP adapter wrapping an MCP data
+   layer: `chat_openbb` → `chatbot-api-sidecar_openbb` (`finance-chatbot` + `openbb-mcp`).
+   For browser tasks, prefer an existing `shared-web-*` runtime.
+   Only create a task-specific environment when the agent image or browser stack is
+   genuinely new.
 6. Keep verifier entry points under `tests/`.
 7. Define batch reporting policy in `reporting.json` at the task root. Use this
    file for context-level summaries, grouping rules, and later judge prompts.
@@ -211,11 +220,27 @@ belongs and which artifacts its verifier should expect.
 Harbor resolves `[environment].definition` to a folder under
 `environment/task-environments/application/`.
 
-Use shared runtime folders when possible:
+Keep **persona-side** vs **SUT-side** folders distinct:
 
-- survey: `shared-survey-form`
-- chatbot examples: `shared-chat-*`
-- browser examples: `shared-web-*`
+**Persona agent / interaction surface** (`shared-*` → `[environment].definition`):
+
+- survey form: `shared-survey-form`
+- chatbot persona: `shared-chat-persona`
+- browser agent stacks: `shared-web-*`
+- os-app use.computer (macOS / iOS): `shared-os-app-mac-ios`
+- os-app Linux desktop Docker: `shared-os-app-linux`
+
+**System under test** (`*-sidecar_<sut-name>` → `[environment].local_compose`):
+
+- chatbot API hosts: `chatbot-api-sidecar_<sut>` (e.g. `chatbot-api-sidecar_recai`,
+  `chatbot-api-sidecar_openbb`) — used when the persona-facing surface is HTTP
+  `/v1/messages` (even if a product data layer underneath is MCP)
+- chatbot MCP hosts: `chatbot-mcp-sidecar_<sut>` (e.g. `chatbot-mcp-sidecar_acme-support`) —
+  used when the persona talks MCP chat tools directly
+- task-hosted web apps: `web-sidecar_<sut>` (e.g. a task-hosted storefront package)
+
+Do not put the persona agent image inside a `*-sidecar_*` package.
+See also [`../../environment/task-environments/application/CHAT_ENVS.md`](../../environment/task-environments/application/CHAT_ENVS.md).
 
 Create a task-specific environment folder only when you need a genuinely new
 runtime or sidecar topology. Survey tasks stay task-local only for `input/`

@@ -37,6 +37,7 @@ class ChatbotEvalTask:
     can_start: bool = False
     health_url: str = ""
     status_detail: str = ""
+    capabilities: tuple[dict[str, Any], ...] = ()
 
     def to_dict(self) -> Dict[str, Any]:
         task_path = self.task_path
@@ -65,6 +66,7 @@ class ChatbotEvalTask:
             "canStart": self.can_start,
             "healthUrl": self.health_url,
             "statusDetail": self.status_detail,
+            "capabilities": list(self.capabilities),
         }
 
 
@@ -115,6 +117,11 @@ def _registry() -> Dict[str, ChatbotEvalTask]:
         task_config = load_chatbot_task_config_for_task_path(record.task_path, repo_root=root)
         availability = _task_availability(task_config) if task_config is not None else {}
         runtime = task_config.runtime_defaults if task_config is not None else None
+        capabilities = (
+            tuple(item.to_public_dict() for item in task_config.capabilities)
+            if task_config is not None
+            else ()
+        )
         tasks[task_id] = ChatbotEvalTask(
             id=task_id,
             title=record.title,
@@ -133,6 +140,7 @@ def _registry() -> Dict[str, ChatbotEvalTask]:
             can_start=bool(availability.get("canStart", False)),
             health_url=str(availability.get("healthUrl") or ""),
             status_detail=str(availability.get("statusDetail") or ""),
+            capabilities=capabilities,
         )
     return tasks
 

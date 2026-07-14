@@ -136,7 +136,7 @@ def test_run_playground_tool_loop(monkeypatch):
         "Movie recommender",
         PlaygroundConfig(domain="movie", max_turns=5),
         created_at="2026-06-30T00:00:00Z",
-        task_path="application/tasks/recommender-agent_chat_api",
+        task_path="application/tasks/chat_recai",
         repo_root=repo,
     )
     assert len(result.transcript) == 2
@@ -221,11 +221,11 @@ def test_public_runner_delegates_to_user_sim(monkeypatch):
         "desc",
         config,
         created_at="t",
-        task_path="application/tasks/recommender-agent_chat_api",
+        task_path="application/tasks/chat_recai",
         persona_yaml_path="persona.yaml",
         repo_root=Path("/tmp/demo-repo"),
     )
     assert result is sentinel
     assert captured["session"] is session
     assert captured["config"] is config
-    assert captured["task_path"] == "application/tasks/recommender-agent_chat_api"
+    assert captured["task_path"] == "application/tasks/chat_recai"

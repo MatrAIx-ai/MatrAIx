@@ -144,7 +144,7 @@ def test_harbor_chat_config_from_env_defaults_to_unlimited_turns(tmp_path, monke
         tmp_path
         / "application"
         / "tasks"
-        / "medical-assistant_chatbot"
+        / "chat_multi-agent-medical-assistant"
         / "input"
     )
     input_dir.mkdir(parents=True)
@@ -157,14 +157,14 @@ def test_harbor_chat_config_from_env_defaults_to_unlimited_turns(tmp_path, monke
                 "  applicationContext: medical_consultation",
                 "  maxTurns: 11",
                 "connection:",
-                "  baseUrl: http://medical-chatbot:8000",
+                "  baseUrl: http://multi-agent-medical-assistant-api:8000",
             ]
         ),
         encoding="utf-8",
     )
     monkeypatch.setenv(
         "MATRIX_CHATBOT_TASK_PATH",
-        "application/tasks/medical-assistant_chatbot",
+        "application/tasks/chat_multi-agent-medical-assistant",
     )
     monkeypatch.delenv("MATRIX_CHATBOT_APPLICATION_ID", raising=False)
     monkeypatch.delenv("MATRIX_CHATBOT_APPLICATION_CONTEXT", raising=False)

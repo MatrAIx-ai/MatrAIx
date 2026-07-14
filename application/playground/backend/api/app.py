@@ -462,16 +462,24 @@ def _interecagent_root() -> str:
     override = os.environ.get("INTERECAGENT_ROOT")
     if override:
         return os.path.abspath(override)
-    from backend.service.task_environment import resolve_task_environment_dir
+    from backend.service.task_environment import resolve_chat_endpoint_host_dir
 
     repo_root = Path(__file__).resolve().parents[4]
-    task_dir = repo_root / "application" / "tasks" / "recommender-agent_chat_api"
-    return str(
-        resolve_task_environment_dir(task_dir)
-        / "recommender-api"
-        / "recai"
-        / "InteRecAgent"
-    )
+    task_dir = repo_root / "application" / "tasks" / "chat_recai"
+    host_dir = resolve_chat_endpoint_host_dir(task_dir)
+    if host_dir is None:
+        base = (
+            repo_root
+            / "environment"
+            / "task-environments"
+            / "application"
+            / "chatbot-api-sidecar_recai"
+            / "recommender-api"
+        )
+    else:
+        candidate = host_dir / "recommender-api"
+        base = candidate if candidate.is_dir() else host_dir
+    return str(base / "recai" / "InteRecAgent")
 
 
 def _bundle_check(interecagent_root: str, domain: str) -> Dict[str, Any]:

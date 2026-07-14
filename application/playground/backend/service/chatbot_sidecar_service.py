@@ -31,7 +31,7 @@ class SidecarSpec:
 _SIDECAR_SPECS: dict[str, SidecarSpec] = {
     "recai": SidecarSpec(
         application_id="recai",
-        compose_dir="environment/task-environments/application/shared-chat-api-recommender",
+        compose_dir="environment/task-environments/application/chatbot-api-sidecar_recai",
         service_name="rec-agent-api",
         build_context="recommender-api",
         host_port=8000,
@@ -40,25 +40,43 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
     ),
     "finance_openbb": SidecarSpec(
         application_id="finance_openbb",
-        compose_dir=None,
-        service_name=None,
-        build_context=None,
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_openbb"
+        ),
+        service_name="finance-chatbot",
+        build_context="finance-chatbot",
         host_port=8901,
         primary_env="CHATBOT_UPSTREAM_FINANCE",
         legacy_env="FINANCE_CHATBOT_URL",
     ),
     "medical_assistant": SidecarSpec(
         application_id="medical_assistant",
-        compose_dir=None,
-        service_name=None,
-        build_context=None,
+        compose_dir=(
+            "environment/task-environments/application/"
+            "chatbot-api-sidecar_multi-agent-medical-assistant"
+        ),
+        service_name="multi-agent-medical-assistant-api",
+        build_context="multi-agent-medical-assistant-api",
         host_port=8902,
         primary_env="CHATBOT_UPSTREAM_MEDICAL",
         legacy_env="MEDICAL_CHATBOT_URL",
     ),
+    "acme_support_api": SidecarSpec(
+        application_id="acme_support_api",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_acme-support-api"
+        ),
+        service_name="support-api",
+        build_context="support-api",
+        host_port=8904,
+        primary_env="CHATBOT_API_URL",
+        legacy_env=None,
+    ),
     "acme_support_mcp": SidecarSpec(
         application_id="acme_support_mcp",
-        compose_dir="environment/task-environments/application/shared-chat-mcp-support",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-mcp-sidecar_acme-support"
+        ),
         service_name="support-bot",
         build_context="support-bot",
         host_port=8903,
@@ -212,12 +230,13 @@ def start_sidecar(application_id: str, *, repo_root: Path | None = None) -> dict
         "--build",
         spec.service_name,
     ]
+    compose_timeout = 900 if application_id in {"medical_assistant", "finance_openbb"} else 300
     result = subprocess.run(
         command,
         cwd=root,
         capture_output=True,
         text=True,
-        timeout=300,
+        timeout=compose_timeout,
         check=False,
     )
     if result.returncode != 0:
@@ -227,7 +246,8 @@ def start_sidecar(application_id: str, *, repo_root: Path | None = None) -> dict
         )
 
     health_url = resolve_health_url(application_id)
-    ok = _wait_for_sidecar_probe(spec, health_url, timeout_sec=30.0)
+    wait_sec = 120.0 if application_id in {"medical_assistant", "finance_openbb"} else 30.0
+    ok = _wait_for_sidecar_probe(spec, health_url, timeout_sec=wait_sec)
     status = sidecar_status(application_id, repo_root=root)
     status["started"] = True
     if not ok:

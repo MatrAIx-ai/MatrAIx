@@ -26,10 +26,16 @@ Not included as a raw dump:
 - The full RecAI / InteRecAgent checkout and large resource bundle.
 - Generated run outputs, local resource caches, and raw snapshot folders.
 
-The current clean recommender task sidecar lives at:
+The current clean recommender endpoint host lives at:
 
 ```text
-environment/task-environments/application/shared-chat-api-recommender/recommender-api/
+environment/task-environments/application/chatbot-api-sidecar_recai/recommender-api/
+```
+
+Harbor persona agent image (shared by chat tasks):
+
+```text
+environment/task-environments/application/shared-chat-persona/
 ```
 
 It is suitable for smoke runs and API-contract compatibility. Full native RecAI
@@ -41,16 +47,15 @@ external resources documented separately.
 Playground keeps the chatbot runtime task-backed and lightweight by default.
 
 - The recommender chatbot task lives at
-  `application/tasks/recommender-agent_chat_api/`.
-- The shared chatbot runtime bridge lives at
-  `environment/task-environments/application/shared-chat-api-recommender/recommender-api/`.
+  `application/tasks/chat_recai/`.
+- The chatbot endpoint host lives at
+  `environment/task-environments/application/chatbot-api-sidecar_recai/recommender-api/`.
 - Large native RecAI resource bundles are intentionally not kept in the default
   developer path inside this repo.
 
 If a fuller native RecAI runtime is restored later:
 
-- keep runtime code task-owned and runtime-focused under the shared recommender
-  path above
+- keep runtime code under the chatbot-api-sidecar_recai path above
 - keep large resources out of git and document their external artifact
   locations
 - add a setup script if resources must be materialized locally
@@ -191,6 +196,6 @@ Related application tasks live outside this app directory:
 
 ```text
 application/tasks/example-survey_product-feedback/
-application/tasks/recommender-agent_chat_api/
+application/tasks/chat_recai/
 application/tasks/example-web-playwright_quote-choice/
 ```

@@ -205,7 +205,7 @@ def test_launch_harbor_job_prefers_chat_application_context_for_recai(client, fa
     resp = client.post(
         "/api/harbor/jobs",
         json={
-            "taskPath": "application/tasks/recommender-agent_chat_api",
+            "taskPath": "application/tasks/chat_recai",
             "chatApplicationId": "recai",
             "chatApplicationContext": "beauty_product",
         },

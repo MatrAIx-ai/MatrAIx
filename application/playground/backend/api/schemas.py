@@ -85,6 +85,7 @@ SUPPORTED_APPLICATION_IDS = (
     "recai",
     "finance_openbb",
     "medical_assistant",
+    "acme_support_api",
     "acme_support_mcp",
 )
 DEFAULT_APPLICATION_CONTEXTS = {

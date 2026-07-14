@@ -10,7 +10,7 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
 EXAMPLE_SURVEY = ROOT / "application/tasks/example-survey_product-feedback"
-RECOMMENDER_CHAT = ROOT / "application/tasks/recommender-agent_chat_api"
+RECOMMENDER_CHAT = ROOT / "application/tasks/chat_recai"
 TASK_SPEC_ROOT = ROOT / "application/task-spec"
 
 
@@ -71,7 +71,7 @@ def test_recommender_chat_task_metadata_is_clean() -> None:
     task_text = (RECOMMENDER_CHAT / "task.toml").read_text(encoding="utf-8")
     task = tomllib.loads(task_text)
 
-    assert task["task"]["name"] == "application/recommender-agent-chat-api"
+    assert task["task"]["name"] == "application/chat-recai"
     assert task["metadata"]["type"] == "chatbot"
     assert task["metadata"]["domain"] == "commerce-retail"
     assert "matraix/" not in task_text.lower()
@@ -79,7 +79,7 @@ def test_recommender_chat_task_metadata_is_clean() -> None:
     readme = (RECOMMENDER_CHAT / "README.md").read_text(encoding="utf-8")
     assert "applications/recommendation_chatbot_eval" not in readme
     assert "--persona-ids 0042" in readme
-    assert "recommender-agent-chat-api-auto-n1.yaml" in readme
+    assert "chat-recai-auto-n1.yaml" in readme
 
 
 def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) -> None:
@@ -134,8 +134,15 @@ def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) 
 
 
 def test_recommender_chat_sidecar_contract() -> None:
+    from harbor.environments.compose_materialize import resolve_task_environments_path
+
+    task_paths = TaskPaths.from_task_dir(RECOMMENDER_CHAT)
+    repo_root = task_paths._find_repository_root()
+    assert repo_root is not None
+    raw = tomllib.loads((RECOMMENDER_CHAT / "task.toml").read_text(encoding="utf-8"))
+    local_compose = raw["environment"]["local_compose"]
     server_path = (
-        TaskPaths.from_task_dir(RECOMMENDER_CHAT).environment_dir
+        resolve_task_environments_path(repo_root, local_compose)
         / "recommender-api"
         / "server.py"
     )
@@ -180,7 +187,7 @@ def test_application_task_spec_manifest_uses_clean_task_paths() -> None:
         "application/tasks/example-survey_product-feedback"
     )
     assert manifest["applicationTypes"]["chatbot"]["canonicalTask"] == (
-        "application/tasks/recommender-agent_chat_api"
+        "application/tasks/chat_recai"
     )
     assert manifest["applicationTypes"]["web"]["canonicalTask"] == (
         "application/tasks/example-web-playwright_quote-choice"

@@ -147,8 +147,8 @@ async def test_host_download_dir_noops_when_source_equals_destination(tmp_path: 
     (output_dir / "transcript.json").write_text('{"domain":"movie","turns":[]}', encoding="utf-8")
     env = HostEnvironment(
         environment_dir=tmp_path / "environment",
-        environment_name="recommender-agent_chat_api",
-        session_id="recommender-agent_chat_api__noop",
+        environment_name="chat_recai",
+        session_id="chat_recai__noop",
         trial_paths=trial_paths,
         task_env_config=EnvironmentConfig(),
     )

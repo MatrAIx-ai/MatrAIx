@@ -55,11 +55,22 @@ def _repo_root() -> str:
 
 
 def _chatbot_api_root() -> str:
-    """Absolute path to the chatbot task API source root."""
-    from backend.service.task_environment import resolve_task_environment_dir
+    """Absolute path to the RecAI / recommender-api source root."""
+    from backend.service.task_environment import resolve_chat_endpoint_host_dir
 
-    task_dir = Path(_repo_root()) / "application" / "tasks" / "recommender-agent_chat_api"
-    return str(resolve_task_environment_dir(task_dir) / "recommender-api")
+    task_dir = Path(_repo_root()) / "application" / "tasks" / "chat_recai"
+    host_dir = resolve_chat_endpoint_host_dir(task_dir)
+    if host_dir is None:
+        return str(
+            Path(_repo_root())
+            / "environment"
+            / "task-environments"
+            / "application"
+            / "chatbot-api-sidecar_recai"
+            / "recommender-api"
+        )
+    recommender_api = host_dir / "recommender-api"
+    return str(recommender_api if recommender_api.is_dir() else host_dir)
 
 
 def _catalogs_dir() -> str:
