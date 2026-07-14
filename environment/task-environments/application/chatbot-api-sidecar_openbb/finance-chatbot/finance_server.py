@@ -1,8 +1,7 @@
 """Finance-only Harbor chatbot API sidecar.
 
-The RecAI sidecar imports the PersonaEval backend package. The finance image is
-built from the task-local ``chatbot_api`` context, so it needs a small ASGI
-wrapper that depends only on the finance adapter.
+Unlike RecAI's optional in-process bridge, this image only needs a lean ASGI
+wrapper over the finance adapter (no Playground Python package deps).
 """
 
 from __future__ import annotations
