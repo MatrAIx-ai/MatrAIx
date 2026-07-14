@@ -78,7 +78,6 @@ LIFE_STAGE_BY_AGE: dict[str, list[str]] = {
     "65-74": ["Retirement", "Empty nester"],
     "75-84": ["Retirement", "Empty nester"],
     "85+": ["Retirement", "Empty nester"],
-    "65+": ["Retirement", "Empty nester"],
 }
 
 SENIORITY_BY_LIFE_STAGE: dict[str, list[str]] = {
@@ -154,15 +153,6 @@ EDUCATION_BY_AGE: dict[str, list[str]] = {
         "Doctorate",
     ],
     "85+": [
-        "Secondary",
-        "Vocational / cert",
-        "Some college",
-        "Associate's",
-        "Bachelor's",
-        "Master's",
-        "Doctorate",
-    ],
-    "65+": [
         "Secondary",
         "Vocational / cert",
         "Some college",
@@ -280,7 +270,7 @@ def allowed_seniorities(*, life_stage: str, age_bracket: str) -> list[str]:
     options = list(SENIORITY_BY_LIFE_STAGE.get(life_stage, []))
     if age_bracket in ("Under 5", "5-12", "13-17", "18-24"):
         return [s for s in options if s in ("Student / intern", "Entry", "Mid")]
-    if age_bracket in ("65-74", "75-84", "85+", "65+"):
+    if age_bracket in ("65-74", "75-84", "85+"):
         return [
             s
             for s in options
