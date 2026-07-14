@@ -1,8 +1,8 @@
 # Chat API protocol
 
 The chatbot is available through a **REST API** on the compose sidecar
-`chat-sim` (reachable from this container as `http://chat-sim:8000`). Use
-`curl` or a short script to have a multi-turn conversation.
+`insurance-claim-filing-chatbot` (reachable from this container as `http://insurance-claim-filing-chatbot:8000`).
+Use `curl` or a short script to have a multi-turn conversation.
 
 ## Endpoints
 

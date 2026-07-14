@@ -11,8 +11,9 @@ scaling effort.
 4. **Ship** -- the generated task is fully compatible with the task-spec baseline
 
 No per-task server.py, Dockerfile, or Docker Compose changes needed.
-All system-prompt-simulated chatbots use the same shared sidecar
-(`shared-chat-sim/`).
+All system-prompt-simulated chatbots use the shared persona runtime
+(`shared-chat-persona/`) and a per-task sidecar compose profile
+(`local_compose`).
 
 ## Quickstart
 
@@ -75,16 +76,15 @@ application/tasks/<name>/
 
 ## Architecture
 
-All generated tasks share one sidecar environment:
+All generated tasks share one persona runtime environment and reference a
+per-task sidecar compose profile:
 
 ```
-environment/task-environments/application/shared-chat-sim/
-├── Dockerfile              # ubuntu:24.04 + Claude Code
-├── docker-compose.yaml     # main + chat-sim service
-├── install-claude-code.sh
-└── chat-sim/
-    ├── Dockerfile           # python:3.12-slim + Flask
-    └── server.py            # Generic rule-based chatbot server
+environment/task-environments/application/shared-chat-persona/
+└── Dockerfile               # ubuntu:24.04 + Claude Code
+
+environment/task-environments/application/chatbot-api-sidecar_<name>/
+└── ...                       # Per-task sidecar (referenced via local_compose)
 ```
 
 The sidecar is **rule-based and domain-agnostic**. It reads `knowledge_base.json`
