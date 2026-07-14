@@ -55,6 +55,13 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         os_app_platform="ios",
         environment_label="use.computer iOS · persona-computer-1",
     ),
+    "os-app-ios_news-subscription-decision": PlaygroundTaskEntry(
+        application_type="os-app",
+        os_app_backend="ios",
+        os_app_platform="ios",
+        environment_label="use.computer iOS · persona-computer-1",
+        output_artifact="decision.json",
+    ),
     # Web
     "example-web-playwright_quote-choice": PlaygroundTaskEntry(
         application_type="web",

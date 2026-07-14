@@ -981,12 +981,12 @@ This log records the curated migration from MatrAIx into PersonaBench.
 - Source repository: `MatrAIx-ai/MatrAIx`
 - Source PRs:
   - `#75`, `v1 evaluation flow`
-  - `#76`, `Add Harbor-backed recommender persona eval`
+  - `#76`, `Add Harbor-backed recommender persona eval` (historical upstream PR title; product name is Playground)
 - PersonaBench snapshot PRs:
   - `#74`
   - `#73`
 - Purpose: preserve the pure Python artifact/result contract for recommender
-  persona evaluation without importing the full historical backend, frontend,
+  Playground evaluation without importing the full historical backend, frontend,
   generated data, or raw app snapshot.
 - Imported into:
   - `application/playground/backend/service/recommender_eval.py`

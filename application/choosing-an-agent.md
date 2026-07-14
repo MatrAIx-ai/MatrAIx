@@ -55,7 +55,7 @@ set.
 | `persona-openhands-sdk` | web | Python Playwright in the terminal (DOM selectors); fast, CI-friendly | [quote-choice-playwright](tasks/example-web-playwright_quote-choice) |
 | `persona-browser-use` | web | browser-use agent loop over Chromium | [laptop-choice-browser-use](tasks/example-web-browser-use_laptop-choice) |
 | `persona-cocoa` | web | browser + shell + files in one container | [plan-choice-cocoa](tasks/example-web-cocoa_plan-choice) |
-| `persona-computer-1` | web<br>computer-use | Screenshot CUA; auto-routes to use.computer (macOS/iOS) or Docker Linux | **computer-use:** [macos-calendar-reminder-handoff](tasks/example-computer-use-macos_calendar-reminder-handoff)<br>[ios-photo-access-review](tasks/example-computer-use-ios_photo-access-review)<br>[linux-note-to-csv](tasks/example-computer-use-linux_note-to-csv)<br>**web:** [bookshop-choice-cua](tasks/example-web-cua_bookshop-choice) |
+| `persona-computer-1` | web<br>computer-use | Screenshot CUA; auto-routes to use.computer (macOS/iOS) or Docker Linux | **computer-use:** [macos-calendar-reminder-handoff](tasks/example-computer-use-macos_calendar-reminder-handoff)<br>[ios-photo-access-review](tasks/example-computer-use-ios_photo-access-review)<br>[ios-news-subscription-decision](tasks/os-app-ios_news-subscription-decision)<br>[linux-note-to-csv](tasks/example-computer-use-linux_note-to-csv)<br>**web:** [bookshop-choice-cua](tasks/example-web-cua_bookshop-choice) |
 
 `generate_application_job.py --execution-mode auto` picks `persona-json-survey` or
 `persona-user-sim` from the task type. Use `--agent-name` to override, or
