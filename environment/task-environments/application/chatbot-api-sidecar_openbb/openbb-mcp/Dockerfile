@@ -5,7 +5,7 @@ ENV PYTHONPATH=/app
 
 WORKDIR /app
 
-COPY openbb_mcp_server.py .
+COPY run_openbb_mcp.py .
 
 RUN python -m pip install --no-cache-dir --upgrade pip wheel && \
     python -m pip install --no-cache-dir \
@@ -30,4 +30,4 @@ RUN python -m pip install --no-cache-dir --upgrade pip wheel && \
 
 EXPOSE 8001
 
-CMD ["python", "openbb_mcp_server.py", "--host", "0.0.0.0", "--port", "8001", "--tool-discovery"]
+CMD ["python", "run_openbb_mcp.py", "--host", "0.0.0.0", "--port", "8001", "--tool-discovery"]
