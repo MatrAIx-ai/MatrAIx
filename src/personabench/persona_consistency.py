@@ -175,11 +175,7 @@ CONSTRAINED_DIMENSIONS = frozenset(
 
 
 def _canonical_age_bracket(age_bracket: str) -> str:
-    age = age_bracket.replace("–", "-")
-    # Legacy alias: #198 split seniors into 65-74 / 75-84 / 85+.
-    if age == "65+":
-        return "65-74"
-    return age
+    return age_bracket.replace("–", "-")
 
 
 def _repo_root() -> Path:
