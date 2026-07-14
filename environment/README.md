@@ -81,7 +81,7 @@ environment/
   agents/personabench/      Persona-conditioned agent implementations
   runtime/harbor/           Harbor CLI, trial loop, models, verifier, viewer backend
   task-environments/
-    application/            Shared Docker / sidecar stacks (shared-chat-*, shared-web-*, …)
+    application/            Persona shared-* + SUT *-sidecar_* (shared-chat-persona, chatbot-api-sidecar_*, chatbot-mcp-sidecar_*, web-sidecar_*, shared-web-*, shared-os-app-*, …)
 
 configs/jobs/
   example-job-recipe/       Smoke + small local demos

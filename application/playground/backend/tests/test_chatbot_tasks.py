@@ -9,9 +9,9 @@ def test_list_chatbot_eval_tasks_discovers_registered_chatbot_tasks():
     tasks = list_chatbot_eval_tasks()
     ids = {task.id for task in tasks}
 
-    assert "recommender-agent-chat-api" in ids
-    assert "finance-openbb-chatbot" in ids
-    assert "medical-assistant-chatbot" in ids
+    assert "chat-recai" in ids
+    assert "chat-openbb" in ids
+    assert "chat-multi-agent-medical-assistant" in ids
     assert "chat-mcp-support-chatbot" in ids
     assert len(tasks) == 4
 
@@ -21,12 +21,14 @@ def test_list_chatbot_eval_tasks_discovers_registered_chatbot_tasks():
 
 
 def test_get_chatbot_eval_task_reads_runtime_defaults_from_chatbot_yaml():
-    task = get_chatbot_eval_task("finance-openbb-chatbot")
+    task = get_chatbot_eval_task("chat-openbb")
 
-    assert task.transport == "external_http"
+    assert task.transport == "sidecar_http"
     assert task.application_id == "finance_openbb"
     assert task.application_context == "financial_research"
     assert task.default_domain == "financial_research"
+    assert task.can_start is True
+    assert task.health_url == "http://127.0.0.1:8901"
 
 
 def test_get_chatbot_eval_task_preserves_mcp_transport():
@@ -40,9 +42,19 @@ def test_get_chatbot_eval_task_preserves_mcp_transport():
 
 
 def test_get_chatbot_eval_task_reads_recai_sidecar_defaults():
-    task = get_chatbot_eval_task("recommender-agent-chat-api")
+    task = get_chatbot_eval_task("chat-recai")
 
     assert task.transport == "sidecar_http"
     assert task.application_id == "recai"
     assert task.application_context == "movie"
     assert task.default_domain == "movie"
+
+
+def test_get_chatbot_eval_task_reads_medical_sidecar_defaults():
+    task = get_chatbot_eval_task("chat-multi-agent-medical-assistant")
+
+    assert task.transport == "sidecar_http"
+    assert task.application_id == "medical_assistant"
+    assert task.application_context == "medical_consultation"
+    assert task.can_start is True
+    assert task.health_url == "http://127.0.0.1:8902"

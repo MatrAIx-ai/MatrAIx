@@ -128,7 +128,7 @@ def default_chat_api_url(application_id: str) -> str:
     if application_id == "finance_openbb":
         return "http://finance-chatbot:8000"
     if application_id == "medical_assistant":
-        return "http://medical-chatbot:8000"
+        return "http://multi-agent-medical-assistant-api:8000"
     return "http://chatbot-api:8000"
 
 
@@ -270,6 +270,52 @@ class HarborSidecarChatSession:
         if session_id:
             self._session_id = str(session_id)
         view = _normalize_turn_view(response, message, self.runtime)
+        self.turns.append(view)
+        return view
+
+    async def run_capability_sync(
+        self, tool_name: str, arguments: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        from playground.chatbot_capabilities import capability_by_tool
+
+        capability = capability_by_tool(self.runtime.capabilities, tool_name)
+        if capability is None or capability.http is None or not capability.http.path:
+            fallback = str(
+                arguments.get("text")
+                or arguments.get("message")
+                or "[Used tool `{}`]".format(tool_name)
+            )
+            return await self.run_turn_sync(fallback)
+
+        context_value = config_context(self.config)
+        body: Dict[str, Any] = dict(self.runtime.protocol.static_body)
+        if self._session_id:
+            body["sessionId"] = self._session_id
+        if tool_name == "upload_image":
+            body["imagePath"] = str(arguments.get("image_path") or "")
+            body["text"] = str(arguments.get("text") or "")
+            user_message = str(arguments.get("text") or "").strip() or "[Uploaded image]"
+        elif tool_name == "validate_output":
+            body["validationResult"] = str(arguments.get("validation_result") or "yes")
+            body["comments"] = str(arguments.get("comments") or "")
+            user_message = "[Validation: {}]".format(body["validationResult"])
+        else:
+            body.update({key: value for key, value in arguments.items() if value is not None})
+            user_message = "[Used tool `{}`]".format(tool_name)
+        if self.runtime.protocol.context_field:
+            body[self.runtime.protocol.context_field] = context_value
+        body.setdefault("applicationId", self.config.application_id)
+        body.setdefault("applicationContext", context_value)
+
+        response = await self._request_json(
+            capability.http.method,
+            capability.http.path,
+            body=body,
+        )
+        session_id = response.get(self.runtime.protocol.response_session_id_field)
+        if session_id:
+            self._session_id = str(session_id)
+        view = _normalize_turn_view(response, user_message, self.runtime)
         self.turns.append(view)
         return view
 
@@ -421,6 +467,9 @@ async def _write_output_artifacts(
         "applicationId": result.config.application_id,
         "applicationContext": result.config.application_context
         or result.config.domain,
+        "domain": str(transcript_payload.get("domain") or "").strip()
+        or result.config.domain
+        or result.config.application_context,
     }
     transcript_payload = normalize_transcript_payload(
         transcript_payload,

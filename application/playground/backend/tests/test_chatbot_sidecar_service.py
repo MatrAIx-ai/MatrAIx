@@ -30,13 +30,15 @@ def test_list_sidecar_statuses(monkeypatch: pytest.MonkeyPatch) -> None:
         "recai",
         "finance_openbb",
         "medical_assistant",
+        "acme_support_api",
         "acme_support_mcp",
     }
     assert all(item["ok"] for item in statuses)
     by_id = {item["applicationId"]: item for item in statuses}
     assert by_id["recai"]["canStart"] is True
-    assert by_id["finance_openbb"]["canStart"] is False
-    assert by_id["medical_assistant"]["canStart"] is False
+    assert by_id["finance_openbb"]["canStart"] is True
+    assert by_id["medical_assistant"]["canStart"] is True
+    assert by_id["acme_support_api"]["canStart"] is True
     assert by_id["acme_support_mcp"]["canStart"] is True
 
 
@@ -84,9 +86,25 @@ def test_start_sidecar_runs_compose_for_sidecar_only(
     assert "main" not in captured["command"]
 
 
-def test_start_sidecar_rejects_external_only_task() -> None:
+def test_start_sidecar_rejects_external_only_task(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(
+        svc,
+        "_SIDECAR_SPECS",
+        {
+            "external_only": svc.SidecarSpec(
+                application_id="external_only",
+                compose_dir=None,
+                service_name=None,
+                build_context=None,
+                host_port=8999,
+                primary_env="CHATBOT_UPSTREAM_EXTERNAL",
+            )
+        },
+    )
     with pytest.raises(RuntimeError, match="does not provide a local startable sidecar"):
-        svc.start_sidecar("finance_openbb")
+        svc.start_sidecar("external_only")
 
 
 def test_sidecar_status_uses_tcp_probe_for_mcp(monkeypatch: pytest.MonkeyPatch) -> None:

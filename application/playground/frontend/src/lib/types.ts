@@ -366,6 +366,13 @@ export interface ChatbotEvalTask {
   canStart?: boolean;
   healthUrl?: string;
   statusDetail?: string;
+  capabilities?: Array<{
+    id: string;
+    label: string;
+    description?: string;
+    kind?: string;
+    tool?: string;
+  }>;
   profileMarkdown?: string;
   instructionMarkdown?: string;
   contextMarkdown?: string;
@@ -516,7 +523,7 @@ export interface HarborJobSummary {
   applicationType?: string | null;
   /** Display title derived from ``task.toml`` ``[task].name``. */
   taskTitle?: string | null;
-  /** Full Harbor task name, e.g. ``application/recommender-agent-chat-api``. */
+  /** Full Harbor task name, e.g. ``application/chat-recai``. */
   taskName?: string | null;
   domain?: string | null;
   difficulty?: string | null;
@@ -936,7 +943,7 @@ export interface PersonaCohortDetail extends PersonaCohortSummary {
 
 /** Default Harbor task paths for cockpit launch (one trial per persona). */
 export const HARBOR_TASK_PATHS = {
-  chatbot: "application/tasks/recommender-agent_chat_api",
+  chatbot: "application/tasks/chat_recai",
   survey: "application/tasks/example-survey_product-feedback",
   web: "application/tasks/example-web-playwright_quote-choice",
   cuaLinux: "application/tasks/example-computer-use-linux_note-to-csv",
@@ -945,6 +952,6 @@ export const HARBOR_TASK_PATHS = {
 
 export const HARBOR_CHAT_TASKS: Record<string, string> = {
   recai: HARBOR_TASK_PATHS.chatbot,
-  finance_openbb: "application/tasks/finance-openbb_chatbot",
-  medical_assistant: "application/tasks/medical-assistant_chatbot",
+  finance_openbb: "application/tasks/chat_openbb",
+  medical_assistant: "application/tasks/chat_multi-agent-medical-assistant",
 };

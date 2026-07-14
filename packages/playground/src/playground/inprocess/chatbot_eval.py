@@ -24,8 +24,8 @@ from playground.types import PlaygroundConfig
 
 
 _SIDECAR_TASK_PATHS = {
-    "finance_openbb": "application/tasks/finance-openbb_chatbot",
-    "medical_assistant": "application/tasks/medical-assistant_chatbot",
+    "finance_openbb": "application/tasks/chat_openbb",
+    "medical_assistant": "application/tasks/chat_multi-agent-medical-assistant",
 }
 
 

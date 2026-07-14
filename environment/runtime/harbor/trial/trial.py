@@ -695,11 +695,34 @@ class Trial(ABC):
             **extra_kwargs,
         )
 
+    def _agent_environment_dir(self) -> Path:
+        """Persona env, optionally merged with a local endpoint compose package."""
+        environment_dir = self.task.paths.environment_dir
+        local_compose = self.task.config.environment.local_compose
+        if not local_compose:
+            return environment_dir
+        from harbor.environments.compose_materialize import (
+            materialize_persona_with_local_compose,
+            resolve_task_environments_path,
+        )
+
+        repo_root = self.task.paths._find_repository_root()
+        if repo_root is None:
+            raise FileNotFoundError(
+                "cannot resolve repository root for [environment].local_compose"
+            )
+        dest = self.paths.trial_dir / "composed_environment"
+        return materialize_persona_with_local_compose(
+            persona_dir=environment_dir,
+            local_compose_dir=resolve_task_environments_path(repo_root, local_compose),
+            dest_dir=dest,
+        )
+
     def _init_agent_environment(self) -> None:
         self._prepare_artifact_mount_dirs()
         self.agent_environment = EnvironmentFactory.create_environment_from_config(
             config=self.config.environment,
-            environment_dir=self.task.paths.environment_dir,
+            environment_dir=self._agent_environment_dir(),
             environment_name=self.task.short_name,
             session_id=self.config.trial_name,
             trial_paths=self.paths,

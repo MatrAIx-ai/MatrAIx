@@ -163,8 +163,8 @@ export interface PersonaSamplingRailProps {
   onSelectedPersonaIdsChange: (ids: string[]) => void;
   sampleSize: number;
   onSampleSizeChange: (size: number) => void;
-  /** Personas per stratify combination (stratified mode). */
-  sampleSizePerValueGroup: number;
+  /** Personas per stratify combination; null = cap at sampleSize (no explicit per-cell). */
+  sampleSizePerValueGroup: number | null;
   onSampleSizePerValueGroupChange: (size: number) => void;
   seed: number;
   filters: PersonaDimensionFilters;
@@ -310,14 +310,20 @@ export function PersonaSamplingRail({
     setGenerateCommand(null);
     try {
       const dimensionFilters = filtersForSampleApi(filters);
-      const perCell = clampPerCell(sampleSizePerValueGroup);
+      // Only send per-cell when explicitly set. Omitting it makes the backend
+      // take ~1/cell then truncate to sampleSize (task strategies often set
+      // sampleSize alone without sampleSizePerValueGroup).
+      const perCell =
+        mode === "stratified" && sampleSizePerValueGroup != null
+          ? clampPerCell(sampleSizePerValueGroup)
+          : undefined;
       const result = await api.samplePersonaPool({
         sampleSize,
         seed,
         sources: filters.sources.length ? filters.sources : undefined,
         dimensionFilters,
         stratifyFields: mode === "stratified" ? stratifyFields : undefined,
-        sampleSizePerValueGroup: mode === "stratified" ? perCell : undefined,
+        sampleSizePerValueGroup: perCell,
         taskPath: taskPath?.trim() || undefined,
         autoEnsureStrategyPool: true,
       });
@@ -447,7 +453,7 @@ export function PersonaSamplingRail({
             <div className="flex items-end gap-2">
               {customSamplingUnlocked ? (
                 <>
-                  {mode === "stratified" ? (
+                  {mode === "stratified" && sampleSizePerValueGroup != null ? (
                     <label className="flex w-[4.25rem] shrink-0 flex-col gap-0.5">
                       <span className="text-[12px] text-text-dim">Per cell</span>
                       <input
@@ -470,7 +476,9 @@ export function PersonaSamplingRail({
                           setPerCellDraft(null);
                           onSampleSizePerValueGroupChange(
                             clampPerCell(
-                              raw === "" || raw == null ? sampleSizePerValueGroup : Number(raw),
+                              raw === "" || raw == null
+                                ? sampleSizePerValueGroup
+                                : Number(raw),
                             ),
                           );
                         }}

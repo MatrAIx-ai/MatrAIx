@@ -288,6 +288,120 @@ def test_sample_pool_per_value_group_not_truncated_by_sample_size(tmp_path, monk
     assert set(result["personaIds"]) == {"0001", "0002", "0003", "0004"}
 
 
+def test_sample_pool_stratified_without_per_cell_caps_at_sample_size(tmp_path, monkeypatch):
+    """sampleSize-only stratified: spread ceil(N/cells) then clip to sampleSize."""
+    repo = tmp_path
+    pool = repo / "persona" / "datasets" / "bench-dev-sample"
+    pool.mkdir(parents=True)
+    # 3 strata × 3 people so ceil(8/3)=3 per cell fits, then clip to 8.
+    personas = [
+        ("0001", "A", "18-24"),
+        ("0002", "A", "18-24"),
+        ("0003", "A", "18-24"),
+        ("0004", "B", "25-34"),
+        ("0005", "B", "25-34"),
+        ("0006", "B", "25-34"),
+        ("0007", "C", "35-44"),
+        ("0008", "C", "35-44"),
+        ("0009", "C", "35-44"),
+    ]
+    manifest_rows = []
+    for pid, source, age in personas:
+        (pool / f"persona_{pid}.yaml").write_text(
+            f"persona_id: '{pid}'\nversion: '1.0'\nsource: {source}\n"
+            f"dimensions:\n  age_bracket: {age}\n",
+            encoding="utf-8",
+        )
+        manifest_rows.append(
+            {
+                "persona_id": pid,
+                "path": f"persona/datasets/bench-dev-sample/persona_{pid}.yaml",
+                "source": source,
+                "dimensions": {"age_bracket": age},
+            }
+        )
+    (pool / "manifest.json").write_text(
+        json.dumps(
+            {
+                "count": 9,
+                "smoke_persona_id": "0001",
+                "schema_version": "1.0",
+                "source_counts": {"A": 3, "B": 3, "C": 3},
+                "dimension_categories": "persona/schema/dimension_categories.json",
+                "personas": manifest_rows,
+            }
+        ),
+        encoding="utf-8",
+    )
+    schema = repo / "persona" / "schema"
+    schema.mkdir(parents=True)
+    (schema / "dimension_categories.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "categories": [
+                    {"id": "demo", "label": "Demo", "dimensionIds": ["age_bracket"]}
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    (schema / "dimensions.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "dimensions": [
+                    {
+                        "id": "age_bracket",
+                        "label": "Age",
+                        "values": ["18-24", "25-34", "35-44"],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(
+        "playground.harbor.playground._repo_root",
+        lambda: repo,
+    )
+    service = PersonaPoolService(repo_root=repo)
+
+    result = service.sample_pool(
+        sample_size=8,
+        seed=7,
+        dimension_filters={"age_bracket": ["18-24", "25-34", "35-44"]},
+        stratify_fields=["age_bracket"],
+        sample_size_per_value_group=None,
+        auto_ensure_strategy_pool=False,
+    )
+    assert result["matchedCount"] == 9
+    assert result["sampleSize"] == 8
+    assert len(result["personaIds"]) == 8
+
+
+def test_sample_pool_rejects_sample_size_below_cell_count(tmp_path, monkeypatch):
+    repo = tmp_path
+    _write_pool(repo)
+    monkeypatch.setattr(
+        "playground.harbor.playground._repo_root",
+        lambda: repo,
+    )
+    service = PersonaPoolService(repo_root=repo)
+    try:
+        service.sample_pool(
+            sample_size=1,
+            seed=7,
+            dimension_filters={"economic_motivation": ["Price-sensitive", "Indifferent"]},
+            stratify_fields=["economic_motivation"],
+            sample_size_per_value_group=None,
+            auto_ensure_strategy_pool=False,
+        )
+        raise AssertionError("expected sampleSize below cell count to fail")
+    except ValueError as exc:
+        assert "below the stratified cell count=2" in str(exc)
+
+
 def test_sample_pool_auto_ensures_strategy_coverage(tmp_path, monkeypatch):
     """When filters undershoot the fixture, sample_pool synthesizes a local pool."""
     repo = tmp_path

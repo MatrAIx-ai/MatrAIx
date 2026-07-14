@@ -20,6 +20,13 @@ _START_OBSERVATION = (
 def _format_assistant_turn(action: TurnAction) -> str:
     """Record what the simulated user did without echoing tool-call syntax."""
     parts: List[str] = []
+    if action.capability_tool:
+        parts.append(
+            "[Used tool `{}` with {}]".format(
+                action.capability_tool,
+                action.capability_arguments or {},
+            )
+        )
     if action.message:
         parts.append(action.message)
     if action.end_reason:
@@ -52,6 +59,7 @@ class UserSimSession:
         )
         self._messages: List[Dict[str, Any]] = [{"role": "system", "content": system}]
         self.system_prompt = system
+
 
     @property
     def messages(self) -> List[Dict[str, Any]]:

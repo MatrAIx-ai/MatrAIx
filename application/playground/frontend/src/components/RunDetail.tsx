@@ -8,7 +8,7 @@
  * Option-aware, honestly scoped (spec §05): the debrief renders the stored
  * application artifact shape: chatbot, survey, web, or OS app.
  */
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, type ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import {
@@ -89,8 +89,6 @@ function runDebriefMetaLine(run: RunDetailView, appType: RunApplicationType): st
 }
 
 export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
-  const [pdfBusy, setPdfBusy] = useState(false);
-  const [pdfError, setPdfError] = useState<string | null>(null);
   const query = useQuery<PlaygroundResult>({
     queryKey: ["harbor-trial-debrief", harborTrial.jobName, harborTrial.trialName],
     queryFn: () => api.getHarborTrialDebrief(harborTrial.jobName, harborTrial.trialName),
@@ -102,18 +100,6 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
   const absoluteWhen = run
     ? run.surveyResult?.createdAt ?? run.webResult?.createdAt ?? run.createdAt ?? null
     : null;
-
-  const handleDownloadPdf = async () => {
-    setPdfBusy(true);
-    setPdfError(null);
-    try {
-      await api.downloadHarborTrialReportPdf(harborTrial.jobName, harborTrial.trialName);
-    } catch (err) {
-      setPdfError(err instanceof ApiError ? err.message : "Could not download PDF report.");
-    } finally {
-      setPdfBusy(false);
-    }
-  };
 
   return (
     <StudioPageFrame>
@@ -142,15 +128,6 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
             <StudioToolbarButton icon="arrow_back" onClick={onBack}>
               Back to job
             </StudioToolbarButton>
-            {run ? (
-              <StudioToolbarButton
-                icon="download"
-                onClick={() => void handleDownloadPdf()}
-                disabled={pdfBusy}
-              >
-                {pdfBusy ? "PDF…" : "PDF report"}
-              </StudioToolbarButton>
-            ) : null}
             <StudioToolbarButton
               icon="refresh"
               onClick={() => query.refetch()}
@@ -161,9 +138,6 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
           </>
         }
       />
-      {pdfError ? (
-        <p className="mb-4 text-[14px] text-danger">{pdfError}</p>
-      ) : null}
 
       {query.isLoading ? (
         <DetailLoading />

@@ -85,9 +85,9 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         submission_profile="book_interest",
     ),
     # Chatbot
-    "recommender-agent_chat_api": PlaygroundTaskEntry(application_type="chatbot"),
-    "finance-openbb_chatbot": PlaygroundTaskEntry(application_type="chatbot"),
-    "medical-assistant_chatbot": PlaygroundTaskEntry(application_type="chatbot"),
+    "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
+    "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),
+    "chat_multi-agent-medical-assistant": PlaygroundTaskEntry(application_type="chatbot"),
     "example-chat-mcp_support_chatbot": PlaygroundTaskEntry(
         application_type="chatbot"
     ),

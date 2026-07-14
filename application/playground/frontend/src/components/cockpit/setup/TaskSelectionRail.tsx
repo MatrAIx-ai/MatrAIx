@@ -13,7 +13,11 @@ import { CHIP_TEXT_CLASS, formatChipLabel } from "./taskCardLabels";
 import type { TaskCardTag } from "./taskCardLabels";
 import { taskCardIcon } from "./taskCardIcons";
 
-export type ChatTransport = "api" | "sidecar" | "mcp";
+export type ChatTransport =
+  | "api_sidecar"
+  | "api_external"
+  | "mcp_sidecar"
+  | "mcp_external";
 
 export interface TaskCardModel {
   id: string;
@@ -26,6 +30,8 @@ export interface TaskCardModel {
   canStart?: boolean;
   statusLabel?: string;
   statusDetail?: string;
+  /** Product capabilities from chatbot.yaml for UserSim / persona agent. */
+  capabilities?: Array<{ id: string; label: string; kind?: string }>;
   /** CUA runtime platform (linux / macos / ios / web). */
   platform?: string;
   /** Harbor metadata.type from task.toml — display tag only. */
@@ -57,9 +63,6 @@ export interface TaskSelectionRailProps {
   engine: string;
   onEngineChange: (engine: string) => void;
   engineOptions: ConfigOptionValue[];
-  domain: string;
-  onDomainChange: (domain: string) => void;
-  domainOptions: ConfigOptionValue[];
   maxTurns: number | null;
   onMaxTurnsChange: (turns: number | null) => void;
   onStartSidecar?: (taskId: string) => void;
@@ -75,9 +78,11 @@ export interface TaskSelectionRailProps {
 }
 
 function transportLabel(transport?: ChatTransport): string {
-  if (transport === "mcp") return "MCP";
-  if (transport === "api") return "API";
-  return "Sidecar";
+  if (transport === "api_sidecar") return "API (sidecar)";
+  if (transport === "api_external") return "API (endpoint)";
+  if (transport === "mcp_sidecar") return "MCP (sidecar)";
+  if (transport === "mcp_external") return "MCP (endpoint)";
+  return "—";
 }
 
 export function TaskSelectionRail({
@@ -91,9 +96,6 @@ export function TaskSelectionRail({
   engine,
   onEngineChange,
   engineOptions,
-  domain,
-  onDomainChange,
-  domainOptions,
   maxTurns,
   onMaxTurnsChange,
   onStartSidecar,
@@ -314,20 +316,26 @@ export function TaskSelectionRail({
                   {showServiceToggle ? (
                     <CockpitToggle
                       checked={serviceUp}
+                      busy={starting}
+                      busyLabel="Starting…"
                       onChange={(on) => {
                         if (on && !serviceUp && canStart) onStartSidecar?.(card.id);
                       }}
                       disabled={disabled || starting || serviceUp || !canStart}
                       label="Service up"
                       description={
-                        starting
-                          ? "Starting sidecar via docker compose…"
-                          : card.statusDetail ??
-                            (serviceUp
-                              ? "Chat API is reachable."
-                              : canStart
-                                ? "Flip on to start the local chat API sidecar."
-                                : "Configure the upstream endpoint for this task.")
+                        serviceUp
+                          ? card.statusDetail ??
+                            (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
+                              ? "MCP server is reachable."
+                              : "Chat API is reachable.")
+                          : canStart
+                            ? card.transport === "mcp_sidecar" || card.transport === "mcp_external"
+                              ? "Start local MCP sidecar."
+                              : "Start local chat API sidecar."
+                            : card.transport === "mcp_sidecar" || card.transport === "mcp_external"
+                              ? "Configure the MCP endpoint for this task."
+                              : "Configure the upstream API for this task."
                       }
                     />
                   ) : (
@@ -337,7 +345,7 @@ export function TaskSelectionRail({
                       </p>
                       <p className="mt-1 text-[13px] leading-relaxed text-text-variant">
                         {card.statusDetail ??
-                          (card.transport === "mcp"
+                          (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
                             ? "MCP-backed task; no local HTTP health toggle is available."
                             : "No HTTP health check is configured for this task.")}
                       </p>
@@ -345,6 +353,24 @@ export function TaskSelectionRail({
                   )}
                   {sidecarActionError && settingsOpen === card.id && (
                     <p className="text-[12px] text-danger">{sidecarActionError}</p>
+                  )}
+                  {(card.capabilities?.length ?? 0) > 0 && (
+                    <div>
+                      <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-text-dim">
+                        Product capabilities
+                      </p>
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {card.capabilities!.map((cap) => (
+                          <span
+                            key={cap.id}
+                            className="rounded border border-outline/40 bg-surface/40 px-2 py-0.5 text-[12px] text-text-variant"
+                            title={cap.kind === "exposure" ? "Visible in replies" : "UserSim tool"}
+                          >
+                            {cap.label}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
                   <label className="cockpit-field-label flex flex-col gap-1.5">
                     Application model
@@ -361,23 +387,6 @@ export function TaskSelectionRail({
                       ))}
                     </select>
                   </label>
-                  {domainOptions.length > 0 && (
-                    <label className="cockpit-field-label flex flex-col gap-1.5">
-                      Domain
-                      <select
-                        value={domain}
-                        disabled={disabled}
-                        onChange={(e) => onDomainChange(e.target.value)}
-                        className="h-8 rounded-md border border-outline/50 bg-surface/60 px-2 text-[14px] font-medium text-text-main"
-                      >
-                        {domainOptions.map((opt) => (
-                          <option key={opt.value} value={opt.value}>
-                            {opt.label}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  )}
                   <CockpitToggle
                     checked={maxTurns !== null}
                     onChange={(enabled) => onMaxTurnsChange(enabled ? maxTurns ?? 8 : null)}

@@ -15,8 +15,12 @@ export interface CockpitPersonaSetupRecord {
   groupFilters: PersonaDimensionFilters;
   stratifyFields: string[];
   sampleSize: number;
-  /** Personas per stratify combination (stratified mode). Default 1. */
-  sampleSizePerValueGroup: number;
+  /**
+   * Personas per stratify combination (stratified mode).
+   * `null` = not set — sample with 1/cell then cap at `sampleSize`.
+   * Only an explicit number skips the sampleSize ceiling (per-cell is primary).
+   */
+  sampleSizePerValueGroup: number | null;
   parallelTrials: number;
   personaModel: string;
   /** Pool used for the current cohort (may be an auto-generated ``_generated`` path). */
@@ -89,9 +93,11 @@ function normalizeRecord(
       : ["age_bracket", "region"],
     sampleSize: typeof record.sampleSize === "number" && record.sampleSize > 0 ? record.sampleSize : 4,
     sampleSizePerValueGroup:
-      typeof record.sampleSizePerValueGroup === "number" && record.sampleSizePerValueGroup >= 1
-        ? Math.round(record.sampleSizePerValueGroup)
-        : 1,
+      record.sampleSizePerValueGroup === null
+        ? null
+        : typeof record.sampleSizePerValueGroup === "number" && record.sampleSizePerValueGroup >= 1
+          ? Math.round(record.sampleSizePerValueGroup)
+          : 1,
     parallelTrials:
       typeof record.parallelTrials === "number" && record.parallelTrials > 0 ? record.parallelTrials : 2,
     personaModel:
@@ -167,20 +173,23 @@ export function setupFromPersonaStrategy(
     );
   }
 
-  if (typeof strategy.sampleSize === "number" && strategy.sampleSize > 0) {
-    next.sampleSize = Math.min(500, Math.max(2, Math.round(strategy.sampleSize)));
-  }
-
-  if (
+  // Stratified quotas are mutually exclusive in persona_strategy.json.
+  const hasPerCell =
     typeof strategy.sampleSizePerValueGroup === "number" &&
-    strategy.sampleSizePerValueGroup >= 1
-  ) {
+    strategy.sampleSizePerValueGroup >= 1;
+  const hasSampleSize =
+    typeof strategy.sampleSize === "number" && strategy.sampleSize > 0;
+
+  if (hasPerCell) {
     next.sampleSizePerValueGroup = Math.min(
       50,
-      Math.max(1, Math.round(strategy.sampleSizePerValueGroup)),
+      Math.max(1, Math.round(strategy.sampleSizePerValueGroup as number)),
     );
-  } else if (mode === "stratified") {
-    next.sampleSizePerValueGroup = next.sampleSizePerValueGroup >= 1 ? next.sampleSizePerValueGroup : 1;
+  } else if (hasSampleSize) {
+    next.sampleSize = Math.min(500, Math.max(2, Math.round(strategy.sampleSize as number)));
+    next.sampleSizePerValueGroup = null;
+  } else {
+    next.sampleSizePerValueGroup = null;
   }
 
   if (typeof strategy.pool === "string" && strategy.pool.trim()) {

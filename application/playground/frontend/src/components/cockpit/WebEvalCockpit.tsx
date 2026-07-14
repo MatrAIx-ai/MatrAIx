@@ -583,9 +583,6 @@ export function WebEvalCockpit({
           engine=""
           onEngineChange={() => undefined}
           engineOptions={[]}
-          domain=""
-          onDomainChange={() => undefined}
-          domainOptions={[]}
           maxTurns={8}
           onMaxTurnsChange={() => undefined}
           resolveWebPersonaAgent={resolveWebAgent}

@@ -84,6 +84,15 @@ export default {
         "container-max": "1440px",
       },
       maxWidth: { thread: "680px" },
+      keyframes: {
+        "cockpit-indeterminate": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(350%)" },
+        },
+      },
+      animation: {
+        "cockpit-indeterminate": "cockpit-indeterminate 1.1s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

@@ -57,7 +57,7 @@ Shared Docker / sidecar stacks: `environment/task-environments/application/`.
 | Type | Reference task | Agent (typical) | Docs |
 |------|------------------|-----------------|------|
 | Survey | `example-survey_product-feedback` | `persona-claude-code` | [task-spec/survey/](task-spec/survey/) |
-| Chatbot | `recommender-agent_chat_api` | `persona-claude-code` | [task-spec/chatbot/](task-spec/chatbot/) |
+| Chatbot | `chat_recai` | `persona-claude-code` | [task-spec/chatbot/](task-spec/chatbot/) |
 | Web | `example-web-playwright_quote-choice` | `persona-openhands-sdk` | [web-interaction.md](web-interaction.md) |
 | OS / computer-use | `example-computer-use-ios_photo-access-review` | `persona-computer-1` | [task-spec/os-app/](task-spec/os-app/) |
 

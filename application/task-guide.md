@@ -28,9 +28,13 @@ application/tasks/example-survey_product-feedback/
 `environment/task-environments/application/` — not inside the task folder.
 Harbor resolves `[environment].definition` in `task.toml` to a folder there.
 
-Survey tasks reuse `shared-survey-form`; web tasks reuse `shared-web-*`; chat
-tasks reuse `shared-chat-*`. Create a task-specific environment only when the
-sidecar topology or browser stack is genuinely new.
+Survey tasks reuse `shared-survey-form`; web agent stacks reuse `shared-web-*`
+with optional `web-sidecar_<sut>` via `[environment].local_compose` for
+task-hosted sites; chat tasks reuse `shared-chat-persona` with optional
+`chatbot-api-sidecar_*` / `chatbot-mcp-sidecar_*` the same way (or an external URL in `chatbot.yaml`).
+macOS/iOS os-app tasks reuse `shared-os-app-mac-ios` (use.computer stub, no
+Docker); Linux desktop computer-use keeps `shared-os-app-linux`. Create a
+task-specific environment only when the agent image itself is genuinely new.
 
 Do **not** create `application/tasks/<your-task>/environment/` for surveys.
 Harbor treats a task-local `environment/` as the full runtime, which shadows the
@@ -145,7 +149,7 @@ Playground auto top-ups `_generated/` when coverage fails; see
 | survey | `application/tasks/example-survey_product-feedback/` |
 | chat (REST) | `application/tasks/example-chat-api_support_chatbot/` |
 | chat (MCP) | `application/tasks/example-chat-mcp_support_chatbot/` |
-| chat (recommender) | `application/tasks/recommender-agent_chat_api/` |
+| chat (recommender / real SUT samples) | `application/tasks/chat_recai/` (also `chat_openbb`, `chat_multi-agent-medical-assistant`) |
 | web (Playwright) | `application/tasks/example-web-playwright_quote-choice/` |
 | web (browser-use) | `application/tasks/example-web-browser-use_laptop-choice/` |
 | web (Cocoa) | `application/tasks/example-web-cocoa_plan-choice/` |
@@ -162,7 +166,9 @@ Web stack details — [web-interaction.md](web-interaction.md).
 | survey | `application/tasks/example-survey_product-feedback/` | `persona-claude-code` |
 | chat (API) | `application/tasks/example-chat-api_support_chatbot/` | `persona-claude-code` |
 | chat (MCP) | `application/tasks/example-chat-mcp_support_chatbot/` | `persona-claude-code` |
-| chat (recommender) | `application/tasks/recommender-agent_chat_api/` | `persona-claude-code` |
+| chat (recommender) | `application/tasks/chat_recai/` | `persona-claude-code` |
+| chat (OpenBB / HTTP over MCP data) | `application/tasks/chat_openbb/` | `persona-claude-code` |
+| chat (medical) | `application/tasks/chat_multi-agent-medical-assistant/` | `persona-claude-code` |
 | web (Playwright) | `application/tasks/example-web-playwright_quote-choice/` | `persona-openhands-sdk` |
 | web (browser-use) | `application/tasks/example-web-browser-use_laptop-choice/` | `persona-browser-use` |
 | web (Cocoa) | `application/tasks/example-web-cocoa_plan-choice/` | `persona-cocoa` |
@@ -173,6 +179,10 @@ Web stack details — [web-interaction.md](web-interaction.md).
 
 Real application survey tasks (`survey_*`) follow the same layout as the reference
 example; only **`example-survey_product-feedback`** is the copy-from reference.
+Real application chatbot tasks (`chat_*`) follow the same layout as
+`example-chat-*`; name the folder after the SUT and pick
+`chatbot-api-sidecar_*` vs `chatbot-mcp-sidecar_*` from the persona-facing
+protocol (see [tasks/README.md](tasks/README.md)).
 
 ## Playground registration
 

@@ -57,7 +57,7 @@ export interface RecBotBubbleProps {
   onToggleFold: () => void;
 }
 
-/** The app reply: right-aligned, with exposure + tool-plan fold + meta chips. */
+/** The app reply: right-aligned, with exposure + optional tool-plan fold + meta chips. */
 export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: RecBotBubbleProps) {
   void domain;
   const exposure = turn.personaExposure ?? [];
@@ -68,6 +68,9 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
   const plan = turn.plan ?? [];
   const hasPlan = plan.length > 0;
   const planFailed = plan.some((s) => s.status === "error");
+  const scoredItems = items.filter((item) => item.score !== null && item.score !== undefined);
+  const nativeRaw = turn.nativeRaw?.trim() || null;
+  const showDecisionFold = hasPlan || scoredItems.length > 0 || Boolean(nativeRaw);
 
   return (
     <div className="flex w-full justify-end pl-10">
@@ -77,7 +80,9 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
           <div className="max-w-full rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-4">
             {!hiccup ? (
               <Markdown
-                className={`text-[15px] leading-relaxed text-text-main ${exposure.length > 0 ? "mb-4 border-b border-outline pb-4" : ""}`}
+                className={`text-[15px] leading-relaxed text-text-main ${
+                  exposure.length > 0 || showDecisionFold ? "mb-4 border-b border-outline pb-4" : ""
+                }`}
               >
                 {turn.assistantMessage ?? ""}
               </Markdown>
@@ -91,9 +96,17 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
 
             {exposure.length > 0 && <PersonaExposurePanel exposure={exposure} />}
 
-            <div className={exposure.length > 0 || !hiccup ? "mt-3" : ""}>
-              <ToolPlanFold plan={plan} items={items} nativeRaw={turn.nativeRaw ?? null} open={foldOpen} onToggle={onToggleFold} />
-            </div>
+            {showDecisionFold ? (
+              <div className={exposure.length > 0 || !hiccup ? "mt-3" : ""}>
+                <ToolPlanFold
+                  plan={plan}
+                  items={items}
+                  nativeRaw={nativeRaw}
+                  open={foldOpen}
+                  onToggle={onToggleFold}
+                />
+              </div>
+            ) : null}
           </div>
 
           {(hasPlan || latency) && (

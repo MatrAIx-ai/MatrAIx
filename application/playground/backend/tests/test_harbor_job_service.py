@@ -180,7 +180,7 @@ def test_resolve_trial_profile_auto_survey_and_chat(tmp_path):
     survey_dir = repo / "application" / "tasks" / "example-survey_product-feedback"
     survey_dir.mkdir(parents=True)
     (survey_dir / "task.toml").write_text("metadata:\n  type: survey\n", encoding="utf-8")
-    chat_dir = repo / "application" / "tasks" / "recommender-agent_chat_api"
+    chat_dir = repo / "application" / "tasks" / "chat_recai"
     chat_dir.mkdir(parents=True)
     (chat_dir / "task.toml").write_text("metadata:\n  type: chat\n", encoding="utf-8")
 
@@ -196,7 +196,7 @@ def test_resolve_trial_profile_auto_survey_and_chat(tmp_path):
     )
     assert (
         resolve_trial_profile(
-            "application/tasks/recommender-agent_chat_api",
+            "application/tasks/chat_recai",
             mode="auto",
             repo_root=repo,
         )
@@ -204,7 +204,7 @@ def test_resolve_trial_profile_auto_survey_and_chat(tmp_path):
     )
     assert (
         resolve_trial_profile(
-            "application/tasks/recommender-agent_chat_api",
+            "application/tasks/chat_recai",
             mode="force_docker",
             repo_root=repo,
         )
@@ -248,7 +248,7 @@ def test_resolve_agent_name_json_survey_profile(tmp_path):
 
 def test_resolve_agent_name_for_chat_task(tmp_path):
     repo = tmp_path
-    task_dir = repo / "application" / "tasks" / "recommender-agent_chat_api"
+    task_dir = repo / "application" / "tasks" / "chat_recai"
     task_dir.mkdir(parents=True)
     (task_dir / "task.toml").write_text(
         "metadata:\n  type: chat\n",
@@ -258,7 +258,7 @@ def test_resolve_agent_name_for_chat_task(tmp_path):
 
     assert (
         resolve_agent_name(
-            "application/tasks/recommender-agent_chat_api",
+            "application/tasks/chat_recai",
             repo_root=repo,
             mode="auto",
         )
@@ -266,7 +266,7 @@ def test_resolve_agent_name_for_chat_task(tmp_path):
     )
     assert (
         resolve_agent_name(
-            "application/tasks/recommender-agent_chat_api",
+            "application/tasks/chat_recai",
             repo_root=repo,
             mode="force_docker",
             trial_profile="docker_agent",
@@ -285,7 +285,7 @@ def test_launch_auto_chat_uses_local_distributed_executor(tmp_path, monkeypatch)
         "persona_id: '0042'\nversion: '1.0'\nsource: Nemotron\ndimensions: {}\n",
         encoding="utf-8",
     )
-    task_dir = repo / "application" / "tasks" / "recommender-agent_chat_api"
+    task_dir = repo / "application" / "tasks" / "chat_recai"
     task_dir.mkdir(parents=True)
     (task_dir / "task.toml").write_text("metadata:\n  type: chat\n", encoding="utf-8")
 
@@ -309,7 +309,7 @@ def test_launch_auto_chat_uses_local_distributed_executor(tmp_path, monkeypatch)
     service._executor = _FakeExecutor()
 
     service.launch(
-        task_path="application/tasks/recommender-agent_chat_api",
+        task_path="application/tasks/chat_recai",
         persona_ids=["0042"],
         persona_model="anthropic/claude-haiku-4-5",
         execution_mode="auto",
@@ -319,12 +319,12 @@ def test_launch_auto_chat_uses_local_distributed_executor(tmp_path, monkeypatch)
     assert service._executor.calls
     assert service._executor.calls[0][0].__name__ == "_run_local_distributed"
     fn, args, kwargs = service._executor.calls[0]
-    assert args[3] == "application/tasks/recommender-agent_chat_api"
+    assert args[3] == "application/tasks/chat_recai"
     fn(*args, **kwargs)
     assert calls
     env = calls[0]["env"]
     assert isinstance(env, dict)
-    assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/recommender-agent_chat_api"
+    assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_recai"
     pythonpath = env["PYTHONPATH"].split(":")
     assert str(repo) in pythonpath
     assert str(repo / "environment" / "runtime") in pythonpath

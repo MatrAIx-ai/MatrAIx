@@ -21,7 +21,7 @@ def test_collect_run_env_exports_survey() -> None:
 def test_collect_run_env_exports_chat() -> None:
     exports = collect_run_env_exports(
         trial_profile="user_sim_chat",
-        task_path="application/tasks/recommender-agent_chat_api",
+        task_path="application/tasks/chat_recai",
         repo_root=REPO_ROOT,
     )
-    assert exports == [("MATRIX_CHATBOT_TASK_PATH", "application/tasks/recommender-agent_chat_api")]
+    assert exports == [("MATRIX_CHATBOT_TASK_PATH", "application/tasks/chat_recai")]

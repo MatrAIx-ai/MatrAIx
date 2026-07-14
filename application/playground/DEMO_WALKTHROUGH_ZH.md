@@ -143,7 +143,7 @@ Home（开场 + 使命）
 ### 操作
 
 1. Application type → **Chatbot**
-2. 选 **RecAI / recommender-agent** task
+2. 选 **RecAI / chat_recai** task
 3. **先不跑** — 演示上下文：
    - 点 persona card 上的 **info 图标** → persona 属性
    - 点 task card 上的 **info 图标** → task instruction

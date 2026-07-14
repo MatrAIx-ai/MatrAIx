@@ -9,6 +9,11 @@ from typing import Any, Mapping
 
 import yaml
 
+from playground.chatbot_capabilities import (
+    ChatbotCapability,
+    default_capabilities,
+    parse_capabilities,
+)
 from playground.task_content_bundle import (
     content_dir_for_task_path,
     input_dir_for_task_path,
@@ -77,6 +82,7 @@ class ChatbotTaskConfig:
     runtime_defaults: ChatbotRuntimeDefaults = field(default_factory=ChatbotRuntimeDefaults)
     connection: ChatbotConnectionConfig = field(default_factory=ChatbotConnectionConfig)
     protocol: ChatbotProtocolConfig = field(default_factory=ChatbotProtocolConfig)
+    capabilities: tuple[ChatbotCapability, ...] = field(default_factory=default_capabilities)
     persona_exposure: tuple[ChatbotPersonaExposureField, ...] = field(default_factory=tuple)
     artifacts: dict[str, str] = field(default_factory=dict)
 
@@ -178,6 +184,7 @@ def _load_from_payload(payload: dict[str, Any]) -> ChatbotTaskConfig:
                 _as_string(response.get("recommendedItemsField")) or "recommendedItems"
             ),
         ),
+        capabilities=parse_capabilities(payload.get("capabilities")),
         persona_exposure=tuple(exposure_fields),
         artifacts=artifacts,
     )
