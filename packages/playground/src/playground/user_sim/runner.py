@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import inspect
 from itertools import count
 import json
 from pathlib import Path
