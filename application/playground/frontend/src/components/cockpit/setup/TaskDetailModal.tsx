@@ -13,9 +13,10 @@ import { CHIP_TEXT_CLASS, formatChipLabel } from "./taskCardLabels";
 import { buildTaskDocSections, type TaskDocSection, type TaskDocTabId } from "./taskDetailSections";
 
 function transportLabel(transport?: TaskCardModel["transport"]): string {
-  if (transport === "mcp") return "MCP";
-  if (transport === "api") return "API";
-  if (transport === "sidecar") return "Sidecar";
+  if (transport === "api_sidecar") return "API (sidecar)";
+  if (transport === "api_external") return "API (endpoint)";
+  if (transport === "mcp_sidecar") return "MCP (sidecar)";
+  if (transport === "mcp_external") return "MCP (endpoint)";
   return "—";
 }
 

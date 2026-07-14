@@ -109,6 +109,8 @@ export function useSetupPersonaSampling(
       // Explicit operator opt-out — do not confuse with pre-hydrate false.
       setTaskDefaultStrategyDismissed(true);
       setUseTaskDefaultStrategyState(false);
+      // Custom stratified UI expects an editable per-cell; invent 1 only after unlock.
+      setSampleSizePerValueGroup((prev) => (prev == null ? 1 : prev));
     },
     [resetToTaskStrategy],
   );

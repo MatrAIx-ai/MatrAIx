@@ -665,9 +665,6 @@ export function SurveyEvalCockpit({
           engine=""
           onEngineChange={() => undefined}
           engineOptions={[]}
-          domain=""
-          onDomainChange={() => undefined}
-          domainOptions={[]}
           maxTurns={8}
           onMaxTurnsChange={() => undefined}
           tasksLoading={harborTasksQuery.isLoading}

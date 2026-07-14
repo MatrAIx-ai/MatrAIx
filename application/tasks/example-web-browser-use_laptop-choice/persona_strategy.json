@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "sources": [],
-  "defaultMode": "stratified",
+  "defaultMode": "random",
   "dimensionFilters": {
     "age_bracket": [
       "18-24",
@@ -14,9 +14,5 @@
       "Premium-seeking"
     ]
   },
-  "stratifyFields": [
-    "life_stage",
-    "tech_savviness"
-  ],
   "sampleSize": 6
 }

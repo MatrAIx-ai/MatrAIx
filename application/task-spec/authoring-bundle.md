@@ -99,11 +99,25 @@ Playground uses this for Random / Stratified (and optional Quick pick) defaults.
 | `defaultMode` | `single` \| `random` \| `stratified` |
 | `dimensionFilters` / `cohortId` | Non-empty filters and/or a saved `cohortId` — who this task is for |
 | `sources` | Optional source allow-list |
-| `stratifyFields` | Needed when `defaultMode` is `stratified` |
-| `sampleSizePerValueGroup` | Stratified: **N personas per stratify combination** (cell). Total cohort ≈ `N × (# non-empty cells)`. When set, Playground honors the full per-cell quota and does not clip to `sampleSize`. |
-| `sampleSize` | Random: hard sample count. Stratified without `sampleSizePerValueGroup`: post-stratify cap. When `sampleSizePerValueGroup` is set, omit `sampleSize` (per-cell N is primary). |
+| `stratifyFields` | Needed when `defaultMode` is `stratified`. **Every** stratify field must also appear under `dimensionFilters` with allowed values (so cell coverage is well-defined). |
+| `sampleSizePerValueGroup` | **Stratified strategy A (per-cell):** take **N per combination**. Total = `N × (# cells)`. **Do not also set `sampleSize`.** |
+| `sampleSize` | Random: hard sample count. **Stratified strategy B (total N):** spread as `ceil(sampleSize / #cells)` then clip to `sampleSize`. Must be **≥ # cells**. **Do not also set `sampleSizePerValueGroup`.** |
 | `cohortId` | Optional saved cohort under `persona/datasets/cohorts/` |
 | `pool` | Defaults to bench-dev-sample |
+
+**Stratified sampling — two mutually exclusive strategies:**
+
+| Strategy | Set this | Omit this | Cohort size |
+|---|---|---|---|
+| Per-cell | `sampleSizePerValueGroup` | `sampleSize` | `N × #cells` |
+| Total N | `sampleSize` | `sampleSizePerValueGroup` | exactly `sampleSize` |
+
+1. Thin / missing cells → synthesize a local `_generated` pool (or run the
+   CLI below), then sample.
+2. Per-cell: guarantee N in each cell; total follows from the grid.
+3. Total N: guarantee `ceil(sampleSize / #cells)` capacity per cell, sample,
+   clip to `sampleSize`. Author `sampleSize` ≥ # cells.
+4. Setting **both** fields is invalid (CI / Playground reject the strategy).
 
 Playground turns on **Task default strategy** from this file (filters / mode /
 per-cell N / sampleSize locked to the file). Operators can turn that switch off
@@ -136,12 +150,8 @@ commit generated YAML into `bench-dev-sample` unless you are intentionally
 curating the shared fixture).
 
 **Playground / job launch fallback:** if sampling still hits a coverage error
-(or stratified mode finds empty/thin cells vs `sampleSizePerValueGroup`)
+(or stratified mode finds empty/thin cells vs the effective per-cell quota)
 and the request has `dimensionFilters`, the backend auto-generates (or reuses)
 the same `_generated/strategy-<slug>/` pool and retries — synthesizing persona
 cards for missing filter strata. If auto top-up fails, the UI / API error
 includes the manual CLI command above.
-
-If `stratifyFields` are not also listed under `dimensionFilters`, those axes
-stay randomly filled — add them to the filters when stratified sampling must
-guarantee cell coverage.

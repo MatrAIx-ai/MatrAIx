@@ -52,6 +52,7 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
   const hasScores = scored.length > 0;
   const hasRaw = Boolean(nativeRaw && nativeRaw.trim());
   const hasBody = hasPlan || hasScores || hasRaw;
+  if (!hasBody) return null;
 
   return (
     <div
@@ -63,7 +64,7 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        aria-controls={hasBody ? panelId : undefined}
+        aria-controls={panelId}
         className={`flex w-full items-center justify-between p-2 hud text-[12px] text-text-dim transition-colors hover:text-text-variant active:bg-surface-high ${
           open ? "border-b border-outline bg-surface-low" : "hover:bg-surface-high"
         } ${FOCUS_RING}`}
@@ -77,12 +78,6 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
 
       {open && (
         <div id={panelId} className="rise-in">
-          {!hasBody && (
-            <p className="p-3 text-[15px] text-text-variant">
-              The app didn&apos;t expose any internal steps for this turn.
-            </p>
-          )}
-
           {hasPlan && (
             <div className="border-b border-outline p-3">
               <p className="mb-2 hud text-[12px] text-text-dim">Steps the app took</p>

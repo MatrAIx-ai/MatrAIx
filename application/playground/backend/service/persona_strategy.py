@@ -163,6 +163,52 @@ def validate_persona_strategy_file(
             errors.append(
                 f'{rel}: defaultMode "stratified" requires stratifyFields'
             )
+        filters = normalized.get("dimensionFilters") or {}
+        sample_size = normalized.get("sampleSize")
+        per_cell = normalized.get("sampleSizePerValueGroup")
+        if sample_size is not None and per_cell is not None:
+            errors.append(
+                f"{rel}: stratified sampling uses exactly one quota field — "
+                "sampleSize (total N) XOR sampleSizePerValueGroup (N per cell); "
+                "do not set both"
+            )
+        elif sample_size is None and per_cell is None:
+            errors.append(
+                f"{rel}: stratified mode requires exactly one of sampleSize "
+                "(total N) or sampleSizePerValueGroup (N per cell)"
+            )
+        missing_axes = [
+            field
+            for field in stratify
+            if field not in filters or not filters.get(field)
+        ]
+        if missing_axes:
+            errors.append(
+                f"{rel}: every stratifyFields entry must also appear in "
+                f"dimensionFilters with allowed values (missing: {', '.join(missing_axes)}); "
+                "otherwise Playground cannot guarantee cell coverage or synthesize gaps"
+            )
+        elif sample_size is not None and per_cell is None:
+            # sampleSize-only stratified: total N must cover ≥1 persona per cell.
+            try:
+                from personabench.persona_generator import (
+                    build_filter_strata,
+                    filter_feasible_strata,
+                )
+
+                stratify_filters = {field: list(filters[field]) for field in stratify}
+                strata = build_filter_strata(stratify_filters, max_strata=200)
+                feasible, _dropped = filter_feasible_strata(strata)
+                min_cells = len(feasible)
+                if min_cells and int(sample_size) < min_cells:
+                    errors.append(
+                        f"{rel}: sampleSize={sample_size} is below the stratified "
+                        f"cell count={min_cells} (need ≥1 per combination of "
+                        f"{', '.join(stratify)}). Raise sampleSize, or switch to "
+                        "sampleSizePerValueGroup instead (and omit sampleSize)."
+                    )
+            except Exception:  # noqa: BLE001 — soft: skip when schema/generator unavailable
+                pass
 
     return errors
 

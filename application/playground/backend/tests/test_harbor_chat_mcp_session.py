@@ -25,8 +25,8 @@ def test_harbor_chat_mcp_url_from_task_path_reads_task_toml(tmp_path: Path) -> N
         "\n".join(
             [
                 "[environment]",
-                'definition = "application/shared-chat-mcp-support"',
-                "",
+                'definition = "application/shared-chat-persona"',
+                'local_compose = "application/chatbot-mcp-sidecar_acme-support"',
                 "[[environment.mcp_servers]]",
                 'name = "acme-support"',
                 'transport = "streamable-http"',

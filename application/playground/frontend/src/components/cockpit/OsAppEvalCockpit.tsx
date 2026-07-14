@@ -537,9 +537,6 @@ export function OsAppEvalCockpit({
           engine=""
           onEngineChange={() => undefined}
           engineOptions={[]}
-          domain=""
-          onDomainChange={() => undefined}
-          domainOptions={[]}
           maxTurns={8}
           onMaxTurnsChange={() => undefined}
           resolveCuaRuntime={resolveCuaRuntime}

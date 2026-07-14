@@ -36,7 +36,7 @@ BACKEND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EVAL_DIR="$(cd "${BACKEND_DIR}/.." && pwd)"  # application/playground
 REPO_ROOT="$(cd "${EVAL_DIR}/../.." && pwd)"
 PLAYGROUND_CORE_DIR="${REPO_ROOT}/packages/playground/src"
-CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/shared-chat-api-recommender/recommender-api"
+CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/chatbot-api-sidecar_recai/recommender-api"
 
 # --- interpreter: $VENV/bin/python if VENV is set, else `python` on PATH -------
 # (Python 3.9 + RecAI native — see ../README.md. Activate your venv, or

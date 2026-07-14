@@ -28,7 +28,12 @@ from playground.types import (
 )
 from playground.user_sim.chatbot_labels import chatbot_display_name
 from playground.user_sim.kickoff import get_goal_context
-from playground.user_sim.port import ChatSessionPort, normalize_agent_turn
+from playground.user_sim.port import (
+    ChatSessionPort,
+    normalize_agent_turn,
+    run_session_action_async,
+    run_session_action_sync,
+)
 from playground.user_sim.prompt import (
     assemble_report_system_prompt,
     prompt_bundle,
@@ -138,7 +143,10 @@ def run_playground(
         repo_root=repo_root or Path("."),
     )
 
-    tool_client = build_tool_step_client(config.persona_model)
+    tool_client = build_tool_step_client(
+        config.persona_model,
+        capabilities=task_config.capabilities if task_config else None,
+    )
     sim = UserSimSession(
         tool_client,
         persona,
@@ -164,12 +172,12 @@ def run_playground(
 
     for index in _turn_indices(config.max_turns):
         message = (action.message or "").strip()
-        if not message:
+        if not message and not action.capability_tool:
             break
 
         emit({"type": "user_message", "turnIndex": index, "message": message})
         emit({"type": "phase", "phase": "application_thinking", "userMessage": message})
-        raw_view = session.run_turn_sync(message)
+        raw_view = run_session_action_sync(session, action)
         view = normalize_agent_turn(
             raw_view,
             message,
@@ -258,7 +266,10 @@ async def run_playground_async(
         repo_root=repo_root or Path("."),
     )
 
-    tool_client = build_tool_step_client(config.persona_model)
+    tool_client = build_tool_step_client(
+        config.persona_model,
+        capabilities=task_config.capabilities if task_config else None,
+    )
     sim = UserSimSession(
         tool_client,
         persona,
@@ -284,14 +295,12 @@ async def run_playground_async(
 
     for index in _turn_indices(config.max_turns):
         message = (action.message or "").strip()
-        if not message:
+        if not message and not action.capability_tool:
             break
 
         emit({"type": "user_message", "turnIndex": index, "message": message})
         emit({"type": "phase", "phase": "application_thinking", "userMessage": message})
-        raw_view = session.run_turn_sync(message)
-        if inspect.isawaitable(raw_view):
-            raw_view = await raw_view
+        raw_view = await run_session_action_async(session, action)
         view = normalize_agent_turn(
             raw_view,
             message,

@@ -46,8 +46,10 @@ export function ToneChip({
 
 export const DIMENSION_CHIP_TONES: ToneChipTone[] = ["primary", "accent", "secondary", "warn"];
 
-export function transportChipTone(transport: "sidecar" | "api" | "mcp"): ToneChipTone {
-  if (transport === "api") return "accent";
-  if (transport === "mcp") return "warn";
+export function transportChipTone(
+  transport: "api_sidecar" | "api_external" | "mcp_sidecar" | "mcp_external",
+): ToneChipTone {
+  if (transport === "api_external") return "accent";
+  if (transport === "mcp_sidecar" || transport === "mcp_external") return "warn";
   return "primary";
 }

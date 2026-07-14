@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import inspect
 from typing import Any, Dict, Protocol, Sequence
 
 from playground.persona_exposure import build_persona_exposure
+from playground.user_sim.tools import TurnAction
 
 
 class ChatSessionPort(Protocol):
@@ -43,3 +45,40 @@ def normalize_agent_turn(
         "durationSeconds": turn.get("durationSeconds") or view.get("durationSeconds"),
         "personaExposure": list(exposure),
     }
+
+
+def run_session_action_sync(session: Any, action: TurnAction) -> Dict[str, Any]:
+    """Execute a UserSim action on a sync session port."""
+    if action.capability_tool:
+        runner = getattr(session, "run_capability_sync", None)
+        if callable(runner):
+            result = runner(action.capability_tool, dict(action.capability_arguments or {}))
+            if inspect.isawaitable(result):
+                raise TypeError(
+                    "session.run_capability_sync returned a coroutine; "
+                    "use run_session_action_async in async runners"
+                )
+            return result
+    message = (action.message or "").strip()
+    result = session.run_turn_sync(message)
+    if inspect.isawaitable(result):
+        raise TypeError(
+            "session.run_turn_sync returned a coroutine; use run_session_action_async"
+        )
+    return result
+
+
+async def run_session_action_async(session: Any, action: TurnAction) -> Dict[str, Any]:
+    """Execute a UserSim action on a sync or async session port."""
+    if action.capability_tool:
+        runner = getattr(session, "run_capability_sync", None)
+        if callable(runner):
+            result = runner(action.capability_tool, dict(action.capability_arguments or {}))
+            if inspect.isawaitable(result):
+                return await result
+            return result
+    message = (action.message or "").strip()
+    result = session.run_turn_sync(message)
+    if inspect.isawaitable(result):
+        return await result
+    return result

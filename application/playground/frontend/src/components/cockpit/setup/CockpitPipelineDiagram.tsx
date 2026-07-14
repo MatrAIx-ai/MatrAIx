@@ -8,10 +8,11 @@ import {
   type PipelinePathOption,
 } from "@/lib/personaAgentCatalog";
 import { Sym } from "../cockpitShared";
+import type { ChatTransport } from "./TaskSelectionRail";
 
 export interface CockpitPipelineDiagramProps {
   taskType: PlaygroundTaskType;
-  chatTransport?: "api" | "sidecar" | "mcp";
+  chatTransport?: ChatTransport;
   /** Selected chatbot app name (pipeline display). */
   chatbotLabel?: string;
   /** Web capability tier id (light / standard / extended / full). */
@@ -70,9 +71,10 @@ function Arrow({ visible = true }: { visible?: boolean }) {
 }
 
 function pathOptionInactiveClass(id: string, index: number): string {
-  if (id === "sidecar") return "border-primary/30 bg-surface/30";
-  if (id === "api") return "border-accent/30 bg-surface/30";
-  if (id === "mcp") return "border-warn/30 bg-surface/30";
+  if (id === "api_sidecar") return "border-primary/30 bg-surface/30";
+  if (id === "api_external") return "border-accent/30 bg-surface/30";
+  if (id === "mcp_sidecar") return "border-warn/30 bg-surface/30";
+  if (id === "mcp_external") return "border-secondary/30 bg-surface/30";
   const classes = [
     "border-primary/30 bg-surface/30",
     "border-accent/30 bg-surface/30",
@@ -87,7 +89,7 @@ type ForkSize = "narrow" | "default" | "dense";
 function forkChipClass(size: ForkSize): string {
   switch (size) {
     case "narrow":
-      return "w-[108px] px-2 py-1.5 sm:w-[116px]";
+      return "w-[128px] px-2 py-1.5 sm:w-[140px]";
     case "dense":
       return "w-[124px] px-2 py-1.5 sm:w-[130px]";
     default:
@@ -267,7 +269,7 @@ function pipelineStepCount(taskType: PlaygroundTaskType): number {
 
 export function CockpitPipelineDiagram({
   taskType,
-  chatTransport = "sidecar",
+  chatTransport = "api_sidecar",
   chatbotLabel,
   webCapabilityTierId,
   cuaPlatform,
@@ -329,7 +331,7 @@ export function CockpitPipelineDiagram({
             <Arrow visible={v(2)} />
             <PipelinePathFork
               forkSize="narrow"
-              caption="Adapter"
+              caption="Connection"
               options={CHAT_ACCESS_PIPELINE_PATHS}
               selected={chatTransport}
               visible={v(2)}

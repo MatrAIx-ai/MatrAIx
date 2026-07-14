@@ -21,7 +21,6 @@ def test_normalize_persona_strategy_keeps_optional_sample_size() -> None:
             "dimensionFilters": {"age_bracket": ["25-34", "35-44"], "region": "North America"},
             "stratifyFields": ["age_bracket"],
             "sampleSize": 8,
-            "sampleSizePerValueGroup": 2,
         }
     )
     assert payload["defaultMode"] == "stratified"
@@ -31,9 +30,29 @@ def test_normalize_persona_strategy_keeps_optional_sample_size() -> None:
         "region": ["North America"],
     }
     assert payload["sampleSize"] == 8
-    assert payload["sampleSizePerValueGroup"] == 2
+    assert "sampleSizePerValueGroup" not in payload
     assert "seed" not in payload
 
+
+def test_validate_persona_strategy_rejects_both_quota_fields(tmp_path) -> None:
+    (tmp_path / "persona_strategy.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "defaultMode": "stratified",
+                "dimensionFilters": {
+                    "age_bracket": ["25-34", "35-44"],
+                    "region": ["North America"],
+                },
+                "stratifyFields": ["age_bracket", "region"],
+                "sampleSize": 8,
+                "sampleSizePerValueGroup": 2,
+            }
+        ),
+        encoding="utf-8",
+    )
+    errors = validate_persona_strategy_file(tmp_path)
+    assert any("XOR" in err or "do not set both" in err for err in errors)
 
 def test_load_persona_strategy_missing_file_returns_none(tmp_path) -> None:
     assert load_persona_strategy(tmp_path) is None
@@ -75,6 +94,43 @@ def test_validate_persona_strategy_stratified_needs_axes(tmp_path) -> None:
     )
     errors = validate_persona_strategy_file(tmp_path)
     assert any("stratifyFields" in err for err in errors)
+
+
+def test_validate_persona_strategy_stratified_axes_in_filters(tmp_path) -> None:
+    (tmp_path / "persona_strategy.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "defaultMode": "stratified",
+                "dimensionFilters": {"life_stage": ["Early career"]},
+                "stratifyFields": ["economic_motivation", "life_stage"],
+                "sampleSize": 4,
+            }
+        ),
+        encoding="utf-8",
+    )
+    errors = validate_persona_strategy_file(tmp_path)
+    assert any("dimensionFilters" in err and "economic_motivation" in err for err in errors)
+
+
+def test_validate_persona_strategy_sample_size_covers_cells(tmp_path) -> None:
+    (tmp_path / "persona_strategy.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "defaultMode": "stratified",
+                "dimensionFilters": {
+                    "life_stage": ["Early career", "Mid-life"],
+                    "economic_motivation": ["Cost-sensitive", "Indifferent"],
+                },
+                "stratifyFields": ["economic_motivation", "life_stage"],
+                "sampleSize": 3,
+            }
+        ),
+        encoding="utf-8",
+    )
+    errors = validate_persona_strategy_file(tmp_path)
+    assert any("sampleSize=3" in err and "cell count=4" in err for err in errors)
 
 
 def test_get_task_detail_includes_persona_strategy(tmp_path) -> None:

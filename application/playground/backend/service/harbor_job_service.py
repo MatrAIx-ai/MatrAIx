@@ -1076,7 +1076,7 @@ class HarborJobService:
                 / "environment"
                 / "task-environments"
                 / "application"
-                / "shared-chat-api-recommender"
+                / "chatbot-api-sidecar_recai"
                 / "recommender-api"
             ),
         ]

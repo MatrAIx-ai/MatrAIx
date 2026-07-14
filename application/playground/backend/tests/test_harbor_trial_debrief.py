@@ -170,14 +170,14 @@ def _write_example_survey_task(repo: Path) -> None:
 
 def test_map_trial_debrief_chatbot_enriches_prompts_from_events(tmp_path: Path) -> None:
     repo = tmp_path
-    task_dir = repo / "application" / "tasks" / "recommender-agent_chat_api"
+    task_dir = repo / "application" / "tasks" / "chat_recai"
     task_dir.mkdir(parents=True)
     (task_dir / "task.toml").write_text('[metadata]\ntype = "chat"\n', encoding="utf-8")
     (task_dir / "instruction.md").write_text("# Task instruction\nUse the chat API.\n", encoding="utf-8")
     _write_chat_trial(repo, "job-prompts", "trial-prompts")
     trial_dir = repo / "jobs" / "job-prompts" / "trial-prompts"
     (trial_dir / "config.json").write_text(
-        json.dumps({"task": {"path": "application/tasks/recommender-agent_chat_api"}}),
+        json.dumps({"task": {"path": "application/tasks/chat_recai"}}),
         encoding="utf-8",
     )
     prompts = {
@@ -493,14 +493,14 @@ def test_map_trial_debrief_failed_without_output(tmp_path: Path) -> None:
 
 def test_map_trial_debrief_chatbot_from_events_when_artifacts_missing(tmp_path: Path) -> None:
     repo = tmp_path
-    task_dir = repo / "application" / "tasks" / "recommender-agent_chat_api"
+    task_dir = repo / "application" / "tasks" / "chat_recai"
     task_dir.mkdir(parents=True)
     (task_dir / "task.toml").write_text('[metadata]\ntype = "chat"\n', encoding="utf-8")
     trial_dir = repo / "jobs" / "job-events" / "trial-0"
     output = trial_dir / "artifacts" / "app" / "output"
     output.mkdir(parents=True)
     (trial_dir / "config.json").write_text(
-        json.dumps({"task": {"path": "application/tasks/recommender-agent_chat_api"}}),
+        json.dumps({"task": {"path": "application/tasks/chat_recai"}}),
         encoding="utf-8",
     )
     done_result = {

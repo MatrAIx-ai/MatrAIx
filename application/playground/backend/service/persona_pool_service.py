@@ -692,57 +692,85 @@ class PersonaPoolService:
         list_filters = self._filters_as_lists(self._normalize_dimension_filters(dimension_filters))
         can_auto_ensure = auto_ensure_strategy_pool and bool(list_filters)
 
-        # Empty stratify cells are skipped silently by sample_personas_stratified —
-        # detect shortfalls up front and synthesize a local pool before sampling.
+        # Stratified quotas:
+        # - sampleSizePerValueGroup set → N per cell (primary); sampleSize is not a clip.
+        # - only sampleSize → ensure ≥1/cell, then stratified sample capped at sampleSize.
+        #   sampleSize must be ≥ # expected cells when that product is known.
+        explicit_per_cell = (
+            isinstance(sample_size_per_value_group, int) and sample_size_per_value_group >= 1
+        )
+        expected = (
+            self._expected_stratify_strata(dimension_filters, stratify_fields)
+            if stratify_fields
+            else None
+        )
         if (
-            can_auto_ensure
-            and stratify_fields
-            and isinstance(sample_size_per_value_group, int)
-            and sample_size_per_value_group >= 1
+            stratify_fields
+            and not explicit_per_cell
+            and expected is not None
+            and sample_size < len(expected)
         ):
-            expected = self._expected_stratify_strata(dimension_filters, stratify_fields)
-            if expected is not None:
-                matched = self.filter_pool(
-                    persona_pool=persona_pool,
-                    sources=sources,
-                    dimension_filters=dimension_filters,
+            raise ValueError(
+                "sampleSize={} is below the stratified cell count={} "
+                "(need ≥1 persona per combination). Raise sampleSize, or set "
+                "sampleSizePerValueGroup and omit sampleSize.".format(
+                    sample_size, len(expected)
                 )
-                gap = self._stratify_coverage_gap_message(
-                    matched,
-                    stratify_fields=list(stratify_fields),
-                    sample_size_per_value_group=sample_size_per_value_group,
-                    expected_strata=expected,
-                )
-                if gap:
-                    try:
-                        ensured = self.ensure_filter_coverage_pool(
-                            dimension_filters=dimension_filters,
-                            sources=sources,
-                            sample_size=sample_size,
-                            stratify_fields=stratify_fields,
-                            sample_size_per_value_group=sample_size_per_value_group,
+            )
+
+        # Coverage quota used when synthesizing thin cells.
+        # sampleSize-only: share total N across cells (ceil), then sample/cap.
+        if explicit_per_cell:
+            ensure_per_cell = int(sample_size_per_value_group)
+        elif expected:
+            ensure_per_cell = max(1, (sample_size + len(expected) - 1) // len(expected))
+        else:
+            ensure_per_cell = 1
+
+        # Empty/thin stratify cells are skipped or fail at sample time — detect
+        # shortfalls up front and synthesize a local pool before sampling.
+        if can_auto_ensure and stratify_fields and expected is not None:
+            matched = self.filter_pool(
+                persona_pool=persona_pool,
+                sources=sources,
+                dimension_filters=dimension_filters,
+            )
+            gap = self._stratify_coverage_gap_message(
+                matched,
+                stratify_fields=list(stratify_fields),
+                sample_size_per_value_group=ensure_per_cell,
+                expected_strata=expected,
+            )
+            if gap:
+                try:
+                    ensured = self.ensure_filter_coverage_pool(
+                        dimension_filters=dimension_filters,
+                        sources=sources,
+                        sample_size=sample_size,
+                        stratify_fields=stratify_fields,
+                        sample_size_per_value_group=ensure_per_cell,
+                        task_path=task_path,
+                        seed=seed,
+                    )
+                    result = self._sample_pool_inner(
+                        persona_pool=str(ensured["pool"]),
+                        sample_size=sample_size,
+                        seed=seed,
+                        sources=sources,
+                        dimension_filters=dimension_filters,
+                        stratify_fields=stratify_fields,
+                        sample_size_per_value_group=sample_size_per_value_group,
+                    )
+                    result["poolEnsured"] = True
+                    result["poolReused"] = bool(ensured.get("reused"))
+                    return result
+                except Exception as ensure_exc:  # noqa: BLE001
+                    raise ValueError(
+                        with_coverage_hint(
+                            f"{gap}\n\nAuto pool top-up failed: {ensure_exc}",
                             task_path=task_path,
-                            seed=seed,
                         )
-                        result = self._sample_pool_inner(
-                            persona_pool=str(ensured["pool"]),
-                            sample_size=sample_size,
-                            seed=seed,
-                            sources=sources,
-                            dimension_filters=dimension_filters,
-                            stratify_fields=stratify_fields,
-                            sample_size_per_value_group=sample_size_per_value_group,
-                        )
-                        result["poolEnsured"] = True
-                        result["poolReused"] = bool(ensured.get("reused"))
-                        return result
-                    except Exception as ensure_exc:  # noqa: BLE001
-                        raise ValueError(
-                            with_coverage_hint(
-                                f"{gap}\n\nAuto pool top-up failed: {ensure_exc}",
-                                task_path=task_path,
-                            )
-                        ) from ensure_exc
+                    ) from ensure_exc
 
         try:
             return self._sample_pool_inner(
@@ -808,7 +836,32 @@ class PersonaPoolService:
         if sample_size < 1:
             raise ValueError("sample_size must be >= 1")
         if stratify_fields:
-            per_group = sample_size_per_value_group or 1
+            bare_fields = [
+                str(field).removeprefix("dimensions.").strip() for field in stratify_fields
+            ]
+            bare_fields = [field for field in bare_fields if field]
+            bucket_counts: dict[str, int] = {}
+            for entry in matched:
+                key = _stratify_bucket_key(entry, bare_fields, repo_root=self.repo_root)
+                if key is None:
+                    continue
+                bucket_counts[key] = bucket_counts.get(key, 0) + 1
+            n_buckets = len(bucket_counts)
+            if n_buckets < 1:
+                label = ", ".join(bare_fields)
+                raise ValueError(f"No personas with stratify fields ({label})")
+
+            if sample_size_per_value_group is not None:
+                per_group = sample_size_per_value_group
+            else:
+                # Spread total sampleSize across cells: ceil(N / cells), then clip.
+                if sample_size < n_buckets:
+                    raise ValueError(
+                        "sampleSize={} is below the stratified cell count={} "
+                        "(need ≥1 persona per combination)".format(sample_size, n_buckets)
+                    )
+                per_group = max(1, (sample_size + n_buckets - 1) // n_buckets)
+
             chosen = sample_personas_stratified(
                 matched,
                 stratify_fields=list(stratify_fields),
@@ -816,10 +869,9 @@ class PersonaPoolService:
                 seed=seed,
                 repo_root=self.repo_root,
             )
-            # Per-cell quota (sample_size_per_value_group) is primary: do not
-            # silently clip N×cells down to sample_size. sample_size still
-            # truncates when the caller did not pass an explicit per-cell N
-            # (legacy stratified path that relied on sample_size alone).
+            # Explicit per-cell quota: take N×cells; ignore sampleSize (mutually
+            # exclusive strategies — strategy files must set only one).
+            # sampleSize-only stratified: take ceil(N/cells) then truncate to N.
             if sample_size_per_value_group is None and len(chosen) > sample_size:
                 chosen = chosen[:sample_size]
         else:

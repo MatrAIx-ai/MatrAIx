@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "sources": [],
-  "defaultMode": "stratified",
+  "defaultMode": "random",
   "dimensionFilters": {
     "life_stage": [
       "Early career",
@@ -13,9 +13,5 @@
       "35-44"
     ]
   },
-  "stratifyFields": [
-    "tech_savviness",
-    "values_priority"
-  ],
   "sampleSize": 6
 }
