@@ -20,17 +20,17 @@ import tarfile
 from typing import Any
 
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-BASE_DIR = SCRIPT_DIR.parent
-REPO_ROOT = BASE_DIR.parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from persona.curation.existing_data.wiki_collab.core import sha256_file, write_json  # noqa: E402
+from persona.existing_data_curation.wiki_collab.core import sha256_file, write_json  # noqa: E402
 
-DEFAULT_DIMENSIONS = REPO_ROOT / "persona" / "schema" / "dimensions.json"
-COLLAB_KIT_SRC = REPO_ROOT / "persona/curation/existing_data/wiki_collab/collab_kit"
-ROOT_LAUNCHER_SRC = REPO_ROOT / "persona/curation/existing_data/wiki_collab/run_assignment.sh"
+DEFAULT_DIMENSIONS = REPO_ROOT / "persona" / "dimensions.json"
+COLLAB_KIT_SRC = (
+    REPO_ROOT / "persona/existing_data_curation/wiki_collab/collab_kit"
+)
+ROOT_LAUNCHER_SRC = REPO_ROOT / "persona/existing_data_curation/wiki_collab/run_assignment.sh"
 SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 
@@ -146,8 +146,6 @@ def write_package_manifest(out_dir: Path, assignment: dict[str, Any]) -> None:
         out_dir / "collab_kit" / "assignment_runner.py",
         out_dir / "collab_kit" / "claude_json_backend.py",
         out_dir / "collab_kit" / "codex_json_backend.py",
-        out_dir / "collab_kit" / "qwen_json_backend.py",
-        out_dir / "collab_kit" / "qwen_transformers_host.py",
     ]
     immutable.extend(sorted((out_dir / "collab_kit" / "schemas").glob("*.json")))
 
@@ -181,7 +179,7 @@ def write_package_manifest(out_dir: Path, assignment: dict[str, Any]) -> None:
 
 
 def write_worker_readme(out_dir: Path) -> None:
-    readme = """# PersonaBench Persona Attribution Assignment
+    readme = """# MatrAIx Persona Attribution Assignment
 
 You received a self-contained assignment package. Work inside this directory.
 Requires Python 3.10+; no Python packages need to be installed.
@@ -204,66 +202,9 @@ Quickstart:
 ./run_assignment.sh --validate
 ```
 
-Use the menu to choose Codex, Claude Code, or local Qwen; effort; parallelism;
-smoke test; environment/backend health check; real run; and validation. Codex
-uses `gpt-5.5`; Claude Code uses `claude-opus-4-8`; local Qwen uses
-`Qwen/Qwen3.6-35B-A3B` through an OpenAI-compatible server.
-
-For local Qwen, point `qwen-local` at an OpenAI-compatible server. vLLM is the
-recommended path when you want to saturate multiple GPUs:
-
-```bash
-python3 -m venv /tmp/qwen_vllm_venv
-/tmp/qwen_vllm_venv/bin/python -m pip install --upgrade pip
-/tmp/qwen_vllm_venv/bin/python -m pip install -U vllm
-```
-
-```bash
-PATH=/tmp/qwen_vllm_venv/bin:$PATH \
-HF_HOME=/path/to/hf_cache \
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-/tmp/qwen_vllm_venv/bin/vllm serve Qwen/Qwen3.6-35B-A3B \
-  --host 127.0.0.1 \
-  --port 8001 \
-  --tensor-parallel-size 8 \
-  --served-model-name Qwen/Qwen3.6-35B-A3B \
-  --max-model-len 32768 \
-  --gpu-memory-utilization 0.95 \
-  --trust-remote-code \
-  --reasoning-parser qwen3 \
-  --default-chat-template-kwargs '{"enable_thinking": false}'
-```
-
-Then run inference from the package directory:
-
-```bash
-export QWEN_BASE_URL=http://127.0.0.1:8001/v1
-export QWEN_API_KEY=EMPTY
-export WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1
-export WIKI_COLLAB_QWEN_MAX_TOKENS=2048
-./run_assignment.sh --backend qwen-local --model Qwen/Qwen3.6-35B-A3B --jobs 24 --yes --run
-./run_assignment.sh --validate
-```
-
-Start with `--jobs 8`, watch `nvidia-smi`, then increase to 16 or 24 if GPU
-utilization is low and the server has no OOM/HTTP errors. The runner is
-resumable, so stopping with Ctrl-C and rerunning with a different `--jobs`
-value is safe.
-
-The bundled Transformers host is the simple fallback when you do not want to
-run vLLM:
-
-```bash
-python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B
-export QWEN_BASE_URL=http://127.0.0.1:8000/v1
-export QWEN_API_KEY=EMPTY
-./run_assignment.sh --backend qwen-local --jobs 1 --yes --run
-./run_assignment.sh --validate
-```
-
-The Qwen path uses a compact prompt and truncates very long profile text by
-default. Set `WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=0` to disable truncation, or
-set it to another visible-character budget for your GPU/context window.
+Use the menu to choose Codex or Claude Code, effort, parallelism, smoke test,
+environment/CLI health check, real run, and validation. Codex uses `gpt-5.5`;
+Claude Code uses `claude-opus-4-8`.
 
 The runner verifies checksums before every action, saves settings in
 `.wiki_collab_settings.yaml`, and resumes from `results.jsonl.progress.jsonl` if

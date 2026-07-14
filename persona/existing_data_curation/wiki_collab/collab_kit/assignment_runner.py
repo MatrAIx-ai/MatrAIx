@@ -16,8 +16,6 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
-import urllib.error
-import urllib.request
 from typing import Any
 
 
@@ -36,17 +34,15 @@ DEFAULTS = {
     "command_override": "",
 }
 PROVENANCE_KEYS = ("backend", "model", "effort", "command_override")
-DIRECT_BACKEND_CHOICES = ("codex-acp", "claude-code-acp", "qwen-local", "mock")
+DIRECT_BACKEND_CHOICES = ("codex-acp", "claude-code-acp", "mock")
 
 BACKEND_CHOICES = [
     ("codex-acp", "Codex CLI / ChatGPT subscription"),
     ("claude-code-acp", "Claude Code CLI / Claude subscription"),
-    ("qwen-local", "local Qwen OpenAI-compatible server / your GPU"),
 ]
 MODEL_BY_BACKEND = {
     "codex-acp": "gpt-5.5",
     "claude-code-acp": "claude-opus-4-8",
-    "qwen-local": "Qwen/Qwen3.6-35B-A3B",
     "mock": "mock-model",
 }
 EFFORT_CHOICES_BY_BACKEND = {
@@ -63,9 +59,6 @@ EFFORT_CHOICES_BY_BACKEND = {
         ("xhigh", "xhigh - deeper reasoning"),
         ("max", "max - deepest, can overthink"),
     ],
-    "qwen-local": [
-        ("high", "high - local OpenAI-compatible Qwen run"),
-    ],
     "mock": [
         ("high", "high - smoke-test placeholder"),
     ],
@@ -73,7 +66,6 @@ EFFORT_CHOICES_BY_BACKEND = {
 DEFAULT_EFFORT_BY_BACKEND = {
     "codex-acp": "high",
     "claude-code-acp": "high",
-    "qwen-local": "high",
     "mock": "high",
 }
 JOB_CHOICES = [
@@ -229,20 +221,11 @@ def normalize_settings(settings: dict[str, Any]) -> dict[str, str]:
 
     if backend in {"codex-acp", "claude-code-acp"}:
         normalized["model"] = MODEL_BY_BACKEND[backend]
-    elif backend == "qwen-local" and normalized.get("model") in {
-        "",
-        DEFAULTS["model"],
-        MODEL_BY_BACKEND["codex-acp"],
-        MODEL_BY_BACKEND["claude-code-acp"],
-        MODEL_BY_BACKEND["mock"],
-    }:
-        normalized["model"] = MODEL_BY_BACKEND[backend]
     elif backend == "mock" and normalized.get("model") in {
         "",
         DEFAULTS["model"],
         MODEL_BY_BACKEND["codex-acp"],
         MODEL_BY_BACKEND["claude-code-acp"],
-        MODEL_BY_BACKEND["qwen-local"],
     }:
         normalized["model"] = MODEL_BY_BACKEND["mock"]
 
@@ -516,8 +499,6 @@ def run_harness(settings: dict[str, Any], *, restart: bool = False, smoke: bool 
             env["WIKI_COLLAB_CLAUDE_CMD"] = settings["command_override"]
         elif backend == "codex-acp":
             env["WIKI_COLLAB_CODEX_CMD"] = settings["command_override"]
-        elif backend == "qwen-local":
-            env["WIKI_COLLAB_QWEN_CMD"] = settings["command_override"]
     env["WIKI_COLLAB_ASSIGNMENT_PROVENANCE"] = json.dumps(
         build_assignment_provenance(PACKAGE_ROOT, settings, warnings),
         ensure_ascii=False,
@@ -601,45 +582,8 @@ def _check_backend_environment(backend: str) -> bool:
         return _run_probe("Codex CLI", ["codex", "doctor", "--summary", "--ascii", "--no-color"])
     if backend == "claude-code-acp":
         return _run_probe("Claude Code CLI", ["claude", "doctor"])
-    if backend == "qwen-local":
-        return _check_qwen_environment()
     print(f"Backend check: FAIL (unsupported backend {backend!r})")
     return False
-
-
-def _qwen_base_url() -> str:
-    return (
-        os.environ.get("QWEN_BASE_URL", "").strip()
-        or os.environ.get("OPENAI_BASE_URL", "").strip()
-        or "http://127.0.0.1:8000/v1"
-    ).rstrip("/")
-
-
-def _check_qwen_environment() -> bool:
-    base_url = _qwen_base_url()
-    url = base_url + "/models"
-    api_key = (
-        os.environ.get("QWEN_API_KEY", "").strip()
-        or os.environ.get("OPENAI_API_KEY", "").strip()
-        or "EMPTY"
-    )
-    request = urllib.request.Request(
-        url,
-        headers={"Authorization": f"Bearer {api_key}"},
-        method="GET",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=5) as response:
-            response.read(1024)
-    except urllib.error.HTTPError as exc:
-        print(f"Qwen local server: {_red('FAIL')} ({url} -> HTTP {exc.code})")
-        return False
-    except Exception as exc:
-        print(f"Qwen local server: {_red('FAIL')} ({url}; {exc})")
-        print("Set QWEN_BASE_URL, for example http://127.0.0.1:8000/v1.")
-        return False
-    print(f"Qwen local server: {_green('PASS')} ({base_url})")
-    return True
 
 
 def _select_option(
@@ -733,7 +677,6 @@ def interactive_menu() -> int:
             "  ./run_assignment.sh --status\n"
             "  ./run_assignment.sh --backend codex-acp --effort high --jobs 4 --yes --run\n"
             "  ./run_assignment.sh --backend claude-code-acp --effort high --jobs 6 --yes --run\n"
-            "  ./run_assignment.sh --backend qwen-local --jobs 1 --yes --run\n"
             "  ./run_assignment.sh --validate",
             file=sys.stderr,
         )
@@ -750,7 +693,7 @@ def interactive_menu() -> int:
     ]
     while True:
         print()
-        print(_bold(_cyan("  PersonaBench wiki assignment runner")))
+        print(_bold(_cyan("  MatrAIx wiki assignment runner")))
         print(_rule())
         for num, label in items:
             print(f"  {_bold(_cyan(num))}  {label}")

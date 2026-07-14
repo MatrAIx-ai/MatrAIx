@@ -65,77 +65,12 @@ backend that matches what you have; nothing to edit:
 |---|---|---|
 | a **Codex subscription** | `codex-acp` | `gpt-5.5` |
 | a **Claude subscription** | `claude-code-acp` | `claude-opus-4-8` |
-| your own **GPU Qwen server** | `qwen-local` | `Qwen/Qwen3.6-35B-A3B` |
 
 Log in once with the matching CLI (`codex` or `claude`) before running. The
 bundled Claude and Codex adapters are pure stdlib.
 
 Codex effort choices are `high`, `medium`, and `xhigh`.
 Claude Code effort choices are `high`, `medium`, `xhigh`, and `max`.
-Local Qwen uses `high`; effort is recorded for provenance but does not change
-the OpenAI-compatible API request.
-
-For local Qwen, point `qwen-local` at any OpenAI-compatible server. vLLM is the
-recommended path when you want high throughput across multiple GPUs:
-
-```bash
-python3 -m venv /tmp/qwen_vllm_venv
-/tmp/qwen_vllm_venv/bin/python -m pip install --upgrade pip
-/tmp/qwen_vllm_venv/bin/python -m pip install -U vllm
-```
-
-```bash
-PATH=/tmp/qwen_vllm_venv/bin:$PATH \
-HF_HOME=/path/to/hf_cache \
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-/tmp/qwen_vllm_venv/bin/vllm serve Qwen/Qwen3.6-35B-A3B \
-  --host 127.0.0.1 \
-  --port 8001 \
-  --tensor-parallel-size 8 \
-  --served-model-name Qwen/Qwen3.6-35B-A3B \
-  --max-model-len 32768 \
-  --gpu-memory-utilization 0.95 \
-  --trust-remote-code \
-  --reasoning-parser qwen3 \
-  --default-chat-template-kwargs '{"enable_thinking": false}'
-```
-
-Then run from the package directory:
-
-```bash
-export QWEN_BASE_URL=http://127.0.0.1:8001/v1
-export QWEN_API_KEY=EMPTY
-export WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1
-export WIKI_COLLAB_QWEN_MAX_TOKENS=2048
-./run_assignment.sh --backend qwen-local --model Qwen/Qwen3.6-35B-A3B --jobs 24 --yes --run
-./run_assignment.sh --validate
-```
-
-Tune `--jobs` upward until GPU utilization is saturated without OOM or HTTP
-errors. On an 8x A5000 box, `--jobs 24` was a good high-throughput setting.
-
-The bundled Transformers host is the zero-extra-server fallback. It loads the
-model once, keeps it resident on your GPU, and exposes the small
-OpenAI-compatible surface the runner needs:
-
-```bash
-python collab_kit/qwen_transformers_host.py --model Qwen/Qwen3.6-35B-A3B
-export QWEN_BASE_URL=http://127.0.0.1:8000/v1
-export QWEN_API_KEY=EMPTY
-./run_assignment.sh --backend qwen-local --jobs 1 --yes --run
-./run_assignment.sh --validate
-```
-
-The Qwen adapter calls `/chat/completions`, asks for JSON-only output, and the
-runner performs the same final conformance check before `results.jsonl` is
-ready to send. If your server supports JSON response format, you can opt in with
-`WIKI_COLLAB_QWEN_RESPONSE_FORMAT=1`.
-
-Qwen may run with a shorter usable context window than the subscription-backed
-models. The Qwen path therefore uses the compact prompt by default and only
-sends the first 24000 visible characters of `profile_text`. Override this with
-`WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=<chars>` or disable it with
-`WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT=0`.
 
 ## Pause, resume, and progress
 
@@ -188,8 +123,6 @@ collab_kit/
   backends.py           backend adapters (mock / claude / codex / api) — bundled, stdlib only
   claude_json_backend.py  CLI adapter: uses YOUR Claude subscription
   codex_json_backend.py   CLI adapter: uses YOUR Codex subscription
-  qwen_json_backend.py    local OpenAI-compatible Qwen adapter
-  qwen_transformers_host.py local Hugging Face Transformers host for Qwen
   run.sh                convenience wrapper for harness.py
   sample/               tasks.jsonl, dimensions.json, results.jsonl (a conformant example)
 ```
@@ -197,10 +130,10 @@ collab_kit/
 ## For the owner
 
 - Send each worker a `tasks.jsonl` (a disjoint slice of your dataset) + a
-  `dimensions.json` (any subset of the 1412-dim catalog;
+  `dimensions.json` (any subset of the 1339-dim catalog;
   `protocols/persona_attribution_by_category/<slug>/category_manifest.json`
   already has the `{id,label,description,values}` shape, and
-  `persona/schema/dimensions.json` is the full catalog).
+  `persona/dimensions.json` is the full catalog).
 - Prefer `scripts/make_collab_package.py` to create the package. It writes
   `assignment.json`, `package_manifest.json`, hashes the outgoing files, copies
   this kit, and emits a `.tar.gz` that is ready to send.

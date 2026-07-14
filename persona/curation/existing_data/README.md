@@ -129,6 +129,9 @@ The package contains `tasks.jsonl`, `dimensions.json`, `assignment.json`,
 returns `results.jsonl`; generated `.tar.gz` packages and returned files should
 stay outside git.
 
+For a compact end-to-end wiki package and worker inference runbook, see
+[`wiki_collab/README.md`](wiki_collab/README.md).
+
 The source-specific scripts `make_collab_package.py` and
 `make_amazon_collab_package.py` remain available as lower-level builders, but
 new packaging runs should prefer `make_package.py` so wiki and Amazon packages

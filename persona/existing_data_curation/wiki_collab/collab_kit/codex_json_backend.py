@@ -14,7 +14,7 @@ from typing import Any
 
 OUTPUT_SCHEMA: dict[str, Any] = {
     "type": "object",
-    "required": ["fields", "reported_model", "model_source", "model_confidence"],
+    "required": ["fields"],
     "properties": {
         "fields": {
             "type": "array",
@@ -42,14 +42,13 @@ OUTPUT_SCHEMA: dict[str, Any] = {
                         ],
                     },
                 },
-                "additionalProperties": False,
             },
         },
         "reported_model": {"type": ["string", "null"]},
         "model_source": {"type": "string"},
         "model_confidence": {"type": "string"},
     },
-    "additionalProperties": False,
+    "additionalProperties": True,
 }
 
 JSON_INSTRUCTIONS = (

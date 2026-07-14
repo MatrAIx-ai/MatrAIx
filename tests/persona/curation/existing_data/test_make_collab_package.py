@@ -134,6 +134,8 @@ def test_build_collab_package_writes_worker_facing_files(tmp_path: Path):
     assert manifest["files"]["tasks.jsonl"]["mode"] == "immutable"
     assert len(manifest["files"]["tasks.jsonl"]["sha256"]) == 64
     assert manifest["files"]["dimensions.json"]["mode"] == "immutable"
+    assert manifest["files"]["collab_kit/qwen_json_backend.py"]["mode"] == "immutable"
+    assert manifest["files"]["collab_kit/qwen_transformers_host.py"]["mode"] == "immutable"
     assert manifest["files"]["collab_kit/solver.py"]["mode"] == "editable"
 
     with tarfile.open(summary["archive_path"], "r:gz") as tar:
@@ -149,6 +151,8 @@ def test_build_collab_package_writes_worker_facing_files(tmp_path: Path):
     assert f"{out_dir.name}/run_assignment.sh" in names
     assert f"{out_dir.name}/package_manifest.json" in names
     assert f"{out_dir.name}/collab_kit/solver.py" in names
+    assert f"{out_dir.name}/collab_kit/qwen_json_backend.py" in names
+    assert f"{out_dir.name}/collab_kit/qwen_transformers_host.py" in names
     assert f"{out_dir.name}/collab_kit/sample/results.jsonl" in names
     assert not any("__pycache__" in name for name in names)
 

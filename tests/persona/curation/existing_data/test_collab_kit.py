@@ -18,6 +18,8 @@ import backends  # noqa: E402
 import conformance  # noqa: E402
 import codex_json_backend  # noqa: E402
 import harness  # noqa: E402
+import qwen_json_backend  # noqa: E402
+import qwen_transformers_host  # noqa: E402
 import solver  # noqa: E402
 
 
@@ -491,6 +493,26 @@ def test_build_prompt_uses_amazon_review_wording_for_amazon_source():
     assert "Wikipedia-derived profile" not in prompt
 
 
+def test_compact_prompt_keeps_exact_field_ids():
+    prompt = solver.build_prompt(
+        {"profile_text": "born in 1809"},
+        [
+            {
+                "id": "age_bracket",
+                "label": "Age bracket",
+                "description": "Life-age band of the persona.",
+                "values": ["65+"],
+            }
+        ],
+        compact=True,
+    )
+
+    assert "field_id=age_bracket" in prompt
+    assert "AGE_BRACKET" not in prompt
+    assert "Emit at most 12 fields total" in prompt
+    assert "Omit unsupported dimensions entirely" in prompt
+
+
 def test_harness_resumes_after_failure(tmp_path, monkeypatch):
     """A failed unit (e.g. quota exhausted) stays pending; re-running finishes it."""
     out = tmp_path / "results.jsonl"
@@ -698,9 +720,15 @@ def test_harness_mock_run_is_conformant(tmp_path):
     assert len(results[0]["fields"]) == len(_dims())
 
 
-def test_collab_backend_registry_is_limited_to_package_choices():
-    assert sorted(backends.BACKENDS) == ["claude-code-acp", "codex-acp", "mock"]
+def test_collab_backend_registry_includes_local_qwen_backend():
+    assert sorted(backends.BACKENDS) == [
+        "claude-code-acp",
+        "codex-acp",
+        "mock",
+        "qwen-local",
+    ]
     assert backends.create_backend("codex-acp", None).effort == "high"
+    assert backends.create_backend("qwen-local", None).model == "Qwen/Qwen3.6-35B-A3B"
 
 
 def test_solver_sets_default_codex_command(monkeypatch):
@@ -725,6 +753,145 @@ def test_solver_default_adapter_command_quotes_paths_with_spaces(monkeypatch, tm
     assert argv == [sys.executable, str(fake_kit / "codex_json_backend.py")]
 
 
+def test_solver_sets_default_qwen_command(monkeypatch):
+    monkeypatch.delenv("WIKI_COLLAB_QWEN_CMD", raising=False)
+
+    solver._ensure_default_command("qwen-local")
+
+    command = os.environ["WIKI_COLLAB_QWEN_CMD"]
+    assert "qwen_json_backend.py" in command
+    assert sys.executable in command
+
+
+def test_qwen_backend_uses_compact_prompt_and_profile_limit(monkeypatch):
+    captured: dict[str, str] = {}
+
+    class FakeBackend:
+        def run(self, prompt, input_record):
+            captured["prompt"] = prompt
+            return backends.BackendOutput(
+                fields=[],
+                raw_response="{}",
+                reported_model="Qwen/Qwen3.6-35B-A3B",
+                model_source="test",
+                model_confidence="exact",
+            )
+
+    monkeypatch.setattr(backends, "create_backend", lambda *args, **kwargs: FakeBackend())
+    monkeypatch.setenv("WIKI_COLLAB_PROFILE_TEXT_CHAR_LIMIT", "40")
+
+    solver._attribute_single_pass(
+        {
+            "profile_text": "A" * 120,
+        },
+        [
+            {
+                "id": "domain",
+                "label": "Domain",
+                "description": "Primary domain. " + ("Long detail. " * 20),
+                "values": ["Politics", "Science"],
+            }
+        ],
+        "qwen-local",
+        "Qwen/Qwen3.6-35B-A3B",
+        "high",
+    )
+
+    prompt = captured["prompt"]
+    assert "Do not include chain-of-thought" in prompt
+    assert "field_id=domain: Domain" in prompt
+    assert "Long detail. Long detail. Long detail." not in prompt
+    assert "[profile_text truncated" in prompt
+    assert "A" * 80 not in prompt
+
+
+def test_solver_sanitizes_backend_fields_before_checkpoint(monkeypatch):
+    class FakeBackend:
+        def run(self, prompt, input_record):
+            return backends.BackendOutput(
+                fields=[
+                    {
+                        "field_id": "age_bracket",
+                        "value": "55-64",
+                        "confidence": 2,
+                        "evidence": "Age 60",
+                        "assignment_type": "unsupported",
+                    },
+                    {
+                        "field_id": "age_bracket",
+                        "value": "75+",
+                        "confidence": 0.9,
+                        "evidence": "invalid enum",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "missing_field",
+                        "value": "x",
+                        "confidence": 0.5,
+                        "evidence": "x",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "region",
+                        "value": "None",
+                        "confidence": 0.7,
+                        "evidence": "none",
+                        "assignment_type": "direct",
+                    },
+                    {
+                        "field_id": "free_text",
+                        "value": "supported",
+                        "confidence": 0.8,
+                        "evidence": "",
+                        "assignment_type": "direct",
+                    },
+                ],
+                raw_response="{}",
+                reported_model="Qwen/Qwen3.6-35B-A3B",
+                model_source="test",
+                model_confidence="exact",
+            )
+
+    dimensions = [
+        {"id": "age_bracket", "values": ["55–64", "65+"]},
+        {"id": "region", "values": ["North America", "Western Europe"]},
+        {"id": "free_text", "values": []},
+    ]
+    monkeypatch.setattr(backends, "create_backend", lambda *args, **kwargs: FakeBackend())
+
+    fields = solver._attribute_single_pass(
+        {"profile_text": "Age 60"},
+        dimensions,
+        "qwen-local",
+        "Qwen/Qwen3.6-35B-A3B",
+        "high",
+    )
+
+    assert fields == [
+        {
+            "field_id": "age_bracket",
+            "value": "55–64",
+            "confidence": 1.0,
+            "evidence": "Age 60",
+            "assignment_type": "summary_inference",
+        },
+        {
+            "field_id": "region",
+            "value": None,
+            "confidence": 0.0,
+            "evidence": "",
+            "assignment_type": "unsupported",
+        },
+        {
+            "field_id": "free_text",
+            "value": None,
+            "confidence": 0.0,
+            "evidence": "",
+            "assignment_type": "unsupported",
+        },
+    ]
+
+
 def test_codex_json_backend_passes_reasoning_effort(monkeypatch):
     captured: dict[str, list[str]] = {}
 
@@ -744,6 +911,124 @@ def test_codex_json_backend_passes_reasoning_effort(monkeypatch):
 
     assert rc == 0
     assert "model_reasoning_effort=xhigh" in captured["cmd"]
+
+
+def test_codex_json_backend_schema_is_strict():
+    schema = codex_json_backend.OUTPUT_SCHEMA
+
+    assert schema["additionalProperties"] is False
+    assert set(schema["required"]) == {
+        "fields",
+        "reported_model",
+        "model_source",
+        "model_confidence",
+    }
+    field_schema = schema["properties"]["fields"]["items"]
+    assert field_schema["additionalProperties"] is False
+
+
+def test_qwen_json_backend_calls_openai_compatible_chat_api(monkeypatch):
+    captured: dict[str, object] = {}
+
+    class FakeResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+        def read(self):
+            return json.dumps(
+                {
+                    "model": "Qwen/Qwen3.6-35B-A3B",
+                    "choices": [
+                        {
+                            "message": {
+                                "content": "<think>skip</think>\n{\"fields\": []}",
+                            }
+                        }
+                    ],
+                }
+            ).encode("utf-8")
+
+    def fake_urlopen(request, timeout):
+        captured["url"] = request.full_url
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        captured["headers"] = dict(request.header_items())
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr(qwen_json_backend.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(qwen_json_backend.sys, "stdin", io.StringIO("prompt"))
+    monkeypatch.setenv("QWEN_BASE_URL", "http://127.0.0.1:8000/v1")
+    monkeypatch.setenv("QWEN_API_KEY", "local-token")
+    monkeypatch.setenv("WIKI_COLLAB_REQUESTED_MODEL", "Qwen/Qwen3.6-35B-A3B")
+    monkeypatch.setenv("WIKI_COLLAB_QWEN_MAX_TOKENS", "2048")
+
+    rc = qwen_json_backend.main()
+
+    assert rc == 0
+    assert captured["url"] == "http://127.0.0.1:8000/v1/chat/completions"
+    assert captured["body"]["model"] == "Qwen/Qwen3.6-35B-A3B"
+    assert captured["body"]["max_tokens"] == 2048
+    assert captured["body"]["messages"][0]["role"] == "system"
+    assert captured["body"]["messages"][1]["content"] == "prompt"
+
+
+def test_qwen_transformers_host_generates_openai_chat_completion(monkeypatch):
+    class FakeInputs(dict):
+        def to(self, device):
+            self["device"] = device
+            return self
+
+    class FakeTokenizer:
+        eos_token_id = 99
+
+        def apply_chat_template(self, messages, **kwargs):
+            assert messages[-1]["content"] == "prompt"
+            assert kwargs["tokenize"] is False
+            assert kwargs["add_generation_prompt"] is True
+            assert kwargs["enable_thinking"] is False
+            return "CHAT TEMPLATE"
+
+        def __call__(self, texts, return_tensors):
+            assert texts == ["CHAT TEMPLATE"]
+            assert return_tensors == "pt"
+            return FakeInputs(input_ids=[[1, 2, 3]])
+
+        def batch_decode(self, generated_ids, skip_special_tokens):
+            assert generated_ids == [[4, 5]]
+            assert skip_special_tokens is True
+            return ['{"fields": []}']
+
+    class FakeModel:
+        device = "cuda:0"
+
+        def generate(self, **kwargs):
+            assert kwargs["max_new_tokens"] == 128
+            assert kwargs["do_sample"] is False
+            assert kwargs["pad_token_id"] == 99
+            assert kwargs["device"] == "cuda:0"
+            return [[1, 2, 3, 4, 5]]
+
+    monkeypatch.setattr(
+        qwen_transformers_host,
+        "_load_components",
+        lambda model_id, options: (FakeTokenizer(), FakeModel()),
+    )
+
+    response = qwen_transformers_host.chat_completion(
+        {
+            "model": "Qwen/Qwen3.6-35B-A3B",
+            "messages": [{"role": "user", "content": "prompt"}],
+            "max_tokens": 128,
+            "temperature": 0,
+        },
+        options=qwen_transformers_host.HostOptions(),
+    )
+
+    assert response["model"] == "Qwen/Qwen3.6-35B-A3B"
+    assert response["choices"][0]["message"]["content"] == '{"fields": []}'
 
 
 # --- assignment_runner fixes -------------------------------------------------
@@ -861,6 +1146,24 @@ def test_configure_interactive_uses_claude_choices(tmp_path, monkeypatch):
     assert settings["effort"] == "max"
     assert settings["jobs"] == "8"
     assert settings["command_override"] == ""
+
+
+def test_configured_settings_uses_qwen_default_and_allows_model_alias(tmp_path, monkeypatch):
+    monkeypatch.setattr(assignment_runner, "SETTINGS_PATH", tmp_path / "settings.yaml")
+
+    default_settings = assignment_runner.configured_settings(
+        assignment_runner.parse_args(["--backend", "qwen-local", "--run"])
+    )
+    alias_settings = assignment_runner.configured_settings(
+        assignment_runner.parse_args(
+            ["--backend", "qwen-local", "--model", "local-qwen", "--run"]
+        )
+    )
+
+    assert default_settings["backend"] == "qwen-local"
+    assert default_settings["model"] == "Qwen/Qwen3.6-35B-A3B"
+    assert default_settings["effort"] == "high"
+    assert alias_settings["model"] == "local-qwen"
 
 
 def test_prompt_jobs_accepts_custom_number(monkeypatch):
