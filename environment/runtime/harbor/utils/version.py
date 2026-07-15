@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import importlib.metadata
 
-_DISTRIBUTION_NAMES = ("harbor", "personabench")
+_DISTRIBUTION_NAMES = ("harbor", "matraix")
 
 
 def get_harbor_version(default: str | None = None) -> str | None:

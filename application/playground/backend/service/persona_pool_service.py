@@ -11,8 +11,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Literal
 
-from personabench.persona_dimension_catalog import values_for_dimension
-from personabench.persona_job import (
+from matraix.persona_dimension_catalog import values_for_dimension
+from matraix.persona_job import (
     _stratify_bucket_key,
     load_manifest,
     sample_personas,
@@ -246,7 +246,7 @@ class PersonaPoolService:
         dims = entry.get("dimensions")
         if isinstance(dims, dict):
             return dims
-        from personabench.persona_job import _persona_dimensions
+        from matraix.persona_job import _persona_dimensions
 
         loaded = _persona_dimensions(entry, repo_root=self.repo_root)
         return loaded if isinstance(loaded, dict) else None
@@ -299,7 +299,7 @@ class PersonaPoolService:
     def _persona_card(self, entry: dict[str, Any]) -> dict[str, Any]:
         dims = entry.get("dimensions")
         if not isinstance(dims, dict):
-            from personabench.persona_job import _persona_dimensions
+            from matraix.persona_job import _persona_dimensions
 
             dims = _persona_dimensions(entry, repo_root=self.repo_root) or {}
         display = {
@@ -318,7 +318,7 @@ class PersonaPoolService:
                     if isinstance(raw, dict):
                         display_name = str(raw.get("display_name") or "").strip()
         if not display_name:
-            from personabench.persona_display_name import synthetic_display_name
+            from matraix.persona_display_name import synthetic_display_name
 
             display_name = synthetic_display_name(
                 persona_id,
@@ -409,7 +409,7 @@ class PersonaPoolService:
         card = self._persona_card(entry)
         dims = entry.get("dimensions")
         if not isinstance(dims, dict):
-            from personabench.persona_job import _persona_dimensions
+            from matraix.persona_job import _persona_dimensions
 
             dims = _persona_dimensions(entry, repo_root=self.repo_root) or {}
         full_dimensions = {str(key): str(value) for key, value in dict(dims).items() if value}
@@ -489,7 +489,7 @@ class PersonaPoolService:
         seed: int = 42,
     ) -> dict[str, Any]:
         """Generate (or reuse) a local ``_generated`` pool that covers the filters."""
-        from personabench.persona_generator import (
+        from matraix.persona_generator import (
             PERSONA_SOURCES,
             build_filter_strata,
             filter_feasible_strata,
@@ -631,7 +631,7 @@ class PersonaPoolService:
             [f for f in stratify_fields if str(f).removeprefix("dimensions.").strip()]
         ):
             return None
-        from personabench.persona_generator import build_filter_strata, filter_feasible_strata
+        from matraix.persona_generator import build_filter_strata, filter_feasible_strata
 
         try:
             strata = build_filter_strata(stratify_filters, max_strata=MAX_FILTER_STRATA)

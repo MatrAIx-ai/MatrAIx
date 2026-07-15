@@ -1,6 +1,6 @@
 # FinAI / OpenBB chatbot
 
-Canonical PersonaBench chatbot task for a financial-research assistant exposed through the Playground chat runtime.
+Canonical MatrAIx chatbot task for a financial-research assistant exposed through the Playground chat runtime.
 
 Product under test: **OpenBB** (MCP data layer) + MatrAIx finance chat adapter — ported from [PR #86](https://github.com/MatrAIx-ai/MatrAIx/pull/86).
 

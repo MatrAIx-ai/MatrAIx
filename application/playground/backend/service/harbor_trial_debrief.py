@@ -128,7 +128,7 @@ def _load_playground_persona(repo_root: Path, persona_rel: str | None) -> Person
             except KeyError:
                 pass
             try:
-                from personabench.agents.persona.loader import load_persona as load_harbor_persona
+                from matraix.agents.persona.loader import load_persona as load_harbor_persona
 
                 prev = os.getcwd()
                 try:

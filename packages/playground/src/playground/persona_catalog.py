@@ -14,7 +14,7 @@ from playground.types import Persona
 #: punctuation (cities, sentences, ids) is left exactly as authored.
 _ENUM_VALUE_RE = re.compile(r"[a-z0-9]+(?:_[a-z0-9]+)*")
 
-# Canonical persona source: the checked-in PersonaBench dev pool.
+# Canonical persona source: the checked-in Playground dev pool.
 _CURATED_DIR = persona_data_dir(Path(__file__))
 
 # Keys that are loader bookkeeping rather than persona content.

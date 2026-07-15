@@ -52,7 +52,9 @@ import type {
   SurveyInstrument,
   SurveyQuestion,
   SurveyTrajectoryEvent,
+  TrialEvaluationArtifact,
   UserFeedbackArtifact,
+  WebTrace,
 } from "@/lib/types";
 
 export interface RunDetailProps {
@@ -106,18 +108,20 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
       <StudioPageHeader
         compact
         eyebrow="MatrAIx · Runs"
-        title={harborTrial.trialName}
+        title={metaLine || harborTrial.trialName}
         subtitle={
-          <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[14px] text-text-variant">
-            <span className="font-mono text-[13px]" title={harborTrial.jobName}>
-              Job {harborTrial.jobName}
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-text-variant">
+            <span className="font-mono text-[12px] opacity-70" title={harborTrial.trialName}>
+              {harborTrial.trialName}
             </span>
-            {metaLine ? (
+            <span className="text-outline" aria-hidden>·</span>
+            <span className="font-mono text-[12px] opacity-70" title={harborTrial.jobName}>
+              {harborTrial.jobName}
+            </span>
+            {absoluteWhen ? (
               <>
-                <span className="text-outline" aria-hidden>
-                  ·
-                </span>
-                <span title={absoluteWhen ?? undefined}>{metaLine}</span>
+                <span className="text-outline" aria-hidden>·</span>
+                <span className="text-[12px]" title={absoluteWhen}>{fmtRunDateFriendly(absoluteWhen)}</span>
               </>
             ) : null}
           </span>
@@ -134,6 +138,14 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
               disabled={query.isFetching}
             >
               Refresh
+            </StudioToolbarButton>
+            <StudioToolbarButton
+              icon="picture_as_pdf"
+              onClick={() =>
+                api.downloadHarborTrialReportPdf(harborTrial.jobName, harborTrial.trialName)
+              }
+            >
+              Download PDF
             </StudioToolbarButton>
           </>
         }
@@ -394,12 +406,6 @@ function UserFeedbackPanel({
             ) : null}
           </div>
 
-          {reason ? (
-            <div className="rounded-lg border border-outline/40 bg-surface/40 p-4 text-[14px] leading-relaxed text-text-variant">
-              <span className="font-medium text-text-main">Why:</span> {reason}
-            </div>
-          ) : null}
-
           {extraEntries.length > 0 ? (
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {extraEntries.map(([key, value]) => (
@@ -415,6 +421,17 @@ function UserFeedbackPanel({
                   </div>
                 </div>
               ))}
+            </div>
+          ) : null}
+
+          {reason ? (
+            <div className="rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm">
+              <div className="text-[12px] uppercase tracking-wide text-text-dim">
+                Reasoning
+              </div>
+              <div className="mt-1.5 text-[14px] leading-relaxed text-text-variant">
+                {reason}
+              </div>
             </div>
           ) : null}
         </div>
@@ -976,10 +993,62 @@ function WebDebrief({ run }: { run: RunDetailView }) {
 // OS app debrief
 // ===========================================================================
 
+function TrialDecisionPanel({
+  trialEvaluation,
+}: {
+  trialEvaluation?: TrialEvaluationArtifact | null;
+}) {
+  if (!trialEvaluation) return null;
+
+  const ignoredTypes = new Set(["task_outcome", "user_feedback", "feedback", "persona_alignment"]);
+  const contexts = trialEvaluation.contexts.filter(
+    (c) => c.contextType && !ignoredTypes.has(c.contextType),
+  );
+  if (contexts.length === 0) return null;
+
+  return (
+    <DebriefPanel title="Task output" icon="analytics" bodyClassName="p-4">
+      <div className="space-y-4">
+        {contexts.map((ctx) => (
+          <div
+            key={ctx.key}
+            className="rounded-lg border border-outline/40 bg-surface/40 p-3 backdrop-blur-sm"
+          >
+            <div className="flex items-center gap-2 text-[12px] font-medium uppercase tracking-wide text-text-dim">
+              {ctx.label}
+            </div>
+            <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {ctx.facets
+                .filter((f) => f.value != null && f.value !== "")
+                .map((f) => (
+                  <div key={f.key}>
+                    <div className="text-[11px] text-text-dim">{f.label}</div>
+                    <div
+                      className={`mt-0.5 text-[13px] leading-relaxed ${
+                        f.role === "explanation"
+                          ? "col-span-full text-text-variant"
+                          : f.role === "primary"
+                            ? "font-semibold text-text-main"
+                            : "text-text-main"
+                      }`}
+                    >
+                      {String(f.value)}
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </DebriefPanel>
+  );
+}
+
 function OsAppDebrief({ run }: { run: RunDetailView }) {
   const runRecord = run as Record<string, unknown>;
   const osAppResult = (runRecord.osAppResult as OsAppResult | null | undefined) ?? null;
-  const trace = runRecord.osAppTrace as { events?: unknown[] } | null | undefined;
+  const trace = (runRecord.osAppTrace ?? run.webTrace ?? run.trace ?? null) as WebTrace | null;
+  const events = trace?.events ?? [];
   const feedback = resolveUserFeedback(run);
 
   return (
@@ -995,11 +1064,24 @@ function OsAppDebrief({ run }: { run: RunDetailView }) {
         <OsAppEvalScorecard
           osAppResult={osAppResult}
           verifier={run.verifier ?? null}
-          traceStepCount={trace?.events?.length ?? 0}
+          traceStepCount={events.length}
           phase="done"
         />
       </DebriefPanel>
+      <TrialDecisionPanel trialEvaluation={run.trialEvaluation} />
       <UserFeedbackPanel feedback={feedback} />
+      <DebriefPanel
+        title={`Desktop trace · ${events.length} step${events.length === 1 ? "" : "s"}`}
+        icon="route"
+      >
+        {events.length === 0 ? (
+          <DashedNote>No desktop steps were captured for this run.</DashedNote>
+        ) : (
+          <div className="p-4">
+            <HarborTraceReplay trace={trace!} />
+          </div>
+        )}
+      </DebriefPanel>
     </TrialDebriefChrome>
   );
 }

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 
-from personabench.agents.persona.cua_submission import (
+from matraix.agents.persona.cua_submission import (
     extract_ecommerce_interaction_from_trajectory,
 )
 

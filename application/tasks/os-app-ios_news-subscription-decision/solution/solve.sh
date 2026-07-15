@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p /tmp/personabench-ios-news-subscription-decision
+mkdir -p /tmp/os-app-ios-news-subscription-decision
 
-cat > /tmp/personabench-ios-news-subscription-decision/decision.json <<'EOF'
+cat > /tmp/os-app-ios-news-subscription-decision/decision.json <<'EOF'
 {
   "app_reviewed": "News",
   "browsed_full_offer": true,

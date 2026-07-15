@@ -1,5 +1,5 @@
 version = "1.0"
-artifacts = [ "/tmp/personabench-ios-news-subscription-decision",]
+artifacts = [ "/tmp/os-app-ios-news-subscription-decision",]
 
 [task]
 name = "application/os-app-ios-news-subscription-decision"
@@ -24,7 +24,7 @@ device_type = "iPhone-17"
 runtime = "iOS-26-4"
 
 [verifier]
-timeout_sec = 300.0
+timeout_sec = 120.0
 
 [agent]
 timeout_sec = 1800.0
@@ -37,6 +37,6 @@ storage_mb = 40960
 gpus = 0
 
 [environment.healthcheck]
-command = "mkdir -p /tmp/personabench-ios-news-subscription-decision"
+command = "mkdir -p /tmp/os-app-ios-news-subscription-decision"
 timeout_sec = 30.0
 retries = 3

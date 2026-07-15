@@ -1,6 +1,6 @@
-# Contributing to PersonaBench
+# Contributing to MatrAIx
 
-PersonaBench is built by three teams — **Persona**, **Application**, and
+MatrAIx is built by three teams — **Persona**, **Application**, and
 **Environment**. This guide covers workflow (Issues, Discussions, PRs), where
 each team works in the repo, and how contribution is recognized.
 

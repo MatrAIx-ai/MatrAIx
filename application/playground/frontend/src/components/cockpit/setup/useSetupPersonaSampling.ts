@@ -25,15 +25,15 @@ export function useSetupPersonaSampling(
   taskPath: string | null = null,
 ) {
   const fallbackPersonaModel =
-    taskKind === "os-app"
-      ? "anthropic/claude-sonnet-4-6"
-      : options?.environment.personaModel ?? "anthropic/claude-haiku-4-5";
+    options?.environment.personaModel ?? "anthropic/claude-haiku-4-5";
   const normalizedPath = taskPath?.trim() || null;
   const [initial] = useState(() =>
     readCockpitPersonaSetup(taskKind, fallbackPersonaModel, normalizedPath),
   );
 
-  const [personaModel, setPersonaModel] = useState<string>(initial.personaModel);
+  const [personaModel, setPersonaModel] = useState<string>(
+    initial.personaModel === "anthropic/claude-sonnet-4-6" ? fallbackPersonaModel : initial.personaModel,
+  );
   const [samplingMode, setSamplingMode] = useState<PersonaSamplingMode>(initial.samplingMode);
   const [selectedPersonaIds, setSelectedPersonaIds] = useState<string[]>(initial.selectedPersonaIds);
   const [groupFilters, setGroupFilters] = useState<PersonaDimensionFilters>(initial.groupFilters);
@@ -134,11 +134,13 @@ export function useSetupPersonaSampling(
     const strategy = strategyQuery.data;
     const dismissed = stored.taskDefaultStrategyDismissed === true;
 
+    const hasTaskSpecificStore = hasStoredPersonaSetup(path);
+    const effectiveModel = hasTaskSpecificStore ? stored.personaModel : fallbackPersonaModel;
+
     if (strategy && !dismissed) {
-      // Task has persona_strategy.json → default On (also repairs race-poisoned Off).
       const applied = setupFromPersonaStrategy(strategy, fallbackPersonaModel, {
         ...defaultPersonaSetup(fallbackPersonaModel),
-        personaModel: stored.personaModel,
+        personaModel: effectiveModel,
         parallelTrials: stored.parallelTrials,
       });
       applySetupRecord(applied);
@@ -146,7 +148,7 @@ export function useSetupPersonaSampling(
       return;
     }
 
-    if (hasStoredPersonaSetup(path)) {
+    if (hasTaskSpecificStore) {
       applySetupRecord({
         ...stored,
         useTaskDefaultStrategy: Boolean(strategy) && stored.useTaskDefaultStrategy,
@@ -158,7 +160,7 @@ export function useSetupPersonaSampling(
 
     const applied = setupFromPersonaStrategy(strategy, fallbackPersonaModel, {
       ...defaultPersonaSetup(fallbackPersonaModel),
-      personaModel: stored.personaModel,
+      personaModel: effectiveModel,
       parallelTrials: stored.parallelTrials,
     });
     applySetupRecord(applied);

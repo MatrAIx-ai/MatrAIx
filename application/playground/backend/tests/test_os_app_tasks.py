@@ -8,6 +8,7 @@ def test_list_os_app_eval_tasks_includes_harbor_computer_use_tasks():
     assert "computer-use-macos-calendar-reminder-handoff" in ids
     assert "computer-use-ios-photo-access-review" in ids
     assert "os-app-ios-news-subscription-decision" in ids
+    assert "os-app-macos-shortcuts-gallery-picks" in ids
     assert all(task.meta_type == "os-app" for task in tasks)
 
 

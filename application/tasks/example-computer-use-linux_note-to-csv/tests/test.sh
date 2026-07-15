@@ -10,7 +10,7 @@ import os
 import sys
 from pathlib import Path
 
-root = Path("/tmp/personabench-linux-note-to-csv")
+root = Path("/tmp/os-app-linux-note-to-csv")
 csv_path = root / "cleaned_list.csv"
 submission_path = root / "submission.json"
 if not csv_path.is_file():
@@ -99,7 +99,7 @@ feedback = load_user_feedback()
 
 verifier_dir = Path(
     os.environ.get("HARBOR_VERIFIER_DIR")
-    or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+    or os.environ.get("HARBOR_VERIFIER_DIR")
     or "/logs/verifier"
 )
 try:
@@ -378,7 +378,7 @@ if feedback is not None:
     json.dumps(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,

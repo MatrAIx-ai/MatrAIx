@@ -17,7 +17,7 @@ News+ subscription from the offer screen.
      (do not complete payment).
    - If you **would not subscribe**: **do not** tap Get Started; stop the task.
 
-Save your decision to `/tmp/personabench-ios-news-subscription-decision/decision.json`:
+Hand in your decision as JSON:
 
 ```json
 {

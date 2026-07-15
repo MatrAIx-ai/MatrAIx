@@ -191,7 +191,7 @@ def validate_persona_strategy_file(
         elif sample_size is not None and per_cell is None:
             # sampleSize-only stratified: total N must cover ≥1 persona per cell.
             try:
-                from personabench.persona_generator import (
+                from matraix.persona_generator import (
                     build_filter_strata,
                     filter_feasible_strata,
                 )

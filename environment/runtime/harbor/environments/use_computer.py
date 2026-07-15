@@ -35,6 +35,7 @@ except ImportError:
 
 
 _VALID_PLATFORMS = frozenset({"macos", "ios", "ubuntu", "windows"})
+_FILE_TRANSFER_CONCURRENCY = 8
 _PLATFORM_ALIASES = {
     "mac": "macos",
     "osx": "macos",
@@ -188,6 +189,7 @@ class UseComputerEnvironment(BaseEnvironment):
         self._sandbox: _SdkSandbox | None = None
         self._sandbox_id: str | None = None
         self._vm_ip: str | None = None
+        self._vnc_url: str | None = None
 
         super().__init__(
             environment_dir=environment_dir,
@@ -238,6 +240,10 @@ class UseComputerEnvironment(BaseEnvironment):
     def sandbox_id(self) -> str | None:
         return self._sandbox_id
 
+    @property
+    def vnc_url(self) -> str | None:
+        return self._vnc_url
+
     def _validate_definition(self) -> None:
         if self._platform == "windows" and self.task_env_config.os != TaskOS.WINDOWS:
             raise ValueError(
@@ -254,6 +260,7 @@ class UseComputerEnvironment(BaseEnvironment):
         self._sandbox = await self._client.create(**self._create_kwargs())
         self._sandbox_id = getattr(self._sandbox, "sandbox_id", None)
         self._vm_ip = getattr(self._sandbox, "vm_ip", None)
+        self._vnc_url = getattr(self._sandbox, "vnc_url", None) or None
 
         if self._keepalive_interval > 0:
             await self._sandbox.start_keepalive(interval=self._keepalive_interval)
@@ -286,6 +293,7 @@ class UseComputerEnvironment(BaseEnvironment):
             self._sandbox = None
             self._sandbox_id = None
             self._vm_ip = None
+            self._vnc_url = None
 
     async def exec(
         self,
@@ -338,17 +346,30 @@ class UseComputerEnvironment(BaseEnvironment):
             await self._ensure_remote_dirs(
                 [remote_dir, *(self._remote_parent(path) for _, path in remote_files)]
             )
-            for local_path, remote_path in remote_files:
-                await self._upload_service_file(local_path, remote_path)
+            sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+            async def _ul_svc(local: Path, remote: str) -> None:
+                async with sem:
+                    await self._upload_service_file(local, remote)
+
+            await asyncio.gather(*[_ul_svc(lp, rp) for lp, rp in remote_files])
             return
 
         await self._ensure_remote_dir(remote_dir)
-        for local_path in local_files:
-            remote_path = self._join_remote_path(
-                remote_dir,
-                local_path.relative_to(source),
+        file_pairs = [
+            (
+                local_path,
+                self._join_remote_path(remote_dir, local_path.relative_to(source)),
             )
-            await self.upload_file(local_path, remote_path)
+            for local_path in local_files
+        ]
+        sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+        async def _ul(local: Path, remote: str) -> None:
+            async with sem:
+                await self.upload_file(local, remote)
+
+        await asyncio.gather(*[_ul(lp, rp) for lp, rp in file_pairs])
 
     async def download_file(self, source_path: str, target_path: Path | str) -> None:
         if self._service_download_path:
@@ -385,6 +406,7 @@ class UseComputerEnvironment(BaseEnvironment):
                 f"Failed to list remote directory {remote_dir!r}: {output}"
             )
 
+        files: list[tuple[str, Path]] = []
         for line in (result.stdout or "").splitlines():
             remote_file = line.strip()
             if not remote_file:
@@ -392,7 +414,17 @@ class UseComputerEnvironment(BaseEnvironment):
             rel_path = self._relative_remote_path(remote_file, remote_dir)
             if rel_path == Path():
                 continue
-            await self.download_file(remote_file, target / rel_path)
+            files.append((remote_file, target / rel_path))
+
+        if not files:
+            return
+        sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+        async def _dl(remote: str, local: Path) -> None:
+            async with sem:
+                await self.download_file(remote, local)
+
+        await asyncio.gather(*[_dl(r, loc) for r, loc in files])
 
     def _create_kwargs(self) -> dict[str, Any]:
         kwargs: dict[str, Any] = {"type": self._platform}

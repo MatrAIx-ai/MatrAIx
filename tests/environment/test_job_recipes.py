@@ -10,8 +10,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 RECIPES_DIR = ROOT / "configs/jobs"
 EXPECTED_CURATED_RECIPES = {
     "configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml",
-    "configs/jobs/example-job-recipe/personaBench-example-survey-local.yaml",
-    "configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml",
+    "configs/jobs/example-job-recipe/playground-example-survey-local.yaml",
+    "configs/jobs/persona-task-grounding-job-recipe/playground-example-survey-product-feedback-economic-motivation-pg2.yaml",
 }
 
 

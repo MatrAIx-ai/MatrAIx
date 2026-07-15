@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactType": "personabench.trial_evaluation",
+  "artifactType": "matraix.trial_evaluation",
   "taskType": "os-app",
   "presenceCheck": {
     "passed": true,
@@ -10,7 +10,7 @@
     "missingArtifacts": []
   },
   "sourceArtifacts": {
-    "decision": "/tmp/personabench-ios-news-subscription-decision/decision.json"
+    "decision": "/tmp/os-app-ios-news-subscription-decision/decision.json"
   },
   "contexts": [
     {

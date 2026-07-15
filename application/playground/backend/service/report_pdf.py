@@ -599,6 +599,95 @@ def build_batch_report_pdf(
     return bytes(pdf.output())
 
 
+def _render_persona_dimensions(pdf: _ReportPDF, dims: dict[str, Any]) -> None:
+    """Render persona dimensions grouped by category for readability."""
+    _CATEGORIES: dict[str, list[str]] = {
+        "Demographics": [
+            "age_bracket", "gender_identity", "region", "urbanicity",
+            "socioeconomic_band", "cultural_background", "life_stage",
+        ],
+        "Education & Career": [
+            "highest_education", "academic_field", "domain", "specialty",
+            "seniority_level", "work_sector", "organization_type", "years_experience",
+        ],
+        "Personality & Cognition": [
+            "personality_trait", "risk_appetite", "decision_style", "cognitive_profile",
+            "skepticism", "numeracy_comfort", "open_mindedness",
+        ],
+        "Communication": [
+            "primary_language", "multilingualism", "register", "verbosity",
+            "formality", "directness", "humor_style", "politeness",
+        ],
+        "Context & Intent": [
+            "current_mood", "goal", "request_type", "trust_level",
+            "time_pressure", "interaction_device",
+        ],
+    }
+    categorized: dict[str, list[tuple[str, str]]] = {}
+    uncategorized: list[tuple[str, str]] = []
+
+    dim_items = list(dims.items())
+    for key, value in dim_items:
+        placed = False
+        for cat, keys in _CATEGORIES.items():
+            if key in keys:
+                categorized.setdefault(cat, []).append((_humanize(key), _safe(value)))
+                placed = True
+                break
+        if not placed:
+            uncategorized.append((_humanize(key), _safe(value)))
+
+    for cat in _CATEGORIES:
+        items = categorized.get(cat)
+        if not items:
+            continue
+        pdf.ensure_space(10)
+        pdf.set_font("Helvetica", "B", 9)
+        pdf.set_text_color(100, 116, 139)
+        pdf.cell(0, 5, _safe(cat), new_x="LMARGIN", new_y="NEXT")
+        pdf.kv_block(items)
+
+    if uncategorized:
+        pdf.ensure_space(10)
+        pdf.set_font("Helvetica", "B", 9)
+        pdf.set_text_color(100, 116, 139)
+        pdf.cell(0, 5, "Other", new_x="LMARGIN", new_y="NEXT")
+        pdf.kv_block(uncategorized)
+
+
+def _render_trial_eval_contexts(pdf: _ReportPDF, trial_eval: dict[str, Any]) -> None:
+    """Render structured output contexts (task decision, outcome) as labeled cards."""
+    contexts = trial_eval.get("contexts") if isinstance(trial_eval.get("contexts"), list) else []
+    ignored = {"task_outcome", "user_feedback", "feedback", "persona_alignment"}
+    relevant = [c for c in contexts if isinstance(c, dict) and c.get("contextType") not in ignored]
+    if not relevant:
+        return
+
+    for ctx in relevant:
+        pdf.card_start()
+        label = ctx.get("label") or ctx.get("key") or "Output"
+        pdf.h3(_safe(label, limit=200))
+        facets = ctx.get("facets") if isinstance(ctx.get("facets"), list) else []
+        rows: list[tuple[str, str]] = []
+        long_texts: list[tuple[str, str]] = []
+        for facet in facets:
+            if not isinstance(facet, dict):
+                continue
+            f_label = _safe(facet.get("label") or facet.get("key") or "")
+            f_value = _safe(facet.get("value") or "", limit=600)
+            if not f_value:
+                continue
+            if facet.get("role") == "explanation" or len(f_value) > 120:
+                long_texts.append((f_label, f_value))
+            else:
+                rows.append((f_label, f_value))
+        if rows:
+            pdf.kv_block(rows)
+        for lt_label, lt_value in long_texts:
+            pdf.muted(lt_label)
+            pdf.body(lt_value, size=9)
+
+
 def build_trial_report_pdf(
     *,
     job_name: str,
@@ -624,6 +713,25 @@ def build_trial_report_pdf(
         ],
     )
 
+    # ---- Task Context & Instruction ----
+    instruction_md = debrief.get("instructionMarkdown") or ""
+    context_md = debrief.get("contextMarkdown") or ""
+    if context_md or instruction_md:
+        pdf.section("Task")
+        if context_md:
+            pdf.h3("Context")
+            for para in context_md.split("\n\n")[:20]:
+                text = para.strip()
+                if text:
+                    pdf.body(text, size=9)
+        if instruction_md:
+            pdf.h3("Instruction")
+            for para in instruction_md.split("\n\n")[:30]:
+                text = para.strip()
+                if text:
+                    pdf.body(text, size=9)
+
+    # ---- Persona ----
     pdf.section("Persona")
     pdf.kv_block(
         [
@@ -634,42 +742,59 @@ def build_trial_report_pdf(
     )
     dims = persona.get("dimensions") if isinstance(persona.get("dimensions"), dict) else {}
     if dims:
-        pdf.body(
-            ", ".join(f"{_safe(k)}={_safe(v)}" for k, v in list(dims.items())[:16]),
-            size=9,
-        )
+        _render_persona_dimensions(pdf, dims)
 
+    # ---- Evaluation scorecard ----
     verifier = debrief.get("verifier") if isinstance(debrief.get("verifier"), dict) else {}
-    feedback = (
-        debrief.get("userFeedback") if isinstance(debrief.get("userFeedback"), dict) else {}
-    )
+    if verifier:
+        pdf.section("Evaluation")
+        score_pct = ""
+        reward = verifier.get("reward")
+        if reward is not None:
+            try:
+                score_pct = f"{int(float(reward) * 100)}%"
+            except (ValueError, TypeError):
+                score_pct = _fmt_num(reward)
+        pdf.metric_strip([
+            ("Score", score_pct or _fmt_num(reward)),
+            ("Passed", "Yes" if verifier.get("passed") else "No"),
+        ])
+        if verifier.get("detail"):
+            pdf.body(_safe(verifier.get("detail"), limit=800), size=9)
+
+    # ---- Task Output (structured decision from trialEvaluation) ----
     trial_eval = (
         debrief.get("trialEvaluation") if isinstance(debrief.get("trialEvaluation"), dict) else {}
     )
-    if verifier or feedback or trial_eval:
-        pdf.section("Evaluation")
+    if trial_eval:
+        pdf.section("Task output")
+        _render_trial_eval_contexts(pdf, trial_eval)
+
+    # ---- Persona Self-Report (userFeedback) ----
+    feedback = (
+        debrief.get("userFeedback") if isinstance(debrief.get("userFeedback"), dict) else {}
+    )
+    if feedback:
+        pdf.section("Persona self-report")
         rows: list[tuple[str, str]] = []
-        if verifier:
-            rows.append(("Verifier reward", _fmt_num(verifier.get("reward"))))
-            rows.append(("Verifier passed", _fmt_num(verifier.get("passed"))))
-        if trial_eval:
-            for key in ("overall", "score", "passed", "summary"):
-                if key in trial_eval:
-                    rows.append((key, _safe(trial_eval.get(key), limit=200)))
+        long_texts: list[tuple[str, str]] = []
+        for key, value in list(feedback.items())[:25]:
+            if key in ("schemaVersion",):
+                continue
+            k_label = _humanize(key)
+            if isinstance(value, (dict, list)):
+                long_texts.append((k_label, _safe(value, limit=600)))
+            elif len(str(value)) > 120:
+                long_texts.append((k_label, _safe(value, limit=600)))
+            else:
+                rows.append((k_label, _safe(value)))
         if rows:
             pdf.kv_block(rows)
-        if verifier.get("details"):
-            pdf.body(_safe(verifier.get("details"), limit=800), size=9)
-        if feedback:
-            for key, value in list(feedback.items())[:20]:
-                if key in ("schemaVersion",):
-                    continue
-                if isinstance(value, (dict, list)):
-                    pdf.muted(_safe(key))
-                    pdf.body(_safe(value, limit=400), size=9)
-                else:
-                    pdf.kv_block([(_safe(key), _safe(value))])
+        for lt_label, lt_value in long_texts:
+            pdf.muted(lt_label)
+            pdf.body(lt_value, size=9)
 
+    # ---- App-type specific content ----
     if app_type == "survey":
         survey = debrief.get("surveyResult") if isinstance(debrief.get("surveyResult"), dict) else {}
         instrument = survey.get("instrument") if isinstance(survey.get("instrument"), dict) else {}
@@ -711,15 +836,7 @@ def build_trial_report_pdf(
         pdf.kv_block(rows)
 
     elif app_type == "os-app":
-        os_app = debrief.get("osAppResult") if isinstance(debrief.get("osAppResult"), dict) else {}
-        pdf.section("OS app result")
-        pdf.kv_block(
-            [
-                (_safe(key), _safe(os_app.get(key), limit=240))
-                for key in ("success", "score", "summary", "artifactPath")
-                if key in os_app
-            ]
-        )
+        pass
 
     else:
         metrics = (

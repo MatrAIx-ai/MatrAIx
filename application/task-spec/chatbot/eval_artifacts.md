@@ -26,7 +26,7 @@ directory on the host.
 | Host trial (`user_sim_chat`) | `jobs/<job>/<trial>/artifacts/app/output/` |
 
 Harbor rewrites `/app/output/...` in shell commands to the resolved path. The
-verifier reads the same directory through `PERSONABENCH_OUTPUT_DIR` /
+verifier reads the same directory through `PLAYGROUND_OUTPUT_DIR` /
 `MATRIX_OUTPUT_DIR`, which the host environment sets to that mapped location.
 
 Collected artifacts also appear under `jobs/<job>/<trial>/artifacts/app/output/`

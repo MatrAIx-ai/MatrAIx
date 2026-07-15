@@ -28,7 +28,7 @@ else
   if [ ! -f "${TESTS_DIR}/test_state.py" ] && [ -f "${SCRIPT_DIR}/test_state.py" ]; then
     TESTS_DIR="${SCRIPT_DIR}"
   fi
-  VERIFIER_DIR="${HARBOR_VERIFIER_DIR:-${PERSONABENCH_VERIFIER_DIR:-/logs/verifier}}"
+  VERIFIER_DIR="${HARBOR_VERIFIER_DIR:-${HARBOR_VERIFIER_DIR:-/logs/verifier}}"
   if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null; then
     VERIFIER_DIR="${TRIAL_ROOT}/verifier"
   fi
@@ -67,7 +67,7 @@ async def test_host_exec_exports_verifier_and_tests_dirs(tmp_path: Path) -> None
         '#!/usr/bin/env bash\n'
         'printf "tests=%s\\n" "${HARBOR_TESTS_DIR:-}"\n'
         'printf "verifier=%s\\n" "${HARBOR_VERIFIER_DIR:-}"\n'
-        'printf "output=%s\\n" "${PERSONABENCH_OUTPUT_DIR:-}"\n',
+        'printf "output=%s\\n" "${PLAYGROUND_OUTPUT_DIR:-}"\n',
         encoding="utf-8",
     )
     env = HostEnvironment(

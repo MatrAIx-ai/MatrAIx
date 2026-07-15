@@ -43,9 +43,51 @@ type CockpitPersonaSetupStore = {
 
 const STORAGE_KEY = "playground.cockpitPersonaSetupByTaskPath";
 const LEGACY_STORAGE_KEY = "playground.cockpitPersonaSetupByTask";
+const MODEL_MIGRATION_KEY = "playground.cockpitModelMigrated_v2";
+const OLD_DEFAULT_MODEL = "anthropic/claude-sonnet-4-6";
+const NEW_DEFAULT_MODEL = "anthropic/claude-haiku-4-5";
+
+/**
+ * One-shot migration: replace the old os-app default (Sonnet 4.6) with
+ * the new default (Haiku 4.5) in every cached persona setup record.
+ */
+function migrateDefaultModelOnce(): void {
+  if (typeof window === "undefined") return;
+  if (window.localStorage.getItem(MODEL_MIGRATION_KEY)) return;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const store = JSON.parse(raw) as CockpitPersonaSetupStore;
+      let changed = false;
+      if (store.byTaskPath) {
+        for (const record of Object.values(store.byTaskPath)) {
+          if (record.personaModel === OLD_DEFAULT_MODEL) {
+            record.personaModel = NEW_DEFAULT_MODEL;
+            changed = true;
+          }
+        }
+      }
+      if (store.byKind) {
+        for (const record of Object.values(store.byKind)) {
+          if (record && record.personaModel === OLD_DEFAULT_MODEL) {
+            record.personaModel = NEW_DEFAULT_MODEL;
+            changed = true;
+          }
+        }
+      }
+      if (changed) {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+      }
+    }
+  } catch {
+    /* ignore */
+  }
+  window.localStorage.setItem(MODEL_MIGRATION_KEY, "1");
+}
 
 function readStore(): CockpitPersonaSetupStore {
   if (typeof window === "undefined") return {};
+  migrateDefaultModelOnce();
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (raw) {
@@ -101,7 +143,7 @@ function normalizeRecord(
     parallelTrials:
       typeof record.parallelTrials === "number" && record.parallelTrials > 0 ? record.parallelTrials : 2,
     personaModel:
-      typeof record.personaModel === "string" && record.personaModel
+      typeof record.personaModel === "string" && record.personaModel && record.personaModel !== OLD_DEFAULT_MODEL
         ? record.personaModel
         : fallbackPersonaModel,
     personaPool:
