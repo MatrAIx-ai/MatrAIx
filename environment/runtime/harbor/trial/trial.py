@@ -347,6 +347,7 @@ class Trial(ABC):
     async def _prepare(self) -> None:
         await self._setup_agent_environment()
         await self.agent_environment.run_healthcheck()
+        await self._upload_task_inputs()
         await self._upload_injected_skills()
         with self.agent_environment.with_default_user(self.task.config.agent.user):
             await self._setup_agent()
@@ -446,15 +447,29 @@ class Trial(ABC):
         self._are_agent_logs_downloaded = True
 
     async def _upload_agent_logs(self) -> None:
-        """Upload locally-generated agent logs back to non-mounted environments."""
+        """Upload locally-generated agent logs back to non-mounted environments.
+
+        Skips image files (screenshots) that already exist on remote environments
+        since they were captured there and only downloaded for LLM processing.
+        """
         if self.agent_environment.capabilities.mounted:
             return
 
+        _SKIP_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
+        source = self.paths.agent_dir
+        target = self.agent_env_paths.agent_dir.as_posix()
+
         try:
-            await self.agent_environment.upload_dir(
-                source_dir=self.paths.agent_dir,
-                target_dir=self.agent_env_paths.agent_dir.as_posix(),
-            )
+            files_to_upload = [
+                p for p in source.rglob("*")
+                if p.is_file() and p.suffix.lower() not in _SKIP_SUFFIXES
+            ]
+            if not files_to_upload:
+                return
+            for local_path in files_to_upload:
+                rel = local_path.relative_to(source)
+                remote_path = f"{target}/{rel.as_posix()}"
+                await self.agent_environment.upload_file(local_path, remote_path)
         except Exception:
             self.logger.error("Failed to upload agent logs back to environment")
 
@@ -995,6 +1010,24 @@ class Trial(ABC):
             return self.agent_env_paths.default_skills_dir.as_posix()
         return None
 
+    async def _upload_task_inputs(self) -> None:
+        """Upload task input/ files to non-mounted remote environments.
+
+        For Docker environments the input directory is bind-mounted at /app/input.
+        Remote VMs (use.computer, etc.) don't support bind mounts, so we upload
+        the files explicitly to the same canonical path.
+        """
+        if self.agent_environment.capabilities.mounted:
+            return
+
+        input_dir = self.task.paths.task_dir / "input"
+        if not input_dir.is_dir():
+            return
+
+        target = "/app/input"
+        self.logger.debug("Uploading task input/ to %s", target)
+        await self.agent_environment.upload_dir(input_dir, target)
+
     async def _upload_injected_skills(self) -> None:
         if not self._injected_skills:
             return
@@ -1027,8 +1060,17 @@ class Trial(ABC):
         self.result.environment_setup = TimingInfo(started_at=self._now())
         try:
             await self._start_agent_environment()
+            self._write_vnc_url()
         finally:
             self.result.environment_setup.finished_at = self._now()
+
+    def _write_vnc_url(self) -> None:
+        vnc_url = getattr(self.agent_environment, "vnc_url", None)
+        if vnc_url:
+            (self.paths.trial_dir / "vnc_url.txt").write_text(vnc_url)
+        sandbox_id = getattr(self.agent_environment, "sandbox_id", None)
+        if sandbox_id:
+            (self.paths.trial_dir / "sandbox_id.txt").write_text(str(sandbox_id))
 
     async def _start_agent_environment(self) -> None:
         try:

@@ -78,7 +78,9 @@ class Task:
             self.instruction = ""
         else:
             self.instruction = self._append_extra_instructions(
-                strip_canary(self.paths.instruction_path.read_text()),
+                self._prepend_context(
+                    strip_canary(self.paths.instruction_path.read_text()),
+                ),
             )
 
     @property
@@ -189,6 +191,22 @@ class Task:
             extra_instructions.append(resolved_path.read_text())
         return extra_instructions
 
+    def _prepend_context(self, instruction: str) -> str:
+        """Prepend input/context.md content to the instruction if it exists.
+
+        This ensures the agent receives background context as part of its prompt
+        regardless of environment type (Docker mount or remote VM).
+        """
+        context_path = self._task_dir / "input" / "context.md"
+        if not context_path.exists():
+            return instruction
+        context = context_path.read_text().strip()
+        if not context:
+            return instruction
+        return (
+            f"<context>\n{context}\n</context>\n\n{instruction}"
+        )
+
     def _append_extra_instructions(self, instruction: str) -> str:
         return "\n\n".join([instruction, *self._extra_instructions])
 
@@ -199,7 +217,7 @@ class Task:
     def step_instruction(self, step_name: str) -> str:
         path = self.paths.step_instruction_path(step_name)
         return self._append_extra_instructions(
-            strip_canary(path.read_text()),
+            self._prepend_context(strip_canary(path.read_text())),
         )
 
     @property

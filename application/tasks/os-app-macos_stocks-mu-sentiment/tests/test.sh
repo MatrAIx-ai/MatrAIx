@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -uo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
 
+# Ensure VERIFIER_DIR exists and is writable; fall back to /tmp if not.
+if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null || ! [ -w "${VERIFIER_DIR}" ]; then
+  VERIFIER_DIR="/tmp/verifier_output"
+  mkdir -p "${VERIFIER_DIR}"
+fi
+export VERIFIER_DIR
+
+set +e
 python3 <<'PY'
 import json
 import os
@@ -11,7 +19,7 @@ import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/os-app-ios-news-subscription-decision/decision.json")
+path = Path("/tmp/os-app-macos-stocks-mu-sentiment/sentiment.json")
 
 if not path.is_file():
     logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
@@ -31,42 +39,78 @@ if not path.is_file():
     sys.exit(f"missing {path}")
 
 data = json.loads(path.read_text())
-app = data.get("app_reviewed", "")
-if not isinstance(app, str) or not app.strip():
-    sys.exit("app_reviewed must be a non-empty string")
 
-if data.get("browsed_full_offer") is not True:
-    sys.exit("browsed_full_offer must be true")
-if data.get("reviewed_features_and_pricing") is not True:
-    sys.exit("reviewed_features_and_pricing must be true")
+# --- Validate ticker ---
+if data.get("ticker") != "MU":
+    sys.exit("ticker must be 'MU'")
 
-clicked = data.get("clicked_get_started")
-if not isinstance(clicked, bool):
-    sys.exit("clicked_get_started must be a boolean")
+# --- viewed_chart ---
+if data.get("viewed_chart") is not True:
+    sys.exit("viewed_chart must be true")
 
-price_seen = data.get("price_seen", "")
-if not isinstance(price_seen, str) or not price_seen.strip():
-    sys.exit("price_seen must be a non-empty string")
+# --- timeframes_checked ---
+timeframes = data.get("timeframes_checked")
+if not isinstance(timeframes, list):
+    sys.exit("timeframes_checked must be a list")
+tf_set = set(timeframes)
+if "1W" not in tf_set:
+    sys.exit("timeframes_checked must include '1W'")
+if "1M" not in tf_set:
+    sys.exit("timeframes_checked must include '1M'")
+if "1Y" not in tf_set:
+    sys.exit("timeframes_checked must include '1Y'")
+if not tf_set.intersection({"3M", "2Y"}):
+    sys.exit("timeframes_checked must include at least one of '3M' or '2Y'")
 
-highlights = data.get("highlights_noticed")
-if not isinstance(highlights, list) or not highlights:
-    sys.exit("highlights_noticed must be a non-empty list")
-cleaned_highlights: list[str] = []
-for item in highlights:
-    if not isinstance(item, str) or not item.strip():
-        sys.exit("highlights_noticed entries must be non-empty strings")
-    cleaned_highlights.append(item.strip())
+# --- trend_summary ---
+trend_summary = data.get("trend_summary")
+if not isinstance(trend_summary, dict):
+    sys.exit("trend_summary must be an object")
+for tf in timeframes:
+    desc = trend_summary.get(tf, "")
+    if not isinstance(desc, str) or len(desc.strip()) < 10:
+        sys.exit(f"trend_summary['{tf}'] must be at least 10 characters")
 
-reason = data.get("reason", "")
-if not isinstance(reason, str) or len(reason.strip()) < 10:
-    sys.exit("reason must be at least 10 characters")
+# --- news_articles_read ---
+news = data.get("news_articles_read")
+if not isinstance(news, list):
+    sys.exit("news_articles_read must be a list")
+for i, article in enumerate(news):
+    if not isinstance(article, dict):
+        sys.exit(f"news_articles_read[{i}] must be an object")
+    headline = article.get("headline", "")
+    if not isinstance(headline, str) or not headline.strip():
+        sys.exit(f"news_articles_read[{i}].headline must be non-empty")
+    summary = article.get("summary", "")
+    if not isinstance(summary, str) or len(summary.strip()) < 20:
+        sys.exit(f"news_articles_read[{i}].summary must be at least 20 characters")
+    relevance = article.get("relevance", "")
+    if not isinstance(relevance, str) or len(relevance.strip()) < 10:
+        sys.exit(f"news_articles_read[{i}].relevance must be at least 10 characters")
 
-decision = "subscribe" if clicked else "decline"
-basis = "pack_value" if clicked else "price"
-highlights_label = ", ".join(cleaned_highlights)
+# --- sentiment ---
+sentiment = data.get("sentiment")
+valid_sentiments = {"buy", "sell", "hold"}
+if sentiment not in valid_sentiments:
+    sys.exit(f"sentiment must be one of: {valid_sentiments}")
 
+# --- confidence ---
+confidence = data.get("confidence")
+if not isinstance(confidence, (int, float)):
+    sys.exit("confidence must be numeric")
+confidence = int(round(float(confidence)))
+if not 1 <= confidence <= 10:
+    sys.exit("confidence must be between 1 and 10")
+
+# --- reasoning ---
+reasoning = data.get("reasoning", "")
+if not isinstance(reasoning, str) or len(reasoning.strip()) < 50:
+    sys.exit("reasoning must be at least 50 characters")
+
+# --- Load optional user feedback ---
 feedback_path = Path("/app/output/user_feedback.json")
 satisfaction_buckets = {"yes", "partially", "no"}
+influence_buckets = {"heavily", "somewhat", "minimally"}
 
 
 def load_user_feedback() -> dict[str, object] | None:
@@ -76,67 +120,61 @@ def load_user_feedback() -> dict[str, object] | None:
     if not isinstance(feedback, dict):
         sys.exit("user_feedback.json root must be an object")
 
-    need = feedback.get("needConstraintSatisfaction")
-    if need not in satisfaction_buckets:
-        sys.exit("needConstraintSatisfaction must use a supported bucket")
-    preference = feedback.get("personalPreferenceSatisfaction")
-    if preference not in satisfaction_buckets:
-        sys.exit("personalPreferenceSatisfaction must use a supported bucket")
-    rating = feedback.get("overallExperienceRating")
+    info_suff = feedback.get("informationSufficiency")
+    if info_suff not in satisfaction_buckets:
+        sys.exit("informationSufficiency must use a supported bucket")
+    earnings_inf = feedback.get("earningsInfluence")
+    if earnings_inf not in influence_buckets:
+        sys.exit("earningsInfluence must use a supported bucket")
+    rating = feedback.get("overallConfidenceRating")
     if not isinstance(rating, (int, float)):
-        sys.exit("overallExperienceRating must be numeric")
+        sys.exit("overallConfidenceRating must be numeric")
     rating = int(round(float(rating)))
     if not 1 <= rating <= 10:
-        sys.exit("overallExperienceRating must be between 1 and 10")
+        sys.exit("overallConfidenceRating must be between 1 and 10")
     feedback_reason = feedback.get("reason")
     if not isinstance(feedback_reason, str) or not feedback_reason.strip():
         sys.exit("feedback reason must be non-empty")
 
     payload: dict[str, object] = {
-        "need_constraint_satisfaction": need,
-        "personal_preference_satisfaction": preference,
-        "overall_experience_rating": rating,
+        "information_sufficiency": info_suff,
+        "earnings_influence": earnings_inf,
+        "overall_confidence_rating": rating,
         "feedback_reason": feedback_reason.strip(),
     }
-    trust = feedback.get("trustLevel")
-    if trust is not None:
-        if not isinstance(trust, (int, float)):
-            sys.exit("trustLevel must be numeric")
-        trust = int(round(float(trust)))
-        if not 1 <= trust <= 10:
-            sys.exit("trustLevel must be between 1 and 10")
-        payload["trust_level"] = trust
-    effort = feedback.get("effortRating")
-    if effort is not None:
-        if not isinstance(effort, (int, float)):
-            sys.exit("effortRating must be numeric")
-        effort = int(round(float(effort)))
-        if not 1 <= effort <= 10:
-            sys.exit("effortRating must be between 1 and 10")
-        payload["effort_rating"] = effort
-    clarity = feedback.get("clarityOfNextStep")
-    if clarity is not None:
-        if not isinstance(clarity, bool):
-            sys.exit("clarityOfNextStep must be boolean")
-        payload["clarity_of_next_step"] = "true" if clarity else "false"
+    would_act = feedback.get("wouldActOnIt")
+    if would_act is not None:
+        if not isinstance(would_act, bool):
+            sys.exit("wouldActOnIt must be boolean")
+        payload["would_act_on_it"] = "true" if would_act else "false"
+    missing_info = feedback.get("missingInfoNote")
+    if missing_info is not None:
+        if not isinstance(missing_info, str):
+            sys.exit("missingInfoNote must be a string")
+        payload["missing_info_note"] = missing_info.strip()
     return payload
 
 
 feedback = load_user_feedback()
 
+# --- Build structured output ---
 verifier_dir = Path(
-    os.environ.get("HARBOR_VERIFIER_DIR")
+    os.environ.get("VERIFIER_DIR")
     or os.environ.get("HARBOR_VERIFIER_DIR")
     or "/logs/verifier"
 )
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
 except OSError:
-    verifier_dir = Path.cwd() / "verifier"
+    verifier_dir = Path("/tmp/verifier_output")
     verifier_dir.mkdir(parents=True, exist_ok=True)
 
+trend_labels = "; ".join(
+    f"{tf}: {trend_summary.get(tf, '?')[:60]}" for tf in timeframes
+)
+
 source_artifacts = {
-    "decision": str(path),
+    "sentiment": str(path),
 }
 contexts = [
     {
@@ -184,23 +222,20 @@ contexts = [
                 "label": "Outcome explanation",
                 "role": "explanation",
                 "kind": "textual",
-                "value": (
-                    "The submission finished the News+ offer browse and "
-                    f"{'tapped' if clicked else 'did not tap'} Get Started."
-                ),
+                "value": f"Researched MU in Stocks app, sentiment: {sentiment} (confidence {confidence}/10).",
             },
             {
                 "key": "completion_evidence",
                 "label": "Completion evidence",
                 "role": "evidence",
                 "kind": "textual",
-                "value": f"clicked_get_started={clicked} -> {decision}",
+                "value": str(path),
             },
         ],
     },
     {
-        "key": "goal_component.browsed_full_offer",
-        "label": "Browsed full offer",
+        "key": "goal_component.viewed_chart",
+        "label": "Viewed stock chart",
         "contextType": "goal_component",
         "facets": [
             {
@@ -208,14 +243,14 @@ contexts = [
                 "label": "Goal component key",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": "browsed_full_offer",
+                "value": "viewed_chart",
             },
             {
                 "key": "goal_component_label",
                 "label": "Goal component label",
                 "role": "evidence",
                 "kind": "textual",
-                "value": "Scroll through the full subscription offer page",
+                "value": "View MU chart across multiple timeframes",
             },
             {
                 "key": "goal_component_status",
@@ -229,7 +264,7 @@ contexts = [
                 "label": "Goal component weight",
                 "role": "score",
                 "kind": "numerical",
-                "value": 0.25,
+                "value": 0.3,
             },
             {
                 "key": "goal_component_required",
@@ -243,13 +278,13 @@ contexts = [
                 "label": "Goal component evidence",
                 "role": "explanation",
                 "kind": "textual",
-                "value": f"Highlights noticed: {highlights_label}.",
+                "value": f"Timeframes checked: {', '.join(timeframes)}. Trends: {trend_labels}.",
             },
         ],
     },
     {
-        "key": "goal_component.reviewed_features_and_pricing",
-        "label": "Reviewed features and pricing",
+        "key": "goal_component.sentiment_decision",
+        "label": "Sentiment decision",
         "contextType": "goal_component",
         "facets": [
             {
@@ -257,14 +292,14 @@ contexts = [
                 "label": "Goal component key",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": "reviewed_features_and_pricing",
+                "value": "sentiment_decision",
             },
             {
                 "key": "goal_component_label",
                 "label": "Goal component label",
                 "role": "evidence",
                 "kind": "textual",
-                "value": "Return to the top and re-check features and pricing",
+                "value": "Form and report buy/sell/hold sentiment with reasoning",
             },
             {
                 "key": "goal_component_status",
@@ -278,7 +313,7 @@ contexts = [
                 "label": "Goal component weight",
                 "role": "score",
                 "kind": "numerical",
-                "value": 0.25,
+                "value": 0.7,
             },
             {
                 "key": "goal_component_required",
@@ -292,65 +327,13 @@ contexts = [
                 "label": "Goal component evidence",
                 "role": "explanation",
                 "kind": "textual",
-                "value": f"Price seen: {price_seen.strip()}.",
+                "value": f"Sentiment: {sentiment}, confidence: {confidence}/10.",
             },
         ],
     },
     {
-        "key": "goal_component.get_started_decision",
-        "label": "Get Started decision",
-        "contextType": "goal_component",
-        "facets": [
-            {
-                "key": "goal_component_key",
-                "label": "Goal component key",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "get_started_decision",
-            },
-            {
-                "key": "goal_component_label",
-                "label": "Goal component label",
-                "role": "evidence",
-                "kind": "textual",
-                "value": "Tap Get Started only if converting, then end",
-            },
-            {
-                "key": "goal_component_status",
-                "label": "Goal component status",
-                "role": "primary",
-                "kind": "categorical",
-                "value": "passed",
-            },
-            {
-                "key": "goal_component_weight",
-                "label": "Goal component weight",
-                "role": "score",
-                "kind": "numerical",
-                "value": 0.5,
-            },
-            {
-                "key": "goal_component_required",
-                "label": "Goal component required",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "true",
-            },
-            {
-                "key": "goal_component_evidence",
-                "label": "Goal component evidence",
-                "role": "explanation",
-                "kind": "textual",
-                "value": (
-                    "clicked_get_started="
-                    f"{str(clicked).lower()} ({decision})."
-                ),
-            },
-        ],
-    },
-    {
-        "key": "decision.primary",
-        "label": "Primary subscription decision",
+        "key": "decision.sentiment",
+        "label": f"Sentiment: {sentiment.upper()}",
         "contextType": "decision",
         "facets": [
             {
@@ -358,63 +341,42 @@ contexts = [
                 "label": "Decision outcome",
                 "role": "primary",
                 "kind": "categorical",
-                "value": decision,
+                "value": sentiment,
             },
             {
                 "key": "basis_primary",
                 "label": "Primary basis",
                 "role": "primary",
                 "kind": "categorical",
-                "value": basis,
-            },
-            {
-                "key": "clicked_get_started",
-                "label": "Clicked Get Started",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "true" if clicked else "false",
-            },
-            {
-                "key": "price_sensitivity",
-                "label": "Price sensitivity",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "willing" if clicked else "unwilling",
-            },
-            {
-                "key": "price_seen",
-                "label": "Price seen",
-                "role": "evidence",
-                "kind": "textual",
-                "value": price_seen.strip(),
-            },
-            {
-                "key": "reason",
-                "label": "Reason",
-                "role": "explanation",
-                "kind": "textual",
-                "value": reason.strip(),
+                "value": "chart_and_earnings",
             },
             {
                 "key": "decision_subject_id",
                 "label": "Decision subject ID",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": "news_plus",
+                "value": "MU",
             },
             {
                 "key": "decision_subject_label",
                 "label": "Decision subject label",
                 "role": "evidence",
                 "kind": "textual",
-                "value": "Apple News+",
+                "value": "Micron Technology (MU)",
             },
             {
-                "key": "highlights_noticed",
-                "label": "Highlights noticed",
-                "role": "evidence",
+                "key": "decision_confidence",
+                "label": "Decision confidence",
+                "role": "score",
+                "kind": "numerical",
+                "value": confidence,
+            },
+            {
+                "key": "reason",
+                "label": "Reason",
+                "role": "explanation",
                 "kind": "textual",
-                "value": highlights_label,
+                "value": reasoning.strip(),
             },
         ],
     },
@@ -435,14 +397,14 @@ contexts = [
                 "label": "Primary preference axis",
                 "role": "primary",
                 "kind": "categorical",
-                "value": basis,
+                "value": "risk_tolerance",
             },
             {
                 "key": "persona_alignment_explanation",
                 "label": "Persona alignment explanation",
                 "role": "explanation",
                 "kind": "textual",
-                "value": reason.strip(),
+                "value": reasoning.strip(),
             },
             {
                 "key": "persona_alignment_score",
@@ -453,47 +415,42 @@ contexts = [
             },
         ],
     },
+    {
+        "key": "decision_process.primary",
+        "label": "Decision process",
+        "contextType": "decision_process",
+        "facets": [
+            {
+                "key": "exploration_style",
+                "label": "Exploration style",
+                "role": "primary",
+                "kind": "categorical",
+                "value": "chart_news_earnings",
+            },
+            {
+                "key": "process_notes",
+                "label": "Process notes",
+                "role": "explanation",
+                "kind": "textual",
+                "value": (
+                    f"Checked {len(timeframes)} timeframes ({', '.join(timeframes)}), "
+                    f"read {len(news)} news article(s), combined with earnings context. "
+                    f"Final sentiment: {sentiment} (confidence {confidence}/10)."
+                ),
+            },
+        ],
+    },
 ]
-if not clicked:
-    contexts.append(
-        {
-            "key": "persona_constraint.primary",
-            "label": "Persona constraint",
-            "contextType": "persona_constraint",
-            "facets": [
-                {
-                    "key": "persona_constraint_type",
-                    "label": "Persona constraint type",
-                    "role": "primary",
-                    "kind": "categorical",
-                    "value": "price",
-                },
-                {
-                    "key": "persona_constraint_status",
-                    "label": "Persona constraint status",
-                    "role": "primary",
-                    "kind": "categorical",
-                    "value": "satisfied",
-                },
-                {
-                    "key": "persona_constraint_evidence",
-                    "label": "Persona constraint evidence",
-                    "role": "explanation",
-                    "kind": "textual",
-                    "value": reason.strip(),
-                },
-            ],
-        }
-    )
+
 if feedback is not None:
     source_artifacts["userFeedback"] = str(feedback_path)
     feedback_facets = [
         {
-            "key": "overall_experience_rating",
-            "label": "Overall experience rating",
+            "key": "overall_confidence_rating",
+            "label": "Overall confidence rating",
             "role": "score",
             "kind": "numerical",
-            "value": feedback["overall_experience_rating"],
+            "value": feedback["overall_confidence_rating"],
         },
         {
             "key": "feedback_reason",
@@ -503,48 +460,38 @@ if feedback is not None:
             "value": feedback["feedback_reason"],
         },
         {
-            "key": "need_constraint_satisfaction",
-            "label": "Need or constraint satisfaction",
+            "key": "information_sufficiency",
+            "label": "Information sufficiency",
             "role": "evidence",
             "kind": "categorical",
-            "value": feedback["need_constraint_satisfaction"],
+            "value": feedback["information_sufficiency"],
         },
         {
-            "key": "personal_preference_satisfaction",
-            "label": "Personal preference satisfaction",
+            "key": "earnings_influence",
+            "label": "Earnings influence",
             "role": "evidence",
             "kind": "categorical",
-            "value": feedback["personal_preference_satisfaction"],
+            "value": feedback["earnings_influence"],
         },
     ]
-    if "trust_level" in feedback:
+    if "would_act_on_it" in feedback:
         feedback_facets.append(
             {
-                "key": "trust_level",
-                "label": "Trust level",
-                "role": "score",
-                "kind": "numerical",
-                "value": feedback["trust_level"],
-            }
-        )
-    if "effort_rating" in feedback:
-        feedback_facets.append(
-            {
-                "key": "effort_rating",
-                "label": "Effort rating",
-                "role": "score",
-                "kind": "numerical",
-                "value": feedback["effort_rating"],
-            }
-        )
-    if "clarity_of_next_step" in feedback:
-        feedback_facets.append(
-            {
-                "key": "clarity_of_next_step",
-                "label": "Clarity of next step",
+                "key": "would_act_on_it",
+                "label": "Would act on it",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": feedback["clarity_of_next_step"],
+                "value": feedback["would_act_on_it"],
+            }
+        )
+    if "missing_info_note" in feedback:
+        feedback_facets.append(
+            {
+                "key": "missing_info_note",
+                "label": "Missing info note",
+                "role": "explanation",
+                "kind": "textual",
+                "value": feedback["missing_info_note"],
             }
         )
     contexts.append(
@@ -564,7 +511,7 @@ if feedback is not None:
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,
-                "requiredArtifacts": ["decision.json"],
+                "requiredArtifacts": ["sentiment.json"],
                 "missingArtifacts": [],
             },
             "sourceArtifacts": source_artifacts,
@@ -576,8 +523,10 @@ if feedback is not None:
     encoding="utf-8",
 )
 PY
+py_exit=$?
+set -e
 
-if [ $? -eq 0 ]; then
+if [ $py_exit -eq 0 ]; then
   printf '1\n' > "${VERIFIER_DIR}/reward.txt"
 else
   printf '0\n' > "${VERIFIER_DIR}/reward.txt"
