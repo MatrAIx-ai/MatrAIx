@@ -69,7 +69,6 @@ import {
 } from "./cockpitShared";
 import type { PlaygroundTaskType } from "./TaskTypeSwitch";
 
-const DEFAULT_AGENT_MODEL = "anthropic/claude-sonnet-4-6";
 
 function mergeWebTasks(apiTasks: WebEvalTask[] | undefined): WebEvalTask[] {
   return mergeTaskCatalog(FALLBACK_WEB_TASKS, apiTasks, (row, api, base) => ({
@@ -198,11 +197,6 @@ export function WebEvalCockpit({
     expectedTrialCount,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "web");
 
-  useEffect(() => {
-    setPersonaModel((current) =>
-      current === "anthropic/claude-haiku-4-5" ? DEFAULT_AGENT_MODEL : current,
-    );
-  }, [setPersonaModel]);
 
   const { setupLocked, visiblePersonaIds } = useCockpitSetupLock(
     phase,
