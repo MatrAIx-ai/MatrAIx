@@ -1,14 +1,13 @@
-# Purchase Channel Preference Survey
+# BIC Wite-Out EZ Correct Tear-Resistant Correction Tape Where-to-Buy Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **BIC Wite-Out EZ Correct Tear-Resistant Correction Tape** — an Amazon office products listing rated 4.7 stars across ~19,614 customer ratings.
 
-Consider where you would actually prefer to buy the product in the task context.
+One thing to weigh: the listed size recently changed from **10-Count** to **6-Count**. After reading the brief, tell us where you'd actually want to buy it and what matters about that choice.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: satisfaction_v1
-title: Product Satisfaction Survey
-description: Anticipated satisfaction with this product across several dimensions.
+title: "Product Satisfaction Survey — Blue Buffalo Health Bars Pumpkin"
+description: "Anticipated satisfaction with this product across several dimensions. This edition asks about Blue Buffalo Health Bars Pumpkin from Blue Buffalo."
 questions:
   - id: q_overall_sat
-    prompt: "Overall, I expect to be satisfied with this product."
+    prompt: "Overall, I expect to be satisfied with the Blue Buffalo Health Bars Pumpkin."
     type: likert
     construct: overall_satisfaction
     required: true

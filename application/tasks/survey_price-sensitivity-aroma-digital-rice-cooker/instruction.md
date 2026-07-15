@@ -1,14 +1,13 @@
-# Price Sensitivity Survey
+# AROMA Digital Rice Cooker Price Sensitivity Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **AROMA Digital Rice Cooker** — an Amazon kitchen listing rated 4.5 stars across ~64,835 customer ratings.
 
-You are assessing a real retail product and its current price. Think about your own budget and where the price stops feeling reasonable.
+One thing to weigh: the listed wattage recently changed from **350 watts** to **280 watts**. After reading the brief, tell us how the current price sits with you and where it would start to feel like too much.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

@@ -1,14 +1,13 @@
-# Purchase Intent Survey
+# Chapin 20004 Pump Sprayer Purchase Intent Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Chapin 20004 Pump Sprayer** from Chapin International — an Amazon home & garden listing rated 4.4 stars across ~79,601 customer ratings.
 
-You are reacting to a real retail product described in the task context, including a recent change to one of its listing details. Reason as the persona about whether — and when — you would buy it at the stated terms.
+One thing to weigh: the listed color recently changed from **Translucent White** to **Opaque Blue**. After reading the brief, tell us how likely you'd be to buy it at the current terms, and what would tip you toward or away from it.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

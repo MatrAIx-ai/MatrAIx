@@ -1,14 +1,13 @@
-# Competitor Comparison Survey
+# EXPO Dry Erase Markers Comparison Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **EXPO Dry Erase Markers** — an Amazon office products listing rated 4.8 stars across ~27,401 customer ratings.
 
-You are comparing the product in the task context against other options you could buy instead.
+One thing to weigh: the listed price recently changed from **$9.99** to **$12.49**. After reading the brief, tell us how it stacks up against the alternatives you know and what would tip you toward it.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

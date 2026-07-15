@@ -1,14 +1,13 @@
-# Product Satisfaction Survey
+# Monocular Telescope High Power 8x42 Monoculars Scope Satisfaction Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Monocular Telescope High Power 8x42 Monoculars Scope** from FEEMIC — an Amazon camera & photo listing rated 4.4 stars across ~3,477 customer ratings.
 
-Imagine you recently received the product in the task context. Rate how satisfied you expect to be.
+Imagine it was just delivered to you. One thing to weigh: the listed price recently changed from **$35.99** to **$44.99**. After reading the brief, tell us how satisfied you'd expect to be with it and what would shape that feeling most.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

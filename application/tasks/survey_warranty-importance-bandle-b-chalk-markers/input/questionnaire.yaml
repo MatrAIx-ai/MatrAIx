@@ -1,7 +1,7 @@
 schemaVersion: "1.0"
 id: warranty_importance_v1
-title: Warranty & Support Importance Survey
-description: How much warranty and after-sales support influence the persona for this product.
+title: "Warranty & Support Importance Survey — Bandle B. Chalk Markers"
+description: "How much warranty and after-sales support influence the persona for this product. This edition asks about Bandle B. Chalk Markers from Bandle B.."
 questions:
   - id: q_warranty_matters
     prompt: "A solid warranty is important for a product like this."
@@ -25,7 +25,7 @@ questions:
       - id: "multi_year"
         label: "Multiple years."
   - id: q_support_trust
-    prompt: "I would trust this brand to help if something went wrong."
+    prompt: "I would trust Bandle B. to help if something went wrong."
     type: likert
     construct: support_trust
     required: true

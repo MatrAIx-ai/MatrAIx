@@ -1,14 +1,13 @@
-# Warranty & Support Importance Survey
+# EUHOMY Countertop Ice Maker Machine with Handle Warranty & Support Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **EUHOMY Countertop Ice Maker Machine with Handle** — an Amazon appliances listing rated 4.3 stars across ~12,829 customer ratings.
 
-Consider how much warranty and after-sales support would matter for the product in the task context.
+One thing to weigh: the listed price recently changed from **$89.99** to **$112.49**. After reading the brief, tell us how much warranty and after-sales support would matter to you here.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

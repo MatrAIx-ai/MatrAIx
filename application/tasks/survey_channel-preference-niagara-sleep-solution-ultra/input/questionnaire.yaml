@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: channel_preference_v1
-title: Purchase Channel Preference Survey
-description: Where and how the persona would prefer to buy this product.
+title: "Purchase Channel Preference Survey — Niagara Sleep Solution Ultra Soft Queen Size"
+description: "Where and how the persona would prefer to buy this product. This edition asks about Niagara Sleep Solution Ultra Soft Queen Size from Niagara Sleep Solution."
 questions:
   - id: q_channel
-    prompt: "Where would you prefer to buy this product?"
+    prompt: "Where would you prefer to buy the Niagara Sleep Solution Ultra Soft Queen?"
     type: single_choice
     construct: channel
     required: true
@@ -33,7 +33,7 @@ questions:
       - id: "touch"
         label: "Being able to see it in person."
   - id: q_in_person_value
-    prompt: "For this product, seeing it in person before buying would matter to me."
+    prompt: "For the Niagara Sleep Solution Ultra Soft Queen, seeing it in person before buying would matter to me."
     type: likert
     construct: in_person_value
     required: true

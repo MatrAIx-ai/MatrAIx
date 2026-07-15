@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: satisfaction_v1
-title: Product Satisfaction Survey
-description: Anticipated satisfaction with this product across several dimensions.
+title: "Product Satisfaction Survey — OFF! Backyard Citronella Scented Candle"
+description: "Anticipated satisfaction with this product across several dimensions. This edition asks about OFF! Backyard Citronella Scented Candle from OFF!."
 questions:
   - id: q_overall_sat
-    prompt: "Overall, I expect to be satisfied with this product."
+    prompt: "Overall, I expect to be satisfied with the OFF! Backyard Citronella Scented Candle."
     type: likert
     construct: overall_satisfaction
     required: true

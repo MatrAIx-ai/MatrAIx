@@ -1,14 +1,13 @@
-# Product Satisfaction Survey
+# Logitech G502 Hero High Performance Wired Gaming Satisfaction Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Logitech G502 Hero High Performance Wired Gaming** from Logitech G — an Amazon video games listing rated 4.6 stars across ~58,293 customer ratings.
 
-Imagine you recently received the product in the task context. Rate how satisfied you expect to be.
+Imagine it was just delivered to you. One thing to weigh: the listed color recently changed from **Black** to **White**. After reading the brief, tell us how satisfied you'd expect to be with it and what would shape that feeling most.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

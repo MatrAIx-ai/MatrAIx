@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: competitor_comparison_v1
-title: Competitor Comparison Survey
-description: How this product stacks up against alternatives in the persona's mind.
+title: "Competitor Comparison Survey — EXPO Dry Erase Markers"
+description: "How this product stacks up against alternatives in the persona's mind. This edition asks about EXPO Dry Erase Markers from EXPO."
 questions:
   - id: q_vs_alternatives
-    prompt: "Compared to alternatives you know, this product is..."
+    prompt: "Compared to alternatives you know, the EXPO Dry Erase Markers is..."
     type: single_choice
     construct: relative_standing
     required: true

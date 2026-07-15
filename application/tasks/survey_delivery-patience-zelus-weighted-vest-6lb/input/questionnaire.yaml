@@ -1,7 +1,7 @@
 schemaVersion: "1.0"
 id: delivery_patience_v1
-title: Delivery Patience Survey
-description: How much delivery speed and shipping terms matter to the persona for this product.
+title: "Delivery Patience Survey — ZELUS Weighted Vest"
+description: "How much delivery speed and shipping terms matter to the persona for this product. This edition asks about ZELUS Weighted Vest from ZELUS."
 questions:
   - id: q_wait
     prompt: "How long would you be willing to wait for delivery?"
@@ -18,7 +18,7 @@ questions:
       - id: "weeks"
         label: "A couple of weeks is fine."
   - id: q_speed_matters
-    prompt: "Fast delivery is important to me for this product."
+    prompt: "Fast delivery is important to me for the ZELUS Weighted Vest."
     type: likert
     construct: speed_importance
     required: true

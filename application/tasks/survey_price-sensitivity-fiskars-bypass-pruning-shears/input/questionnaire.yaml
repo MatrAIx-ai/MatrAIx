@@ -1,17 +1,17 @@
 schemaVersion: "1.0"
 id: price_sensitivity_v1
-title: Price Sensitivity Survey
-description: How sensitive the persona is to this product's price and where their thresholds sit.
+title: "Price Sensitivity Survey — Fiskars Bypass Pruning Shears"
+description: "How sensitive the persona is to this product's price and where their thresholds sit. This edition asks about Fiskars Bypass Pruning Shears from Fiskars."
 questions:
   - id: q_price_matters
-    prompt: "The price is the single most important factor in whether I would buy this product."
+    prompt: "The price is the single most important factor in whether I would buy the Fiskars Bypass Pruning Shears."
     type: likert
     construct: price_centrality
     required: true
     minValue: 1
     maxValue: 5
   - id: q_too_expensive
-    prompt: "At its current price, this product feels too expensive for me."
+    prompt: "At its current price, the Fiskars Bypass Pruning Shears feels too expensive for me."
     type: likert
     construct: price_pain
     required: true

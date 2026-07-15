@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: satisfaction_v1
-title: Product Satisfaction Survey
-description: Anticipated satisfaction with this product across several dimensions.
+title: "Product Satisfaction Survey — Crayola Broad Line Markers (12 Count)"
+description: "Anticipated satisfaction with this product across several dimensions. This edition asks about Crayola Broad Line Markers (12 Count) from Crayola."
 questions:
   - id: q_overall_sat
-    prompt: "Overall, I expect to be satisfied with this product."
+    prompt: "Overall, I expect to be satisfied with the Crayola Broad Line Markers (12 Count)."
     type: likert
     construct: overall_satisfaction
     required: true

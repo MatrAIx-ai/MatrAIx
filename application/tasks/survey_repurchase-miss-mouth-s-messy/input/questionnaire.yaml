@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: repurchase_v1
-title: Repurchase & Retention Survey
-description: Whether the persona would buy this product (or brand) again.
+title: "Repurchase & Retention Survey — Miss Mouth's Messy Eater Stain Treater Spray"
+description: "Whether the persona would buy this product (or brand) again. This edition asks about Miss Mouth's Messy Eater Stain Treater Spray from Miss Mouth's."
 questions:
   - id: q_rebuy
-    prompt: "Would you buy this product again?"
+    prompt: "Would you buy the Miss Mouth's Messy Eater Stain Treater again?"
     type: single_choice
     construct: repurchase_intent
     required: true
@@ -19,7 +19,7 @@ questions:
       - id: "never"
         label: "Never again."
   - id: q_brand_loyalty
-    prompt: "I would look to this brand first next time I need something similar."
+    prompt: "I would look to Miss Mouth's first next time I need something similar."
     type: likert
     construct: brand_loyalty
     required: true

@@ -17,8 +17,8 @@
 
 ## Pricing & recent change
 
-- **Current listed price: $$32.48**
-- This is a recent change: it was previously listed at **$$25.98**, so the price the shopper now sees is lower.
+- **Current listed price: $32.48**
+- This is a recent change: it was previously listed at **$25.98**, so the price the shopper now sees is higher (about 25% higher).
 
 ## What this survey is probing
 

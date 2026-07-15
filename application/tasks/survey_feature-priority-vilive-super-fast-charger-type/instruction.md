@@ -1,14 +1,13 @@
-# Feature Prioritization Survey
+# Super Fast Charger Type C Feature Priority Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Super Fast Charger Type C** from Vilive — an Amazon phone & accessories listing rated 4.6 stars across ~21,054 customer ratings.
 
-You are deciding which aspects of the product in the task context matter most to you personally.
+One thing to weigh: the listed wattage recently changed from **25 watts** to **15 watts**. After reading the brief, tell us which aspects of it matter most to you and which you'd happily ignore.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

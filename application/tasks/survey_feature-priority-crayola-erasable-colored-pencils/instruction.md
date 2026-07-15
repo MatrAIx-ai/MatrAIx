@@ -1,14 +1,13 @@
-# Feature Prioritization Survey
+# Crayola Erasable Colored Pencils (24ct) Feature Priority Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Crayola Erasable Colored Pencils (24ct)** — an Amazon toys & games listing rated 4.7 stars across ~17,644 customer ratings.
 
-You are deciding which aspects of the product in the task context matter most to you personally.
+One thing to weigh: the listed unit count recently changed from **24.0 Count** to **12.0 Count**. After reading the brief, tell us which aspects of it matter most to you and which you'd happily ignore.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: recommendation_nps_v1
-title: Recommendation (NPS) Survey
-description: How likely the persona is to recommend this product to others.
+title: "Recommendation (NPS) Survey — 220Pcs Inspirational Christian Stickers Bulk"
+description: "How likely the persona is to recommend this product to others. This edition asks about 220Pcs Inspirational Christian Stickers Bulk from KASANYER."
 questions:
   - id: q_nps
-    prompt: "How likely are you to recommend this product to a friend or colleague? (0 = not at all, 10 = extremely likely)"
+    prompt: "How likely are you to recommend the 220Pcs Inspirational Christian Stickers Bulk to a friend or colleague? (0 = not at all, 10 = extremely likely)"
     type: likert
     construct: net_promoter
     required: true

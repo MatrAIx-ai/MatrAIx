@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: channel_preference_v1
-title: Purchase Channel Preference Survey
-description: Where and how the persona would prefer to buy this product.
+title: "Purchase Channel Preference Survey — BIC Wite-Out EZ Correct Tear-Resistant Correction Tape"
+description: "Where and how the persona would prefer to buy this product. This edition asks about BIC Wite-Out EZ Correct Tear-Resistant Correction Tape from BIC."
 questions:
   - id: q_channel
-    prompt: "Where would you prefer to buy this product?"
+    prompt: "Where would you prefer to buy the BIC Wite-Out EZ Correct Tear-Resistant Correction?"
     type: single_choice
     construct: channel
     required: true
@@ -33,7 +33,7 @@ questions:
       - id: "touch"
         label: "Being able to see it in person."
   - id: q_in_person_value
-    prompt: "For this product, seeing it in person before buying would matter to me."
+    prompt: "For the BIC Wite-Out EZ Correct Tear-Resistant Correction, seeing it in person before buying would matter to me."
     type: likert
     construct: in_person_value
     required: true

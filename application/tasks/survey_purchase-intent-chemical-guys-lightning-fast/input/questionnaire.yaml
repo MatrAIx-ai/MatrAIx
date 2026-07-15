@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: purchase_intent_v1
-title: Purchase Intent Survey
-description: Purchase intent, price fairness, and timing for a retail product whose listing recently changed.
+title: "Purchase Intent Survey — Chemical Guys Lightning Fast Carpet"
+description: "Purchase intent, price fairness, and timing for a retail product whose listing recently changed. This edition asks about Chemical Guys Lightning Fast Carpet from Chemical Guys."
 questions:
   - id: q_purchase_intent
-    prompt: "At the current price, how would you describe your intent to buy this product?"
+    prompt: "At the current price, how would you describe your intent to buy the Chemical Guys Lightning Fast Carpet?"
     type: single_choice
     construct: purchase_intent
     required: true
@@ -59,7 +59,7 @@ questions:
       - id: "not_buying"
         label: "Never — I would not buy it at all."
   - id: q_necessity
-    prompt: "How much do you actually need this product?"
+    prompt: "How much do you actually need the Chemical Guys Lightning Fast Carpet?"
     type: single_choice
     construct: necessity_level
     required: true
@@ -71,7 +71,7 @@ questions:
       - id: "not_needed"
         label: "Not needed — this is not something I would seek out."
   - id: q_overall_likelihood
-    prompt: "Overall, how likely are you to purchase this product in the next month?"
+    prompt: "Overall, how likely are you to purchase the Chemical Guys Lightning Fast Carpet in the next month?"
     type: likert
     construct: purchase_likelihood
     required: true

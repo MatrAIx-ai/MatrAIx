@@ -1,14 +1,13 @@
-# Recommendation (NPS) Survey
+# Rust-Oleum 7798830 Stops Rust Spray Paint Recommendation Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Rust-Oleum 7798830 Stops Rust Spray Paint** — an Amazon home improvement listing rated 4.7 stars across ~46,614 customer ratings.
 
-You are considering whether you would recommend the product in the task context to people you know.
+One thing to weigh: the listed color recently changed from **Semi-Gloss Black** to **Gloss White**. After reading the brief, tell us how likely you'd be to recommend it, to whom, and what would drive that recommendation.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

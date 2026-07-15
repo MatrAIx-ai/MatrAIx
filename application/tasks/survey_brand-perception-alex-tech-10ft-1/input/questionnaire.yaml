@@ -1,31 +1,31 @@
 schemaVersion: "1.0"
 id: brand_perception_v1
-title: Brand Perception Survey
-description: How the persona perceives the brand behind this product on trust, quality, and prestige.
+title: "Brand Perception Survey — Alex Tech 10ft"
+description: "How the persona perceives the brand behind this product on trust, quality, and prestige. This edition asks about Alex Tech 10ft from Alex Tech."
 questions:
   - id: q_trust
-    prompt: "I trust this brand to deliver what it promises."
+    prompt: "I trust Alex Tech to deliver what it promises."
     type: likert
     construct: brand_trust
     required: true
     minValue: 1
     maxValue: 5
   - id: q_quality
-    prompt: "I associate this brand with high quality."
+    prompt: "I associate Alex Tech with high quality."
     type: likert
     construct: brand_quality
     required: true
     minValue: 1
     maxValue: 5
   - id: q_prestige
-    prompt: "Owning a product from this brand says something positive about me."
+    prompt: "Owning a product from Alex Tech says something positive about me."
     type: likert
     construct: brand_prestige
     required: true
     minValue: 1
     maxValue: 5
   - id: q_familiarity
-    prompt: "How familiar are you with this brand?"
+    prompt: "How familiar are you with Alex Tech?"
     type: single_choice
     construct: brand_familiarity
     required: true
@@ -39,7 +39,7 @@ questions:
       - id: "never"
         label: "I have never heard of it before."
   - id: q_association
-    prompt: "What word or feeling comes to mind first when you think of this brand?"
+    prompt: "What word or feeling comes to mind first when you think of Alex Tech?"
     type: free_text
     construct: brand_association
     required: true

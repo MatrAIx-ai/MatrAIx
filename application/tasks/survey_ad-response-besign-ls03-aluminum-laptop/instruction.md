@@ -1,14 +1,13 @@
-# Advertising Response Survey
+# BESIGN LS03 Aluminum Laptop Stand Ad Response Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **BESIGN LS03 Aluminum Laptop Stand** — an Amazon computer listing rated 4.8 stars across ~23,840 customer ratings.
 
-Imagine the product in the task context appeared as an ad in your feed. React to it as the ad you just scrolled past.
+Imagine this listing just showed up as an ad in your feed. One thing to weigh: the listed color recently changed from **B-Silver** to **B-Space Gray**. After reading the brief, tell us whether the ad would stop your scroll, whether you'd believe it, and what you'd do next.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

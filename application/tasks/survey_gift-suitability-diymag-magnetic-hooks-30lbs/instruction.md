@@ -1,14 +1,13 @@
-# Gift Suitability Survey
+# DIYMAG Magnetic Hooks Gift Suitability Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **DIYMAG Magnetic Hooks** — an Amazon industrial & scientific listing rated 4.4 stars across ~25,213 customer ratings.
 
-Consider the product in the task context as a possible gift for someone else.
+Think of it as a possible gift for someone else. One thing to weigh: the listed price recently changed from **$8.99** to **$11.24**. After reading the brief, tell us whether you'd give it as a gift, to whom, and for what occasion.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

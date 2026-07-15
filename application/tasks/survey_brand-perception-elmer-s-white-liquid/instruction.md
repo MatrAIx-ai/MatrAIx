@@ -1,14 +1,13 @@
-# Brand Perception Survey
+# Elmer's White Liquid School Glue Brand Perception Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Elmer's White Liquid School Glue** — an Amazon arts & crafts listing rated 4.8 stars across ~15,842 customer ratings.
 
-You are reacting to a real product and, through it, the brand that makes it. Judge the brand as you personally would.
+One thing to weigh: the listed unit count recently changed from **128.0 Fluid Ounces** to **64.0 Fluid Ounces**. After reading the brief, tell us what the Elmer's name means to you — the trust, quality, and prestige you attach to it.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

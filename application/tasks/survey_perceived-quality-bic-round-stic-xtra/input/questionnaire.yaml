@@ -1,7 +1,7 @@
 schemaVersion: "1.0"
 id: perceived_quality_v1
-title: Perceived Quality Survey
-description: The persona's judgment of this product's quality from its listing.
+title: "Perceived Quality Survey — BIC Round Stic Xtra Life Ballpoint Pen"
+description: "The persona's judgment of this product's quality from its listing. This edition asks about BIC Round Stic Xtra Life Ballpoint Pen from BIC."
 questions:
   - id: q_well_made
     prompt: "This product looks well made."
@@ -11,14 +11,14 @@ questions:
     minValue: 1
     maxValue: 5
   - id: q_durable
-    prompt: "I expect this product to last a long time."
+    prompt: "I expect the BIC Round Stic Xtra Life Ballpoint to last a long time."
     type: likert
     construct: durability
     required: true
     minValue: 1
     maxValue: 5
   - id: q_reliable
-    prompt: "I expect this product to work reliably."
+    prompt: "I expect the BIC Round Stic Xtra Life Ballpoint to work reliably."
     type: likert
     construct: reliability
     required: true

@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: feature_priority_v1
-title: Feature Prioritization Survey
-description: Which aspects of this product matter most to the persona.
+title: "Feature Prioritization Survey — Paula's Choice SKIN PERFECTING 2% BHA Liquid"
+description: "Which aspects of this product matter most to the persona. This edition asks about Paula's Choice SKIN PERFECTING 2% BHA Liquid from Paula's Choice."
 questions:
   - id: q_top_factors
-    prompt: "Which of these matter most to you for this product? (Choose all that apply.)"
+    prompt: "Which of these matter most to you for the Paula's Choice SKIN PERFECTING 2% BHA? (Choose all that apply.)"
     type: multi_choice
     construct: purchase_factors
     required: true
@@ -42,7 +42,7 @@ questions:
       - id: "appearance"
         label: "Appearance"
   - id: q_specs_confidence
-    prompt: "I feel I understand this product's features well enough to judge it."
+    prompt: "I feel I understand the Paula's Choice SKIN PERFECTING 2% BHA's features well enough to judge it."
     type: likert
     construct: spec_confidence
     required: true

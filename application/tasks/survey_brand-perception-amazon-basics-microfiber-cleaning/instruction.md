@@ -1,14 +1,13 @@
-# Brand Perception Survey
+# Amazon Basics Microfiber Cleaning Cloths Brand Perception Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Amazon Basics Microfiber Cleaning Cloths** — an Amazon automotive listing rated 4.7 stars across ~87,009 customer ratings.
 
-You are reacting to a real product and, through it, the brand that makes it. Judge the brand as you personally would.
+One thing to weigh: the listed material recently changed from **Microfiber** to **Cotton Terry**. After reading the brief, tell us what the Amazon Basics name means to you — the trust, quality, and prestige you attach to it.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

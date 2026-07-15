@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: satisfaction_v1
-title: Product Satisfaction Survey
-description: Anticipated satisfaction with this product across several dimensions.
+title: "Product Satisfaction Survey — [4 Pack] USB C Charger Block Fast"
+description: "Anticipated satisfaction with this product across several dimensions. This edition asks about [4 Pack] USB C Charger Block Fast from CXX."
 questions:
   - id: q_overall_sat
-    prompt: "Overall, I expect to be satisfied with this product."
+    prompt: "Overall, I expect to be satisfied with the [4 Pack] USB C Charger Block."
     type: likert
     construct: overall_satisfaction
     required: true

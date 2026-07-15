@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: review_trust_v1
-title: Review Trust Survey
-description: How much the persona relies on and trusts this product's ratings and reviews.
+title: "Review Trust Survey — Crayola Ultra Clean Washable Markers (40ct)"
+description: "How much the persona relies on and trusts this product's ratings and reviews. This edition asks about Crayola Ultra Clean Washable Markers (40ct) from Crayola."
 questions:
   - id: q_trust_reviews
-    prompt: "I trust the star rating and reviews shown for this product."
+    prompt: "I trust the star rating and reviews shown for the Crayola Ultra Clean Washable Markers (40ct)."
     type: likert
     construct: review_trust
     required: true

@@ -1,7 +1,7 @@
 schemaVersion: "1.0"
 id: sustainability_v1
-title: Sustainability Concern Survey
-description: How much environmental and ethical factors shape the persona's view of this product.
+title: "Sustainability Concern Survey — COWSAR Ice Maker Countertop"
+description: "How much environmental and ethical factors shape the persona's view of this product. This edition asks about COWSAR Ice Maker Countertop from COWSAR."
 questions:
   - id: q_eco_matters
     prompt: "A product's environmental impact affects whether I buy it."
@@ -11,7 +11,7 @@ questions:
     minValue: 1
     maxValue: 5
   - id: q_pay_green
-    prompt: "I would pay more for a more sustainable version of this product."
+    prompt: "I would pay more for a more sustainable version of the COWSAR Ice Maker Countertop."
     type: likert
     construct: green_premium
     required: true
@@ -34,7 +34,7 @@ questions:
       - id: "none"
         label: "None of these matter to me."
   - id: q_eco_note
-    prompt: "What, if anything, would make you feel better about this product's impact?"
+    prompt: "What, if anything, would make you feel better about the COWSAR Ice Maker Countertop's impact?"
     type: free_text
     construct: eco_reassurance
     required: true

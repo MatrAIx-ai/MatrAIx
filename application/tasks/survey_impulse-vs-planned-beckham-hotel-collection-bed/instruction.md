@@ -1,14 +1,13 @@
-# Impulse vs Planned Purchase Survey
+# Beckham Hotel Collection Bed Pillows Standard/Queen Size Impulse vs Planned Survey
 
-Answer this survey as the assigned persona.
+We're gathering reactions to **Beckham Hotel Collection Bed Pillows Standard/Queen Size** — an Amazon home & garden listing rated 4.4 stars across ~261,338 customer ratings.
 
-Consider how you would actually arrive at buying the product in the task context.
+One thing to weigh: the listed pattern recently changed from **Striped** to **Solid**. After reading the brief, tell us whether buying it would be a grab-it-now impulse or a planned decision, and what would trigger the impulse.
 
 ## How to answer
 
-- Read the task context before answering.
+- Read the brief before you start.
 - Answer every required question.
-- Use the exact choice ids for choice questions.
-- For likert questions, use an integer in the declared range.
-- Answer with the selected value only, except where a question asks for a
-  short reason (`askRationale`).
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

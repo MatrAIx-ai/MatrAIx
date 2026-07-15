@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: return_likelihood_v1
-title: Return Likelihood Survey
-description: How likely the persona would be to return this product after buying it.
+title: "Return Likelihood Survey — La Croix Sparkling Water"
+description: "How likely the persona would be to return this product after buying it. This edition asks about La Croix Sparkling Water from La Croix."
 questions:
   - id: q_return_risk
-    prompt: "There is a real chance I would end up returning this product."
+    prompt: "There is a real chance I would end up returning the La Croix Sparkling Water."
     type: likert
     construct: return_risk
     required: true

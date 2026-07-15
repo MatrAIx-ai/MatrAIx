@@ -1,10 +1,10 @@
 schemaVersion: "1.0"
 id: competitor_comparison_v1
-title: Competitor Comparison Survey
-description: How this product stacks up against alternatives in the persona's mind.
+title: "Competitor Comparison Survey — Play Doh Modeling Compound 10-Pack Case"
+description: "How this product stacks up against alternatives in the persona's mind. This edition asks about Play Doh Modeling Compound 10-Pack Case."
 questions:
   - id: q_vs_alternatives
-    prompt: "Compared to alternatives you know, this product is..."
+    prompt: "Compared to alternatives you know, the Play Doh Modeling Compound 10-Pack Case is..."
     type: single_choice
     construct: relative_standing
     required: true
