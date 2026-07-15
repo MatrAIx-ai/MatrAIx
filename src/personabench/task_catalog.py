@@ -67,7 +67,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "delivery investigation",
         ],
     },
-    "recommender-agent_chat_api": {
+    "chat_recai": {
         "type": "chatbot",
         "domain": DOMAIN_COMMERCE_RETAIL,
         "tags": [
@@ -78,7 +78,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "recommendation grounding",
         ],
     },
-    "finance-openbb_chatbot": {
+    "chat_openbb": {
         "type": "chatbot",
         "domain": DOMAIN_FINANCE,
         "tags": [
@@ -88,7 +88,7 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "multi turn chat",
         ],
     },
-    "medical-assistant_chatbot": {
+    "chat_multi-agent-medical-assistant": {
         "type": "chatbot",
         "domain": DOMAIN_HEALTHCARE,
         "tags": [

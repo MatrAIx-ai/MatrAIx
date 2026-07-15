@@ -3,7 +3,7 @@
 Chatbot tasks let the simulated user interact with an application exposed
 through a chat API.
 
-**Canonical copy-from:** `application/tasks/recommender-agent_chat_api`
+**Canonical copy-from:** `application/tasks/chat_recai`
 
 ### What you author (required vs optional)
 
@@ -73,11 +73,17 @@ supplementary materials under `input/`:
   style, stop conditions). Write it as instructions for a real person using the
   product — no file paths, transport contracts, eval jargon, or harness setup.
 - `input/context.md` — optional **product / SUT background** for the persona
-  (what the application is, what it does, what to expect). Same rule: real-user
-  language only — describe the product, not HTTP contracts or eval plumbing.
+  (what the application is, what it does, what to expect, and which product
+  capabilities a real user would use). Same rule: real-user language only —
+  describe the product, not HTTP contracts or eval plumbing. Persona prompts
+  load this file as-authored; do not rely on the runner to invent tool copy.
 - `input/protocol.md` — optional chat API or MCP contract for the **agent /
   runtime**, never pasted into persona-facing instruction or context
-- `input/chatbot.yaml` — runtime connection metadata
+- `input/chatbot.yaml` — runtime connection metadata. Treat the sidecar as a
+  black box: declare transport, connection, `capabilities` (machine tool /
+  HTTP wiring for UserSim), and optional `structuredExposure.fields[]`. Playground
+  / Harbor pass through `runtimeDefaults` without interpreting SUT catalogs.
+  Do not mirror sidecar-internal knobs in the UI.
 - `input/self_report_schema.yaml` — machine-readable persona self-report prompts
   for `user_feedback.json`
 
@@ -88,8 +94,14 @@ use per-task `input/output_schema.md`; subjective feedback is owned by
 
 Use machine-readable files for runtime-owned behavior:
 
-- `chatbot.yaml` owns transport metadata plus `personaExposure.fields[]` for
-  structured response fields that should be visible to the persona
+- `chatbot.yaml` owns transport metadata and `capabilities[]` for tools.
+  Persona-visible structured reply details use one name: yaml
+  `structuredExposure.fields[]` (source of truth for selectors). List the
+  matching capability id `structured_exposure` in `capabilities` (also
+  auto-added when those fields are present). SUT JSON keys
+  (`recommendedItems`, `groundedItems`, …) are not platform fields — only
+  `selector` targets.
+- `context.md` owns persona-facing product / capability prose
 - `self_report_schema.yaml` owns the post-chat self-report contract written to
   `user_feedback.json`
 
@@ -100,9 +112,19 @@ conversation-specific feedback fields when needed.
 This keeps prompt assembly, runtime behavior, and contributor docs aligned
 without parsing prose out of `instruction.md`.
 
-Shared chatbot environments should contain only runtime assets such as
-Dockerfiles, sidecars, and helper scripts. Do not put task-specific prose in
-`shared-chat-*`.
+Shared chatbot environments should contain only the persona agent image assets
+(`shared-chat-persona`). Local endpoint hosts live under `chatbot-api-sidecar_*` or `chatbot-mcp-sidecar_*`. Do not
+put task-specific prose in either place.
+
+Choose sidecar kind from the **persona-facing** contract in `input/chatbot.yaml`:
+
+- `transport: sidecar_http` / HTTP chat → `chatbot-api-sidecar_<sut>`
+- `transport: mcp` → `chatbot-mcp-sidecar_<sut>`
+
+A product may still use MCP (or other) tools *behind* an HTTP chat adapter.
+That remains an API sidecar (see `chatbot-api-sidecar_openbb`: `finance-chatbot`
++ `openbb-mcp`). Only use `chatbot-mcp-sidecar_*` when the persona/agent calls
+MCP chat tools directly.
 
 ## Reporting contract
 
@@ -349,14 +371,23 @@ See the example templates in this folder:
 
 ## Canonical Task
 
-`application/tasks/recommender-agent_chat_api`
+`application/tasks/chat_recai`
 
 The recommender task hosts a small REST sidecar that follows the same contract
 as heavier chatbot applications: session creation, message exchange,
 conversation export, and final recommendation export.
 
-Shared runtime examples live under:
+Shared chatbot persona agent runtime:
 
-- `environment/task-environments/application/shared-chat-api-recommender`
-- `environment/task-environments/application/shared-chat-api-support`
-- `environment/task-environments/application/shared-chat-mcp-support`
+- `environment/task-environments/application/shared-chat-persona`
+
+Optional local endpoint hosts (not the persona agent image):
+
+- `environment/task-environments/application/chatbot-api-sidecar_recai`
+- `environment/task-environments/application/chatbot-api-sidecar_openbb`
+- `environment/task-environments/application/chatbot-api-sidecar_acme-support-api`
+- `environment/task-environments/application/chatbot-api-sidecar_multi-agent-medical-assistant`
+- `environment/task-environments/application/chatbot-mcp-sidecar_acme-support`
+
+See [`CHAT_ENVS.md`](../../../environment/task-environments/application/CHAT_ENVS.md)
+for which protocol each package exposes to the persona.

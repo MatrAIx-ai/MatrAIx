@@ -76,7 +76,6 @@ export const WEB_TASK_SUGGESTED_AGENT: Record<string, string> = {
   "web-browser-use-laptop-choice": "persona-browser-use",
   "web-cocoa-plan-choice": "persona-cocoa",
   "web-cua-bookshop-choice": "persona-computer-1",
-  "web-ecommerce-platform_product-discovery": "persona-openhands-sdk",
 };
 
 export function webPersonaAgentSelectOptions(): CockpitSelectOption[] {
@@ -200,11 +199,12 @@ export const WEB_ACCESS_PIPELINE_PATHS: PipelinePathOption[] = WEB_PERSONA_AGENT
   hint: agent.capability,
 }));
 
-/** Chatbot adapter paths — vertical fork before the Chatbot node. */
+/** Chatbot connection paths — vertical fork before the Chatbot node. */
 export const CHAT_ACCESS_PIPELINE_PATHS: PipelinePathOption[] = [
-  { id: "sidecar", label: "Sidecar", icon: "dns" },
-  { id: "api", label: "API", icon: "http" },
-  { id: "mcp", label: "MCP", icon: "hub" },
+  { id: "api_sidecar", label: "API (sidecar)", icon: "dns", hint: "Local compose" },
+  { id: "api_external", label: "API (endpoint)", icon: "http", hint: "Upstream URL" },
+  { id: "mcp_sidecar", label: "MCP (sidecar)", icon: "hub", hint: "Local compose" },
+  { id: "mcp_external", label: "MCP (endpoint)", icon: "hub", hint: "Upstream URL" },
 ];
 
 export function personaAgentSelectLabel(opt: PersonaAgentOption): string {

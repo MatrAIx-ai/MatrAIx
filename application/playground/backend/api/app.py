@@ -462,16 +462,24 @@ def _interecagent_root() -> str:
     override = os.environ.get("INTERECAGENT_ROOT")
     if override:
         return os.path.abspath(override)
-    from backend.service.task_environment import resolve_task_environment_dir
+    from backend.service.task_environment import resolve_chat_endpoint_host_dir
 
     repo_root = Path(__file__).resolve().parents[4]
-    task_dir = repo_root / "application" / "tasks" / "recommender-agent_chat_api"
-    return str(
-        resolve_task_environment_dir(task_dir)
-        / "recommender-api"
-        / "recai"
-        / "InteRecAgent"
-    )
+    task_dir = repo_root / "application" / "tasks" / "chat_recai"
+    host_dir = resolve_chat_endpoint_host_dir(task_dir)
+    if host_dir is None:
+        base = (
+            repo_root
+            / "environment"
+            / "task-environments"
+            / "application"
+            / "chatbot-api-sidecar_recai"
+            / "recommender-api"
+        )
+    else:
+        candidate = host_dir / "recommender-api"
+        base = candidate if candidate.is_dir() else host_dir
+    return str(base / "recai" / "InteRecAgent")
 
 
 def _bundle_check(interecagent_root: str, domain: str) -> Dict[str, Any]:
@@ -721,6 +729,36 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+    @app.get(
+        "/api/harbor/jobs/{job_name}/report.pdf",
+        tags=["harbor-jobs"],
+    )
+    def download_harbor_job_report_pdf(
+        job_name: str, services: AppState = Depends(get_services)
+    ):
+        from fastapi.responses import Response
+
+        from backend.service.report_pdf import build_batch_report_pdf, pdf_filename
+
+        job = services.harbor_jobs.get_job(job_name)
+        if job is None:
+            raise HTTPException(status_code=404, detail="harbor job not found")
+        try:
+            aggregation = services.harbor_jobs.get_job_aggregation(job_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        payload = build_batch_report_pdf(
+            job_name=job_name,
+            job=job,
+            aggregation=aggregation,
+        )
+        filename = pdf_filename(job_name, "batch-report")
+        return Response(
+            content=payload,
+            media_type="application/pdf",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
+
     @app.delete(
         "/api/harbor/jobs/{job_name}",
         tags=["harbor-jobs"],
@@ -855,6 +893,35 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
     @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/report.pdf",
+        tags=["harbor-jobs"],
+    )
+    def download_harbor_trial_report_pdf(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
+    ):
+        from fastapi.responses import Response
+
+        from backend.service.report_pdf import build_trial_report_pdf, pdf_filename
+
+        try:
+            debrief = services.harbor_jobs.get_trial_debrief(job_name, trial_name)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        payload = build_trial_report_pdf(
+            job_name=job_name,
+            trial_name=trial_name,
+            debrief=debrief,
+        )
+        filename = pdf_filename(job_name, trial_name, "trial-report")
+        return Response(
+            content=payload,
+            media_type="application/pdf",
+            headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        )
+
+    @app.get(
         "/api/harbor/jobs/{job_name}/trials/{trial_name}/instruction",
         tags=["harbor-jobs"],
     )
@@ -959,6 +1026,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
                 dimension_filters=body.dimensionFilters,
                 stratify_fields=body.stratifyFields,
                 sample_size_per_value_group=body.sampleSizePerValueGroup,
+                task_path=body.taskPath,
+                auto_ensure_strategy_pool=body.autoEnsureStrategyPool,
             )
         except ValueError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc

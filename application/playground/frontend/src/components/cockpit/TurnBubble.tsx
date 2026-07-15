@@ -11,7 +11,7 @@
 import { type ReactNode } from "react";
 
 import { ChatbotChatAvatar, PersonaChatAvatar } from "./ChatBubbleAvatar";
-import { PersonaExposurePanel, exposureItemLists } from "./PersonaExposurePanel";
+import { StructuredExposurePanel, exposureItemLists } from "./StructuredExposurePanel";
 import { ToolPlanFold } from "./ToolPlanFold";
 import { Sym, fmtLatency } from "./cockpitShared";
 import { Markdown } from "../Markdown";
@@ -38,8 +38,8 @@ export function PersonaBubble({ message, personaId, personaDimensions }: Persona
     <div className="flex w-full items-start gap-2.5 pr-10">
       <PersonaChatAvatar personaId={personaId} dimensions={personaDimensions} />
       <div className="flex min-w-0 flex-1 flex-col items-start">
-        <div className="hud mb-1.5 text-[9px] text-text-dim">Persona</div>
-        <div className="w-full break-words rounded-md rounded-tl-sm border border-outline bg-surface px-4 py-3 text-[13px] leading-relaxed text-text-main">
+        <div className="hud mb-1.5 text-[11px] text-text-dim">Persona</div>
+        <div className="w-full break-words rounded-md rounded-tl-sm border border-outline bg-surface px-4 py-3 text-[15px] leading-relaxed text-text-main">
           {message?.trim() ? message : <span className="italic text-text-dim">(the user said nothing)</span>}
         </div>
       </div>
@@ -57,10 +57,10 @@ export interface RecBotBubbleProps {
   onToggleFold: () => void;
 }
 
-/** The app reply: right-aligned, with exposure + tool-plan fold + meta chips. */
+/** The app reply: right-aligned, with exposure + optional tool-plan fold + meta chips. */
 export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: RecBotBubbleProps) {
   void domain;
-  const exposure = turn.personaExposure ?? [];
+  const exposure = turn.structuredExposure ?? [];
   const items = exposureItemLists(exposure);
   const hiccup = isHiccup(turn.assistantMessage);
   const textlessStructured = hiccup && (items.length > 0 || exposure.length > 0);
@@ -68,39 +68,52 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
   const plan = turn.plan ?? [];
   const hasPlan = plan.length > 0;
   const planFailed = plan.some((s) => s.status === "error");
+  const scoredItems = items.filter((item) => item.score !== null && item.score !== undefined);
+  const nativeRaw = turn.nativeRaw?.trim() || null;
+  const showDecisionFold = hasPlan || scoredItems.length > 0 || Boolean(nativeRaw);
 
   return (
     <div className="flex w-full justify-end pl-10">
       <div className="flex max-w-full items-start gap-2.5">
         <div className="flex min-w-0 flex-col items-end">
-          <div className="hud mb-1.5 text-[9px] text-primary">{appName}</div>
+          <div className="hud mb-1.5 text-[11px] text-primary">{appName}</div>
           <div className="max-w-full rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-4">
             {!hiccup ? (
               <Markdown
-                className={`text-[13px] leading-relaxed text-text-main ${exposure.length > 0 ? "mb-4 border-b border-outline pb-4" : ""}`}
+                className={`text-[15px] leading-relaxed text-text-main ${
+                  exposure.length > 0 || showDecisionFold ? "mb-4 border-b border-outline pb-4" : ""
+                }`}
               >
                 {turn.assistantMessage ?? ""}
               </Markdown>
             ) : textlessStructured ? (
-              <p className="mb-4 border-b border-outline pb-4 text-[13px] italic leading-relaxed text-text-dim">
+              <p className="mb-4 border-b border-outline pb-4 text-[15px] italic leading-relaxed text-text-dim">
                 The app returned structured details, but no reply text was captured for this turn.
               </p>
             ) : (
-              <p className="text-[13px] italic leading-relaxed text-danger">The app didn&apos;t reply on this turn.</p>
+              <p className="text-[15px] italic leading-relaxed text-danger">The app didn&apos;t reply on this turn.</p>
             )}
 
-            {exposure.length > 0 && <PersonaExposurePanel exposure={exposure} />}
+            {exposure.length > 0 && <StructuredExposurePanel exposure={exposure} />}
 
-            <div className={exposure.length > 0 || !hiccup ? "mt-3" : ""}>
-              <ToolPlanFold plan={plan} items={items} nativeRaw={turn.nativeRaw ?? null} open={foldOpen} onToggle={onToggleFold} />
-            </div>
+            {showDecisionFold ? (
+              <div className={exposure.length > 0 || !hiccup ? "mt-3" : ""}>
+                <ToolPlanFold
+                  plan={plan}
+                  items={items}
+                  nativeRaw={nativeRaw}
+                  open={foldOpen}
+                  onToggle={onToggleFold}
+                />
+              </div>
+            ) : null}
           </div>
 
           {(hasPlan || latency) && (
             <div className="mt-2.5 flex items-center gap-2">
               {hasPlan && (
                 <span
-                  className={`hud rounded border px-2 py-1 text-[8px] ${
+                  className={`hud rounded border px-2 py-1 text-[11px] ${
                     planFailed
                       ? "border-danger/25 bg-danger/10 text-danger"
                       : "border-secondary/25 bg-secondary/10 text-secondary"
@@ -110,7 +123,7 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
                 </span>
               )}
               {latency && (
-                <span className="hud flex items-center gap-1 rounded border border-outline px-2 py-1 text-[8px] text-text-dim">
+                <span className="hud flex items-center gap-1 rounded border border-outline px-2 py-1 text-[11px] text-text-dim">
                   <Sym name="timer" size={11} />
                   {latency}
                 </span>
@@ -129,7 +142,7 @@ export function TurnMarker({ label, children }: { label: string; children?: Reac
   return (
     <div className="my-1 flex w-full items-center">
       <div className="flex-1 border-t border-outline-dim" />
-      <span className="hud flex items-center gap-1 bg-surface-dim px-3 text-[10px] text-text-dim">
+      <span className="hud flex items-center gap-1 bg-surface-dim px-3 text-[12px] text-text-dim">
         {children}
         {label}
       </span>

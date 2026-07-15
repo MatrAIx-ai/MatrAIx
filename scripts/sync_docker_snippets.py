@@ -19,6 +19,9 @@ TASK_ROOTS = (
     REPO_ROOT / "application" / "tasks",
     REPO_ROOT / "persona" / "tasks",
 )
+ENV_SNIPPET_ROOTS = (
+    REPO_ROOT / "environment" / "task-environments" / "application",
+)
 
 
 @dataclass(frozen=True)
@@ -38,10 +41,20 @@ def _dockerfile_uses_snippet(dockerfile: Path, snippet_name: str) -> bool:
 
 def discover_managed_copies() -> list[ManagedCopy]:
     copies: list[ManagedCopy] = []
-    for task_root in TASK_ROOTS:
-        if not task_root.is_dir():
-            continue
-        for dockerfile in sorted(task_root.glob("*/environment/Dockerfile")):
+    dockerfile_globs = [
+        *(
+            task_root.glob("*/environment/Dockerfile")
+            for task_root in TASK_ROOTS
+            if task_root.is_dir()
+        ),
+        ENV_SNIPPET_ROOTS[0].glob("shared-chat-persona/Dockerfile"),
+    ]
+    seen: set[Path] = set()
+    for group in dockerfile_globs:
+        for dockerfile in sorted(group):
+            if dockerfile in seen:
+                continue
+            seen.add(dockerfile)
             for snippet_name, source in MANAGED_SNIPPETS.items():
                 if _dockerfile_uses_snippet(dockerfile, snippet_name):
                     copies.append(

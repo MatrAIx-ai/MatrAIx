@@ -3,6 +3,10 @@
 Scans all task folders (not only the canonical examples) against
 application/task-spec/authoring-bundle.md so new tasks cannot slip through
 with a custom runtime shape while curated example-only tests stay green.
+
+Chatbot tasks must use ``application/shared-chat-persona`` and, when
+``local_compose`` is set, a matching ``chatbot-*-sidecar_*`` host that
+exists on disk and aligns with ``input/chatbot.yaml`` transport.
 """
 
 from __future__ import annotations
@@ -177,6 +181,60 @@ def test_application_task_matches_type_contract(task_dir: Path) -> None:
             errors,
             (task_dir / "input" / "self_report_schema.yaml").is_file(),
             "chatbot tasks require input/self_report_schema.yaml",
+        )
+        _require(
+            errors,
+            definition == "application/shared-chat-persona",
+            "chatbot tasks must use environment.definition = "
+            "'application/shared-chat-persona'",
+        )
+        local_compose = str(env.get("local_compose") or "").strip()
+        if local_compose:
+            compose_path = _env_dir(local_compose)
+            _require(
+                errors,
+                compose_path.is_dir(),
+                f"environment.local_compose not found: "
+                f"{compose_path.relative_to(REPO_ROOT)}",
+            )
+            _require(
+                errors,
+                (compose_path / "docker-compose.yaml").is_file(),
+                f"{compose_path.relative_to(REPO_ROOT)} must include "
+                "docker-compose.yaml",
+            )
+            chatbot_yaml = task_dir / "input" / "chatbot.yaml"
+            if chatbot_yaml.is_file():
+                try:
+                    chatbot_cfg = yaml.safe_load(
+                        chatbot_yaml.read_text(encoding="utf-8")
+                    )
+                except yaml.YAMLError as exc:
+                    errors.append(f"chatbot.yaml is not valid YAML: {exc}")
+                    chatbot_cfg = None
+                transport = ""
+                if isinstance(chatbot_cfg, dict):
+                    transport = str(chatbot_cfg.get("transport") or "").strip().lower()
+                if transport == "mcp":
+                    _require(
+                        errors,
+                        local_compose.startswith("application/chatbot-mcp-sidecar_"),
+                        "MCP chatbot local_compose must be "
+                        "application/chatbot-mcp-sidecar_<sut>",
+                    )
+                elif transport in {"sidecar_http", "external_http"}:
+                    _require(
+                        errors,
+                        local_compose.startswith("application/chatbot-api-sidecar_"),
+                        "HTTP chatbot local_compose must be "
+                        "application/chatbot-api-sidecar_<sut>",
+                    )
+
+        persona_env = _env_dir("application/shared-chat-persona")
+        _require(
+            errors,
+            (persona_env / "Dockerfile").is_file(),
+            "shared-chat-persona must include Dockerfile",
         )
 
     assert not errors, (

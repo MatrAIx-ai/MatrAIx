@@ -31,7 +31,6 @@ import { SurveyEvalCockpit } from "./SurveyEvalCockpit";
 import { WebEvalCockpit } from "./WebEvalCockpit";
 import { OsAppEvalCockpit } from "./OsAppEvalCockpit";
 import { type PlaygroundTaskType } from "./TaskTypeSwitch";
-import { fmtDomain } from "../runsShared";
 import { CockpitSetupShell } from "./setup/CockpitSetupShell";
 import { PersonaSamplingRail } from "./setup/PersonaSamplingRail";
 import { CockpitPipelineDiagram } from "./setup/CockpitPipelineDiagram";
@@ -79,12 +78,16 @@ function isKnownChatApplicationId(value: string): value is "recai" | "finance_op
   return value === "recai" || value === "finance_openbb" || value === "medical_assistant";
 }
 
-function transportForChatTask(task: Pick<ChatbotEvalTask, "transport" | "applicationId">): ChatTransport {
-  if (task.applicationId === "finance_openbb") return "mcp";
-  if (task.applicationId === "medical_assistant") return "api";
-  if (task.transport === "mcp") return "mcp";
-  if (task.transport === "external_http") return "api";
-  return "sidecar";
+function transportForChatTask(
+  task: Pick<ChatbotEvalTask, "transport" | "canStart">,
+): ChatTransport {
+  const transport = (task.transport || "").trim();
+  if (transport === "mcp") {
+    return task.canStart ? "mcp_sidecar" : "mcp_external";
+  }
+  if (transport === "external_http") return "api_external";
+  // sidecar_http and any other HTTP local task setup
+  return "api_sidecar";
 }
 
 /** Map the job's coarse phase into a single "what's happening now" line. */
@@ -269,7 +272,6 @@ function ChatbotEvalCockpit({
 
   // --- Selection + run knobs ---------------------------------------------
   const [selectedTaskId, setSelectedTaskId] = useState<string>("");
-  const [domain, setDomain] = useState<Domain>((options?.defaults.domain as Domain) ?? "movie");
   const [engine, setEngine] = useState<string>(options?.defaults.engine ?? "gpt-4o-mini");
   const [maxTurns, setMaxTurns] = useState<number | null>(null);
   const [sidecarStartingId, setSidecarStartingId] = useState<string | null>(null);
@@ -303,9 +305,13 @@ function ChatbotEvalCockpit({
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
@@ -346,19 +352,14 @@ function ChatbotEvalCockpit({
     );
   }, [chatbotTasks]);
 
-  // Adopt the canonical defaults once config metadata arrives.
+  // Adopt engine default once config metadata arrives. Sidecar context/domain
+  // come only from chatbot.yaml and are passed through as opaque runtime defaults.
   const adoptedDefaults = useRef(false);
   useEffect(() => {
     if (adoptedDefaults.current || !options) return;
     adoptedDefaults.current = true;
-    setDomain((options.defaults.domain as Domain) ?? "movie");
     setEngine(options.defaults.engine ?? "gpt-4o-mini");
   }, [options]);
-
-  // Mirror the run domain up so the shared (⌘K) catalog drawer matches it.
-  useEffect(() => {
-    onDomainChange?.(domain);
-  }, [domain, onDomainChange]);
 
   const selectedTask = useMemo(
     () => chatbotTasks.find((task) => task.id === selectedTaskId) ?? chatbotTasks[0] ?? null,
@@ -367,11 +368,16 @@ function ChatbotEvalCockpit({
   const applicationId = (selectedTask?.applicationId ||
     (options?.defaults.applicationId as ApplicationId | undefined) ||
     "chatbot") as ApplicationId;
+  // Opaque passthrough from task chatbot.yaml — Playground does not interpret "domain".
   const applicationContext =
-    applicationId === "recai"
-      ? domain
-      : selectedTask?.applicationContext || contextForApplication(applicationId, domain);
-  const requestDomain = applicationId === "recai" ? domain : undefined;
+    selectedTask?.applicationContext?.trim() ||
+    selectedTask?.defaultDomain?.trim() ||
+    contextForApplication(applicationId, "movie");
+  const requestDomain = selectedTask?.defaultDomain?.trim() || undefined;
+
+  useEffect(() => {
+    if (requestDomain) onDomainChange?.(requestDomain as Domain);
+  }, [requestDomain, onDomainChange]);
 
   const handleStartSidecar = useCallback(
     async (taskId: string) => {
@@ -442,15 +448,15 @@ function ChatbotEvalCockpit({
   const chatTaskPath = selectedTask?.taskPath?.trim() ?? "";
   const chatTaskLabel = selectedTask?.title ?? APP_NAME[applicationId] ?? "Chatbot task";
   const knownLaunchApplicationId = isKnownChatApplicationId(applicationId) ? applicationId : null;
+  // Prefer task-declared context; otherwise fall back by applicationId when known.
   const launchChatApplicationContext =
-    knownLaunchApplicationId === null
-      ? undefined
-      : knownLaunchApplicationId === "recai"
-        ? domain
-        : selectedTask?.applicationContext || contextForApplication(knownLaunchApplicationId, domain);
-  const runContext = `${chatTaskLabel}${applicationId === "recai" ? ` · ${fmtDomain(domain)}` : ""}`;
+    selectedTask?.applicationContext?.trim() ||
+    (knownLaunchApplicationId
+      ? contextForApplication(knownLaunchApplicationId, (requestDomain || "movie") as Domain)
+      : undefined);
+  const runContext = chatTaskLabel;
 
-  // Report the honest footer context up (task type + app + domain for RecAI).
+  // Report the honest footer context up (task type + selected chatbot).
   useEffect(() => {
     if (!isActive) return;
     onFooterContextChange?.(`chatbot · ${runContext}`);
@@ -516,6 +522,7 @@ function ChatbotEvalCockpit({
           sampleSize: selectedPersonaIds.length,
           seed,
           personaModel,
+          personaPool,
           personaIds: selectedPersonaIds,
           nConcurrentTrials: Math.min(parallelTrials, selectedPersonaIds.length),
           mode: "auto",
@@ -540,6 +547,7 @@ function ChatbotEvalCockpit({
     seed,
     personaModel,
     parallelTrials,
+    personaPool,
     requestDomain,
     knownLaunchApplicationId,
     launchChatApplicationContext,
@@ -676,12 +684,7 @@ function ChatbotEvalCockpit({
   const knobs = options?.knobs ?? [];
   const engineKnob = knobs.find((k) => k.key === "engine");
   const engineOptions = engineKnob?.options ?? [];
-  const domainKnob = knobs.find((k) => k.key === "domain");
-  const domainOptions =
-    applicationId === "recai"
-      ? (domainKnob?.options ?? []).map((o) => ({ ...o, label: fmtDomain(o.label) }))
-      : [];
-  const chatTransport = selectedTask ? transportForChatTask(selectedTask) : "sidecar";
+  const chatTransport = selectedTask ? transportForChatTask(selectedTask) : "api_sidecar";
   const runningChatTaskIds = useMemo(() => {
     const ids = new Set<string>();
     if (isRunning && selectedTaskId) ids.add(selectedTaskId);
@@ -718,6 +721,11 @@ function ChatbotEvalCockpit({
           statusDetail: runningNow
             ? "Sidecar started for this run."
             : task.statusDetail ?? undefined,
+          capabilities: (task.capabilities ?? []).map((cap) => ({
+            id: cap.id,
+            label: cap.label,
+            kind: cap.kind,
+          })),
           domain: task.domain,
           difficulty: task.difficulty,
           taskKind: task.taskKind,
@@ -814,6 +822,7 @@ function ChatbotEvalCockpit({
       left={
         <PersonaSamplingRail
           taskType="chatbot"
+          taskPath={chatTaskPath || null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
           personaModelOptions={personaModelOptions}
@@ -823,6 +832,8 @@ function ChatbotEvalCockpit({
           onSelectedPersonaIdsChange={setSelectedPersonaIds}
           sampleSize={sampleSize}
           onSampleSizeChange={setSampleSize}
+          sampleSizePerValueGroup={sampleSizePerValueGroup}
+          onSampleSizePerValueGroupChange={setSampleSizePerValueGroup}
           seed={seed}
           filters={groupFilters}
           onFiltersChange={setGroupFilters}
@@ -832,6 +843,8 @@ function ChatbotEvalCockpit({
           taskPersonaStrategy={taskPersonaStrategy}
           useTaskDefaultStrategy={useTaskDefaultStrategy}
           onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
+          onPersonaPoolChange={setPersonaPool}
+          personaPool={personaPool}
           disabled={setupLocked}
         />
       }
@@ -848,7 +861,7 @@ function ChatbotEvalCockpit({
           turns={turns}
                   draftTurn={draftTurn}
                   livePhase={job?.phase ?? harborPhase}
-          domain={domain}
+          domain={(requestDomain || applicationContext || "movie") as Domain}
           appName={chatTaskLabel}
           personaId={persona?.id}
           personaDimensions={
@@ -950,9 +963,6 @@ function ChatbotEvalCockpit({
             engine={engine}
             onEngineChange={setEngine}
             engineOptions={engineOptions}
-            domain={domain}
-            onDomainChange={(v) => setDomain(v as Domain)}
-            domainOptions={domainOptions}
             maxTurns={maxTurns}
             onMaxTurnsChange={setMaxTurns}
             onStartSidecar={handleStartSidecar}

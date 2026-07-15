@@ -1,4 +1,4 @@
-"""Load optional per-task ``persona_strategy.json`` (Playground sampling defaults)."""
+"""Load and validate per-task ``persona_strategy.json`` (Playground sampling defaults)."""
 
 from __future__ import annotations
 
@@ -10,13 +10,25 @@ from typing import Any
 PERSONA_STRATEGY_FILENAME = "persona_strategy.json"
 PERSONA_SAMPLING_MODES = frozenset({"single", "random", "stratified"})
 
+# Minimal stub when scaffolding a new task — replace filters with the product cohort.
+DEFAULT_PERSONA_STRATEGY: dict[str, Any] = {
+    "schemaVersion": "1.0",
+    "sources": [],
+    "defaultMode": "random",
+    "dimensionFilters": {},
+}
+
 
 def persona_strategy_path(task_dir: Path) -> Path:
     return task_dir / PERSONA_STRATEGY_FILENAME
 
 
 def load_persona_strategy(task_dir: Path) -> dict[str, Any] | None:
-    """Return a normalized strategy dict, or ``None`` when the file is absent/invalid."""
+    """Return a normalized strategy dict, or ``None`` when the file is absent/invalid.
+
+    Application tasks under ``application/tasks/`` are expected to ship the file
+    (CI enforces presence). Loaders still tolerate missing files for ad-hoc paths.
+    """
     path = persona_strategy_path(task_dir)
     if not path.is_file():
         return None
@@ -85,6 +97,120 @@ def normalize_persona_strategy(raw: dict[str, Any]) -> dict[str, Any]:
     if sample_size_per_value_group is not None:
         payload["sampleSizePerValueGroup"] = sample_size_per_value_group
     return payload
+
+
+def validate_persona_strategy_file(
+    task_dir: Path,
+    *,
+    require_cohort: bool = True,
+) -> list[str]:
+    """Return human-readable errors for a task's ``persona_strategy.json``.
+
+    The file is **required** for application tasks. Field values may use defaults
+    (see ``DEFAULT_PERSONA_STRATEGY``), but tasks are expected to declare a
+    target cohort via ``dimensionFilters`` and/or ``cohortId`` when
+    ``require_cohort`` is true.
+    """
+    errors: list[str] = []
+    path = persona_strategy_path(task_dir)
+    rel = str(path)
+    if not path.is_file():
+        errors.append(
+            f"{rel}: missing required persona_strategy.json "
+            "(declare Playground sampling defaults / target cohort)"
+        )
+        return errors
+
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except OSError as exc:
+        errors.append(f"{rel}: cannot read file ({exc})")
+        return errors
+    except json.JSONDecodeError as exc:
+        errors.append(f"{rel}: invalid JSON ({exc})")
+        return errors
+
+    if not isinstance(raw, dict):
+        errors.append(f"{rel}: root value must be a JSON object")
+        return errors
+
+    if "schemaVersion" not in raw or not str(raw.get("schemaVersion") or "").strip():
+        errors.append(f'{rel}: schemaVersion is required (use "1.0")')
+
+    normalized = normalize_persona_strategy(raw)
+    mode = normalized.get("defaultMode")
+    if mode is None:
+        errors.append(
+            f"{rel}: defaultMode is required "
+            f"(one of: {', '.join(sorted(PERSONA_SAMPLING_MODES))})"
+        )
+
+    if require_cohort:
+        filters = normalized.get("dimensionFilters") or {}
+        cohort_id = normalized.get("cohortId")
+        has_filters = isinstance(filters, dict) and any(
+            isinstance(vals, list) and len(vals) > 0 for vals in filters.values()
+        )
+        if not has_filters and not cohort_id:
+            errors.append(
+                f"{rel}: declare a target cohort via non-empty dimensionFilters "
+                "and/or cohortId (most tasks filter to a product audience)"
+            )
+
+    if mode == "stratified":
+        stratify = normalized.get("stratifyFields") or []
+        if not stratify:
+            errors.append(
+                f'{rel}: defaultMode "stratified" requires stratifyFields'
+            )
+        filters = normalized.get("dimensionFilters") or {}
+        sample_size = normalized.get("sampleSize")
+        per_cell = normalized.get("sampleSizePerValueGroup")
+        if sample_size is not None and per_cell is not None:
+            errors.append(
+                f"{rel}: stratified sampling uses exactly one quota field — "
+                "sampleSize (total N) XOR sampleSizePerValueGroup (N per cell); "
+                "do not set both"
+            )
+        elif sample_size is None and per_cell is None:
+            errors.append(
+                f"{rel}: stratified mode requires exactly one of sampleSize "
+                "(total N) or sampleSizePerValueGroup (N per cell)"
+            )
+        missing_axes = [
+            field
+            for field in stratify
+            if field not in filters or not filters.get(field)
+        ]
+        if missing_axes:
+            errors.append(
+                f"{rel}: every stratifyFields entry must also appear in "
+                f"dimensionFilters with allowed values (missing: {', '.join(missing_axes)}); "
+                "otherwise Playground cannot guarantee cell coverage or synthesize gaps"
+            )
+        elif sample_size is not None and per_cell is None:
+            # sampleSize-only stratified: total N must cover ≥1 persona per cell.
+            try:
+                from personabench.persona_generator import (
+                    build_filter_strata,
+                    filter_feasible_strata,
+                )
+
+                stratify_filters = {field: list(filters[field]) for field in stratify}
+                strata = build_filter_strata(stratify_filters, max_strata=200)
+                feasible, _dropped = filter_feasible_strata(strata)
+                min_cells = len(feasible)
+                if min_cells and int(sample_size) < min_cells:
+                    errors.append(
+                        f"{rel}: sampleSize={sample_size} is below the stratified "
+                        f"cell count={min_cells} (need ≥1 per combination of "
+                        f"{', '.join(stratify)}). Raise sampleSize, or switch to "
+                        "sampleSizePerValueGroup instead (and omit sampleSize)."
+                    )
+            except Exception:  # noqa: BLE001 — soft: skip when schema/generator unavailable
+                pass
+
+    return errors
 
 
 def _as_str_list(value: object) -> list[str]:

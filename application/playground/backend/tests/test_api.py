@@ -58,7 +58,7 @@ def test_interecagent_root_falls_back_to_task_app_path(monkeypatch):
     monkeypatch.delenv("INTERECAGENT_ROOT", raising=False)
     root = _interecagent_root().replace("\\", "/")
     expected_suffix = (
-        "/environment/task-environments/application/shared-chat-api-recommender/recommender-api/recai/InteRecAgent"
+        "/environment/task-environments/application/chatbot-api-sidecar_recai/recommender-api/recai/InteRecAgent"
     )
     assert expected_suffix in root
     assert "/applications/tasks/" not in root

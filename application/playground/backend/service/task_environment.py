@@ -15,9 +15,33 @@ def resolve_task_environment_dir(task_dir: Path) -> Path:
     """
     try:
         from harbor.models.task.paths import TaskPaths
-    except ModuleNotFoundError:
+
+        return TaskPaths.from_task_dir(task_dir).environment_dir
+    except (ModuleNotFoundError, AttributeError):
+        # Installed Harbor wheels may lag the in-repo TaskPaths API.
         return _resolve_without_harbor(task_dir)
-    return TaskPaths.from_task_dir(task_dir).environment_dir
+
+
+def resolve_task_local_compose_dir(task_dir: Path) -> Path | None:
+    """Resolve optional ``[environment].local_compose`` under task-environments."""
+    task_dir = task_dir.resolve()
+    ref = _read_environment_field(task_dir / "task.toml", "local_compose")
+    if ref is None:
+        return None
+    repo_root = _repo_root_for_task(task_dir)
+    if repo_root is None:
+        return None
+    path = (repo_root / TASK_ENVIRONMENTS_ROOT / ref).resolve()
+    return path if path.is_dir() else None
+
+
+def resolve_chat_endpoint_host_dir(task_dir: Path) -> Path | None:
+    """Directory that hosts a local chat endpoint (sidecar package or env dir)."""
+    local_compose = resolve_task_local_compose_dir(task_dir)
+    if local_compose is not None:
+        return local_compose
+    environment_dir = resolve_task_environment_dir(task_dir)
+    return environment_dir if environment_dir.is_dir() else None
 
 
 def _resolve_without_harbor(task_dir: Path) -> Path:
@@ -26,7 +50,7 @@ def _resolve_without_harbor(task_dir: Path) -> Path:
     if local_environment_dir.exists():
         return local_environment_dir
 
-    definition = _read_environment_definition(task_dir / "task.toml")
+    definition = _read_environment_field(task_dir / "task.toml", "definition")
     if definition is None:
         return local_environment_dir
 
@@ -36,7 +60,7 @@ def _resolve_without_harbor(task_dir: Path) -> Path:
     return (repo_root / TASK_ENVIRONMENTS_ROOT / definition).resolve()
 
 
-def _read_environment_definition(config_path: Path) -> str | None:
+def _read_environment_field(config_path: Path, field: str) -> str | None:
     try:
         raw_config = tomllib.loads(config_path.read_text())
     except (OSError, tomllib.TOMLDecodeError):
@@ -45,11 +69,11 @@ def _read_environment_definition(config_path: Path) -> str | None:
     raw_environment = raw_config.get("environment")
     if not isinstance(raw_environment, dict):
         return None
-    definition = raw_environment.get("definition")
-    if not isinstance(definition, str):
+    value = raw_environment.get(field)
+    if not isinstance(value, str):
         return None
 
-    clean = definition.strip()
+    clean = value.strip()
     posix_path = PurePosixPath(clean)
     if (
         not clean

@@ -130,9 +130,13 @@ export function OsAppEvalCockpit({
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
@@ -248,12 +252,13 @@ export function OsAppEvalCockpit({
       personaModel,
       agentName: "persona-computer-1",
       osAppBackend: resolveCuaRuntime(targetTask.id, targetTask.platform),
+      personaPool,
       personaIds: selectedPersonaIds,
       nConcurrentTrials: Math.min(parallelTrials, selectedPersonaIds.length),
       mode: "auto" as const,
       osAppSubmissionProfile: targetTask.osAppSubmissionProfile ?? undefined,
     }),
-    [selectedPersonaIds, seed, personaModel, resolveCuaRuntime, parallelTrials],
+    [selectedPersonaIds, seed, personaModel, resolveCuaRuntime, parallelTrials, personaPool],
   );
 
   const handleRun = useCallback(() => {
@@ -413,6 +418,7 @@ export function OsAppEvalCockpit({
       left={
         <PersonaSamplingRail
           taskType="os-app"
+          taskPath={task?.taskPath ?? null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
           personaModelOptions={cuaPersonaModelOptions}
@@ -422,6 +428,8 @@ export function OsAppEvalCockpit({
           onSelectedPersonaIdsChange={setSelectedPersonaIds}
           sampleSize={sampleSize}
           onSampleSizeChange={setSampleSize}
+          sampleSizePerValueGroup={sampleSizePerValueGroup}
+          onSampleSizePerValueGroupChange={setSampleSizePerValueGroup}
           seed={seed}
           filters={groupFilters}
           onFiltersChange={setGroupFilters}
@@ -431,6 +439,8 @@ export function OsAppEvalCockpit({
           taskPersonaStrategy={taskPersonaStrategy}
           useTaskDefaultStrategy={useTaskDefaultStrategy}
           onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
+          onPersonaPoolChange={setPersonaPool}
+          personaPool={personaPool}
           disabled={setupLocked}
         />
       }
@@ -527,9 +537,6 @@ export function OsAppEvalCockpit({
           engine=""
           onEngineChange={() => undefined}
           engineOptions={[]}
-          domain=""
-          onDomainChange={() => undefined}
-          domainOptions={[]}
           maxTurns={8}
           onMaxTurnsChange={() => undefined}
           resolveCuaRuntime={resolveCuaRuntime}
@@ -596,8 +603,8 @@ function OsAppResults({
   if (running && !osAppResult) {
     return (
       <div className="rounded-md border border-outline bg-surface-lowest p-5">
-        <p className="text-[12px] font-semibold text-text-main">{status ?? "Running computer-use trial…"}</p>
-        {task && <p className="mt-2 text-[12px] text-text-variant">{task.description}</p>}
+        <p className="text-[14px] font-semibold text-text-main">{status ?? "Running computer-use trial…"}</p>
+        {task && <p className="mt-2 text-[14px] text-text-variant">{task.description}</p>}
       </div>
     );
   }
@@ -614,14 +621,14 @@ function OsAppResults({
           <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
           <div>
             <h2 className="font-semibold text-text-main">OS app trial failed</h2>
-            <p className="mt-1 text-[13px] text-text-variant">
+            <p className="mt-1 text-[15px] text-text-variant">
               {error ?? "The trial did not finish."}
               {useComputerHint}
             </p>
             <button
               type="button"
               onClick={onRetry}
-              className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[12px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
+              className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[14px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
             >
               <Sym name="refresh" size={15} />
               Try again
@@ -635,7 +642,7 @@ function OsAppResults({
   if (!osAppResult) {
     return (
       <section className="rounded-md border border-outline bg-surface-lowest p-5">
-        <p className="text-[13px] text-text-variant">Waiting for OS app artifacts…</p>
+        <p className="text-[15px] text-text-variant">Waiting for OS app artifacts…</p>
       </section>
     );
   }
@@ -644,7 +651,7 @@ function OsAppResults({
     <div className="space-y-4">
       {recordingUrl && recordingAvailable && (
         <section className="rounded-md border border-outline bg-surface-lowest p-4">
-          <div className="hud mb-2 flex items-center gap-2 text-[9px] text-primary">
+          <div className="hud mb-2 flex items-center gap-2 text-[11px] text-primary">
             <Sym name="videocam" size={14} />
             Session recording
           </div>
@@ -660,17 +667,17 @@ function OsAppResults({
       )}
       {osAppResult.artifact && (
         <section className="rounded-md border border-outline bg-surface-lowest p-4">
-          <div className="hud mb-2 text-[9px] text-text-dim">
+          <div className="hud mb-2 text-[11px] text-text-dim">
             Output · {osAppResult.artifactName ?? task?.outputArtifact ?? "artifact"}
           </div>
-          <pre className="custom-scrollbar max-h-80 overflow-auto rounded-md bg-surface p-3 font-mono text-[11px] text-text-main">
+          <pre className="custom-scrollbar max-h-80 overflow-auto rounded-md bg-surface p-3 font-mono text-[13px] text-text-main">
             {JSON.stringify(osAppResult.artifact, null, 2)}
           </pre>
         </section>
       )}
       {trace && trace.events.length > 0 && (
         <section className="rounded-md border border-outline bg-surface-lowest p-4">
-          <div className="hud mb-3 flex items-center gap-2 text-[10px] text-primary">
+          <div className="hud mb-3 flex items-center gap-2 text-[12px] text-primary">
             <Sym name="route" size={14} />
             Desktop trace · {trace.events.length} step{trace.events.length === 1 ? "" : "s"}
           </div>

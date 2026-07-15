@@ -13,7 +13,7 @@
  */
 import { useId } from "react";
 
-import type { ExposureItem } from "./PersonaExposurePanel";
+import type { ExposureItem } from "./StructuredExposurePanel";
 import { Sym, FOCUS_RING } from "./cockpitShared";
 import type { PlanStep } from "@/lib/types";
 
@@ -52,6 +52,7 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
   const hasScores = scored.length > 0;
   const hasRaw = Boolean(nativeRaw && nativeRaw.trim());
   const hasBody = hasPlan || hasScores || hasRaw;
+  if (!hasBody) return null;
 
   return (
     <div
@@ -63,8 +64,8 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        aria-controls={hasBody ? panelId : undefined}
-        className={`flex w-full items-center justify-between p-2 hud text-[10px] text-text-dim transition-colors hover:text-text-variant active:bg-surface-high ${
+        aria-controls={panelId}
+        className={`flex w-full items-center justify-between p-2 hud text-[12px] text-text-dim transition-colors hover:text-text-variant active:bg-surface-high ${
           open ? "border-b border-outline bg-surface-low" : "hover:bg-surface-high"
         } ${FOCUS_RING}`}
       >
@@ -77,19 +78,13 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
 
       {open && (
         <div id={panelId} className="rise-in">
-          {!hasBody && (
-            <p className="p-3 text-[13px] text-text-variant">
-              The app didn&apos;t expose any internal steps for this turn.
-            </p>
-          )}
-
           {hasPlan && (
             <div className="border-b border-outline p-3">
-              <p className="mb-2 hud text-[10px] text-text-dim">Steps the app took</p>
+              <p className="mb-2 hud text-[12px] text-text-dim">Steps the app took</p>
               <ol className="space-y-1.5">
                 {plan.map((step, i) => (
-                  <li key={i} className="flex items-start gap-2 font-mono text-[11px] text-text-variant">
-                    <span className="w-4 shrink-0 font-mono text-[11px] text-text-dim">{i + 1}</span>
+                  <li key={i} className="flex items-start gap-2 font-mono text-[13px] text-text-variant">
+                    <span className="w-4 shrink-0 font-mono text-[13px] text-text-dim">{i + 1}</span>
                     <Sym name={iconForTool(step.tool)} size={15} className="shrink-0 text-primary" />
                     <span className="shrink-0 font-medium">{step.tool}</span>
                     {step.detail && <span className="min-w-0 break-words text-text-variant">{step.detail}</span>}
@@ -101,10 +96,10 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
 
           {hasScores && (
             <div className="border-b border-outline p-3">
-              <p className="mb-2 hud text-[10px] text-text-dim">
+              <p className="mb-2 hud text-[12px] text-text-dim">
                 Candidates it ranked, with scores
               </p>
-              <div className="space-y-1 font-mono text-[11px] text-text-variant">
+              <div className="space-y-1 font-mono text-[13px] text-text-variant">
                 {scored.map((item) => (
                   <div key={`${item.itemId}-${item.rank}`} className="flex items-start justify-between gap-3">
                     <span className="min-w-0 break-words">
@@ -119,7 +114,7 @@ export function ToolPlanFold({ plan, items, nativeRaw, open, onToggle }: ToolPla
           )}
 
           {hasRaw && (
-            <pre className="overflow-x-auto whitespace-pre-wrap break-words bg-field p-3 font-mono text-[11px] text-text-variant">
+            <pre className="overflow-x-auto whitespace-pre-wrap break-words bg-field p-3 font-mono text-[13px] text-text-variant">
               {nativeRaw}
             </pre>
           )}

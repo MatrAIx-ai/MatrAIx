@@ -80,13 +80,13 @@ export interface TurnView {
   userMessage: string;
   assistantMessage: string;
   plan?: PlanStep[];
-  personaExposure?: PersonaExposureField[];
+  structuredExposure?: StructuredExposureField[];
   nativeRaw?: string | null;
   rawToolOutputs?: unknown;
   durationSeconds?: number | null;
 }
 
-export interface PersonaExposureField {
+export interface StructuredExposureField {
   key?: string | null;
   label?: string | null;
   format?: string | null;
@@ -205,7 +205,7 @@ export interface HarborDraftTurn {
   turnIndex?: number;
   userMessage?: string;
   assistantMessage?: string;
-  personaExposure?: PersonaExposureField[];
+  structuredExposure?: StructuredExposureField[];
   durationSeconds?: number | null;
 }
 
@@ -366,6 +366,13 @@ export interface ChatbotEvalTask {
   canStart?: boolean;
   healthUrl?: string;
   statusDetail?: string;
+  capabilities?: Array<{
+    id: string;
+    label: string;
+    description?: string;
+    kind?: string;
+    tool?: string;
+  }>;
   profileMarkdown?: string;
   instructionMarkdown?: string;
   contextMarkdown?: string;
@@ -516,7 +523,7 @@ export interface HarborJobSummary {
   applicationType?: string | null;
   /** Display title derived from ``task.toml`` ``[task].name``. */
   taskTitle?: string | null;
-  /** Full Harbor task name, e.g. ``application/recommender-agent-chat-api``. */
+  /** Full Harbor task name, e.g. ``application/chat-recai``. */
   taskName?: string | null;
   domain?: string | null;
   difficulty?: string | null;
@@ -784,6 +791,16 @@ export interface HarborJobAggregation {
 export interface HarborJobDetail {
   jobName: string;
   jobsDir?: string | null;
+  applicationType?: string | null;
+  taskPath?: string | null;
+  taskTitle?: string | null;
+  taskName?: string | null;
+  domain?: string | null;
+  difficulty?: string | null;
+  tags?: string[];
+  metaType?: string | null;
+  description?: string | null;
+  personaStrategy?: TaskPersonaStrategy | null;
   config?: Record<string, unknown> | null;
   result?: Record<string, unknown> | null;
   trials: HarborTrialView[];
@@ -845,6 +862,8 @@ export interface PersonaPoolSampleResult {
     dimensions?: Record<string, string>;
   }>;
   stratifyFields?: string[];
+  poolEnsured?: boolean;
+  poolReused?: boolean;
 }
 
 export interface PersonaPoolPersonaCard {
@@ -886,6 +905,9 @@ export interface TaskDetail {
   description?: string;
   metaType?: string;
   taskName?: string;
+  domain?: string | null;
+  difficulty?: string | null;
+  tags?: string[];
   instructionMarkdown?: string;
   contextMarkdown?: string;
   questionnaireMarkdown?: string;
@@ -921,7 +943,7 @@ export interface PersonaCohortDetail extends PersonaCohortSummary {
 
 /** Default Harbor task paths for cockpit launch (one trial per persona). */
 export const HARBOR_TASK_PATHS = {
-  chatbot: "application/tasks/recommender-agent_chat_api",
+  chatbot: "application/tasks/chat_recai",
   survey: "application/tasks/example-survey_product-feedback",
   web: "application/tasks/example-web-playwright_quote-choice",
   cuaLinux: "application/tasks/example-computer-use-linux_note-to-csv",
@@ -930,6 +952,6 @@ export const HARBOR_TASK_PATHS = {
 
 export const HARBOR_CHAT_TASKS: Record<string, string> = {
   recai: HARBOR_TASK_PATHS.chatbot,
-  finance_openbb: "application/tasks/finance-openbb_chatbot",
-  medical_assistant: "application/tasks/medical-assistant_chatbot",
+  finance_openbb: "application/tasks/chat_openbb",
+  medical_assistant: "application/tasks/chat_multi-agent-medical-assistant",
 };

@@ -50,7 +50,7 @@ def build_harbor_env(*, repo_root: Path, payload: dict[str, Any]) -> dict[str, s
             / "environment"
             / "task-environments"
             / "application"
-            / "shared-chat-api-recommender"
+            / "chatbot-api-sidecar_recai"
             / "recommender-api"
         ),
     ]

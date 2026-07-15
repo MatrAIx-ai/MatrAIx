@@ -46,6 +46,8 @@ jobs:
             packages/rewardkit/tests/ \
             application/playground/backend/tests/test_api_schemas.py \
             application/playground/backend/tests/test_application_types.py \
+            application/playground/backend/tests/test_application_task_spec.py \
+            application/playground/backend/tests/test_chatbot_sidecar_service.py \
             application/playground/backend/tests/test_config.py \
             application/playground/backend/tests/test_harbor_chat_eval.py \
             application/playground/backend/tests/test_harbor_chat_mcp_session.py \
@@ -63,4 +65,7 @@ jobs:
             application/playground/backend/tests/test_remote_runner_server.py \
             application/playground/backend/tests/test_task_detail_service.py \
             application/playground/backend/tests/test_trial_events.py \
-            tests/environment/test_application_tasks.py
+            packages/playground/src/playground/tests/test_chatbot_sidecar_compose.py \
+            tests/environment/test_application_task_contracts.py \
+            tests/environment/test_application_tasks.py \
+            tests/unit/harbor/test_compose_materialize.py

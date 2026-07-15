@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import inspect
 from itertools import count
 import json
 from pathlib import Path
@@ -28,7 +27,12 @@ from playground.types import (
 )
 from playground.user_sim.chatbot_labels import chatbot_display_name
 from playground.user_sim.kickoff import get_goal_context
-from playground.user_sim.port import ChatSessionPort, normalize_agent_turn
+from playground.user_sim.port import (
+    ChatSessionPort,
+    normalize_agent_turn,
+    run_session_action_async,
+    run_session_action_sync,
+)
 from playground.user_sim.prompt import (
     assemble_report_system_prompt,
     prompt_bundle,
@@ -61,10 +65,10 @@ def _format_exposure_value(value: Any, *, kind: str) -> str:
 def _chatbot_observation(
     chatbot_label: str,
     assistant_message: str,
-    persona_exposure: Optional[List[Dict[str, Any]]] = None,
+    structured_exposure: Optional[List[Dict[str, Any]]] = None,
 ) -> str:
     details = []
-    for item in persona_exposure or []:
+    for item in structured_exposure or []:
         value = _format_exposure_value(
             item.get("value"), kind=str(item.get("format") or "text")
         ).strip()
@@ -138,7 +142,10 @@ def run_playground(
         repo_root=repo_root or Path("."),
     )
 
-    tool_client = build_tool_step_client(config.persona_model)
+    tool_client = build_tool_step_client(
+        config.persona_model,
+        capabilities=task_config.capabilities if task_config else None,
+    )
     sim = UserSimSession(
         tool_client,
         persona,
@@ -164,32 +171,32 @@ def run_playground(
 
     for index in _turn_indices(config.max_turns):
         message = (action.message or "").strip()
-        if not message:
+        if not message and not action.capability_tool:
             break
 
         emit({"type": "user_message", "turnIndex": index, "message": message})
         emit({"type": "phase", "phase": "application_thinking", "userMessage": message})
-        raw_view = session.run_turn_sync(message)
+        raw_view = run_session_action_sync(session, action)
         view = normalize_agent_turn(
             raw_view,
             message,
-            persona_exposure_fields=task_config.persona_exposure if task_config else None,
+            structured_exposure_fields=task_config.structured_exposure if task_config else None,
         )
         assistant = str(view.get("assistantMessage") or "")
-        persona_exposure = list(view.get("personaExposure") or [])
+        structured_exposure = list(view.get("structuredExposure") or [])
         emit(
             {
                 "type": "assistant_message",
                 "turnIndex": index,
                 "userMessage": message,
                 "assistantMessage": assistant,
-                "personaExposure": persona_exposure,
+                "structuredExposure": structured_exposure,
                 "durationSeconds": view.get("durationSeconds"),
             }
         )
         emit({"type": "phase", "phase": "persona_thinking"})
         action = sim.next_action(
-            _chatbot_observation(chatbot_label, assistant, persona_exposure)
+            _chatbot_observation(chatbot_label, assistant, structured_exposure)
         )
 
         decision = action.decision if action.end_reason else "continue"
@@ -197,7 +204,7 @@ def run_playground(
             turn_index=index,
             user_message=message,
             assistant_message=assistant,
-            persona_exposure=persona_exposure,
+            structured_exposure=structured_exposure,
             decision=decision,
             duration_seconds=view.get("durationSeconds"),
         )
@@ -258,7 +265,10 @@ async def run_playground_async(
         repo_root=repo_root or Path("."),
     )
 
-    tool_client = build_tool_step_client(config.persona_model)
+    tool_client = build_tool_step_client(
+        config.persona_model,
+        capabilities=task_config.capabilities if task_config else None,
+    )
     sim = UserSimSession(
         tool_client,
         persona,
@@ -284,34 +294,32 @@ async def run_playground_async(
 
     for index in _turn_indices(config.max_turns):
         message = (action.message or "").strip()
-        if not message:
+        if not message and not action.capability_tool:
             break
 
         emit({"type": "user_message", "turnIndex": index, "message": message})
         emit({"type": "phase", "phase": "application_thinking", "userMessage": message})
-        raw_view = session.run_turn_sync(message)
-        if inspect.isawaitable(raw_view):
-            raw_view = await raw_view
+        raw_view = await run_session_action_async(session, action)
         view = normalize_agent_turn(
             raw_view,
             message,
-            persona_exposure_fields=task_config.persona_exposure if task_config else None,
+            structured_exposure_fields=task_config.structured_exposure if task_config else None,
         )
         assistant = str(view.get("assistantMessage") or "")
-        persona_exposure = list(view.get("personaExposure") or [])
+        structured_exposure = list(view.get("structuredExposure") or [])
         emit(
             {
                 "type": "assistant_message",
                 "turnIndex": index,
                 "userMessage": message,
                 "assistantMessage": assistant,
-                "personaExposure": persona_exposure,
+                "structuredExposure": structured_exposure,
                 "durationSeconds": view.get("durationSeconds"),
             }
         )
         emit({"type": "phase", "phase": "persona_thinking"})
         action = sim.next_action(
-            _chatbot_observation(chatbot_label, assistant, persona_exposure)
+            _chatbot_observation(chatbot_label, assistant, structured_exposure)
         )
 
         decision = action.decision if action.end_reason else "continue"
@@ -319,7 +327,7 @@ async def run_playground_async(
             turn_index=index,
             user_message=message,
             assistant_message=assistant,
-            persona_exposure=persona_exposure,
+            structured_exposure=structured_exposure,
             decision=decision,
             duration_seconds=view.get("durationSeconds"),
         )

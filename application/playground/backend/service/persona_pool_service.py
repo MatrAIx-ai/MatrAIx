@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import yaml
@@ -12,6 +13,7 @@ from typing import Any, Literal
 
 from personabench.persona_dimension_catalog import values_for_dimension
 from personabench.persona_job import (
+    _stratify_bucket_key,
     load_manifest,
     sample_personas,
     sample_personas_stratified,
@@ -27,9 +29,47 @@ PERSONA_CARD_DIMENSIONS = (
 )
 
 DEFAULT_PERSONA_POOL = "persona/datasets/bench-dev-sample"
+GENERATED_DATASETS_DIR = "persona/datasets/_generated"
 COHORTS_DIR = "persona/datasets/cohorts"
 DIMENSION_CATEGORIES_PATH = "persona/schema/dimension_categories.json"
+MAX_FILTER_STRATA = 256
+DEFAULT_STRATEGY_STRATUM_MIN = 2
 CohortKind = Literal["recipe", "frozen"]
+
+
+def is_pool_coverage_error(message: str) -> bool:
+    text = message or ""
+    return (
+        "exceeds matched pool size" in text
+        or "No personas with stratify fields" in text
+        or "sample_size_per_value_group=" in text
+        or "Incomplete stratify coverage" in text
+    )
+
+
+def coverage_recovery_hint(*, task_path: str | None = None) -> str:
+    cleaned = (task_path or "").strip().rstrip("/")
+    strategy = (
+        f"{cleaned}/persona_strategy.json"
+        if cleaned
+        else "application/tasks/<task>/persona_strategy.json"
+    )
+    return (
+        "Auto pool top-up was unavailable or failed. Generate a local strategy "
+        "pool manually, then retry:\n"
+        f"  uv run python persona/scripts/generate_dev_personas.py --strategy {strategy}\n"
+        'Point persona_strategy.json "pool" at the printed '
+        "persona/datasets/_generated/... path (gitignored), or pass that pool when sampling."
+    )
+
+
+def with_coverage_hint(message: str, *, task_path: str | None = None) -> str:
+    text = (message or "").strip()
+    if not text or "generate_dev_personas.py --strategy" in text:
+        return text
+    if not is_pool_coverage_error(text):
+        return text
+    return f"{text}\n\n{coverage_recovery_hint(task_path=task_path)}"
 
 
 def _utc_now() -> str:
@@ -398,7 +438,386 @@ class PersonaPoolService:
             "profileMarkdown": profile_markdown,
         }
 
+    @staticmethod
+    def _filters_as_lists(
+        dimension_filters: dict[str, str | list[str]] | None,
+    ) -> dict[str, list[str]]:
+        if not dimension_filters:
+            return {}
+        out: dict[str, list[str]] = {}
+        for key, value in dimension_filters.items():
+            dim = str(key).removeprefix("dimensions.").strip()
+            if not dim:
+                continue
+            if isinstance(value, list):
+                cleaned = [str(item).strip() for item in value if str(item).strip()]
+            else:
+                text = str(value).strip()
+                cleaned = [text] if text else []
+            if cleaned:
+                out[dim] = cleaned
+        return out
+
+    def _strategy_pool_relpath(
+        self,
+        *,
+        task_path: str | None,
+        list_filters: dict[str, list[str]],
+        sources: list[str] | None,
+    ) -> str:
+        cleaned_task = (task_path or "").strip().rstrip("/")
+        if cleaned_task:
+            slug = re.sub(r"[^a-z0-9]+", "-", Path(cleaned_task).name.lower()).strip("-")
+            return f"{GENERATED_DATASETS_DIR}/strategy-{slug or 'task'}"
+        digest = hashlib.sha1(
+            json.dumps(
+                {"filters": list_filters, "sources": list(sources or [])},
+                sort_keys=True,
+            ).encode("utf-8")
+        ).hexdigest()[:10]
+        return f"{GENERATED_DATASETS_DIR}/filters-{digest}"
+
+    def ensure_filter_coverage_pool(
+        self,
+        *,
+        dimension_filters: dict[str, str | list[str]] | None,
+        sources: list[str] | None = None,
+        sample_size: int = 1,
+        stratify_fields: list[str] | None = None,
+        sample_size_per_value_group: int | None = None,
+        task_path: str | None = None,
+        seed: int = 42,
+    ) -> dict[str, Any]:
+        """Generate (or reuse) a local ``_generated`` pool that covers the filters."""
+        from personabench.persona_generator import (
+            PERSONA_SOURCES,
+            build_filter_strata,
+            filter_feasible_strata,
+            generate_persona_pool,
+            write_persona_dataset,
+        )
+
+        list_filters = self._filters_as_lists(self._normalize_dimension_filters(dimension_filters))
+        if not list_filters:
+            raise ValueError(
+                "Cannot auto-generate a strategy pool without dimensionFilters"
+            )
+
+        try:
+            strata = build_filter_strata(list_filters, max_strata=MAX_FILTER_STRATA)
+        except ValueError as exc:
+            raise ValueError(str(exc)) from exc
+        strata, dropped = filter_feasible_strata(strata)
+        if not strata:
+            raise ValueError(
+                "dimensionFilters produced zero feasible strata after consistency filtering"
+            )
+
+        if isinstance(sample_size_per_value_group, int) and sample_size_per_value_group >= 1:
+            stratum_min = max(DEFAULT_STRATEGY_STRATUM_MIN, sample_size_per_value_group)
+        elif sample_size >= 1:
+            stratum_min = max(
+                DEFAULT_STRATEGY_STRATUM_MIN,
+                (sample_size + len(strata) - 1) // len(strata),
+            )
+        else:
+            stratum_min = DEFAULT_STRATEGY_STRATUM_MIN
+
+        out_rel = self._strategy_pool_relpath(
+            task_path=task_path,
+            list_filters=list_filters,
+            sources=sources,
+        )
+        out_dir = self.repo_root / out_rel
+
+        if out_dir.is_dir():
+            try:
+                self._sample_pool_inner(
+                    persona_pool=out_rel,
+                    sample_size=max(1, sample_size),
+                    seed=seed,
+                    sources=sources,
+                    dimension_filters=dimension_filters,
+                    stratify_fields=stratify_fields,
+                    sample_size_per_value_group=sample_size_per_value_group,
+                )
+                matched = self.filter_pool(
+                    persona_pool=out_rel,
+                    sources=sources,
+                    dimension_filters=dimension_filters,
+                )
+                return {
+                    "pool": out_rel,
+                    "count": len(matched),
+                    "strataCount": len(strata),
+                    "droppedStrata": len(dropped),
+                    "reused": True,
+                }
+            except ValueError as exc:
+                if not is_pool_coverage_error(str(exc)):
+                    raise
+
+        source_tuple: tuple[str, ...]
+        if sources:
+            cleaned_sources = tuple(s.strip() for s in sources if str(s).strip())
+            source_tuple = cleaned_sources or PERSONA_SOURCES
+        else:
+            source_tuple = PERSONA_SOURCES
+
+        personas = generate_persona_pool(
+            count=0,
+            seed=seed,
+            stratum_top_up=strata,
+            min_per_stratum=stratum_min,
+            sources=source_tuple,
+            include_smoke=False,
+        )
+        kind = Path(out_rel).name
+        manifest = write_persona_dataset(
+            out_dir=out_dir,
+            personas=personas,
+            repo_root=self.repo_root,
+            kind=kind,
+            seed=seed,
+            smoke_persona_id="0042",
+        )
+        manifest["stratum_top_up"] = {
+            "min_per_stratum": stratum_min,
+            "strata_count": len(strata),
+            "dropped_strata": len(dropped),
+            "task_path": (task_path or "").strip() or None,
+            "dimensionFilters": list_filters,
+            "stratifyFields": [
+                str(field).removeprefix("dimensions.").strip()
+                for field in (stratify_fields or [])
+                if str(field).strip()
+            ],
+        }
+        (out_dir / "manifest.json").write_text(
+            json.dumps(manifest, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        return {
+            "pool": out_rel,
+            "count": int(manifest.get("count") or len(personas)),
+            "strataCount": len(strata),
+            "droppedStrata": len(dropped),
+            "reused": False,
+        }
+
+    def _expected_stratify_strata(
+        self,
+        dimension_filters: dict[str, str | list[str]] | None,
+        stratify_fields: list[str] | None,
+    ) -> list[dict[str, str]] | None:
+        """Feasible stratify cells implied by filters, or None when unknown.
+
+        Requires every stratify field to appear in dimensionFilters so the
+        cartesian product of allowed values is well-defined.
+        """
+        if not stratify_fields:
+            return None
+        list_filters = self._filters_as_lists(self._normalize_dimension_filters(dimension_filters))
+        stratify_filters: dict[str, list[str]] = {}
+        for raw_field in stratify_fields:
+            field = str(raw_field).removeprefix("dimensions.").strip()
+            if not field:
+                continue
+            values = list_filters.get(field)
+            if not values:
+                return None
+            stratify_filters[field] = values
+        if len(stratify_filters) != len(
+            [f for f in stratify_fields if str(f).removeprefix("dimensions.").strip()]
+        ):
+            return None
+        from personabench.persona_generator import build_filter_strata, filter_feasible_strata
+
+        try:
+            strata = build_filter_strata(stratify_filters, max_strata=MAX_FILTER_STRATA)
+        except ValueError:
+            return None
+        feasible, _dropped = filter_feasible_strata(strata)
+        return feasible
+
+    def _stratify_coverage_gap_message(
+        self,
+        matched: list[dict[str, Any]],
+        *,
+        stratify_fields: list[str],
+        sample_size_per_value_group: int,
+        expected_strata: list[dict[str, str]],
+    ) -> str | None:
+        """Return an error when any expected stratify cell has fewer than N personas."""
+        bare_fields = [
+            str(field).removeprefix("dimensions.").strip() for field in stratify_fields
+        ]
+        bare_fields = [field for field in bare_fields if field]
+        buckets: dict[str, int] = {}
+        for entry in matched:
+            key = _stratify_bucket_key(entry, bare_fields, repo_root=self.repo_root)
+            if key is None:
+                continue
+            buckets[key] = buckets.get(key, 0) + 1
+
+        short: list[str] = []
+        for stratum in expected_strata:
+            key = "\x1f".join(str(stratum[field]) for field in bare_fields)
+            have = buckets.get(key, 0)
+            if have < sample_size_per_value_group:
+                label = ", ".join(f"{field}={stratum[field]}" for field in bare_fields)
+                short.append(
+                    f"{label!r} has {have}, need sample_size_per_value_group="
+                    f"{sample_size_per_value_group}"
+                )
+        if not short:
+            return None
+        preview = "; ".join(short[:6])
+        more = f" (+{len(short) - 6} more)" if len(short) > 6 else ""
+        return f"Incomplete stratify coverage: {preview}{more}"
+
     def sample_pool(
+        self,
+        *,
+        persona_pool: str = DEFAULT_PERSONA_POOL,
+        sample_size: int,
+        seed: int = 42,
+        sources: list[str] | None = None,
+        dimension_filters: dict[str, str | list[str]] | None = None,
+        stratify_fields: list[str] | None = None,
+        sample_size_per_value_group: int | None = None,
+        task_path: str | None = None,
+        auto_ensure_strategy_pool: bool = True,
+    ) -> dict[str, Any]:
+        list_filters = self._filters_as_lists(self._normalize_dimension_filters(dimension_filters))
+        can_auto_ensure = auto_ensure_strategy_pool and bool(list_filters)
+
+        # Stratified quotas:
+        # - sampleSizePerValueGroup set → N per cell (primary); sampleSize is not a clip.
+        # - only sampleSize → ensure ≥1/cell, then stratified sample capped at sampleSize.
+        #   sampleSize must be ≥ # expected cells when that product is known.
+        explicit_per_cell = (
+            isinstance(sample_size_per_value_group, int) and sample_size_per_value_group >= 1
+        )
+        expected = (
+            self._expected_stratify_strata(dimension_filters, stratify_fields)
+            if stratify_fields
+            else None
+        )
+        if (
+            stratify_fields
+            and not explicit_per_cell
+            and expected is not None
+            and sample_size < len(expected)
+        ):
+            raise ValueError(
+                "sampleSize={} is below the stratified cell count={} "
+                "(need ≥1 persona per combination). Raise sampleSize, or set "
+                "sampleSizePerValueGroup and omit sampleSize.".format(
+                    sample_size, len(expected)
+                )
+            )
+
+        # Coverage quota used when synthesizing thin cells.
+        # sampleSize-only: share total N across cells (ceil), then sample/cap.
+        if explicit_per_cell:
+            ensure_per_cell = int(sample_size_per_value_group)
+        elif expected:
+            ensure_per_cell = max(1, (sample_size + len(expected) - 1) // len(expected))
+        else:
+            ensure_per_cell = 1
+
+        # Empty/thin stratify cells are skipped or fail at sample time — detect
+        # shortfalls up front and synthesize a local pool before sampling.
+        if can_auto_ensure and stratify_fields and expected is not None:
+            matched = self.filter_pool(
+                persona_pool=persona_pool,
+                sources=sources,
+                dimension_filters=dimension_filters,
+            )
+            gap = self._stratify_coverage_gap_message(
+                matched,
+                stratify_fields=list(stratify_fields),
+                sample_size_per_value_group=ensure_per_cell,
+                expected_strata=expected,
+            )
+            if gap:
+                try:
+                    ensured = self.ensure_filter_coverage_pool(
+                        dimension_filters=dimension_filters,
+                        sources=sources,
+                        sample_size=sample_size,
+                        stratify_fields=stratify_fields,
+                        sample_size_per_value_group=ensure_per_cell,
+                        task_path=task_path,
+                        seed=seed,
+                    )
+                    result = self._sample_pool_inner(
+                        persona_pool=str(ensured["pool"]),
+                        sample_size=sample_size,
+                        seed=seed,
+                        sources=sources,
+                        dimension_filters=dimension_filters,
+                        stratify_fields=stratify_fields,
+                        sample_size_per_value_group=sample_size_per_value_group,
+                    )
+                    result["poolEnsured"] = True
+                    result["poolReused"] = bool(ensured.get("reused"))
+                    return result
+                except Exception as ensure_exc:  # noqa: BLE001
+                    raise ValueError(
+                        with_coverage_hint(
+                            f"{gap}\n\nAuto pool top-up failed: {ensure_exc}",
+                            task_path=task_path,
+                        )
+                    ) from ensure_exc
+
+        try:
+            return self._sample_pool_inner(
+                persona_pool=persona_pool,
+                sample_size=sample_size,
+                seed=seed,
+                sources=sources,
+                dimension_filters=dimension_filters,
+                stratify_fields=stratify_fields,
+                sample_size_per_value_group=sample_size_per_value_group,
+            )
+        except ValueError as exc:
+            message = str(exc)
+            can_ensure = can_auto_ensure and is_pool_coverage_error(message)
+            if not can_ensure:
+                raise ValueError(with_coverage_hint(message, task_path=task_path)) from exc
+            try:
+                ensured = self.ensure_filter_coverage_pool(
+                    dimension_filters=dimension_filters,
+                    sources=sources,
+                    sample_size=sample_size,
+                    stratify_fields=stratify_fields,
+                    sample_size_per_value_group=sample_size_per_value_group,
+                    task_path=task_path,
+                    seed=seed,
+                )
+                result = self._sample_pool_inner(
+                    persona_pool=str(ensured["pool"]),
+                    sample_size=sample_size,
+                    seed=seed,
+                    sources=sources,
+                    dimension_filters=dimension_filters,
+                    stratify_fields=stratify_fields,
+                    sample_size_per_value_group=sample_size_per_value_group,
+                )
+                result["poolEnsured"] = True
+                result["poolReused"] = bool(ensured.get("reused"))
+                return result
+            except Exception as ensure_exc:  # noqa: BLE001 — surface as sample failure
+                raise ValueError(
+                    with_coverage_hint(
+                        f"{message}\n\nAuto pool top-up failed: {ensure_exc}",
+                        task_path=task_path,
+                    )
+                ) from ensure_exc
+
+    def _sample_pool_inner(
         self,
         *,
         persona_pool: str = DEFAULT_PERSONA_POOL,
@@ -417,7 +836,32 @@ class PersonaPoolService:
         if sample_size < 1:
             raise ValueError("sample_size must be >= 1")
         if stratify_fields:
-            per_group = sample_size_per_value_group or 1
+            bare_fields = [
+                str(field).removeprefix("dimensions.").strip() for field in stratify_fields
+            ]
+            bare_fields = [field for field in bare_fields if field]
+            bucket_counts: dict[str, int] = {}
+            for entry in matched:
+                key = _stratify_bucket_key(entry, bare_fields, repo_root=self.repo_root)
+                if key is None:
+                    continue
+                bucket_counts[key] = bucket_counts.get(key, 0) + 1
+            n_buckets = len(bucket_counts)
+            if n_buckets < 1:
+                label = ", ".join(bare_fields)
+                raise ValueError(f"No personas with stratify fields ({label})")
+
+            if sample_size_per_value_group is not None:
+                per_group = sample_size_per_value_group
+            else:
+                # Spread total sampleSize across cells: ceil(N / cells), then clip.
+                if sample_size < n_buckets:
+                    raise ValueError(
+                        "sampleSize={} is below the stratified cell count={} "
+                        "(need ≥1 persona per combination)".format(sample_size, n_buckets)
+                    )
+                per_group = max(1, (sample_size + n_buckets - 1) // n_buckets)
+
             chosen = sample_personas_stratified(
                 matched,
                 stratify_fields=list(stratify_fields),
@@ -425,7 +869,10 @@ class PersonaPoolService:
                 seed=seed,
                 repo_root=self.repo_root,
             )
-            if len(chosen) > sample_size:
+            # Explicit per-cell quota: take N×cells; ignore sampleSize (mutually
+            # exclusive strategies — strategy files must set only one).
+            # sampleSize-only stratified: take ceil(N/cells) then truncate to N.
+            if sample_size_per_value_group is None and len(chosen) > sample_size:
                 chosen = chosen[:sample_size]
         else:
             if sample_size > len(matched):
@@ -442,6 +889,8 @@ class PersonaPoolService:
             "personaIds": [row["personaId"] for row in personas if row["personaId"]],
             "personas": personas,
             "stratifyFields": list(stratify_fields or []),
+            "poolEnsured": False,
+            "poolReused": False,
         }
 
     def _cohorts_root(self) -> Path:

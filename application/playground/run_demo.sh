@@ -12,7 +12,7 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$HERE"
 REPO_ROOT="$(cd "${HERE}/../.." && pwd)"
 PLAYGROUND_CORE_DIR="${REPO_ROOT}/packages/playground/src"
-CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/shared-chat-api-recommender/recommender-api"
+CHATBOT_API_DIR="${REPO_ROOT}/environment/task-environments/application/chatbot-api-sidecar_recai/recommender-api"
 
 # Optional: load local secrets (e.g. OPENAI_API_KEY) from .env.local if present.
 if [[ -f .env.local ]]; then set -a; . ./.env.local; set +a; fi

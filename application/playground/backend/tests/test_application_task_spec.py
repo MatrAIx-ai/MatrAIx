@@ -25,7 +25,7 @@ def test_application_task_spec_manifest_groups_core_protocols() -> None:
         "application/tasks/example-survey_product-feedback"
     )
     assert manifest["applicationTypes"]["chatbot"]["canonicalTask"] == (
-        "application/tasks/recommender-agent_chat_api"
+        "application/tasks/chat_recai"
     )
     assert manifest["applicationTypes"]["web"]["canonicalTask"] == (
         "application/tasks/example-web-playwright_quote-choice"
@@ -82,16 +82,19 @@ def test_survey_reference_tasks_use_shared_runtime_and_task_local_input() -> Non
 
 
 def test_canonical_chatbot_task_shape() -> None:
-    task = TASKS_ROOT / "recommender-agent_chat_api"
-    env = ENVIRONMENTS_ROOT / "shared-chat-api-recommender"
+    task = TASKS_ROOT / "chat_recai"
+    persona = ENVIRONMENTS_ROOT / "shared-chat-persona"
+    sidecar = ENVIRONMENTS_ROOT / "chatbot-api-sidecar_recai"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
-    assert raw["task"]["name"] == "application/recommender-agent-chat-api"
+    assert raw["task"]["name"] == "application/chat-recai"
     assert raw["metadata"]["type"] == "chatbot"
     assert raw["metadata"]["domain"] == "commerce-retail"
-    assert raw["environment"]["definition"] == "application/shared-chat-api-recommender"
+    assert raw["environment"]["definition"] == "application/shared-chat-persona"
+    assert raw["environment"]["local_compose"] == "application/chatbot-api-sidecar_recai"
     assert "/app/output" in raw["artifacts"]
-    assert (env / "recommender-api" / "server.py").is_file()
+    assert (persona / "Dockerfile").is_file()
+    assert (sidecar / "recommender-api" / "server.py").is_file()
     assert (task / "input" / "self_report_schema.yaml").is_file()
     assert not (task / "input" / "output_schema.md").exists()
 
@@ -119,6 +122,9 @@ def test_canonical_os_app_task_shape() -> None:
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
     assert raw["metadata"]["type"] == "os-app"
+    assert raw["environment"]["definition"] == "application/shared-os-app-mac-ios"
+    assert (ENVIRONMENTS_ROOT / "shared-os-app-mac-ios").is_dir()
+    assert (ENVIRONMENTS_ROOT / "shared-os-app-linux" / "Dockerfile").is_file()
     assert (task / "instruction.md").is_file()
     assert (task / "input" / "context.md").is_file()
     assert "input/context.md" in (task / "instruction.md").read_text(encoding="utf-8")

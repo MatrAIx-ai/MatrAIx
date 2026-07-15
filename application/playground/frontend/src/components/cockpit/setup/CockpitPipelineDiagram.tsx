@@ -8,10 +8,11 @@ import {
   type PipelinePathOption,
 } from "@/lib/personaAgentCatalog";
 import { Sym } from "../cockpitShared";
+import type { ChatTransport } from "./TaskSelectionRail";
 
 export interface CockpitPipelineDiagramProps {
   taskType: PlaygroundTaskType;
-  chatTransport?: "api" | "sidecar" | "mcp";
+  chatTransport?: ChatTransport;
   /** Selected chatbot app name (pipeline display). */
   chatbotLabel?: string;
   /** Web capability tier id (light / standard / extended / full). */
@@ -51,9 +52,9 @@ function PipelineNode({ label, icon, detail, active = false, visible = true }: N
       >
         <Sym name={icon} size={24} className={active ? "text-primary" : "text-text-variant"} />
       </div>
-      <p className="text-[13px] font-semibold leading-tight text-text-main sm:text-[14px]">{label}</p>
+      <p className="text-[15px] font-semibold leading-tight text-text-main sm:text-[14px]">{label}</p>
       {detail && (
-        <p className="mt-1.5 line-clamp-2 text-[10px] leading-snug text-text-dim">{detail}</p>
+        <p className="mt-1.5 line-clamp-2 text-[12px] leading-snug text-text-dim">{detail}</p>
       )}
     </div>
   );
@@ -70,9 +71,10 @@ function Arrow({ visible = true }: { visible?: boolean }) {
 }
 
 function pathOptionInactiveClass(id: string, index: number): string {
-  if (id === "sidecar") return "border-primary/30 bg-surface/30";
-  if (id === "api") return "border-accent/30 bg-surface/30";
-  if (id === "mcp") return "border-warn/30 bg-surface/30";
+  if (id === "api_sidecar") return "border-primary/30 bg-surface/30";
+  if (id === "api_external") return "border-accent/30 bg-surface/30";
+  if (id === "mcp_sidecar") return "border-warn/30 bg-surface/30";
+  if (id === "mcp_external") return "border-secondary/30 bg-surface/30";
   const classes = [
     "border-primary/30 bg-surface/30",
     "border-accent/30 bg-surface/30",
@@ -87,7 +89,7 @@ type ForkSize = "narrow" | "default" | "dense";
 function forkChipClass(size: ForkSize): string {
   switch (size) {
     case "narrow":
-      return "w-[108px] px-2 py-1.5 sm:w-[116px]";
+      return "w-[128px] px-2 py-1.5 sm:w-[140px]";
     case "dense":
       return "w-[124px] px-2 py-1.5 sm:w-[130px]";
     default:
@@ -149,7 +151,7 @@ function PathForkRow({
         <div className="min-w-0">
           <p
             className={`font-semibold leading-tight ${
-              dense ? "text-[10px] sm:text-[11px]" : "text-[11px] sm:text-[12px]"
+              dense ? "text-[12px] sm:text-[13px]" : "text-[13px] sm:text-[14px]"
             } ${active ? "text-text-main" : "text-text-variant"}`}
           >
             {option.label}
@@ -157,7 +159,7 @@ function PathForkRow({
           {option.hint && (
             <p
               className={`mt-0.5 leading-[1.2] text-text-dim line-clamp-2 ${
-                dense ? "text-[7px] sm:text-[8px]" : "text-[8px] leading-snug sm:text-[9px]"
+                dense ? "text-[10px] sm:text-[11px]" : "text-[11px] leading-snug sm:text-[11px]"
               }`}
             >
               {option.hint}
@@ -194,7 +196,7 @@ function PipelinePathFork({
       )} ${visible ? "opacity-100" : "opacity-0"}`}
     >
       {caption && (
-        <p className="hud mb-1 text-center text-[9px] tracking-wide text-text-dim sm:text-[10px]">{caption}</p>
+        <p className="hud mb-1 text-center text-[11px] tracking-wide text-text-dim sm:text-[12px]">{caption}</p>
       )}
       {options.map((option, index) => (
         <PathForkRow
@@ -267,7 +269,7 @@ function pipelineStepCount(taskType: PlaygroundTaskType): number {
 
 export function CockpitPipelineDiagram({
   taskType,
-  chatTransport = "sidecar",
+  chatTransport = "api_sidecar",
   chatbotLabel,
   webCapabilityTierId,
   cuaPlatform,
@@ -329,7 +331,7 @@ export function CockpitPipelineDiagram({
             <Arrow visible={v(2)} />
             <PipelinePathFork
               forkSize="narrow"
-              caption="Adapter"
+              caption="Connection"
               options={CHAT_ACCESS_PIPELINE_PATHS}
               selected={chatTransport}
               visible={v(2)}
@@ -428,7 +430,7 @@ export function CockpitPipelineDiagram({
         {pipelineBody}
       </div>
 
-      <p className="shrink-0 text-center text-[13px] font-medium leading-snug sm:text-[14px]">
+      <p className="shrink-0 text-center text-[15px] font-medium leading-snug sm:text-[14px]">
         {ready ? (
           <span className="font-semibold text-secondary">Ready to launch — pipeline locked.</span>
         ) : (

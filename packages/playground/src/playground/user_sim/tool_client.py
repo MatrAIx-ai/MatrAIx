@@ -6,9 +6,15 @@ import json
 import os
 import urllib.error
 import urllib.request
-from typing import Any, Dict, List, Optional, Protocol
+from typing import Any, Dict, List, Optional, Protocol, Sequence
 
-from playground.user_sim.tools import ToolCall, normalize_sim_message, tool_definitions
+from playground.chatbot_capabilities import ChatbotCapability
+from playground.user_sim.tools import (
+    ToolCall,
+    anthropic_tool_definitions,
+    normalize_sim_message,
+    tool_definitions,
+)
 
 
 class ToolStepClient(Protocol):
@@ -38,9 +44,11 @@ class OpenAIToolStepClient:
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
         temperature: float = 0.7,
+        capabilities: Sequence[ChatbotCapability] | None = None,
     ) -> None:
         self.model = model
         self.temperature = temperature
+        self._tools = tool_definitions(capabilities)
         if client is None:
             from openai import OpenAI
 
@@ -57,7 +65,7 @@ class OpenAIToolStepClient:
             model=self.model,
             temperature=self.temperature,
             messages=messages,
-            tools=tool_definitions(),
+            tools=self._tools,
             tool_choice="auto",
         )
         message = completion.choices[0].message
@@ -80,10 +88,12 @@ class AnthropicToolStepClient:
         api_key: Optional[str] = None,
         temperature: float = 0.7,
         timeout_seconds: float = 180.0,
+        capabilities: Sequence[ChatbotCapability] | None = None,
     ) -> None:
         self.model = model
         self.temperature = temperature
         self.timeout_seconds = timeout_seconds
+        self._tools = anthropic_tool_definitions(capabilities)
         self.api_key = (
             api_key
             or os.environ.get("ANTHROPIC_API_KEY")
@@ -98,8 +108,6 @@ class AnthropicToolStepClient:
             )
 
     def complete_with_tools(self, messages: List[Dict[str, Any]]) -> List[ToolCall]:
-        from playground.user_sim.tools import anthropic_tool_definitions
-
         system_parts: List[str] = []
         convo: List[Dict[str, Any]] = []
         for message in messages:
@@ -115,7 +123,7 @@ class AnthropicToolStepClient:
             "temperature": self.temperature,
             "system": "\n\n".join(system_parts),
             "messages": convo,
-            "tools": anthropic_tool_definitions(),
+            "tools": self._tools,
         }
         request = urllib.request.Request(
             "https://api.anthropic.com/v1/messages",
@@ -145,7 +153,9 @@ class AnthropicToolStepClient:
             if not isinstance(block, dict):
                 continue
             if block.get("type") == "tool_use":
-                calls.append(ToolCall(str(block.get("name") or ""), dict(block.get("input") or {})))
+                calls.append(
+                    ToolCall(str(block.get("name") or ""), dict(block.get("input") or {}))
+                )
             elif block.get("type") == "text":
                 text_parts.append(str(block.get("text") or ""))
         if not calls and text_parts:
@@ -168,12 +178,21 @@ def _coerce_args(raw: Any) -> Dict[str, Any]:
     return {}
 
 
-def build_tool_step_client(model: str, *, temperature: float = 0.7) -> ToolStepClient:
+def build_tool_step_client(
+    model: str,
+    *,
+    temperature: float = 0.7,
+    capabilities: Sequence[ChatbotCapability] | None = None,
+) -> ToolStepClient:
     from playground.model_client import dashscope_openai_client_kwargs
 
     value = (model or "openai/gpt-4o-mini").strip()
     if value.startswith("anthropic/"):
-        return AnthropicToolStepClient(value.split("/", 1)[1], temperature=temperature)
+        return AnthropicToolStepClient(
+            value.split("/", 1)[1],
+            temperature=temperature,
+            capabilities=capabilities,
+        )
     if value.startswith("dashscope/"):
         kwargs = dashscope_openai_client_kwargs(value)
         return OpenAIToolStepClient(
@@ -181,9 +200,18 @@ def build_tool_step_client(model: str, *, temperature: float = 0.7) -> ToolStepC
             api_key=kwargs["api_key"],
             base_url=kwargs["base_url"],
             temperature=temperature,
+            capabilities=capabilities,
         )
     if value.startswith("openai/"):
-        return OpenAIToolStepClient(value.split("/", 1)[1], temperature=temperature)
+        return OpenAIToolStepClient(
+            value.split("/", 1)[1],
+            temperature=temperature,
+            capabilities=capabilities,
+        )
     if value.startswith("gpt-"):
-        return OpenAIToolStepClient(value, temperature=temperature)
-    return AnthropicToolStepClient(value, temperature=temperature)
+        return OpenAIToolStepClient(
+            value, temperature=temperature, capabilities=capabilities
+        )
+    return AnthropicToolStepClient(
+        value, temperature=temperature, capabilities=capabilities
+    )

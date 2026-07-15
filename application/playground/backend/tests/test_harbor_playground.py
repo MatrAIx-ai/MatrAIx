@@ -45,7 +45,7 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
                         "userMessage": "I want something tense but not graphic.",
                         "assistantMessage": "Do you prefer mainstream or lesser-known films?",
                         "plan": [],
-                        "recommendedItems": [],
+                        "structuredExposure": [],
                         "nativeRaw": None,
                         "rawToolOutputs": None,
                     },
@@ -56,8 +56,15 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
                         "userMessage": "Lesser-known is fine if it fits.",
                         "assistantMessage": "Try Movie A.",
                         "plan": [],
-                        "recommendedItems": [
-                            {"itemId": "42", "title": "Movie A", "rank": 1}
+                        "structuredExposure": [
+                            {
+                                "key": "recommendedItems",
+                                "label": "Recommended items",
+                                "format": "item_list",
+                                "value": [
+                                    {"itemId": "42", "title": "Movie A", "rank": 1}
+                                ],
+                            }
                         ],
                         "nativeRaw": None,
                         "rawToolOutputs": None,
@@ -103,7 +110,7 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
         },
     )
 
-    assert result.turn_views[1]["personaExposure"][0]["value"] == [
+    assert result.turn_views[1]["structuredExposure"][0]["value"] == [
         {"itemId": "42", "title": "Movie A", "rank": 1}
     ]
     payload = result.to_dict()
@@ -144,7 +151,7 @@ def test_build_result_from_harbor_artifacts_maps_persona_self_report_keys(tmp_pa
                         "turnId": "0",
                         "userMessage": "I want a movie.",
                         "assistantMessage": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -202,7 +209,7 @@ def test_build_result_from_harbor_artifacts_normalizes_legacy_turn_fields(tmp_pa
                         "index": 1,
                         "userMessage": "I want a thoughtful movie.",
                         "assistantReply": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -250,7 +257,7 @@ def test_build_result_from_harbor_artifacts_fills_application_result_from_transc
                         "turnId": "0",
                         "userMessage": "I want a movie.",
                         "assistantMessage": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -297,7 +304,7 @@ def test_build_result_from_harbor_artifacts_allows_general_chatbot_without_items
                         "assistantMessage": (
                             "What time horizon and risk constraints matter?"
                         ),
-                        "recommendedItems": [],
+                        "structuredExposure": [],
                     }
                 ],
             }
@@ -370,7 +377,7 @@ def test_build_result_from_harbor_artifacts_accepts_application_scorer_questionn
                         "backend": "interecagent",
                         "userMessage": "I want a movie.",
                         "assistantMessage": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -441,7 +448,7 @@ def test_build_result_from_harbor_artifacts_maps_turns_to_result(tmp_path):
                         "turnId": "0",
                         "userMessage": "I want a movie.",
                         "assistantMessage": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -499,7 +506,7 @@ def test_build_result_from_harbor_artifacts_reads_verifier_feedback(tmp_path):
                         "turnId": "0",
                         "userMessage": "I want a movie.",
                         "assistantMessage": "Try Movie A.",
-                        "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                        "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                     }
                 ],
             }
@@ -732,7 +739,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
         assert config["environment"]["delete"] is False
         assert config["agents"][0]["kwargs"]["persona_path"].endswith("persona.yaml")
         assert config["tasks"][0]["path"].endswith(
-            "application/tasks/recommender-agent_chat_api"
+            "application/tasks/chat_recai"
         )
         prompt_path = config["extra_instruction_paths"][0]
         assert prompt_path.endswith("task_prompt.md")
@@ -743,7 +750,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
         assert env["INTERECAGENT_ENGINE"] == "gpt-4o"
         assert env["MATRIX_CHATBOT_APPLICATION_ID"] == "recai"
         assert env["MATRIX_CHATBOT_APPLICATION_CONTEXT"] == "movie"
-        assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/recommender-agent_chat_api"
+        assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_recai"
         assert env["COMPOSE_PROFILES"] == "recai"
         assert env["OPENAI_API_KEY"] == "sk-test-openai"
         assert env["ANTHROPIC_API_KEY"] == "sk-test-anthropic"
@@ -773,7 +780,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
         }
         assert agent_env["MATRIX_CHATBOT_APPLICATION_ID"] == "recai"
         assert agent_env["MATRIX_CHATBOT_APPLICATION_CONTEXT"] == "movie"
-        assert agent_env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/recommender-agent_chat_api"
+        assert agent_env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_recai"
         assert agent_env["MATRIX_CHATBOT_MAX_TURNS"] == "5"
         assert agent_env["MATRIX_CHATBOT_MIN_TURNS"] == "3"
         assert agent_env["MATRIX_CHATBOT_TASK_PROMPT_PATH"] == "/app/input/task_prompt.md"
@@ -784,7 +791,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
             tmp_path
             / "runs"
             / config["job_name"]
-            / "recommender-agent_chat_api__fake"
+            / "chat_recai__fake"
             / "artifacts"
             / "app"
             / "output"
@@ -804,7 +811,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
                             "turnId": "0",
                             "userMessage": "I want a movie.",
                             "assistantMessage": "Try Movie A.",
-                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                            "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                         }
                     ],
                 }
@@ -844,7 +851,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
         harbor_command=("uv", "run", "--frozen", "harbor", "run"),
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
     session = Session()
     events = []
@@ -863,7 +870,7 @@ def test_harbor_runner_writes_run_inputs_invokes_harbor_and_maps_artifacts(
     assert "--agent-env" in calls[0][0]
     assert "--verifier-env" not in calls[0][0]
     assert "--env-file" in calls[0][0]
-    assert session.turns[0]["personaExposure"][0]["value"][0]["itemId"] == "42"
+    assert session.turns[0]["structuredExposure"][0]["value"][0]["itemId"] == "42"
     payload = result.to_dict()
     assert payload["questionnaire"]["overallRating"] == 9
     assert payload["prompts"]["harborPrompt"] == "A careful viewer."
@@ -916,10 +923,17 @@ def test_harbor_runner_uses_finance_compose_profile(tmp_path):
                             "turnId": "fin_turn_1",
                             "userMessage": "Compare fintech securities.",
                             "assistantMessage": "I used OpenBB data.",
-                            "recommendedItems": [
+                            "structuredExposure": [
+                                {
+                                    "key": "recommendedItems",
+                                    "label": "Recommended items",
+                                    "format": "item_list",
+                                    "value": [
                                 {
                                     "itemId": "finance:openbb:equity_screener:0",
                                     "title": "OpenBB equity_screener",
+                                }
+                                    ]
                                 }
                             ],
                         }
@@ -967,7 +981,7 @@ def test_harbor_runner_uses_finance_compose_profile(tmp_path):
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
         harbor_command=("uv", "run", "--frozen", "harbor", "run"),
-        chat_task_path="application/tasks/finance-openbb_chatbot",
+        chat_task_path="application/tasks/chat_openbb",
     )
     result = runner(
         Session(),
@@ -987,7 +1001,7 @@ def test_harbor_runner_uses_finance_compose_profile(tmp_path):
     assert env["COMPOSE_PROFILES"] == "finance"
     assert env["MATRIX_CHATBOT_APPLICATION_ID"] == "finance_openbb"
     assert env["MATRIX_CHATBOT_APPLICATION_CONTEXT"] == "financial_research"
-    assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/finance-openbb_chatbot"
+    assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_openbb"
     assert env["FINANCE_AGENT_MODEL"] == "gpt-4o-mini"
     assert result.to_dict()["metricScores"]["numTurns"] == 1
 
@@ -1036,7 +1050,7 @@ def test_harbor_runner_uses_medical_compose_profile(tmp_path):
                             "assistantMessage": (
                                 "I can share general guidance and red flags."
                             ),
-                            "recommendedItems": [],
+                            "structuredExposure": [],
                         }
                     ],
                 }
@@ -1077,7 +1091,7 @@ def test_harbor_runner_uses_medical_compose_profile(tmp_path):
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
         harbor_command=("uv", "run", "--frozen", "harbor", "run"),
-        chat_task_path="application/tasks/medical-assistant_chatbot",
+        chat_task_path="application/tasks/chat_multi-agent-medical-assistant",
     )
     result = runner(
         Session(),
@@ -1105,7 +1119,7 @@ def test_harbor_runner_uses_medical_compose_profile(tmp_path):
     assert "FINANCE_AGENT_MODEL" not in env
     assert agent_env["MATRIX_CHATBOT_APPLICATION_ID"] == "medical_assistant"
     assert agent_env["MATRIX_CHATBOT_APPLICATION_CONTEXT"] == "medical_consultation"
-    assert agent_env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/medical-assistant_chatbot"
+    assert agent_env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_multi-agent-medical-assistant"
     assert result.to_dict()["metricScores"]["numTurns"] == 1
 
 
@@ -1118,7 +1132,7 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
             tmp_path
             / "runs"
             / config["job_name"]
-            / "recommender-agent_chat_api__fake"
+            / "chat_recai__fake"
             / "artifacts"
             / "app"
             / "output"
@@ -1138,7 +1152,7 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
                             "turnId": "0",
                             "userMessage": "I want a movie.",
                             "assistantMessage": "Try Movie A.",
-                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                            "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                         }
                     ],
                 }
@@ -1178,7 +1192,7 @@ def test_harbor_runner_reads_feedback_written_by_application_scorer_artifact(tmp
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
     result = runner(
         Session(),
@@ -1205,7 +1219,7 @@ def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
             tmp_path
             / "runs"
             / config["job_name"]
-            / "recommender-agent_chat_api__fake"
+            / "chat_recai__fake"
             / "artifacts"
             / "app"
             / "output"
@@ -1225,7 +1239,7 @@ def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
                             "turnId": "0",
                             "userMessage": "I want a movie.",
                             "assistantMessage": "Try Movie A.",
-                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                            "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                         }
                     ],
                 }
@@ -1252,7 +1266,7 @@ def test_harbor_runner_persona_model_can_be_overridden(tmp_path, monkeypatch):
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
     runner(
         Session(),
@@ -1282,7 +1296,7 @@ def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
             tmp_path
             / "runs"
             / config["job_name"]
-            / "recommender-agent_chat_api__fake"
+            / "chat_recai__fake"
             / "artifacts"
             / "app"
             / "output"
@@ -1302,7 +1316,7 @@ def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
                             "turnId": "0",
                             "userMessage": "I want a movie.",
                             "assistantMessage": "Try Movie A.",
-                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                            "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                         }
                     ],
                 }
@@ -1329,7 +1343,7 @@ def test_harbor_runner_cache_flags_can_be_overridden(tmp_path, monkeypatch):
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
     runner(
         Session(),
@@ -1359,7 +1373,7 @@ def test_harbor_runner_default_command_uses_configured_harbor_command(
             tmp_path
             / "runs"
             / config["job_name"]
-            / "recommender-agent_chat_api__fake"
+            / "chat_recai__fake"
             / "artifacts"
             / "app"
             / "output"
@@ -1379,7 +1393,7 @@ def test_harbor_runner_default_command_uses_configured_harbor_command(
                             "turnId": "0",
                             "userMessage": "I want a movie.",
                             "assistantMessage": "Try Movie A.",
-                            "recommendedItems": [{"itemId": "42", "title": "Movie A"}],
+                            "structuredExposure": [{"key": "recommendedItems", "label": "Recommended items", "format": "item_list", "value": [{"itemId": "42", "title": "Movie A"}]}],
                         }
                     ],
                 }
@@ -1406,7 +1420,7 @@ def test_harbor_runner_default_command_uses_configured_harbor_command(
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
     runner(
         Session(),
@@ -1442,7 +1456,7 @@ def test_harbor_runner_surfaces_trial_errors_when_artifacts_are_missing(tmp_path
                         "evals": {
                             "persona-claude-code__claude-sonnet-4-6__adhoc": {
                                 "exception_stats": {
-                                    "RuntimeError": ["recommender-agent_chat_api__fake"]
+                                    "RuntimeError": ["chat_recai__fake"]
                                 }
                             }
                         },
@@ -1451,7 +1465,7 @@ def test_harbor_runner_surfaces_trial_errors_when_artifacts_are_missing(tmp_path
             ),
             encoding="utf-8",
         )
-        trial_dir = job_dir / "recommender-agent_chat_api__fake"
+        trial_dir = job_dir / "chat_recai__fake"
         trial_dir.mkdir()
         (trial_dir / "exception.txt").write_text(
             "Docker build failed: No space left on device",
@@ -1466,7 +1480,7 @@ def test_harbor_runner_surfaces_trial_errors_when_artifacts_are_missing(tmp_path
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
 
     with pytest.raises(RuntimeError, match="No space left on device"):
@@ -1486,7 +1500,7 @@ def test_harbor_runner_surfaces_agent_error_when_output_dir_is_empty(tmp_path):
             open(command[command.index("-c") + 1], encoding="utf-8")
         )
         job_dir = tmp_path / "runs" / config["job_name"]
-        trial_dir = job_dir / "recommender-agent_chat_api__fake"
+        trial_dir = job_dir / "chat_recai__fake"
         output_dir = trial_dir / "artifacts" / "app" / "output"
         output_dir.mkdir(parents=True)
         (job_dir / "result.json").write_text(
@@ -1498,7 +1512,7 @@ def test_harbor_runner_surfaces_agent_error_when_output_dir_is_empty(tmp_path):
                             "persona-claude-code__claude-sonnet-4-6__adhoc": {
                                 "exception_stats": {
                                     "NonZeroAgentExitCodeError": [
-                                        "recommender-agent_chat_api__fake"
+                                        "chat_recai__fake"
                                     ]
                                 }
                             }
@@ -1549,7 +1563,7 @@ def test_harbor_runner_surfaces_agent_error_when_output_dir_is_empty(tmp_path):
         repo_root=tmp_path,
         runs_root=tmp_path / "runs",
         command_runner=fake_command,
-        chat_task_path="application/tasks/recommender-agent_chat_api",
+        chat_task_path="application/tasks/chat_recai",
     )
 
     with pytest.raises(RuntimeError, match="Credit balance is too low"):

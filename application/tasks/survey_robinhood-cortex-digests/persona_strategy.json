@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "sources": [],
-  "defaultMode": "stratified",
+  "defaultMode": "random",
   "dimensionFilters": {
     "domain": [
       "Finance & Economics",
@@ -14,9 +14,5 @@
       "55-64"
     ]
   },
-  "stratifyFields": [
-    "decision_style",
-    "tech_savviness"
-  ],
   "sampleSize": 8
 }

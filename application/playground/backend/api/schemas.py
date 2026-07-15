@@ -42,7 +42,7 @@ __all__ = [
     "ConfigOptionsResponse",
     "ChatMessageModel",
     "PlanStep",
-    "PersonaExposureField",
+    "StructuredExposureField",
     "TurnView",
     "SessionConfig",
     "Session",
@@ -85,6 +85,7 @@ SUPPORTED_APPLICATION_IDS = (
     "recai",
     "finance_openbb",
     "medical_assistant",
+    "acme_support_api",
     "acme_support_mcp",
 )
 DEFAULT_APPLICATION_CONTEXTS = {
@@ -257,8 +258,8 @@ class PlanStep(BaseModel):
         return value if isinstance(value, str) else str(value)
 
 
-class PersonaExposureField(BaseModel):
-    """One task-configured field visible to the persona or UI on a turn."""
+class StructuredExposureField(BaseModel):
+    """One task-configured structured field visible on a turn."""
 
     model_config = ConfigDict(extra="allow")
 
@@ -283,7 +284,7 @@ class TurnView(BaseModel):
     userMessage: Optional[str] = None
     assistantMessage: Optional[str] = None
     plan: List[PlanStep] = Field(default_factory=list)
-    personaExposure: List[PersonaExposureField] = Field(default_factory=list)
+    structuredExposure: List[StructuredExposureField] = Field(default_factory=list)
     nativeRaw: Optional[str] = None
     rawToolOutputs: Any = None
 
@@ -422,7 +423,7 @@ class CatalogSearchResponse(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
-# Persona eval (persona catalog + Harbor debrief views)
+# Playground persona catalog + Harbor debrief views
 # --------------------------------------------------------------------------- #
 class PersonaSummary(BaseModel):
     """A persona as surfaced by ``GET /api/playground/personas``.
@@ -836,6 +837,10 @@ class PersonaPoolSampleRequest(BaseModel):
     dimensionFilters: Optional[Dict[str, Any]] = None
     stratifyFields: Optional[List[str]] = None
     sampleSizePerValueGroup: Optional[int] = None
+    taskPath: Optional[str] = None
+    """Optional task path — used to tailor pool-coverage recovery / auto top-up."""
+    autoEnsureStrategyPool: bool = True
+    """When coverage fails, generate a local ``_generated`` filter pool and retry."""
 
 
 class PersonaPoolPersonaCard(BaseModel):
@@ -907,6 +912,8 @@ class PersonaPoolSampleResponse(BaseModel):
     seed: int
     personaIds: List[str]
     personas: List[Dict[str, Any]] = Field(default_factory=list)
+    poolEnsured: bool = False
+    poolReused: bool = False
 
 
 class PersonaCohortSaveRequest(BaseModel):

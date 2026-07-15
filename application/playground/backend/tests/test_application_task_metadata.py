@@ -14,16 +14,14 @@ def test_title_from_harbor_task_name():
         title_from_harbor_task_name("application/survey-product-feedback")
         == "Survey Product Feedback"
     )
+    assert title_from_harbor_task_name("application/chat-recai") == "Chat Recai"
     assert (
-        title_from_harbor_task_name("application/recommender-agent-chat-api")
-        == "Recommender Agent Chat Api"
+        title_from_harbor_task_name("application/chat-multi-agent-medical-assistant")
+        == "Chat Multi Agent Medical Assistant"
     )
-    assert (
-        title_from_harbor_task_name("application/medical-assistant-chatbot")
-        == "Medical Assistant Chatbot"
-    )
+    assert title_from_harbor_task_name("application/chat-openbb") == "Chat Openbb"
     # Legacy Harbor names still parse.
     assert (
-        title_from_harbor_task_name("personabench/application-recommender-agent-chat-api")
-        == "Recommender Agent Chat Api"
+        title_from_harbor_task_name("personabench/application-chat-recai")
+        == "Chat Recai"
     )

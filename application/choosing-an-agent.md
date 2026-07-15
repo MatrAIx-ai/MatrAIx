@@ -48,14 +48,14 @@ set.
 | CLI name | Application | Typical use | Example task |
 |----------|-------------|-------------|----------------|
 | `persona-json-survey` | survey | **Auto mode (recommended):** one-shot JSON survey on the host; no Docker | [product-feedback](tasks/example-survey_product-feedback) |
-| `persona-user-sim` | chat | **Auto mode (recommended):** multi-turn user simulator + task sidecar on the host | [recommender-agent_chat_api](tasks/recommender-agent_chat_api)<br>[acme-support-api](tasks/example-chat-api_support_chatbot) |
-| `persona-claude-code` | survey<br>chat | CLI agent in Docker; forms, surveys, multi-turn chat, API/MCP sidecars | [product-feedback](tasks/example-survey_product-feedback)<br>[acme-support-api](tasks/example-chat-api_support_chatbot)<br>[acme-support-mcp](tasks/example-chat-mcp_support_chatbot)<br>[recommender-agent_chat_api](tasks/recommender-agent_chat_api) |
+| `persona-user-sim` | chat | **Auto mode (recommended):** multi-turn user simulator + task sidecar on the host | [chat_recai](tasks/chat_recai)<br>[chat_openbb](tasks/chat_openbb)<br>[acme-support-api](tasks/example-chat-api_support_chatbot) |
+| `persona-claude-code` | survey<br>chat | CLI agent in Docker; forms, surveys, multi-turn chat, API/MCP sidecars | [product-feedback](tasks/example-survey_product-feedback)<br>[acme-support-api](tasks/example-chat-api_support_chatbot)<br>[acme-support-mcp](tasks/example-chat-mcp_support_chatbot)<br>[chat_recai](tasks/chat_recai)<br>[chat_openbb](tasks/chat_openbb) |
 | `persona-gemini-cli` | survey<br>chat | Same as `persona-claude-code`; Google Gemini CLI backend | [product-feedback](tasks/example-survey_product-feedback)<br>[acme-support-api](tasks/example-chat-api_support_chatbot) |
 | `persona-codex` | survey<br>chat | Same as `persona-claude-code`; OpenAI Codex CLI backend | [product-feedback](tasks/example-survey_product-feedback)<br>[acme-support-api](tasks/example-chat-api_support_chatbot) |
 | `persona-openhands-sdk` | web | Python Playwright in the terminal (DOM selectors); fast, CI-friendly | [quote-choice-playwright](tasks/example-web-playwright_quote-choice) |
 | `persona-browser-use` | web | browser-use agent loop over Chromium | [laptop-choice-browser-use](tasks/example-web-browser-use_laptop-choice) |
 | `persona-cocoa` | web | browser + shell + files in one container | [plan-choice-cocoa](tasks/example-web-cocoa_plan-choice) |
-| `persona-computer-1` | web<br>computer-use | Screenshot CUA; auto-routes to use.computer (macOS/iOS) or Docker Linux | **computer-use:** [macos-calendar-reminder-handoff](tasks/example-computer-use-macos_calendar-reminder-handoff)<br>[ios-photo-access-review](tasks/example-computer-use-ios_photo-access-review)<br>[linux-note-to-csv](tasks/example-computer-use-linux_note-to-csv)<br>**web:** [bookshop-choice-cua](tasks/example-web-cua_bookshop-choice) |
+| `persona-computer-1` | web<br>computer-use | Screenshot CUA; auto-routes to use.computer (macOS/iOS) or Docker Linux | **computer-use:** [macos-calendar-reminder-handoff](tasks/example-computer-use-macos_calendar-reminder-handoff)<br>[ios-photo-access-review](tasks/example-computer-use-ios_photo-access-review)<br>[ios-news-subscription-decision](tasks/os-app-ios_news-subscription-decision)<br>[linux-note-to-csv](tasks/example-computer-use-linux_note-to-csv)<br>**web:** [bookshop-choice-cua](tasks/example-web-cua_bookshop-choice) |
 
 `generate_application_job.py --execution-mode auto` picks `persona-json-survey` or
 `persona-user-sim` from the task type. Use `--agent-name` to override, or

@@ -170,9 +170,13 @@ export function WebEvalCockpit({
     setStratifyFields,
     sampleSize,
     setSampleSize,
+    sampleSizePerValueGroup,
+    setSampleSizePerValueGroup,
     seed,
     parallelTrials,
     setParallelTrials,
+    personaPool,
+    setPersonaPool,
     isBatchRun,
     hasTaskStrategy,
     taskPersonaStrategy,
@@ -323,6 +327,7 @@ export function WebEvalCockpit({
           seed,
           personaModel,
           agentName: activeWebAgent,
+          personaPool,
           personaIds: selectedPersonaIds,
           nConcurrentTrials: Math.min(parallelTrials, selectedPersonaIds.length),
           mode: "auto",
@@ -344,6 +349,7 @@ export function WebEvalCockpit({
     personaModel,
     activeWebAgent,
     parallelTrials,
+    personaPool,
     handleRun,
   ]);
 
@@ -465,6 +471,7 @@ export function WebEvalCockpit({
       left={
         <PersonaSamplingRail
           taskType="web"
+          taskPath={task?.taskPath ?? null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
           personaModelOptions={personaModelOptions}
@@ -474,6 +481,8 @@ export function WebEvalCockpit({
           onSelectedPersonaIdsChange={setSelectedPersonaIds}
           sampleSize={sampleSize}
           onSampleSizeChange={setSampleSize}
+          sampleSizePerValueGroup={sampleSizePerValueGroup}
+          onSampleSizePerValueGroupChange={setSampleSizePerValueGroup}
           seed={seed}
           filters={groupFilters}
           onFiltersChange={setGroupFilters}
@@ -483,6 +492,8 @@ export function WebEvalCockpit({
           taskPersonaStrategy={taskPersonaStrategy}
           useTaskDefaultStrategy={useTaskDefaultStrategy}
           onUseTaskDefaultStrategyChange={setUseTaskDefaultStrategy}
+          onPersonaPoolChange={setPersonaPool}
+          personaPool={personaPool}
           disabled={setupLocked}
         />
       }
@@ -572,9 +583,6 @@ export function WebEvalCockpit({
           engine=""
           onEngineChange={() => undefined}
           engineOptions={[]}
-          domain=""
-          onDomainChange={() => undefined}
-          domainOptions={[]}
           maxTurns={8}
           onMaxTurnsChange={() => undefined}
           resolveWebPersonaAgent={resolveWebAgent}
@@ -638,7 +646,7 @@ function WebResults({
   return (
     <section className="space-y-5">
       {/* Run identity line */}
-      <div className="hud flex items-start gap-2 text-[9px] text-text-variant">
+      <div className="hud flex items-start gap-2 text-[11px] text-text-variant">
         <Sym name="language" size={16} className="shrink-0 text-primary" />
         <span className="min-w-0 break-words">Run · {headerBits.join(" · ")}</span>
       </div>
@@ -648,12 +656,12 @@ function WebResults({
         <div className="rise-in rounded-md border border-outline bg-surface-lowest px-4 py-4">
           <div className="flex items-center gap-2">
             <Sym name="autorenew" size={16} className="animate-rb-spin text-primary" />
-            <span className="hud text-[10px] text-primary">Running</span>
+            <span className="hud text-[12px] text-primary">Running</span>
           </div>
-          <p className="mt-2 text-[13px] text-text-main">Simulated visitor is browsing…</p>
-          {status && <p className="mt-0.5 text-[12px] text-text-variant">{status}</p>}
+          <p className="mt-2 text-[15px] text-text-main">Simulated visitor is browsing…</p>
+          {status && <p className="mt-0.5 text-[14px] text-text-variant">{status}</p>}
           {trace && trace.events.length > 0 && (
-            <p className="mt-2 font-mono text-[11px] text-text-variant">Recorded {trace.events.length} steps so far</p>
+            <p className="mt-2 font-mono text-[13px] text-text-variant">Recorded {trace.events.length} steps so far</p>
           )}
         </div>
       )}
@@ -671,7 +679,7 @@ function WebResults({
       {/* Browser trace — show as soon as partial trajectory exists */}
       {trace && trace.events.length > 0 && (
         <div className="space-y-3">
-          <h3 className="hud flex items-center gap-2 text-[10px] text-primary">
+          <h3 className="hud flex items-center gap-2 text-[12px] text-primary">
             <Sym name="route" size={14} /> Browser trace · {trace.events.length} step
             {trace.events.length === 1 ? "" : "s"}
           </h3>
@@ -708,11 +716,11 @@ function ErrorCard({
         <Sym name="error" fill={1} size={20} className="mt-0.5 text-danger" />
         <div>
           <h2 className="font-semibold text-text-main">{title}</h2>
-          <p className="mt-1 text-[13px] text-text-variant">{body}</p>
+          <p className="mt-1 text-[15px] text-text-variant">{body}</p>
           <button
             type="button"
             onClick={onRetry}
-            className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[12px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
+            className={`mt-3 inline-flex items-center gap-1.5 rounded-md border border-danger/40 px-3 py-1.5 text-[14px] font-medium text-danger hover:bg-danger/10 ${FOCUS_RING}`}
           >
             <Sym name="refresh" size={15} />
             {retryLabel}

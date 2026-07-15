@@ -1,5 +1,6 @@
 import type { HarborCockpitTaskKind } from "@/lib/harborCockpitMappers";
 import type { TaskPersonaStrategy } from "@/lib/types";
+import { PERSONA_BENCH_POOL } from "@/lib/types";
 
 import { readCockpitBatch } from "./cockpitBatchStorage";
 import {
@@ -14,10 +15,24 @@ export interface CockpitPersonaSetupRecord {
   groupFilters: PersonaDimensionFilters;
   stratifyFields: string[];
   sampleSize: number;
+  /**
+   * Personas per stratify combination (stratified mode).
+   * `null` = not set — sample with 1/cell then cap at `sampleSize`.
+   * Only an explicit number skips the sampleSize ceiling (per-cell is primary).
+   */
+  sampleSizePerValueGroup: number | null;
   parallelTrials: number;
   personaModel: string;
+  /** Pool used for the current cohort (may be an auto-generated ``_generated`` path). */
+  personaPool: string;
   /** When true, sampling follows the task's persona_strategy.json and custom filters stay locked. */
   useTaskDefaultStrategy: boolean;
+  /**
+   * Set only when the operator explicitly turns Task default strategy off.
+   * Distinguishes intentional opt-out from the pre-hydrate false that used to
+   * poison localStorage before persona_strategy.json loaded.
+   */
+  taskDefaultStrategyDismissed?: boolean;
 }
 
 type CockpitPersonaSetupStore = {
@@ -77,15 +92,26 @@ function normalizeRecord(
       ? record.stratifyFields.filter((field): field is string => typeof field === "string")
       : ["age_bracket", "region"],
     sampleSize: typeof record.sampleSize === "number" && record.sampleSize > 0 ? record.sampleSize : 4,
+    sampleSizePerValueGroup:
+      record.sampleSizePerValueGroup === null
+        ? null
+        : typeof record.sampleSizePerValueGroup === "number" && record.sampleSizePerValueGroup >= 1
+          ? Math.round(record.sampleSizePerValueGroup)
+          : 1,
     parallelTrials:
       typeof record.parallelTrials === "number" && record.parallelTrials > 0 ? record.parallelTrials : 2,
     personaModel:
       typeof record.personaModel === "string" && record.personaModel
         ? record.personaModel
         : fallbackPersonaModel,
+    personaPool:
+      typeof record.personaPool === "string" && record.personaPool.trim()
+        ? record.personaPool.trim()
+        : PERSONA_BENCH_POOL,
     // Legacy entries omit this flag — prefer task default until the user turns it off.
     useTaskDefaultStrategy:
       typeof record.useTaskDefaultStrategy === "boolean" ? record.useTaskDefaultStrategy : true,
+    taskDefaultStrategyDismissed: record.taskDefaultStrategyDismissed === true,
   };
 }
 
@@ -96,8 +122,10 @@ export function defaultPersonaSetup(fallbackPersonaModel: string): CockpitPerson
     groupFilters: emptyPersonaDimensionFilters(),
     stratifyFields: ["age_bracket", "region"],
     sampleSize: 4,
+    sampleSizePerValueGroup: 1,
     parallelTrials: 2,
     personaModel: fallbackPersonaModel,
+    personaPool: PERSONA_BENCH_POOL,
     useTaskDefaultStrategy: false,
   };
 }
@@ -145,13 +173,33 @@ export function setupFromPersonaStrategy(
     );
   }
 
-  if (typeof strategy.sampleSize === "number" && strategy.sampleSize > 0) {
-    next.sampleSize = Math.min(500, Math.max(2, Math.round(strategy.sampleSize)));
+  // Stratified quotas are mutually exclusive in persona_strategy.json.
+  const hasPerCell =
+    typeof strategy.sampleSizePerValueGroup === "number" &&
+    strategy.sampleSizePerValueGroup >= 1;
+  const hasSampleSize =
+    typeof strategy.sampleSize === "number" && strategy.sampleSize > 0;
+
+  if (hasPerCell) {
+    next.sampleSizePerValueGroup = Math.min(
+      50,
+      Math.max(1, Math.round(strategy.sampleSizePerValueGroup as number)),
+    );
+  } else if (hasSampleSize) {
+    next.sampleSize = Math.min(500, Math.max(2, Math.round(strategy.sampleSize as number)));
+    next.sampleSizePerValueGroup = null;
+  } else {
+    next.sampleSizePerValueGroup = null;
+  }
+
+  if (typeof strategy.pool === "string" && strategy.pool.trim()) {
+    next.personaPool = strategy.pool.trim();
   }
 
   // Fresh strategy apply clears prior preview selection and locks custom filters.
   next.selectedPersonaIds = [];
   next.useTaskDefaultStrategy = true;
+  next.taskDefaultStrategyDismissed = false;
   return next;
 }
 

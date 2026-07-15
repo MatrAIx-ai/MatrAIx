@@ -20,7 +20,7 @@ fastapi>=0.110
 uvicorn[standard]>=0.27
 pydantic>=2
 
-# Persona-eval reads its persona definitions from YAML; playground/persona.py
+# Playground reads persona definitions from YAML; playground/persona.py
 # imports `yaml` at startup, when the FastAPI app builds the playground service.
 PyYAML>=5.4
 # The task-owned item catalogs and feather bundle fallback need an Arrow engine
@@ -30,3 +30,6 @@ pyarrow>=7
 # In-process Harbor runners call model/provider SDKs from this backend process.
 openai>=1.5
 openai-agents>=0.17.6
+
+# PDF report downloads for batch / trial debriefs.
+fpdf2>=2.7.0
