@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p /tmp/personabench-ios-photo-access-review
+mkdir -p /tmp/os-app-ios-photo-access-review
 
-cat > /tmp/personabench-ios-photo-access-review/decision.json <<'EOF'
+cat > /tmp/os-app-ios-photo-access-review/decision.json <<'EOF'
 {
   "app_reviewed": "Photos",
   "photo_access_level": "selected_photos",

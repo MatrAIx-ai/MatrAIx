@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactType": "personabench.trial_evaluation",
+  "artifactType": "matraix.trial_evaluation",
   "taskType": "os-app",
   "presenceCheck": {
     "passed": true,
@@ -11,8 +11,8 @@
     "missingArtifacts": []
   },
   "sourceArtifacts": {
-    "submission": "/tmp/personabench-linux-note-to-csv/submission.json",
-    "csv": "/tmp/personabench-linux-note-to-csv/cleaned_list.csv"
+    "submission": "/tmp/os-app-linux-note-to-csv/submission.json",
+    "csv": "/tmp/os-app-linux-note-to-csv/cleaned_list.csv"
   },
   "contexts": [
     {
@@ -67,7 +67,7 @@
           "label": "Completion evidence",
           "role": "evidence",
           "kind": "textual",
-          "value": "/tmp/personabench-linux-note-to-csv/cleaned_list.csv with 3 rows written"
+          "value": "/tmp/os-app-linux-note-to-csv/cleaned_list.csv with 3 rows written"
         }
       ]
     },
@@ -116,7 +116,7 @@
           "label": "Goal component evidence",
           "role": "explanation",
           "kind": "textual",
-          "value": "The CSV file exists at /tmp/personabench-linux-note-to-csv/cleaned_list.csv."
+          "value": "The CSV file exists at /tmp/os-app-linux-note-to-csv/cleaned_list.csv."
         }
       ]
     },
@@ -193,7 +193,7 @@
           "label": "Output file",
           "role": "evidence",
           "kind": "textual",
-          "value": "/tmp/personabench-linux-note-to-csv/cleaned_list.csv"
+          "value": "/tmp/os-app-linux-note-to-csv/cleaned_list.csv"
         },
         {
           "key": "rows_written",

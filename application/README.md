@@ -1,6 +1,6 @@
 # Application module
 
-> Part of [PersonaBench](../README.md). We own **persona-affiliated product
+> Part of [Playground](../README.md). We own **persona-affiliated product
 > simulation scenarios** — surveys, chatbots, live web, and computer-use tasks.
 
 Welcome. If you are joining to design scenarios, run demos, or ship a new task,

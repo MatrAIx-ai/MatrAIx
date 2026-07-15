@@ -175,7 +175,7 @@ def _build_execution_contexts(
 def _verifier_dir() -> Path:
     base = (
         os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+        or os.environ.get("HARBOR_VERIFIER_DIR")
         or "/logs/verifier"
     )
     path = Path(base)
@@ -428,7 +428,7 @@ def test_output_schema():
     _write_structured_output(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "web",
             "presenceCheck": {
                 "passed": True,

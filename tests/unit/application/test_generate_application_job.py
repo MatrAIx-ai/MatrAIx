@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from personabench.application_job import collect_run_env_exports
+from matraix.application_job import collect_run_env_exports
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 

@@ -1,6 +1,6 @@
 # Plan preference (CocoaAgent)
 
-PersonaBench **CocoaAgent** web task on a live public site. The Harbor task
+MatrAIx **CocoaAgent** web task on a live public site. The Harbor task
 container is an [AIO Sandbox](https://github.com/agent-infra/sandbox) image;
 [CocoaAgent](https://github.com/cocoabench/cocoa-agent) connects to
 `localhost:8080` (no nested Docker) while the persona compares pricing plans.

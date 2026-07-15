@@ -1,6 +1,6 @@
 # Laptop shortlist (browser-use)
 
-PersonaBench **browser-use** web task on a live public site. Chromium is driven
+MatrAIx **browser-use** web task on a live public site. Chromium is driven
 by the [browser-use](https://github.com/browser-use/browser-use) agent loop
 (DOM + optional vision) while the persona compares laptops and picks one they
 would realistically consider.

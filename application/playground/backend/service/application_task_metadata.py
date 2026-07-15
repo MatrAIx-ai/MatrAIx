@@ -48,16 +48,20 @@ def read_instruction_meta(instruction_path: Path) -> tuple[str, str]:
     if not instruction_path.is_file():
         return "", ""
     title = ""
-    description = ""
+    desc_lines: list[str] = []
     for line in instruction_path.read_text(encoding="utf-8").splitlines():
         stripped = line.strip()
         if stripped.startswith("# ") and not title:
             title = stripped.lstrip("# ").strip()
             continue
-        if title and not description and stripped and not stripped.startswith("#"):
-            description = stripped
+        if title and not desc_lines and not stripped:
+            continue
+        if title and stripped and not stripped.startswith("#"):
+            desc_lines.append(stripped)
+            continue
+        if desc_lines:
             break
-    return title, description
+    return title, " ".join(desc_lines)
 
 
 def humanize_folder(folder_name: str) -> str:
@@ -81,7 +85,7 @@ def slug_from_harbor_task_name(task_name: str) -> str:
     lowered = raw.lower()
     if lowered.startswith("application/"):
         return raw.split("/", 1)[1]
-    legacy = "personabench/application-"
+    legacy = "matraix/application-"
     if lowered.startswith(legacy):
         return raw[len(legacy) :]
     if "/" in raw:

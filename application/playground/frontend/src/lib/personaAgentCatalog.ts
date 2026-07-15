@@ -226,7 +226,7 @@ export function cuaRuntimeLabel(backend: string): string {
 }
 
 /** Default LLM for OS app Harbor runs (persona-computer-1 ``model_name``). */
-export const DEFAULT_CUA_AGENT_MODEL = "anthropic/claude-sonnet-4-6";
+export const DEFAULT_CUA_AGENT_MODEL = "anthropic/claude-haiku-4-5";
 
 /** Platform-aware agent model list for the Persona rail (macOS/iOS → Anthropic only). */
 export function cuaPersonaModelSelectOptions(

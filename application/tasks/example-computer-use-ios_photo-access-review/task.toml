@@ -1,5 +1,5 @@
 version = "1.0"
-artifacts = [ "/tmp/personabench-ios-photo-access-review",]
+artifacts = [ "/tmp/os-app-ios-photo-access-review",]
 
 [task]
 name = "application/computer-use-ios-photo-access-review"
@@ -30,6 +30,6 @@ storage_mb = 40960
 gpus = 0
 
 [environment.healthcheck]
-command = "mkdir -p /tmp/personabench-ios-photo-access-review"
+command = "mkdir -p /tmp/os-app-ios-photo-access-review"
 timeout_sec = 30.0
 retries = 3

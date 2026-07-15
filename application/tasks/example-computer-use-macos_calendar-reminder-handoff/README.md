@@ -1,6 +1,6 @@
 # Calendar + reminder handoff (macOS)
 
-PersonaBench **macOS** computer-use task: turn a short scheduling brief into a
+MatrAIx **macOS** computer-use task: turn a short scheduling brief into a
 two-artifact cross-app handoff, with one calendar event line and one reminder
 line.
 
@@ -44,13 +44,13 @@ uv run harbor run -p application/tasks/example-computer-use-macos_calendar-remin
 
 Submissions are written inside the sandbox to:
 
-- `/tmp/personabench-macos-calendar-reminder-handoff/handoff.txt`
-- `/tmp/personabench-macos-calendar-reminder-handoff/plan.json`
+- `/tmp/os-app-macos-calendar-reminder-handoff/handoff.txt`
+- `/tmp/os-app-macos-calendar-reminder-handoff/plan.json`
 
 Harbor downloads that directory after the trial (`artifacts` in `task.toml`). On
 the host:
 
-`jobs/<job>/<trial>/artifacts/tmp/personabench-macos-calendar-reminder-handoff/`
+`jobs/<job>/<trial>/artifacts/tmp/os-app-macos-calendar-reminder-handoff/`
 
 Check `artifacts/manifest.json` in the trial directory if a file is missing (`status: ok` vs `failed`).
 

@@ -64,6 +64,8 @@ export function useHarborCockpitRun<TJob>(options: UseHarborCockpitRunOptions) {
   const [phase, setPhase] = useState<HarborCockpitPhase>("idle");
   const [error, setError] = useState<string | null>(null);
   const [harborPhase, setHarborPhase] = useState<string | null>(null);
+  const [vncUrl, setVncUrl] = useState<string | null>(null);
+  const [sandboxId, setSandboxId] = useState<string | null>(null);
   const lastInput = useRef<HarborCockpitRunInput<TJob> | null>(null);
   const startedAt = useRef(0);
   const liveStateRef = useRef<HarborCockpitLiveState>(EMPTY_LIVE);
@@ -81,6 +83,8 @@ export function useHarborCockpitRun<TJob>(options: UseHarborCockpitRunOptions) {
     setPhase("idle");
     setError(null);
     setHarborPhase(null);
+    setVncUrl(null);
+    setSandboxId(null);
     liveStateRef.current = EMPTY_LIVE;
     eventOffsetRef.current = 0;
     clearCockpitUrl();
@@ -344,6 +348,16 @@ export function useHarborCockpitRun<TJob>(options: UseHarborCockpitRunOptions) {
           if (active) trialName = active.trialName;
         }
 
+        const activeTrial = trialName
+          ? jobDetail.trials.find((t) => t.trialName === trialName) ?? null
+          : null;
+        const trialVnc = (activeTrial as Record<string, unknown> | null)?.vncUrl;
+        if (typeof trialVnc === "string" && trialVnc) setVncUrl(trialVnc);
+        else if (activeTrial?.completed) setVncUrl(null);
+        const trialSandbox = (activeTrial as Record<string, unknown> | null)?.sandboxId;
+        if (typeof trialSandbox === "string" && trialSandbox) setSandboxId(trialSandbox);
+        else if (activeTrial?.completed) setSandboxId(null);
+
         if (trialName) {
           setHarborTrialName(trialName);
           setUrlState({ cockpitTrial: trialName });
@@ -414,6 +428,8 @@ export function useHarborCockpitRun<TJob>(options: UseHarborCockpitRunOptions) {
     harborJobName,
     harborTrialName,
     harborPhase,
+    vncUrl,
+    sandboxId,
     phase,
     error,
     timedOut: phase === "timeout",

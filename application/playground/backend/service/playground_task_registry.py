@@ -61,6 +61,21 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         os_app_platform="ios",
         environment_label="use.computer iOS · persona-computer-1",
         output_artifact="decision.json",
+        os_app_submission_profile="ios_news_subscription",
+    ),
+    "os-app-macos_shortcuts-gallery-picks": PlaygroundTaskEntry(
+        application_type="os-app",
+        os_app_backend="macos",
+        os_app_platform="macos",
+        environment_label="use.computer · persona-computer-1",
+        output_artifact="picks.json",
+    ),
+    "os-app-macos_stocks-mu-sentiment": PlaygroundTaskEntry(
+        application_type="os-app",
+        os_app_backend="macos",
+        os_app_platform="macos",
+        environment_label="use.computer · persona-computer-1",
+        output_artifact="sentiment.json",
     ),
     # Web
     "example-web-playwright_quote-choice": PlaygroundTaskEntry(

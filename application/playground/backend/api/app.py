@@ -978,6 +978,34 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         return FileResponse(path, media_type=media)
 
     @app.get(
+        "/api/harbor/jobs/{job_name}/trials/{trial_name}/live-screenshot",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_trial_live_screenshot(
+        job_name: str,
+        trial_name: str,
+        services: AppState = Depends(get_services),
+    ):
+        from starlette.responses import Response as StarletteResp
+
+        try:
+            png = services.harbor_jobs.trial_live_screenshot(job_name, trial_name)
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except RuntimeError as exc:
+            raise HTTPException(status_code=500, detail=str(exc)) from exc
+        except Exception as exc:  # noqa: BLE001
+            raise HTTPException(status_code=502, detail="screenshot unavailable") from exc
+        return StarletteResp(
+            content=png,
+            media_type="image/png",
+            headers={
+                "Cache-Control": "no-store",
+                "Content-Length": str(len(png)),
+            },
+        )
+
+    @app.get(
         "/api/harbor/jobs/{job_name}/trials/{trial_name}/recording",
         tags=["harbor-jobs"],
     )

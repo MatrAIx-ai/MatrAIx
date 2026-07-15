@@ -1,10 +1,10 @@
 # Photo access review (iOS)
 
-PersonaBench **mobile** computer-use task: open **Settings → Privacy & Security → Photos** on an iPhone 17 simulator, review one app, and submit a structured privacy decision.
+MatrAIx **mobile** computer-use task: open **Settings → Privacy & Security → Photos** on an iPhone 17 simulator, review one app, and submit a structured privacy decision.
 
 Requires **`use-computer`** with **`platform: ios`**, not Docker.
 
-Uses **`persona-computer-1`** → use.computer **`IOSAgent`**. The instruction is written for the persona; PersonaBench materializes the submitted JSON to `decision.json` on the simulator host for scoring.
+Uses **`persona-computer-1`** → use.computer **`IOSAgent`**. The instruction is written for the persona; MatrAIx materializes the submitted JSON to `decision.json` on the simulator host for scoring.
 
 ```bash
 uv sync --extra use-computer --extra computer-1
@@ -54,7 +54,7 @@ uv run harbor run \
 
 Host path after trial:
 
-`jobs/<job>/<trial>/artifacts/tmp/personabench-ios-photo-access-review/decision.json`
+`jobs/<job>/<trial>/artifacts/tmp/os-app-ios-photo-access-review/decision.json`
 
 The verifier checks that the submission includes:
 

@@ -1,6 +1,6 @@
 # Quote choice (Playwright)
 
-PersonaBench **Playwright** web task on a live public site. Chromium is driven
+MatrAIx **Playwright** web task on a live public site. Chromium is driven
 through the **Playwright Python API** (DOM automation), and the persona picks a
 quote they would most want to save or share.
 

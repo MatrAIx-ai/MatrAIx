@@ -1,6 +1,6 @@
 # Medical Assistant chatbot
 
-Canonical PersonaBench chatbot task for
+Canonical MatrAIx chatbot task for
 [Multi-Agent-Medical-Assistant](https://github.com/souvikmajumder26/Multi-Agent-Medical-Assistant).
 
 Contributor-facing prompt docs live under `input/`. Runtime connection metadata

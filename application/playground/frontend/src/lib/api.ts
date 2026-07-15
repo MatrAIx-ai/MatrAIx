@@ -352,3 +352,7 @@ export function listWebEvalTasks(): Promise<WebEvalTasksResponse> {
 export function listOsAppEvalTasks(): Promise<OsAppEvalTasksResponse> {
   return request<OsAppEvalTasksResponse>("/api/os-app-eval/tasks");
 }
+
+export function harborTrialLiveScreenshotUrl(jobName: string, trialName: string): string {
+  return `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/live-screenshot`;
+}

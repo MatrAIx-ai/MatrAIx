@@ -1,6 +1,6 @@
 # Web interaction modes
 
-PersonaBench supports **four Docker / no-use.computer** ways to run persona web
+Playground supports **four Docker / no-use.computer** ways to run persona web
 scenarios against **live public URLs**, plus **CUA** in Docker via
 `persona-computer-1`. Pick the mode that fits the study — none is the global
 default.

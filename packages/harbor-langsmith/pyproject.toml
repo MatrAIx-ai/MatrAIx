@@ -7,7 +7,7 @@ license = "Apache-2.0"
 authors = [{ name = "Alex Shaw", email = "alexgshaw64@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = [
-    "personabench>=0.1.0",
+    "matraix>=0.1.0",
     "requests>=2.32.4",
 ]
 

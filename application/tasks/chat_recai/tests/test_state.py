@@ -8,7 +8,7 @@ from typing import Any
 
 
 OUTPUT_DIR = Path(
-    os.environ.get("PERSONABENCH_OUTPUT_DIR")
+    os.environ.get("HARBOR_OUTPUT_DIR")
     or os.environ.get("MATRIX_OUTPUT_DIR")
     or "/app/output"
 )
@@ -121,7 +121,7 @@ def _derive_conversation_path(question_count: int, outcome_status: str) -> str:
 def _verifier_dir() -> Path:
     base = (
         os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+        or os.environ.get("HARBOR_VERIFIER_DIR")
         or "/logs/verifier"
     )
     path = Path(base)
@@ -344,7 +344,7 @@ def main() -> int:
         json.dumps(
             {
                 "schemaVersion": "1.0",
-                "artifactType": "personabench.trial_evaluation",
+                "artifactType": "matraix.trial_evaluation",
                 "taskType": "chatbot",
                 "presenceCheck": {
                     "passed": True,
