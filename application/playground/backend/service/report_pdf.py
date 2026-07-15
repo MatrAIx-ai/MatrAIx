@@ -709,6 +709,7 @@ def build_trial_report_pdf(
             f"Application: {_safe(app_type)}",
             f"Created: {_safe(created) or '-'}",
             f"Persona: {_safe(persona.get('name') or persona.get('id') or '-')}",
+            f"Task: {_safe(config.get('taskPath') or config.get('applicationId') or '-')}",
         ],
     )
 

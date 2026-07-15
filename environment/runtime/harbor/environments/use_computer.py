@@ -424,7 +424,7 @@ class UseComputerEnvironment(BaseEnvironment):
             async with sem:
                 await self.download_file(remote, local)
 
-        await asyncio.gather(*[_dl(r, l) for r, l in files])
+        await asyncio.gather(*[_dl(r, loc) for r, loc in files])
 
     def _create_kwargs(self) -> dict[str, Any]:
         kwargs: dict[str, Any] = {"type": self._platform}

@@ -269,5 +269,14 @@ configs/jobs/_generated/
 plan.md
 user-simulator-chat-design.md
 
+# Cursor IDE local config
+.cursor/
+
+# Vite dev server cache
+**/.vite/
+
+# Harbor viewer build sourcemaps (large, not needed at runtime)
+environment/runtime/harbor/viewer/static/assets/*.map
+
 # Generated at runtime by Playground sidecar compose helpers
 **/.playground_sidecar/

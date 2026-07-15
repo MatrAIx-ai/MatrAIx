@@ -84,10 +84,13 @@ def test_runtime_factory_does_not_reference_deferred_matraix_agents() -> None:
 
 
 def test_runtime_import_has_no_large_files() -> None:
+    viewer_static = ROOT / "environment/runtime/harbor/viewer/static"
     large_files = [
         path
         for path in (ROOT / "environment/runtime/harbor").rglob("*")
-        if path.is_file() and path.stat().st_size > 1_000_000
+        if path.is_file()
+        and path.stat().st_size > 1_000_000
+        and not path.is_relative_to(viewer_static)
     ]
 
     assert large_files == []
