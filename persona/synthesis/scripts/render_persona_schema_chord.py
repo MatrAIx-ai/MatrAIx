@@ -2,23 +2,24 @@
 """Render a publication-quality two-ring chord diagram of the Persona schema.
 
 The figure summarizes the Persona Full DAG at the taxonomy level, aligned to the
-official taxonomy table (9 groups / 35 sub-categories / 1290 attributes):
+count-validated three-layer taxonomy (PR #221;
+persona/schema/matraix_persona_taxonomy_3layer_1290.md): 5 Layer-1 groups /
+16 Layer-2 subgroups / 1290 attributes.
 
-- Inner ring: 35 sub-categories, each coloured by its parent group.
-- Chord ribbons: directed-proposal edges aggregated to the sub-category level.
-- Outer ring: the 9 top-level groups, spanning their sub-categories.
+- Inner ring: the 16 Layer-2 subgroups, each coloured by its parent group.
+- Chord ribbons: directed-proposal edges aggregated to the subgroup level.
+- Outer ring: the 5 Layer-1 groups, spanning their subgroups.
 
 Notes on the aggregation:
 
 - Latent/helper graph nodes (the 18 nodes with no ``category``, e.g. ``latent_*``
   / ``phase*_*``) are excluded, so the figure covers exactly the 1290 real
-  persona attributes listed in the taxonomy table.
-- The 8 ``Developer: *`` schema categories are merged into a single
-  ``Developer/Coding`` sub-category, matching the taxonomy table.
-- ``Demographic: Family`` (1 attribute, no modeled edges) is omitted because it
-  would render as an empty stub with no ribbons.
-- To keep the diagram readable, only sub-category pairs with at least
-  ``--threshold`` aggregated edges (default 6) are drawn; weaker pairs are hidden.
+  persona attributes listed in the taxonomy.
+- Schema categories are aggregated into the 16 Layer-2 subgroups following the
+  taxonomy (e.g. all ``Developer: *`` categories fold into Career / Work
+  Practices / Technology Use as defined there).
+- To keep the diagram readable, only subgroup pairs with at least
+  ``--threshold`` aggregated edges are drawn; weaker pairs are hidden.
 
 Run from the repository root:
 
@@ -36,12 +37,27 @@ import json
 from pathlib import Path
 
 import numpy as np
+import matplotlib.font_manager
+import matplotlib.pyplot as plt
 from pycirclize import Circos
 import pycirclize.utils.plot as pcp
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_GRAPH_PATH = REPO_ROOT / "persona" / "synthesis" / "graph" / "full_dag.json"
 DEFAULT_OUT_DIR = REPO_ROOT / "persona" / "synthesis" / "visualization"
+
+
+def _use_inter_font() -> None:
+    """Register the bundled Inter font and make it the default, if present."""
+    inter_path = REPO_ROOT / "persona" / "schema" / "_fonts" / "Inter-Variable.ttf"
+    if inter_path.exists():
+        try:
+            matplotlib.font_manager.fontManager.addfont(str(inter_path))
+            name = matplotlib.font_manager.FontProperties(
+                fname=str(inter_path)).get_name()
+            plt.rcParams["font.family"] = name
+        except Exception:
+            pass
 
 
 def _display_path(path: Path) -> str:
@@ -52,67 +68,60 @@ def _display_path(path: Path) -> str:
         return str(path.resolve())
 
 
-# OFFICIAL taxonomy: 9 groups -> sub-categories.
-# Each entry is (group display name, group colour, [(sub-category display name,
-# [schema category keys it aggregates]), ...]).
+# OFFICIAL three-layer taxonomy (PR #221): 5 Layer-1 groups -> 16 Layer-2
+# subgroups. Each entry is (group display name, group colour, [(subgroup
+# display name, [schema category keys it aggregates]), ...]). The inner ring is
+# the 16 Layer-2 subgroups; the outer ring is the 5 Layer-1 groups. Counts and
+# groupings follow persona/schema/matraix_persona_taxonomy_3layer_1290.md.
 GROUPS = [
-    ("Demographic\ninformation", "#4C72B0", [
-        ("Basic", ["Demographic: Core"]),
-        ("Life Events", ["Demographic: Life Events"]),
-        ("Cultural", ["Demographic: Cultural"]),
-    ]),
-    ("Language and\ncommunication", "#8172B3", [
-        ("Language", ["Linguistic: Language"]),
-        ("Communication", ["Linguistic: Communication"]),
-    ]),
-    ("Education and professional\nbackground", "#B07AA1", [
-        ("Academic", ["Learning: Academic"]),
-        ("Learning Style", ["Learning: Style"]),
-        ("Career", ["Professional: Career"]),
-        ("Industry/Role", ["Professional: Industry"]),
-    ]),
-    ("Expertise and skills", "#DD8452", [
-        ("Domains", ["Expertise: Domains"]),
-        ("Skills", ["Expertise: Skills"]),
-        ("Tools", ["Skills: Tools"]),
-        ("Programming", ["Skills: Programming"]),
-        ("Developer/Coding", [
-            "Developer: AI Workflow Tasks", "Developer: Agent Adoption",
-            "Developer: Code Maintenance", "Developer: AI Adoption",
-            "Developer: Technology Evaluation", "Developer: Open Source Behavior",
-            "Developer: Professional Context", "Developer: Community Behavior",
+    ("Background", "#4C72B0", [
+        ("Demographics", [
+            "Demographic: Core", "Demographic: Family",
+            "Demographic: Cultural", "Demographic: Life Events",
+        ]),
+        ("Language", ["Linguistic: Language", "Linguistic: Communication"]),
+        ("Education", ["Learning: Academic", "Learning: Style"]),
+        ("Career", [
+            "Professional: Career", "Professional: Industry",
+            "Developer: Professional Context",
         ]),
     ]),
-    ("Personality", "#CCB974", [
-        ("Character", ["Personality: Character"]),
-        ("Big Five", ["Personality: Big Five"]),
-        ("MBTI", ["Personality: MBTI"]),
-        ("Relationships", ["Personality: Relationships"]),
+    ("Psychology", "#8172B3", [
+        ("Personality", [
+            "Personality: Character", "Personality: Big Five",
+            "Personality: MBTI", "Personality: Relationships",
+        ]),
+        ("Worldview", ["Values & Motivation", "Worldview: Beliefs"]),
+        ("Decision-\nMaking", ["Risk & Decision"]),
     ]),
-    ("Values and\nworldview", "#C44E52", [
-        ("Risk & Decision", ["Risk & Decision"]),
-        ("Values & Motivation", ["Values & Motivation"]),
-        ("Beliefs", ["Worldview: Beliefs"]),
+    ("Capability", "#DD8452", [
+        ("Domains", ["Expertise: Domains"]),
+        ("Skills", [
+            "Expertise: Skills", "Skills: Tools", "Skills: Programming",
+            "Developer: Code Maintenance",
+        ]),
     ]),
-    ("Health and\naccessibility", "#17A2B8", [
-        ("Physical Health", ["Health: Physical"]),
-        ("Fitness", ["Health: Fitness"]),
-        ("Health Lifestyle", ["Health: Lifestyle"]),
+    ("Behavior and\ninteraction", "#C44E52", [
+        ("Personal\nBehavior", [
+            "Behavior: Preferences", "Behavior: Habits", "Behavior: Time",
+        ]),
+        ("Interaction\nState", ["State: Emotional"]),
+        ("Work\nPractices", [
+            "Behavior: Work", "Developer: Open Source Behavior",
+            "Developer: Community Behavior",
+        ]),
+        ("Technology\nUse", [
+            "Developer: AI Adoption", "Developer: AI Workflow Tasks",
+            "Developer: Agent Adoption", "Developer: Technology Evaluation",
+        ]),
     ]),
-    ("Behavior and\ninteraction state", "#F1CE63", [
-        ("Emotional State", ["State: Emotional"]),
-        ("Time", ["Behavior: Time"]),
-        ("Preferences", ["Behavior: Preferences"]),
-        ("Work", ["Behavior: Work"]),
-        ("Habits", ["Behavior: Habits"]),
-    ]),
-    ("Interests and\nculture", "#55A868", [
-        ("Topics", ["Interests: Topics"]),
-        ("Culture", ["Interests: Culture"]),
-        ("Media", ["Interests: Media"]),
-        ("Food", ["Interests: Food"]),
-        ("Sports", ["Interests: Sports"]),
-        ("Hobbies", ["Interests: Hobbies"]),
+    ("Lifestyle and\nhealth", "#55A868", [
+        ("Interests", [
+            "Interests: Topics", "Interests: Media", "Interests: Hobbies",
+            "Interests: Sports", "Interests: Food",
+        ]),
+        ("Culture and\nDaily Life", ["Interests: Culture"]),
+        ("Health", ["Health: Physical", "Health: Fitness", "Health: Lifestyle"]),
     ]),
 ]
 
@@ -159,6 +168,7 @@ def _wrap_label(name: str, width: int = 9) -> str:
 
 
 def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
+    _use_inter_font()
     graph = json.loads(graph_path.read_text(encoding="utf-8"))
     nodes = graph["nodes"]
     edges = graph["directed_proposal_edges"]
@@ -213,9 +223,14 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         track.axis(fc=group_color[group_name], ec="white", lw=0.6)
         label = _wrap_label(sector.name)
         longest = max(len(line) for line in label.split("\n"))
-        label_size = 17.0 if longest <= 11 else 15.0
-        sector.text(label, r=113, size=label_size, adjust_rotation=True,
-                    orientation="vertical", color="#222")
+        if longest <= 9:
+            label_size = 22.0
+        elif longest <= 11:
+            label_size = 19.0
+        else:
+            label_size = 16.5
+        sector.text(label, r=111, size=label_size, adjust_rotation=True,
+                    orientation="vertical", color="#111")
 
     # Draw chord ribbons, heaviest first, so thin links stay visible on top.
     cursor = {name: 0.0 for name in subgroups_ordered}
@@ -244,7 +259,7 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
         lo, hi = min(degrees), max(degrees)
         circos.rect(r_lim=(133, 139), deg_lim=(lo, hi), fc=group_col,
                     ec="white", lw=1.2)
-        circos.text(group_name, r=155, deg=(lo + hi) / 2, size=22,
+        circos.text(group_name, r=157, deg=(lo + hi) / 2, size=24,
                     adjust_rotation=True, orientation="horizontal",
                     color=group_col, fontweight="bold", va="center", ha="center")
 
@@ -259,8 +274,8 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
     covered_total = sum(covered.values())
     print(
         f"wrote {_display_path(png_path)} and {_display_path(pdf_path)} | "
-        f"sub-categories={n_sub} attributes_covered={covered_total} "
-        f"(1290 total; Family's 1 attribute is excluded as it has no edges)"
+        f"groups={len(GROUPS)} subgroups={n_sub} "
+        f"attributes_covered={covered_total} (expect 1290)"
     )
 
 
