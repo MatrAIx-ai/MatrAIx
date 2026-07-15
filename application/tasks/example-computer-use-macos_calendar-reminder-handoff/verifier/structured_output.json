@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactType": "personabench.trial_evaluation",
+  "artifactType": "matraix.trial_evaluation",
   "taskType": "os-app",
   "presenceCheck": {
     "passed": true,
@@ -11,8 +11,8 @@
     "missingArtifacts": []
   },
   "sourceArtifacts": {
-    "handoff": "/tmp/personabench-macos-calendar-reminder-handoff/handoff.txt",
-    "plan": "/tmp/personabench-macos-calendar-reminder-handoff/plan.json"
+    "handoff": "/tmp/os-app-macos-calendar-reminder-handoff/handoff.txt",
+    "plan": "/tmp/os-app-macos-calendar-reminder-handoff/plan.json"
   },
   "contexts": [
     {
@@ -67,7 +67,7 @@
           "label": "Completion evidence",
           "role": "evidence",
           "kind": "textual",
-          "value": "/tmp/personabench-macos-calendar-reminder-handoff/handoff.txt and /tmp/personabench-macos-calendar-reminder-handoff/plan.json"
+          "value": "/tmp/os-app-macos-calendar-reminder-handoff/handoff.txt and /tmp/os-app-macos-calendar-reminder-handoff/plan.json"
         }
       ]
     },

@@ -34,7 +34,7 @@ from playground.harbor.playground import (
     _run_subprocess,
 )
 from playground.remote_runner.dispatch import filter_remote_harbor_payload_env
-from personabench.application_job import (
+from matraix.application_job import (
     DEFAULT_APPLICATION_JOBS_DIR,
     build_application_job_config,
     resolve_job_environment,
@@ -212,6 +212,22 @@ def _trial_result_error(result: dict[str, Any] | None) -> str | None:
             or "Harbor trial failed"
         )
     return "Harbor trial failed"
+
+
+def _read_vnc_url(trial_dir: Path) -> str | None:
+    vnc_path = trial_dir / "vnc_url.txt"
+    if vnc_path.is_file():
+        url = vnc_path.read_text(encoding="utf-8").strip()
+        return url or None
+    return None
+
+
+def _read_sandbox_id(trial_dir: Path) -> str | None:
+    path = trial_dir / "sandbox_id.txt"
+    if path.is_file():
+        value = path.read_text(encoding="utf-8").strip()
+        return value or None
+    return None
 
 
 def _trial_live_phase(trial_dir: Path) -> str | None:
@@ -796,6 +812,8 @@ class HarborJobService:
             completed = self._trial_has_result(job_name, trial_name)
             error = _trial_result_error(result)
             persona_meta = _persona_meta_from_trial(trial_dir)
+            vnc_url = _read_vnc_url(trial_dir)
+            sandbox_id = _read_sandbox_id(trial_dir)
             trials.append(
                 {
                     "trialName": trial_name,
@@ -805,6 +823,8 @@ class HarborJobService:
                     "succeeded": completed and error is None,
                     "error": error,
                     "result": result,
+                    "vncUrl": vnc_url,
+                    "sandboxId": sandbox_id,
                 }
             )
 
@@ -969,7 +989,7 @@ class HarborJobService:
                 "n_concurrent_trials": n_concurrent_trials,
             },
         }
-        from personabench.application_job import resolve_harbor_task_path
+        from matraix.application_job import resolve_harbor_task_path
 
         resolved_task_path = resolve_harbor_task_path(task_path, trial_profile=trial_profile)
         job_config = build_application_job_config(spec, repo_root=self.repo_root)
@@ -1391,6 +1411,8 @@ class HarborJobService:
             instruction_path = trial_dir / "instruction.md"
             phase = _trial_live_phase(trial_dir) if trial_dir.is_dir() else None
             completed = bool(trial.get("completed"))
+            vnc_url = _read_vnc_url(trial_dir) if trial_dir.is_dir() else None
+            sandbox_id = _read_sandbox_id(trial_dir) if trial_dir.is_dir() else None
             live_trials.append(
                 {
                     "trialName": trial_name,
@@ -1402,6 +1424,8 @@ class HarborJobService:
                     "phase": phase,
                     "stage": _resolve_trial_stage(trial_dir, phase=phase, completed=completed),
                     "hasInstruction": instruction_path.is_file(),
+                    "vncUrl": vnc_url,
+                    "sandboxId": sandbox_id,
                 }
             )
         launch = job.get("launch") if isinstance(job.get("launch"), dict) else None
@@ -1529,6 +1553,24 @@ class HarborJobService:
                     "selfReportMarkdown": detail.get("selfReportMarkdown") or None,
                 }
         raise FileNotFoundError("instruction not found for trial {}/{}".format(job_name, trial_name))
+
+    def trial_live_screenshot(self, job_name: str, trial_name: str) -> bytes:
+        """Proxy the live screenshot from use.computer for an active trial."""
+        import httpx
+
+        trial_dir = self.jobs_dir / job_name / trial_name
+        sandbox_id = _read_sandbox_id(trial_dir)
+        if not sandbox_id:
+            raise FileNotFoundError("no active sandbox for this trial")
+        api_key = (os.environ.get("USE_COMPUTER_API_KEY") or "").strip()
+        if not api_key:
+            raise RuntimeError("USE_COMPUTER_API_KEY not configured")
+        base_url = os.environ.get("USE_COMPUTER_BASE_URL", "https://api.use.computer").rstrip("/")
+        url = "{}/v1/sandboxes/{}/screenshot".format(base_url, sandbox_id)
+        with httpx.Client(timeout=10.0) as client:
+            resp = client.get(url, headers={"Authorization": "Bearer {}".format(api_key)})
+            resp.raise_for_status()
+            return resp.content
 
     def shutdown(self) -> None:
         self._executor.shutdown(wait=False, cancel_futures=True)

@@ -12,7 +12,7 @@ def ensure_recbot_importable() -> str:
     """Make the clean task-local recommender API importable when present.
 
     The historical Playground app expected MatrAIx's
-    ``application/tasks/chat_recai`` tree. PersonaBench keeps a slimmer
+    ``application/tasks/chat_recai`` tree. The system keeps a slimmer
     smoke sidecar under ``application/chatbot-api-sidecar_recai/recommender-api``.
     Adding the sidecar directory to ``sys.path`` is harmless when it has no
     importable RecAI bridge, and keeps the full app's lazy import path setup

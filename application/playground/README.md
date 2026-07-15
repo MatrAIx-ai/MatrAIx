@@ -1,6 +1,6 @@
 # Playground
 
-Playground is the PersonaBench workbench for evaluating interactive applications
+Playground is the MatrAIx workbench for evaluating interactive applications
 with simulated persona users. This directory is the clean import of the useful
 Playground app code from the MatrAIx PR #127 snapshot; the raw snapshot
 directory is intentionally not part of `main`.
@@ -15,7 +15,7 @@ Included in this clean tree:
 - Persona catalog sourced from `persona/datasets/bench-dev-sample/`.
 - Survey, chatbot, and web evaluation APIs.
 
-Preserved from the earlier clean PersonaBench main:
+Preserved from the earlier clean MatrAIx main:
 
 - `application.playground.backend.service.survey_questionnaire_catalog`
 - `application.playground.backend.service.survey_types`

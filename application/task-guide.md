@@ -1,6 +1,6 @@
 # Application task structure
 
-A PersonaBench application task is a Harbor task folder under `application/tasks/`.
+A Playground application task is a Harbor task folder under `application/tasks/`.
 Copy the closest `example-*` task for your form (survey, chat, web, computer-use)
 into `application/tasks/<your-task-name>/`, then edit these parts.
 

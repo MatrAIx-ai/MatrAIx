@@ -9,6 +9,7 @@ export interface CockpitRunCenterProps {
   showLive: boolean;
   pipeline: ReactNode;
   liveContent: ReactNode;
+  fillLiveContent?: boolean;
   batchJobName: string | null;
   batchCells: BatchTrialCell[];
   runLaunchPhase: RunLaunchPhase;
@@ -36,6 +37,7 @@ export function CockpitRunCenter({
   showLive,
   pipeline,
   liveContent,
+  fillLiveContent,
   batchJobName,
   batchCells,
   runLaunchPhase,
@@ -65,7 +67,7 @@ export function CockpitRunCenter({
             <BatchTrialGrid trials={batchCells} jobLabel={batchJobName} />
           </BatchTrialStage>
         ) : (
-          <CockpitLiveStage className="h-0 min-h-0 flex-1">{liveContent}</CockpitLiveStage>
+          <CockpitLiveStage className="h-0 min-h-0 flex-1" fillContent={fillLiveContent}>{liveContent}</CockpitLiveStage>
         )
       ) : (
         <div className="flex min-h-0 flex-1 flex-col">{pipeline}</div>

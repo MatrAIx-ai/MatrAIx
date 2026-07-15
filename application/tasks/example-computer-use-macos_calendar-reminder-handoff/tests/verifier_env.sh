@@ -6,7 +6,7 @@ case "${SCRIPT_DIR}" in
     VERIFIER_DIR="${TRIAL_ROOT}/verifier"
     ;;
   *)
-    VERIFIER_DIR="${HARBOR_VERIFIER_DIR:-${PERSONABENCH_VERIFIER_DIR:-/logs/verifier}}"
+    VERIFIER_DIR="${HARBOR_VERIFIER_DIR:-/logs/verifier}"
     if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null; then
       VERIFIER_DIR="${TRIAL_ROOT}/verifier"
     fi

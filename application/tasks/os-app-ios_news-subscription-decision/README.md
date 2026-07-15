@@ -1,6 +1,6 @@
 # News+ subscription decision (iOS)
 
-PersonaBench **mobile** computer-use task: open the **News+ subscription**
+MatrAIx **mobile** computer-use task: open the **News+ subscription**
 screen on an iPhone 17 simulator, browse the **full offer**, return to the top
 to re-check **features and pricing**, then convert only by tapping
 **Get Started** (or end without tapping if declining).
@@ -10,7 +10,7 @@ and a News+ offer screen with **Get Started** must be available on the reserved
 mini.
 
 Uses **`persona-computer-1`** → use.computer **`IOSAgent`**. The instruction is
-written for the persona; PersonaBench materializes the submitted JSON to
+written for the persona; MatrAIx materializes the submitted JSON to
 `decision.json` on the simulator host for scoring.
 
 ```bash
@@ -61,7 +61,7 @@ uv run harbor run \
 
 Host path after trial:
 
-`jobs/<job>/<trial>/artifacts/tmp/personabench-ios-news-subscription-decision/decision.json`
+`jobs/<job>/<trial>/artifacts/tmp/os-app-ios-news-subscription-decision/decision.json`
 
 The verifier checks that the submission includes:
 

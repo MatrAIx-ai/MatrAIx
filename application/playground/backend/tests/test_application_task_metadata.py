@@ -22,6 +22,6 @@ def test_title_from_harbor_task_name():
     assert title_from_harbor_task_name("application/chat-openbb") == "Chat Openbb"
     # Legacy Harbor names still parse.
     assert (
-        title_from_harbor_task_name("personabench/application-chat-recai")
+        title_from_harbor_task_name("matraix/application-chat-recai")
         == "Chat Recai"
     )

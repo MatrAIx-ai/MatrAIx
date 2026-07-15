@@ -110,7 +110,7 @@ export function isMachinePersonaName(name: string | null | undefined): boolean {
   return /^persona[-_]/i.test(trimmed);
 }
 
-/** Mirror of personabench.persona_display_name.synthetic_display_name */
+/** Mirror of persona display name logic.synthetic_display_name */
 export function syntheticDisplayName(
   personaId: string,
   dimensions: Record<string, string> = {},

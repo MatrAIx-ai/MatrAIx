@@ -335,8 +335,14 @@ export function OsAppEvalScorecard({ osAppResult, verifier, traceStepCount = 0, 
   if (runningPhase(phase) && !osAppResult) return <ScorecardSkeleton />;
   if (!osAppResult) return <EmptyScorecard phase={phase} />;
 
-  const reward = osAppResult.score ?? (osAppResult.success ? 1 : 0);
   const passed = osAppResult.success;
+  const rawScore = osAppResult.score;
+  const reward =
+    (rawScore != null && rawScore > 0)
+      ? rawScore
+      : (verifier?.reward != null && verifier.reward > 0)
+        ? verifier.reward
+        : (passed ? 1 : 0);
   const band = passed ? "high" : "low";
   const color = SCORE_BAND_CLASS[band];
   const displayReward = reward >= 0 && reward <= 1 ? `${Math.round(reward * 100)}%` : String(reward);

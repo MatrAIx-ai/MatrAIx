@@ -1,7 +1,7 @@
 # Application Tasks
 
 Task definitions for **application product research**. These were migrated from
-MatrAIx and organized under the PersonaBench `application/` module.
+MatrAIx and organized under the MatrAIx `application/` module.
 
 This import contains application task folders, tests, and reference solutions.
 Runtime build contexts live under `environment/task-environments/application/`.

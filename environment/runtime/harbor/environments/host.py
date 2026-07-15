@@ -359,7 +359,7 @@ class HostEnvironment(BaseEnvironment):
             workdir = self.resolve_container_path(cwd)
         merged_env = dict(env or {})
         merged_env["MATRIX_OUTPUT_DIR"] = str(output_dir)
-        merged_env["PERSONABENCH_OUTPUT_DIR"] = str(output_dir)
+        merged_env["PLAYGROUND_OUTPUT_DIR"] = str(output_dir)
         merged_env["HARBOR_VERIFIER_DIR"] = str(self.trial_paths.verifier_dir.resolve())
         merged_env["HARBOR_TESTS_DIR"] = str(self._tests_root.resolve())
         return await self._run_command(

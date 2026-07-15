@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 OUTPUT_DIR = Path(
-    os.environ.get("PERSONABENCH_OUTPUT_DIR")
+    os.environ.get("HARBOR_OUTPUT_DIR")
     or os.environ.get("MATRIX_OUTPUT_DIR")
     or "/app/output"
 )
@@ -17,7 +17,7 @@ FEEDBACK_PATH = OUTPUT_DIR / "user_feedback.json"
 def _verifier_dir() -> Path:
     base = (
         os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+        or os.environ.get("HARBOR_VERIFIER_DIR")
         or "/logs/verifier"
     )
     path = Path(base)
@@ -181,7 +181,7 @@ def test_transcript_schema() -> None:
     )
     payload: dict[str, Any] = {
         "schemaVersion": "1.0",
-        "artifactType": "personabench.trial_evaluation",
+        "artifactType": "matraix.trial_evaluation",
         "taskType": "chatbot",
         "presenceCheck": {
             "passed": True,

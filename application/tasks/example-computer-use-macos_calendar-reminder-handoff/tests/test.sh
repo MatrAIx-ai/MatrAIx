@@ -10,7 +10,7 @@ import os
 import sys
 from pathlib import Path
 
-root = Path("/tmp/personabench-macos-calendar-reminder-handoff")
+root = Path("/tmp/os-app-macos-calendar-reminder-handoff")
 handoff_path = root / "handoff.txt"
 plan_path = root / "plan.json"
 if not handoff_path.is_file():
@@ -101,7 +101,7 @@ feedback = load_user_feedback()
 
 verifier_dir = Path(
     os.environ.get("HARBOR_VERIFIER_DIR")
-    or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+    or os.environ.get("HARBOR_VERIFIER_DIR")
     or "/logs/verifier"
 )
 try:
@@ -380,7 +380,7 @@ if feedback is not None:
     json.dumps(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,

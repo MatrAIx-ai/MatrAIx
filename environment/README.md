@@ -1,6 +1,6 @@
 # Environment module
 
-> Part of [PersonaBench](../README.md). This module owns **how simulations run**:
+> Part of [Playground](../README.md). This module owns **how simulations run**:
 > Harbor jobs, trial execution, persona agents, shared task environments, and
 > optional remote workers.
 
@@ -11,7 +11,7 @@ If you are new to the repo, read this page first to understand how
 
 ## Mental model
 
-PersonaBench separates **what to simulate** from **how to execute it**:
+Playground separates **what to simulate** from **how to execute it**:
 
 ```text
   persona/datasets/          application/tasks/           environment/
@@ -32,7 +32,7 @@ PersonaBench separates **what to simulate** from **how to execute it**:
 | Task definition | `application/tasks/<name>/` | *What* they do (`instruction.md`, verifier, `reporting.json`) |
 | Task environment | `environment/task-environments/application/` | Docker images, sidecars, browser stacks |
 | Runtime | `environment/runtime/harbor/` | Job/trial loop, backends (host, docker, use-computer, …) |
-| Agents | `environment/agents/personabench/agents/` | `persona-claude-code`, `persona-browser-use`, `persona-computer-1`, … |
+| Agents | `environment/agents/matraix/agents/` | `persona-claude-code`, `persona-browser-use`, `persona-computer-1`, … |
 | Job recipes | `configs/jobs/` | Multi-trial batches, concurrency, agent/model defaults |
 | Outputs | `jobs/` | Per-trial artifacts, verifier results, optional aggregation |
 
@@ -78,7 +78,7 @@ payload.
 environment/
   README.md                 ← you are here
   adapters/                 Optional external benchmark adapters (manifest-backed)
-  agents/personabench/      Persona-conditioned agent implementations
+  agents/matraix/      Persona-conditioned agent implementations
   runtime/harbor/           Harbor CLI, trial loop, models, verifier, viewer backend
   task-environments/
     application/            Persona shared-* + SUT *-sidecar_* (shared-chat-persona, chatbot-api-sidecar_*, chatbot-mcp-sidecar_*, web-sidecar_*, shared-web-*, shared-os-app-*, …)
@@ -94,7 +94,7 @@ packages/
 apps/viewer/                Frontend paired with `harbor view`
 ```
 
-Python import names stay stable: `harbor.*`, `personabench.agents.*`, `playground.*`.
+Python import names stay stable: `harbor.*`, `matraix.agents.*`, `playground.*`.
 
 ---
 

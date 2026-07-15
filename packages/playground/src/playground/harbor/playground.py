@@ -61,7 +61,7 @@ def resolve_repo_root(file_path: Path) -> Path:
         if (
             parts[index] == "environment"
             and parts[index + 1] == "agents"
-            and parts[index + 2] == "personabench"
+            and parts[index + 2] == "matraix"
         ):
             return _path_prefix(parts, index)
     for index in range(len(parts) - 1):

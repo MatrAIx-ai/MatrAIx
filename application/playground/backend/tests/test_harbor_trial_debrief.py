@@ -268,7 +268,7 @@ def test_map_trial_debrief_includes_verifier(tmp_path: Path) -> None:
         json.dumps(
             {
                 "schemaVersion": "1.0",
-                "artifactType": "personabench.trial_evaluation",
+                "artifactType": "matraix.trial_evaluation",
                 "taskType": "chatbot",
                 "contexts": [
                     {
@@ -549,7 +549,7 @@ def test_map_trial_debrief_ios_cua_tmp_artifacts(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     trial_dir = repo / "jobs" / "job-ios" / "trial-0"
-    output = trial_dir / "artifacts" / "tmp" / "personabench-ios-photo-access-review"
+    output = trial_dir / "artifacts" / "tmp" / "os-app-ios-photo-access-review"
     output.mkdir(parents=True)
     (output / "decision.json").write_text(
         json.dumps({"keep_notifications_on": True, "app_reviewed": "Calendar"}),
