@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -uo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
 
+# Ensure VERIFIER_DIR exists and is writable; fall back to /tmp if not.
+if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null || ! [ -w "${VERIFIER_DIR}" ]; then
+  VERIFIER_DIR="/tmp/verifier_output"
+  mkdir -p "${VERIFIER_DIR}"
+fi
+export VERIFIER_DIR
+
+set +e
 python3 <<'PY'
 import json
 import os
@@ -11,7 +19,7 @@ import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/os-app-ios-news-subscription-decision/decision.json")
+path = Path("/tmp/os-app-macos-shortcuts-gallery-picks/picks.json")
 
 if not path.is_file():
     logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
@@ -31,39 +39,43 @@ if not path.is_file():
     sys.exit(f"missing {path}")
 
 data = json.loads(path.read_text())
-app = data.get("app_reviewed", "")
-if not isinstance(app, str) or not app.strip():
-    sys.exit("app_reviewed must be a non-empty string")
 
-if data.get("browsed_full_offer") is not True:
-    sys.exit("browsed_full_offer must be true")
-if data.get("reviewed_features_and_pricing") is not True:
-    sys.exit("reviewed_features_and_pricing must be true")
+if data.get("browsed_gallery") is not True:
+    sys.exit("browsed_gallery must be true")
 
-clicked = data.get("clicked_get_started")
-if not isinstance(clicked, bool):
-    sys.exit("clicked_get_started must be a boolean")
+categories = data.get("categories_seen")
+if not isinstance(categories, list) or len(categories) < 2:
+    sys.exit("categories_seen must list at least two category names")
+for cat in categories:
+    if not isinstance(cat, str) or not cat.strip():
+        sys.exit("categories_seen entries must be non-empty strings")
+cleaned_categories = [c.strip() for c in categories]
 
-price_seen = data.get("price_seen", "")
-if not isinstance(price_seen, str) or not price_seen.strip():
-    sys.exit("price_seen must be a non-empty string")
+picks = data.get("picks")
+if not isinstance(picks, list) or len(picks) != 3:
+    sys.exit("picks must contain exactly three items")
 
-highlights = data.get("highlights_noticed")
-if not isinstance(highlights, list) or not highlights:
-    sys.exit("highlights_noticed must be a non-empty list")
-cleaned_highlights: list[str] = []
-for item in highlights:
-    if not isinstance(item, str) or not item.strip():
-        sys.exit("highlights_noticed entries must be non-empty strings")
-    cleaned_highlights.append(item.strip())
+pick_names: list[str] = []
+pick_reasons: list[str] = []
+pick_categories: list[str] = []
+for i, pick in enumerate(picks):
+    if not isinstance(pick, dict):
+        sys.exit(f"pick {i} must be an object")
+    name = pick.get("name", "")
+    if not isinstance(name, str) or not name.strip():
+        sys.exit(f"pick {i} name must be a non-empty string")
+    cat = pick.get("category", "")
+    if not isinstance(cat, str) or not cat.strip():
+        sys.exit(f"pick {i} category must be a non-empty string")
+    reason = pick.get("reason", "")
+    if not isinstance(reason, str) or len(reason.strip()) < 10:
+        sys.exit(f"pick {i} reason must be at least 10 characters")
+    pick_names.append(name.strip())
+    pick_categories.append(cat.strip())
+    pick_reasons.append(reason.strip())
 
-reason = data.get("reason", "")
-if not isinstance(reason, str) or len(reason.strip()) < 10:
-    sys.exit("reason must be at least 10 characters")
-
-decision = "subscribe" if clicked else "decline"
-basis = "pack_value" if clicked else "price"
-highlights_label = ", ".join(cleaned_highlights)
+if len(set(pick_names)) < 3:
+    sys.exit("all three picks must be distinct shortcuts")
 
 feedback_path = Path("/app/output/user_feedback.json")
 satisfaction_buckets = {"yes", "partially", "no"}
@@ -125,18 +137,23 @@ def load_user_feedback() -> dict[str, object] | None:
 feedback = load_user_feedback()
 
 verifier_dir = Path(
-    os.environ.get("HARBOR_VERIFIER_DIR")
+    os.environ.get("VERIFIER_DIR")
     or os.environ.get("HARBOR_VERIFIER_DIR")
     or "/logs/verifier"
 )
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
 except OSError:
-    verifier_dir = Path.cwd() / "verifier"
+    verifier_dir = Path("/tmp/verifier_output")
     verifier_dir.mkdir(parents=True, exist_ok=True)
 
+picks_label = "; ".join(
+    f"{n} ({c})" for n, c in zip(pick_names, pick_categories)
+)
+reasons_label = " | ".join(pick_reasons)
+
 source_artifacts = {
-    "decision": str(path),
+    "picks": str(path),
 }
 contexts = [
     {
@@ -184,23 +201,20 @@ contexts = [
                 "label": "Outcome explanation",
                 "role": "explanation",
                 "kind": "textual",
-                "value": (
-                    "The submission finished the News+ offer browse and "
-                    f"{'tapped' if clicked else 'did not tap'} Get Started."
-                ),
+                "value": f"Selected 3 shortcuts from the Gallery: {picks_label}.",
             },
             {
                 "key": "completion_evidence",
                 "label": "Completion evidence",
                 "role": "evidence",
                 "kind": "textual",
-                "value": f"clicked_get_started={clicked} -> {decision}",
+                "value": str(path),
             },
         ],
     },
     {
-        "key": "goal_component.browsed_full_offer",
-        "label": "Browsed full offer",
+        "key": "goal_component.browsed_gallery",
+        "label": "Browsed Gallery",
         "contextType": "goal_component",
         "facets": [
             {
@@ -208,14 +222,14 @@ contexts = [
                 "label": "Goal component key",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": "browsed_full_offer",
+                "value": "browsed_gallery",
             },
             {
                 "key": "goal_component_label",
                 "label": "Goal component label",
                 "role": "evidence",
                 "kind": "textual",
-                "value": "Scroll through the full subscription offer page",
+                "value": "Browse the Shortcuts Gallery across categories",
             },
             {
                 "key": "goal_component_status",
@@ -229,7 +243,7 @@ contexts = [
                 "label": "Goal component weight",
                 "role": "score",
                 "kind": "numerical",
-                "value": 0.25,
+                "value": 0.3,
             },
             {
                 "key": "goal_component_required",
@@ -243,13 +257,13 @@ contexts = [
                 "label": "Goal component evidence",
                 "role": "explanation",
                 "kind": "textual",
-                "value": f"Highlights noticed: {highlights_label}.",
+                "value": f"Categories seen: {', '.join(cleaned_categories)}.",
             },
         ],
     },
     {
-        "key": "goal_component.reviewed_features_and_pricing",
-        "label": "Reviewed features and pricing",
+        "key": "goal_component.three_picks",
+        "label": "Three shortcut picks",
         "contextType": "goal_component",
         "facets": [
             {
@@ -257,14 +271,14 @@ contexts = [
                 "label": "Goal component key",
                 "role": "evidence",
                 "kind": "categorical",
-                "value": "reviewed_features_and_pricing",
+                "value": "three_picks",
             },
             {
                 "key": "goal_component_label",
                 "label": "Goal component label",
                 "role": "evidence",
                 "kind": "textual",
-                "value": "Return to the top and re-check features and pricing",
+                "value": "Select three shortcuts with personal-fit reasoning",
             },
             {
                 "key": "goal_component_status",
@@ -278,7 +292,7 @@ contexts = [
                 "label": "Goal component weight",
                 "role": "score",
                 "kind": "numerical",
-                "value": 0.25,
+                "value": 0.7,
             },
             {
                 "key": "goal_component_required",
@@ -292,132 +306,66 @@ contexts = [
                 "label": "Goal component evidence",
                 "role": "explanation",
                 "kind": "textual",
-                "value": f"Price seen: {price_seen.strip()}.",
+                "value": f"Picks: {picks_label}.",
             },
         ],
     },
-    {
-        "key": "goal_component.get_started_decision",
-        "label": "Get Started decision",
-        "contextType": "goal_component",
-        "facets": [
-            {
-                "key": "goal_component_key",
-                "label": "Goal component key",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "get_started_decision",
-            },
-            {
-                "key": "goal_component_label",
-                "label": "Goal component label",
-                "role": "evidence",
-                "kind": "textual",
-                "value": "Tap Get Started only if converting, then end",
-            },
-            {
-                "key": "goal_component_status",
-                "label": "Goal component status",
-                "role": "primary",
-                "kind": "categorical",
-                "value": "passed",
-            },
-            {
-                "key": "goal_component_weight",
-                "label": "Goal component weight",
-                "role": "score",
-                "kind": "numerical",
-                "value": 0.5,
-            },
-            {
-                "key": "goal_component_required",
-                "label": "Goal component required",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "true",
-            },
-            {
-                "key": "goal_component_evidence",
-                "label": "Goal component evidence",
-                "role": "explanation",
-                "kind": "textual",
-                "value": (
-                    "clicked_get_started="
-                    f"{str(clicked).lower()} ({decision})."
-                ),
-            },
-        ],
-    },
-    {
-        "key": "decision.primary",
-        "label": "Primary subscription decision",
-        "contextType": "decision",
-        "facets": [
-            {
-                "key": "decision_outcome",
-                "label": "Decision outcome",
-                "role": "primary",
-                "kind": "categorical",
-                "value": decision,
-            },
-            {
-                "key": "basis_primary",
-                "label": "Primary basis",
-                "role": "primary",
-                "kind": "categorical",
-                "value": basis,
-            },
-            {
-                "key": "clicked_get_started",
-                "label": "Clicked Get Started",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "true" if clicked else "false",
-            },
-            {
-                "key": "price_sensitivity",
-                "label": "Price sensitivity",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "willing" if clicked else "unwilling",
-            },
-            {
-                "key": "price_seen",
-                "label": "Price seen",
-                "role": "evidence",
-                "kind": "textual",
-                "value": price_seen.strip(),
-            },
-            {
-                "key": "reason",
-                "label": "Reason",
-                "role": "explanation",
-                "kind": "textual",
-                "value": reason.strip(),
-            },
-            {
-                "key": "decision_subject_id",
-                "label": "Decision subject ID",
-                "role": "evidence",
-                "kind": "categorical",
-                "value": "news_plus",
-            },
-            {
-                "key": "decision_subject_label",
-                "label": "Decision subject label",
-                "role": "evidence",
-                "kind": "textual",
-                "value": "Apple News+",
-            },
-            {
-                "key": "highlights_noticed",
-                "label": "Highlights noticed",
-                "role": "evidence",
-                "kind": "textual",
-                "value": highlights_label,
-            },
-        ],
-    },
+]
+
+for i, (name, cat, reason) in enumerate(zip(pick_names, pick_categories, pick_reasons)):
+    contexts.append(
+        {
+            "key": f"decision.pick_{i + 1}",
+            "label": f"Pick {i + 1}: {name}",
+            "contextType": "decision",
+            "facets": [
+                {
+                    "key": "decision_outcome",
+                    "label": "Decision outcome",
+                    "role": "primary",
+                    "kind": "categorical",
+                    "value": "add",
+                },
+                {
+                    "key": "basis_primary",
+                    "label": "Primary basis",
+                    "role": "primary",
+                    "kind": "categorical",
+                    "value": "personal_fit",
+                },
+                {
+                    "key": "decision_subject_id",
+                    "label": "Decision subject ID",
+                    "role": "evidence",
+                    "kind": "categorical",
+                    "value": name.lower().replace(" ", "_"),
+                },
+                {
+                    "key": "decision_subject_label",
+                    "label": "Decision subject label",
+                    "role": "evidence",
+                    "kind": "textual",
+                    "value": name,
+                },
+                {
+                    "key": "decision_category",
+                    "label": "Gallery category",
+                    "role": "evidence",
+                    "kind": "categorical",
+                    "value": cat,
+                },
+                {
+                    "key": "reason",
+                    "label": "Reason",
+                    "role": "explanation",
+                    "kind": "textual",
+                    "value": reason,
+                },
+            ],
+        }
+    )
+
+contexts.append(
     {
         "key": "persona_alignment.primary",
         "label": "Persona alignment",
@@ -435,14 +383,14 @@ contexts = [
                 "label": "Primary preference axis",
                 "role": "primary",
                 "kind": "categorical",
-                "value": basis,
+                "value": "personal_fit",
             },
             {
                 "key": "persona_alignment_explanation",
                 "label": "Persona alignment explanation",
                 "role": "explanation",
                 "kind": "textual",
-                "value": reason.strip(),
+                "value": reasons_label,
             },
             {
                 "key": "persona_alignment_score",
@@ -452,39 +400,37 @@ contexts = [
                 "value": 1.0,
             },
         ],
-    },
-]
-if not clicked:
-    contexts.append(
-        {
-            "key": "persona_constraint.primary",
-            "label": "Persona constraint",
-            "contextType": "persona_constraint",
-            "facets": [
-                {
-                    "key": "persona_constraint_type",
-                    "label": "Persona constraint type",
-                    "role": "primary",
-                    "kind": "categorical",
-                    "value": "price",
-                },
-                {
-                    "key": "persona_constraint_status",
-                    "label": "Persona constraint status",
-                    "role": "primary",
-                    "kind": "categorical",
-                    "value": "satisfied",
-                },
-                {
-                    "key": "persona_constraint_evidence",
-                    "label": "Persona constraint evidence",
-                    "role": "explanation",
-                    "kind": "textual",
-                    "value": reason.strip(),
-                },
-            ],
-        }
-    )
+    }
+)
+
+contexts.append(
+    {
+        "key": "decision_process.primary",
+        "label": "Decision process",
+        "contextType": "decision_process",
+        "facets": [
+            {
+                "key": "exploration_style",
+                "label": "Exploration style",
+                "role": "primary",
+                "kind": "categorical",
+                "value": "browse_and_categorize",
+            },
+            {
+                "key": "process_notes",
+                "label": "Process notes",
+                "role": "explanation",
+                "kind": "textual",
+                "value": (
+                    f"Browsed {len(cleaned_categories)} categories "
+                    f"({', '.join(cleaned_categories)}), "
+                    f"then selected: {picks_label}."
+                ),
+            },
+        ],
+    }
+)
+
 if feedback is not None:
     source_artifacts["userFeedback"] = str(feedback_path)
     feedback_facets = [
@@ -564,7 +510,7 @@ if feedback is not None:
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,
-                "requiredArtifacts": ["decision.json"],
+                "requiredArtifacts": ["picks.json"],
                 "missingArtifacts": [],
             },
             "sourceArtifacts": source_artifacts,
@@ -576,8 +522,10 @@ if feedback is not None:
     encoding="utf-8",
 )
 PY
+py_exit=$?
+set -e
 
-if [ $? -eq 0 ]; then
+if [ $py_exit -eq 0 ]; then
   printf '1\n' > "${VERIFIER_DIR}/reward.txt"
 else
   printf '0\n' > "${VERIFIER_DIR}/reward.txt"
