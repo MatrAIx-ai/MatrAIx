@@ -228,7 +228,6 @@ def render(graph_path: Path, out_dir: Path) -> None:
 
     # Vertical layout: leaves top-to-bottom, spacing adapts to label lines and
     # a small gap between groups.
-    step = 1.0
     group_gap = 0.8
     leaf_h = 0.72
     y_leaf: list[float] = []
