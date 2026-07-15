@@ -59,10 +59,20 @@ Shared Docker / sidecar stacks: `environment/task-environments/application/`.
 | Survey | `example-survey_product-feedback` | `persona-claude-code` | [task-spec/survey/](task-spec/survey/) |
 | Chatbot | `chat_recai` | `persona-claude-code` | [task-spec/chatbot/](task-spec/chatbot/) |
 | Web | `example-web-playwright_quote-choice` | `persona-openhands-sdk` | [web-interaction.md](web-interaction.md) |
+| Web (finance) | `web-portfoliovisualizer_backtest-allocation` | `persona-browser-use` | [web-interaction.md](web-interaction.md) |
 | OS / computer-use | `example-computer-use-ios_photo-access-review` | `persona-computer-1` | [task-spec/os-app/](task-spec/os-app/) |
 
 Copy the closest **`example-*`** sibling when adding a task. See
 [tasks/README.md](tasks/README.md) for the full checklist.
+
+The **finance** web task
+[`web-portfoliovisualizer_backtest-allocation`](tasks/web-portfoliovisualizer_backtest-allocation/)
+studies how personas construct and evaluate investment portfolios on the live
+Portfolio Visualizer *Backtest Portfolio* tool — risk-return trade-offs, goal
+alignment, and how they read historical performance. Its
+[`reporting.json`](tasks/web-portfoliovisualizer_backtest-allocation/reporting.json)
+defines the batch metrics (backtest usability, risk personalization, disclosure
+quality).
 
 ---
 

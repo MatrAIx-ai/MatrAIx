@@ -1,0 +1,24 @@
+# Backtest portfolio asset allocation web task (browser-use, Docker).
+# Requires ANTHROPIC_API_KEY or LLM_API_KEY in your shell.
+#
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-web-portfoliovisualizer-backtest-local.yaml
+
+job_name: appSim-web-portfoliovisualizer-backtest-local
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+n_concurrent_trials: 1
+quiet: false
+
+environment:
+  type: docker
+  delete: true
+
+agents:
+  - name: persona-browser-use
+    model_name: anthropic/claude-sonnet-4-6
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0042.yaml
+
+tasks:
+  - path: application/tasks/web-portfoliovisualizer_backtest-allocation
