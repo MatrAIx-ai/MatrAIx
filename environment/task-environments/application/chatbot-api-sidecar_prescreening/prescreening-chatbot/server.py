@@ -255,7 +255,12 @@ def post_message():
     state["messages"].append({"role": "user", "content": message})
     state["messages"].append({"role": "assistant", "content": reply})
     state["turn"] += 1
-    return jsonify({"sessionId": session_id, "reply": reply, "turn": state["turn"]})
+    turn_view = {
+        "index": state["turn"],
+        "userMessage": message,
+        "assistantReply": reply,
+    }
+    return jsonify({"sessionId": session_id, "reply": reply, "turn": turn_view})
 
 
 @app.get("/v1/conversation")
