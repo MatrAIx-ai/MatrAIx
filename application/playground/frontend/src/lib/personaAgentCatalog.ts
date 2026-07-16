@@ -228,14 +228,27 @@ export function cuaRuntimeLabel(backend: string): string {
 /** Default LLM for OS app Harbor runs (persona-computer-1 ``model_name``). */
 export const DEFAULT_CUA_AGENT_MODEL = "anthropic/claude-haiku-4-5";
 
-/** Platform-aware agent model list for the Persona rail (macOS/iOS → Anthropic only). */
+/** OpenAI models with native computer-use (use.computer OpenAICUAAgent / Harbor Computer1). */
+const OPENAI_CUA_MODELS = new Set(["openai/gpt-5.4", "openai/gpt-5.5"]);
+
+function isCuaCapablePersonaModel(modelId: string, platform: string): boolean {
+  if (modelId.startsWith("anthropic/")) return true;
+  if (platform === "ios") {
+    // IOSAgent is litellm-backed and accepts any vision-capable chat model.
+    return modelId.startsWith("openai/") || modelId.startsWith("gemini/");
+  }
+  // macOS / Linux desktop: native CUA providers only.
+  return OPENAI_CUA_MODELS.has(modelId) || modelId.startsWith("gemini/");
+}
+
+/** Platform-aware agent model list for the Persona rail. */
 export function cuaPersonaModelSelectOptions(
   platform: string | undefined,
   options: CockpitSelectOption[],
 ): CockpitSelectOption[] {
   const normalized = (platform ?? "linux").toLowerCase();
   if (normalized === "macos" || normalized === "ios") {
-    return options.filter((opt) => opt.value.startsWith("anthropic/"));
+    return options.filter((opt) => isCuaCapablePersonaModel(opt.value, normalized));
   }
   return options;
 }

@@ -47,6 +47,14 @@ PERSONA_MODEL_KNOB_META: Dict[str, Dict[str, str]] = {
         "label": "GPT-4o",
         "description": "OpenAI persona simulation with stronger reasoning.",
     },
+    "openai/gpt-5.4": {
+        "label": "GPT-5.4",
+        "description": "OpenAI computer-use CUA (macOS/Linux desktop via Responses API).",
+    },
+    "openai/gpt-5.5": {
+        "label": "GPT-5.5",
+        "description": "OpenAI computer-use CUA (default OpenAI desktop CUA model).",
+    },
     "dashscope/qwen3.6-plus-2026-04-02": {
         "label": "Qwen 3.6 Plus · Apr 2026",
         "description": "Pinned DashScope release — use for reproducible runs.",
