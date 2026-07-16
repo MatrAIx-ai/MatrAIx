@@ -971,10 +971,17 @@ class HarborJobService:
             mode=execution_mode,
             trial_profile=trial_profile,
         )
+        from matraix.web_task_environment import resolve_web_harbor_task_path
+
+        harbor_task_path = resolve_web_harbor_task_path(
+            task_path,
+            agent_name=agent,
+            repo_root=self.repo_root,
+        )
 
         spec = {
             "name": resolved_job_name,
-            "task": task_path,
+            "task": harbor_task_path,
             "persona_pool": resolved_pool,
             "sample_size": len(resolved_persona_ids) if resolved_persona_ids else sample_size,
             "seed": resolved_seed,
@@ -991,7 +998,7 @@ class HarborJobService:
         }
         from matraix.application_job import resolve_harbor_task_path
 
-        resolved_task_path = resolve_harbor_task_path(task_path, trial_profile=trial_profile)
+        resolved_task_path = resolve_harbor_task_path(harbor_task_path, trial_profile=trial_profile)
         job_config = build_application_job_config(spec, repo_root=self.repo_root)
         if os_app_submission_profile:
             for agent in job_config.get("agents", []):

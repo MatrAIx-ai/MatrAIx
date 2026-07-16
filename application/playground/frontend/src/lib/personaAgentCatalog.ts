@@ -3,12 +3,17 @@ import type { CockpitSelectOption } from "@/components/cockpit/setup/CockpitSele
 /** Control surface from light (script-only) → full (desktop pixels). */
 export type AgentCapabilityTier = "light" | "standard" | "extended" | "full";
 
+/** Browser-native web agents vs generalist Docker CLI harnesses. */
+export type WebAgentFamily = "browser" | "cli";
+
 export interface PersonaAgentOption {
   value: string;
   label: string;
   capability: string;
   tier: AgentCapabilityTier;
   summary: string;
+  /** Optional badge in the agent picker (e.g. subscription auth). */
+  badge?: string;
 }
 
 /** Harbor web agents — increasing control surface. */
@@ -41,6 +46,34 @@ export const WEB_PERSONA_AGENTS: PersonaAgentOption[] = [
     capability: "Pixel Click full Desktop",
     tier: "full",
     summary: "sees the whole desktop and clicks screen coordinates — for native apps, not structured page apis.",
+  },
+];
+
+/** Generalist CLI harnesses — optional for web tasks (experimental). */
+export const CLI_PERSONA_AGENTS: PersonaAgentOption[] = [
+  {
+    value: "persona-claude-code",
+    label: "Claude Code",
+    capability: "Terminal CLI",
+    tier: "standard",
+    summary: "general-purpose terminal agent in docker — same stack as survey/chat.",
+    badge: "Anthropic",
+  },
+  {
+    value: "persona-codex",
+    label: "Codex",
+    capability: "Terminal CLI",
+    tier: "standard",
+    summary: "general-purpose terminal agent in docker — same stack as survey/chat.",
+    badge: "OpenAI",
+  },
+  {
+    value: "persona-gemini-cli",
+    label: "Gemini CLI",
+    capability: "Terminal CLI",
+    tier: "standard",
+    summary: "general-purpose terminal agent in docker — same stack as survey/chat.",
+    badge: "Google",
   },
 ];
 
@@ -78,13 +111,38 @@ export const WEB_TASK_SUGGESTED_AGENT: Record<string, string> = {
   "web-cua-bookshop-choice": "persona-computer-1",
 };
 
-export function webPersonaAgentSelectOptions(): CockpitSelectOption[] {
-  return WEB_PERSONA_AGENTS.map((opt) => ({
+export function webAgentFamily(agentId: string): WebAgentFamily {
+  return CLI_PERSONA_AGENTS.some((opt) => opt.value === agentId) ? "cli" : "browser";
+}
+
+export function webPersonaAgentsForFamily(family: WebAgentFamily): PersonaAgentOption[] {
+  return family === "cli" ? CLI_PERSONA_AGENTS : WEB_PERSONA_AGENTS;
+}
+
+export function defaultWebPersonaAgentForFamily(family: WebAgentFamily, taskId?: string): string {
+  if (family === "browser") {
+    return taskId ? suggestedWebPersonaAgent(taskId) : WEB_PERSONA_AGENTS[0].value;
+  }
+  return CLI_PERSONA_AGENTS[0].value;
+}
+
+function personaAgentToSelectOption(opt: PersonaAgentOption): CockpitSelectOption {
+  return {
     value: opt.value,
     label: opt.label,
-    meta: `${opt.tier} · ${opt.capability}`,
+    meta: opt.badge ? `${opt.badge} · ${opt.capability}` : `${opt.tier} · ${opt.capability}`,
     summary: opt.summary,
-  }));
+    group: webAgentFamily(opt.value) === "cli" ? "CLI agents (experimental)" : "Browser agents",
+  };
+}
+
+export function webPersonaAgentSelectOptions(family?: WebAgentFamily): CockpitSelectOption[] {
+  const agents = family ? webPersonaAgentsForFamily(family) : [...WEB_PERSONA_AGENTS, ...CLI_PERSONA_AGENTS];
+  return agents.map(personaAgentToSelectOption);
+}
+
+export function webPersonaAgentGroupedSelectOptions(): CockpitSelectOption[] {
+  return webPersonaAgentSelectOptions();
 }
 
 export function cuaRuntimeSelectOptions(platform: string): CockpitSelectOption[] {
@@ -132,18 +190,43 @@ export function findWebPersonaAgent(agentId: string): PersonaAgentOption | undef
   return WEB_PERSONA_AGENTS.find((opt) => opt.value === agentId);
 }
 
+export function findPersonaAgent(agentId: string): PersonaAgentOption | undefined {
+  return findWebPersonaAgent(agentId) ?? CLI_PERSONA_AGENTS.find((opt) => opt.value === agentId);
+}
+
 export function webPersonaAgentLabel(agentId: string): string {
-  return findWebPersonaAgent(agentId)?.label ?? agentId;
+  return findPersonaAgent(agentId)?.label ?? agentId;
 }
 
-export function webPersonaAgentMode(agentId: string): string {
-  return webPersonaAgentLabel(agentId);
-}
-
-export function webPersonaAgentCapabilityLabel(agentId: string): string {
-  const opt = findWebPersonaAgent(agentId);
-  if (!opt) return agentId;
-  return `${opt.label} (${opt.capability})`;
+/** Platform-aware persona model list for web runs (harness-specific). */
+export function webPersonaModelSelectOptions(
+  agentId: string,
+  options: CockpitSelectOption[],
+): CockpitSelectOption[] {
+  if (agentId === "persona-computer-1") {
+    return cuaPersonaModelSelectOptions("linux", options);
+  }
+  if (agentId === "persona-claude-code") {
+    return options.filter((opt) => opt.value.startsWith("anthropic/"));
+  }
+  if (agentId === "persona-codex") {
+    return options.filter((opt) => opt.value.startsWith("openai/"));
+  }
+  if (agentId === "persona-gemini-cli") {
+    const google = options.filter(
+      (opt) => opt.value.startsWith("google/") || opt.value.startsWith("gemini/"),
+    );
+    if (google.length > 0) return google;
+    return [
+      {
+        value: "google/gemini-2.5-pro",
+        label: "Gemini 2.5 Pro",
+        meta: "CLI default (configure in Harbor if unsupported)",
+        summary: "Gemini CLI harness expects a Google model id.",
+      },
+    ];
+  }
+  return options;
 }
 
 const CAPABILITY_TIER_LABELS: Record<AgentCapabilityTier, string> = {
@@ -153,19 +236,38 @@ const CAPABILITY_TIER_LABELS: Record<AgentCapabilityTier, string> = {
   full: "Full",
 };
 
+export function webHarnessPipelineLabel(agentId: string): string {
+  const opt = findPersonaAgent(agentId);
+  if (!opt) return agentId;
+  if (webAgentFamily(agentId) === "cli") {
+    return `${opt.label} · CLI`;
+  }
+  return `${CAPABILITY_TIER_LABELS[opt.tier]} · ${opt.capability}`;
+}
+
+export function webPersonaAgentMode(agentId: string): string {
+  return webPersonaAgentLabel(agentId);
+}
+
+export function webPersonaAgentCapabilityLabel(agentId: string): string {
+  const opt = findPersonaAgent(agentId);
+  if (!opt) return agentId;
+  return `${opt.label} (${opt.capability})`;
+}
+
 /** Capability tier for the web pipeline (no agent naming). */
 export function webCapabilityTierLabel(agentId: string): string {
-  const tier = findWebPersonaAgent(agentId)?.tier;
+  const tier = findPersonaAgent(agentId)?.tier;
   return tier ? CAPABILITY_TIER_LABELS[tier] : "Per task";
 }
 
 /** Short control-surface summary for the web pipeline node detail. */
 export function webCapabilitySurfaceLabel(agentId: string): string {
-  return findWebPersonaAgent(agentId)?.capability ?? "per task";
+  return findPersonaAgent(agentId)?.capability ?? "per task";
 }
 
 export function webCapabilityTierIcon(agentId: string): string {
-  const tier = findWebPersonaAgent(agentId)?.tier;
+  const tier = findPersonaAgent(agentId)?.tier;
   return webCapabilityTierIconForTier(tier);
 }
 

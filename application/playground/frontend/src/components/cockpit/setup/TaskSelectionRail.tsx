@@ -2,8 +2,9 @@ import { useMemo, useState } from "react";
 
 import type { ConfigOptionValue } from "@/lib/types";
 import { FOCUS_RING, Sym } from "../cockpitShared";
-import { USE_COMPUTER_URL, cuaRuntimeSelectOptions, webPersonaAgentSelectOptions } from "@/lib/personaAgentCatalog";
+import { USE_COMPUTER_URL, cuaRuntimeSelectOptions } from "@/lib/personaAgentCatalog";
 import { CockpitSelect } from "./CockpitSelect";
+import { WebAgentSettings } from "./WebAgentSettings";
 import type { PlaygroundTaskType } from "../TaskTypeSwitch";
 import { CockpitRailHeader } from "./CockpitRailHeader";
 import { CockpitToggle } from "./CockpitToggle";
@@ -276,12 +277,11 @@ export function TaskSelectionRail({
               </div>
               {settingsId && taskType === "web" && resolveWebPersonaAgent && onWebPersonaAgentChange && (
                 <div className="border-t border-outline/30 px-3 py-3">
-                  <CockpitSelect
-                    label="Agent capability"
-                    value={resolveWebPersonaAgent(card.id)}
-                    options={webPersonaAgentSelectOptions()}
+                  <WebAgentSettings
+                    taskId={card.id}
+                    agentId={resolveWebPersonaAgent(card.id)}
                     disabled={disabled}
-                    onChange={(agentId) => onWebPersonaAgentChange(card.id, agentId)}
+                    onAgentChange={onWebPersonaAgentChange}
                   />
                 </div>
               )}

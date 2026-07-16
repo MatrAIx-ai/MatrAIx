@@ -23,9 +23,12 @@ import { listWebEvalTasks, api, ApiError } from "@/lib/api";
 import { FALLBACK_WEB_TASKS } from "@/lib/fallbackTasks";
 import { mergeTaskCatalog } from "@/lib/mergeTaskCatalog";
 import {
-  findWebPersonaAgent,
+  findPersonaAgent,
   personaModelPipelineLabel,
   suggestedWebPersonaAgent,
+  webAgentFamily,
+  webHarnessPipelineLabel,
+  webPersonaModelSelectOptions,
   WEB_PERSONA_AGENTS,
 } from "@/lib/personaAgentCatalog";
 import type {
@@ -207,11 +210,6 @@ export function WebEvalCockpit({
   const activeTaskId = batchJobName && batchTaskId ? batchTaskId : taskId;
   const task = tasks.find((item) => item.id === activeTaskId) ?? tasks[0] ?? null;
 
-  const pipelinePersonaModelLabel = useMemo(
-    () => personaModelPipelineLabel(personaModel, personaModelOptions),
-    [personaModel, personaModelOptions],
-  );
-
   useEffect(() => {
     if (batchTaskId) {
       setTaskId(batchTaskId);
@@ -227,8 +225,24 @@ export function WebEvalCockpit({
     [webAgentByTaskId],
   );
   const activeWebAgent = task ? resolveWebAgent(task.id) : WEB_PERSONA_AGENTS[0].value;
+  const activeWebAgentFamily = webAgentFamily(activeWebAgent);
 
-  // Report the honest footer context up (the active website).
+  const webPersonaModelOptions = useMemo(
+    () => webPersonaModelSelectOptions(activeWebAgent, personaModelOptions),
+    [activeWebAgent, personaModelOptions],
+  );
+
+  const pipelinePersonaModelLabel = useMemo(
+    () => personaModelPipelineLabel(personaModel, webPersonaModelOptions),
+    [personaModel, webPersonaModelOptions],
+  );
+
+  useEffect(() => {
+    if (webPersonaModelOptions.length === 0) return;
+    if (!webPersonaModelOptions.some((opt) => opt.value === personaModel)) {
+      setPersonaModel(webPersonaModelOptions[0]?.value ?? personaModel);
+    }
+  }, [webPersonaModelOptions, personaModel, setPersonaModel]);
   useEffect(() => {
     if (!isActive) return;
     onFooterContextChange?.(`web · ${task?.siteName ?? "Website"}`);
@@ -468,7 +482,7 @@ export function WebEvalCockpit({
           taskPath={task?.taskPath ?? null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
-          personaModelOptions={personaModelOptions}
+          personaModelOptions={webPersonaModelOptions}
           mode={samplingMode}
           onModeChange={setSamplingMode}
           selectedPersonaIds={visiblePersonaIds}
@@ -500,8 +514,14 @@ export function WebEvalCockpit({
               taskType="web"
               personaModelLabel={pipelinePersonaModelLabel}
               webCapabilityTierId={
-                task ? findWebPersonaAgent(resolveWebAgent(task.id))?.tier : undefined
+                activeWebAgentFamily === "browser"
+                  ? findPersonaAgent(activeWebAgent)?.tier
+                  : undefined
               }
+              webHarnessLabel={
+                activeWebAgentFamily === "cli" ? webHarnessPipelineLabel(activeWebAgent) : undefined
+              }
+              webAgentFamily={activeWebAgentFamily}
               hasPersona={visiblePersonaIds.length > 0}
               hasTask={Boolean(task?.taskPath)}
             />

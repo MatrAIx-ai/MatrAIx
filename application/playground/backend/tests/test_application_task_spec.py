@@ -117,6 +117,14 @@ def test_canonical_web_task_shape() -> None:
     assert "python" in dockerfile.lower()
 
 
+def test_shared_web_cli_environment_shape() -> None:
+    env = ENVIRONMENTS_ROOT / "shared-web-cli"
+    dockerfile = (env / "Dockerfile").read_text(encoding="utf-8")
+    assert (env / "install-claude-code.sh").is_file()
+    assert "playwright" in dockerfile.lower()
+    assert "install-claude-code.sh" in dockerfile
+
+
 def test_canonical_os_app_task_shape() -> None:
     task = TASKS_ROOT / "example-computer-use-ios_photo-access-review"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
