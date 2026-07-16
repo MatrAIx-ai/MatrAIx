@@ -248,7 +248,7 @@ def render(graph_path: Path, out_dir: Path) -> None:
                 # Advance the cursor adaptively so multi-line leaf labels get
                 # enough vertical room and never overlap. Must match the leaf
                 # box height used when drawing (0.62 per line + 0.34) plus a gap.
-                n_lines = _wrap_with_count(disp, count, 26).count("\n") + 1
+                n_lines = _wrap_with_count(disp, count, 45).count("\n") + 1
                 box_h = max(leaf_h, n_lines * 0.62 + 0.34)
                 slot = box_h + 0.30
                 cursor -= slot / 2.0
@@ -266,12 +266,12 @@ def render(graph_path: Path, out_dir: Path) -> None:
     y_leaf = [y - shift for y in y_leaf]
     span = max(y_leaf)
 
-    fig, ax = plt.subplots(figsize=(15.0, 0.34 * (span + 2) + 1.0))
+    fig, ax = plt.subplots(figsize=(18.5, 0.34 * (span + 2) + 1.0))
     ax.axis("off")
 
     x_group, w_group = 0.0, 5.9
     x_aspect, w_aspect = 6.9, 4.7
-    x_leaf, w_leaf = 12.1, 7.8
+    x_leaf, w_leaf = 12.1, 12.0
 
     def draw_box(x, y, w, h, text, face, edge, size, txt_color=TEXT_COLOR, weight="normal"):
         ax.add_patch(FancyBboxPatch(
@@ -290,7 +290,7 @@ def render(graph_path: Path, out_dir: Path) -> None:
 
     # Category boxes (Layer 3 leaves); count stays glued to the last line.
     for i, (disp, count, color) in enumerate(leaf_meta):
-        label = _wrap_with_count(disp, count, 26)
+        label = _wrap_with_count(disp, count, 45)
         n_lines = label.count("\n") + 1
         box_h = max(leaf_h, n_lines * 0.62 + 0.34)
         draw_box(x_leaf, y_leaf[i], w_leaf, box_h, label,
