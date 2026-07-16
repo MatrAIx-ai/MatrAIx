@@ -165,7 +165,7 @@ class _ReportPDF(FPDF):
         self.ensure_space(8)
         self.set_font("Helvetica", "", 9)
         self.set_text_color(51, 65, 85)
-        self.multi_cell(0, 4.5, f"- {_safe(text, limit=360)}", new_x="LMARGIN", new_y="NEXT")
+        self.multi_cell(0, 4.5, f"- {_safe(text, limit=4000)}", new_x="LMARGIN", new_y="NEXT")
 
     def kv_block(self, rows: list[tuple[str, str]]) -> None:
         """Single-column key/value rows — never splits across pages mid-row."""
@@ -176,7 +176,7 @@ class _ReportPDF(FPDF):
         value_w = self.content_width() - label_w
         for label, value in rows:
             left = _safe(label, limit=40)
-            right = _safe(value if value not in (None, "") else "-", limit=500)
+            right = _safe(value if value not in (None, "") else "-", limit=4000)
             approx_lines = max(1, (len(right) // 70) + 1)
             self.ensure_space(5.0 * approx_lines + 2)
             y0 = self.get_y()
@@ -407,8 +407,8 @@ def _render_facet_distribution(
         samples = textual.get("samples") if isinstance(textual.get("samples"), list) else []
         if samples:
             pdf.muted("Sample answers")
-            for sample in samples[:6]:
-                pdf.bullet(_safe(sample, limit=280))
+            for sample in samples[:12]:
+                pdf.bullet(_safe(sample, limit=4000))
         return
 
     pdf.kv_block(
@@ -674,7 +674,7 @@ def _render_trial_eval_contexts(pdf: _ReportPDF, trial_eval: dict[str, Any]) -> 
             if not isinstance(facet, dict):
                 continue
             f_label = _safe(facet.get("label") or facet.get("key") or "")
-            f_value = _safe(facet.get("value") or "", limit=600)
+            f_value = _safe(facet.get("value") or "", limit=4000)
             if not f_value:
                 continue
             if facet.get("role") == "explanation" or len(f_value) > 120:
@@ -783,9 +783,9 @@ def build_trial_report_pdf(
                 continue
             k_label = _humanize(key)
             if isinstance(value, (dict, list)):
-                long_texts.append((k_label, _safe(value, limit=600)))
+                long_texts.append((k_label, _safe(value, limit=4000)))
             elif len(str(value)) > 120:
-                long_texts.append((k_label, _safe(value, limit=600)))
+                long_texts.append((k_label, _safe(value, limit=4000)))
             else:
                 rows.append((k_label, _safe(value)))
         if rows:

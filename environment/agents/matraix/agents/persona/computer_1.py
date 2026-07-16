@@ -15,6 +15,7 @@ from matraix.agents.persona.ios_submission import materialize_ios_decision_file
 from matraix.agents.persona.mixin import PersonaMixin
 
 CuaBackendKind = Literal["use_computer_desktop", "ios", "docker_computer1"]
+DesktopCuaProvider = Literal["anthropic", "openai", "gemini"]
 
 
 def resolve_cua_backend_kind(
@@ -33,6 +34,10 @@ def resolve_cua_backend_kind(
             "desktop",
             "anthropic",
             "anthropic_cua",
+            "openai",
+            "openai_cua",
+            "gemini",
+            "gemini_cua",
             "macos",
             "ubuntu",
         }:
@@ -60,6 +65,29 @@ def resolve_cua_backend_kind(
     return "docker_computer1"
 
 
+def resolve_desktop_cua_provider(
+    model_name: str | None,
+    *,
+    cua_backend: str | None = None,
+) -> DesktopCuaProvider:
+    """Pick the use.computer desktop CUA provider from model / backend hint."""
+    if cua_backend:
+        normalized = cua_backend.strip().lower().replace("-", "_")
+        if normalized in {"openai", "openai_cua"}:
+            return "openai"
+        if normalized in {"gemini", "gemini_cua"}:
+            return "gemini"
+        if normalized in {"anthropic", "anthropic_cua"}:
+            return "anthropic"
+
+    lowered = (model_name or "").strip().lower()
+    if lowered.startswith("openai/") or "gpt-5.4" in lowered or "gpt-5.5" in lowered:
+        return "openai"
+    if lowered.startswith(("gemini/", "vertex_ai/")):
+        return "gemini"
+    return "anthropic"
+
+
 def _build_cua_delegate(
     kind: CuaBackendKind,
     *,
@@ -69,6 +97,7 @@ def _build_cua_delegate(
     mcp_servers,
     skills_dir: str | None,
     delegate_kwargs: dict[str, Any],
+    cua_backend: str | None = None,
 ) -> BaseAgent:
     common: dict[str, Any] = {
         "logs_dir": logs_dir,
@@ -90,13 +119,24 @@ def _build_cua_delegate(
         return IOSAgent(**common)
 
     if kind == "use_computer_desktop":
+        provider = resolve_desktop_cua_provider(
+            model_name, cua_backend=cua_backend
+        )
         try:
-            from use_computer.harbor.agents import AnthropicCUAAgent
+            from use_computer.harbor.agents import (
+                AnthropicCUAAgent,
+                GeminiCUAAgent,
+                OpenAICUAAgent,
+            )
         except ModuleNotFoundError as exc:
             raise ModuleNotFoundError(
                 "persona-computer-1 use.computer CUA requires "
                 "`uv sync --extra use-computer` (installs use-computer[harbor,agents])."
             ) from exc
+        if provider == "openai":
+            return OpenAICUAAgent(**common)
+        if provider == "gemini":
+            return GeminiCUAAgent(**common)
         return AnthropicCUAAgent(**common)
 
     from harbor.agents.computer_1 import Computer1
@@ -165,11 +205,20 @@ class PersonaComputer1(PersonaMixin, BaseAgent):
                 mcp_servers=self.mcp_servers,
                 skills_dir=self.skills_dir,
                 delegate_kwargs=self._delegate_kwargs,
+                cua_backend=self._cua_backend_override,
             )
             self._delegate_kind = kind
+            provider = (
+                resolve_desktop_cua_provider(
+                    self.model_name, cua_backend=self._cua_backend_override
+                )
+                if kind == "use_computer_desktop"
+                else None
+            )
             self.logger.info(
-                "persona-computer-1 backend=%s for environment %s",
+                "persona-computer-1 backend=%s%s for environment %s",
                 kind,
+                f" provider={provider}" if provider else "",
                 type(environment).__name__,
             )
         return self._delegate

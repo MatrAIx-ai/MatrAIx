@@ -22,6 +22,18 @@ def coerce_json(text: str) -> Dict[str, Any]:
     raise ValueError("could not parse JSON from model output: {!r}".format(text[:200]))
 
 
+def openai_model_supports_custom_temperature(model: str) -> bool:
+    """Whether OpenAI Chat Completions accepts a non-default ``temperature``.
+
+    GPT-5 family models currently only allow the API default (1); sending
+    ``0.1`` / ``0.7`` returns HTTP 400.
+    """
+    lowered = (model or "").strip().lower()
+    if "/" in lowered:
+        lowered = lowered.rsplit("/", 1)[-1]
+    return not lowered.startswith("gpt-5")
+
+
 class ChatClient(Protocol):
     def complete_json(self, system: str, user: str) -> Dict[str, Any]: ...
 
@@ -52,11 +64,15 @@ class OpenAIChatClient:
         self._client = client
 
     def complete_json(self, system: str, user: str) -> Dict[str, Any]:
-        completion = self._client.chat.completions.create(
-            model=self.model,
-            temperature=self.temperature,
-            response_format={"type": "json_object"},
-            messages=[{"role": "system", "content": system},
-                      {"role": "user", "content": user}],
-        )
+        kwargs: Dict[str, Any] = {
+            "model": self.model,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        }
+        if openai_model_supports_custom_temperature(self.model):
+            kwargs["temperature"] = self.temperature
+        completion = self._client.chat.completions.create(**kwargs)
         return coerce_json(completion.choices[0].message.content)

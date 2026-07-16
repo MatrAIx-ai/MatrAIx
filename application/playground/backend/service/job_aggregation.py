@@ -2161,7 +2161,7 @@ def _value_to_sample_string(value: Any) -> str:
         return _shorten(str(value))
 
 
-def _shorten(value: str, *, limit: int = 120) -> str:
+def _shorten(value: str, *, limit: int = 2000) -> str:
     compact = " ".join(value.split())
     if len(compact) <= limit:
         return compact
