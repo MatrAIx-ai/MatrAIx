@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: QUIT-PATCH-2026-006
   response:
     sessionIdField: sessionId
     replyField: reply

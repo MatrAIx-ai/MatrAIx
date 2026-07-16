@@ -72,6 +72,17 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
         primary_env="CHATBOT_API_URL",
         legacy_env=None,
     ),
+    "prescreening_assistant": SidecarSpec(
+        application_id="prescreening_assistant",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_prescreening"
+        ),
+        service_name="prescreening-chatbot",
+        build_context="prescreening-chatbot",
+        host_port=8905,
+        primary_env="CHATBOT_UPSTREAM_PRESCREENING",
+        legacy_env="PRESCREENING_CHATBOT_URL",
+    ),
     "acme_support_mcp": SidecarSpec(
         application_id="acme_support_mcp",
         compose_dir=(

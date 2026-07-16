@@ -1,6 +1,6 @@
 """Clinical-trial pre-screening chatbot sidecar (rule-based smoke implementation).
 
-A deterministic screener for the `prescreening-NN-*_chatbot` tasks: it loads a
+A deterministic screener for the `chat_prescreening-NN-*` tasks: it loads a
 trial protocol (criteria, probe questions, applicability rules) from
 ./protocols/, walks the participant through every applicable criterion one
 question at a time, and ends with the fenced-JSON final assessment the task
@@ -10,7 +10,9 @@ the screen.
 
 Protocol selection, in order: request body `protocolId` (or `title`) matching
 a file in ./protocols/ or a `protocol_id` inside one; env
-`PRESCREENING_PROTOCOL_ID`; the first protocol alphabetically.
+`PRESCREENING_PROTOCOL_ID`; the first protocol alphabetically. Each task pins
+its own trial via `protocolId` in its `input/chatbot.yaml` `staticBody`, so all
+ten tasks can share one compose file.
 
 This is a smoke-run product (same tier as the Acme support sidecar). A
 production LLM screener can replace it by pointing the tasks'
@@ -236,6 +238,7 @@ def post_message():
             "sex": None,
             "stage": "sex" if _uses_sex(protocol) else "criteria",
             "turn": 0,
+            "messages": [],
         }
         _sessions[session_id] = state
         if state["stage"] == "sex":
@@ -249,8 +252,25 @@ def post_message():
     else:
         reply = _advance(state, message)
 
+    state["messages"].append({"role": "user", "content": message})
+    state["messages"].append({"role": "assistant", "content": reply})
     state["turn"] += 1
     return jsonify({"sessionId": session_id, "reply": reply, "turn": state["turn"]})
+
+
+@app.get("/v1/conversation")
+def get_conversation():
+    session_id = str(request.args.get("sessionId") or "").strip()
+    state = _sessions.get(session_id)
+    if state is None:
+        return jsonify({"error": f"unknown session {session_id!r}"}), 404
+    return jsonify(
+        {
+            "sessionId": session_id,
+            "protocolId": state["protocol"]["protocol_id"],
+            "messages": list(state["messages"]),
+        }
+    )
 
 
 if __name__ == "__main__":

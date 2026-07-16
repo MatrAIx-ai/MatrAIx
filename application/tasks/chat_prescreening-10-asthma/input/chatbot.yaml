@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: BREATHE-EASY-2026-010
   response:
     sessionIdField: sessionId
     replyField: reply

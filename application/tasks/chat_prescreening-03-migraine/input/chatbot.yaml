@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: MIG-CARE-2026-003
   response:
     sessionIdField: sessionId
     replyField: reply
