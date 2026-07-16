@@ -1,7 +1,10 @@
 # Full DAG Visualization
 
-This directory contains the generated static HTML visualization for the Persona
-Full DAG.
+This directory contains generated static visualizations for the Persona Full DAG:
+
+- `full_dag_overview.html` — interactive node-link view of the full graph.
+- `persona_schema_chord.png` / `.pdf` — publication-quality two-ring chord
+  diagram summarizing the schema at the taxonomy level.
 
 ## Generate
 
@@ -51,6 +54,32 @@ open http://localhost:8765/persona/synthesis/visualization/full_dag_overview.htm
 
 Stop the temporary server with `Ctrl-C`.
 
+## Persona Schema Chord Diagram
+
+`persona_schema_chord.png` / `.pdf` is a publication-quality two-ring chord
+diagram of the schema, aligned to the official taxonomy table
+(9 groups / 35 sub-categories / 1290 attributes):
+
+- Inner ring: 35 sub-categories, coloured by their parent group.
+- Chord ribbons: directed-proposal edges aggregated to the sub-category level.
+- Outer ring: the 9 top-level groups spanning their sub-categories.
+
+Regenerate it from the repository root:
+
+```bash
+uv run --extra viz python persona/synthesis/scripts/render_persona_schema_chord.py
+```
+
+Aggregation notes:
+
+- Latent/helper graph nodes (18 nodes with no `category`) are excluded, so the
+  figure covers exactly the 1,290 real persona attributes.
+- The 8 `Developer: *` categories are merged into one `Developer/Coding`
+  sub-category, matching the taxonomy table.
+- `Demographic: Family` (1 attribute, no modeled edges) is omitted.
+- Only sub-category pairs with at least `--threshold` aggregated edges
+  (default 6) are drawn; weaker pairs are hidden to keep the diagram readable.
+
 ## What It Shows
 
 The page embeds the full graph payload:
@@ -87,3 +116,7 @@ Controls:
 Do not hand-edit `full_dag_overview.html`. Regenerate it with
 `render_graph_visualization.py` after changing `full_dag.json` or the
 visualization code, then commit both the script change and the generated HTML.
+
+Likewise, do not hand-edit `persona_schema_chord.png` / `.pdf`. Regenerate them
+with `render_persona_schema_chord.py`, then commit both the script change and the
+generated figures.
