@@ -264,7 +264,6 @@ def render(graph_path: Path, out_dir: Path, threshold: int = 6) -> None:
                     color=group_col, fontweight="bold", va="center", ha="center")
 
     fig = circos.plotfig(figsize=(18, 18))
-    fig.suptitle("Persona schema", y=1.01, fontsize=21)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "persona_schema_chord.png"
