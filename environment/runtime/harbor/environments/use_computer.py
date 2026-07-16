@@ -24,6 +24,8 @@ from harbor.models.task.config import EnvironmentConfig, TaskOS
 from harbor.models.trial.paths import EnvironmentPaths, TrialPaths
 from harbor.utils.optional_import import MissingExtraError
 from harbor.utils.scripts import quote_shell_arg
+from harbor.utils.env import is_env_template, resolve_env_vars
+from matraix.telemetry.session import TelemetrySession
 
 try:
     from use_computer import AsyncComputer
@@ -54,6 +56,17 @@ _CREATE_PARAMS = (
     if AsyncComputer is not None
     else set()
 )
+
+
+def _resolve_reservation_id(value: str) -> str:
+    candidate = (value or os.environ.get("USE_COMPUTER_RESERVATION_ID", "")).strip()
+    if not candidate:
+        return ""
+    if is_env_template(candidate):
+        return resolve_env_vars({"reservation_id": candidate})[
+            "reservation_id"
+        ].strip()
+    return candidate
 
 
 @dataclass(frozen=True)
@@ -145,6 +158,7 @@ class UseComputerEnvironment(BaseEnvironment):
         keepalive_interval: float = 30.0,
         override_exec_timeout: int | float | None = None,
         resources: dict[str, int] | None = None,
+        telemetry_enabled: bool = True,
         **kwargs: Any,
     ) -> None:
         if not _HAS_USE_COMPUTER:
@@ -162,7 +176,7 @@ class UseComputerEnvironment(BaseEnvironment):
         env_version = os.environ.get("USE_COMPUTER_VERSION", "")
         self._version = version or env_version
         self._snapshot = snapshot or os.environ.get("USE_COMPUTER_SNAPSHOT", "")
-        self._reservation_id = reservation_id
+        self._reservation_id = _resolve_reservation_id(reservation_id)
         self._family = family
         self._task_dir = environment_dir.parent
         task_device_type, task_runtime = self._read_ios_pin()
@@ -200,6 +214,14 @@ class UseComputerEnvironment(BaseEnvironment):
             logger=logger,
             **kwargs,
         )
+        self._telemetry = TelemetrySession.for_environment(
+            platform=normalized_platform,
+            enabled=telemetry_enabled,
+            session_id=session_id,
+            task_dir=self._task_dir,
+            logger=self.logger,
+        )
+        self._telemetry_finalized = False
 
     @classmethod
     def preflight(cls) -> None:
@@ -270,6 +292,7 @@ class UseComputerEnvironment(BaseEnvironment):
         if self._platform == "macos":
             await self._prepare_macos_desktop()
         await self._upload_environment_dir_after_start()
+        await self._telemetry.on_trial_start(self)
 
         self.logger.info(
             "use.computer sandbox ready in %.1fs: %s",
@@ -277,11 +300,15 @@ class UseComputerEnvironment(BaseEnvironment):
             self._sandbox_id or "<unknown>",
         )
 
+    async def prepare_artifact_collection(self) -> None:
+        await self._finalize_telemetry()
+
     async def stop(self, delete: bool) -> None:
         if self._sandbox is None:
             return
 
         try:
+            await self._finalize_telemetry()
             await self._close_published_proxies()
             if delete:
                 await self._sandbox.close()
@@ -294,6 +321,17 @@ class UseComputerEnvironment(BaseEnvironment):
             self._sandbox_id = None
             self._vm_ip = None
             self._vnc_url = None
+
+    async def _finalize_telemetry(self) -> None:
+        if self._telemetry_finalized or self._sandbox is None:
+            return
+        if getattr(self._telemetry, "enabled", False):
+            link_trajectory = getattr(self._telemetry, "link_host_trajectory", None)
+            if callable(link_trajectory):
+                link_trajectory(self.trial_paths.agent_dir)
+            await self._telemetry.on_trial_end(self)
+            await self._telemetry.flush(self)
+        self._telemetry_finalized = True
 
     async def exec(
         self,
@@ -641,6 +679,7 @@ class UseComputerEnvironment(BaseEnvironment):
 
     async def fire_in_process(self, step: int) -> None:
         """SDK CUA hook: run the configured macOS command at the matching agent step."""
+        await self._telemetry.on_step(self, step)
         if self._platform != "macos":
             return
         if self._in_process_cmd and step == self._in_process_step:
