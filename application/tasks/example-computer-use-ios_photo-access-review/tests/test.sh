@@ -3,14 +3,40 @@ set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
+export VERIFIER_DIR
 
 python3 <<'PY'
+from __future__ import annotations
+
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/personabench-ios-photo-access-review/decision.json")
+OUTPUT_DIR = Path(
+    os.environ.get("HARBOR_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or "/app/output"
+)
+
+path = OUTPUT_DIR / "decision.json"
+
+if not path.is_file():
+    logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
+    fa_path = logs_root / "agent" / "final_answer.txt"
+    if fa_path.is_file():
+        raw = fa_path.read_text(encoding="utf-8", errors="replace").strip()
+        match = re.search(r"\{[\s\S]*\}", raw)
+        if match:
+            try:
+                candidate = json.loads(match.group())
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(candidate, indent=2, ensure_ascii=False))
+            except (json.JSONDecodeError, OSError):
+                pass
+
 if not path.is_file():
     sys.exit(f"missing {path}")
 
@@ -25,7 +51,7 @@ reason = data.get("reason", "")
 if not isinstance(reason, str) or len(reason.strip()) < 10:
     sys.exit("reason must be at least 10 characters")
 
-feedback_path = Path("/app/output/user_feedback.json")
+feedback_path = OUTPUT_DIR / "user_feedback.json"
 satisfaction_buckets = {"yes", "partially", "no"}
 
 
@@ -84,16 +110,14 @@ def load_user_feedback() -> dict[str, object] | None:
 
 feedback = load_user_feedback()
 
-verifier_dir = Path(
-    os.environ.get("HARBOR_VERIFIER_DIR")
-    or os.environ.get("PERSONABENCH_VERIFIER_DIR")
-    or "/logs/verifier"
-)
+verifier_dir_raw = os.environ.get("VERIFIER_DIR") or os.environ.get("HARBOR_VERIFIER_DIR")
+if not verifier_dir_raw:
+    sys.exit("VERIFIER_DIR or HARBOR_VERIFIER_DIR is required")
+verifier_dir = Path(verifier_dir_raw)
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
-except OSError:
-    verifier_dir = Path.cwd() / "verifier"
-    verifier_dir.mkdir(parents=True, exist_ok=True)
+except OSError as exc:
+    sys.exit(f"cannot create verifier directory {verifier_dir}: {exc}")
 
 source_artifacts = {
     "decision": str(path),
@@ -444,7 +468,7 @@ if feedback is not None:
     json.dumps(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,

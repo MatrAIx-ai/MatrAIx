@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 from pathlib import Path
 
 from harbor.models.task.paths import TaskPaths
@@ -10,7 +11,7 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
 EXAMPLE_SURVEY = ROOT / "application/tasks/example-survey_product-feedback"
-RECOMMENDER_CHAT = ROOT / "application/tasks/recommender-agent_chat_api"
+RECOMMENDER_CHAT = ROOT / "application/tasks/chat_recai"
 TASK_SPEC_ROOT = ROOT / "application/task-spec"
 
 
@@ -18,7 +19,7 @@ def test_example_survey_task_metadata_is_clean() -> None:
     task_text = (EXAMPLE_SURVEY / "task.toml").read_text(encoding="utf-8")
     task = tomllib.loads(task_text)
 
-    assert task["task"]["name"] == "personabench/application-survey-product-feedback"
+    assert task["task"]["name"] == "application/survey-product-feedback"
     assert task["metadata"]["type"] == "survey"
     assert "matraix/" not in task_text.lower()
 
@@ -62,16 +63,21 @@ def test_example_survey_verifier_accepts_minimal_valid_result(tmp_path: Path) ->
     assert spec.loader is not None
     spec.loader.exec_module(module)
 
+    verifier_dir = tmp_path / "verifier"
+    verifier_dir.mkdir()
+    os.environ["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
     module.OUTPUT_DIR = output_dir
     module.RESULT_PATH = output_dir / "survey_result.json"
     assert module.main() == 0
+    payload = json.loads((verifier_dir / "structured_output.json").read_text(encoding="utf-8"))
+    assert payload["sourceArtifacts"]["surveyResult"] == "/app/output/survey_result.json"
 
 
 def test_recommender_chat_task_metadata_is_clean() -> None:
     task_text = (RECOMMENDER_CHAT / "task.toml").read_text(encoding="utf-8")
     task = tomllib.loads(task_text)
 
-    assert task["task"]["name"] == "personabench/application-recommender-agent-chat-api"
+    assert task["task"]["name"] == "application/chat-recai"
     assert task["metadata"]["type"] == "chatbot"
     assert task["metadata"]["domain"] == "commerce-retail"
     assert "matraix/" not in task_text.lower()
@@ -79,7 +85,7 @@ def test_recommender_chat_task_metadata_is_clean() -> None:
     readme = (RECOMMENDER_CHAT / "README.md").read_text(encoding="utf-8")
     assert "applications/recommendation_chatbot_eval" not in readme
     assert "--persona-ids 0042" in readme
-    assert "recommender-agent-chat-api-auto-n1.yaml" in readme
+    assert "chat-recai-auto-n1.yaml" in readme
 
 
 def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) -> None:
@@ -127,15 +133,27 @@ def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) 
     assert spec.loader is not None
     spec.loader.exec_module(module)
 
+    verifier_dir = tmp_path / "verifier"
+    verifier_dir.mkdir()
+    os.environ["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
     module.OUTPUT_DIR = output_dir
     module.TRANSCRIPT_PATH = output_dir / "transcript.json"
     module.FEEDBACK_PATH = output_dir / "user_feedback.json"
     assert module.main() == 0
+    payload = json.loads((verifier_dir / "structured_output.json").read_text(encoding="utf-8"))
+    assert payload["sourceArtifacts"]["transcript"] == "/app/output/transcript.json"
 
 
 def test_recommender_chat_sidecar_contract() -> None:
+    from harbor.environments.compose_materialize import resolve_task_environments_path
+
+    task_paths = TaskPaths.from_task_dir(RECOMMENDER_CHAT)
+    repo_root = task_paths._find_repository_root()
+    assert repo_root is not None
+    raw = tomllib.loads((RECOMMENDER_CHAT / "task.toml").read_text(encoding="utf-8"))
+    local_compose = raw["environment"]["local_compose"]
     server_path = (
-        TaskPaths.from_task_dir(RECOMMENDER_CHAT).environment_dir
+        resolve_task_environments_path(repo_root, local_compose)
         / "recommender-api"
         / "server.py"
     )
@@ -180,7 +198,7 @@ def test_application_task_spec_manifest_uses_clean_task_paths() -> None:
         "application/tasks/example-survey_product-feedback"
     )
     assert manifest["applicationTypes"]["chatbot"]["canonicalTask"] == (
-        "application/tasks/recommender-agent_chat_api"
+        "application/tasks/chat_recai"
     )
     assert manifest["applicationTypes"]["web"]["canonicalTask"] == (
         "application/tasks/example-web-playwright_quote-choice"
@@ -204,3 +222,28 @@ def test_application_task_spec_docs_cover_each_protocol() -> None:
     assert os_app_doc.is_file()
     os_app_text = os_app_doc.read_text(encoding="utf-8")
     assert "evaluation and reporting contract" in os_app_text.lower()
+
+
+def _iter_application_task_dirs() -> list[Path]:
+    tasks_root = ROOT / "application" / "tasks"
+    return sorted(
+        path
+        for path in tasks_root.iterdir()
+        if path.is_dir() and (path / "task.toml").is_file()
+    )
+
+
+def test_every_application_task_has_valid_persona_strategy() -> None:
+    """CI gate: persona_strategy.json is required and must declare a cohort."""
+    from backend.service.persona_strategy import validate_persona_strategy_file
+
+    task_dirs = _iter_application_task_dirs()
+    assert task_dirs, "expected at least one application task under application/tasks/"
+
+    failures: list[str] = []
+    for task_dir in task_dirs:
+        failures.extend(validate_persona_strategy_file(task_dir, require_cohort=True))
+
+    assert not failures, "persona_strategy.json validation failed:\n- " + "\n- ".join(
+        failures
+    )

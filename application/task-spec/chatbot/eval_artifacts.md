@@ -1,6 +1,6 @@
 # Chatbot eval artifacts (platform-managed)
 
-PersonaEval **auto / host / user-sim** runs produce two artifact roots:
+Playground **auto / host / user-sim** runs produce two artifact roots:
 
 | Root | Writer | Purpose |
 |------|--------|---------|
@@ -26,15 +26,15 @@ directory on the host.
 | Host trial (`user_sim_chat`) | `jobs/<job>/<trial>/artifacts/app/output/` |
 
 Harbor rewrites `/app/output/...` in shell commands to the resolved path. The
-verifier reads the same directory through `PERSONABENCH_OUTPUT_DIR` /
+verifier reads the same directory through `PLAYGROUND_OUTPUT_DIR` /
 `MATRIX_OUTPUT_DIR`, which the host environment sets to that mapped location.
 
 Collected artifacts also appear under `jobs/<job>/<trial>/artifacts/app/output/`
 after a trial completes.
 
-## PersonaEval auto / user-sim writes harness artifacts
+## Playground auto / user-sim writes harness artifacts
 
-PersonaEval chat jobs use the **`persona-user-sim`** agent (`user_sim_chat`
+Playground chat jobs use the **`persona-user-sim`** agent (`user_sim_chat`
 trial profile). That agent drives the multi-turn chat loop and **automatically
 writes** harness artifacts after the conversation:
 
@@ -56,7 +56,7 @@ In a normal Harbor trial:
 `jobs/<job>/<trial>/verifier/`
 
 Harbor sets `HARBOR_VERIFIER_DIR` to that path before running the verifier.
-PersonaEval reads `verifier/structured_output.json` and `verifier/reward.txt`
+Playground reads `verifier/structured_output.json` and `verifier/reward.txt`
 from the trial directory for debrief and aggregation.
 
 When running a verifier locally outside Harbor, the task falls back to
@@ -70,8 +70,10 @@ appear at the cwd — delete it or rerun from the task folder.
 ### `transcript.json`
 
 Conversation record for the trial. Includes user/assistant turns and any structured
-fields the task exposes to the persona via `input/chatbot.yaml`
-(`personaExposure.fields[]`).
+fields the task exposes via `input/chatbot.yaml` `structuredExposure.fields[]`
+(list capability id `structured_exposure` in `capabilities`; it is also
+auto-added when those fields exist; selectors are the source of truth for
+concrete field names).
 
 Harness may stamp run metadata on the root object:
 
@@ -84,7 +86,7 @@ individual turns in `transcript.json`, not in `application_result.json`.
 
 ### `application_result.json`
 
-Slim **eval-run summary** written by the PersonaEval harness after the chat loop:
+Slim **eval-run summary** written by the Playground harness after the chat loop:
 
 | Field | Meaning |
 |-------|---------|
@@ -144,4 +146,4 @@ Typical contents:
 
 Do **not** duplicate this shape in per-task docs. Contributors implement the
 verifier and emit contexts that match the shared contract; batch reporting and
-PersonaEval UI consume the normalized shape from the trial `verifier/` directory.
+Playground UI consume the normalized shape from the trial `verifier/` directory.

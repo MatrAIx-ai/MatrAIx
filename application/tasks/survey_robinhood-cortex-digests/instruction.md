@@ -1,16 +1,13 @@
 # Robinhood Cortex Digests Survey
 
-Complete the survey using the provided context and structured questionnaire.
+We're gathering reactions to Robinhood Cortex Digests — an AI feature that summarizes recent news, events, market information, and signals for a selected stock or crypto asset.
 
-Return one JSON object that matches `input/output_schema.md`.
+After reading the brief, tell us whether it feels useful and trustworthy, and whether you'd actually use it when making a decision.
 
-Requirements:
+## How to answer
 
-- Answer every required question in `input/questionnaire.yaml`.
-- Use exact `questionId` values from the questionnaire.
-- For choice questions, use the exact choice ids.
-- For likert questions, use an integer within the declared range.
-- Keep each `rationale` concise and specific to the selected answer.
-- Return only the JSON object.
-
-Write the final JSON artifact to `/app/output/survey_result.json`.
+- Read the brief before you start.
+- Answer every required question.
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

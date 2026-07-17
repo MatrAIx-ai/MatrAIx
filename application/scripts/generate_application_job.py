@@ -10,11 +10,11 @@ from pathlib import Path
 
 import yaml
 
-from personabench.application_job import (
+from matraix.application_job import (
     build_application_job_config,
     collect_run_env_exports,
 )
-from personabench.persona_job import DEFAULT_DATASET, parse_stratify_field_args
+from matraix.persona_job import DEFAULT_DATASET, parse_stratify_field_args
 
 from _repo_imports import REPO_ROOT, ensure_application_script_imports
 
@@ -106,7 +106,7 @@ def main() -> None:
         nargs="*",
         default=[],
         metavar="ID",
-        help="Explicit persona ids (pool or application/persona_eval catalog). Skips random sampling.",
+        help="Explicit persona ids (pool or application/playground catalog). Skips random sampling.",
     )
     parser.add_argument(
         "--stratify",
@@ -229,7 +229,7 @@ def main() -> None:
     meta = job_config.pop("_job_meta")
 
     if args.cua_backend:
-        from personabench.application_job import resolve_job_environment
+        from matraix.application_job import resolve_job_environment
 
         job_config["environment"] = resolve_job_environment(
             execution_mode=execution_mode,

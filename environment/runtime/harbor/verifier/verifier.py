@@ -3,6 +3,7 @@ import logging
 from pathlib import Path
 
 from harbor.environments.base import BaseEnvironment
+from harbor.models.environment_type import EnvironmentType
 from harbor.models.task.task import Task
 from harbor.models.trial.paths import EnvironmentPaths, TrialPaths
 from harbor.models.verifier.result import VerifierResult
@@ -62,6 +63,11 @@ class Verifier(BaseVerifier):
         )
         self._skip_tests_upload = skip_tests_upload
 
+    def _should_skip_tests_upload(self) -> bool:
+        if self._skip_tests_upload:
+            return True
+        return self.environment.type() == EnvironmentType.HOST
+
     def _parse_reward_text(self) -> dict[str, float | int]:
         if self.trial_paths.reward_text_path.stat().st_size == 0:
             raise RewardFileEmptyError(
@@ -93,7 +99,7 @@ class Verifier(BaseVerifier):
             ) from e
 
     def _resolve_tests(self) -> tuple[list[Path], Path, Path]:
-        if self._skip_tests_upload:
+        if self._should_skip_tests_upload():
             # The verifier image already owns /tests/test.{sh,bat}.
             return (
                 [],
@@ -142,7 +148,7 @@ class Verifier(BaseVerifier):
         env_paths = EnvironmentPaths.for_os(self.environment.os)
         test_source_dirs, tests_source_dir, host_test_path = self._resolve_tests()
 
-        if not self._skip_tests_upload:
+        if not self._should_skip_tests_upload():
             try:
                 for source_dir in test_source_dirs:
                     await self.environment.upload_dir(

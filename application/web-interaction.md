@@ -1,6 +1,6 @@
 # Web interaction modes
 
-PersonaBench supports **four Docker / no-use.computer** ways to run persona web
+Playground supports **four Docker / no-use.computer** ways to run persona web
 scenarios against **live public URLs**, plus **CUA** in Docker via
 `persona-computer-1`. Pick the mode that fits the study — none is the global
 default.
@@ -13,6 +13,7 @@ default.
 | **browser-use** | `application/tasks/example-web-browser-use_laptop-choice/` | `persona-browser-use` | `docker` + `network_mode = "public"` | Dedicated browser agent loop; persona via `extend_system_message` |
 | **Cocoa** | `application/tasks/example-web-cocoa_plan-choice/` | `persona-cocoa` | `docker` + AIO Sandbox image + `network_mode = "public"` | Unified browser + shell + files in one container |
 | **CUA** | `application/tasks/example-web-cua_bookshop-choice/` | `persona-computer-1` | `docker` (Linux Xvfb) | Screenshot loop in Linux desktop; finish with **done** action |
+| **CLI (experimental)** | any live-web task above | `persona-claude-code` / `persona-codex` / `persona-gemini-cli` | `application/shared-web-cli` (Playground override) | Terminal CLI + Playwright; same task instruction/verifier |
 
 Checked-in smoke recipes: [`configs/jobs/example-job-recipe/`](../configs/jobs/example-job-recipe/)
 (`appSim-example-web-playwright-local.yaml`, `…-browser-use-local.yaml`, etc.).
@@ -174,6 +175,32 @@ For **macOS / iOS** screenshot CUA (system settings, not live web), use
 | [Skyvern](https://github.com/Skyvern-AI/skyvern) | No `persona-skyvern` in this repo; use browser-use or CUA for vision-first browsing. |
 | `curl` / `wget` only | Not a web interaction mode — no JS, no layout. OK for smoke, not persona web browsing. |
 | Mock HTML sidecar | Deprecated for web examples here; use live URL tasks under `application/tasks/example-web-*`. |
+
+## CLI harness on web tasks (experimental)
+
+Browser harness tasks keep their own `shared-web-*` Docker images. When
+Playground (or a Harbor job) selects a **CLI harness** on a **web** task
+(`persona-claude-code`, `persona-codex`, `persona-gemini-cli`), the launcher
+stages a copy of the task with `[environment].definition =
+application/shared-web-cli`.
+
+That image includes:
+
+- **Playwright + Chromium** — same baseline as `shared-web-playwright` so the
+  CLI agent can write terminal Python to browse live URLs.
+- **Terminal CLI deps** — `curl`, `python3`, `uv`, and pre-installed Claude Code
+  (Codex / Gemini install via Harbor `install()` at trial start, same as
+  survey/chat).
+
+It does **not** include browser-use, Cocoa, or CUA stacks — those are separate
+browser products and are not used by CLI harnesses.
+
+Task `instruction.md`, verifier, and output contract stay unchanged; only the
+runtime image switches.
+
+**Credentials:** API keys or CLI subscription auth are configured on the Harbor
+runner — see [choosing-an-agent.md](choosing-an-agent.md) § CLI subscription auth
+and `application/playground/.env.local.example`.
 
 ## Authoring a new live-web application
 

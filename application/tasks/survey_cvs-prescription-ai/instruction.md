@@ -1,16 +1,13 @@
 # CVS Health App Prescription AI Survey
 
-Complete the survey using the provided context and structured questionnaire.
+We're looking for honest reactions to the CVS Health app's conversational AI for medication refills, order status, and related pharmacy tasks.
 
-Return one JSON object that matches `input/output_schema.md`.
+After reading the brief, tell us whether it feels useful and trustworthy — and whether you'd lean on it instead of calling the pharmacy.
 
-Requirements:
+## How to answer
 
-- Answer every required question in `input/questionnaire.yaml`.
-- Use exact `questionId` values from the questionnaire.
-- For choice questions, use the exact choice ids.
-- For likert questions, use an integer within the declared range.
-- Keep each `rationale` concise and specific to the selected answer.
-- Return only the JSON object.
-
-Write the final JSON artifact to `/app/output/survey_result.json`.
+- Read the brief before you start.
+- Answer every required question.
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

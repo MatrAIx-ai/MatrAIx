@@ -3,14 +3,24 @@ set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
+export VERIFIER_DIR
 
 python3 <<'PY'
+from __future__ import annotations
+
 import json
 import os
 import sys
 from pathlib import Path
 
-root = Path("/tmp/personabench-macos-calendar-reminder-handoff")
+OUTPUT_DIR = Path(
+    os.environ.get("HARBOR_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or "/app/output"
+)
+
+root = OUTPUT_DIR
 handoff_path = root / "handoff.txt"
 plan_path = root / "plan.json"
 if not handoff_path.is_file():
@@ -40,7 +50,7 @@ lines = handoff_path.read_text().splitlines()
 if lines != expected_lines:
     sys.exit("handoff.txt must match the expected two-line format")
 
-feedback_path = Path("/app/output/user_feedback.json")
+feedback_path = OUTPUT_DIR / "user_feedback.json"
 satisfaction_buckets = {"yes", "partially", "no"}
 
 
@@ -99,16 +109,14 @@ def load_user_feedback() -> dict[str, object] | None:
 
 feedback = load_user_feedback()
 
-verifier_dir = Path(
-    os.environ.get("HARBOR_VERIFIER_DIR")
-    or os.environ.get("PERSONABENCH_VERIFIER_DIR")
-    or "/logs/verifier"
-)
+verifier_dir_raw = os.environ.get("VERIFIER_DIR") or os.environ.get("HARBOR_VERIFIER_DIR")
+if not verifier_dir_raw:
+    sys.exit("VERIFIER_DIR or HARBOR_VERIFIER_DIR is required")
+verifier_dir = Path(verifier_dir_raw)
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
-except OSError:
-    verifier_dir = Path.cwd() / "verifier"
-    verifier_dir.mkdir(parents=True, exist_ok=True)
+except OSError as exc:
+    sys.exit(f"cannot create verifier directory {verifier_dir}: {exc}")
 
 source_artifacts = {
     "handoff": str(handoff_path),
@@ -380,7 +388,7 @@ if feedback is not None:
     json.dumps(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "os-app",
             "presenceCheck": {
                 "passed": True,

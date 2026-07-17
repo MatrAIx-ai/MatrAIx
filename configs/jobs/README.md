@@ -1,7 +1,7 @@
 # Job Recipes
 
 This directory contains curated Harbor job recipes that run against files kept
-in PersonaBench `main`.
+in Playground `main`.
 
 Rules for adding recipes:
 
@@ -18,9 +18,9 @@ Current curated set:
   `application/tasks/` and `persona/datasets/bench-dev-sample/`, plus
   `harbor-smoke-local.yaml` for a no-API-key runtime smoke check.
 - `application-task-job-recipe/`: generated application job recipes from
-  `application/scripts/generate_application_job.py` and PersonaEval UI launches.
+  `application/scripts/generate_application_job.py` and Playground UI launches.
   Most files are gitignored; a small set of curated fixtures is checked in.
-- `configs/jobs/_generated/`: legacy PersonaEval output path (gitignored).
+- `configs/jobs/_generated/`: legacy Playground output path (gitignored).
 - `persona-task-grounding-job-recipe/`: curated generated persona grounding
   recipe fixtures backed by the same sample dataset.
 

@@ -1,6 +1,6 @@
 # Application task structure
 
-A PersonaBench application task is a Harbor task folder under `application/tasks/`.
+A Playground application task is a Harbor task folder under `application/tasks/`.
 Copy the closest `example-*` task for your form (survey, chat, web, computer-use)
 into `application/tasks/<your-task-name>/`, then edit these parts.
 
@@ -12,14 +12,14 @@ application/tasks/example-survey_product-feedback/
 ├── instruction.md      # What the agent should do (scenario + output format)
 ├── input/              # Task-owned content (survey, chat, web docs)
 │   ├── context.md
-│   ├── questionnaire.yaml    # survey
-│   ├── output_schema.md      # survey only
+│   ├── questionnaire.yaml    # survey (askRationale / askConfidence)
 │   ├── self_report_schema.yaml  # chatbot / web / os-app (under input/)
 │   └── chatbot.yaml          # chat (under input/)
 ├── tests/              # Verifier — runs after the agent; scores output / trajectory
 │   ├── test.sh
 │   └── test_*.py       # optional helpers
 ├── reporting.json      # Batch reporting policy (contextRules, judge directives)
+├── persona_strategy.json  # target cohort + Playground sampling defaults
 ├── solution/           # optional — reference solution for CI smoke
 └── README.md           # notes for your team (smoke commands, suggested agent)
 ```
@@ -28,9 +28,13 @@ application/tasks/example-survey_product-feedback/
 `environment/task-environments/application/` — not inside the task folder.
 Harbor resolves `[environment].definition` in `task.toml` to a folder there.
 
-Survey tasks reuse `shared-survey-form`; web tasks reuse `shared-web-*`; chat
-tasks reuse `shared-chat-*`. Create a task-specific environment only when the
-sidecar topology or browser stack is genuinely new.
+Survey tasks reuse `shared-survey-form`; web agent stacks reuse `shared-web-*`
+with optional `web-sidecar_<sut>` via `[environment].local_compose` for
+task-hosted sites; chat tasks reuse `shared-chat-persona` with optional
+`chatbot-api-sidecar_*` / `chatbot-mcp-sidecar_*` the same way (or an external URL in `chatbot.yaml`).
+macOS/iOS os-app tasks reuse `shared-os-app-mac-ios` (use.computer stub, no
+Docker); Linux desktop computer-use keeps `shared-os-app-linux`. Create a
+task-specific environment only when the agent image itself is genuinely new.
 
 Do **not** create `application/tasks/<your-task>/environment/` for surveys.
 Harbor treats a task-local `environment/` as the full runtime, which shadows the
@@ -75,12 +79,12 @@ either. Put those in the task `README.md` under **Suggested setup (non-binding)*
 
 Task-owned materials the agent reads:
 
-- **Survey:** `context.md`, `questionnaire.yaml`, `output_schema.md`
+- **Survey:** `context.md`, `questionnaire.yaml` (`askRationale` / `askConfidence`)
 - **Chat:** `context.md`, `protocol.md`, `chatbot.yaml`, `self_report_schema.yaml`
   (all under `input/`)
 - **Web / OS-app:** `context.md` (optional), `self_report_schema.yaml` under
-  `input/`; task-result JSON schema inline in `instruction.md` (no
-  `input/output_schema.md`)
+  `input/`; prefer trace/state verification (optional submission schema inline
+  in `instruction.md`)
 
 These files are copied or mounted into `/app/input/` by the shared runtime.
 
@@ -111,6 +115,25 @@ Each task should define batch reporting policy here (even if minimal):
 See [tasks/README.md](tasks/README.md) and the task specs under
 [task-spec/](task-spec/).
 
+### `persona_strategy.json`
+
+Target cohort and Playground sampling defaults (mode, `dimensionFilters`
+and/or `cohortId`, optional `sampleSize`). Other fields may use defaults.
+The checked-in `bench-dev-sample` pool is only ~200 personas — narrow filters
+often undershoot it. Prefer generating a local strategy pool first.
+
+Until the production persona dataset ships, these synthetic pools are how we
+**validate task design** and the **persona reporting / analysis** the task
+needs — not a final population substitute.
+
+```bash
+uv run python persona/scripts/generate_dev_personas.py \
+  --strategy application/tasks/<your-task-name>/persona_strategy.json
+```
+
+Playground auto top-ups `_generated/` when coverage fails; see
+[Ensuring pool coverage](task-spec/authoring-bundle.md#ensuring-pool-coverage).
+
 ## Conventions
 
 | Path in container | Purpose |
@@ -126,7 +149,7 @@ See [tasks/README.md](tasks/README.md) and the task specs under
 | survey | `application/tasks/example-survey_product-feedback/` |
 | chat (REST) | `application/tasks/example-chat-api_support_chatbot/` |
 | chat (MCP) | `application/tasks/example-chat-mcp_support_chatbot/` |
-| chat (recommender) | `application/tasks/recommender-agent_chat_api/` |
+| chat (recommender / real SUT samples) | `application/tasks/chat_recai/` (also `chat_openbb`, `chat_multi-agent-medical-assistant`) |
 | web (Playwright) | `application/tasks/example-web-playwright_quote-choice/` |
 | web (browser-use) | `application/tasks/example-web-browser-use_laptop-choice/` |
 | web (Cocoa) | `application/tasks/example-web-cocoa_plan-choice/` |
@@ -143,7 +166,9 @@ Web stack details — [web-interaction.md](web-interaction.md).
 | survey | `application/tasks/example-survey_product-feedback/` | `persona-claude-code` |
 | chat (API) | `application/tasks/example-chat-api_support_chatbot/` | `persona-claude-code` |
 | chat (MCP) | `application/tasks/example-chat-mcp_support_chatbot/` | `persona-claude-code` |
-| chat (recommender) | `application/tasks/recommender-agent_chat_api/` | `persona-claude-code` |
+| chat (recommender) | `application/tasks/chat_recai/` | `persona-claude-code` |
+| chat (OpenBB / HTTP over MCP data) | `application/tasks/chat_openbb/` | `persona-claude-code` |
+| chat (medical) | `application/tasks/chat_multi-agent-medical-assistant/` | `persona-claude-code` |
 | web (Playwright) | `application/tasks/example-web-playwright_quote-choice/` | `persona-openhands-sdk` |
 | web (browser-use) | `application/tasks/example-web-browser-use_laptop-choice/` | `persona-browser-use` |
 | web (Cocoa) | `application/tasks/example-web-cocoa_plan-choice/` | `persona-cocoa` |
@@ -154,23 +179,27 @@ Web stack details — [web-interaction.md](web-interaction.md).
 
 Real application survey tasks (`survey_*`) follow the same layout as the reference
 example; only **`example-survey_product-feedback`** is the copy-from reference.
+Real application chatbot tasks (`chat_*`) follow the same layout as
+`example-chat-*`; name the folder after the SUT and pick
+`chatbot-api-sidecar_*` vs `chatbot-mcp-sidecar_*` from the persona-facing
+protocol (see [tasks/README.md](tasks/README.md)).
 
 ## Playground registration
 
 Tasks appear in the Playground only when indexed. After scaffolding,
 add an entry to:
 
-`application/persona_eval/backend/service/persona_eval_task_registry.py`
+`application/playground/backend/service/playground_task_registry.py`
 
 ```python
-"<your-task-folder>": PersonaEvalTaskEntry(application_type="survey"),  # or chatbot / web / os-app
+"<your-task-folder>": PlaygroundTaskEntry(application_type="survey"),  # or chatbot / web / os-app
 ```
 
 **Web tasks** also need `site_name`, `site_url`, `output_artifact`, and
 `submission_profile` (copy fields from the nearest `example-web-*` entry).
 
 **Survey tasks** also need a questionnaire id mapping in
-`packages/persona-eval/src/persona_eval/survey_task_content.py`:
+`packages/playground/src/playground/survey_task_content.py`:
 
 ```python
 SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID = {
@@ -181,7 +210,7 @@ SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID = {
 
 The questionnaire id must match `input/questionnaire.yaml` → `id`.
 
-Restart the PersonaEval backend after registry changes.
+Restart the Playground backend after registry changes.
 
 ## Job recipes
 

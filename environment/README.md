@@ -1,6 +1,6 @@
 # Environment module
 
-> Part of [PersonaBench](../README.md). This module owns **how simulations run**:
+> Part of [Playground](../README.md). This module owns **how simulations run**:
 > Harbor jobs, trial execution, persona agents, shared task environments, and
 > optional remote workers.
 
@@ -11,7 +11,7 @@ If you are new to the repo, read this page first to understand how
 
 ## Mental model
 
-PersonaBench separates **what to simulate** from **how to execute it**:
+Playground separates **what to simulate** from **how to execute it**:
 
 ```text
   persona/datasets/          application/tasks/           environment/
@@ -32,7 +32,7 @@ PersonaBench separates **what to simulate** from **how to execute it**:
 | Task definition | `application/tasks/<name>/` | *What* they do (`instruction.md`, verifier, `reporting.json`) |
 | Task environment | `environment/task-environments/application/` | Docker images, sidecars, browser stacks |
 | Runtime | `environment/runtime/harbor/` | Job/trial loop, backends (host, docker, use-computer, …) |
-| Agents | `environment/agents/personabench/agents/` | `persona-claude-code`, `persona-browser-use`, `persona-computer-1`, … |
+| Agents | `environment/agents/matraix/agents/` | `persona-claude-code`, `persona-browser-use`, `persona-computer-1`, … |
 | Job recipes | `configs/jobs/` | Multi-trial batches, concurrency, agent/model defaults |
 | Outputs | `jobs/` | Per-trial artifacts, verifier results, optional aggregation |
 
@@ -49,7 +49,7 @@ Three ways to launch the same Harbor contract:
 |---------|-------------|-------|
 | **Harbor CLI** | Scripts, CI, debugging | `uv run harbor run -c configs/jobs/…` |
 | **Playground** | Interactive task play, persona sampling | [application/QUICKSTART.md §10](../application/QUICKSTART.md#10-playground--play-tasks-visually) |
-| **PersonaEval API** | Automation, external tools | `POST /api/harbor/jobs` — [REST_API.md](../application/persona_eval/REST_API.md) |
+| **Playground API** | Automation, external tools | `POST /api/harbor/jobs` — [REST_API.md](../application/playground/REST_API.md) |
 
 All paths share:
 
@@ -64,7 +64,7 @@ All paths share:
 | `harbor` (default) | API or laptop runs `harbor run` locally | `MATRIX_EXECUTION_PLANE=harbor` |
 | `remote` | API dispatches to a Remote Runner worker over HTTP | `MATRIX_EXECUTION_PLANE=remote` + `REMOTE_RUNNER_API_URL` |
 
-Remote plane details: [UNIFIED_RUNTIME.md](../application/persona_eval/UNIFIED_RUNTIME.md).
+Remote plane details: [UNIFIED_RUNTIME.md](../application/playground/UNIFIED_RUNTIME.md).
 
 **Security note:** the remote plane sends only `PYTHONPATH` and `MATRIX_*` task
 exports over HTTP. API keys must live on the **worker**, not in the dispatch
@@ -78,23 +78,23 @@ payload.
 environment/
   README.md                 ← you are here
   adapters/                 Optional external benchmark adapters (manifest-backed)
-  agents/personabench/      Persona-conditioned agent implementations
+  agents/matraix/      Persona-conditioned agent implementations
   runtime/harbor/           Harbor CLI, trial loop, models, verifier, viewer backend
   task-environments/
-    application/            Shared Docker / sidecar stacks (shared-chat-*, shared-web-*, …)
+    application/            Persona shared-* + SUT *-sidecar_* (shared-chat-persona, chatbot-api-sidecar_*, chatbot-mcp-sidecar_*, web-sidecar_*, shared-web-*, shared-os-app-*, …)
 
 configs/jobs/
   example-job-recipe/       Smoke + small local demos
   application-task-job-recipe/  Generated multi-persona application jobs
 
 packages/
-  persona-eval/             PersonaEval Python package (remote runner, harbor helpers)
+  playground/             Playground Python package (remote runner, harbor helpers)
   rewardkit/                Verifier / LLM-judge toolkit
 
 apps/viewer/                Frontend paired with `harbor view`
 ```
 
-Python import names stay stable: `harbor.*`, `personabench.agents.*`, `persona_eval.*`.
+Python import names stay stable: `harbor.*`, `matraix.agents.*`, `playground.*`.
 
 ---
 
@@ -136,12 +136,12 @@ Not sent over the remote plane. Per-agent names:
 
 Full matrix: [application/choosing-an-agent.md](../application/choosing-an-agent.md).
 
-### PersonaEval reporting (optional)
+### Playground reporting (optional)
 
 | Variable | Purpose |
 |----------|---------|
-| `PERSONAEVAL_REPORTING_ENABLE_LLM` | Enable LLM judge rollups in aggregation |
-| `PERSONAEVAL_REPORTING_LLM_MODEL` | Override judge model |
+| `PLAYGROUND_REPORTING_ENABLE_LLM` | Enable LLM judge rollups in aggregation |
+| `PLAYGROUND_REPORTING_LLM_MODEL` | Override judge model |
 
 ---
 
@@ -246,6 +246,6 @@ link it in your PR.
 | [docs/architecture.md](../docs/architecture.md) | Three-module overview |
 | [docs/running.md](../docs/running.md) | Install, smoke, viewer |
 | [application/choosing-an-agent.md](../application/choosing-an-agent.md) | Agent ↔ API key matrix |
-| [application/persona_eval/UNIFIED_RUNTIME.md](../application/persona_eval/UNIFIED_RUNTIME.md) | Harbor vs remote plane |
-| [application/persona_eval/REST_API.md](../application/persona_eval/REST_API.md) | PersonaEval HTTP API |
+| [application/playground/UNIFIED_RUNTIME.md](../application/playground/UNIFIED_RUNTIME.md) | Harbor vs remote plane |
+| [application/playground/REST_API.md](../application/playground/REST_API.md) | Playground HTTP API |
 | [environment/adapters/README.md](adapters/README.md) | External benchmark adapters |

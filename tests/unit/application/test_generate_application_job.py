@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from personabench.application_job import collect_run_env_exports
+from matraix.application_job import collect_run_env_exports
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 
@@ -21,7 +21,7 @@ def test_collect_run_env_exports_survey() -> None:
 def test_collect_run_env_exports_chat() -> None:
     exports = collect_run_env_exports(
         trial_profile="user_sim_chat",
-        task_path="application/tasks/recommender-agent_chat_api",
+        task_path="application/tasks/chat_recai",
         repo_root=REPO_ROOT,
     )
-    assert exports == [("MATRIX_CHATBOT_TASK_PATH", "application/tasks/recommender-agent_chat_api")]
+    assert exports == [("MATRIX_CHATBOT_TASK_PATH", "application/tasks/chat_recai")]

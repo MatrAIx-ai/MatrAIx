@@ -1,7 +1,7 @@
 # Application Tasks
 
 Task definitions for **application product research**. These were migrated from
-MatrAIx and organized under the PersonaBench `application/` module.
+MatrAIx and organized under the MatrAIx `application/` module.
 
 This import contains application task folders, tests, and reference solutions.
 Runtime build contexts live under `environment/task-environments/application/`.
@@ -11,13 +11,19 @@ Generated job recipes land under `configs/jobs/` (see [QUICKSTART.md](../QUICKST
 
 - **`example-*`** — reference tasks in the repo (copy from these). For surveys, only
   **`example-survey_product-feedback`** is the reference; other `survey_*` folders are
-  real application benchmark tasks.
+  real application benchmark tasks. Chat references are
+  **`example-chat-api_*`** / **`example-chat-mcp_*`**.
 - **`survey_*`** — application survey tasks.
-- **`recommender-agent_chat_api`** — clean import of the MatrAIx recommender
-  chat task with an environment-side HTTP sidecar for smoke runs.
+- **`chat_*`** — application chatbot tasks, named after the SUT chatbot
+  (e.g. `chat_recai`, `chat_openbb`, `chat_multi-agent-medical-assistant`).
+  Match `[environment].local_compose` sidecars `chatbot-*-sidecar_<sut>` when present.
 - **`example-web-*`** — reference web tasks for Playwright, browser-use, Cocoa,
   and CUA style browsing flows.
-- **Your task** — `application/tasks/<your-task-name>/` (any folder name you choose).
+- **`example-computer-use-*`** — reference os-app / computer-use tasks.
+- **`os-app-ios_*` / `os-app-macos_*` / `os-app-linux_*`** — real application
+  os-app tasks (e.g. `os-app-ios_news-subscription-decision`).
+- **Your task** — `application/tasks/<your-task-name>/` (use `survey_*` / `chat_*`
+  / `web-*` / `os-app-*` conventions above when it is a real benchmark task).
 
 ## New Task
 
@@ -25,21 +31,45 @@ Copy the closest `example-*` sibling with the same interaction type, then edit
 the scenario, task metadata, and verifier.
 
 1. `cp -R application/tasks/example-survey_product-feedback application/tasks/<your-task-name>`
-2. Set `[task].name` to `personabench/application-{slug}`.
-3. Update `[metadata]` with `type`, `domain`, and task-specific `tags`.
+2. Set `[task].name` to `application/{slug}`.
+3. Update `[metadata]` with `type`, `domain`, `difficulty`, and task-specific `tags`.
 4. For survey tasks, keep `[environment].definition = "application/shared-survey-form"`
    and put task-owned docs under `application/tasks/<your-task-name>/input/`.
-5. For chat and browser tasks, keep contributor-facing docs under the task
-   folder itself (`input/` when useful), and prefer an existing shared runtime under
-   `environment/task-environments/application/shared-*` when the execution model
-   already matches your task. Only create a task-specific environment when the
-   sidecar topology, browser stack, or app host is genuinely new.
+5. For chat tasks, set `[environment].definition = "application/shared-chat-persona"`.
+   Choose the sidecar by the **persona-facing protocol** (what UserSim / the agent
+   actually calls), not by every backend the product uses internally:
+   - persona talks HTTP chat → `chatbot-api-sidecar_<sut>` + `transport: sidecar_http`
+   - persona talks MCP chat tools → `chatbot-mcp-sidecar_<sut>` + `transport: mcp`
+   Reference the folder with `[environment].local_compose`, or point at an external
+   URL in `input/chatbot.yaml`. Example of HTTP adapter wrapping an MCP data
+   layer: `chat_openbb` → `chatbot-api-sidecar_openbb` (`finance-chatbot` + `openbb-mcp`).
+   For browser tasks, prefer an existing `shared-web-*` runtime.
+   Only create a task-specific environment when the agent image or browser stack is
+   genuinely new.
 6. Keep verifier entry points under `tests/`.
 7. Define batch reporting policy in `reporting.json` at the task root. Use this
    file for context-level summaries, grouping rules, and later judge prompts.
    Do not hardcode reporting policy into the verifier unless you are prototyping
    a brand-new schema feature.
-8. Use `persona/datasets/bench-dev-sample/persona_0042.yaml` for lightweight
+8. Add `persona_strategy.json` at the task root with a target cohort
+   (`dimensionFilters` and/or `cohortId`; default mode, optional `sampleSize`).
+   See
+   [`../task-spec/authoring-bundle.md`](../task-spec/authoring-bundle.md#persona_strategyjson).
+9. If those filters are narrower than `bench-dev-sample` (~200 personas),
+   generate a local coverage pool **before** Playground / CLI sampling fails.
+   The production persona dataset is not ready yet — synthetic pools exist so
+   you can ship and exercise **task design** plus the **persona reporting /
+   analysis** path, not as a stand-in for the final population:
+
+   ```bash
+   uv run python persona/scripts/generate_dev_personas.py \
+     --strategy application/tasks/<your-task-name>/persona_strategy.json
+   ```
+
+   Playground will also auto top-up `_generated/` when coverage is too thin;
+   the CLI is the preferred contributor path. Details:
+   [Ensuring pool coverage](../task-spec/authoring-bundle.md#ensuring-pool-coverage).
+10. Use `persona/datasets/bench-dev-sample/persona_0042.yaml` for lightweight
    smoke examples until a larger persona dataset is restored externally.
 
 For survey tasks, create a canonical task-local bundle under:
@@ -50,8 +80,10 @@ with:
 
 - `instruction.md`
 - `context.md`
-- `questionnaire.yaml`
-- `output_schema.md`
+- `questionnaire.yaml` (include `askRationale` / `askConfidence` as needed)
+
+Do **not** add `output_schema.md` for surveys — the platform derives the answer
+envelope from `questionnaire.yaml` and writes `survey_result.json`.
 
 For chatbot tasks, keep contributor-facing docs under `input/`:
 
@@ -100,7 +132,7 @@ The verifier should extract structured runtime facts into
 
 This keeps the platform generic while letting each task define its own signals.
 
-When the backend is started with `PERSONAEVAL_REPORTING_ENABLE_LLM=1`, completed
+When the backend is started with `PLAYGROUND_REPORTING_ENABLE_LLM=1`, completed
 jobs will queue a background reporting pass for `llm_*` directives and persist
 the results into the job's `aggregation.json`. These LLM results are cached by
 input fingerprint, so reopening the same job detail does not rerun unchanged
@@ -126,7 +158,8 @@ like `outcome_status`, `resolution_basis`, `feedback_reason`, and
 `conversation_path`, plus example templates for `structured_output.json` and
 `reporting.json`.
 
-Example shape:
+Default survey `reporting.json` is Layer 1 only (`contextRules: []`). The
+shape below is an **opt-in** Layer 2 example when `askRationale` is true:
 
 ```json
 {
@@ -190,11 +223,27 @@ belongs and which artifacts its verifier should expect.
 Harbor resolves `[environment].definition` to a folder under
 `environment/task-environments/application/`.
 
-Use shared runtime folders when possible:
+Keep **persona-side** vs **SUT-side** folders distinct:
 
-- survey: `shared-survey-form`
-- chatbot examples: `shared-chat-*`
-- browser examples: `shared-web-*`
+**Persona agent / interaction surface** (`shared-*` → `[environment].definition`):
+
+- survey form: `shared-survey-form`
+- chatbot persona: `shared-chat-persona`
+- browser agent stacks: `shared-web-*`
+- os-app use.computer (macOS / iOS): `shared-os-app-mac-ios`
+- os-app Linux desktop Docker: `shared-os-app-linux`
+
+**System under test** (`*-sidecar_<sut-name>` → `[environment].local_compose`):
+
+- chatbot API hosts: `chatbot-api-sidecar_<sut>` (e.g. `chatbot-api-sidecar_recai`,
+  `chatbot-api-sidecar_openbb`) — used when the persona-facing surface is HTTP
+  `/v1/messages` (even if a product data layer underneath is MCP)
+- chatbot MCP hosts: `chatbot-mcp-sidecar_<sut>` (e.g. `chatbot-mcp-sidecar_acme-support`) —
+  used when the persona talks MCP chat tools directly
+- task-hosted web apps: `web-sidecar_<sut>` (e.g. a task-hosted storefront package)
+
+Do not put the persona agent image inside a `*-sidecar_*` package.
+See also [`../../environment/task-environments/application/CHAT_ENVS.md`](../../environment/task-environments/application/CHAT_ENVS.md).
 
 Create a task-specific environment folder only when you need a genuinely new
 runtime or sidecar topology. Survey tasks stay task-local only for `input/`

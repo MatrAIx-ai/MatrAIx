@@ -1,16 +1,13 @@
 # Survey Product Feedback
 
-Complete the survey using the provided context and structured questionnaire.
+We're gathering reactions to **FocusLoop**, a family coordination app concept.
 
-Return one JSON object that matches `input/output_schema.md`.
+Read the product brief, then complete every question in the questionnaire. We want to know how you'd price it, whether you'd try it, and how it would fit into household life — not feature ideas outside the brief.
 
-Requirements:
+## How to answer
 
-- Answer every required question in `input/questionnaire.yaml`.
-- Use exact `questionId` values from the questionnaire.
-- For choice questions, use the exact choice ids.
-- For likert questions, use an integer within the declared range.
-- Keep each `rationale` concise and specific to the selected answer.
-- Return only the JSON object.
-
-Write the final JSON artifact to `/app/output/survey_result.json`.
+- Read the brief before you start.
+- Answer every required question.
+- For multiple-choice, use the listed option ids.
+- For rating scales, use a whole number in the given range.
+- Give the answer alone unless a question also asks for a short reason or confidence.

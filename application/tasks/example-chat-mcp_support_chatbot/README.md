@@ -1,6 +1,6 @@
 # Acme support chat (MCP)
 
-PersonaBench chat task with a **mock Acme support bot** exposed as an MCP sidecar. The persona agent must use MCP tools (`send_message`, `get_conversation_history`) for a multi-turn conversation, then save the transcript to `/app/output/transcript.json`.
+MatrAIx chat task with a **mock Acme support bot** exposed as an MCP sidecar. The persona agent must use MCP tools (`send_message`, `get_conversation_history`) for a multi-turn conversation, then save the transcript to `/app/output/transcript.json`.
 
 Requires **Docker Compose** (local `docker` environment). Not supported on cloud providers yet.
 
@@ -12,7 +12,7 @@ Requires **Docker Compose** (local `docker` environment). Not supported on cloud
 uv run harbor run -p application/tasks/example-chat-mcp_support_chatbot -a oracle
 ```
 
-**Full run** — PersonaEval UI or terminal auto mode: [Application Quickstart](../../QUICKSTART.md).
+**Full run** — Playground UI or terminal auto mode: [Application Quickstart](../../QUICKSTART.md).
 
 ## Layout
 

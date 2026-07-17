@@ -169,7 +169,7 @@ uv run harbor run -c configs/jobs/application-task-job-recipe/example-survey-pro
 ```bash
 # Chat (+ sidecar if prompted)
 uv run python application/scripts/generate_application_job.py \
-  --task application/tasks/recommender-agent_chat_api \
+  --task application/tasks/chat_recai \
   --execution-mode auto \
   --persona-ids 0042
 
@@ -178,7 +178,7 @@ export OPENAI_API_KEY="sk-..."
 export MATRIX_CHATBOT_DOMAIN=movie
 export MATRIX_CHATBOT_APPLICATION_ID=recai
 export MATRIX_CHATBOT_MAX_TURNS=8
-uv run harbor run -c configs/jobs/application-task-job-recipe/recommender-agent-chat-api-auto-n1.yaml
+uv run harbor run -c configs/jobs/application-task-job-recipe/chat-recai-auto-n1.yaml
 ```
 
 The generator prints exact `export` lines. Script reference: [scripts/README.md](scripts/README.md).
@@ -322,13 +322,13 @@ time.
 **Terminal A — API**
 
 ```bash
-VENV=.venv bash application/persona_eval/backend/run_dev.sh
+VENV=.venv bash application/playground/backend/run_dev.sh
 ```
 
 **Terminal B — frontend (hot reload)**
 
 ```bash
-cd application/persona_eval/frontend && npm ci && npm run dev
+cd application/playground/frontend && npm ci && npm run dev
 ```
 
 Open **http://localhost:5173** (proxies `/api` → `:8765`).
@@ -339,13 +339,13 @@ Check the footer **Preflight** chip before blaming a task. Green = keys, Docker
 One-shot (API serves built frontend, no Vite):
 
 ```bash
-cd application/persona_eval/frontend && npm ci && npm run build
-cd ../../.. && application/persona_eval/run_demo.sh
+cd application/playground/frontend && npm ci && npm run build
+cd ../../.. && application/playground/run_demo.sh
 # → http://127.0.0.1:8765
 ```
 
-More detail: [persona_eval/README.md](persona_eval/README.md),
-[persona_eval/REST_API.md](persona_eval/REST_API.md).
+More detail: [playground/README.md](playground/README.md),
+[playground/REST_API.md](playground/REST_API.md).
 
 ### In the Playground
 
@@ -403,11 +403,15 @@ Copy the closest **example** task, then put your copy at
 # survey
 cp -R application/tasks/example-survey_product-feedback application/tasks/<your-task-name>
 
-# chat (REST API sidecar)
+# chat (REST API sidecar) — persona talks HTTP /v1/messages
 cp -R application/tasks/example-chat-api_support_chatbot application/tasks/<your-task-name>
 
-# chat (MCP sidecar)
+# chat (MCP sidecar) — persona talks MCP chat tools directly
 cp -R application/tasks/example-chat-mcp_support_chatbot application/tasks/<your-task-name>
+
+# For real benchmark tasks, rename to survey_* / chat_<sut> (see tasks/README.md).
+# HTTP adapter over an internal MCP data layer still uses chatbot-api-sidecar_*
+# (example: chat_openbb → chatbot-api-sidecar_openbb).
 
 # web — pick one example-web-* stack (see web-interaction.md)
 cp -R application/tasks/example-web-playwright_quote-choice application/tasks/<your-task-name>
@@ -482,4 +486,4 @@ Full task checklist: [tasks/README.md](tasks/README.md).
 | [choosing-an-agent.md](choosing-an-agent.md) | Agent ↔ form mapping and API keys |
 | [tasks/README.md](tasks/README.md) | Contributor checklist and reporting |
 | [scripts/README.md](scripts/README.md) | Job generator and reporting scripts |
-| [persona_eval/UNIFIED_RUNTIME.md](persona_eval/UNIFIED_RUNTIME.md) | Harbor vs remote execution plane |
+| [playground/UNIFIED_RUNTIME.md](playground/UNIFIED_RUNTIME.md) | Harbor vs remote execution plane |

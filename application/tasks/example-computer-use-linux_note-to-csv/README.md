@@ -1,6 +1,6 @@
 # Note to CSV cleanup (Linux)
 
-PersonaBench **Linux desktop** computer-use task: turn a rough note into a
+MatrAIx **Linux desktop** computer-use task: turn a rough note into a
 small CSV artifact and submit matching metadata in JSON.
 
 Requires **`persona-computer-1`** with default **Docker** environment (Harbor `Computer1`). No `USE_COMPUTER_API_KEY`.
@@ -23,8 +23,8 @@ uv run harbor run -p application/tasks/example-computer-use-linux_note-to-csv -a
 
 ## Output
 
-- `/tmp/personabench-linux-note-to-csv/cleaned_list.csv`
-- `/tmp/personabench-linux-note-to-csv/submission.json`
+- `/app/output/cleaned_list.csv`
+- `/app/output/submission.json`
 
 The verifier checks:
 

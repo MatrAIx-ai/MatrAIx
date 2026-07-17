@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 OUTPUT_DIR = Path(
-    os.environ.get("PERSONABENCH_OUTPUT_DIR")
+    os.environ.get("HARBOR_OUTPUT_DIR")
     or os.environ.get("MATRIX_OUTPUT_DIR")
     or "/app/output"
 )
@@ -15,19 +15,23 @@ EVENT_KEYS = {"timestamp", "actor", "action", "context", "outcome"}
 
 
 def _verifier_dir() -> Path:
-    base = (
-        os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("PERSONABENCH_VERIFIER_DIR")
-        or "/logs/verifier"
-    )
-    path = Path(base)
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
+    if explicit:
+        path = Path(explicit)
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
+    container_default = Path("/logs/verifier")
     try:
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        container_default.mkdir(parents=True, exist_ok=True)
+        return container_default
     except OSError:
-        path = Path(__file__).resolve().parent.parent / "verifier"
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        pass
+
+    raise RuntimeError(
+        "HARBOR_VERIFIER_DIR is required when running outside a Harbor trial "
+        "container. Point it at jobs/<job>/<trial>/verifier for local harness runs."
+    )
 
 
 def _write_structured_output(payload: dict[str, object]) -> None:
@@ -40,12 +44,43 @@ def fail(message: str) -> int:
     return 1
 
 
-def _field_kind(value: object) -> str:
+def _question_types_from_trajectory(trajectory: list[object]) -> dict[str, str]:
+    """Map questionId -> questionnaire type from ask_question trajectory events."""
+    out: dict[str, str] = {}
+    for event in trajectory:
+        if not isinstance(event, dict):
+            continue
+        if str(event.get("action") or "") != "ask_question":
+            continue
+        context = event.get("context")
+        if not isinstance(context, dict):
+            continue
+        question_id = str(context.get("questionId") or "").strip()
+        question_type = str(context.get("questionType") or "").strip().lower()
+        if question_id and question_type:
+            out[question_id] = question_type
+    return out
+
+
+def _field_kind_for_question(question_type: str | None, value: object) -> str:
+    """Kind follows questionnaire type — not string-shape heuristics."""
+    qtype = (question_type or "").strip().lower()
+    if qtype == "likert":
+        return "numerical"
+    if qtype in {"single_choice", "multi_choice"}:
+        return "categorical"
+    if qtype == "free_text":
+        return "textual"
     if isinstance(value, bool):
         return "categorical"
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         return "numerical"
     if isinstance(value, list):
+        return "categorical"
+    if isinstance(value, str):
+        text = value.strip()
+        if " " in text or "\n" in text or len(text) > 64:
+            return "textual"
         return "categorical"
     return "textual"
 
@@ -65,6 +100,7 @@ def main() -> int:
     trajectory = payload.get("trajectory")
     if not isinstance(trajectory, list) or not trajectory:
         return fail("survey_result.trajectory must be a non-empty list")
+    question_types = _question_types_from_trajectory(trajectory)
     fields: list[dict[str, object]] = []
     contexts: list[dict[str, object]] = []
     numeric_values: list[float] = []
@@ -77,7 +113,8 @@ def main() -> int:
         if "value" not in answer:
             return fail("answers[{}].value is required".format(index))
         value = answer.get("value")
-        kind = _field_kind(value)
+        question_type = question_types.get(question_id)
+        kind = _field_kind_for_question(question_type, value)
         if isinstance(value, (int, float)) and not isinstance(value, bool):
             numeric_values.append(float(value))
         context_key = "question.{}".format(question_id)
@@ -143,14 +180,15 @@ def main() -> int:
                     "value": float(confidence),
                 }
             )
-        contexts.append(
-            {
-                "key": context_key,
-                "label": context_label,
-                "contextType": "question_response",
-                "facets": facets,
-            }
-        )
+        context_payload: dict[str, object] = {
+            "key": context_key,
+            "label": context_label,
+            "contextType": "question_response",
+            "facets": facets,
+        }
+        if question_type:
+            context_payload["questionType"] = question_type
+        contexts.append(context_payload)
     for index, event in enumerate(trajectory):
         if not isinstance(event, dict):
             return fail("trajectory[{}] must be an object".format(index))
@@ -230,7 +268,7 @@ def main() -> int:
     _write_structured_output(
         {
             "schemaVersion": "1.0",
-            "artifactType": "personabench.trial_evaluation",
+            "artifactType": "matraix.trial_evaluation",
             "taskType": "survey",
             "presenceCheck": {
                 "passed": True,
@@ -238,7 +276,7 @@ def main() -> int:
                 "missingArtifacts": [],
             },
             "sourceArtifacts": {
-                "surveyResult": str(RESULT_PATH),
+                "surveyResult": "/app/output/survey_result.json",
             },
             "contexts": contexts,
             "fields": fields,

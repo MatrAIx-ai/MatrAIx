@@ -1,8 +1,8 @@
 version = "1.0"
-artifacts = [ "/tmp/personabench-macos-calendar-reminder-handoff",]
+artifacts = [ "/app/output",]
 
 [task]
-name = "personabench/application-computer-use-macos-calendar-reminder-handoff"
+name = "application/computer-use-macos-calendar-reminder-handoff"
 
 [metadata]
 difficulty = "easy"
@@ -19,7 +19,7 @@ timeout_sec = 300.0
 timeout_sec = 1800.0
 
 [environment]
-definition = "application/example-computer-use-macos_calendar-reminder-handoff"
+definition = "application/shared-os-app-mac-ios"
 cpus = 4
 memory_mb = 4096
 storage_mb = 40960

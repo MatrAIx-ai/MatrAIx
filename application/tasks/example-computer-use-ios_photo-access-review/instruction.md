@@ -1,13 +1,13 @@
 # Photo access review (iOS)
 
-Read `input/context.md` for scenario and application background.
+Read the scenario brief in `input/context.md`, then review photo access for one app.
 
 1. Open **Settings** → **Privacy & Security** → **Photos**.
 2. Pick **one app** you would realistically use to upload or share photos.
-3. Decide the least-permissive access level you would personally grant that app:
+3. Decide the least-permissive access level you would grant that app:
    `full_access`, `selected_photos`, or `none`.
 
-Save your decision to `/tmp/personabench-ios-photo-access-review/decision.json`:
+Save `/app/output/decision.json`:
 
 ```json
 {

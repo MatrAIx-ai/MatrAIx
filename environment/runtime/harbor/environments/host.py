@@ -23,7 +23,12 @@ _CONTAINER_PATH_PATTERN = re.compile(
 
 
 class HostEnvironment(BaseEnvironment):
-    """Run agent + verifier on the host without building the task main image."""
+    """Run agent + verifier on the host without building the task main image.
+
+    Verifier scripts run from the repo ``task/tests/`` tree (same as Playground
+    host verifier for os-app). Virtual ``/tests/`` paths rewrite to that directory;
+    outputs land under ``trial/verifier/`` and ``trial/artifacts/``.
+    """
 
     _sidecar_api_marker = ".sidecar_api_url"
 
@@ -34,6 +39,7 @@ class HostEnvironment(BaseEnvironment):
         session_id: str,
         trial_paths: TrialPaths,
         task_env_config: EnvironmentConfig,
+        tests_dir: Path | str | None = None,
         *args,
         **kwargs,
     ) -> None:
@@ -45,8 +51,15 @@ class HostEnvironment(BaseEnvironment):
             task_env_config=task_env_config,
             **kwargs,
         )
-        self._workspace_root = self.trial_paths.trial_dir / "host_workspace"
-        self._tests_root = self.trial_paths.trial_dir / "host_tests"
+        if tests_dir is None:
+            raise ValueError(
+                "HostEnvironment requires tests_dir (repo task tests/ path)"
+            )
+        self._tests_root = Path(tests_dir).resolve()
+        if not self._tests_root.is_dir():
+            raise FileNotFoundError(
+                "HostEnvironment tests_dir does not exist: {}".format(self._tests_root)
+            )
         self._compose_project = self._compose_project_name()
         self._sidecar_services: list[str] = []
         self._sidecar_compose_path: Path | None = None
@@ -87,6 +100,11 @@ class HostEnvironment(BaseEnvironment):
         else:
             raise ValueError("unsupported host container path: {}".format(container_path))
         return host_path.resolve()
+
+    def _maps_to_repo_tests(self, container_path: str) -> bool:
+        path = PurePosixPath(container_path.rstrip("/") or "/")
+        parts = [part for part in path.parts if part != "/"]
+        return bool(parts) and parts[0] == "tests"
 
     def _rewrite_command_paths(self, command: str) -> str:
         rewritten = command
@@ -185,7 +203,7 @@ class HostEnvironment(BaseEnvironment):
             return
         self._sidecar_services = services
         service_name = services[0]
-        from persona_eval.inprocess.chatbot_sidecar_compose import (
+        from playground.inprocess.chatbot_sidecar_compose import (
             write_standalone_sidecar_compose,
         )
 
@@ -272,41 +290,42 @@ class HostEnvironment(BaseEnvironment):
         )
 
     async def start(self, force_build: bool) -> None:
-        self._workspace_root.mkdir(parents=True, exist_ok=True)
-        self._tests_root.mkdir(parents=True, exist_ok=True)
         output_dir = self.resolve_container_path("/app/output")
         output_dir.mkdir(parents=True, exist_ok=True)
         self.trial_paths.verifier_dir.mkdir(parents=True, exist_ok=True)
         await self._start_sidecars(force_build)
 
     async def stop(self, delete: bool) -> None:
-        if not self._sidecar_services:
-            return
-        compose_path = self._sidecar_compose_path
-        command = [
-            "docker",
-            "compose",
-            "--project-name",
-            self._compose_project,
-            "--project-directory",
-            str(self.environment_dir),
-        ]
-        if compose_path is not None:
-            command.extend(["-f", str(compose_path)])
-        command.extend(["down", "--remove-orphans"])
-        if delete:
-            command.extend(["--volumes", "--rmi", "local"])
-        await self._run_command(command, timeout_sec=120)
-        marker = self.trial_paths.trial_dir / self._sidecar_api_marker
-        marker.unlink(missing_ok=True)
+        if self._sidecar_services:
+            compose_path = self._sidecar_compose_path
+            command = [
+                "docker",
+                "compose",
+                "--project-name",
+                self._compose_project,
+                "--project-directory",
+                str(self.environment_dir),
+            ]
+            if compose_path is not None:
+                command.extend(["-f", str(compose_path)])
+            command.extend(["down", "--remove-orphans"])
+            if delete:
+                command.extend(["--volumes", "--rmi", "local"])
+            await self._run_command(command, timeout_sec=120)
+            marker = self.trial_paths.trial_dir / self._sidecar_api_marker
+            marker.unlink(missing_ok=True)
 
     async def upload_file(self, source_path: Path | str, target_path: str) -> None:
+        if self._maps_to_repo_tests(target_path):
+            return
         source = Path(source_path)
         destination = self.resolve_container_path(target_path)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
 
     async def upload_dir(self, source_dir: Path | str, target_dir: str) -> None:
+        if self._maps_to_repo_tests(target_dir):
+            return
         source = Path(source_dir)
         destination = self.resolve_container_path(target_dir.rstrip("/") + "/.")
         if destination.name == ".":
@@ -346,20 +365,18 @@ class HostEnvironment(BaseEnvironment):
         user: str | int | None = None,
     ) -> ExecResult:
         del user
-        self._workspace_root.mkdir(parents=True, exist_ok=True)
-        self._tests_root.mkdir(parents=True, exist_ok=True)
         self.trial_paths.verifier_dir.mkdir(parents=True, exist_ok=True)
         output_dir = self.resolve_container_path("/app/output")
         output_dir.mkdir(parents=True, exist_ok=True)
 
         rewritten = self._normalize_shell_invocation(self._rewrite_command_paths(command))
         self._ensure_redirect_targets(rewritten)
-        workdir = self._workspace_root.resolve()
+        workdir = self._tests_root
         if cwd:
             workdir = self.resolve_container_path(cwd)
         merged_env = dict(env or {})
         merged_env["MATRIX_OUTPUT_DIR"] = str(output_dir)
-        merged_env["PERSONABENCH_OUTPUT_DIR"] = str(output_dir)
+        merged_env["PLAYGROUND_OUTPUT_DIR"] = str(output_dir)
         merged_env["HARBOR_VERIFIER_DIR"] = str(self.trial_paths.verifier_dir.resolve())
         merged_env["HARBOR_TESTS_DIR"] = str(self._tests_root.resolve())
         return await self._run_command(

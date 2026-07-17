@@ -2,7 +2,7 @@
 
 [`generate_application_job.py`](generate_application_job.py) samples personas and
 writes a multi-trial job YAML plus a `.meta.json` sidecar under
-`configs/jobs/application-task-job-recipe/` by default. PersonaEval UI launches
+`configs/jobs/application-task-job-recipe/` by default. Playground UI launches
 write to the same directory.
 
 [`report_job.py`](report_job.py) refreshes `jobs/<job_name>/aggregation.json`
@@ -16,7 +16,7 @@ The script supports:
 
 - `--sample-size`
 - `--persona-ids` for explicit personas (skips random sampling)
-- `--execution-mode` (default: `auto`, same as PersonaEval UI Mode **auto**)
+- `--execution-mode` (default: `auto`, same as Playground UI Mode **auto**)
 - repeated or comma-separated `--stratify`
 - `--name`
 - `--job-name`
@@ -24,7 +24,7 @@ The script supports:
 
 ## Auto mode (recommended)
 
-Generate a job recipe (same logic as PersonaEval UI Mode **auto**):
+Generate a job recipe (same logic as Playground UI Mode **auto**):
 
 ```bash
 uv run python application/scripts/generate_application_job.py \
@@ -45,7 +45,7 @@ Chatbot / user simulator:
 
 ```bash
 uv run python application/scripts/generate_application_job.py \
-  --task application/tasks/recommender-agent_chat_api \
+  --task application/tasks/chat_recai \
   --execution-mode auto \
   --persona-ids 0042
 
@@ -54,7 +54,7 @@ export OPENAI_API_KEY="sk-..."
 export MATRIX_CHATBOT_DOMAIN=movie
 export MATRIX_CHATBOT_APPLICATION_ID=recai
 export MATRIX_CHATBOT_MAX_TURNS=8
-uv run harbor run -c configs/jobs/application-task-job-recipe/recommender-agent-chat-api-auto-n1.yaml
+uv run harbor run -c configs/jobs/application-task-job-recipe/chat-recai-auto-n1.yaml
 ```
 
 Refresh reporting for a completed job:
