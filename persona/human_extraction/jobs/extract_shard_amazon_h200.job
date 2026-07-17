@@ -14,6 +14,7 @@ set -uo pipefail
 
 mamba init >/dev/null 2>&1 || true
 module load python/3.10.13-fasrc01
+module load gcc/12.2.0-fasrc01
 module load cuda/12.4.1-fasrc01
 conda activate env05
 
@@ -24,6 +25,8 @@ export HF_HOME="/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
 export HF_HUB_CACHE="$HF_HOME/hub"
 export HF_XET_CACHE="$HF_HOME/xet"
 export VLLM_CACHE_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/mycache/vllm"
+export FLASHINFER_WORKSPACE_BASE="/n/netscratch/lu_lab/Lab/xiaominli/mycache/flashinfer-gcc12"
+export TORCH_EXTENSIONS_DIR="/n/netscratch/lu_lab/Lab/xiaominli/mycache/torch-extensions-gcc12"
 export VLLM_WORKER_MULTIPROC_METHOD=spawn
 export REPO_ROOT
 export SELECTION_PATH="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon/selected_users_100k_koutian.parquet"
@@ -32,11 +35,12 @@ SHARD_ID="${SLURM_ARRAY_TASK_ID:-${SHARD_ID:-0}}"
 OUT_DIR="${OUT_DIR:-/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon/extraction_resume_20260717}"
 LIMIT="${LIMIT:-0}"
 
-mkdir -p "$VLLM_CACHE_ROOT" sbatch_logs "$OUT_DIR"
+mkdir -p "$VLLM_CACHE_ROOT" "$FLASHINFER_WORKSPACE_BASE" "$TORCH_EXTENSIONS_DIR" sbatch_logs "$OUT_DIR"
 echo "=== Amazon medium_b resume on H200 ==="
 echo "date=$(date -Is) host=$(hostname) shard_id=$SHARD_ID bucket=$(printf '%02x' "$SHARD_ID")"
 echo "out_dir=$OUT_DIR limit=$LIMIT slurm_job=${SLURM_JOB_ID:-none}"
 nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader | head -1
+echo "compiler=$(gcc --version | head -1)"
 
 cd "$REPO_ROOT"
 start=$(date +%s)

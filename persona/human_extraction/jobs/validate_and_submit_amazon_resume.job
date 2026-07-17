@@ -1,0 +1,64 @@
+#!/bin/bash
+#SBATCH -p test
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem=4G
+#SBATCH -t 00:15:00
+#SBATCH -o sbatch_logs/%x_%j.out
+#SBATCH -e sbatch_logs/%x_%j.err
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=xiaominli@g.harvard.edu
+
+set -euo pipefail
+
+REPO_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx-amazon-resume"
+PY="/n/home08/xiaominli/.conda/envs/env05/bin/python"
+DATA_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon"
+SMOKE="$DATA_ROOT/smoke_h200_medium_b_20260717/shard_68.jsonl"
+SELECTION="$DATA_ROOT/selected_users_100k_koutian.parquet"
+OUT_DIR="$DATA_ROOT/extraction_resume_20260717"
+MARKER="$OUT_DIR/bulk_submission.json"
+ARRAY_SPEC="15,16,19,22,30,34,41,47,48,50,54,61,63,71,77,104-255%40"
+
+cd "$REPO_ROOT"
+"$PY" persona/human_extraction/scripts/validate_amazon_smoke.py \
+    --smoke "$SMOKE" \
+    --schema persona/schema/dimensions.json \
+    --selection "$SELECTION" \
+    --bucket 68
+
+if [[ -e "$MARKER" ]]; then
+    echo "Bulk submission marker already exists: $MARKER" >&2
+    exit 2
+fi
+
+if squeue -u xiaominli -h -n amazon_resume_h200 | grep -q .; then
+    echo "An amazon_resume_h200 job already exists; refusing duplicate submission." >&2
+    exit 2
+fi
+
+cd persona/human_extraction/jobs
+BULK_JOB_ID=$(sbatch --parsable \
+    --job-name=amazon_resume_h200 \
+    --array="$ARRAY_SPEC" \
+    --export=ALL,OUT_DIR="$OUT_DIR",LIMIT=0 \
+    extract_shard_amazon_h200.job)
+
+"$PY" - "$MARKER" "$BULK_JOB_ID" "$ARRAY_SPEC" <<'PY'
+import json
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+path, job_id, array_spec = sys.argv[1:]
+Path(path).write_text(json.dumps({
+    "job_id": job_id,
+    "array_spec": array_spec,
+    "submitted_at": datetime.now(timezone.utc).isoformat(),
+    "prompt_variant": "medium_b",
+    "selection_sha256": "8a0084628f32a06f8f823126f819ef1abcc8387978b44f79eb4f923cb5e8ce12",
+    "expected_remaining_users": 61781,
+}, indent=2) + "\n")
+PY
+
+echo "BULK_SUBMITTED job_id=$BULK_JOB_ID array=$ARRAY_SPEC out_dir=$OUT_DIR"
