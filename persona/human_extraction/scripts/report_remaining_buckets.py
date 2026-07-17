@@ -10,7 +10,7 @@ Defaults assume the upstream repo layout; override with env vars:
   OUT_DIRS         ':'-separated list of dirs holding shard_<bkt>.jsonl outputs
 
 Needs pyarrow (for parquet). Example:
-  OUT_DIRS=/scratch/me/casper_out:/scratch/me/a100_out \
+  OUT_DIRS=/scratch/me/h100_out:/scratch/me/a100_out \
       python persona/human_extraction/scripts/report_remaining_buckets.py
 """
 from __future__ import annotations

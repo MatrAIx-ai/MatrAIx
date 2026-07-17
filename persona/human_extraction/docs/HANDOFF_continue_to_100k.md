@@ -24,9 +24,8 @@ The reference run used a batch-scheduled HPC cluster with **NVIDIA H100 and A100
   PR** (contributors are read-only on the org). Honor these and your output merges cleanly
   with the existing 38K.
 - **Not portable (translate to your stack):** scheduler/queue mechanics and node/GPU
-  layout. §3 gives the exact configs and measured throughput so you can size your own
-  compute; the reference scheduler scripts are available on request but are **not
-  required**.
+  layout. The reference run's config and GPU hours are in #265; its scheduler scripts
+  are available on request but are **not required**.
 
 ## 1. What is already done (do NOT re-extract)
 
@@ -55,111 +54,15 @@ Regenerate this breakdown anytime (needs pyarrow):
 python persona/human_extraction/scripts/report_remaining_buckets.py
 ```
 
-## 3. Reference run — compute profile & methodology
+## 3. Compute
 
-All numbers below are **measured on the reference run**, not vendor claims. GPU-hours are the
-**actual charged hours from the scheduler's accounting records** (the allocation is now fully
-spent) — not derived from throughput. That distinction matters: deriving hours from
-`users ÷ measured throughput` under-reported the true spend by **16%** (H100 by 33%), because
-it silently omits model load/warmup, retries, truncated jobs, and smoke tests. **If you need
-to report your own cost, query your scheduler's accounting DB — do not compute it from
-throughput.**
-
-### 3.1 Model & serving stack
-- Model `Qwen/Qwen3.6-35B-A3B` — MoE, **35B total / ~3B activated**, hybrid
-  (Mamba/GatedDeltaNet + attention) blocks, native context 262,144. BF16 weights ≈ **70 GB**.
-- Serving: **vLLM ≥ 0.24.0** (needs the `qwen3_5_moe` architecture), torch 2.11, CUDA 12.8/12.9.
-- Sampling is greedy (temp=0).
-
-### 3.2 Per-tranche configuration and cost
-
-| | Tranche A | Tranche B |
-|---|---|---|
-| GPU | **NVIDIA H100 80GB (HBM3)** | **NVIDIA A100 40GB (SXM4)** |
-| Precision | FP8 (native Hopper FP8) | BF16 |
-| Parallelism | **TP=1**, one model per GPU | **TP=4**, one model per 4-GPU node (160 GB) |
-| Batch knobs | `MAX_NUM_SEQS=16`, `BATCH_PROFILES=8`, `MAX_MODEL_LEN=32768` | `max_num_seqs=24` |
-| Steady-state throughput | **52.6 users / GPU-hour** | **≈16 users / GPU-hour ≈ 63 users / node-hour** |
-| Users produced | 22,795 | 15,424 |
-| **Charged GPU-hours (actual)** | **645.6** | **1,037.7** (257.1 node-hr × 4) |
-| **Charged efficiency** | **35.5 users / GPU-hour** | **14.9 users / GPU-hour** |
-| Time per ~390-user bucket | ≈ 7.4 h on 1 GPU | ≈ 6 h on one 4-GPU node |
-
-**Total: 645.6 H100-GPU-hours + 1,037.7 A100-GPU-hours = 1,683.3 GPU-hours for 38,219 users
-(22.7 users/GPU-hour blended).**
-
-Two things to take from this:
-
-1. **H100 + FP8 is the efficiency winner** — 35.5 vs 14.9 users/GPU-hour charged (**2.4×**),
-   or 52.6 vs ≈16 at steady state. Hopper's native FP8 plus 80 GB means TP=1: no
-   tensor-parallel overhead, ample KV headroom, and a 1-GPU task schedules more easily.
-   If you have H100s (or newer), prefer them.
-2. **Budget against the charged rate, not the steady-state rate.** H100 sustained 52.6
-   users/GPU-hr in flight but only **35.5 users/GPU-hr charged** — a ~1.5× gap that is
-   entirely model load, warmup, retries, truncated jobs, and smokes. Sizing off the
-   steady-state number will leave you ~30% short.
-
-**Where the A100 hours actually went** — of the 1,037.7 A100-GPU-hours, **513.6 (49.5%) was
-spent on the 2×(TP=2) configuration that §3.3 shows was wrong.** Roughly half that
-allocation bought ~2.5–3× less output than it should have. Read §3.3 before you pick a
-parallelism layout.
-
-### 3.3 The key parallelism finding (worth reading before you size anything)
-
-On **40 GB** A100s the 35B hybrid model barely fits at TP=2, and the trap is the KV cache:
-
-- **2×(TP=2), two models per 4-GPU node:** leaves only **0.81 GiB for KV = 68,985 tokens
-  ≈ 2.11× concurrency** → **KV-starved**; raising `max_num_seqs` above ~4 does nothing.
-  Real yield **~20–26 users/node-hour**, and a full ~390-user bucket needed ~20 h, so a 12 h
-  walltime **truncated buckets at ~30%** and forced resume passes.
-- **TP=4, one model per node:** the model spreads over **160 GB** → **1,607,056 KV tokens
-  ≈ 49× concurrency** → **≈63 users/node-hour**, and a full bucket finishes in **~6 h < 12 h**
-  → **no truncation, no resume passes**. That is **~2.5–3× more users per node-hour.**
-- **Quality is equivalent:** TP=4 vs TP=2 mean supported dims/user **24.2 vs 22.3**, no
-  systematic shift. Per-user divergence is inherent temp=0 greedy instability — same
-  magnitude as the accepted FP8-vs-BF16 variance.
-
-**Takeaway:** on 40 GB cards, do **not** pack two TP=2 models per node; use TP=4. On 80 GB
-cards (H100), TP=1 + FP8 is best. Always check KV-cache headroom before trusting a
-`max_num_seqs` setting.
-
-### 3.4 Extraction methodology
-1. **Sharding:** 256 hex buckets `00`–`ff`; every user has one fixed home bucket in the
-   selection index. One job = one bucket. Disjoint buckets across workers ⇒ no duplicates.
-2. **Per user:** read the bucket's selection rows → download that bucket's raw reviews from
-   the gated HF dataset → assemble the user's full review history into one `profile_text` →
-   run the `medium_b` prompt over the dimension chunks → append one JSON line per user.
-3. **Schema validation before write** — rejects over-filled/hallucinated field IDs, invalid
-   enum values, and duplicate fields. Without it, early output failed review.
-4. **Resume-skip by `user_id`** within an output dir; re-running a bucket tops it up.
-5. **Dedup:** a resumed bucket can re-append `user_id`s already present. Dedup per shard by
-   `user_id` (keep first) before upload — the reference run had 38,391 raw rows → 38,219
-   unique.
-6. **Complete vs partial** is derived by comparing a shard's **unique** `user_id` count to
-   that bucket's selected count (see `report_remaining_buckets.py`).
-
-### 3.5 Output characteristic (so you don't misread it as failure)
-Against the 1,290-dimension schema, a typical user supports only **~25 dimensions
-(median ~20)** — most dimensions simply aren't evidenced by one person's reviews. A low
-supported-dimension count per user is expected, not a bug.
-
-### 3.6 Sizing the remaining 61,781 users
-
-Budget against the **charged** rate (the right-hand column) — the steady-state figure is a
-floor you will not hit in practice:
-
-| Hardware | Optimistic (steady-state) | **Budget this (charged rate)** |
-|---|---:|---:|
-| H100 80GB, FP8, TP=1 | ~1,175 GPU-hr | **~1,740 GPU-hr** |
-| A100 40GB, BF16, TP=4 | ~981 node-hr (~3,924 GPU-hr) | **~4,150 GPU-hr** |
-
-The ~1.5× gap is warmup, retries, truncated jobs, and smokes — real hours your allocation
-pays for. Re-measure on your own hardware before committing, and report your **charged**
-rate so the next person inherits a realistic number rather than an optimistic one.
+GPU hours and GPU types for the reference run are reported separately in **#265**.
+That run produced the 38,219 users in §1; the remaining 61,781 in §2 are unextracted.
+Measure on your own hardware before committing an allocation.
 
 ## 4. Prerequisites
 
-1. **Your own GPU compute**, sized per §3.6 (the prior allocation is spent).
+1. **Your own GPU compute** (the prior allocation is spent; see #265).
 2. **An HF write-role token** that can open PRs on `MatrAIx2026/MatrAIx2026`. All uploads go
    as **PRs, not direct pushes** (contributors are read-only on the org).
 3. **The runner — NOTE: the required changes are NOT yet on `main`.**
