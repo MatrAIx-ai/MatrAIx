@@ -90,6 +90,25 @@ class BrowserUseHarborAgent(BaseInstalledAgent):
                 ),
             )
 
+        # browser-use pins anthropic==0.76.0, which cannot authenticate to
+        # Bedrock with a Bedrock API key (bearer token). For bedrock/ models,
+        # upgrade to a version whose AsyncAnthropicBedrock reads
+        # AWS_BEARER_TOKEN_BEDROCK. Idempotent; only runs for Bedrock.
+        if (self.model_name or "").startswith("bedrock/"):
+            await self.exec_as_agent(
+                environment,
+                command=(
+                    "set -euo pipefail; "
+                    "source /opt/browser-use-venv/bin/activate && "
+                    "export PIP_DEFAULT_TIMEOUT=180 && "
+                    "python -c 'import anthropic,sys; "
+                    'sys.exit(0 if tuple(int(p) for p in '
+                    "anthropic.__version__.split(\".\")[:2]) >= (0, 116) "
+                    "else 1)' 2>/dev/null || "
+                    "pip install --upgrade 'anthropic>=0.116'"
+                ),
+            )
+
         runner_src = Path(__file__).parent / "browser_use_runner.py"
         local_copy = self.logs_dir / "browser_use_runner.py"
         local_copy.write_text(runner_src.read_text(encoding="utf-8"), encoding="utf-8")
@@ -143,7 +162,17 @@ class BrowserUseHarborAgent(BaseInstalledAgent):
             if value is not None:
                 env[key_name] = value
 
-        if not any(
+        # Amazon Bedrock (``bedrock/...`` models): auth is a Bedrock API key
+        # (bearer token) plus region, forwarded so the in-container runner can
+        # build an AsyncAnthropicBedrock client without SigV4/botocore.
+        is_bedrock = self.model_name.startswith("bedrock/")
+        if is_bedrock:
+            for key_name in ("AWS_BEARER_TOKEN_BEDROCK", "AWS_REGION"):
+                value = self._get_env(key_name)
+                if value is not None:
+                    env[key_name] = value
+
+        if not is_bedrock and not any(
             self._get_env(name)
             for name in (
                 "ANTHROPIC_API_KEY",
@@ -154,6 +183,10 @@ class BrowserUseHarborAgent(BaseInstalledAgent):
         ):
             raise ValueError(
                 "Set ANTHROPIC_API_KEY, OPENAI_API_KEY, DASHSCOPE_API_KEY, or LLM_API_KEY for browser-use"
+            )
+        if is_bedrock and not self._get_env("AWS_BEARER_TOKEN_BEDROCK"):
+            raise ValueError(
+                "Set AWS_BEARER_TOKEN_BEDROCK (and AWS_REGION) for browser-use bedrock/ models"
             )
 
         llm_api_key = self._get_env("LLM_API_KEY")

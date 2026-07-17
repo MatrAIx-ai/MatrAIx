@@ -28,6 +28,22 @@ def _create_llm(model: str):
     provider, _, bare = model.partition("/")
     bare = bare or model
 
+    if provider == "bedrock":
+        # Amazon Bedrock via the Anthropic SDK's Bedrock client. Auth uses a
+        # Bedrock API key (bearer token) from AWS_BEARER_TOKEN_BEDROCK plus
+        # AWS_REGION — no SigV4/botocore required. ``bare`` is the Bedrock model
+        # id, e.g. ``us.anthropic.claude-haiku-4-5-20251001-v1:0``.
+        from anthropic import AsyncAnthropicBedrock
+        from browser_use import ChatAnthropic
+
+        region = (os.environ.get("AWS_REGION") or "us-east-1").strip()
+
+        class _ChatAnthropicBedrock(ChatAnthropic):
+            def get_client(self):  # type: ignore[override]
+                return AsyncAnthropicBedrock(aws_region=region)
+
+        return _ChatAnthropicBedrock(model=bare)
+
     if provider in ("anthropic", "") and (
         bare.startswith("claude") or provider == "anthropic"
     ):
@@ -288,7 +304,21 @@ async def _run(args: argparse.Namespace) -> int:
     agent_version = os.environ.get("BROWSER_USE_VERSION", "unknown")
 
     llm = _create_llm(args.model)
-    browser = Browser(headless=True)
+
+    # Some sites' WAFs reject Chromium's default ``HeadlessChrome`` User-Agent
+    # with 403 before any page JS runs. Presenting a normal Chrome UA is enough
+    # to pass (the block is on the UA header, not the IP). Both the UA and
+    # headless mode are overridable via env for debugging.
+    headless = (os.environ.get("BROWSER_USE_HEADLESS", "1").strip().lower()
+                not in ("0", "false", "no"))
+    user_agent = os.environ.get("BROWSER_USE_USER_AGENT", "").strip() or (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    )
+    browser_kwargs: dict = {"headless": headless}
+    if user_agent:
+        browser_kwargs["user_agent"] = user_agent
+    browser = Browser(**browser_kwargs)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
