@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from backend.service.task_list_summary import read_survey_questionnaire_list_meta
 
 

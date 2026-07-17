@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from backend.service.application_task_index import (
     clear_application_task_index_cache,
     discover_application_task_records,
