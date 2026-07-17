@@ -61,6 +61,17 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
         primary_env="CHATBOT_UPSTREAM_MEDICAL",
         legacy_env="MEDICAL_CHATBOT_URL",
     ),
+    "depression_support": SidecarSpec(
+        application_id="depression_support",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_depression"
+        ),
+        service_name="depression-chatbot",
+        build_context="depression-chatbot",
+        host_port=8906,
+        primary_env="CHATBOT_UPSTREAM_DEPRESSION",
+        legacy_env="DEPRESSION_CHATBOT_URL",
+    ),
     "acme_support_api": SidecarSpec(
         application_id="acme_support_api",
         compose_dir=(
