@@ -524,7 +524,10 @@ class SurveyInstrumentsResponse(BaseModel):
 
 
 class SurveyHarborTask(BaseModel):
-    """A Harbor example-survey task available for persona-agent testing."""
+    """Summary row for ``GET /api/survey-eval/harbor-tasks``.
+
+    Full markdown and questionnaire bodies live on ``GET /api/tasks/detail``.
+    """
 
     model_config = ConfigDict(extra="allow")
 
@@ -533,6 +536,7 @@ class SurveyHarborTask(BaseModel):
     description: str = ""
     taskPath: str
     instrumentId: str = ""
+    questionCount: Optional[int] = None
     profileMarkdown: str = ""
     instructionMarkdown: str = ""
     contextMarkdown: str = ""

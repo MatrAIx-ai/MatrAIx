@@ -58,8 +58,6 @@ export function surveyHarborTaskCards(tasks: SurveyHarborTask[]): TaskCardModel[
       taskKind,
       tags: harborTaskTags(item),
       searchTags: taskSearchTags(item.tags),
-      profileMarkdown: item.profileMarkdown,
-      instructionMarkdown: item.instructionMarkdown,
     };
   });
 }
@@ -83,8 +81,6 @@ export function webEvalTaskCards(tasks: WebEvalTask[]): TaskCardModel[] {
         tone: "warn",
       }),
       searchTags: taskSearchTags(item.tags),
-      profileMarkdown: item.profileMarkdown,
-      instructionMarkdown: item.instructionMarkdown,
     };
   });
 }
@@ -119,8 +115,6 @@ export function osAppTaskCards(tasks: OsAppEvalTask[]): TaskCardModel[] {
         ? withExtraTags(harborTaskTags(enriched), { label: osLabel, tone: osChipTone(os) })
         : harborTaskTags(enriched),
       searchTags: taskSearchTags(item.tags),
-      profileMarkdown: item.profileMarkdown,
-      instructionMarkdown: item.instructionMarkdown,
     };
   });
 }
