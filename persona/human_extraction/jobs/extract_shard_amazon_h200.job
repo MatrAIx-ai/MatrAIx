@@ -1,0 +1,55 @@
+#!/bin/bash
+#SBATCH -p seas_gpu,gpu_h200
+#SBATCH --gres=gpu:nvidia_h200:1
+#SBATCH -n 1
+#SBATCH -c 16
+#SBATCH --mem=128G
+#SBATCH -t 2-00:00
+#SBATCH -o sbatch_logs/%x_%A_%a.out
+#SBATCH -e sbatch_logs/%x_%A_%a.err
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=xiaominli@g.harvard.edu
+
+set -uo pipefail
+
+mamba init >/dev/null 2>&1 || true
+module load python/3.10.13-fasrc01
+module load cuda/12.4.1-fasrc01
+conda activate env05
+
+REPO_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx-amazon-resume"
+PY="/n/home08/xiaominli/.conda/envs/env05/bin/python"
+
+export HF_HOME="/n/netscratch/lu_lab/Lab/xiaominli/mycache/hf_home"
+export HF_HUB_CACHE="$HF_HOME/hub"
+export HF_XET_CACHE="$HF_HOME/xet"
+export VLLM_CACHE_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/mycache/vllm"
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+export REPO_ROOT
+export SELECTION_PATH="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon/selected_users_100k_koutian.parquet"
+
+SHARD_ID="${SLURM_ARRAY_TASK_ID:-${SHARD_ID:-0}}"
+OUT_DIR="${OUT_DIR:-/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon/extraction_resume_20260717}"
+LIMIT="${LIMIT:-0}"
+
+mkdir -p "$VLLM_CACHE_ROOT" sbatch_logs "$OUT_DIR"
+echo "=== Amazon medium_b resume on H200 ==="
+echo "date=$(date -Is) host=$(hostname) shard_id=$SHARD_ID bucket=$(printf '%02x' "$SHARD_ID")"
+echo "out_dir=$OUT_DIR limit=$LIMIT slurm_job=${SLURM_JOB_ID:-none}"
+nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader | head -1
+
+cd "$REPO_ROOT"
+start=$(date +%s)
+"$PY" -u persona/human_extraction/scripts/run_extraction_amazon.py \
+    --shard-id "$SHARD_ID" \
+    --out-dir "$OUT_DIR" \
+    --batch-profiles 16 \
+    --tensor-parallel 1 \
+    --quantization fp8 \
+    --prompt-variant medium_b \
+    --gpu-mem 0.90 \
+    --max-num-seqs 64 \
+    --limit "$LIMIT"
+rc=$?
+echo "DONE shard=$SHARD_ID rc=$rc elapsed=$(( $(date +%s) - start ))s"
+exit $rc
