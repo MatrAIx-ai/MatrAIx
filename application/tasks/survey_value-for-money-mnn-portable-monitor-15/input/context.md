@@ -12,8 +12,8 @@
 - **Resolution:** FHD 1080p
 - **Aspect Ratio:** 16:9
 - **Screen Surface Description:** Matte
-- **Screen Finish:** Matte
 - **Contrast Ratio:** 1000:1
+- **Display Type:** LED
 
 ## Pricing & recent change
 

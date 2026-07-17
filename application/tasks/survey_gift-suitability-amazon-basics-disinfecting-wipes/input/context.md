@@ -12,8 +12,8 @@
 - **Sheet Count:** 255
 - **Package Information:** Canister
 - **Item Form:** Wipes
-- **Container Type:** Canister
 - **Surface Recommendation:** Countertop
+- **Part Number:** 89-255LFL623J
 
 ## Pricing & recent change
 

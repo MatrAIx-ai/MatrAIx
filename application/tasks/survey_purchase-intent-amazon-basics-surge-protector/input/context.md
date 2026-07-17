@@ -12,8 +12,8 @@
 - **Total Power Outlets:** 6
 - **Voltage:** 125 Volts
 - **Special Feature:** Surge Protection
-- **Number Of Outlets:** 6
-- **Other Special Features Of The Product:** Surge Protection
+- **Maximum Current:** 15 Amps
+- **Power Plug Type:** Type B - 3 pin (North American)
 
 ## Pricing & recent change
 

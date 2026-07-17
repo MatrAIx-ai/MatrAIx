@@ -12,8 +12,8 @@
 - **Flavor:** Pure
 - **Package Information:** Can
 - **Item Volume:** 144 Fluid Ounces
-- **Coin Variety 1:** Sparkling
-- **Container Type:** Can
+- **Number Of Items:** 12
+- **Specialty:** Calorie Free, GMO Free, No Sweeteners, Sodium Free
 
 ## Pricing & recent change
 

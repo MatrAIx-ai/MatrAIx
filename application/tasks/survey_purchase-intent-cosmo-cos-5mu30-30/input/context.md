@@ -10,10 +10,10 @@
 - **Reviews:** ~10,036 customer ratings
 - **Product Dimensions:** 19.75"D x 29.75"W x 5.5"H
 - **Color:** Stainless Steel
-- **Finish Type:** Stainless Steel
 - **Additional Features:** Ductless Conversion (With Optional Purchase of Carbon Filter Kit, Part # CFK4), Energy efficient motor, High Efficiency LED Lights, Noise Control, Powerful Exhaust, Multi-layer Mesh Filters
 - **Noise:** 50 Decibels
 - **Mounting Type:** Under Cabinet Mount
+- **Controls Type:** Push Button Controls
 
 ## Recent listing change
 

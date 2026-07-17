@@ -12,8 +12,8 @@
 - **Special Feature:** High Magnification
 - **Objective Lens Diameter:** 50.0
 - **Magnification Maximum:** 10
-- **Features:** High Magnification
 - **Specific Uses:** Hiking & Outdoors
+- **Mount Type:** Tripod Mount
 
 ## Pricing & recent change
 

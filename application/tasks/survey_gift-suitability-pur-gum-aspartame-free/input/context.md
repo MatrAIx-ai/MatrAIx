@@ -10,10 +10,10 @@
 - **Reviews:** ~30,415 customer ratings
 - **Flavor:** Spearmint
 - **Package Information:** Bag
-- **Color:** Spearmint
 - **Item Weight:** 0.05 Pounds
-- **Container Type:** Bag
 - **Diet Type:** Gluten Free, Keto, Kosher, Vegan
+- **Item Form:** Tablet
+- **Specialty:** GMO Free, Gluten Free, Kosher Certified, No Artificial Flavors, Nut Free, Peanut Free, Sugar Free, Vegan
 
 ## Pricing & recent change
 

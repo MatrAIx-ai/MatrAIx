@@ -12,8 +12,8 @@
 - **Material:** Glue
 - **Item Form:** Liquid
 - **Special Feature:** Washable
-- **Other Special Features Of The Product:** Washable
 - **Container Type:** Bottle
+- **Water Resistance Level:** Water Resistant
 
 ## Recent listing change
 

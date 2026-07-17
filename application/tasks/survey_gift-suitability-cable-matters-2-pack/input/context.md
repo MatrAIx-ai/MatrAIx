@@ -9,11 +9,11 @@
 - **Rating:** 4.8 out of 5 stars
 - **Reviews:** ~16,555 customer ratings
 - **Connector Type:** XLR
-- **Cable Type:** XLR
 - **Compatible Devices:** Microphone
 - **Special Feature:** 21AWG OFC, XLR to Microphone M-F Cable
-- **Other Special Features Of The Product:** 21AWG OFC, XLR to Microphone M-F Cable
 - **Compatible Phone Models:** No Compatible Phone Models
+- **Connector Gender:** Male-to-Female
+- **Data Transfer Rate:** 6 Gigabits Per Second
 
 ## Pricing & recent change
 

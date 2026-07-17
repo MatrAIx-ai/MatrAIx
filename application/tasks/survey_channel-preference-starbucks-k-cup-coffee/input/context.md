@@ -12,8 +12,8 @@
 - **Flavor:** Pike Place Roast
 - **Caffeine Content Description:** Caffeinated
 - **Roast Level:** Medium Roast
-- **Coffee Roast Level:** Medium Roast
 - **Container Type:** Box
+- **Diet Type:** Vegetarian
 
 ## Recent listing change
 

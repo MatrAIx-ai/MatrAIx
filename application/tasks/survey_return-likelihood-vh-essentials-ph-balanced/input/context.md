@@ -12,8 +12,8 @@
 - **Item Dimensions L X W X H:** 2 x 3 x 7 inches
 - **Scent:** Original
 - **Age Range Description:** Adult
-- **Scent Name:** Original
 - **Skin Type:** Sensitive
+- **Product Benefits:** Cleansing; Smoothening
 
 ## Pricing & recent change
 

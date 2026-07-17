@@ -11,9 +11,9 @@
 - **Color:** Black
 - **Material:** Stainless Steel
 - **Size:** 8.34-Inch
-- **Blade Material:** Stainless Steel
 - **Global Trade Identification Number:** 00024131404902
 - **Number Of Items:** 1
+- **Manufacturer Warranty Description:** Warranty
 
 ## Pricing & recent change
 

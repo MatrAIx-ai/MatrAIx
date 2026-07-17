@@ -12,8 +12,8 @@
 - **Color:** for Roku TVs
 - **Max Number Of Supported Devices:** 18
 - **Compatible Devices:** Television
-- **Additional Features:** No Programming Required
-- **Maximum Number Of Supported Devices:** 18
+- **Connectivity Technology:** Infrared
+- **Button Quantity:** 21
 
 ## Recent listing change
 

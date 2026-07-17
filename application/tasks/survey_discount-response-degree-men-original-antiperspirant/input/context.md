@@ -12,8 +12,8 @@
 - **Scent:** Cool rush
 - **Material Type Free:** Phthalate Free
 - **Special Feature:** Sweat Block
-- **Scent Name:** Cool rush
-- **Additional Features:** Sweat Block
+- **Target Use Body Part:** Arm
+- **Application Method:** Twist and glide
 
 ## Recent listing change
 

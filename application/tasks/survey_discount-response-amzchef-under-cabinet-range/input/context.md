@@ -12,8 +12,8 @@
 - **Color:** Stainless Steel
 - **Special Feature:** Stainless Steel,Led Lights,Lighting,Touch Control,Lcd Screen
 - **Finish Type:** Brushed
-- **Additional Features:** Stainless Steel,Led Lights,Lighting,Touch Control,Lcd Screen
 - **Air Flow Capacity:** 700 Cubic Feet Per Minute
+- **Noise:** 63 Decibels
 
 ## Recent listing change
 

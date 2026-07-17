@@ -12,8 +12,8 @@
 - **Vehicle Service Type:** Passenger Car
 - **Material:** Premium fabric mesh
 - **Product Dimensions:** 20"L x 18.5"W
-- **Compatible With Vehicle Type:** Passenger Car
 - **Number Of Pieces:** 2
+- **Oem Equivalent Part Number:** 61222
 
 ## Recent listing change
 

@@ -10,10 +10,10 @@
 - **Reviews:** ~68,285 customer ratings
 - **Color:** Black
 - **Ear Placement:** Over Ear
-- **Form Factor:** Over Ear
 - **Impedance:** 16 Ohms
 - **Model Name:** Q20i
 - **Built In Media:** Cable, USB-C Charging Cable, soundcore Q20i headphone
+- **Age Range Description:** All
 
 ## Recent listing change
 

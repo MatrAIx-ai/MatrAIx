@@ -12,8 +12,8 @@
 - **Special Feature:** Lightweight
 - **Objective Lens Diameter:** 21 Millimeters
 - **Magnification Maximum:** 8 x
-- **Features:** Lightweight
 - **Specific Uses:** Bird Watching
+- **Mount Type:** Roof
 
 ## Pricing & recent change
 

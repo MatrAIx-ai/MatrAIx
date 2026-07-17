@@ -13,7 +13,7 @@
 - **Theme:** Star
 - **Number Of Items:** 1
 - **Unit Count:** 1.0 Count
-- **Pattern:** Star
+- **Size:** 1 count (Pack of 1)
 
 ## Pricing & recent change
 

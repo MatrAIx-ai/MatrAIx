@@ -12,8 +12,8 @@
 - **Flavor:** Super Crema
 - **Caffeine Content Description:** Caffeinated
 - **Roast Level:** Medium Roast
-- **Coffee Roast Level:** Medium Roast
 - **Container Type:** Bag
+- **Diet Type:** Kosher
 
 ## Recent listing change
 

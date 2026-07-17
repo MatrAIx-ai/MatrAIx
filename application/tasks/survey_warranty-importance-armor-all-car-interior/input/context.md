@@ -12,8 +12,8 @@
 - **Sheet Count:** 90
 - **Package Information:** Canister
 - **Item Form:** Wipes
-- **Container Type:** Canister
 - **Surface Recommendation:** Window
+- **Global Trade Identification Number:** 00070612187826, 10070612187823
 
 ## Pricing & recent change
 

@@ -12,8 +12,8 @@
 - **Filter Type:** Washable HEPA + Foam Filters
 - **Surface Recommendation:** Carpet , Hard Floors, Upholestry
 - **Power Source:** Corded Electric
-- **Other Special Features Of The Product:** HEPA, Hypoallergenic, Lightweight, Portable, Wheels
 - **Capacity:** 1.1 quarts
+- **Recommended Uses For Product:** Carpet, Bare Floor, Stairs, Upholstery
 
 ## Recent listing change
 

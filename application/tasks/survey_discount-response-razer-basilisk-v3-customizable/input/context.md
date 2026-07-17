@@ -12,8 +12,8 @@
 - **Connectivity Technology:** USB
 - **Special Feature:** Ergonomic Design
 - **Movement Detection Technology:** Optical
-- **Additional Features:** Ergonomic Design
-- **Movement Detection:** Optical
+- **Button Quantity:** 11
+- **Hand Orientation:** Right
 
 ## Pricing & recent change
 

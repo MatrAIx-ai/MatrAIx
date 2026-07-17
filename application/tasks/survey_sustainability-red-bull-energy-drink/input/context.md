@@ -13,7 +13,7 @@
 - **Number Of Items:** 24
 - **Package Information:** Can
 - **Diet Type:** Vegetarian
-- **Container Type:** Can
+- **Unit Count:** 201.6 Fluid Ounces
 
 ## Pricing & recent change
 

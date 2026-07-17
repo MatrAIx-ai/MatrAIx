@@ -12,8 +12,8 @@
 - **Item Form:** Solid
 - **Sheet Count:** 1
 - **Sheet Size:** 45 square feet
-- **Paper Size:** 45 square feet
 - **Unit Count:** 1.0 Count
+- **Item Dimensions L X W:** 12"W
 
 ## Recent listing change
 

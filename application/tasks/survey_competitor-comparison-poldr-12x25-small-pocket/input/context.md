@@ -12,8 +12,8 @@
 - **Special Feature:** Lightweight
 - **Objective Lens Diameter:** 25 Millimeters
 - **Magnification Maximum:** 12 x
-- **Features:** Lightweight
 - **Specific Uses:** Bird Watching, Camping, Concert, Hiking & Outdoors, Travel
+- **Mount Type:** Pocket
 
 ## Recent listing change
 

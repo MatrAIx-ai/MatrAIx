@@ -12,8 +12,8 @@
 - **Material:** Plastic
 - **Unit Count:** 100 Count
 - **Theme:** Party
-- **Occasion:** Party
 - **Manufacturer Minimum Age Months:** 36.00
+- **Manufacturer Maximum Age Months:** 1200.00
 
 ## Recent listing change
 

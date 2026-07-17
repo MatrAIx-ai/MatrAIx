@@ -10,10 +10,10 @@
 - **Reviews:** ~30,783 customer ratings
 - **Material:** Polyester
 - **Color:** White
-- **Style:** White
 - **Line Weight:** 15
 - **Item Length:** 328 Feet
-- **Unit Count:** 328 Feet
+- **Number Of Items:** 12
+- **Item Weight:** 0.11 Pounds
 
 ## Recent listing change
 

@@ -13,7 +13,7 @@
 - **Number Of Items:** 12
 - **Package Information:** Box
 - **Diet Type:** Kosher
-- **Container Type:** Box
+- **Unit Count:** 144.0 Fluid Ounces
 
 ## Pricing & recent change
 

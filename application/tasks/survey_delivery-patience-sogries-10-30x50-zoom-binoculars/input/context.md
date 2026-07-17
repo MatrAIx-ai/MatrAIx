@@ -12,8 +12,8 @@
 - **Special Feature:** Portable
 - **Objective Lens Diameter:** 50 Millimeters
 - **Magnification Maximum:** 30
-- **Features:** Portable
 - **Specific Uses:** Bird Watching, Sport Watching, Travel
+- **Mount Type:** Tripod Mount
 
 ## Pricing & recent change
 

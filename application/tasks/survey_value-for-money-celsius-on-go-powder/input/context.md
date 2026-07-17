@@ -12,8 +12,8 @@
 - **Protein:** 0 Grams
 - **Item Form:** Powder
 - **Package Information:** Box, Sachet
-- **Container Type:** Box, Sachet
 - **Allergen Information:** Barley
+- **Special Ingredients:** ginger root extract
 
 ## Pricing & recent change
 

@@ -12,8 +12,8 @@
 - **Item Weight:** 10.4 ounces
 - **Style:** Bypass Pruner
 - **Product Dimensions:** 9.07"L x 2.47"W
-- **Item Dimensions L X W:** 9.07"L x 2.47"W
 - **Cutting Width:** 0.63 Inches
+- **Size:** 5/8 "
 
 ## Recent listing change
 

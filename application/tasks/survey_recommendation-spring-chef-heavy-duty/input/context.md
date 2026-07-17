@@ -12,8 +12,7 @@
 - **Material:** Zinc
 - **Product Dimensions:** 5.91"L x 1.91"W
 - **Item Weight:** 0.51 Pounds
-- **Item Dimensions L X W:** 5.91"L x 1.91"W
-- **Material Type:** Zinc
+- **Is The Item Dishwasher Safe:** Yes
 
 ## Recent listing change
 

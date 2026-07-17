@@ -12,8 +12,8 @@
 - **Special Feature:** Compact Design, Image Stabilization, Lightweight, Slip Resistant, binocular
 - **Objective Lens Diameter:** 25 Millimeters
 - **Magnification Maximum:** 10 x
-- **Features:** Compact Design, Image Stabilization, Lightweight, Slip Resistant, binocular
 - **Specific Uses:** Bird Watching, Sport Watching, Travel
+- **Mount Type:** Monopod Mount
 
 ## Recent listing change
 

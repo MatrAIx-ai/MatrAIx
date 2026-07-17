@@ -13,7 +13,6 @@
 - **Style:** Traditional
 - **Item Weight:** 0.02 Pounds
 - **Number Of Pieces:** 12
-- **Product Style:** Traditional
 
 ## Recent listing change
 

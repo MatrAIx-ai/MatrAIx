@@ -12,8 +12,8 @@
 - **Scent:** Completely Clean
 - **Material Type Free:** Animal By Product Free
 - **Special Feature:** 100hr Sweat & Odor Protection, Clinical Strength, PH Balancing Minerals
-- **Scent Name:** Completely Clean
-- **Additional Features:** 100hr Sweat & Odor Protection, Clinical Strength, PH Balancing Minerals
+- **Target Audience:** Women
+- **Product Benefits:** Strengthening Skin Barrier
 
 ## Recent listing change
 

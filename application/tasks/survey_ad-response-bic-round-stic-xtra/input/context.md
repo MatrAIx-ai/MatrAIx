@@ -10,10 +10,10 @@
 - **Reviews:** ~6,549 customer ratings
 - **Writing Instrument Form:** Ballpoint Pen
 - **Color:** Blue
-- **Ink Color:** Blue
 - **Age Range Description:** Adult
 - **Drill Point:** Medium
 - **Additional Features:** Lightweight
+- **Line Size:** 1_0_1_9mm
 
 ## Pricing & recent change
 

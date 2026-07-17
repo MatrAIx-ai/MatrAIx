@@ -13,7 +13,6 @@
 - **Product Dimensions:** 58"L x 23"W x 43"H
 - **Closure Type:** Hook and Loop
 - **Unit Count:** 1.0 Count
-- **Material Type:** Fade-resistant fabric
 
 ## Recent listing change
 

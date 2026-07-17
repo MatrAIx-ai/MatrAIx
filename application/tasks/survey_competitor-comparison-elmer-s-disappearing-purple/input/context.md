@@ -12,8 +12,8 @@
 - **Material:** natrual
 - **Item Form:** Stick
 - **Special Feature:** Dries Clear, Repositionable, Strong, Washable
-- **Other Special Features Of The Product:** Dries Clear, Repositionable, Strong, Washable
-- **Container Type:** Stick
+- **Water Resistance Level:** Water Resistant
+- **Viscosity Level:** Low
 
 ## Pricing & recent change
 

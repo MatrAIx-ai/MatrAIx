@@ -12,8 +12,8 @@
 - **Item Dimensions L X W X H:** 3.01 x 4.64 x 8.73 inches
 - **Scent:** Fragranced
 - **Age Range Description:** Adult
-- **Scent Name:** Fragranced
 - **Skin Type:** Dry, Sensitive
+- **Product Benefits:** Moisturizing
 
 ## Recent listing change
 

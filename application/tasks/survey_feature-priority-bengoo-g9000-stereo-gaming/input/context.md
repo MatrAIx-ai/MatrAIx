@@ -10,10 +10,10 @@
 - **Reviews:** ~121,990 customer ratings
 - **Color:** Blue
 - **Ear Placement:** Over Ear
-- **Form Factor:** Over Ear
 - **Impedance:** 32 Ohms
 - **Model Name:** G9000
 - **Built In Media:** Headphone
+- **Age Range Description:** Adult
 
 ## Pricing & recent change
 

@@ -12,8 +12,8 @@
 - **Connectivity Technology:** USB
 - **Special Feature:** LED Lights, Programmable Buttons, Touch Scroll
 - **Movement Detection Technology:** Optical
-- **Additional Features:** LED Lights, Programmable Buttons, Touch Scroll
-- **Movement Detection:** Optical
+- **Button Quantity:** 11
+- **Hand Orientation:** Right
 
 ## Recent listing change
 

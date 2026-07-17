@@ -12,8 +12,8 @@
 - **Color:** Stainless steel
 - **Special Feature:** Stainless Steel,Adjustable,Led Lights,Energy Saving,Touch Control,Removable
 - **Finish Type:** Metal
-- **Additional Features:** Stainless Steel,Adjustable,Led Lights,Energy Saving,Touch Control,Removable
 - **Air Flow Capacity:** 900 Cubic Feet Per Minute
+- **Noise:** 60 Decibels
 
 ## Recent listing change
 

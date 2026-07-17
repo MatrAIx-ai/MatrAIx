@@ -10,10 +10,10 @@
 - **Reviews:** ~71,276 customer ratings
 - **Writing Instrument Form:** Ballpoint Pen
 - **Color:** Black
-- **Ink Color:** Black
 - **Age Range Description:** Adult
 - **Drill Point:** Medium
 - **Additional Features:** Long Lasting, Pocket Clip, Visible Ink Level
+- **Line Size:** 1.0-1.9mm
 
 ## Recent listing change
 

@@ -9,11 +9,11 @@
 - **Rating:** 4.5 out of 5 stars
 - **Reviews:** ~71,002 customer ratings
 - **Color:** BLACK
-- **Form Factor:** Stand alone
 - **Mounting Type:** Tabletop
 - **Other Special Features Of The Product:** Adjustable
 - **Antenna Location:** Bed, Desk, Sofa
 - **Adjustable Length:** Yes
+- **Fastening Type:** screw
 
 ## Pricing & recent change
 

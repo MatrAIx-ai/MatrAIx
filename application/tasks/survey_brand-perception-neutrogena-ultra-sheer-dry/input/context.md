@@ -13,7 +13,7 @@
 - **Sun Protection Factor:** 70 Sun Protection Factor (SPF)
 - **Item Weight:** 0.24 Pounds
 - **Number Of Items:** 1
-- **Scent Name:** Unscented
+- **Skin Type:** All
 
 ## Recent listing change
 

@@ -10,10 +10,10 @@
 - **Reviews:** ~107,239 customer ratings
 - **Color:** Black / Green
 - **Ear Placement:** Over Ear
-- **Form Factor:** Over Ear
 - **Impedance:** 32 Ohms
 - **Model Name:** Recon 50X
 - **Built In Media:** Cable
+- **Age Range Description:** Kid
 
 ## Pricing & recent change
 

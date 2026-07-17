@@ -12,8 +12,8 @@
 - **Vehicle Service Type:** Car, Truck, Van
 - **Material:** Polyester
 - **Product Dimensions:** 63"L x 33.8"W
-- **Compatible With Vehicle Type:** Car, Truck, Van
 - **Number Of Pieces:** 2
+- **Automotive Fit Type:** Universal Fit
 
 ## Recent listing change
 

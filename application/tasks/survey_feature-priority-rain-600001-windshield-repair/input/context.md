@@ -11,9 +11,8 @@
 - **Model:** 600001
 - **Item Weight:** 2.56 ounces
 - **Product Dimensions:** 1 x 4.38 x 8.56 inches
-- **Item Model Number:** 600001
 - **Exterior:** Machined
-- **Oem Part Number:** 600001
+- **Special Features:** Advanced Resin Formula
 
 ## Pricing & recent change
 

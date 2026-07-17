@@ -11,9 +11,9 @@
 - **Connector Type:** Micro USB
 - **Cable Type:** USB-A to Micro USB
 - **Special Feature:** Durable
-- **Other Special Features Of The Product:** Durable
 - **Compatible Phone Models:** Android Smartphones, Micro USB Devices
 - **Connector Gender:** Male-to-Male
+- **Data Transfer Rate:** 0.48 Megabits Per Second
 
 ## Recent listing change
 

@@ -10,10 +10,10 @@
 - **Reviews:** ~110,159 customer ratings
 - **Color:** Black
 - **Ear Placement:** In Ear
-- **Form Factor:** In Ear
 - **Impedance:** 16 Ohms
 - **Model Name:** soundcore P20i
 - **Age Range Description:** All
+- **Customer Package Type:** Rigid or Semi-Rigid Case
 
 ## Pricing & recent change
 

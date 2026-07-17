@@ -10,10 +10,10 @@
 - **Reviews:** ~115,236 customer ratings
 - **Color:** Black
 - **Ear Placement:** In Ear
-- **Form Factor:** In Ear
 - **Impedance:** 16 Ohms
 - **Model Name:** TOZO A1
 - **Built In Media:** Charging Case, Eartip, TOZO A1 Mini Wireless Earbuds, USB-C (A to C) cable (20cm), User Manual
+- **Age Range Description:** ALL
 
 ## Recent listing change
 

@@ -9,11 +9,11 @@
 - **Rating:** 4.8 out of 5 stars
 - **Reviews:** ~23,840 customer ratings
 - **Color:** B-Silver
-- **Form Factor:** Tower
 - **Compatible Phone Models:** all
 - **Compatible Devices:** MacBook 12 / 13, MacBook Air 13, MacBook Pro 13 / 15 / 2018 / 2017 / 2016, Lenovo ThinkPad, Dell, HP, ASUS, Chromebook, and other 10-15.6" Laptops
 - **Mounting Type:** Tabletop
 - **Other Special Features Of The Product:** Ergonomic
+- **Antenna Location:** Desk
 
 ## Recent listing change
 

@@ -10,10 +10,10 @@
 - **Reviews:** ~18,796 customer ratings
 - **Writing Instrument Form:** Roller Ball Pen
 - **Color:** Black
-- **Ink Color:** Black
 - **Age Range Description:** Adult
 - **Drill Point:** Fine
 - **Additional Features:** Erasable, Refillable, Retractable
+- **Line Size:** 0.7mm
 
 ## Pricing & recent change
 

@@ -12,8 +12,8 @@
 - **Special Feature:** Fog Proof
 - **Objective Lens Diameter:** 42 Millimeters
 - **Magnification Maximum:** 8 x
-- **Features:** Fog Proof
 - **Specific Uses:** Bird Watching, Hunting, Shooting
+- **Mount Type:** Tripod Mount
 
 ## Pricing & recent change
 

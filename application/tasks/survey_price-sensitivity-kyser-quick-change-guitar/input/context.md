@@ -10,10 +10,10 @@
 - **Reviews:** ~10,723 customer ratings
 - **Color:** Black
 - **Material:** Aluminum
-- **Style:** Black
 - **Item Weight:** 0.01 Pounds
 - **Instrument:** Guitar
 - **Global Trade Identification Number:** 00009265016108
+- **Hand Orientation:** ambidextrous
 
 ## Pricing & recent change
 

@@ -12,8 +12,8 @@
 - **Connectivity Technology:** Bluetooth
 - **Power Source:** Battery Powered
 - **Material:** Plastic
-- **Additional Features:** Quick Pairing Mode
-- **Enclosure Material:** Plastic
+- **Color:** White
+- **Supported Media Type:** MP3
 
 ## Pricing & recent change
 
