@@ -151,10 +151,28 @@ supported-dimension count per user is expected, not a bug.
    ```bash
    gh pr checkout 174 && gh pr checkout 264   # or merge both into your working branch
    ```
-4. **The selection index** `persona/human_extraction/data/amazon/selected_users_100k.parquet`
-   is **git-ignored**. Obtain a copy, or regenerate it deterministically via
-   `persona/human_extraction/notebooks/explore_amazon_data.ipynb` (`SEED=20260705`). It must
-   match the reference run's bucket assignment, or coverage bookkeeping breaks.
+4. **The selection index — download the exact file; do NOT regenerate it.**
+   `selected_users_100k.parquet` is git-ignored, so the authoritative copy — the one that
+   produced the 38,219 rows — is published on **HF PR #53** at
+   `amazon/extraction_v1/qwen36/final_20260715/selected_users_100k.parquet`
+   (100,000 rows / 100,000 unique `user_id` / 256 buckets), with its hash alongside in
+   `selected_users_100k.sha256`:
+   ```
+   sha256  8a0084628f32a06f8f823126f819ef1abcc8387978b44f79eb4f923cb5e8ce12
+   bytes   3457804
+   ```
+   ```bash
+   huggingface-cli download MatrAIx2026/MatrAIx2026 --repo-type dataset \
+     --revision refs/pr/53 \
+     --include 'amazon/extraction_v1/qwen36/final_20260715/selected_users_100k*' \
+     --local-dir ./sel
+   sha256sum ./sel/amazon/extraction_v1/qwen36/final_20260715/selected_users_100k.parquet
+   ```
+   **Regenerating the index is NOT reliable.** An earlier version of this brief suggested
+   regenerating it via `explore_amazon_data.ipynb` (`SEED=20260705`); a second operator did
+   so and got **different per-bucket counts** (bucket 10: 394 vs 403; bucket 47: 398 vs 372).
+   A mismatched index silently diverges the `user_id` sets and corrupts both coverage
+   bookkeeping and the merged dataset. Verify the SHA-256 before extracting anything.
 5. **HF access** to the gated source dataset (`HF_TOKEN` with access granted).
 
 ## 5. Hard rules
@@ -168,7 +186,7 @@ supported-dimension count per user is expected, not a bug.
 
 ## 6. Recommended plan
 
-1. **Land/checkout runner PRs #174 and #264** (§4.3) and obtain the selection index (§4.4).
+1. **Land/checkout runner PRs #174 and #264** (§4.3) and **download** the exact selection index, verifying its SHA-256 (§4.4 — do not regenerate it).
 2. **Seed resume for the 14 partials:** download those buckets' shards from HF PR #53 into
    your output dir first, so the runner skips their already-done users:
    ```bash
