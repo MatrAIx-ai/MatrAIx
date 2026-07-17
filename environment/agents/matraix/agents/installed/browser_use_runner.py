@@ -28,22 +28,6 @@ def _create_llm(model: str):
     provider, _, bare = model.partition("/")
     bare = bare or model
 
-    if provider == "bedrock":
-        # Amazon Bedrock via the Anthropic SDK's Bedrock client. Auth uses a
-        # Bedrock API key (bearer token) from AWS_BEARER_TOKEN_BEDROCK plus
-        # AWS_REGION — no SigV4/botocore required. ``bare`` is the Bedrock model
-        # id, e.g. ``us.anthropic.claude-haiku-4-5-20251001-v1:0``.
-        from anthropic import AsyncAnthropicBedrock
-        from browser_use import ChatAnthropic
-
-        region = (os.environ.get("AWS_REGION") or "us-east-1").strip()
-
-        class _ChatAnthropicBedrock(ChatAnthropic):
-            def get_client(self):  # type: ignore[override]
-                return AsyncAnthropicBedrock(aws_region=region)
-
-        return _ChatAnthropicBedrock(model=bare)
-
     if provider in ("anthropic", "") and (
         bare.startswith("claude") or provider == "anthropic"
     ):
