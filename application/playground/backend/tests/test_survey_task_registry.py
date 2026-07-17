@@ -53,7 +53,7 @@ def test_survey_instruction_markdown_includes_product_concept():
 
 def test_harbor_tasks_expose_summary_metadata():
     tasks = list_survey_harbor_tasks()
-    assert len(tasks) == 6
+    assert len(tasks) >= 6
     product = next(
         task for task in tasks if task.task_path.endswith("example-survey_product-feedback")
     )
@@ -67,7 +67,7 @@ def test_harbor_tasks_expose_summary_metadata():
     assert not product.profile_markdown
     assert product.questionnaire is None
     contributing = [task for task in tasks if task.survey_kind == "contributing"]
-    assert len(contributing) == 5
+    assert len(contributing) >= 5
 
 
 def test_harbor_task_detail_includes_full_survey_profile():

@@ -279,8 +279,9 @@ function ChatbotEvalCockpit({
   const tasksQuery = useQuery({
     queryKey: ["chatbot-eval-tasks"],
     queryFn: api.listChatbotEvalTasks,
+    enabled: isActive,
     staleTime: 60_000,
-    refetchInterval: sidecarStartingId ? 3_000 : 15_000,
+    refetchInterval: isActive && sidecarStartingId ? 3_000 : isActive ? 15_000 : false,
   });
   const chatbotTasks = useMemo(
     () => sortByAvailability(tasksQuery.data?.tasks ?? []),

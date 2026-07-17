@@ -20,9 +20,7 @@ def _registry() -> Dict[str, SurveyHarborTask]:
     for record in discover_survey_application_tasks():
         task_dir = root / record.task_path
         yaml_questionnaire_id, question_count = read_survey_questionnaire_list_meta(task_dir)
-        questionnaire_id = (
-            survey_questionnaire_id_for_task_path(record.task_path) or yaml_questionnaire_id or ""
-        )
+        questionnaire_id = survey_questionnaire_id_for_task_path(record.task_path, repo_root=root) or yaml_questionnaire_id or ""
         if not questionnaire_id:
             continue
         task_id = "harbor-{}".format(task_id_from_folder(record.folder_name))

@@ -147,6 +147,7 @@ export function WebEvalCockpit({
   const tasksQuery = useQuery<WebEvalTasksResponse>({
     queryKey: ["web-eval-tasks"],
     queryFn: listWebEvalTasks,
+    enabled: isActive,
     staleTime: 10 * 60_000,
     refetchOnWindowFocus: false,
     retry: 1,

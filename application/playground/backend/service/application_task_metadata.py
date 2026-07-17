@@ -7,9 +7,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List
 
-from backend.service.application_types import normalize_metadata_type
+from backend.service.application_types import CANONICAL_APPLICATION_TYPES, normalize_metadata_type
 from backend.service.playground_task_registry import (
     PlaygroundTaskEntry,
+    default_environment_label,
+    default_os_app_backend,
+    default_os_app_platform,
     get_playground_entry,
     resolve_task_kind,
 )
@@ -102,19 +105,59 @@ def title_from_harbor_task_name(task_name: str) -> str:
     return " ".join(word.capitalize() for word in words)
 
 
+def infer_playground_entry(
+    folder_name: str,
+    *,
+    meta_type: str,
+    os: str,
+) -> PlaygroundTaskEntry | None:
+    """Build a default Playground routing entry from Harbor ``metadata.type``."""
+    if meta_type not in CANONICAL_APPLICATION_TYPES:
+        return None
+    if meta_type == "survey":
+        return PlaygroundTaskEntry(application_type="survey")
+    if meta_type == "chatbot":
+        return PlaygroundTaskEntry(application_type="chatbot")
+    if meta_type == "web":
+        return PlaygroundTaskEntry(application_type="web")
+    pe = PlaygroundTaskEntry(application_type="os-app")
+    os_app_backend = default_os_app_backend(meta_type, pe, os)
+    os_app_platform = default_os_app_platform(meta_type, os_app_backend, os)
+    return PlaygroundTaskEntry(
+        application_type="os-app",
+        os_app_backend=os_app_backend,
+        os_app_platform=os_app_platform,
+        environment_label=default_environment_label(os_app_platform),
+    )
+
+
+def resolve_playground_entry(
+    folder_name: str,
+    *,
+    meta_type: str,
+    os: str,
+) -> PlaygroundTaskEntry | None:
+    """Return registry override or inferred Playground entry for a task folder."""
+    return get_playground_entry(folder_name) or infer_playground_entry(
+        folder_name,
+        meta_type=meta_type,
+        os=os,
+    )
+
+
 def parse_application_task(task_dir: Path) -> ApplicationTaskRecord | None:
     raw = parse_task_toml(task_dir)
     if not raw:
         return None
 
     folder_name = task_dir.name
-    playground = get_playground_entry(folder_name)
-    if playground is None:
-        return None
-
     meta = raw.get("metadata") if isinstance(raw.get("metadata"), dict) else {}
     meta_type = normalize_metadata_type(str(meta.get("type") or ""))
     os = str(meta.get("os") or "").strip().lower()
+    playground = resolve_playground_entry(folder_name, meta_type=meta_type, os=os)
+    if playground is None:
+        return None
+
     domain = str(meta.get("domain") or "").strip()
     difficulty = str(meta.get("difficulty") or "easy").strip()
     tags = _as_str_list(meta.get("tags"))

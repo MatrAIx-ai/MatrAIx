@@ -176,6 +176,7 @@ export function SurveyEvalCockpit({
   const harborTasksQuery = useQuery<SurveyHarborTasksResponse>({
     queryKey: ["survey-eval-harbor-tasks"],
     queryFn: listSurveyHarborTasks,
+    enabled: isActive,
     staleTime: 10 * 60_000,
     refetchOnWindowFocus: false,
     retry: 1,
