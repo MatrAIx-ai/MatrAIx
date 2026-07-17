@@ -11,9 +11,10 @@ from backend.service.playground_task_registry import (
     default_os_app_platform,
     default_environment_label,
 )
+from backend.service.playground_task_registry_cache import get_cached_registry
 
 
-def _registry() -> Dict[str, OsAppEvalTask]:
+def _build_registry() -> Dict[str, OsAppEvalTask]:
     tasks: Dict[str, OsAppEvalTask] = {}
     for record in discover_application_tasks(application_type="os-app"):
         assert record.playground is not None
@@ -42,6 +43,10 @@ def _registry() -> Dict[str, OsAppEvalTask]:
             os_app_backend=os_app_backend,
         )
     return tasks
+
+
+def _registry() -> Dict[str, OsAppEvalTask]:
+    return get_cached_registry("os-app", _build_registry)
 
 
 def list_os_app_eval_tasks() -> List[OsAppEvalTask]:

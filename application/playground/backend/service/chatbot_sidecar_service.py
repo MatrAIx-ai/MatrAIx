@@ -167,6 +167,11 @@ def _standalone_compose_path(spec: SidecarSpec, compose_dir: Path) -> Path:
     )
 
 
+def sidecar_can_start(application_id: str) -> bool:
+    spec = _SIDECAR_SPECS.get(application_id)
+    return bool(spec and spec.compose_dir and spec.service_name and spec.build_context)
+
+
 def sidecar_status(application_id: str, *, repo_root: Path | None = None) -> dict[str, Any]:
     spec = _SIDECAR_SPECS.get(application_id)
     if spec is None:

@@ -12,9 +12,10 @@ from backend.service.example_task_catalog import (
 from backend.service.survey_harbor_types import SurveyHarborTask
 from backend.service.survey_task_registry import survey_questionnaire_id_for_task_path
 from backend.service.task_list_summary import read_survey_questionnaire_list_meta
+from backend.service.playground_task_registry_cache import get_cached_registry
 
 
-def _registry() -> Dict[str, SurveyHarborTask]:
+def _build_registry() -> Dict[str, SurveyHarborTask]:
     tasks: Dict[str, SurveyHarborTask] = {}
     root = repo_root()
     for record in discover_survey_application_tasks():
@@ -39,6 +40,10 @@ def _registry() -> Dict[str, SurveyHarborTask]:
             tags=tuple(record.tags),
         )
     return tasks
+
+
+def _registry() -> Dict[str, SurveyHarborTask]:
+    return get_cached_registry("survey", _build_registry)
 
 
 def list_survey_harbor_tasks() -> List[SurveyHarborTask]:

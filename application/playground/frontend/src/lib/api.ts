@@ -12,6 +12,7 @@ import type {
   PersonaPoolPersonaDetail,
   PersonaPoolSampleResult,
   TaskDetail,
+  TaskPersonaStrategy,
   PersonaCohortDetail,
   PersonaCohortSummary,
   PreflightResponse,
@@ -271,6 +272,10 @@ export const api = {
   },
   getTaskDetail: (taskPath: string) =>
     request<TaskDetail>(`/api/tasks/detail${qs({ taskPath })}`),
+  getTaskPersonaStrategy: (taskPath: string) =>
+    request<{ personaStrategy: TaskPersonaStrategy | null }>(
+      `/api/tasks/persona-strategy${qs({ taskPath })}`,
+    ),
   samplePersonaPool: (body: {
     pool?: string;
     sampleSize?: number;

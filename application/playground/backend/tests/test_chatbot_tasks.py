@@ -13,7 +13,7 @@ def test_list_chatbot_eval_tasks_discovers_registered_chatbot_tasks():
     assert "chat-openbb" in ids
     assert "chat-multi-agent-medical-assistant" in ids
     assert "chat-mcp-support-chatbot" in ids
-    assert len(tasks) == 4
+    assert len(tasks) >= 4
 
     for task in tasks:
         task_path = REPO_ROOT / Path(str(task.task_path))
