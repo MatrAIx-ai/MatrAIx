@@ -128,7 +128,7 @@ DEFAULT_OPENAI_API_BASE = "https://api.openai.com/v1"
 ProviderName = Literal["openai", "anthropic", "qwen"]
 DEFAULT_MODELS: dict[ProviderName, str] = {
     "openai": "gpt-4o-mini",
-    "anthropic": "claude-sonnet-4-20250514",
+    "anthropic": "claude-sonnet-4-6",
     "qwen": "qwen-plus",
 }
 
