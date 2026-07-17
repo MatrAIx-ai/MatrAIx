@@ -15,7 +15,9 @@ Requires an LLM API key for real agent turns (`/ready` checks for one).
 
 ## Default: Qwen
 
-Compose defaults to `DEPRESSION_AGENT_PROVIDER=qwen` and `DEPRESSION_AGENT_MODEL=qwen-plus`.
+Compose defaults to `DEPRESSION_AGENT_PROVIDER=qwen`. When `DEPRESSION_AGENT_MODEL`
+is unset, the sidecar picks the provider default (`qwen-plus`, `gpt-4o-mini`, or
+`claude-sonnet-4-6`).
 
 ```bash
 cd environment/task-environments/application/chatbot-api-sidecar_depression
@@ -35,7 +37,7 @@ export QWEN_API_BASE=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
 | Provider | Env | Default model |
 |----------|-----|---------------|
 | OpenAI | `DEPRESSION_AGENT_PROVIDER=openai` + `OPENAI_API_KEY` | `gpt-4o-mini` |
-| Anthropic | `DEPRESSION_AGENT_PROVIDER=anthropic` + `ANTHROPIC_API_KEY` | `claude-sonnet-4-20250514` |
+| Anthropic | `DEPRESSION_AGENT_PROVIDER=anthropic` + `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
 | Auto | `DEPRESSION_AGENT_PROVIDER=auto` | first key: OpenAI → Anthropic → Qwen |
 
 ## Local dev (without Harbor `main`)
