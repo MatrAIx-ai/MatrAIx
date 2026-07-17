@@ -1,0 +1,26 @@
+# Backtest portfolio asset allocation web task — persona-browser-use on
+# Amazon Bedrock (Claude Sonnet 4.5). Auth via a Bedrock API key:
+#   export AWS_BEARER_TOKEN_BEDROCK=...   # Bedrock API key (bearer token)
+#   export AWS_REGION=us-east-1
+#
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-web-portfoliovisualizer-backtest-bedrock-sonnet.yaml
+
+job_name: appSim-web-portfoliovisualizer-backtest-bedrock-sonnet
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+n_concurrent_trials: 1
+quiet: false
+
+environment:
+  type: docker
+  delete: true
+
+agents:
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0042.yaml
+
+tasks:
+  - path: application/tasks/web-portfoliovisualizer_backtest-allocation

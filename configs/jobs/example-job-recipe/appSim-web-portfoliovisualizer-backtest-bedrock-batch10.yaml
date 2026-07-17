@@ -1,0 +1,80 @@
+# Backtest portfolio asset allocation — BATCH of 10 personas, stratified by
+# risk_tolerance (2 per band) across working-age brackets (25-74) and mixed
+# socioeconomic bands. Cohort follows the task's persona_strategy.json.
+#
+# persona-browser-use (DOM-driven) on Amazon Bedrock (Claude Sonnet 4.5).
+# Haiku 4.5 fails browser-use's structured AgentOutput schema (emits `thinking`
+# but not the required `action` field), so this batch uses Sonnet 4.5.
+# Auth via a Bedrock API key:
+#   export AWS_BEARER_TOKEN_BEDROCK=...   # Bedrock API key (bearer token)
+#   export AWS_REGION=us-east-1
+#
+# Run:
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-web-portfoliovisualizer-backtest-bedrock-batch10.yaml
+#
+# Then aggregate + report (the batch metrics in reporting.json only become
+# meaningful with multiple personas). To also populate the LLM summaries/judges:
+#   export PLAYGROUND_REPORTING_ENABLE_LLM=1
+#
+# Personas (risk_tolerance | age | socioeconomic_band):
+#   0060 Balanced 25-34 Upper-middle      0130 Balanced 45-54 Lower-middle
+#   0069 Risk-averse 25-34 High income    0190 Risk-averse 65-74 Middle
+#   0042 Cautious 55-64 Upper-middle      0095 Cautious 35-44 Lower-middle
+#   0070 Risk-seeking 25-34 Lower-middle  0164 Risk-seeking 55-64 Upper-middle
+#   0088 Risk-tolerant 35-44 Upper-middle 0129 Risk-tolerant 45-54 High income
+
+job_name: appSim-web-portfoliovisualizer-backtest-bedrock-batch10
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+n_concurrent_trials: 2
+quiet: false
+
+environment:
+  type: docker
+  delete: true
+
+agents:
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0060.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0130.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0069.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0190.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0042.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0095.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0070.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0164.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0088.yaml
+  - name: persona-browser-use
+    model_name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    kwargs:
+      persona_path: persona/datasets/bench-dev-sample/persona_0129.yaml
+
+tasks:
+  - path: application/tasks/web-portfoliovisualizer_backtest-allocation

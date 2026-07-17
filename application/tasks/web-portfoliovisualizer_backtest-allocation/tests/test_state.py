@@ -180,6 +180,14 @@ def test_judgement():
     )
     disclosure_text = " | ".join(flagged) if flagged else "No risk concerns were raised."
 
+    # Shared web `decision` contract (application/task-spec/web): a persona who
+    # is satisfied adopts the allocation (selected); otherwise they reject it.
+    # The basis for a portfolio choice is always fit-to-goal/risk. Finance-only
+    # signals are kept behind the `task_` prefix per the contributor extension
+    # rules; `risk_posture` reuses the recommended standard facet.
+    decision_outcome = "selected" if data.get("satisfied") else "rejected"
+    decision_subject_id = f"alloc_eq{round(equity_weight)}"
+
     contexts: list[dict[str, object]] = [
         {
             "key": "task_outcome.primary",
@@ -208,11 +216,18 @@ def test_judgement():
             "label": "Portfolio decision",
             "contextType": "decision",
             "facets": [
-                {"key": "goal_alignment", "label": "Goal alignment", "role": "primary", "kind": "categorical", "value": goal_alignment},
-                {"key": "risk_tolerance", "label": "Risk tolerance", "role": "primary", "kind": "categorical", "value": risk_tolerance},
-                {"key": "investment_goal", "label": "Investment goal", "role": "evidence", "kind": "categorical", "value": investment_goal},
-                {"key": "equity_weight_percent", "label": "Equity weight (%)", "role": "score", "kind": "numerical", "value": equity_weight},
+                # Standard web `decision` facets (keep keys exactly as specified).
+                {"key": "decision_outcome", "label": "Decision outcome", "role": "primary", "kind": "categorical", "value": decision_outcome},
+                {"key": "basis_primary", "label": "Primary basis", "role": "primary", "kind": "categorical", "value": "fit"},
                 {"key": "reason", "label": "Reason", "role": "explanation", "kind": "textual", "value": reason.strip()},
+                {"key": "decision_subject_label", "label": "Chosen allocation", "role": "evidence", "kind": "textual", "value": alloc_summary},
+                {"key": "decision_subject_id", "label": "Allocation id", "role": "evidence", "kind": "categorical", "value": decision_subject_id},
+                # Recommended standard extra facet.
+                {"key": "risk_posture", "label": "Risk posture", "role": "primary", "kind": "categorical", "value": risk_tolerance},
+                # Task-specific finance signals (task_ prefix per extension rules).
+                {"key": "task_goal_alignment", "label": "Goal alignment", "role": "evidence", "kind": "categorical", "value": goal_alignment},
+                {"key": "task_investment_goal", "label": "Investment goal", "role": "evidence", "kind": "categorical", "value": investment_goal},
+                {"key": "task_equity_weight_percent", "label": "Equity weight (%)", "role": "score", "kind": "numerical", "value": equity_weight},
             ],
         },
         {
