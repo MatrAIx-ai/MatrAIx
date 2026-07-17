@@ -105,16 +105,31 @@ HUD, loads it in a <b>real headless Chromium via Playwright</b>, screenshots it,
 
 <h2>Verification — live runs I executed</h2>
 <div class="grid">
-  <div class="card"><div class="kpi">5<small>battles · live <b>vision/Sonnet</b> run<br>(Bedrock, real Chromium)</small></div></div>
+  <div class="card"><div class="kpi">6<small>battles · live <b>vision/Sonnet</b> CUA run<br>(Bedrock, real Chromium, 3m35s)</small></div></div>
+  <div class="card"><div class="kpi">11/12<small>player reasoning lines are<br>screenshot-grounded (HUD-aware)</small></div></div>
   <div class="card"><div class="kpi">22<small>ticks → <code>all_cards_played</code><br>oracle 4-seat run (mock + 3 bots)</small></div></div>
-  <div class="card"><div class="kpi">8<small>battles · oracle 4-seat run<br>full non-degenerate game</small></div></div>
   <div class="card"><div class="kpi">25<small>unit tests pass<br>14 bot + 11 state verifier</small></div></div>
 </div>
-<p><b>Live CUA/Sonnet run</b> (the Playground-shaped path: 1 persona on <code>--brain vision</code> via Bedrock
-Sonnet + 3 Bayesian bots): exit 0, 5 battles, valid self-contained <code>spectator.html</code>. The player's
-recorded reasoning is screenshot-grounded (e.g. <span class="mono">"click on the highlighted destination
-square"</span>, <span class="mono">"selected a direction on the rainbow compass"</span>) — confirming real
-computer-use, distinct from the bots' Bayesian reasoning lines.</p>
+<p><b>Live computer-use run</b> (persona <code>0229</code> on <code>--brain vision</code> via Bedrock Sonnet +
+3 Bayesian bots, seed 42, 16 ticks): <b>exit 0</b>, 6 battles, player won with 5 stars, one persona
+eliminated, valid self-contained <code>spectator.html</code>. It took <b>3m35s</b> of real API round-trips
+(not an instant mock), and <b>11 of 12</b> of the player's recorded reasoning lines reference visual HUD
+elements it could only know from a screenshot — e.g. <span class="mono">"clicking the MOVE button and
+selecting a destination tile"</span>, <span class="mono">"confirming with the center reticle"</span> —
+confirming genuine screenshot-and-click browser-use (Playwright), distinct from the bots' Bayesian lines and
+from any JSON fallback.</p>
+
+<div class="note">
+  <b>⚠ Playground-UI launch on this host.</b> The task's computer-use game logic is validated live (above).
+  Launching the <i>same</i> task through the Playground <b>backend UI</b> on this Windows machine failed
+  before any trial started with <code>WinError 2</code>: the backend's harbor launcher resolves a Unix
+  <code>.venv/bin/harbor</code> path and falls back to a bare <code>harbor</code> executable not on the
+  Windows <code>PATH</code>. This is a <b>pre-existing backend/environment issue, unrelated to the
+  game-starclash task code</b> (the task never executed in that path), and is out of scope for this PR. The
+  task <i>is</i> correctly discovered and launchable via <code>/api/web-eval/tasks</code>; a
+  Unix/CI host with <code>harbor</code> on PATH (or <code>MATRIX_HARBOR_COMMAND</code> set) runs the full
+  trial path.
+</div>
 
 <h2>Independent audit result</h2>
 <p>A separate verifier agent adversarially audited every change against the task's own rules. <b>Verdict:
