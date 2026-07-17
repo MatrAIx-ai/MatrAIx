@@ -104,6 +104,11 @@ def test_application_task_matches_type_contract(task_dir: Path) -> None:
         not (task_dir / "input" / "output_schema.md").exists(),
         "do not add input/output_schema.md (platform owns the answer envelope)",
     )
+    _require(
+        errors,
+        not (task_dir / "verifier").exists(),
+        "do not commit verifier/ under the task folder (trial runtime output only)",
+    )
 
     # Survey / chatbot / web verifiers emit structured_output via test_state.py.
     # Some os-app examples still use shell-only verifiers.

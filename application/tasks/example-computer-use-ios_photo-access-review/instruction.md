@@ -7,7 +7,7 @@ Read the scenario brief in `input/context.md`, then review photo access for one 
 3. Decide the least-permissive access level you would grant that app:
    `full_access`, `selected_photos`, or `none`.
 
-Save `/tmp/os-app-ios-photo-access-review/decision.json`:
+Save `/app/output/decision.json`:
 
 ```json
 {

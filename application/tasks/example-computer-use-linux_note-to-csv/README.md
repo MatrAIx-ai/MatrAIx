@@ -23,8 +23,8 @@ uv run harbor run -p application/tasks/example-computer-use-linux_note-to-csv -a
 
 ## Output
 
-- `/tmp/os-app-linux-note-to-csv/cleaned_list.csv`
-- `/tmp/os-app-linux-note-to-csv/submission.json`
+- `/app/output/cleaned_list.csv`
+- `/app/output/submission.json`
 
 The verifier checks:
 

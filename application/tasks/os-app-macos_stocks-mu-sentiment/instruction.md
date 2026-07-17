@@ -32,7 +32,7 @@ provided above.
    content, and the earnings context provided above, decide whether you would
    **buy**, **sell**, or **hold** MU right now.
 
-Save `/tmp/os-app-macos-stocks-mu-sentiment/sentiment.json`:
+Save `/app/output/sentiment.json`:
 
 ```json
 {
