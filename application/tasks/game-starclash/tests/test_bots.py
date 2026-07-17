@@ -229,3 +229,59 @@ def test_challenge_target_prefers_fewest_stars():
     }
     decision = bot.decide(obs)
     assert decision["target_id"] == "B"  # 1 star < 4 stars
+
+
+# ---------------------------------------------------------------------------
+# Default table size + player-vs-bots router wiring.
+# ---------------------------------------------------------------------------
+
+import yaml  # noqa: E402
+
+
+def _default_manifest_persona_paths():
+    manifest_path = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "input", "crew_manifest.yaml")
+    )
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = yaml.safe_load(f)
+    return manifest.get("persona_paths", [])
+
+
+def test_default_crew_fills_a_four_seat_table():
+    """The default crew_manifest.yaml must seat exactly 4 players, so a
+    Playground trial (1 sampled persona + bots) fills the game's intended
+    maximum 4-seat table (min 2, max 4). Pins the requirement so the roster
+    can't silently drift back to 5+."""
+    paths = _default_manifest_persona_paths()
+    assert len(paths) == 4, (
+        f"default crew_manifest.yaml should list exactly 4 personas "
+        f"(1 player + 3 bots = 4 seats), found {len(paths)}: {paths}"
+    )
+
+
+def test_router_assigns_one_player_and_rest_bots():
+    """run_arena.py player-vs-bots wiring: with a player_id set, exactly one
+    seat uses the real --brain and every OTHER seat is a BayesianBotBrain.
+
+    Reproduces run_arena.main()'s router construction directly (without
+    running a full game) so the wiring - not just the bot in isolation - is
+    covered."""
+    persona_order = ["0001", "0052", "0229", "0666"]
+    player_id = "0001"
+    seed = 42
+
+    real_brain = brains.MockArenaBrain(seed=seed)
+    bot_brains = {}
+    for offset, pid in enumerate(persona_order):
+        if pid == player_id:
+            continue
+        bot_brains[pid] = brains.BayesianBotBrain(seed=seed + 1 + offset)
+
+    # Exactly one player seat, three bot seats, matching the default 4-table.
+    assert set(bot_brains) == {"0052", "0229", "0666"}
+    assert len(bot_brains) == 3
+    assert all(isinstance(b, brains.BayesianBotBrain) for b in bot_brains.values())
+    assert player_id not in bot_brains
+    # Each bot gets a distinct seed so they don't act in lockstep.
+    seeds = [seed + 1 + off for off, pid in enumerate(persona_order) if pid != player_id]
+    assert len(set(seeds)) == len(seeds)

@@ -73,7 +73,7 @@ Because independent sessions don't share any state, they can genuinely run in pa
 - `input/crew_manifest_meticulous.yaml` — every persona in the 14-persona sample with `cog_detail_orientation: "Very high"` (there are exactly 4: personas `0042`, `0229`, `0666`, `0712`).
 - `input/crew_manifest_careless.yaml` — every persona in the sample with `cog_detail_orientation: "Low"` (also exactly 4: personas `0727`, `0773`, `0855`, `2002`).
 
-Both rosters use every persona in the sample that genuinely carries the target value — the sample doesn't yet have 5+ personas at either extreme, so these manifests run with 4 personas each rather than padding with personas that don't actually match. The default `input/crew_manifest.yaml` (personas `0001`, `0052`, `0229`, `0666`, `0042`) already serves as a reasonable "mixed" roster for comparison: its `cog_detail_orientation` values are `None`, `Moderate`, `Very high`, `Very high`, `Very high` — skewed toward meticulous but not uniform, so it's a usable (if imperfect) mixed baseline without needing a third new file.
+Both rosters use every persona in the sample that genuinely carries the target value — the sample doesn't yet have 5+ personas at either extreme, so these manifests run with 4 personas each rather than padding with personas that don't actually match. The default `input/crew_manifest.yaml` (personas `0001`, `0052`, `0229`, `0666`) is a 4-persona "mixed" roster for comparison: its `cog_detail_orientation` values are `None`, `Moderate`, `Very high`, `Very high` — skewed toward meticulous but not uniform, so it's a usable (if imperfect) mixed baseline without needing a third new file. Four is also the game's intended maximum table size (min 2, max 4), so the default roster fills a full table.
 
 Run all three side by side:
 
@@ -120,7 +120,17 @@ independent trials), but Starclash needs a full table of 2–4 players. The task
 bridges that gap with a **player-vs-bots** mode: the sampled persona plays as
 the real player and every other seat is filled by a computer bot, so a
 one-persona trial is still a complete, non-degenerate game rather than a lone
-persona with no one to duel.
+persona with no one to duel. The default `crew_manifest.yaml` has 4 personas, so
+a default trial is 1 sampled player + 3 bots = a full 4-seat table (the game's
+intended maximum).
+
+> **Not yet a real multi-agent game.** Every other seat is a *computer bot*
+> (`BayesianBotBrain`), not a second sampled persona. A trial therefore studies
+> **one** persona's play against fixed bot opponents. Running several distinct
+> *sampled* personas in the same live game (true multi-agent) needs Playground
+> orchestration changes — one trial that hosts N persona agents in a shared
+> match — which is not implemented here; see the "multiple persona-style
+> sessions" note above for the current across-sessions comparison approach.
 
 - `scripts/brains.py:BayesianBotBrain` is the bot. It has no API key and is
   seeded (deterministic). It reasons over the **public** `arena_card_counts`
