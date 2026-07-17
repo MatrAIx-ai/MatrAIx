@@ -1,4 +1,4 @@
-"""FastAPI server for the PersonaBench Viewer."""
+"""FastAPI server for the Playground Viewer."""
 
 import html
 import json
@@ -137,8 +137,8 @@ def create_app(
             await callback()
 
     app = FastAPI(
-        title="PersonaBench Viewer",
-        description="API for browsing PersonaBench simulation jobs and trials",
+        title="Playground Viewer",
+        description="API for browsing Playground simulation jobs and trials",
         version="0.1.0",
         lifespan=lifespan,
     )

@@ -1,7 +1,7 @@
 [project]
-name = "personabench"
+name = "matraix"
 version = "0.1.0"
-description = "PersonaBench utilities, task catalogs, and the Harbor runtime foundation for persona-conditioned simulations."
+description = "MatrAIx – persona-conditioned agent evaluation: task catalogs, Harbor runtime, and the Playground interactive harness."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -45,18 +45,18 @@ amazon-modal = [
     "tqdm>=4.66.0",
 ]
 cloud = [
-    "personabench[cwsandbox]",
-    "personabench[daytona]",
-    "personabench[e2b]",
-    "personabench[gke]",
-    "personabench[islo]",
-    "personabench[langsmith]",
-    "personabench[modal]",
-    "personabench[novita]",
-    "personabench[runloop]",
-    "personabench[tensorlake]",
-    "personabench[use-computer]",
-    "personabench[wandb]",
+    "matraix[cwsandbox]",
+    "matraix[daytona]",
+    "matraix[e2b]",
+    "matraix[gke]",
+    "matraix[islo]",
+    "matraix[langsmith]",
+    "matraix[modal]",
+    "matraix[novita]",
+    "matraix[runloop]",
+    "matraix[tensorlake]",
+    "matraix[use-computer]",
+    "matraix[wandb]",
 ]
 computer-1 = [
     "anthropic[bedrock]>=0.102.0",
@@ -75,8 +75,9 @@ runloop = ["dockerfile-parse>=2.0.1", "runloop-api-client>=1.23.2"]
 tensorlake = ["tensorlake>=0.5.18"]
 tinker = ["tinker>=0.14.0", "tinker-cookbook>=0.1.0"]
 use-computer = ["use-computer[harbor,agents]>=0.0.44"]
+viz = ["matplotlib>=3.9.0", "numpy>=1.26.0", "pycirclize>=1.7.0"]
 wandb = ["cwsandbox>=0.23.3", "wandb>=0.27"]
-all = ["personabench[cloud]", "personabench[computer-1]", "personabench[tinker]"]
+all = ["matraix[cloud]", "matraix[computer-1]", "matraix[tinker]"]
 
 [build-system]
 requires = ["setuptools>=69", "wheel"]
@@ -131,16 +132,16 @@ packages = [
     "harbor.utils",
     "harbor.verifier",
     "harbor.viewer",
-    "personabench",
-    "personabench.agents",
-    "personabench.agents.installed",
-    "personabench.agents.persona",
+    "matraix",
+    "matraix.agents",
+    "matraix.agents.installed",
+    "matraix.agents.persona",
 ]
 
 [tool.setuptools.package-dir]
 harbor = "environment/runtime/harbor"
-personabench = "src/personabench"
-"personabench.agents" = "environment/agents/personabench/agents"
+matraix = "src/matraix"
+"matraix.agents" = "environment/agents/matraix/agents"
 
 [tool.setuptools.package-data]
 harbor = [
@@ -154,7 +155,7 @@ harbor = [
     "**/*.txt",
     "**/*.yaml",
 ]
-personabench = [
+matraix = [
     "agents/persona/templates/*.j2",
 ]
 

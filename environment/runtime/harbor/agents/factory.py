@@ -57,26 +57,32 @@ class AgentFactory:
         AgentName.TRAE_AGENT: "harbor.agents.installed.trae_agent:TraeAgent",
         AgentName.COMPUTER_1: "harbor.agents.computer_1:Computer1",
         AgentName.PERSONA_CLAUDE_CODE: (
-            "personabench.agents.persona.claude_code:PersonaClaudeCode"
+            "matraix.agents.persona.claude_code:PersonaClaudeCode"
         ),
         AgentName.PERSONA_COMPUTER_1: (
-            "personabench.agents.persona.computer_1:PersonaComputer1"
+            "matraix.agents.persona.computer_1:PersonaComputer1"
         ),
         AgentName.PERSONA_OPENHANDS_SDK: (
-            "personabench.agents.persona.openhands_sdk:PersonaOpenHandsSDK"
+            "matraix.agents.persona.openhands_sdk:PersonaOpenHandsSDK"
         ),
         AgentName.BROWSER_USE: (
-            "personabench.agents.installed.browser_use:BrowserUseHarborAgent"
+            "matraix.agents.installed.browser_use:BrowserUseHarborAgent"
         ),
-        AgentName.COCOA: "personabench.agents.installed.cocoa:CocoaHarborAgent",
+        AgentName.COCOA: "matraix.agents.installed.cocoa:CocoaHarborAgent",
         AgentName.PERSONA_BROWSER_USE: (
-            "personabench.agents.persona.browser_use:PersonaBrowserUse"
+            "matraix.agents.persona.browser_use:PersonaBrowserUse"
         ),
-        AgentName.PERSONA_COCOA: "personabench.agents.persona.cocoa:PersonaCocoa",
+        AgentName.PERSONA_COCOA: "matraix.agents.persona.cocoa:PersonaCocoa",
         AgentName.PERSONA_GEMINI_CLI: (
-            "personabench.agents.persona.gemini_cli:PersonaGeminiCli"
+            "matraix.agents.persona.gemini_cli:PersonaGeminiCli"
         ),
-        AgentName.PERSONA_CODEX: "personabench.agents.persona.codex:PersonaCodex",
+        AgentName.PERSONA_CODEX: "matraix.agents.persona.codex:PersonaCodex",
+        AgentName.PERSONA_JSON_SURVEY: (
+            "matraix.agents.persona.json_survey:PersonaJsonSurvey"
+        ),
+        AgentName.PERSONA_USER_SIM: (
+            "matraix.agents.persona.user_sim:PersonaUserSim"
+        ),
     }
 
     @classmethod

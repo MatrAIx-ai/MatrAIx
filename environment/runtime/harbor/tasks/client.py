@@ -181,8 +181,34 @@ class TaskClient:
         source_environment_dir = (
             repo_dir / TaskPaths.TASK_ENVIRONMENTS_ROOT / definition
         )
-        if source_environment_dir.exists():
-            shutil.copytree(source_environment_dir, target_environment_dir)
+        if not source_environment_dir.exists():
+            return
+
+        local_compose = raw_environment.get("local_compose")
+        if isinstance(local_compose, str) and local_compose.strip():
+            try:
+                local_compose = TaskPaths._normalize_environment_definition(
+                    local_compose
+                )
+            except ValueError:
+                return
+            from harbor.environments.compose_materialize import (
+                materialize_persona_with_local_compose,
+            )
+
+            local_compose_dir = (
+                repo_dir / TaskPaths.TASK_ENVIRONMENTS_ROOT / local_compose
+            )
+            if not local_compose_dir.exists():
+                return
+            materialize_persona_with_local_compose(
+                persona_dir=source_environment_dir,
+                local_compose_dir=local_compose_dir,
+                dest_dir=target_environment_dir,
+            )
+            return
+
+        shutil.copytree(source_environment_dir, target_environment_dir)
 
     async def _download_tasks_from_git_url(
         self, git_url: str, task_download_configs: list[TaskDownloadConfig]

@@ -35,6 +35,7 @@ except ImportError:
 
 
 _VALID_PLATFORMS = frozenset({"macos", "ios", "ubuntu", "windows"})
+_FILE_TRANSFER_CONCURRENCY = 8
 _PLATFORM_ALIASES = {
     "mac": "macos",
     "osx": "macos",
@@ -151,7 +152,8 @@ class UseComputerEnvironment(BaseEnvironment):
 
         normalized_platform = self._normalize_platform(platform)
         self._platform = normalized_platform
-        self._api_key = api_key or os.environ.get("USE_COMPUTER_API_KEY")
+        raw_key = api_key or os.environ.get("USE_COMPUTER_API_KEY") or ""
+        self._api_key = str(raw_key).strip() or None
         self._base_url = (base_url or gateway_url or _DEFAULT_BASE_URL).rstrip("/")
         self._host = host or os.environ.get("USE_COMPUTER_HOST", "")
         self._mode = str(mode or "").strip().lower()
@@ -187,6 +189,7 @@ class UseComputerEnvironment(BaseEnvironment):
         self._sandbox: _SdkSandbox | None = None
         self._sandbox_id: str | None = None
         self._vm_ip: str | None = None
+        self._vnc_url: str | None = None
 
         super().__init__(
             environment_dir=environment_dir,
@@ -237,6 +240,10 @@ class UseComputerEnvironment(BaseEnvironment):
     def sandbox_id(self) -> str | None:
         return self._sandbox_id
 
+    @property
+    def vnc_url(self) -> str | None:
+        return self._vnc_url
+
     def _validate_definition(self) -> None:
         if self._platform == "windows" and self.task_env_config.os != TaskOS.WINDOWS:
             raise ValueError(
@@ -253,6 +260,7 @@ class UseComputerEnvironment(BaseEnvironment):
         self._sandbox = await self._client.create(**self._create_kwargs())
         self._sandbox_id = getattr(self._sandbox, "sandbox_id", None)
         self._vm_ip = getattr(self._sandbox, "vm_ip", None)
+        self._vnc_url = getattr(self._sandbox, "vnc_url", None) or None
 
         if self._keepalive_interval > 0:
             await self._sandbox.start_keepalive(interval=self._keepalive_interval)
@@ -261,6 +269,8 @@ class UseComputerEnvironment(BaseEnvironment):
         await self._setup_harbor_dirs()
         if self._platform == "macos":
             await self._prepare_macos_desktop()
+        elif self._platform == "ios":
+            await self.exec("mkdir -p /app/output", timeout_sec=30)
         await self._upload_environment_dir_after_start()
 
         self.logger.info(
@@ -285,6 +295,7 @@ class UseComputerEnvironment(BaseEnvironment):
             self._sandbox = None
             self._sandbox_id = None
             self._vm_ip = None
+            self._vnc_url = None
 
     async def exec(
         self,
@@ -337,17 +348,30 @@ class UseComputerEnvironment(BaseEnvironment):
             await self._ensure_remote_dirs(
                 [remote_dir, *(self._remote_parent(path) for _, path in remote_files)]
             )
-            for local_path, remote_path in remote_files:
-                await self._upload_service_file(local_path, remote_path)
+            sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+            async def _ul_svc(local: Path, remote: str) -> None:
+                async with sem:
+                    await self._upload_service_file(local, remote)
+
+            await asyncio.gather(*[_ul_svc(lp, rp) for lp, rp in remote_files])
             return
 
         await self._ensure_remote_dir(remote_dir)
-        for local_path in local_files:
-            remote_path = self._join_remote_path(
-                remote_dir,
-                local_path.relative_to(source),
+        file_pairs = [
+            (
+                local_path,
+                self._join_remote_path(remote_dir, local_path.relative_to(source)),
             )
-            await self.upload_file(local_path, remote_path)
+            for local_path in local_files
+        ]
+        sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+        async def _ul(local: Path, remote: str) -> None:
+            async with sem:
+                await self.upload_file(local, remote)
+
+        await asyncio.gather(*[_ul(lp, rp) for lp, rp in file_pairs])
 
     async def download_file(self, source_path: str, target_path: Path | str) -> None:
         if self._service_download_path:
@@ -384,6 +408,7 @@ class UseComputerEnvironment(BaseEnvironment):
                 f"Failed to list remote directory {remote_dir!r}: {output}"
             )
 
+        files: list[tuple[str, Path]] = []
         for line in (result.stdout or "").splitlines():
             remote_file = line.strip()
             if not remote_file:
@@ -391,7 +416,17 @@ class UseComputerEnvironment(BaseEnvironment):
             rel_path = self._relative_remote_path(remote_file, remote_dir)
             if rel_path == Path():
                 continue
-            await self.download_file(remote_file, target / rel_path)
+            files.append((remote_file, target / rel_path))
+
+        if not files:
+            return
+        sem = asyncio.Semaphore(_FILE_TRANSFER_CONCURRENCY)
+
+        async def _dl(remote: str, local: Path) -> None:
+            async with sem:
+                await self.download_file(remote, local)
+
+        await asyncio.gather(*[_dl(r, loc) for r, loc in files])
 
     def _create_kwargs(self) -> dict[str, Any]:
         kwargs: dict[str, Any] = {"type": self._platform}
@@ -456,7 +491,7 @@ class UseComputerEnvironment(BaseEnvironment):
 
     async def _prepare_macos_desktop(self) -> None:
         await self._exec_macos(
-            "mkdir -p /Users/lume/workspace && "
+            "mkdir -p /Users/lume/workspace /app/output && "
             "sudo mkdir -p /usr/local/bin && "
             "sudo chown lume /usr/local/bin && "
             "touch /logs/verifier/reward.txt",
@@ -465,6 +500,17 @@ class UseComputerEnvironment(BaseEnvironment):
             timeout=60,
             user=None,
         )
+
+    def _merge_env(self, env: dict[str, str] | None) -> dict[str, str] | None:
+        merged = super()._merge_env(env) or {}
+        if self._platform in {"macos", "ios"}:
+            output_dir = self._remap_macos_path("/app/output")
+            verifier_dir = self._remap_macos_path("/logs/verifier")
+            merged.setdefault("PLAYGROUND_OUTPUT_DIR", output_dir)
+            merged.setdefault("MATRIX_OUTPUT_DIR", output_dir)
+            merged.setdefault("HARBOR_OUTPUT_DIR", output_dir)
+            merged.setdefault("HARBOR_VERIFIER_DIR", verifier_dir)
+        return merged or None
 
     async def _exec_macos(
         self,
@@ -708,10 +754,26 @@ class UseComputerEnvironment(BaseEnvironment):
             return Path()
         return Path(*[part for part in re.split(r"[\\/]+", rel) if part])
 
+    def _use_computer_app_root(self) -> str:
+        if self._platform == "ios":
+            return f"{_MACOS_HARBOR_ROOT}/app"
+        return "/Users/lume"
+
+    def _use_computer_workspace_root(self) -> str:
+        if self._platform == "ios":
+            return f"{_MACOS_HARBOR_ROOT}/workspace"
+        return "/Users/lume"
+
     def _remap_macos_path(self, path: str) -> str:
         for root in ("/logs", "/tests", "/solution", "/harbor"):
             if path == root or path.startswith(root + "/"):
                 return _MACOS_HARBOR_ROOT + path
+        if path == "/app" or path.startswith("/app/"):
+            return self._use_computer_app_root() + path[len("/app") :]
+        if path == "/workspace" or path.startswith("/workspace/"):
+            return self._use_computer_workspace_root() + path[len("/workspace") :]
+        if path == "/installed-agent" or path.startswith("/installed-agent/"):
+            return f"{_MACOS_HARBOR_ROOT}/installed-agent" + path[len("/installed-agent") :]
         return path
 
     def _remap_macos_command(self, command: str) -> str:
@@ -721,8 +783,8 @@ class UseComputerEnvironment(BaseEnvironment):
             "/solution": f"{_MACOS_HARBOR_ROOT}/solution",
             "/harbor": f"{_MACOS_HARBOR_ROOT}/harbor",
             "/installed-agent": f"{_MACOS_HARBOR_ROOT}/installed-agent",
-            "/app": "/Users/lume",
-            "/workspace": "/Users/lume",
+            "/app": self._use_computer_app_root(),
+            "/workspace": self._use_computer_workspace_root(),
         }
         for root, target in replacements.items():
             command = re.sub(

@@ -12,6 +12,7 @@ from harbor.agents.factory import AgentFactory
 from harbor.constants import MAIN_SERVICE_NAME
 from harbor.environments.base import BaseEnvironment
 from harbor.environments.factory import EnvironmentFactory
+from harbor.models.environment_type import EnvironmentType
 from harbor.models.agent.context import AgentContext
 from harbor.models.agent.name import AgentName
 from harbor.models.task.artifacts import sidecar_services, validate_artifact_entries
@@ -59,6 +60,33 @@ from harbor.verifier.factory import VerifierFactory
 TrialHookCallback = Callable[[TrialHookEvent], Awaitable[None]]
 
 _MAX_VERIFIER_ENV_SESSION_ID_LEN = 63
+
+
+def build_task_input_mounts(task_dir: Path) -> list[ServiceVolumeConfig]:
+    """Bind-mount task-owned input files into ``/app/input``.
+
+    Shared environments should provide runtime capabilities only; contributor-
+    owned task materials live under ``task_dir/input`` and are mounted read-only
+    at runtime so agents can read them from a stable in-container location.
+    """
+
+    input_dir = task_dir / "input"
+    if not input_dir.is_dir():
+        return []
+
+    mounts: list[ServiceVolumeConfig] = []
+    for source in sorted(path for path in input_dir.rglob("*") if path.is_file()):
+        rel = source.relative_to(input_dir)
+        target = PurePosixPath("/app/input") / PurePosixPath(rel.as_posix())
+        mounts.append(
+            ServiceVolumeConfig(
+                type="bind",
+                source=source.resolve().absolute().as_posix(),
+                target=target.as_posix(),
+                read_only=True,
+            )
+        )
+    return mounts
 
 
 class Trial(ABC):
@@ -320,6 +348,7 @@ class Trial(ABC):
     async def _prepare(self) -> None:
         await self._setup_agent_environment()
         await self.agent_environment.run_healthcheck()
+        await self._upload_task_inputs()
         await self._upload_injected_skills()
         with self.agent_environment.with_default_user(self.task.config.agent.user):
             await self._setup_agent()
@@ -419,15 +448,29 @@ class Trial(ABC):
         self._are_agent_logs_downloaded = True
 
     async def _upload_agent_logs(self) -> None:
-        """Upload locally-generated agent logs back to non-mounted environments."""
+        """Upload locally-generated agent logs back to non-mounted environments.
+
+        Skips image files (screenshots) that already exist on remote environments
+        since they were captured there and only downloaded for LLM processing.
+        """
         if self.agent_environment.capabilities.mounted:
             return
 
+        _SKIP_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
+        source = self.paths.agent_dir
+        target = self.agent_env_paths.agent_dir.as_posix()
+
         try:
-            await self.agent_environment.upload_dir(
-                source_dir=self.paths.agent_dir,
-                target_dir=self.agent_env_paths.agent_dir.as_posix(),
-            )
+            files_to_upload = [
+                p for p in source.rglob("*")
+                if p.is_file() and p.suffix.lower() not in _SKIP_SUFFIXES
+            ]
+            if not files_to_upload:
+                return
+            for local_path in files_to_upload:
+                rel = local_path.relative_to(source)
+                remote_path = f"{target}/{rel.as_posix()}"
+                await self.agent_environment.upload_file(local_path, remote_path)
         except Exception:
             self.logger.error("Failed to upload agent logs back to environment")
 
@@ -668,11 +711,37 @@ class Trial(ABC):
             **extra_kwargs,
         )
 
+    def _agent_environment_dir(self) -> Path:
+        """Persona env, optionally merged with a local endpoint compose package."""
+        environment_dir = self.task.paths.environment_dir
+        local_compose = self.task.config.environment.local_compose
+        if not local_compose:
+            return environment_dir
+        from harbor.environments.compose_materialize import (
+            materialize_persona_with_local_compose,
+            resolve_task_environments_path,
+        )
+
+        repo_root = self.task.paths._find_repository_root()
+        if repo_root is None:
+            raise FileNotFoundError(
+                "cannot resolve repository root for [environment].local_compose"
+            )
+        dest = self.paths.trial_dir / "composed_environment"
+        return materialize_persona_with_local_compose(
+            persona_dir=environment_dir,
+            local_compose_dir=resolve_task_environments_path(repo_root, local_compose),
+            dest_dir=dest,
+        )
+
     def _init_agent_environment(self) -> None:
         self._prepare_artifact_mount_dirs()
+        host_env_kwargs: dict[str, Path] = {}
+        if self.config.environment.type == EnvironmentType.HOST:
+            host_env_kwargs["tests_dir"] = self.task.paths.tests_dir
         self.agent_environment = EnvironmentFactory.create_environment_from_config(
             config=self.config.environment,
-            environment_dir=self.task.paths.environment_dir,
+            environment_dir=self._agent_environment_dir(),
             environment_name=self.task.short_name,
             session_id=self.config.trial_name,
             trial_paths=self.paths,
@@ -680,6 +749,7 @@ class Trial(ABC):
             logger=self.logger,
             mounts=self._agent_env_mounts,
             network_policy=self._network_plan(None).agent_env_baseline,
+            **host_env_kwargs,
         )
         if self.agent_environment.capabilities.mounted:
             self.paths.chmod_dir()
@@ -945,6 +1015,24 @@ class Trial(ABC):
             return self.agent_env_paths.default_skills_dir.as_posix()
         return None
 
+    async def _upload_task_inputs(self) -> None:
+        """Upload task input/ files to non-mounted remote environments.
+
+        For Docker environments the input directory is bind-mounted at /app/input.
+        Remote VMs (use.computer, etc.) don't support bind mounts, so we upload
+        the files explicitly to the same canonical path.
+        """
+        if self.agent_environment.capabilities.mounted:
+            return
+
+        input_dir = self.task.paths.task_dir / "input"
+        if not input_dir.is_dir():
+            return
+
+        target = "/app/input"
+        self.logger.debug("Uploading task input/ to %s", target)
+        await self.agent_environment.upload_dir(input_dir, target)
+
     async def _upload_injected_skills(self) -> None:
         if not self._injected_skills:
             return
@@ -977,8 +1065,17 @@ class Trial(ABC):
         self.result.environment_setup = TimingInfo(started_at=self._now())
         try:
             await self._start_agent_environment()
+            self._write_vnc_url()
         finally:
             self.result.environment_setup.finished_at = self._now()
+
+    def _write_vnc_url(self) -> None:
+        vnc_url = getattr(self.agent_environment, "vnc_url", None)
+        if vnc_url:
+            (self.paths.trial_dir / "vnc_url.txt").write_text(vnc_url)
+        sandbox_id = getattr(self.agent_environment, "sandbox_id", None)
+        if sandbox_id:
+            (self.paths.trial_dir / "sandbox_id.txt").write_text(str(sandbox_id))
 
     async def _start_agent_environment(self) -> None:
         try:
@@ -1063,7 +1160,8 @@ class Trial(ABC):
                 target=str(self.agent_env_paths.artifacts_dir),
             ),
         ]
-        return base + list(self.config.environment.mounts or [])
+        task_inputs = build_task_input_mounts(self.task.paths.task_dir)
+        return base + task_inputs + list(self.config.environment.mounts or [])
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(trial_name={self.config.trial_name!r})"

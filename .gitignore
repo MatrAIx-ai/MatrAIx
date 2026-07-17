@@ -151,6 +151,8 @@ activemq-data/
 
 # Environments
 .env
+.env.local
+**/.env.local
 .envrc
 .venv
 env/
@@ -252,13 +254,16 @@ configs/jobs/application-task-job-recipe/*.meta.json
 !configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.meta.json
 configs/jobs/persona-task-grounding-job-recipe/*.yaml
 configs/jobs/persona-task-grounding-job-recipe/*.meta.json
-!configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.yaml
-!configs/jobs/persona-task-grounding-job-recipe/personaBench-example-survey-product-feedback-economic-motivation-pg2.meta.json
+!configs/jobs/persona-task-grounding-job-recipe/playground-example-survey-product-feedback-economic-motivation-pg2.yaml
+!configs/jobs/persona-task-grounding-job-recipe/playground-example-survey-product-feedback-economic-motivation-pg2.meta.json
 
 # Local Harbor job outputs (recipes live under configs/jobs/)
 /jobs/*
 
-# PersonaEval local runtime cache (Cockpit / harness sessions)
+# Trial verifier output accidentally written under task folders during local runs
+application/tasks/*/verifier/
+
+# Playground local runtime cache (Cockpit / harness sessions)
 /data/cache/
 
 configs/jobs/_generated/
@@ -267,11 +272,19 @@ configs/jobs/_generated/
 plan.md
 user-simulator-chat-design.md
 
-# Generated at runtime by PersonaEval sidecar compose helpers
-**/.persona_eval_sidecar/
-
 # Starclash — regenerable local run artifacts
 application/tasks/game-starclash/scripts/_sample_output/
 environment/task-environments/application/game-starclash/scripts/_sample_output/
 tmp_arena_smoke/
 
+# Cursor IDE local config
+.cursor/
+
+# Vite dev server cache
+**/.vite/
+
+# Harbor viewer build sourcemaps (large, not needed at runtime)
+environment/runtime/harbor/viewer/static/assets/*.map
+
+# Generated at runtime by Playground sidecar compose helpers
+**/.playground_sidecar/

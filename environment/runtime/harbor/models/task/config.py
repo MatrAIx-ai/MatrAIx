@@ -334,6 +334,15 @@ class EnvironmentConfig(BaselineNetworkPolicyConfig):
             "are resolved outside the application task directory."
         ),
     )
+    local_compose: str | None = Field(
+        default=None,
+        description=(
+            "Optional local endpoint host package under "
+            "environment/task-environments (chat sidecars). When set, Harbor "
+            "materializes this compose package into the persona agent "
+            "environment before starting Docker trials."
+        ),
+    )
     build_timeout_sec: float = 600.0  # 10 minutes default
     docker_image: str | None = Field(
         default=None,
@@ -414,6 +423,26 @@ class EnvironmentConfig(BaselineNetworkPolicyConfig):
         ):
             raise ValueError(
                 "[environment].definition must be a relative POSIX path under "
+                "environment/task-environments."
+            )
+        return posix_path.as_posix()
+
+    @field_validator("local_compose")
+    @classmethod
+    def validate_local_compose(cls, v: str | None) -> str | None:
+        """Local endpoint compose packages use the same path bounds as definition."""
+        if v is None:
+            return None
+        clean = v.strip()
+        posix_path = PurePosixPath(clean)
+        if (
+            not clean
+            or "\\" in clean
+            or posix_path.is_absolute()
+            or any(part in {"", ".", ".."} for part in posix_path.parts)
+        ):
+            raise ValueError(
+                "[environment].local_compose must be a relative POSIX path under "
                 "environment/task-environments."
             )
         return posix_path.as_posix()
