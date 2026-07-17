@@ -110,11 +110,16 @@ def build_brain(brain_kind: str, seed: int):
         return brains.ClaudeArenaBrain(api_key=api_key)
 
     if brain_kind == "vision":
+        # Amazon Bedrock (Bedrock API key / bearer token) is accepted as an
+        # alternative to a direct ANTHROPIC_API_KEY. Prefer Bedrock when its
+        # bearer token is present so the same run works on Bedrock-only hosts.
+        bedrock_token = os.environ.get("AWS_BEARER_TOKEN_BEDROCK")
         api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if not api_key:
+        if not bedrock_token and not api_key:
             print(
-                "ERROR: --brain vision requires the ANTHROPIC_API_KEY environment "
-                "variable to be set. Export it and re-run, or use --brain mock.",
+                "ERROR: --brain vision requires ANTHROPIC_API_KEY or "
+                "AWS_BEARER_TOKEN_BEDROCK (+ AWS_REGION) to be set. Export one "
+                "and re-run, or use --brain mock.",
                 file=sys.stderr,
             )
             sys.exit(1)
@@ -136,6 +141,11 @@ def build_brain(brain_kind: str, seed: int):
             )
             sys.exit(1)
         try:
+            if bedrock_token:
+                return vision_brain.BrowserVisionBrain(
+                    use_bedrock=True,
+                    aws_region=os.environ.get("AWS_REGION"),
+                )
             return vision_brain.BrowserVisionBrain(api_key=api_key)
         except ImportError as exc:
             print(f"ERROR: --brain vision failed to initialize: {exc}", file=sys.stderr)
@@ -179,6 +189,16 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-ticks", type=int, default=16)
     parser.add_argument("--out", required=True, help="Output directory for game_log.json / final_state.json")
+    parser.add_argument(
+        "--render-spectator",
+        action="store_true",
+        help=(
+            "Also write a self-contained spectator replay to <out>/spectator.html "
+            "(the human-facing full-match view; the only view surfaced for "
+            "Docker/Playground runs). Per-agent cockpit HUDs stay internal to the "
+            "vision/CUA brains."
+        ),
+    )
     args = parser.parse_args()
 
     # repo_root: crew manifest persona_paths are relative to the repo root
@@ -269,6 +289,24 @@ def main() -> None:
     with open(final_state_path, "w", encoding="utf-8") as f:
         json.dump(final_state_output, f, indent=2)
 
+    # Optional human-facing spectator replay. This is the only Starclash view
+    # meant to be surfaced for a Docker/Playground run - a single read-only
+    # full-match replay built from game_log. The per-agent cockpit HUD
+    # (render_observation_html) is internal to the vision/CUA brains and is
+    # never shown as a run artifact.
+    spectator_path = None
+    if getattr(args, "render_spectator", False):
+        try:
+            from render_observation import render_spectator_html
+
+            spectator_html = render_spectator_html(game_log, inline_assets=True)
+            spectator_path = os.path.join(args.out, "spectator.html")
+            with open(spectator_path, "w", encoding="utf-8") as f:
+                f.write(spectator_html)
+        except Exception as exc:  # noqa: BLE001
+            print(f"WARNING: failed to render spectator.html: {exc}", file=sys.stderr)
+            spectator_path = None
+
     # Human-readable summary.
     num_battles = sum(1 for e in engine.events if e.get("type") == "battle_resolved")
     survivors = [p for p in personas if not p.is_eliminated()]
@@ -295,6 +333,8 @@ def main() -> None:
         print(f"Eliminated: {', '.join(p.display_name for p in eliminated)}")
     print(f"Wrote: {game_log_path}")
     print(f"Wrote: {final_state_path}")
+    if spectator_path:
+        print(f"Wrote: {spectator_path}")
 
 
 if __name__ == "__main__":

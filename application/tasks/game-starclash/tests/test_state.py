@@ -20,9 +20,10 @@ OUTPUT_DIR = Path(
 GAME_LOG_PATH = OUTPUT_DIR / "game_log.json"
 FINAL_STATE_PATH = OUTPUT_DIR / "final_state.json"
 
-# The only two values ArenaEngine.run() ever assigns to termination_reason
-# (see scripts/engine.py:run).
-VALID_TERMINATION_REASONS = {"max_ticks", "one_survivor"}
+# The values ArenaEngine.run() can assign to termination_reason
+# (see scripts/engine.py:run). all_cards_played is the intended natural end
+# state: every still-active persona has emptied their hand.
+VALID_TERMINATION_REASONS = {"max_ticks", "one_survivor", "all_cards_played"}
 
 # Every persona is constructed with stars=3 (scripts/engine.py PersonaState
 # default, also set explicitly in run_arena.py:load_personas) and only
@@ -255,3 +256,130 @@ def test_final_state_stars_match_last_battle_or_initial_value():
             f"persona {pid!r}: final_state stars={state.get('stars')!r} does not match replay-expected "
             f"stars={expected_stars!r} (from last battle_resolved event, or initial stars if no battles)"
         )
+
+
+# ---------------------------------------------------------------------------
+# 8. Emit structured_output.json for Playground batch reporting.
+# ---------------------------------------------------------------------------
+
+
+def _verifier_dir() -> Path:
+    base = (
+        os.environ.get("HARBOR_VERIFIER_DIR")
+        or os.environ.get("PERSONABENCH_VERIFIER_DIR")
+        or "/logs/verifier"
+    )
+    path = Path(base)
+    try:
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+    except OSError:
+        path = Path(__file__).resolve().parent.parent / "verifier"
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
+
+def _actor_ids_for_reasoning(event: dict) -> list:
+    if event.get("type") == "battle_resolved":
+        return [pid for pid in (event.get("persona_a"), event.get("persona_b")) if pid]
+    return [event[field] for field in _ACTOR_FIELDS if event.get(field)]
+
+
+def _persona_outcome_status(pid: str, final_state: dict, battle_participants: set) -> str:
+    """survived: not eliminated and fought at least one battle.
+    eliminated: eliminated flag / zero stars. bystander: alive but never dueled."""
+    state = final_state.get(pid, {})
+    if state.get("eliminated") or (state.get("stars") or 0) <= 0:
+        return "eliminated"
+    return "survived" if pid in battle_participants else "bystander"
+
+
+def test_emit_structured_output():
+    """Per-persona batch model: one task_outcome + task_reasoning_trajectory
+    context per crew member, so the Playground aggregation groups reasoning by
+    dominant_trait across the crew (see reporting.json)."""
+    game_log = _load_game_log()
+    final_state = _load_final_state()["final_state"]
+    events = game_log["events"]
+    termination_reason = game_log.get("termination_reason")
+
+    personas = {p["id"]: p for p in game_log["personas"]}
+    battle_participants = {
+        pid
+        for e in events
+        if e.get("type") == "battle_resolved"
+        for pid in (e.get("persona_a"), e.get("persona_b"))
+        if pid
+    }
+    # Collect each persona's free-text reasoning across the whole run.
+    reasoning_by_pid: dict = {pid: [] for pid in personas}
+    for event in events:
+        reasoning = event.get("reasoning")
+        if not (isinstance(reasoning, str) and reasoning.strip()):
+            continue
+        for pid in _actor_ids_for_reasoning(event):
+            if pid in reasoning_by_pid:
+                reasoning_by_pid[pid].append(
+                    f"[{event.get('type')}] {reasoning.strip()}"
+                )
+
+    contexts: list = []
+    for pid, persona in personas.items():
+        traits = persona.get("traits_summary") or {}
+        dominant_trait = str(traits.get("dominant_trait") or "unknown")
+        display_name = persona.get("display_name") or pid
+        state = final_state.get(pid, {})
+        outcome_status = _persona_outcome_status(pid, final_state, battle_participants)
+        final_stars = state.get("stars")
+        reasoning_events = reasoning_by_pid.get(pid, [])
+        reasoning_text = " ".join(reasoning_events) or "No free-text reasoning recorded."
+
+        contexts.append(
+            {
+                "key": "task_outcome.crew",
+                "label": "Game outcome (crew)",
+                "contextType": "task_outcome",
+                "facets": [
+                    # Shared web task_outcome facets (keep keys exactly as the spec names them).
+                    {"key": "outcome_status", "label": "Outcome status", "role": "primary", "kind": "categorical", "value": outcome_status},
+                    {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "value": f"{display_name} ({dominant_trait}) finished with {final_stars} star(s), status {outcome_status}; run ended on {termination_reason}."},
+                    # Task-specific facets behind the task_ prefix (task-spec/web contributor extension rule).
+                    {"key": "task_dominant_trait", "label": "Dominant trait", "role": "primary", "kind": "categorical", "value": dominant_trait},
+                    {"key": "task_final_stars", "label": "Final stars", "role": "score", "kind": "numerical", "value": final_stars},
+                    {"key": "task_termination_reason", "label": "Termination reason", "role": "evidence", "kind": "categorical", "value": termination_reason},
+                ],
+            }
+        )
+        contexts.append(
+            {
+                "key": "task_reasoning_trajectory.crew",
+                "label": "Reasoning trajectory (crew)",
+                "contextType": "task_reasoning_trajectory",
+                "facets": [
+                    {"key": "task_dominant_trait", "label": "Dominant trait", "role": "primary", "kind": "categorical", "value": dominant_trait},
+                    {"key": "task_reasoning_event_count", "label": "Reasoning events", "role": "score", "kind": "numerical", "value": len(reasoning_events)},
+                    {"key": "task_reasoning_text", "label": "Reasoning trajectory", "role": "explanation", "kind": "textual", "value": reasoning_text},
+                ],
+            }
+        )
+
+    payload = {
+        "schemaVersion": "1.0",
+        "artifactType": "matraix.trial_evaluation",
+        "taskType": "web",
+        "presenceCheck": {
+            "passed": True,
+            "requiredArtifacts": [GAME_LOG_PATH.name, FINAL_STATE_PATH.name],
+            "missingArtifacts": [],
+        },
+        "sourceArtifacts": {
+            "gameLog": str(GAME_LOG_PATH),
+            "finalState": str(FINAL_STATE_PATH),
+        },
+        "contexts": contexts,
+    }
+    out_path = _verifier_dir() / "structured_output.json"
+    out_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    assert contexts, "expected at least one persona context in structured_output.json"

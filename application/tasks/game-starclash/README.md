@@ -2,13 +2,15 @@
 
 Multi-persona social simulation: several synthetic personas share one continuous 2D room aboard a starship, must physically move within `proximity_radius` to find each other, and can chat publicly, send private messages, or challenge each other to Rock-Paper-Scissors duels for stars. Research purpose: study whether different persona reasoning/trait profiles produce measurably different play styles, and whether that heterogeneity in reward-seeking and reasoning behavior can be turned into useful signal for game designers — success rate aside, do some persona mixes read as more fun, more engaged, or more confused than others from their own reasoning trajectories?
 
+The persona agents play through a browser HUD (a screenshot-and-click computer-use loop over the task's rendered game UI), so the task runs as a `metadata.type = "web"` task and is surfaced in the Playground web cockpit.
+
 ## Suggested setup (non-binding)
 
 | Field | Value |
 |-------|-------|
 | Brain (text-only smoke) | `ClaudeArenaBrain` (`--brain claude`), needs `ANTHROPIC_API_KEY` |
 | Brain (free smoke, no API key) | `MockArenaBrain` (`--brain mock`) |
-| Brain (vision / computer-use) | `BrowserVisionBrain` (`--brain vision`), needs `ANTHROPIC_API_KEY` + `uv run playwright install chromium` |
+| Brain (vision / computer-use) | `BrowserVisionBrain` (`--brain vision`), needs `ANTHROPIC_API_KEY` **or** `AWS_BEARER_TOKEN_BEDROCK` (+ `AWS_REGION`) + `uv run playwright install chromium` |
 | Brain (external decision-maker, e.g. no API key at all) | `FileBridgeBrain` (`--brain bridge`), needs `ARENA_BRIDGE_DIR` |
 | Persona | Repo-root `persona/datasets/bench-dev-sample/` (referenced in `input/crew_manifest*.yaml`; uploaded at Harbor trial start — **not** copied into the task or Docker image; see `application/README.md`) |
 
@@ -33,10 +35,14 @@ uv run python application/tasks/game-starclash/scripts/run_arena.py \
   --out jobs/game-starclash-smoke
 ```
 
-`BrowserVisionBrain` (`--brain vision`) renders each observation as an HTML page, screenshots it, and asks Claude (vision + forced tool-use) to click/type — real browser-use, not a JSON shortcut wearing a screenshot as a costume:
+`BrowserVisionBrain` (`--brain vision`) renders each observation as an HTML page, screenshots it, and asks Claude (vision + forced tool-use) to click/type — real browser-use, not a JSON shortcut wearing a screenshot as a costume. It authenticates with a direct `ANTHROPIC_API_KEY` or, on Bedrock-only hosts, an `AWS_BEARER_TOKEN_BEDROCK` bearer token plus `AWS_REGION` (Bedrock is preferred when its token is present):
 
 ```bash
+# Direct Anthropic:
 export ANTHROPIC_API_KEY=sk-ant-...
+# ...or Amazon Bedrock (Bedrock API key / bearer token):
+#   export AWS_BEARER_TOKEN_BEDROCK=...
+#   export AWS_REGION=us-east-1
 uv run playwright install chromium   # one-time, if not already installed
 uv run python application/tasks/game-starclash/scripts/run_arena.py \
   --map application/tasks/game-starclash/input/ship_map.yaml \
@@ -114,6 +120,20 @@ Each run writes:
 - `/app/output/game_log.json` — full event log (moves, chat, private messages, challenges, battle resolutions, and any persona `reasoning` text attached to a decision), plus a persona trait summary and final state.
 - `/app/output/final_state.json` — just the final scoreboard (stars, eliminated flag, final hand size, position per persona) and the termination reason.
 
+A run ends as soon as any of these holds: every still-active persona has played through their hand (`termination_reason: all_cards_played` — the intended natural end state, since each persona starts with 4 cards and cards are only ever spent in duels), only one survivor remains (`one_survivor`), or the `--max-ticks` budget is exhausted (`max_ticks`).
+
+Passing `--render-spectator` also writes:
+
+- `/app/output/spectator.html` — a self-contained, read-only full-match replay
+  (event scrubber, live scoreboard, comms ticker, room view). This is the **only
+  Starclash view surfaced for a Docker / Playground run** — the per-agent cockpit
+  HUD (`render_observation_html`) is internal to the vision/CUA brains and is
+  never shown as a run artifact. The reference solution (`solution/solve.sh`)
+  passes `--render-spectator`, so the oracle run emits `spectator.html` alongside
+  the JSON.
+
+The verifier (`tests/test_state.py`) additionally writes `verifier/structured_output.json` for Playground batch reporting: one `task_outcome` and one `task_reasoning_trajectory` context **per crew persona** (all crew members share one trial). [`reporting.json`](reporting.json) groups those contexts by `dominant_trait` — a per-persona batch model, so the aggregation can compare outcomes and reasoning-trajectory style across trait groups within a single game session as well as across sessions.
+
 To watch a run visually, render `game_log.json` into a self-contained, read-only replay page — an event/moment scrubber, live scoreboard, comms ticker, and room view of every persona's position and duels:
 
 ```bash
@@ -164,7 +184,7 @@ uv run python application/tasks/game-starclash/scripts/run_arena_live.py \
 
 | Mode | Who clicks the UI | In-process API key |
 |------|-------------------|-------------------|
-| `--brain vision` | `BrowserVisionBrain` (Playwright + vision model in-process) | `ANTHROPIC_API_KEY` (Claude today) |
+| `--brain vision` | `BrowserVisionBrain` (Playwright + vision model in-process) | `ANTHROPIC_API_KEY` or `AWS_BEARER_TOKEN_BEDROCK` (+ `AWS_REGION`) |
 | `--brain cua` | `bridge_cua_responder.py` (Playwright) + **external pilot(s)** | None |
 
 > **How this was tested:** No `ANTHROPIC_API_KEY` was available during development, so computer-use was exercised via `--brain cua` with **external pilots** (separate agent processes watching the bridge directory and writing click primitives). Any vision-capable external agent works — the repo ships `persona_cua_pilot.py` and `run_4agent_cua_play.py` for this; the author personally used Grok for early smoke runs, but nothing in the bridge contract is vendor-specific.
