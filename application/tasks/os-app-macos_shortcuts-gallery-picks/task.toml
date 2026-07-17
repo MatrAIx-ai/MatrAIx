@@ -1,5 +1,5 @@
 version = "1.0"
-artifacts = [ "/tmp/os-app-macos-shortcuts-gallery-picks",]
+artifacts = [ "/app/output",]
 
 [task]
 name = "application/os-app-macos-shortcuts-gallery-picks"
@@ -34,6 +34,6 @@ storage_mb = 40960
 gpus = 0
 
 [environment.healthcheck]
-command = "mkdir -p /tmp/os-app-macos-shortcuts-gallery-picks"
+command = "mkdir -p /app/output"
 timeout_sec = 30.0
 retries = 3

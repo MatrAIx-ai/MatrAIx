@@ -21,7 +21,13 @@ import json
 import os
 from pathlib import Path
 
-decision_path = Path({artifact_source!r}) / "decision.json"
+output_root = (
+    os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("HARBOR_OUTPUT_DIR")
+    or {artifact_source!r}
+)
+decision_path = Path(output_root) / "decision.json"
 if not decision_path.is_file():
     raise SystemExit("missing decision.json")
 
@@ -77,10 +83,26 @@ def _write_trial(
 
 
 def test_source_relative_path_matches_harbor_mapping():
-    assert str(source_relative_path("/tmp/os-app-ios-news-subscription-decision")) == (
-        "tmp/os-app-ios-news-subscription-decision"
-    )
     assert str(source_relative_path("/app/output")) == "app/output"
+
+
+def test_host_verifier_scores_app_output_without_filesystem_staging(tmp_path: Path):
+    repo_root = tmp_path / "repo"
+    task_rel = "application/tasks/fake-task"
+    _write_fake_task(repo_root, task_rel, artifact_source="/app/output")
+
+    trial_dir = tmp_path / "trial"
+    _write_trial(
+        trial_dir,
+        task_rel,
+        artifact_source="/app/output",
+        with_decision=True,
+        with_exception=True,
+    )
+
+    ran = maybe_run_host_verifier(repo_root=repo_root, trial_dir=trial_dir)
+    assert ran is True
+    assert (trial_dir / "verifier" / "reward.txt").read_text(encoding="utf-8").strip() == "1"
 
 
 def test_host_verifier_scores_trial_and_clears_stale_exception(tmp_path: Path):

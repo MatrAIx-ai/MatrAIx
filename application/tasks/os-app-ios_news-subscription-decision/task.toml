@@ -1,5 +1,5 @@
 version = "1.0"
-artifacts = [ "/tmp/os-app-ios-news-subscription-decision",]
+artifacts = [ "/app/output",]
 
 [task]
 name = "application/os-app-ios-news-subscription-decision"
@@ -37,6 +37,6 @@ storage_mb = 40960
 gpus = 0
 
 [environment.healthcheck]
-command = "mkdir -p /tmp/os-app-ios-news-subscription-decision"
+command = "mkdir -p /app/output"
 timeout_sec = 30.0
 retries = 3

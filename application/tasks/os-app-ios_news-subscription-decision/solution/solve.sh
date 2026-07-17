@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mkdir -p /tmp/os-app-ios-news-subscription-decision
+OUTPUT_DIR="${PLAYGROUND_OUTPUT_DIR:-${MATRIX_OUTPUT_DIR:-/app/output}}"
+mkdir -p "$OUTPUT_DIR"
 
-cat > /tmp/os-app-ios-news-subscription-decision/decision.json <<'EOF'
+cat > "$OUTPUT_DIR/decision.json" <<'EOF'
 {
   "app_reviewed": "News",
   "browsed_full_offer": true,

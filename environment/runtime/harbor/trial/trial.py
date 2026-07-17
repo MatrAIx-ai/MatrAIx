@@ -12,6 +12,7 @@ from harbor.agents.factory import AgentFactory
 from harbor.constants import MAIN_SERVICE_NAME
 from harbor.environments.base import BaseEnvironment
 from harbor.environments.factory import EnvironmentFactory
+from harbor.models.environment_type import EnvironmentType
 from harbor.models.agent.context import AgentContext
 from harbor.models.agent.name import AgentName
 from harbor.models.task.artifacts import sidecar_services, validate_artifact_entries
@@ -735,6 +736,9 @@ class Trial(ABC):
 
     def _init_agent_environment(self) -> None:
         self._prepare_artifact_mount_dirs()
+        host_env_kwargs: dict[str, Path] = {}
+        if self.config.environment.type == EnvironmentType.HOST:
+            host_env_kwargs["tests_dir"] = self.task.paths.tests_dir
         self.agent_environment = EnvironmentFactory.create_environment_from_config(
             config=self.config.environment,
             environment_dir=self._agent_environment_dir(),
@@ -745,6 +749,7 @@ class Trial(ABC):
             logger=self.logger,
             mounts=self._agent_env_mounts,
             network_policy=self._network_plan(None).agent_env_baseline,
+            **host_env_kwargs,
         )
         if self.agent_environment.capabilities.mounted:
             self.paths.chmod_dir()

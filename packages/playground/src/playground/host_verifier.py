@@ -162,6 +162,41 @@ def _downloaded_artifact_dir(trial_dir: Path, source: str) -> Path:
     return trial_dir / "artifacts" / Path(source_relative_path(source))
 
 
+def _prepare_host_scoring(
+    trial_dir: Path, sources: list[str]
+) -> tuple[list[tuple[str, Path]], dict[str, str]] | None:
+    """Return filesystem staging pairs and env overrides for host ``test.sh``."""
+    stage_pairs: list[tuple[str, Path]] = []
+    env_overrides: dict[str, str] = {}
+    saw_artifacts = False
+
+    for source in sources:
+        downloaded = _downloaded_artifact_dir(trial_dir, source)
+        if not _dir_has_files(downloaded):
+            continue
+        saw_artifacts = True
+        if source.rstrip("/") == "/app/output":
+            output_dir = str(downloaded)
+            env_overrides["PLAYGROUND_OUTPUT_DIR"] = output_dir
+            env_overrides["MATRIX_OUTPUT_DIR"] = output_dir
+            env_overrides["HARBOR_OUTPUT_DIR"] = output_dir
+            continue
+        staged = Path(source)
+        parent = staged.parent
+        try:
+            parent.mkdir(parents=True, exist_ok=True)
+            probe = parent / f".matraix-host-verifier-probe-{uuid.uuid4().hex}"
+            probe.write_text("", encoding="utf-8")
+            probe.unlink(missing_ok=True)
+        except OSError:
+            continue
+        stage_pairs.append((source, downloaded))
+
+    if not saw_artifacts:
+        return None
+    return stage_pairs, env_overrides
+
+
 def _stageable_sources(trial_dir: Path, sources: list[str]) -> list[tuple[str, Path]]:
     """Return (source, downloaded_dir) pairs that can be staged for host scoring."""
     stageable: list[tuple[str, Path]] = []
@@ -268,24 +303,28 @@ def maybe_run_host_verifier(
     if not sources:
         return False
 
-    pairs = _stageable_sources(trial_dir, sources)
-    if not pairs:
+    pairs = _prepare_host_scoring(trial_dir, sources)
+    if pairs is None:
+        return False
+    stage_pairs, env_overrides = pairs
+    if not stage_pairs and not env_overrides.get("PLAYGROUND_OUTPUT_DIR"):
         return False
 
     verifier_dir = trial_dir / "verifier"
     verifier_dir.mkdir(parents=True, exist_ok=True)
     effective_timeout = timeout_sec if timeout_sec is not None else _verifier_timeout_sec(task_data)
 
-    # Serialize per absolute source so concurrent same-task trials do not race.
-    locks = [_lock_for(source) for source, _ in pairs]
+    lock_keys = [source for source, _ in stage_pairs] or ["/app/output"]
+    locks = [_lock_for(key) for key in lock_keys]
     for lock in locks:
         lock.acquire()
     stdout_text = ""
     try:
-        staged = _stage_sources(pairs)
+        staged = _stage_sources(stage_pairs)
         try:
             env = dict(os.environ)
             env["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
+            env.update(env_overrides)
             try:
                 completed = subprocess.run(
                     ["bash", str(test_sh)],
