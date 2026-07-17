@@ -90,7 +90,7 @@
           "id": "user_feedback.reason_by_safety_compliance",
           "title": "Feedback reason by safety compliance",
           "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "safety_compliance",
+          "groupByFacetKey": "task_safety_compliance",
           "groupByMode": "categorical",
           "summaryKind": "llm_bucket_summary"
         }
