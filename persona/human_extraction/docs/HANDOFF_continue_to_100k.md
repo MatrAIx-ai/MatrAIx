@@ -137,12 +137,20 @@ supported-dimension count per user is expected, not a bug.
    as **PRs, not direct pushes** (contributors are read-only on the org).
 3. **The runner — NOTE: the required changes are NOT yet on `main`.**
    `persona/human_extraction/scripts/run_extraction_amazon.py` on `main` does **not** have
-   the `medium_b` prompt variant, the schema validation step, or portable paths. Those live
-   in a **pending runner PR** (3 commits: *Add medium_b prompt variant*, *Enforce Amazon
-   extraction schema validation*, *Make Amazon extraction paths portable*). **Land or check
-   out that PR before extracting** — running `main`'s runner as-is produces a different
-   prompt with no schema validation, which will **not** match the existing 38K and forks the
-   dataset. Ask the maintainers for its status.
+   the `medium_b` prompt variant, the schema validation step, or portable paths. They are
+   split across two open PRs, and you need **both**:
+
+   | Piece | PR | State |
+   |---|---|---|
+   | Portable paths + schema validation | **#174** | open |
+   | `medium_b` prompt variant | **#264** | open |
+
+   **Land or check out both before extracting.** Running `main`'s runner as-is uses a
+   different prompt with no schema validation, which will **not** match the existing 38K and
+   forks the dataset. Until they merge, check them out with:
+   ```bash
+   gh pr checkout 174 && gh pr checkout 264   # or merge both into your working branch
+   ```
 4. **The selection index** `persona/human_extraction/data/amazon/selected_users_100k.parquet`
    is **git-ignored**. Obtain a copy, or regenerate it deterministically via
    `persona/human_extraction/notebooks/explore_amazon_data.ipynb` (`SEED=20260705`). It must
@@ -160,7 +168,7 @@ supported-dimension count per user is expected, not a bug.
 
 ## 6. Recommended plan
 
-1. **Land/checkout the runner PR** (§4.3) and obtain the selection index (§4.4).
+1. **Land/checkout runner PRs #174 and #264** (§4.3) and obtain the selection index (§4.4).
 2. **Seed resume for the 14 partials:** download those buckets' shards from HF PR #53 into
    your output dir first, so the runner skips their already-done users:
    ```bash
@@ -192,8 +200,8 @@ supported-dimension count per user is expected, not a bug.
 ---
 
 ### Pointers
-- Runner: `persona/human_extraction/scripts/run_extraction_amazon.py` (**plus the pending
-  runner PR — see §4.3**)
+- Runner: `persona/human_extraction/scripts/run_extraction_amazon.py` (**plus open PRs #174
+  and #264 — both required, see §4.3**)
 - Remaining-bucket report: `persona/human_extraction/scripts/report_remaining_buckets.py`
 - Sharding mechanics (older, partly stale): `persona/human_extraction/AMAZON_EXTRACTION_HANDOFF.md`
 - Schema: `persona/schema/dimensions.json`
