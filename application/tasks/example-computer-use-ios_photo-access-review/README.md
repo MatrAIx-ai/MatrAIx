@@ -54,7 +54,7 @@ uv run harbor run \
 
 Host path after trial:
 
-`jobs/<job>/<trial>/artifacts/tmp/os-app-ios-photo-access-review/decision.json`
+`jobs/<job>/<trial>/artifacts/app/output/decision.json`
 
 The verifier checks that the submission includes:
 

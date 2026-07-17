@@ -60,8 +60,8 @@ export function useSetupPersonaSampling(
     queryKey: ["task-persona-strategy", normalizedPath],
     queryFn: async () => {
       if (!normalizedPath) return null;
-      const detail = await api.getTaskDetail(normalizedPath);
-      return detail.personaStrategy ?? null;
+      const response = await api.getTaskPersonaStrategy(normalizedPath);
+      return response.personaStrategy ?? null;
     },
     enabled: Boolean(normalizedPath),
     staleTime: 60_000,

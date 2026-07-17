@@ -65,6 +65,7 @@ import type {
 } from "@/lib/types";
 import { personaModelPipelineLabel } from "@/lib/personaAgentCatalog";
 import { sortByAvailability } from "./setup/cockpitTaskCards";
+import { mergeChatbotTaskAvailability } from "@/lib/chatbotTaskAvailability";
 import { taskCardTags, taskSearchTags } from "./setup/taskCardLabels";
 
 /** Per-app display name + icon (presentational; the data layer is app-agnostic). */
@@ -279,13 +280,23 @@ function ChatbotEvalCockpit({
   const tasksQuery = useQuery({
     queryKey: ["chatbot-eval-tasks"],
     queryFn: api.listChatbotEvalTasks,
+    enabled: isActive,
     staleTime: 60_000,
-    refetchInterval: sidecarStartingId ? 3_000 : 15_000,
   });
-  const chatbotTasks = useMemo(
-    () => sortByAvailability(tasksQuery.data?.tasks ?? []),
-    [tasksQuery.data?.tasks],
-  );
+  const sidecarsQuery = useQuery({
+    queryKey: ["chatbot-sidecars"],
+    queryFn: api.getChatbotSidecars,
+    enabled: isActive,
+    staleTime: 10_000,
+    refetchInterval: isActive && sidecarStartingId ? 3_000 : isActive ? 15_000 : false,
+  });
+  const chatbotTasks = useMemo(() => {
+    const sidecars = sidecarsQuery.data?.sidecars ?? [];
+    const merged = (tasksQuery.data?.tasks ?? []).map((task) =>
+      mergeChatbotTaskAvailability(task, sidecars),
+    );
+    return sortByAvailability(merged);
+  }, [tasksQuery.data?.tasks, sidecarsQuery.data?.sidecars]);
   const setupTaskPath =
     chatbotTasks.find((task) => task.id === selectedTaskId)?.taskPath ??
     chatbotTasks[0]?.taskPath ??
@@ -388,14 +399,14 @@ function ChatbotEvalCockpit({
       setSidecarStartingId(taskId);
       try {
         await api.startChatbotSidecar(appId);
-        await tasksQuery.refetch();
+        await sidecarsQuery.refetch();
       } catch (e) {
         setSidecarActionError(e instanceof Error ? e.message : "Failed to start sidecar");
       } finally {
         setSidecarStartingId(null);
       }
     },
-    [chatbotTasks, tasksQuery],
+    [chatbotTasks, sidecarsQuery],
   );
 
   // Live persona + controls, mirrored to a ref so the "run finished" effect can

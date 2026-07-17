@@ -263,6 +263,9 @@ configs/jobs/persona-task-grounding-job-recipe/*.meta.json
 # Local Harbor job outputs (recipes live under configs/jobs/)
 /jobs/*
 
+# Trial verifier output accidentally written under task folders during local runs
+application/tasks/*/verifier/
+
 # Playground local runtime cache (Cockpit / harness sessions)
 /data/cache/
 

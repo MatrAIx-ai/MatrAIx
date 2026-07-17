@@ -73,3 +73,19 @@ def test_persona_loader_reads_sample_dataset() -> None:
     assert persona.schema_version == "v2"
     assert persona.persona_id == "0001"
     assert persona.dimensions["domain"] == "Software & AI"
+
+
+def test_resolve_desktop_cua_provider_from_model_and_backend() -> None:
+    from matraix.agents.persona.computer_1 import resolve_desktop_cua_provider
+
+    assert resolve_desktop_cua_provider("openai/gpt-5.5") == "openai"
+    assert resolve_desktop_cua_provider("gpt-5.4") == "openai"
+    assert resolve_desktop_cua_provider("gemini/gemini-2.5-computer-use-preview") == "gemini"
+    assert resolve_desktop_cua_provider("anthropic/claude-sonnet-4-6") == "anthropic"
+    assert resolve_desktop_cua_provider(None) == "anthropic"
+    assert resolve_desktop_cua_provider(
+        "anthropic/claude-sonnet-4-6", cua_backend="openai"
+    ) == "openai"
+    assert resolve_desktop_cua_provider(
+        "openai/gpt-5.5", cua_backend="anthropic"
+    ) == "anthropic"

@@ -24,6 +24,10 @@ class OsAppEvalTask:
     environment_label: str = "Docker · persona-computer-1"
     os_app_backend: str = "docker"
 
+    def to_summary_dict(self) -> Dict[str, Any]:
+        """List-endpoint payload (no markdown bodies)."""
+        return self.to_dict()
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "id": self.id,

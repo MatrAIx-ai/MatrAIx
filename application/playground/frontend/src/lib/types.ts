@@ -271,6 +271,7 @@ export interface SurveyHarborTask {
   description: string;
   taskPath: string;
   instrumentId: string;
+  questionCount?: number;
   profileMarkdown?: string;
   instructionMarkdown?: string;
   contextMarkdown?: string;

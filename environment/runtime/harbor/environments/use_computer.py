@@ -269,6 +269,8 @@ class UseComputerEnvironment(BaseEnvironment):
         await self._setup_harbor_dirs()
         if self._platform == "macos":
             await self._prepare_macos_desktop()
+        elif self._platform == "ios":
+            await self.exec("mkdir -p /app/output", timeout_sec=30)
         await self._upload_environment_dir_after_start()
 
         self.logger.info(
@@ -489,7 +491,7 @@ class UseComputerEnvironment(BaseEnvironment):
 
     async def _prepare_macos_desktop(self) -> None:
         await self._exec_macos(
-            "mkdir -p /Users/lume/workspace && "
+            "mkdir -p /Users/lume/workspace /app/output && "
             "sudo mkdir -p /usr/local/bin && "
             "sudo chown lume /usr/local/bin && "
             "touch /logs/verifier/reward.txt",
@@ -498,6 +500,17 @@ class UseComputerEnvironment(BaseEnvironment):
             timeout=60,
             user=None,
         )
+
+    def _merge_env(self, env: dict[str, str] | None) -> dict[str, str] | None:
+        merged = super()._merge_env(env) or {}
+        if self._platform in {"macos", "ios"}:
+            output_dir = self._remap_macos_path("/app/output")
+            verifier_dir = self._remap_macos_path("/logs/verifier")
+            merged.setdefault("PLAYGROUND_OUTPUT_DIR", output_dir)
+            merged.setdefault("MATRIX_OUTPUT_DIR", output_dir)
+            merged.setdefault("HARBOR_OUTPUT_DIR", output_dir)
+            merged.setdefault("HARBOR_VERIFIER_DIR", verifier_dir)
+        return merged or None
 
     async def _exec_macos(
         self,

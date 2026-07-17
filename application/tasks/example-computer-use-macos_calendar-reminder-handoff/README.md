@@ -44,13 +44,13 @@ uv run harbor run -p application/tasks/example-computer-use-macos_calendar-remin
 
 Submissions are written inside the sandbox to:
 
-- `/tmp/os-app-macos-calendar-reminder-handoff/handoff.txt`
-- `/tmp/os-app-macos-calendar-reminder-handoff/plan.json`
+- `/app/output/handoff.txt`
+- `/app/output/plan.json`
 
 Harbor downloads that directory after the trial (`artifacts` in `task.toml`). On
 the host:
 
-`jobs/<job>/<trial>/artifacts/tmp/os-app-macos-calendar-reminder-handoff/`
+`jobs/<job>/<trial>/artifacts/app/output/`
 
 Check `artifacts/manifest.json` in the trial directory if a file is missing (`status: ok` vs `failed`).
 

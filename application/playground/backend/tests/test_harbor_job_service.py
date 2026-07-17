@@ -567,3 +567,57 @@ def test_list_jobs_reports_application_type_from_generated_config(tmp_path):
     rows = {row["jobName"]: row for row in service.list_jobs()}
     assert rows["pg-survey-job"]["applicationType"] == "survey"
     service.shutdown()
+
+
+def test_launch_web_cli_stages_shared_web_cli_environment(tmp_path, monkeypatch):
+    repo = tmp_path
+    jobs_dir = repo / "jobs"
+    jobs_dir.mkdir()
+    task_dir = repo / "application" / "tasks" / "example-web-playwright_quote-choice"
+    task_dir.mkdir(parents=True)
+    (task_dir / "task.toml").write_text(
+        "\n".join(
+            [
+                "[metadata]",
+                'type = "web"',
+                "",
+                "[environment]",
+                'definition = "application/shared-web-playwright"',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (repo / "persona" / "datasets" / "bench-dev-sample").mkdir(parents=True)
+    (repo / "persona" / "datasets" / "bench-dev-sample" / "persona_0001.yaml").write_text(
+        "persona_id: '0001'\nversion: '1.0'\nsource: Nemotron\ndimensions: {}\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr("playground.harbor.playground._repo_root", lambda: repo)
+    service = HarborJobService(
+        repo_root=repo,
+        jobs_dir=jobs_dir,
+        generated_configs_dir=repo / "configs" / "jobs" / "application-task-job-recipe",
+        command_runner=lambda *args, **kwargs: 0,
+        harbor_command=("echo", "harbor"),
+    )
+    service._executor = _FakeExecutor()
+
+    job_name = service.launch(
+        task_path="application/tasks/example-web-playwright_quote-choice",
+        persona_ids=["0001"],
+        persona_pool="persona/datasets/bench-dev-sample",
+        agent_name="persona-codex",
+        persona_model="openai/gpt-4o-mini",
+        job_name="web-cli-job",
+        execution_mode="auto",
+    )
+    assert job_name == "web-cli-job"
+    config_path = repo / "configs" / "jobs" / "application-task-job-recipe" / "web-cli-job.yaml"
+    text = config_path.read_text(encoding="utf-8")
+    assert "web_cli_staged_tasks/example-web-playwright_quote-choice" in text
+    staged_root = repo / "data" / "cache" / "playground" / "web_cli_staged_tasks"
+    staged_tomls = list(staged_root.rglob("task.toml"))
+    assert staged_tomls
+    assert 'application/shared-web-cli' in staged_tomls[0].read_text(encoding="utf-8")
+    service.shutdown()

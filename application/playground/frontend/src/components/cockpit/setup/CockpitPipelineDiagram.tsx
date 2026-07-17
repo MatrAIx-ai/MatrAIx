@@ -6,6 +6,7 @@ import {
   OS_PLATFORM_PIPELINE_PATHS,
   WEB_ACCESS_PIPELINE_PATHS,
   type PipelinePathOption,
+  type WebAgentFamily,
 } from "@/lib/personaAgentCatalog";
 import { Sym } from "../cockpitShared";
 import type { ChatTransport } from "./TaskSelectionRail";
@@ -17,6 +18,9 @@ export interface CockpitPipelineDiagramProps {
   chatbotLabel?: string;
   /** Web capability tier id (light / standard / extended / full). */
   webCapabilityTierId?: string;
+  /** When CLI family is selected, show harness label instead of tier fork. */
+  webHarnessLabel?: string;
+  webAgentFamily?: WebAgentFamily;
   /** OS app task platform (linux / macos / ios). */
   cuaPlatform?: string;
   /** Short label for the selected persona base model (pipeline display). */
@@ -272,6 +276,8 @@ export function CockpitPipelineDiagram({
   chatTransport = "api_sidecar",
   chatbotLabel,
   webCapabilityTierId,
+  webHarnessLabel,
+  webAgentFamily = "browser",
   cuaPlatform,
   personaModelLabel = "Base model",
   hasPersona,
@@ -287,7 +293,7 @@ export function CockpitPipelineDiagram({
       window.setTimeout(() => setRevealed(index + 1), 100 + index * 120),
     );
     return () => timers.forEach((id) => window.clearTimeout(id));
-  }, [taskType, chatTransport, chatbotLabel, webCapabilityTierId, cuaPlatform, personaModelLabel, stepCount]);
+  }, [taskType, chatTransport, chatbotLabel, webCapabilityTierId, webHarnessLabel, webAgentFamily, cuaPlatform, personaModelLabel, stepCount]);
 
   const ready = hasPersona && hasTask;
   const v = (step: number) => revealed >= step;
@@ -356,7 +362,7 @@ export function CockpitPipelineDiagram({
       )}
 
       {taskType === "web" && (
-        <PipelineScaleFit deps={[taskType, webPath, personaModelLabel, hasPersona, hasTask, revealed]}>
+        <PipelineScaleFit deps={[taskType, webPath, webHarnessLabel, webAgentFamily, personaModelLabel, hasPersona, hasTask, revealed]}>
           <div className={PIPELINE_ROW_CLASS}>
             <PipelineNode
               label="Persona"
@@ -366,13 +372,23 @@ export function CockpitPipelineDiagram({
               visible={v(1)}
             />
             <Arrow visible={v(2)} />
-            <PipelinePathFork
-              forkSize="dense"
-              caption="Access"
-              options={WEB_ACCESS_PIPELINE_PATHS}
-              selected={webPath}
-              visible={v(2)}
-            />
+            {webAgentFamily === "cli" ? (
+              <PipelineNode
+                label="Harness"
+                icon="terminal"
+                detail={webHarnessLabel ?? "CLI agent"}
+                active={hasTask}
+                visible={v(2)}
+              />
+            ) : (
+              <PipelinePathFork
+                forkSize="dense"
+                caption="Access"
+                options={WEB_ACCESS_PIPELINE_PATHS}
+                selected={webPath}
+                visible={v(2)}
+              />
+            )}
             <PipelineNode label="Website" icon="public" detail="SUT" active={hasTask} visible={v(3)} />
             <Arrow visible={v(4)} />
             <PipelineNode

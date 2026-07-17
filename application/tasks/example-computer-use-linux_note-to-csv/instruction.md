@@ -2,18 +2,18 @@
 
 Read the scenario brief in `input/context.md`, then clean a short note into a CSV.
 
-Create `/tmp/os-app-linux-note-to-csv/cleaned_list.csv` with this exact
+Create `/app/output/cleaned_list.csv` with this exact
 header:
 
 ```text
 item,quantity,priority
 ```
 
-Then save `/tmp/os-app-linux-note-to-csv/submission.json`:
+Then save `/app/output/submission.json`:
 
 ```json
 {
-  "output_file": "/tmp/os-app-linux-note-to-csv/cleaned_list.csv",
+  "output_file": "/app/output/cleaned_list.csv",
   "rows_written": 3,
   "format": "csv",
   "reason": "<why you chose this structure>"

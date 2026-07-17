@@ -21,6 +21,10 @@ class WebEvalTask:
     output_artifact: str = "web_result.json"
     submission_profile: str = "web_result"
 
+    def to_summary_dict(self) -> Dict[str, Any]:
+        """List-endpoint payload (no markdown bodies)."""
+        return self.to_dict()
+
     def to_dict(self) -> Dict[str, Any]:
         task_path = self.task_path
         if isinstance(task_path, Path):

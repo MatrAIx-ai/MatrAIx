@@ -4,22 +4,26 @@ set -uo pipefail
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
 
-# Ensure VERIFIER_DIR exists and is writable; fall back to /tmp if not.
-if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null || ! [ -w "${VERIFIER_DIR}" ]; then
-  VERIFIER_DIR="/tmp/verifier_output"
-  mkdir -p "${VERIFIER_DIR}"
-fi
 export VERIFIER_DIR
 
 set +e
 python3 <<'PY'
+from __future__ import annotations
+
 import json
 import os
 import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/os-app-macos-stocks-mu-sentiment/sentiment.json")
+OUTPUT_DIR = Path(
+    os.environ.get("HARBOR_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or "/app/output"
+)
+
+path = OUTPUT_DIR / "sentiment.json"
 
 if not path.is_file():
     logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
@@ -108,7 +112,7 @@ if not isinstance(reasoning, str) or len(reasoning.strip()) < 50:
     sys.exit("reasoning must be at least 50 characters")
 
 # --- Load optional user feedback ---
-feedback_path = Path("/app/output/user_feedback.json")
+feedback_path = OUTPUT_DIR / "user_feedback.json"
 satisfaction_buckets = {"yes", "partially", "no"}
 influence_buckets = {"heavily", "somewhat", "minimally"}
 
@@ -158,16 +162,14 @@ def load_user_feedback() -> dict[str, object] | None:
 feedback = load_user_feedback()
 
 # --- Build structured output ---
-verifier_dir = Path(
-    os.environ.get("VERIFIER_DIR")
-    or os.environ.get("HARBOR_VERIFIER_DIR")
-    or "/logs/verifier"
-)
+verifier_dir_raw = os.environ.get("VERIFIER_DIR") or os.environ.get("HARBOR_VERIFIER_DIR")
+if not verifier_dir_raw:
+    sys.exit("VERIFIER_DIR or HARBOR_VERIFIER_DIR is required")
+verifier_dir = Path(verifier_dir_raw)
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
-except OSError:
-    verifier_dir = Path("/tmp/verifier_output")
-    verifier_dir.mkdir(parents=True, exist_ok=True)
+except OSError as exc:
+    sys.exit(f"cannot create verifier directory {verifier_dir}: {exc}")
 
 trend_labels = "; ".join(
     f"{tf}: {trend_summary.get(tf, '?')[:60]}" for tf in timeframes

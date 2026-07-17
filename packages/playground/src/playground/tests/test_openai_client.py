@@ -50,7 +50,17 @@ def test_complete_json_parses_and_requests_json_mode():
     kw = fake.chat.completions.last_kwargs
     assert kw["model"] == "gpt-4o-mini"
     assert kw["response_format"] == {"type": "json_object"}
+    assert kw["temperature"] == 0.7
     assert kw["messages"][0]["role"] == "system" and kw["messages"][1]["role"] == "user"
+
+
+def test_complete_json_omits_temperature_for_gpt5():
+    fake = _FakeOpenAI('{"ok": true}')
+    client = OpenAIChatClient(model="gpt-5.5", client=fake, temperature=0.1)
+    assert client.complete_json("sys", "user") == {"ok": True}
+    kw = fake.chat.completions.last_kwargs
+    assert "temperature" not in kw
+    assert kw["model"] == "gpt-5.5"
 
 
 def test_complete_json_raises_on_unparseable():

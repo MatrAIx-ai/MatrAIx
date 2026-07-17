@@ -524,7 +524,10 @@ class SurveyInstrumentsResponse(BaseModel):
 
 
 class SurveyHarborTask(BaseModel):
-    """A Harbor example-survey task available for persona-agent testing."""
+    """Summary row for ``GET /api/survey-eval/harbor-tasks``.
+
+    Full markdown and questionnaire bodies live on ``GET /api/tasks/detail``.
+    """
 
     model_config = ConfigDict(extra="allow")
 
@@ -533,6 +536,7 @@ class SurveyHarborTask(BaseModel):
     description: str = ""
     taskPath: str
     instrumentId: str = ""
+    questionCount: Optional[int] = None
     profileMarkdown: str = ""
     instructionMarkdown: str = ""
     contextMarkdown: str = ""
@@ -575,7 +579,10 @@ class SurveyEvalJobView(BaseModel):
 # Chatbot eval
 # --------------------------------------------------------------------------- #
 class ChatbotEvalTask(BaseModel):
-    """A Harbor chatbot task available for persona-agent testing."""
+    """Summary row for ``GET /api/chatbot-eval/tasks``.
+
+    Live sidecar availability is merged client-side from ``GET /api/chatbot-sidecars``.
+    """
 
     model_config = ConfigDict(extra="allow")
 
@@ -591,9 +598,9 @@ class ChatbotEvalTask(BaseModel):
     domain: str = ""
     difficulty: str = "easy"
     taskKind: Literal["example", "task"] = "task"
-    available: Optional[bool] = None
     canStart: bool = False
     healthUrl: str = ""
+    available: Optional[bool] = None
     statusDetail: str = ""
 
 
@@ -607,7 +614,10 @@ class ChatbotEvalTasksResponse(BaseModel):
 # Web eval
 # --------------------------------------------------------------------------- #
 class WebEvalTask(BaseModel):
-    """A hosted website task available for persona-agent testing."""
+    """Summary row for ``GET /api/web-eval/tasks``.
+
+    Full markdown lives on ``GET /api/tasks/detail``.
+    """
 
     model_config = ConfigDict(extra="allow")
 
@@ -656,7 +666,10 @@ class WebEvalJobView(BaseModel):
 # OS app (computer-use) eval
 # --------------------------------------------------------------------------- #
 class OsAppEvalTask(BaseModel):
-    """A Harbor OS app (computer-use) task available for persona-agent testing."""
+    """Summary row for ``GET /api/os-app-eval/tasks``.
+
+    Full markdown lives on ``GET /api/tasks/detail``.
+    """
 
     model_config = ConfigDict(extra="allow")
 
@@ -883,6 +896,12 @@ class TaskPersonaStrategy(BaseModel):
     seed: Optional[int] = None
     cohortId: Optional[str] = None
     sampleSizePerValueGroup: Optional[int] = None
+
+
+class TaskPersonaStrategyResponse(BaseModel):
+    """``GET /api/tasks/persona-strategy`` payload."""
+
+    personaStrategy: Optional[TaskPersonaStrategy] = None
 
 
 class TaskDetailResponse(BaseModel):

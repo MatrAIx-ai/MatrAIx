@@ -119,19 +119,23 @@ def _derive_conversation_path(question_count: int, outcome_status: str) -> str:
 
 
 def _verifier_dir() -> Path:
-    base = (
-        os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("HARBOR_VERIFIER_DIR")
-        or "/logs/verifier"
-    )
-    path = Path(base)
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
+    if explicit:
+        path = Path(explicit)
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
+    container_default = Path("/logs/verifier")
     try:
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        container_default.mkdir(parents=True, exist_ok=True)
+        return container_default
     except OSError:
-        path = Path(__file__).resolve().parent.parent / "verifier"
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        pass
+
+    raise RuntimeError(
+        "HARBOR_VERIFIER_DIR is required when running outside a Harbor trial "
+        "container. Point it at jobs/<job>/<trial>/verifier for local harness runs."
+    )
 
 
 def main() -> int:
@@ -352,8 +356,8 @@ def main() -> int:
                     "missingArtifacts": [],
                 },
                 "sourceArtifacts": {
-                    "transcript": str(TRANSCRIPT_PATH),
-                    "userFeedback": str(FEEDBACK_PATH) if feedback else None,
+                    "transcript": "/app/output/transcript.json",
+                    "userFeedback": "/app/output/user_feedback.json" if feedback else None,
                 },
                 "contexts": contexts,
             },

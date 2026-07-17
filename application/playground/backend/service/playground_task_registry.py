@@ -34,7 +34,8 @@ def resolve_task_kind(folder_name: str, entry: PlaygroundTaskEntry) -> str:
     return default_task_kind(folder_name)
 
 
-# folder name → Playground routing. Keys are repo paths under application/tasks/.
+# folder name → Playground routing overrides (site URLs, OS backends, etc.).
+# Tasks with ``metadata.type`` in task.toml are auto-discovered when not listed here.
 PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
     # OS app (computer-use)
     "example-computer-use-linux_note-to-csv": PlaygroundTaskEntry(

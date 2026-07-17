@@ -12,14 +12,14 @@
  * mean-Likert summary + per-question answer cards with likert / single / multi /
  * free-text rendering).
  *
- * Harbor-backed: `useHarborCockpitRun`, the `listSurveyInstruments`
+ * Harbor-backed: `useHarborCockpitRun`, task detail lazy-load on selection,
  * query, the export logic, and every result/trajectory shape are wired exactly
  * as before. Only the structure and presentation are rebuilt.
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-import { listSurveyHarborTasks, listSurveyInstruments, api, ApiError } from "@/lib/api";
+import { listSurveyHarborTasks, api, ApiError } from "@/lib/api";
 import { FALLBACK_SURVEY_HARBOR_TASKS } from "@/lib/fallbackTasks";
 import { personaModelPipelineLabel } from "@/lib/personaAgentCatalog";
 import type {
@@ -28,7 +28,6 @@ import type {
   SurveyHarborTask,
   SurveyHarborTasksResponse,
   SurveyInstrument,
-  SurveyInstrumentsResponse,
   SurveyEvalJobView,
   SurveyQuestion,
   SurveyResult,
@@ -174,20 +173,14 @@ export function SurveyEvalCockpit({
     personaModel: string;
   } | null>(null);
 
-  const instrumentsQuery = useQuery<SurveyInstrumentsResponse>({
-    queryKey: ["survey-eval-instruments"],
-    queryFn: listSurveyInstruments,
-    staleTime: 10 * 60_000,
-    refetchOnWindowFocus: false,
-  });
   const harborTasksQuery = useQuery<SurveyHarborTasksResponse>({
     queryKey: ["survey-eval-harbor-tasks"],
     queryFn: listSurveyHarborTasks,
+    enabled: isActive,
     staleTime: 10 * 60_000,
     refetchOnWindowFocus: false,
     retry: 1,
   });
-  const instruments = instrumentsQuery.data?.instruments ?? [];
   const harborTasks = useMemo(() => {
     const fromApi = harborTasksQuery.data?.tasks ?? [];
     if (fromApi.length > 0) return fromApi;
@@ -199,6 +192,13 @@ export function SurveyEvalCockpit({
     taskCards.find((item) => item.id === selectedTaskId)?.taskPath ??
     taskCards[0]?.taskPath ??
     null;
+  const selectedTaskDetailQuery = useQuery({
+    queryKey: ["task-detail", setupTaskPath],
+    queryFn: () => api.getTaskDetail(setupTaskPath!),
+    enabled: isActive && Boolean(setupTaskPath),
+    staleTime: 300_000,
+    retry: 1,
+  });
   const {
     persona,
     personaModel,
@@ -248,14 +248,11 @@ export function SurveyEvalCockpit({
     taskCards.find((item) => item.id === activeTaskId) ?? taskCards[0] ?? null;
   const harborTask: SurveyHarborTask | null =
     harborTasks.find((item) => item.id === selectedCard?.id) ?? null;
-  const activeInstrumentId = harborTask?.instrumentId ?? null;
   const activeQuestionnaire: SurveyInstrument | null = useMemo(() => {
-    if (harborTask?.questionnaire?.questions?.length) {
-      return harborTask.questionnaire;
-    }
-    if (!activeInstrumentId) return null;
-    return instruments.find((item) => item.id === activeInstrumentId) ?? null;
-  }, [activeInstrumentId, harborTask?.questionnaire, instruments]);
+    const fromDetail = selectedTaskDetailQuery.data?.questionnaire;
+    if (fromDetail?.questions?.length) return fromDetail;
+    return null;
+  }, [selectedTaskDetailQuery.data?.questionnaire]);
 
   const pipelinePersonaModelLabel = useMemo(
     () => personaModelPipelineLabel(personaModel, personaModelOptions),
@@ -297,14 +294,11 @@ export function SurveyEvalCockpit({
     (phase === "error" || phase === "timeout" || job?.status === "error");
   const status = surveyStatusLine(phase, job?.phase, harborPhase);
   const setupInstructionMarkdown = useMemo(() => {
-    // Prefer task instruction only — profileMarkdown embeds agent questionnaire + answer envelope.
-    if (harborTask?.instructionMarkdown?.trim()) return harborTask.instructionMarkdown.trim();
+    const instruction = selectedTaskDetailQuery.data?.instructionMarkdown?.trim();
+    if (instruction) return instruction;
     if (harborTask) return `# ${harborTask.title}\n\n${harborTask.description}`;
-    if (activeQuestionnaire) {
-      return `# ${activeQuestionnaire.title}\n\n${activeQuestionnaire.description?.trim() || ""}`.trim();
-    }
     return "";
-  }, [harborTask, activeQuestionnaire]);
+  }, [selectedTaskDetailQuery.data?.instructionMarkdown, harborTask]);
   const liveInstructionMarkdown = normalizeTaskInstructionMarkdown(job?.instructionMarkdown ?? null);
   const centerInstructionMarkdown = liveInstructionMarkdown || setupInstructionMarkdown;
 
@@ -338,7 +332,7 @@ export function SurveyEvalCockpit({
       const task = harborTasks.find((item) => item.id === card.id) ?? null;
       const instrumentId = task?.instrumentId ?? "";
       const taskPath = card.taskPath || HARBOR_TASK_PATHS.survey;
-      const instrumentTitle = task?.title ?? instruments.find((item) => item.id === instrumentId)?.title ?? card.title;
+      const instrumentTitle = task?.title ?? card.title;
       void run({
         taskPath,
         personaId: persona.id,
@@ -360,7 +354,7 @@ export function SurveyEvalCockpit({
           }),
       });
     },
-    [persona, isRunning, run, personaModel, harborTasks, instruments],
+    [persona, isRunning, run, personaModel, harborTasks],
   );
 
   const handleRun = useCallback(() => {

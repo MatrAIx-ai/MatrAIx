@@ -971,10 +971,17 @@ class HarborJobService:
             mode=execution_mode,
             trial_profile=trial_profile,
         )
+        from matraix.web_task_environment import resolve_web_harbor_task_path
+
+        harbor_task_path = resolve_web_harbor_task_path(
+            task_path,
+            agent_name=agent,
+            repo_root=self.repo_root,
+        )
 
         spec = {
             "name": resolved_job_name,
-            "task": task_path,
+            "task": harbor_task_path,
             "persona_pool": resolved_pool,
             "sample_size": len(resolved_persona_ids) if resolved_persona_ids else sample_size,
             "seed": resolved_seed,
@@ -991,7 +998,7 @@ class HarborJobService:
         }
         from matraix.application_job import resolve_harbor_task_path
 
-        resolved_task_path = resolve_harbor_task_path(task_path, trial_profile=trial_profile)
+        resolved_task_path = resolve_harbor_task_path(harbor_task_path, trial_profile=trial_profile)
         job_config = build_application_job_config(spec, repo_root=self.repo_root)
         if os_app_submission_profile:
             for agent in job_config.get("agents", []):
@@ -1205,6 +1212,7 @@ class HarborJobService:
             record.exit_code = exit_code
             record.error = error
             record.finished_at = _utc_now()
+        self._maybe_run_host_verifier(job_name)
         self._maybe_generate_post_run_feedback(job_name)
         self._maybe_schedule_reporting(job_name, self.jobs_dir / job_name)
 
@@ -1257,6 +1265,7 @@ class HarborJobService:
             record.exit_code = exit_code
             record.error = error
             record.finished_at = _utc_now()
+        self._maybe_run_host_verifier(job_name)
         self._maybe_generate_post_run_feedback(job_name)
         self._maybe_schedule_reporting(job_name, self.jobs_dir / job_name)
 
@@ -1316,8 +1325,25 @@ class HarborJobService:
             record.exit_code = exit_code
             record.error = error
             record.finished_at = _utc_now()
+        self._maybe_run_host_verifier(job_name)
         self._maybe_generate_post_run_feedback(job_name)
         self._maybe_schedule_reporting(job_name, self.jobs_dir / job_name)
+
+    def _maybe_run_host_verifier(self, job_name: str) -> None:
+        from playground.host_verifier import maybe_run_host_verifier
+
+        job_dir = self.jobs_dir / job_name
+        if not job_dir.is_dir():
+            return
+        for trial_dir in sorted(job_dir.iterdir()):
+            if not trial_dir.is_dir() or trial_dir.name.startswith("_"):
+                continue
+            if not (trial_dir / "config.json").is_file():
+                continue
+            try:
+                maybe_run_host_verifier(repo_root=self.repo_root, trial_dir=trial_dir)
+            except Exception:
+                continue
 
     def _maybe_generate_post_run_feedback(self, job_name: str) -> None:
         from playground.post_run_feedback import (

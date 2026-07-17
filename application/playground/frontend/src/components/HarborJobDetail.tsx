@@ -388,6 +388,14 @@ function previewText(value: string | null | undefined, limit = 220): string {
   return `${normalized.slice(0, limit - 1).trimEnd()}…`
 }
 
+/** Full prose for PDF / evidence quotes — do not collapse whitespace mid-sentence beyond a soft cap. */
+function fullProseText(value: string | null | undefined, limit = 8000): string {
+  const normalized = (value ?? "").trim().replace(/\s+/g, " ")
+  if (!normalized) return ""
+  if (normalized.length <= limit) return normalized
+  return `${normalized.slice(0, limit - 1).trimEnd()}…`
+}
+
 function primaryFacetForContext(context: AggregationContext): AggregationField | null {
   return context.facets.find((facet) => facet.role === "primary") ?? context.facets[0] ?? null
 }
@@ -1326,7 +1334,7 @@ function PersonaTextSnapshots({
                 <div key={`${field.key}-${index}`}>
                   <div className="text-[12px] uppercase tracking-wide text-text-dim">{field.label}</div>
                   <p className="mt-0.5 text-[14px] leading-relaxed text-text-main">
-                    {previewText(sample, 260)}
+                    {fullProseText(sample)}
                   </p>
                 </div>
               )
@@ -1792,9 +1800,22 @@ function AggregationDashboard({
       await new Promise<void>((resolve) => {
         requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
       });
-      await new Promise((resolve) => window.setTimeout(resolve, 150));
       const root = rootRef.current;
-      if (!root) {
+      if (root) {
+        // Expand collapsed reason / evidence panels so PDF captures full quotes.
+        root
+          .querySelectorAll<HTMLButtonElement>('button[aria-expanded="false"]')
+          .forEach((button) => {
+            if (button.closest("[data-pdf-ignore]")) return;
+            button.click();
+          });
+        await new Promise<void>((resolve) => {
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+        });
+      }
+      await new Promise((resolve) => window.setTimeout(resolve, 150));
+      const captureRoot = rootRef.current;
+      if (!captureRoot) {
         throw new Error("Batch report is not ready to capture.");
       }
       const enriched = await enrichBatchReportPdfMeta({
@@ -1805,7 +1826,7 @@ function AggregationDashboard({
             ? pdfMeta.snapshot
             : buildCoverageSnapshot(aggregation),
       });
-      await exportBatchReportPdf(root, enriched);
+      await exportBatchReportPdf(captureRoot, enriched);
     } catch (err) {
       const message = err instanceof Error ? err.message : "Could not download PDF report.";
       setCaptureError(message);
@@ -2716,7 +2737,9 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
                   {reasonSummary ? (
                     <p className="text-[14px] leading-relaxed text-text-main">{reasonSummary}</p>
                   ) : null}
-                  {reasonSamples.length > 0 ? <SampleList samples={reasonSamples} /> : null}
+                  {reasonSamples.length > 0 ? (
+                    <SampleList samples={reasonSamples} defaultExpanded />
+                  ) : null}
                 </div>
               ) : null}
             </>
@@ -2889,9 +2912,9 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
   const explanation = explanationFacetForContext(context)
   const explanationLead =
     explanation?.textual?.summary && !isHeuristicAggregationSummary(explanation.textual.summary)
-      ? previewText(explanation.textual.summary, 160)
+      ? fullProseText(explanation.textual.summary)
       : explanation?.textual?.samples?.[0]
-        ? previewText(explanation.textual.samples[0], 160)
+        ? fullProseText(explanation.textual.samples[0])
         : null
   const ratingLead =
     primaryRating?.kind === "numerical"
@@ -2986,8 +3009,11 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
               ) : null}
               <FreeTextThemeTags themes={themes} label="Themes" />
               {(facet.textual?.samples?.length ?? 0) > 0 ? (
-                <DisclosurePanel title={`Examples (${facet.textual?.samples?.length ?? 0})`}>
-                  <SampleList samples={facet.textual?.samples ?? []} />
+                <DisclosurePanel
+                  title={`Examples (${facet.textual?.samples?.length ?? 0})`}
+                  defaultOpen
+                >
+                  <SampleList samples={facet.textual?.samples ?? []} defaultExpanded />
                 </DisclosurePanel>
               ) : null}
             </div>
@@ -3585,8 +3611,14 @@ function CountBars({
   )
 }
 
-function SampleList({ samples }: { samples: string[] }) {
-  const [expanded, setExpanded] = useState(false)
+function SampleList({
+  samples,
+  defaultExpanded = false,
+}: {
+  samples: string[]
+  defaultExpanded?: boolean
+}) {
+  const [expanded, setExpanded] = useState(defaultExpanded)
   const shown = expanded ? samples : samples.slice(0, 2)
 
   return (
@@ -3596,12 +3628,13 @@ function SampleList({ samples }: { samples: string[] }) {
           key={`${index}-${sample.slice(0, 24)}`}
           className="rounded-md border border-outline/40 bg-surface/60 px-3 py-2 text-[14px] leading-relaxed text-text-variant"
         >
-          {sample}
+          {fullProseText(sample)}
         </div>
       ))}
       {samples.length > 2 ? (
         <button
           type="button"
+          data-pdf-ignore
           onClick={() => setExpanded((value) => !value)}
           className={`inline-flex items-center gap-1 rounded border border-outline/40 bg-surface/50 px-2 py-1 text-[13px] text-text-dim hover:bg-surface/70 ${FOCUS_RING}`}
         >

@@ -16,7 +16,7 @@ thinking.
    They can come from the same category or different ones — choose whichever
    three would be genuinely most useful to you.
 
-Save `/tmp/os-app-macos-shortcuts-gallery-picks/picks.json`:
+Save `/app/output/picks.json`:
 
 ```json
 {

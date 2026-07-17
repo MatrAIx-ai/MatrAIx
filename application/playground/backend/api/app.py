@@ -1125,6 +1125,30 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     @app.get(
+        "/api/tasks/persona-strategy",
+        response_model=schemas.TaskPersonaStrategyResponse,
+        tags=["tasks"],
+    )
+    def get_task_persona_strategy(
+        task_path: str = Query(..., alias="taskPath"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        from backend.service.task_persona_strategy_service import (
+            get_task_persona_strategy as load_task_persona_strategy,
+        )
+
+        try:
+            strategy = load_task_persona_strategy(
+                task_path,
+                repo_root=services.harbor_jobs.repo_root,
+            )
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        return {"personaStrategy": strategy}
+
+    @app.get(
         "/api/persona-pool/cohorts",
         response_model=schemas.PersonaCohortListResponse,
         tags=["persona-pool"],
@@ -1191,15 +1215,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def survey_eval_harbor_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.survey_harbor_tasks import list_survey_harbor_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_survey_harbor_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_survey_harbor_tasks()]}
 
     # ----------------------------- Chatbot eval --------------------------- #
     @app.get(
@@ -1209,15 +1226,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def chatbot_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.chatbot_tasks import list_chatbot_eval_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_chatbot_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_chatbot_eval_tasks()]}
 
     # ------------------------------- WebEval ------------------------------ #
     @app.get(
@@ -1226,16 +1236,9 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         tags=["web-eval"],
     )
     def web_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
-        from backend.service.task_detail_service import attach_task_profile_markdown
         from backend.service.web_tasks import list_web_eval_tasks
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_web_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_web_eval_tasks()]}
 
     # ----------------------------- OS app eval ---------------------------- #
     @app.get(
@@ -1245,15 +1248,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def os_app_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.os_app_tasks import list_os_app_eval_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_os_app_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_os_app_eval_tasks()]}
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

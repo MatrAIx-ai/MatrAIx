@@ -124,6 +124,7 @@ export function OsAppEvalCockpit({
   const tasksQuery = useQuery<OsAppEvalTasksResponse>({
     queryKey: ["os-app-eval-tasks"],
     queryFn: listOsAppEvalTasks,
+    enabled: isActive,
     staleTime: 10 * 60_000,
     retry: 1,
   });

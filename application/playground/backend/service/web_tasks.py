@@ -5,10 +5,11 @@ from __future__ import annotations
 from typing import Dict, List
 
 from backend.service.example_task_catalog import discover_application_tasks, task_id_from_folder
+from backend.service.playground_task_registry_cache import get_cached_registry
 from backend.service.web_types import WebEvalTask
 
 
-def _registry() -> Dict[str, WebEvalTask]:
+def _build_registry() -> Dict[str, WebEvalTask]:
     tasks: Dict[str, WebEvalTask] = {}
     for record in discover_application_tasks(application_type="web"):
         assert record.playground is not None
@@ -30,6 +31,10 @@ def _registry() -> Dict[str, WebEvalTask]:
             submission_profile=pe.submission_profile or "web_result",
         )
     return tasks
+
+
+def _registry() -> Dict[str, WebEvalTask]:
+    return get_cached_registry("web", _build_registry)
 
 
 def list_web_eval_tasks() -> List[WebEvalTask]:

@@ -61,13 +61,17 @@ class OpenAIToolStepClient:
         self._client = client
 
     def complete_with_tools(self, messages: List[Dict[str, Any]]) -> List[ToolCall]:
-        completion = self._client.chat.completions.create(
-            model=self.model,
-            temperature=self.temperature,
-            messages=messages,
-            tools=self._tools,
-            tool_choice="auto",
-        )
+        from playground.openai_client import openai_model_supports_custom_temperature
+
+        kwargs: Dict[str, Any] = {
+            "model": self.model,
+            "messages": messages,
+            "tools": self._tools,
+            "tool_choice": "auto",
+        }
+        if openai_model_supports_custom_temperature(self.model):
+            kwargs["temperature"] = self.temperature
+        completion = self._client.chat.completions.create(**kwargs)
         message = completion.choices[0].message
         calls: List[ToolCall] = []
         for tool_call in message.tool_calls or []:
