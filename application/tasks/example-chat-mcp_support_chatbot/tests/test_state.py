@@ -21,9 +21,7 @@ def fail(message: str) -> None:
 
 
 def _verifier_dir() -> Path:
-    explicit = os.environ.get("HARBOR_VERIFIER_DIR") or os.environ.get(
-        "PERSONABENCH_VERIFIER_DIR"
-    )
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
     if explicit:
         path = Path(explicit)
         path.mkdir(parents=True, exist_ok=True)

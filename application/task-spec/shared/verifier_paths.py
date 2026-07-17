@@ -17,9 +17,7 @@ def verifier_dir() -> Path:
       1. HARBOR_VERIFIER_DIR (Harbor host, Playground host verifier, pytest harness)
       2. /logs/verifier (in-container default for Harbor docker sandboxes)
     """
-    explicit = os.environ.get("HARBOR_VERIFIER_DIR") or os.environ.get(
-        "PERSONABENCH_VERIFIER_DIR"
-    )
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
     if explicit:
         path = Path(explicit)
         path.mkdir(parents=True, exist_ok=True)

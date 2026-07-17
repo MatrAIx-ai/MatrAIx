@@ -15,9 +15,7 @@ FEEDBACK_PATH = OUTPUT_DIR / "user_feedback.json"
 
 
 def _verifier_dir() -> Path:
-    explicit = os.environ.get("HARBOR_VERIFIER_DIR") or os.environ.get(
-        "PERSONABENCH_VERIFIER_DIR"
-    )
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
     if explicit:
         path = Path(explicit)
         path.mkdir(parents=True, exist_ok=True)
