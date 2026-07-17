@@ -269,9 +269,9 @@ def render(graph_path: Path, out_dir: Path) -> None:
     fig, ax = plt.subplots(figsize=(18.5, 0.34 * (span + 2) + 1.0))
     ax.axis("off")
 
-    x_group, w_group = 0.0, 5.9
-    x_aspect, w_aspect = 6.9, 4.7
-    x_leaf, w_leaf = 12.1, 12.0
+    x_group, w_group = 0.0, 7.4
+    x_aspect, w_aspect = 7.8, 5.2
+    x_leaf, w_leaf = 13.3, 12.0
 
     def draw_box(x, y, w, h, text, face, edge, size, txt_color=TEXT_COLOR, weight="normal"):
         ax.add_patch(FancyBboxPatch(
@@ -294,38 +294,36 @@ def render(graph_path: Path, out_dir: Path) -> None:
         n_lines = label.count("\n") + 1
         box_h = max(leaf_h, n_lines * 0.62 + 0.34)
         draw_box(x_leaf, y_leaf[i], w_leaf, box_h, label,
-                 _lighten(color, 0.80), color, size=11.0)
+                 _lighten(color, 0.80), color, size=12.0)
 
     # Subgroup boxes (mid) at the mean y of their leaves, with brackets to leaves.
     aspect_y: list[float] = []
     for aspect_name, color, idxs in aspect_spans:
         y_mid = float(np.mean([y_leaf[i] for i in idxs]))
         aspect_y.append(y_mid)
-        label = _wrap(aspect_name, 16)
-        n_lines = label.count("\n") + 1
-        draw_box(x_aspect, y_mid, w_aspect, n_lines * 0.72 + 0.40, label,
-                 _lighten(color, 0.58), color, size=14.0)
+        draw_box(x_aspect, y_mid, w_aspect, 0.72 + 0.40, aspect_name,
+                 _lighten(color, 0.58), color, size=15.0)
         for i in idxs:
             connect(x_aspect + w_aspect, y_mid, x_leaf, y_leaf[i], color)
 
     # Group boxes at the mean y of their subgroups, with brackets to subgroups.
     for group_name, color, total, aspect_idxs in group_spans:
         y_mid = float(np.mean([aspect_y[a] for a in aspect_idxs]))
-        label = _wrap_with_count(group_name, total, 18)
-        n_lines = label.count("\n") + 1
-        draw_box(x_group, y_mid, w_group, n_lines * 0.80 + 0.50, label,
-                 _lighten(color, 0.52), color, size=16.0, txt_color="#000000")
+        label = f"{group_name}  ({total})"
+        draw_box(x_group, y_mid, w_group, 0.80 + 0.50, label,
+                 _lighten(color, 0.52), color, size=17.0,
+                 txt_color="#000000")
         for a in aspect_idxs:
             connect(x_group + w_group, y_mid, x_aspect, aspect_y[a], color)
 
     # Column headers.
     top = span + 1.3
     ax.text(x_group + w_group / 2, top, "Group  (# attributes)",
-            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=14.0, color=TEXT_COLOR)
     ax.text(x_aspect + w_aspect / 2, top, "Subgroup",
-            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=14.0, color=TEXT_COLOR)
     ax.text(x_leaf + w_leaf / 2, top, "Category  (# attributes)",
-            ha="center", va="center", fontsize=12.5, color=TEXT_COLOR)
+            ha="center", va="center", fontsize=14.0, color=TEXT_COLOR)
 
     ax.set_xlim(-0.4, x_leaf + w_leaf + 0.4)
     ax.set_ylim(-1.0, top + 1.0)
