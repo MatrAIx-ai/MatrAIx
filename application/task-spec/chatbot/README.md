@@ -387,6 +387,7 @@ Optional local endpoint hosts (not the persona agent image):
 - `environment/task-environments/application/chatbot-api-sidecar_openbb`
 - `environment/task-environments/application/chatbot-api-sidecar_acme-support-api`
 - `environment/task-environments/application/chatbot-api-sidecar_multi-agent-medical-assistant`
+- `environment/task-environments/application/chatbot-api-sidecar_anxiety`
 - `environment/task-environments/application/chatbot-mcp-sidecar_acme-support`
 
 See [`CHAT_ENVS.md`](../../../environment/task-environments/application/CHAT_ENVS.md)

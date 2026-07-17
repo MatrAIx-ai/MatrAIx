@@ -140,6 +140,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_multi-agent-medical-assistant": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_meal-planning-nutrition": PlaygroundTaskEntry(application_type="chatbot"),
+    "chat_synthetic-anxiety-support": PlaygroundTaskEntry(application_type="chatbot"),
     "example-chat-mcp_support_chatbot": PlaygroundTaskEntry(
         application_type="chatbot"
     ),
