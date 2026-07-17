@@ -110,11 +110,16 @@ def build_brain(brain_kind: str, seed: int):
         return brains.ClaudeArenaBrain(api_key=api_key)
 
     if brain_kind == "vision":
+        # Amazon Bedrock (Bedrock API key / bearer token) is accepted as an
+        # alternative to a direct ANTHROPIC_API_KEY. Prefer Bedrock when its
+        # bearer token is present so the same run works on Bedrock-only hosts.
+        bedrock_token = os.environ.get("AWS_BEARER_TOKEN_BEDROCK")
         api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if not api_key:
+        if not bedrock_token and not api_key:
             print(
-                "ERROR: --brain vision requires the ANTHROPIC_API_KEY environment "
-                "variable to be set. Export it and re-run, or use --brain mock.",
+                "ERROR: --brain vision requires ANTHROPIC_API_KEY or "
+                "AWS_BEARER_TOKEN_BEDROCK (+ AWS_REGION) to be set. Export one "
+                "and re-run, or use --brain mock.",
                 file=sys.stderr,
             )
             sys.exit(1)
@@ -136,6 +141,11 @@ def build_brain(brain_kind: str, seed: int):
             )
             sys.exit(1)
         try:
+            if bedrock_token:
+                return vision_brain.BrowserVisionBrain(
+                    use_bedrock=True,
+                    aws_region=os.environ.get("AWS_REGION"),
+                )
             return vision_brain.BrowserVisionBrain(api_key=api_key)
         except ImportError as exc:
             print(f"ERROR: --brain vision failed to initialize: {exc}", file=sys.stderr)
@@ -176,10 +186,56 @@ def main() -> None:
     parser.add_argument("--map", required=True, help="Path to ship_map.yaml")
     parser.add_argument("--crew", required=True, help="Path to crew_manifest.yaml")
     parser.add_argument("--brain", choices=["mock", "claude", "vision", "bridge"], default="mock")
+    parser.add_argument(
+        "--player-id",
+        default=None,
+        help=(
+            "Persona id that plays with the real --brain; every OTHER seat is "
+            "filled by a computer bot (see --opponent-brain). This is how the "
+            "Playground runs the game with a single sampled persona: one real "
+            "player vs. bots, so a one-persona trial is still a full game. When "
+            "omitted, all personas use --brain (original behaviour)."
+        ),
+    )
+    parser.add_argument(
+        "--opponent-brain",
+        choices=["bayesian", "mock"],
+        default="bayesian",
+        help=(
+            "Brain used for the non-player (bot) seats when --player-id is set. "
+            "'bayesian' reasons over public card counts; 'mock' is random. "
+            "Ignored when --player-id is not given."
+        ),
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-ticks", type=int, default=16)
     parser.add_argument("--out", required=True, help="Output directory for game_log.json / final_state.json")
+    parser.add_argument(
+        "--render-spectator",
+        action="store_true",
+        help=(
+            "Also write a self-contained spectator replay to <out>/spectator.html "
+            "(the human-facing full-match view; the only view surfaced for "
+            "Docker/Playground runs). Per-agent cockpit HUDs stay internal to the "
+            "vision/CUA brains."
+        ),
+    )
     args = parser.parse_args()
+
+    # Player-vs-bots can also be selected via the environment, so a Harbor
+    # trial entrypoint can turn the sampled persona into the player without
+    # editing the command line: STARCLASH_PLAYER_ID names the seat that plays
+    # with --brain (every other seat becomes a bot), and STARCLASH_OPPONENT_BRAIN
+    # optionally overrides the bot strategy. An explicit --player-id CLI flag
+    # still wins over the env var.
+    if args.player_id is None:
+        env_player = os.environ.get("STARCLASH_PLAYER_ID")
+        if env_player and env_player.strip():
+            args.player_id = env_player.strip()
+    env_opponent = os.environ.get("STARCLASH_OPPONENT_BRAIN")
+    if env_opponent and env_opponent.strip() in ("bayesian", "mock"):
+        # Only honoured when player-vs-bots is active (see --player-id).
+        args.opponent_brain = env_opponent.strip()
 
     # repo_root: crew manifest persona_paths are relative to the repo root
     # (e.g. "persona/datasets/bench-dev-sample/persona_0001.yaml"). Walk up
@@ -231,8 +287,40 @@ def main() -> None:
 
     brain = build_brain(args.brain, args.seed)
 
-    def brain_fn(persona: PersonaState, observation: dict) -> dict:
-        return brain.decide(observation)
+    if args.player_id is not None:
+        # Player-vs-bots mode: one real persona brain, every other seat a bot.
+        # "auto" (the Playground/Harbor default, since the trial doesn't know
+        # the crew ids ahead of time) resolves to the first persona in roster
+        # order - a stable, deterministic choice given a fixed crew manifest.
+        if args.player_id == "auto":
+            args.player_id = engine.persona_order[0]
+        if args.player_id not in engine.personas:
+            print(
+                "ERROR: --player-id {!r} is not in the crew roster {}.".format(
+                    args.player_id, sorted(engine.personas)
+                ),
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        # Give each bot its own seed offset so they don't act in lockstep,
+        # while staying fully deterministic under a fixed --seed.
+        bot_brains: Dict[str, Any] = {}
+        for offset, pid in enumerate(engine.persona_order):
+            if pid == args.player_id:
+                continue
+            bot_seed = args.seed + 1 + offset
+            if args.opponent_brain == "mock":
+                bot_brains[pid] = brains.MockArenaBrain(seed=bot_seed)
+            else:
+                bot_brains[pid] = brains.BayesianBotBrain(seed=bot_seed)
+
+        def brain_fn(persona: PersonaState, observation: dict) -> dict:
+            if persona.id == args.player_id:
+                return brain.decide(observation)
+            return bot_brains[persona.id].decide(observation)
+    else:
+        def brain_fn(persona: PersonaState, observation: dict) -> dict:
+            return brain.decide(observation)
 
     engine.run(brain_fn)
 
@@ -269,6 +357,24 @@ def main() -> None:
     with open(final_state_path, "w", encoding="utf-8") as f:
         json.dump(final_state_output, f, indent=2)
 
+    # Optional human-facing spectator replay. This is the only Starclash view
+    # meant to be surfaced for a Docker/Playground run - a single read-only
+    # full-match replay built from game_log. The per-agent cockpit HUD
+    # (render_observation_html) is internal to the vision/CUA brains and is
+    # never shown as a run artifact.
+    spectator_path = None
+    if getattr(args, "render_spectator", False):
+        try:
+            from render_observation import render_spectator_html
+
+            spectator_html = render_spectator_html(game_log, inline_assets=True)
+            spectator_path = os.path.join(args.out, "spectator.html")
+            with open(spectator_path, "w", encoding="utf-8") as f:
+                f.write(spectator_html)
+        except Exception as exc:  # noqa: BLE001
+            print(f"WARNING: failed to render spectator.html: {exc}", file=sys.stderr)
+            spectator_path = None
+
     # Human-readable summary.
     num_battles = sum(1 for e in engine.events if e.get("type") == "battle_resolved")
     survivors = [p for p in personas if not p.is_eliminated()]
@@ -295,6 +401,8 @@ def main() -> None:
         print(f"Eliminated: {', '.join(p.display_name for p in eliminated)}")
     print(f"Wrote: {game_log_path}")
     print(f"Wrote: {final_state_path}")
+    if spectator_path:
+        print(f"Wrote: {spectator_path}")
 
 
 if __name__ == "__main__":

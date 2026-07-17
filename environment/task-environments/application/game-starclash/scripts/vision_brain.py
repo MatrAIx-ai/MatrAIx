@@ -81,7 +81,15 @@ class BrowserVisionBrain(ArenaBrain):
     heavier dependency to be installed.
     """
 
-    def __init__(self, api_key: str, model: str = "claude-sonnet-4-6", headless: bool = True) -> None:
+    def __init__(
+        self,
+        api_key: str | None = None,
+        model: str | None = None,
+        headless: bool = True,
+        *,
+        use_bedrock: bool = False,
+        aws_region: str | None = None,
+    ) -> None:
         try:
             import anthropic  # noqa: F401  (imported lazily, kept as attribute below)
         except ImportError as exc:  # pragma: no cover - exercised only with --brain vision
@@ -102,8 +110,17 @@ class BrowserVisionBrain(ArenaBrain):
             ) from exc
 
         self._anthropic = anthropic
-        self._client = anthropic.Anthropic(api_key=api_key)
-        self.model = model
+        # Amazon Bedrock (Bedrock API key / bearer token) vs. direct Anthropic.
+        # AnthropicBedrock reads AWS_BEARER_TOKEN_BEDROCK from the environment;
+        # only the region is passed explicitly. Bedrock needs the inference
+        # profile model id (us.anthropic.claude-...), not the bare alias.
+        if use_bedrock:
+            region = (aws_region or "us-east-1").strip()
+            self._client = anthropic.AnthropicBedrock(aws_region=region)
+            self.model = model or "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+        else:
+            self._client = anthropic.Anthropic(api_key=api_key)
+            self.model = model or "claude-sonnet-4-6"
         self.headless = headless
 
         self._sync_playwright_cm = playwright.sync_api.sync_playwright
@@ -111,6 +128,10 @@ class BrowserVisionBrain(ArenaBrain):
         self._browser = None
         self._context = None
         self._page = None
+        # One-line rationale the vision model supplies with its primitives this
+        # decide() call; consumed by decide() and attached to the action so the
+        # reasoning-trajectory pipeline has real data for --brain vision.
+        self._last_reasoning: Optional[str] = None
 
     # -- lazy browser lifecycle ---------------------------------------
 
@@ -163,6 +184,7 @@ class BrowserVisionBrain(ArenaBrain):
         if not actions:
             return {"action": "wait"}
 
+        self._last_reasoning: Optional[str] = None
         try:
             decision = self._run_vision_loop(observation)
         except Exception:
@@ -170,7 +192,14 @@ class BrowserVisionBrain(ArenaBrain):
             # fall back defensively below, exactly as ClaudeArenaBrain does.
             decision = None
 
-        return self._sanitize_decision(decision, observation, menu)
+        result = self._sanitize_decision(decision, observation, menu)
+        # Attach the one-line rationale the vision model gave alongside its
+        # primitives (collected in _ask_vision_model) so --brain vision feeds
+        # the reasoning-trajectory pipeline just like MockArenaBrain/
+        # ClaudeArenaBrain. engine._extract_reasoning only logs it when non-empty.
+        if self._last_reasoning and "reasoning" not in result:
+            result["reasoning"] = self._last_reasoning
+        return result
 
     # -- browser-driven step loop ---------------------------------------
 
@@ -186,6 +215,11 @@ class BrowserVisionBrain(ArenaBrain):
             screenshot_bytes = page.screenshot(timeout=_SCREENSHOT_TIMEOUT_MS)
             primitive = self._ask_vision_model(screenshot_bytes, step_history)
             step_history.append(primitive)
+
+            # Keep the latest non-empty rationale the model offered this turn.
+            reasoning = primitive.get("reasoning")
+            if isinstance(reasoning, str) and reasoning.strip():
+                self._last_reasoning = reasoning.strip()
 
             kind = primitive.get("type")
             if kind == "done":
@@ -259,6 +293,15 @@ class BrowserVisionBrain(ArenaBrain):
                         "type": "string",
                         "description": "Text to type. Required when type is 'type_text'.",
                     },
+                    "reasoning": {
+                        "type": "string",
+                        "description": (
+                            "One short first-person sentence, in character as this "
+                            "persona, explaining WHY you are taking this action "
+                            "(e.g. 'They looked distracted, good opening.'). Include "
+                            "it on every primitive."
+                        ),
+                    },
                 },
                 "required": ["type"],
             },
@@ -280,7 +323,9 @@ class BrowserVisionBrain(ArenaBrain):
                 "type into a text field then click its submit button). Call "
                 "'done' once you've already clicked whatever finalizes the "
                 "action (the page will record the result itself - you do not "
-                "need to report what happened, only drive the clicks/typing)."
+                "need to report what happened, only drive the clicks/typing). "
+                "On every primitive, also give a short first-person 'reasoning' "
+                "sentence, in character as this persona, for why you're doing it."
             ),
             tools=[tool],
             tool_choice={"type": "tool", "name": "act"},

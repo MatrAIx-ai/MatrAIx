@@ -264,6 +264,14 @@ class ArenaEngine:
             return True
         if len(self.active_personas()) <= 1:
             return True
+        # Intended end state (see instruction.md): the round is over once
+        # everyone has played through their hand. Cards are only ever removed
+        # (in battles) and never replenished, so once every still-active
+        # persona has an empty hand no further duels are possible and the game
+        # is naturally finished - no need to burn the remaining tick budget.
+        active = self.active_personas()
+        if active and all(len(p.hand) == 0 for p in active):
+            return True
         return False
 
     def _partner_target_list(self, persona: PersonaState) -> List[str]:
@@ -761,8 +769,11 @@ class ArenaEngine:
         while not self.is_done():
             self.run_tick(brain_fn)
 
-        if len(self.active_personas()) <= 1:
+        active = self.active_personas()
+        if len(active) <= 1:
             self.termination_reason = "one_survivor"
+        elif active and all(len(p.hand) == 0 for p in active):
+            self.termination_reason = "all_cards_played"
         else:
             self.termination_reason = "max_ticks"
 

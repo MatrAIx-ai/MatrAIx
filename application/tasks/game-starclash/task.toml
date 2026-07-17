@@ -10,6 +10,18 @@ type = "web"
 domain = "software"
 tags = ["multi-agent", "social-simulation", "rock-paper-scissors", "persona-reasoning-styles", "reasoning-trajectory"]
 
+[solution]
+# Player-vs-bots wiring for Playground/Harbor runs. The Playground samples one
+# persona per trial; Starclash needs a full table, so run_arena.py runs that
+# sampled persona as the real player and fills the other seats with computer
+# bots (see scripts/brains.py:BayesianBotBrain). The launch service exports the
+# sampled persona id as MATRIX_STARCLASH_PLAYER_ID; when absent (e.g. the
+# oracle), "auto" makes the first crew persona the player. Harbor resolves the
+# ${VAR:-default} templates below from the launch-process environment.
+[solution.env]
+STARCLASH_PLAYER_ID = "${MATRIX_STARCLASH_PLAYER_ID:-auto}"
+STARCLASH_OPPONENT_BRAIN = "${MATRIX_STARCLASH_OPPONENT_BRAIN:-bayesian}"
+
 [verifier]
 timeout_sec = 300.0
 

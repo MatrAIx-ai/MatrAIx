@@ -514,3 +514,227 @@ class ClaudeArenaBrain(ArenaBrain):
             return {"action": "play_card", "card": card}
         # Last resort: whatever the first legal action is.
         return {"action": actions[0]} if actions else {"action": "wait"}
+
+
+# Rock/Paper/Scissors counter map: _COUNTER[c] is the card that BEATS c.
+# (Mirror of engine._BEATS, which maps winner -> loser: _BEATS[w] == l means
+# w beats l, so the card that beats `c` is the winner w for which
+# _BEATS[w] == c.)
+_COUNTER = {
+    "Scissors": "Rock",   # Rock beats Scissors
+    "Paper": "Scissors",  # Scissors beats Paper
+    "Rock": "Paper",      # Paper beats Rock
+}
+
+
+def _hand_card_counts_local(hand: List[str]) -> Dict[str, int]:
+    """Rock/Paper/Scissors counts for a hand (local mirror of
+    observations._hand_card_counts so brains.py has no import cycle)."""
+    counts = {card: 0 for card in CARD_TYPES}
+    for card in hand:
+        if card in counts:
+            counts[card] += 1
+    return counts
+
+
+class BayesianBotBrain(ArenaBrain):
+    """Computer opponent that reasons over PUBLIC card-count information.
+
+    No API key, no natural-language model - a pure program, seeded for
+    reproducibility. This is the "bot" that fills the non-player seats when
+    the Playground runs the game with a single sampled persona: one real
+    persona brain (mock/claude/vision) plays against N of these bots, so a
+    one-persona trial is still a full, non-degenerate game.
+
+    Strategy (the "Bayesian on public card count" part):
+
+    * The engine publishes ``observation["arena_card_counts"]`` - the total
+      Rock/Paper/Scissors still held across the WHOLE arena (public info,
+      see observations._arena_card_counts). Subtracting this bot's own hand
+      leaves the aggregate composition still held by everyone else. In a
+      2-player game that IS the opponent's exact hand; with more players it
+      is the pooled remaining cards of all opponents, still the best public
+      estimate of what an unknown opponent is about to play.
+    * Treat that leftover composition as a categorical prior over the
+      opponent's next card and play the card that maximises expected score
+      against it (a beat is +1, a loss -1, a tie 0). Ties in expected value
+      are broken with the seeded RNG so behaviour stays deterministic under
+      a fixed seed.
+    * Challenge responses use the same posterior: accept when the best
+      expected value our hand can achieve is >= 0, otherwise usually
+      decline (with a small seeded chance of a gamble to stay unpredictable).
+    * Free actions are goal-directed: challenge a live opponent in range,
+      else close on the nearest one so duels actually happen (a passive bot
+      would just let the tick budget run out).
+
+    Every decision carries a short first-person ``reasoning`` string so the
+    reasoning-trajectory reporting pipeline has real bot data too.
+    """
+
+    def __init__(self, seed: int) -> None:
+        self._rng = random.Random(seed)
+
+    # -- public API ---------------------------------------------------
+
+    def decide(self, observation: dict) -> dict:
+        menu = observation.get("action_menu", {}) or {}
+        actions: List[str] = list(menu.get("actions", []))
+
+        if "play_card" in actions:
+            return self._decide_play_card(observation, menu)
+        if "accept" in actions and "decline" in actions:
+            return self._decide_challenge_response(observation, menu)
+        return self._decide_free_action(observation, menu)
+
+    # -- posterior over an opponent's next card -----------------------
+
+    def _opponent_card_posterior(self, observation: dict) -> Dict[str, float]:
+        """Estimate P(opponent plays card) from public card counts.
+
+        ``arena_card_counts`` is arena-wide and public; subtract our own hand
+        to get the cards still held by everyone else, then normalise to a
+        probability distribution. Falls back to a uniform prior when no
+        public signal is available (e.g. everyone else is out of cards)."""
+        arena = observation.get("arena_card_counts") or {}
+        own_hand = observation.get("self", {}).get("hand") or []
+        own_counts = _hand_card_counts_local(own_hand)
+
+        leftover: Dict[str, float] = {}
+        total = 0.0
+        for card in CARD_TYPES:
+            remaining = float(arena.get(card, 0)) - float(own_counts.get(card, 0))
+            if remaining < 0:
+                remaining = 0.0
+            leftover[card] = remaining
+            total += remaining
+
+        if total <= 0:
+            return {card: 1.0 / len(CARD_TYPES) for card in CARD_TYPES}
+        return {card: leftover[card] / total for card in CARD_TYPES}
+
+    def _expected_value(self, my_card: str, posterior: Dict[str, float]) -> float:
+        """+1 for each beat, -1 for each loss, 0 for ties, weighted by the
+        opponent-card posterior."""
+        ev = 0.0
+        for opp_card, p in posterior.items():
+            if my_card == opp_card:
+                continue  # tie contributes 0
+            if _COUNTER.get(opp_card) == my_card:
+                ev += p       # my_card beats opp_card
+            else:
+                ev -= p       # my_card loses to opp_card
+        return ev
+
+    # -- sub-step 1: play a card --------------------------------------
+
+    def _decide_play_card(self, observation: dict, menu: dict) -> dict:
+        available = list(menu.get("available_cards") or observation.get("self", {}).get("hand") or [])
+        if not available:
+            card = self._rng.choice(list(CARD_TYPES))
+            return {"action": "play_card", "card": card, "reasoning": "Out of tracked cards - playing on instinct."}
+
+        posterior = self._opponent_card_posterior(observation)
+        best_ev = None
+        best_cards: List[str] = []
+        for card in available:
+            ev = self._expected_value(card, posterior)
+            if best_ev is None or ev > best_ev + 1e-9:
+                best_ev = ev
+                best_cards = [card]
+            elif abs(ev - best_ev) <= 1e-9:
+                best_cards.append(card)
+        card = self._rng.choice(best_cards)
+
+        likely = max(posterior, key=posterior.get)
+        reasoning = (
+            "Public counts suggest they most likely hold {} ({:.0%}); "
+            "{} is the counter, so I lead with it.".format(likely, posterior[likely], card)
+        )
+        return {"action": "play_card", "card": card, "reasoning": reasoning}
+
+    # -- sub-step 2: accept / decline a challenge ---------------------
+
+    def _decide_challenge_response(self, observation: dict, menu: dict) -> dict:
+        available = list(observation.get("self", {}).get("hand") or [])
+        posterior = self._opponent_card_posterior(observation)
+        best_ev = max((self._expected_value(c, posterior) for c in available), default=0.0)
+        if best_ev >= 0:
+            return {
+                "action": "accept",
+                "reasoning": "My hand matches up favourably (EV {:+.2f}) - taking the duel.".format(best_ev),
+            }
+        if self._rng.random() < 0.2:
+            return {"action": "accept", "reasoning": "Odds are poor, but taking a calculated gamble."}
+        return {"action": "decline", "reasoning": "Matchup looks unfavourable (EV {:+.2f}) - declining.".format(best_ev)}
+
+    # -- sub-step 3: free action --------------------------------------
+
+    def _decide_free_action(self, observation: dict, menu: dict) -> dict:
+        actions: List[str] = list(menu.get("actions", []))
+        targets: List[str] = list(menu.get("challengeable_targets") or [])
+
+        if "challenge" in actions and targets:
+            target_id = self._pick_challenge_target(observation, targets)
+            return {
+                "action": "challenge",
+                "target_id": target_id,
+                "reasoning": "In range and still holding cards - pressing the attack.",
+            }
+
+        if "move" in actions:
+            move = self._move_toward_nearest_opponent(observation, menu)
+            if move is not None:
+                return move
+
+        if "wait" in actions:
+            return {"action": "wait", "reasoning": "No target in range yet - holding position."}
+        return {"action": actions[0]} if actions else {"action": "wait"}
+
+    def _pick_challenge_target(self, observation: dict, targets: List[str]) -> str:
+        """Prefer the opponent with the fewest stars (closest to
+        elimination), tie-broken by the seeded RNG."""
+        roster = {r.get("id"): r for r in observation.get("arena_roster", [])}
+
+        def stars_of(pid: str) -> int:
+            return int((roster.get(pid) or {}).get("stars", 3))
+
+        min_stars = min(stars_of(pid) for pid in targets)
+        best = [pid for pid in targets if stars_of(pid) == min_stars]
+        return self._rng.choice(best)
+
+    def _move_toward_nearest_opponent(self, observation: dict, menu: dict) -> Optional[Dict[str, Any]]:
+        self_state = observation.get("self", {})
+        x = float(self_state.get("x", 0.0))
+        y = float(self_state.get("y", 0.0))
+        bounds = menu.get("movable_bounds", {}) or {}
+        max_distance = float(bounds.get("max_distance", 0.0))
+        room_width = float(bounds.get("room_width", x))
+        room_height = float(bounds.get("room_height", y))
+
+        nearest = None
+        nearest_d2 = None
+        for r in observation.get("arena_roster", []):
+            if r.get("is_self") or r.get("eliminated"):
+                continue
+            dx = float(r.get("x", x)) - x
+            dy = float(r.get("y", y)) - y
+            d2 = dx * dx + dy * dy
+            if nearest_d2 is None or d2 < nearest_d2:
+                nearest_d2 = d2
+                nearest = (dx, dy)
+        if nearest is None or max_distance <= 0:
+            return None
+
+        dx, dy = nearest
+        dist = math.hypot(dx, dy)
+        if dist <= 1e-9:
+            return None
+        step = min(max_distance, dist)
+        target_x = min(max(x + step * (dx / dist), 0.0), room_width)
+        target_y = min(max(y + step * (dy / dist), 0.0), room_height)
+        return {
+            "action": "move",
+            "target_x": target_x,
+            "target_y": target_y,
+            "reasoning": "Closing distance on the nearest pilot to force a duel.",
+        }

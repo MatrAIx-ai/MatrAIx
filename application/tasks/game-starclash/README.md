@@ -113,6 +113,36 @@ Per [`application/README.md`](../../README.md) and [`environment/README.md`](../
 - **Harbor trials** upload crew personas into `/app/persona/...` at agent setup (`harbor.utils.crew_personas`), the multi-file analogue of the single `persona_path` upload to `/app/input/persona.yaml` used by survey/chat tasks.
 - **Local runs** from the MatrAIx repo root resolve the same paths via `run_arena.py` directory walk-up.
 
+## Running in the Playground (one persona vs. bots)
+
+The Playground samples **one persona per trial** (sample size = number of
+independent trials), but Starclash needs a full table of 2–4 players. The task
+bridges that gap with a **player-vs-bots** mode: the sampled persona plays as
+the real player and every other seat is filled by a computer bot, so a
+one-persona trial is still a complete, non-degenerate game rather than a lone
+persona with no one to duel.
+
+- `scripts/brains.py:BayesianBotBrain` is the bot. It has no API key and is
+  seeded (deterministic). It reasons over the **public** `arena_card_counts`
+  (Rock/Paper/Scissors still in play, minus its own hand) to estimate what an
+  opponent is likely to play, leads with the counter card, accepts/declines
+  duels by expected value, and actively closes on opponents so duels happen.
+- `run_arena.py --player-id <id> --opponent-brain bayesian|mock` selects the
+  player seat; every other persona becomes a bot. `--player-id auto` (the
+  default the Playground/oracle uses) resolves to the first crew persona.
+  Omitting `--player-id` entirely keeps the original all-`--brain` behaviour.
+- Wiring: `task.toml [solution.env]` sets
+  `STARCLASH_PLAYER_ID = "${MATRIX_STARCLASH_PLAYER_ID:-auto}"` (and
+  `STARCLASH_OPPONENT_BRAIN`). The Playground launch service exports
+  `MATRIX_STARCLASH_PLAYER_ID` with the sampled persona **when that persona is
+  actually in the crew manifest**; otherwise it falls back to `auto`.
+  `solution/solve.sh` passes these through to `run_arena.py`.
+
+To vary the *crew* itself (e.g. meticulous vs. careless rosters), you still swap
+the `crew_manifest.yaml` and compare across sessions (see "Running multiple
+persona-style sessions" above) — the Playground's per-trial persona knob controls
+who the player is, not the crew composition.
+
 ## Output
 
 Each run writes:

@@ -186,6 +186,27 @@ def main() -> None:
     parser.add_argument("--map", required=True, help="Path to ship_map.yaml")
     parser.add_argument("--crew", required=True, help="Path to crew_manifest.yaml")
     parser.add_argument("--brain", choices=["mock", "claude", "vision", "bridge"], default="mock")
+    parser.add_argument(
+        "--player-id",
+        default=None,
+        help=(
+            "Persona id that plays with the real --brain; every OTHER seat is "
+            "filled by a computer bot (see --opponent-brain). This is how the "
+            "Playground runs the game with a single sampled persona: one real "
+            "player vs. bots, so a one-persona trial is still a full game. When "
+            "omitted, all personas use --brain (original behaviour)."
+        ),
+    )
+    parser.add_argument(
+        "--opponent-brain",
+        choices=["bayesian", "mock"],
+        default="bayesian",
+        help=(
+            "Brain used for the non-player (bot) seats when --player-id is set. "
+            "'bayesian' reasons over public card counts; 'mock' is random. "
+            "Ignored when --player-id is not given."
+        ),
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-ticks", type=int, default=16)
     parser.add_argument("--out", required=True, help="Output directory for game_log.json / final_state.json")
@@ -200,6 +221,21 @@ def main() -> None:
         ),
     )
     args = parser.parse_args()
+
+    # Player-vs-bots can also be selected via the environment, so a Harbor
+    # trial entrypoint can turn the sampled persona into the player without
+    # editing the command line: STARCLASH_PLAYER_ID names the seat that plays
+    # with --brain (every other seat becomes a bot), and STARCLASH_OPPONENT_BRAIN
+    # optionally overrides the bot strategy. An explicit --player-id CLI flag
+    # still wins over the env var.
+    if args.player_id is None:
+        env_player = os.environ.get("STARCLASH_PLAYER_ID")
+        if env_player and env_player.strip():
+            args.player_id = env_player.strip()
+    env_opponent = os.environ.get("STARCLASH_OPPONENT_BRAIN")
+    if env_opponent and env_opponent.strip() in ("bayesian", "mock"):
+        # Only honoured when player-vs-bots is active (see --player-id).
+        args.opponent_brain = env_opponent.strip()
 
     # repo_root: crew manifest persona_paths are relative to the repo root
     # (e.g. "persona/datasets/bench-dev-sample/persona_0001.yaml"). Walk up
@@ -251,8 +287,40 @@ def main() -> None:
 
     brain = build_brain(args.brain, args.seed)
 
-    def brain_fn(persona: PersonaState, observation: dict) -> dict:
-        return brain.decide(observation)
+    if args.player_id is not None:
+        # Player-vs-bots mode: one real persona brain, every other seat a bot.
+        # "auto" (the Playground/Harbor default, since the trial doesn't know
+        # the crew ids ahead of time) resolves to the first persona in roster
+        # order - a stable, deterministic choice given a fixed crew manifest.
+        if args.player_id == "auto":
+            args.player_id = engine.persona_order[0]
+        if args.player_id not in engine.personas:
+            print(
+                "ERROR: --player-id {!r} is not in the crew roster {}.".format(
+                    args.player_id, sorted(engine.personas)
+                ),
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        # Give each bot its own seed offset so they don't act in lockstep,
+        # while staying fully deterministic under a fixed --seed.
+        bot_brains: Dict[str, Any] = {}
+        for offset, pid in enumerate(engine.persona_order):
+            if pid == args.player_id:
+                continue
+            bot_seed = args.seed + 1 + offset
+            if args.opponent_brain == "mock":
+                bot_brains[pid] = brains.MockArenaBrain(seed=bot_seed)
+            else:
+                bot_brains[pid] = brains.BayesianBotBrain(seed=bot_seed)
+
+        def brain_fn(persona: PersonaState, observation: dict) -> dict:
+            if persona.id == args.player_id:
+                return brain.decide(observation)
+            return bot_brains[persona.id].decide(observation)
+    else:
+        def brain_fn(persona: PersonaState, observation: dict) -> dict:
+            return brain.decide(observation)
 
     engine.run(brain_fn)
 
