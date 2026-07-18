@@ -351,3 +351,12 @@ def test_transcript_schema() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+
+
+def main() -> int:
+    test_transcript_schema()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
