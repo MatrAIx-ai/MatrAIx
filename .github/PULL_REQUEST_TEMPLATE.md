@@ -26,6 +26,13 @@ Commands run:
 
 ```
 
+### Application task PRs
+
+When this PR adds or materially changes an `application/tasks/…` scenario:
+
+- [ ] Attached the **Playground UI** batch report PDF (Runs → job → **Download PDF**
+      on the persona-task batch report), not the server text `…/report.pdf` export.
+
 ## Data Policy
 
 - [ ] No large generated outputs or raw dumps were added.
