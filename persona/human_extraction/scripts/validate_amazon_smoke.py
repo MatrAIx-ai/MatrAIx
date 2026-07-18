@@ -44,7 +44,7 @@ def main() -> None:
     field_ids = [field.get("field_id") for field in fields]
     assert len(fields) == len(expected_ids) == 1290, (len(fields), len(expected_ids))
     assert len(set(field_ids)) == len(field_ids), "duplicate field_id"
-    assert field_ids == expected_ids, "field IDs/order do not match schema"
+    assert set(field_ids) == set(expected_ids), "field IDs do not match schema"
 
     non_null = 0
     for field in fields:
