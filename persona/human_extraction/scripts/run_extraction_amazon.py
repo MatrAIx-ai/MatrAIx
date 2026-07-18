@@ -542,6 +542,7 @@ def main() -> None:
         enable_prefix_caching=True,
         trust_remote_code=True,
         download_dir=os.environ["HF_HUB_CACHE"],
+        additional_config={"gdn_prefill_backend": "triton"},
     )
     if args.quantization and args.quantization.lower() != "none":
         llm_kwargs["quantization"] = args.quantization
