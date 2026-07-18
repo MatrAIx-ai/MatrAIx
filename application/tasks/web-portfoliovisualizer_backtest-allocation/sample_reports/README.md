@@ -16,7 +16,9 @@ reviewers can see the aggregation → PDF pipeline without running the job.
   **6-asset** portfolio (US + ex-US equity, bonds, REIT, gold, emerging markets),
   read the live metrics, and returned `satisfied: false` with six flagged
   concerns — demonstrating the richer, diversified submissions the change
-  unlocks. Reward 1.0.
+  unlocks. Reward 1.0. Exported from the **Playground UI** batch-report view
+  (the branded front-matter + rendered aggregation report, `Download PDF`),
+  which is more readable than the server-side `report.pdf`.
 
 These are **sample artifacts, not part of the task contract** — safe to drop
 from the PR if the repo prefers not to track generated reports. Regenerate with:
