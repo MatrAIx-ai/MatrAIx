@@ -7,7 +7,7 @@ export interface HomeViewProps {
 }
 
 /**
- * Home hero — NASA-panel dark stage + holographic Earth.
+ * Home hero — digital-twin Earth (persona cloud) on a dark stage.
  * Keeps MatrAIx copy; no floating glass dashboard widgets.
  */
 export function HomeView({ onOpenPlayground }: HomeViewProps) {

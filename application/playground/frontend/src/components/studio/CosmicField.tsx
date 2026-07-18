@@ -1,7 +1,7 @@
 /**
- * NASA-panel space field behind the Home globe.
- * Dark: near-black base with a soft blue wash and pale stars.
- * Light: paper-white base with a faint blue bloom and ink-dot stars.
+ * Atmosphere overlays behind the Home globe.
+ * Base color comes from `.landing-home-stage` CSS (theme-aware) — this canvas
+ * only draws bloom, two concentric rings, and sparse dots on a transparent field.
  */
 import { useEffect, useRef } from "react";
 import { useIsLightTheme } from "../../hooks/useIsLightTheme";
@@ -9,40 +9,31 @@ import { useIsLightTheme } from "../../hooks/useIsLightTheme";
 type Star = { x: number; y: number; size: number; phase: number; speed: number };
 
 interface FieldPalette {
-  base: string;
   bloom: [string, string, string, string];
+  ring: string;
   star: (alpha: number) => string;
-  fade: [string, string, string];
 }
 
 const DARK_FIELD: FieldPalette = {
-  // Neutral black base; the blue accent lives only in the tight bloom
-  // right behind the globe so the page reads black, not navy.
-  base: "#040405",
   bloom: [
-    "rgba(93, 127, 150, 0.14)",
-    "rgba(51, 72, 92, 0.06)",
-    "rgba(24, 38, 54, 0.02)",
-    "rgba(4, 4, 5, 0)",
+    "rgba(60, 100, 140, 0.14)",
+    "rgba(30, 55, 85, 0.06)",
+    "rgba(10, 20, 35, 0.02)",
+    "rgba(2, 4, 6, 0)",
   ],
-  star: (a) => `rgba(185, 195, 203, ${a})`,
-  fade: ["rgba(4, 4, 5, 0)", "rgba(4, 4, 5, 0.55)", "rgba(4, 4, 5, 0.92)"],
+  ring: "rgba(210, 222, 234, 0.2)",
+  star: (a) => `rgba(190, 205, 220, ${a})`,
 };
 
 const LIGHT_FIELD: FieldPalette = {
-  base: "#f4f6f8",
   bloom: [
-    "rgba(31, 99, 155, 0.10)",
-    "rgba(31, 99, 155, 0.05)",
-    "rgba(31, 99, 155, 0.02)",
-    "rgba(244, 246, 248, 0)",
+    "rgba(255, 255, 255, 0.5)",
+    "rgba(170, 198, 218, 0.12)",
+    "rgba(220, 228, 236, 0.04)",
+    "rgba(226, 232, 239, 0)",
   ],
-  star: (a) => `rgba(71, 85, 105, ${a * 0.6})`,
-  fade: [
-    "rgba(244, 246, 248, 0)",
-    "rgba(244, 246, 248, 0.55)",
-    "rgba(244, 246, 248, 0.92)",
-  ],
+  ring: "rgba(18, 24, 32, 0.24)",
+  star: (a) => `rgba(18, 24, 32, ${a * 0.5})`,
 };
 
 export function CosmicField({ className = "" }: { className?: string }) {
@@ -52,7 +43,7 @@ export function CosmicField({ className = "" }: { className?: string }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
     const palette = isLight ? LIGHT_FIELD : DARK_FIELD;
 
@@ -70,11 +61,11 @@ export function CosmicField({ className = "" }: { className?: string }) {
       canvas.width = Math.floor(w * dpr);
       canvas.height = Math.floor(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(90, Math.max(40, Math.round((w * h) / 22000)));
+      const count = Math.min(70, Math.max(30, Math.round((w * h) / 28000)));
       stars = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        size: 0.4 + Math.random() * 1.2,
+        size: 0.4 + Math.random() * 1.1,
         phase: Math.random() * Math.PI * 2,
         speed: 0.01 + Math.random() * 0.02,
       }));
@@ -87,12 +78,12 @@ export function CosmicField({ className = "" }: { className?: string }) {
     const draw = () => {
       const cx = w * 0.5;
       const cy = h * 0.36;
+      const span = Math.min(w, h);
 
-      ctx.fillStyle = palette.base;
-      ctx.fillRect(0, 0, w, h);
+      // Transparent — stage CSS owns the theme background.
+      ctx.clearRect(0, 0, w, h);
 
-      // Soft blue bloom behind globe
-      const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.min(w, h) * 0.48);
+      const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, span * 0.5);
       glow.addColorStop(0, palette.bloom[0]);
       glow.addColorStop(0.35, palette.bloom[1]);
       glow.addColorStop(0.7, palette.bloom[2]);
@@ -100,23 +91,17 @@ export function CosmicField({ className = "" }: { className?: string }) {
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, w, h);
 
+      // Concentric rings temporarily disabled.
+
       for (const star of stars) {
         const pulse = 0.45 + 0.55 * (0.5 + 0.5 * Math.sin(t * star.speed + star.phase));
-        const dist = Math.hypot(star.x - cx, star.y - cy) / (Math.min(w, h) * 0.5);
-        const alpha = (0.15 + 0.35 * pulse) * Math.min(1, dist * 0.9 + 0.15);
+        const dist = Math.hypot(star.x - cx, star.y - cy) / (span * 0.5);
+        const alpha = (0.12 + 0.28 * pulse) * Math.min(1, dist * 0.9 + 0.15);
         ctx.beginPath();
         ctx.fillStyle = palette.star(alpha);
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
       }
-
-      // Bottom vignette for copy readability
-      const fade = ctx.createLinearGradient(0, h * 0.5, 0, h);
-      fade.addColorStop(0, palette.fade[0]);
-      fade.addColorStop(0.55, palette.fade[1]);
-      fade.addColorStop(1, palette.fade[2]);
-      ctx.fillStyle = fade;
-      ctx.fillRect(0, h * 0.5, w, h * 0.5);
 
       t += 1;
       raf = requestAnimationFrame(draw);
@@ -133,6 +118,7 @@ export function CosmicField({ className = "" }: { className?: string }) {
     <canvas
       ref={canvasRef}
       className={`pointer-events-none absolute inset-0 h-full w-full ${className}`}
+      style={{ background: "transparent" }}
       aria-hidden
     />
   );

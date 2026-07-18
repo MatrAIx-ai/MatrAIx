@@ -621,9 +621,9 @@
   /* -------------------------------------------------------------------------
      Landing — centered home (shares cockpit-mesh-bg via StudioMeshShell)
      ------------------------------------------------------------------------- */
-  /* Home stage follows the theme: NASA-panel dark, paper-white light. */
+  /* Home stage owns the theme background (CosmicField is transparent overlays). */
   .landing-home-stage {
-    background: #040405;
+    background: #020406;
     color: #e8eef2;
   }
 
@@ -659,7 +659,7 @@
   }
 
   :root.light .landing-home-stage {
-    background: #f4f6f8;
+    background: linear-gradient(180deg, #d5dee8 0%, #e6edf3 45%, #f2f5f8 100%);
     color: #11171f;
   }
 
@@ -671,6 +671,12 @@
     width: min(460px, 88vw);
     height: min(460px, 88vw);
     opacity: 1;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .landing-home-globe canvas {
+    background: transparent !important;
   }
 
   .landing-home-title {
@@ -686,16 +692,14 @@
     color: #11171f;
   }
 
+  /* Both themes: muted → mid → brightest blue on the right. */
   .landing-home-title-accent {
-    background: linear-gradient(92deg, #afc1cd 0%, #4c9abb 45%, #1f639b 100%);
+    background: linear-gradient(92deg, #8a9aaa 0%, #4c9abb 45%, #7ec8ea 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Mirror of the dark ramp: starts near the heading ink and gets steadily
-     brighter blue toward the end (dark mode goes pale → deep; light goes
-     ink → bright). */
   :root.light .landing-home-title-accent {
     background: linear-gradient(92deg, #26313c 0%, #1f639b 45%, #3ba3e8 100%);
     -webkit-background-clip: text;
@@ -712,22 +716,20 @@
 
   .landing-home-stage .landing-stat-value {
     color: #f3f6f8;
-    text-shadow:
-      0 0 40px rgb(76 154 187 / 0.45),
-      0 0 80px rgb(31 99 155 / 0.25);
+    text-shadow: 0 0 36px rgb(255 255 255 / 0.18);
   }
 
   :root.light .landing-home-stage .landing-stat-value {
-    color: #11171f;
-    text-shadow: none;
+    color: #0f2435;
+    text-shadow: 0 0 28px rgb(255 255 255 / 0.4);
   }
 
   .landing-home-stage .landing-stat-label {
-    color: rgb(76 154 187 / 0.9);
+    color: rgb(168 176 184 / 0.95);
   }
 
   :root.light .landing-home-stage .landing-stat-label {
-    color: rgb(31 99 155 / 0.9);
+    color: rgb(70 80 90 / 0.9);
   }
 
   .landing-home-stage .landing-cta-primary {
@@ -740,6 +742,7 @@
     box-shadow: 0 0 40px rgb(76 154 187 / 0.45);
   }
 
+  /* Same blue as dark — only the shadow softens on paper. */
   :root.light .landing-home-stage .landing-cta-primary {
     box-shadow: 0 4px 14px rgb(31 99 155 / 0.25);
   }
