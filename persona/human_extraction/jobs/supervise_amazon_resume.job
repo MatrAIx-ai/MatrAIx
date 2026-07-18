@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -p test
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem=8G
+#SBATCH -t 00:30:00
+#SBATCH -o sbatch_logs/%x_%j.out
+#SBATCH -e sbatch_logs/%x_%j.err
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=xiaominli@g.harvard.edu
+
+set -euo pipefail
+
+REPO_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx-amazon-resume"
+PY="/n/home08/xiaominli/.conda/envs/env05/bin/python"
+DATA_ROOT="/n/netscratch/lu_lab/Lab/xiaominli/LLMResearch/MatrAIx/persona/human_extraction/data/amazon"
+OUT_DIR="$DATA_ROOT/extraction_resume_20260717"
+SELECTION="$DATA_ROOT/selected_users_100k_koutian.parquet"
+ROUND="${ROUND:-1}"
+
+cd "$REPO_ROOT"
+"$PY" persona/human_extraction/scripts/supervise_amazon_resume.py \
+    --selection "$SELECTION" \
+    --out-dir "$OUT_DIR" \
+    --jobs-dir "$REPO_ROOT/persona/human_extraction/jobs" \
+    --round "$ROUND" \
+    --max-rounds 20
