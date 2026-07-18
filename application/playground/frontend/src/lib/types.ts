@@ -524,7 +524,7 @@ export interface HarborJobSummary {
   applicationType?: string | null;
   /** Display title derived from ``task.toml`` ``[task].name``. */
   taskTitle?: string | null;
-  /** Full Harbor task name, e.g. ``application/chat-recai``. */
+  /** Full Harbor task name, e.g. ``application/recai``. */
   taskName?: string | null;
   domain?: string | null;
   difficulty?: string | null;

@@ -34,6 +34,8 @@ import type {
   SurveyTrajectoryEvent,
 } from "@/lib/types";
 import { useHarborCockpitRun, type HarborCockpitPhase } from "@/lib/useHarborCockpitRun";
+import { usePgTaskIdDeepLink } from "@/lib/usePgTaskIdDeepLink";
+import { useUrlState } from "@/lib/useUrlState";
 import { useCockpitInstruction } from "@/lib/useCockpitInstruction";
 import { mapSurveyDebriefToJobView, mapSurveyLiveToJobView, isRewardOnlyTrialFailure } from "@/lib/harborCockpitMappers";
 import {
@@ -161,6 +163,7 @@ export function SurveyEvalCockpit({
   onOpenHarborTrial,
   isActive = true,
 }: SurveyEvalCockpitProps) {
+  const { state: urlState } = useUrlState();
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<SurveyEvalJobView>({ taskKind: "survey" });
   const [selectedTaskId, setSelectedTaskId] = useState("");
@@ -189,9 +192,7 @@ export function SurveyEvalCockpit({
 
   const taskCards = useMemo(() => surveyHarborTaskCards(harborTasks), [harborTasks]);
   const setupTaskPath =
-    taskCards.find((item) => item.id === selectedTaskId)?.taskPath ??
-    taskCards[0]?.taskPath ??
-    null;
+    taskCards.find((item) => item.id === selectedTaskId)?.taskPath ?? null;
   const selectedTaskDetailQuery = useQuery({
     queryKey: ["task-detail", setupTaskPath],
     queryFn: () => api.getTaskDetail(setupTaskPath!),
@@ -245,7 +246,7 @@ export function SurveyEvalCockpit({
   const visiblePersonaIds = setupLocked && batchPersonaIds.length > 0 ? batchPersonaIds : selectedPersonaIds;
   const activeTaskId = batchJobName && batchTaskId ? batchTaskId : selectedTaskId;
   const selectedCard =
-    taskCards.find((item) => item.id === activeTaskId) ?? taskCards[0] ?? null;
+    taskCards.find((item) => item.id === activeTaskId) ?? null;
   const harborTask: SurveyHarborTask | null =
     harborTasks.find((item) => item.id === selectedCard?.id) ?? null;
   const activeQuestionnaire: SurveyInstrument | null = useMemo(() => {
@@ -259,7 +260,11 @@ export function SurveyEvalCockpit({
     [personaModel, personaModelOptions],
   );
 
+  const surveyTaskIds = useMemo(() => taskCards.map((card) => card.id), [taskCards]);
+  usePgTaskIdDeepLink("survey", surveyTaskIds, setSelectedTaskId, isActive);
+
   useEffect(() => {
+    if (urlState.pgTaskId) return;
     if (batchTaskId) {
       setSelectedTaskId(batchTaskId);
       return;
@@ -271,10 +276,7 @@ export function SurveyEvalCockpit({
         return;
       }
     }
-    if (!selectedTaskId && taskCards.length > 0) {
-      setSelectedTaskId(taskCards[0].id);
-    }
-  }, [batchTaskId, batchJobName, selectedTaskId, taskCards]);
+  }, [batchTaskId, batchJobName, taskCards, urlState.pgTaskId]);
 
   // Report the honest footer context up (the active questionnaire).
   useEffect(() => {

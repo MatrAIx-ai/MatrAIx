@@ -184,16 +184,16 @@ const JOB_STATUS_STYLES: Record<
   { className: string; icon: string; fill?: 0 | 1 }
 > = {
   running: {
-    className: "border-warn/40 bg-warn/10 text-warn",
+    className: "bg-warn/10 text-warn",
     icon: "autorenew",
   },
   success: {
-    className: "border-secondary/40 bg-secondary/10 text-secondary",
+    className: "bg-secondary/10 text-secondary",
     icon: "check_circle",
     fill: 1,
   },
   failed: {
-    className: "border-danger/40 bg-danger/10 text-danger",
+    className: "bg-danger/10 text-danger",
     icon: "error",
     fill: 1,
   },
@@ -250,9 +250,9 @@ function JobTrialProgress({
 }
 
 const JOB_TRIAL_COUNT_STYLES: Record<HarborJobListStatus, string> = {
-  running: "border-warn/35 bg-warn/5",
-  success: "border-secondary/35 bg-secondary/5",
-  failed: "border-danger/35 bg-danger/5",
+  running: "bg-warn/10",
+  success: "bg-secondary/10",
+  failed: "bg-danger/10",
 };
 
 function JobTrialCountCell({
@@ -283,7 +283,7 @@ function JobTrialCountCell({
       className={`justify-self-center ${FOCUS_RING}`}
     >
       <div
-        className={`inline-flex min-w-[3.5rem] flex-col items-center rounded-lg border px-2.5 py-1.5 ${JOB_TRIAL_COUNT_STYLES[status]}`}
+        className={`inline-flex min-w-[3.5rem] flex-col items-center rounded-lg px-2.5 py-1.5 shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] ${JOB_TRIAL_COUNT_STYLES[status]}`}
       >
         <span className="font-display text-[20px] font-bold leading-none tabular-nums text-text-main">
           {inProgress ? (
@@ -344,7 +344,7 @@ function JobListIdentity({
           {metaChips.map((chip) => (
             <span
               key={chip}
-              className="rounded border border-outline/40 bg-surface/50 px-1.5 py-0.5 text-[11px] text-text-variant"
+              className="rounded glass-tile px-1.5 py-0.5 text-[11px] text-text-variant"
             >
               {chip}
             </span>
@@ -367,7 +367,7 @@ function HarborJobStatusBadge({ job }: { job: HarborJobSummary }) {
 
   return (
     <span
-      className={`inline-flex max-w-full items-center gap-1 truncate rounded-md border px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${style.className}`}
+      className={`inline-flex max-w-full items-center gap-1 truncate rounded-md px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${style.className}`}
       title={detail}
     >
       <Sym
@@ -532,7 +532,7 @@ function HarborJobsFilterBar({
 }) {
   return (
     <StudioGlassPanel className="mb-3 p-3">
-      <div className="flex h-8 min-w-0 items-center rounded-lg border border-outline/50 bg-surface/60 backdrop-blur transition-colors focus-within:border-primary/50">
+      <div className="flex h-8 min-w-0 items-center rounded-lg glass-tile backdrop-blur transition-colors focus-within:border-primary/50">
         <Sym name="search" size={16} className="ml-3 flex-none text-text-dim" />
         <input
           type="search"
@@ -600,7 +600,7 @@ function HarborJobsFilterBar({
           <button
             type="button"
             onClick={onClearFilters}
-            className={`inline-flex h-8 items-center gap-1.5 rounded-md border border-outline/50 bg-surface/50 px-3 text-[13px] font-medium text-text-variant transition-colors hover:border-primary/40 hover:text-text-main ${FOCUS_RING}`}
+            className={`inline-flex h-8 items-center gap-1.5 rounded-md glass-tile glass-tile--hover px-3 text-[13px] font-medium text-text-variant transition-colors hover:text-text-main ${FOCUS_RING}`}
           >
             <Sym name="filter_alt_off" size={15} />
             Clear filters
@@ -628,7 +628,7 @@ function RunsFilterChip({
       className={`inline-flex h-8 items-center rounded-full border px-2.5 text-[13px] font-medium transition-colors ${FOCUS_RING} ${
         active
           ? "border-primary bg-primary text-on-primary active:bg-primary-dim"
-          : "border-outline bg-surface text-text-variant hover:border-primary hover:bg-surface-low hover:text-text-main active:bg-surface-high"
+          : "glass-tile glass-tile--hover border-transparent text-text-variant hover:text-text-main"
       }`}
     >
       {label}
@@ -734,7 +734,7 @@ function ListLoading() {
 function ListFilterEmpty({ onClearFilters }: { onClearFilters: () => void }) {
   return (
     <StudioGlassPanel className="px-6 py-12 text-center rise-in">
-      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
+      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-md glass-tile">
         <Sym name="search_off" size={24} className="text-text-dim" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">No matching runs</h2>
@@ -744,7 +744,7 @@ function ListFilterEmpty({ onClearFilters }: { onClearFilters: () => void }) {
       <button
         type="button"
         onClick={onClearFilters}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-outline/50 bg-surface/60 px-4 py-2 text-[14px] text-text-variant transition hover:border-primary/40 hover:text-text-main ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md glass-tile glass-tile--hover px-4 py-2 text-[14px] text-text-variant transition hover:text-text-main ${FOCUS_RING}`}
       >
         <Sym name="filter_alt_off" size={16} />
         Clear filters
@@ -756,7 +756,7 @@ function ListFilterEmpty({ onClearFilters }: { onClearFilters: () => void }) {
 function ListEmpty({ onClose }: { onClose: () => void }) {
   return (
     <StudioGlassPanel className="px-6 py-14 text-center rise-in">
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
+      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md glass-tile">
         <Sym name="history" size={26} className="text-text-dim" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">No runs yet</h2>
@@ -790,7 +790,7 @@ function ListError({ error, onRetry }: { error: unknown; onRetry: () => void }) 
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[14px] text-danger ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-danger/10 px-4 py-2 text-[14px] text-danger ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again

@@ -34,10 +34,8 @@ function FamilyChip({
       type="button"
       disabled={disabled}
       onClick={onClick}
-      className={`flex min-w-0 flex-1 flex-col rounded-lg border px-3 py-2.5 text-left transition ${
-        active
-          ? "border-primary/55 bg-primary/12 shadow-[0_0_0_1px_rgb(var(--primary)/0.18)]"
-          : "border-outline/45 bg-surface/30 hover:border-primary/25 hover:bg-surface/45"
+      className={`flex min-w-0 flex-1 flex-col rounded-lg px-3 py-2.5 text-left transition ${
+        active ? "glass-tile glass-tile--active" : "glass-tile glass-tile--hover"
       } disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
     >
       <span className={`text-[14px] font-semibold ${active ? "text-primary" : "text-text-main"}`}>{label}</span>

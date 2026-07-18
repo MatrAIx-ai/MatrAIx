@@ -92,6 +92,9 @@ function transportLabel(transport?: ChatTransport): string {
 const VIRTUALIZE_THRESHOLD = 30;
 const ESTIMATED_CARD_HEIGHT = 132;
 
+/** Sentinel for the "no domain filter" dropdown entry. */
+const ALL_DOMAINS = "__all__";
+
 function formatDomainLabel(domain: string): string {
   return domain
     .split(/[-_/]/)
@@ -143,6 +146,22 @@ export function TaskSelectionRail({
             : [];
 
   const domainOptions = useMemo(() => domainOptionsForTaskCards(cards), [cards]);
+
+  // Domains can grow without bound, so they live in a dropdown, not a chip row.
+  const domainSelectOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const card of cards) {
+      const domain = (card.domain ?? "").trim().toLowerCase();
+      if (domain) counts.set(domain, (counts.get(domain) ?? 0) + 1);
+    }
+    return [
+      { value: ALL_DOMAINS, label: `All domains · ${cards.length}` },
+      ...domainOptions.map((domain) => ({
+        value: domain,
+        label: `${formatDomainLabel(domain)} · ${counts.get(domain) ?? 0}`,
+      })),
+    ];
+  }, [cards, domainOptions]);
 
   const searchFilteredCards = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -199,12 +218,12 @@ export function TaskSelectionRail({
     const pinned = isPinnedTask(taskType, card.id);
     return (
       <div
-        className={`rounded-lg border transition ${
+        className={`rounded-lg border border-transparent transition ${
           selected
-            ? "border-primary/55 bg-primary/10 shadow-[0_0_0_1px_rgb(var(--primary)/0.2)]"
+            ? "persona-card--selected"
             : unavailable
-              ? "border-outline/35 bg-surface/20 opacity-75"
-              : "border-outline/40 bg-surface/30 hover:border-primary/25"
+              ? "glass-tile glass-tile--dim opacity-75"
+              : "glass-tile glass-tile--hover"
         }`}
       >
         <div className="flex items-start gap-3 p-3">
@@ -215,10 +234,8 @@ export function TaskSelectionRail({
             className={`flex min-w-0 flex-1 items-start gap-3 text-left ${FOCUS_RING}`}
           >
                   <div
-                    className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg border ${
-                      selected
-                        ? "border-primary/45 bg-primary/15"
-                        : "border-outline/40 bg-surface-high/60"
+                    className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg ${
+                      selected ? "bg-primary/15" : "bg-surface-high/60"
                     }`}
                   >
                     <Sym
@@ -243,9 +260,9 @@ export function TaskSelectionRail({
                         </ToneChip>
                       )}
                       {(card.tags ??
-                        (card.tagLabels?.map((label) => ({ label, tone: "secondary" as ToneChipTone })) ??
+                        (card.tagLabels?.map((label) => ({ label, tone: "neutral" as ToneChipTone })) ??
                           (card.statusLabel
-                            ? [{ label: card.statusLabel, tone: "secondary" as ToneChipTone }]
+                            ? [{ label: card.statusLabel, tone: "neutral" as ToneChipTone }]
                             : []))).map((tag) => (
                         <ToneChip
                           key={tag.label}
@@ -360,7 +377,7 @@ export function TaskSelectionRail({
                       }
                     />
                   ) : (
-                    <div className="rounded-md border border-outline/35 bg-surface/30 px-3 py-2">
+                    <div className="glass-tile glass-tile--dim rounded-md px-3 py-2">
                       <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-text-dim">
                         Connection
                       </p>
@@ -384,7 +401,7 @@ export function TaskSelectionRail({
                         {card.capabilities!.map((cap) => (
                           <span
                             key={cap.id}
-                            className="rounded border border-outline/40 bg-surface/40 px-2 py-0.5 text-[12px] text-text-variant"
+                            className="glass-tile rounded px-2 py-0.5 text-[12px] text-text-variant"
                             title={cap.kind === "exposure" ? "Visible in replies" : "UserSim tool"}
                           >
                             {cap.label}
@@ -399,7 +416,7 @@ export function TaskSelectionRail({
                       value={engine}
                       disabled={disabled}
                       onChange={(e) => onEngineChange(e.target.value)}
-                      className="h-8 rounded-md border border-outline/50 bg-surface/60 px-2 text-[14px] font-medium text-text-main"
+                      className="glass-tile h-8 rounded-md px-2 text-[14px] font-medium text-text-main"
                     >
                       {engineOptions.map((opt) => (
                         <option key={opt.value} value={opt.value}>
@@ -432,7 +449,7 @@ export function TaskSelectionRail({
                           const next = e.currentTarget.valueAsNumber;
                           if (Number.isFinite(next) && next >= 1) onMaxTurnsChange(next);
                         }}
-                        className="h-8 rounded-md border border-outline/50 bg-surface/60 px-2 text-[14px] font-medium text-text-main"
+                        className="glass-tile h-8 rounded-md px-2 text-[14px] font-medium text-text-main"
                       />
                     </label>
                   )}
@@ -461,40 +478,21 @@ export function TaskSelectionRail({
             disabled={disabled}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Filter by name, description, or tag…"
-            className="h-9 w-full rounded-lg border border-outline/50 bg-surface/60 pl-9 pr-2.5 text-[14px] text-text-main placeholder:text-text-dim"
+            className="glass-tile h-9 w-full rounded-lg pl-9 pr-2.5 text-[14px] text-text-main placeholder:text-text-dim"
           />
         </div>
       </label>
 
       {domainOptions.length > 1 && (
-        <div className="mb-2.5 flex flex-wrap gap-1.5">
-          <button
-            type="button"
+        <div className="mb-2.5">
+          <CockpitSelect
+            label="Domain"
+            inlineLabel
+            value={domainFilter ?? ALL_DOMAINS}
+            options={domainSelectOptions}
             disabled={disabled}
-            onClick={() => setDomainFilter(null)}
-            className={`rounded-full border px-2.5 py-1 text-[12px] font-medium transition ${FOCUS_RING} ${
-              domainFilter === null
-                ? "border-primary/50 bg-primary/10 text-primary"
-                : "border-outline/40 bg-surface/30 text-text-variant hover:border-primary/25"
-            }`}
-          >
-            All
-          </button>
-          {domainOptions.map((domain) => (
-            <button
-              key={domain}
-              type="button"
-              disabled={disabled}
-              onClick={() => setDomainFilter(domain)}
-              className={`rounded-full border px-2.5 py-1 text-[12px] font-medium transition ${FOCUS_RING} ${
-                domainFilter === domain
-                  ? "border-primary/50 bg-primary/10 text-primary"
-                  : "border-outline/40 bg-surface/30 text-text-variant hover:border-primary/25"
-              }`}
-            >
-              {formatDomainLabel(domain)}
-            </button>
-          ))}
+            onChange={(next) => setDomainFilter(next === ALL_DOMAINS ? null : next)}
+          />
         </div>
       )}
 
@@ -507,7 +505,7 @@ export function TaskSelectionRail({
 
       <div ref={listRef} className="custom-scrollbar min-h-0 flex-1 overflow-y-auto pr-0.5">
         {filteredCards.length === 0 && !tasksLoading && (
-          <p className="rounded-lg border border-outline/35 bg-surface/25 px-3 py-4 text-center text-[13px] text-text-dim">
+          <p className="glass-tile glass-tile--dim rounded-lg px-3 py-4 text-center text-[13px] text-text-dim">
             {searchQuery.trim() || domainFilter ? "No tasks match your filters." : "No tasks available."}
           </p>
         )}

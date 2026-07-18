@@ -1,21 +1,26 @@
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
+import { CosmicField } from "./studio/CosmicField";
 import { DigitalGlobe } from "./studio/DigitalGlobe";
-import { StudioMeshShell } from "./studio/StudioShell";
 
 export interface HomeViewProps {
   onOpenPlayground: () => void;
 }
 
+/**
+ * Home hero — NASA-panel dark stage + holographic Earth.
+ * Keeps MatrAIx copy; no floating glass dashboard widgets.
+ */
 export function HomeView({ onOpenPlayground }: HomeViewProps) {
   return (
-    <StudioMeshShell>
-      <div className="custom-scrollbar flex min-h-0 flex-1 flex-col items-center justify-center px-6 py-10">
-        <div className="landing-home-hero landing-fade-up mx-auto flex w-full max-w-[520px] flex-col items-center text-center">
+    <div className="landing-home-stage relative flex min-h-0 flex-1 flex-col overflow-hidden">
+      <CosmicField />
+      <div className="custom-scrollbar relative z-[1] flex min-h-0 flex-1 flex-col items-center justify-center px-6 py-10">
+        <div className="landing-home-hero landing-fade-up mx-auto flex w-full max-w-[560px] flex-col items-center text-center">
           <div className="landing-home-globe mb-2" aria-hidden>
             <DigitalGlobe />
           </div>
 
-          <div className="landing-stat-block mt-4 items-center">
+          <div className="landing-stat-block mt-2 items-center">
             <span className="landing-stat-value landing-stat-value--home">8.3B</span>
             <span className="landing-stat-label">personas</span>
           </div>
@@ -25,7 +30,7 @@ export function HomeView({ onOpenPlayground }: HomeViewProps) {
             <span className="landing-home-title-accent">digital humans</span>
           </h1>
 
-          <p className="mt-4 max-w-md text-[14px] leading-relaxed text-text-variant">
+          <p className="landing-home-subtitle mt-4 max-w-md text-[14px] leading-relaxed">
             Simulate real users across chatbots, surveys, browsers, and agents with
             evaluation reporting
           </p>
@@ -40,7 +45,7 @@ export function HomeView({ onOpenPlayground }: HomeViewProps) {
           </button>
         </div>
       </div>
-    </StudioMeshShell>
+    </div>
   );
 }
 

@@ -172,26 +172,22 @@ export function BatchTrialGrid({ trials, jobLabel, className = "" }: BatchTrialG
 
   return (
     <div className={`flex h-full min-h-0 w-full flex-col overflow-hidden ${className}`}>
-      <header className="mb-2 shrink-0 space-y-1 border-b border-outline/25 pb-2">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="min-w-0">
-            <p className="hud text-[12px] text-primary">Simulated cohort</p>
-            <p className="font-display text-[15px] font-bold tracking-tight text-text-main">
-              {trials.length} {trials.length === 1 ? "person" : "people"}
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-end gap-1">
-            {pending > 0 && <CohortStat tone="dim" label={`${pending} waiting`} />}
-            {running > 0 && <CohortStat tone="amber" label={`${running} active`} pulse />}
-            {done > 0 && <CohortStat tone="secondary" label={`${done} finished`} />}
-            {failed > 0 && <CohortStat tone="danger" label={`${failed} failed`} />}
-          </div>
-        </div>
+      <header className="mb-2 flex shrink-0 flex-wrap items-baseline gap-x-2.5 gap-y-1 border-b border-outline/25 pb-2">
+        <p className="hud text-[11px] text-primary">Simulated cohort</p>
+        <p className="font-display text-[15px] font-bold tracking-tight text-text-main">
+          {trials.length} {trials.length === 1 ? "person" : "people"}
+        </p>
         {jobLabel ? (
-          <p className="truncate font-mono text-[12px] text-text-dim" title={jobLabel}>
+          <p className="min-w-0 flex-1 truncate font-mono text-[12px] text-text-dim" title={jobLabel}>
             {jobLabel}
           </p>
         ) : null}
+        <div className="ml-auto flex flex-wrap justify-end gap-1">
+          {pending > 0 && <CohortStat tone="dim" label={`${pending} waiting`} />}
+          {running > 0 && <CohortStat tone="amber" label={`${running} active`} pulse />}
+          {done > 0 && <CohortStat tone="secondary" label={`${done} finished`} />}
+          {failed > 0 && <CohortStat tone="danger" label={`${failed} failed`} />}
+        </div>
       </header>
 
       <div

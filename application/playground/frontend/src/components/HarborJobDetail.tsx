@@ -288,10 +288,10 @@ const TRIAL_STATUS_STYLES: Record<
   ReturnType<typeof trialStatus>,
   { className: string; icon: string; fill?: 0 | 1 }
 > = {
-  running: { className: "border-warn/40 bg-warn/10 text-warn", icon: "autorenew" },
-  done: { className: "border-secondary/40 bg-secondary/10 text-secondary", icon: "check_circle", fill: 1 },
-  failed: { className: "border-danger/40 bg-danger/10 text-danger", icon: "error", fill: 1 },
-  pending: { className: "border-outline bg-surface-high text-text-dim", icon: "hourglass_empty" },
+  running: { className: "bg-warn/10 text-warn", icon: "autorenew" },
+  done: { className: "bg-secondary/10 text-secondary", icon: "check_circle", fill: 1 },
+  failed: { className: "bg-danger/10 text-danger", icon: "error", fill: 1 },
+  pending: { className: "glass-tile text-text-dim", icon: "hourglass_empty" },
 };
 
 function TrialStatusBadge({ trial }: { trial: HarborTrialRow }) {
@@ -299,7 +299,7 @@ function TrialStatusBadge({ trial }: { trial: HarborTrialRow }) {
   const style = TRIAL_STATUS_STYLES[status];
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${style.className}`}
+      className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${style.className}`}
     >
       <Sym
         name={style.icon}
@@ -362,18 +362,18 @@ function reportingStatusLabel(status: string | null | undefined): string {
 function reportingStatusClassName(status: string | null | undefined): string {
   const normalized = (status ?? "").trim().toLowerCase();
   if (normalized === "queued" || normalized === "running") {
-    return "border-warn/40 bg-warn/10 text-warn";
+    return "bg-warn/10 text-warn";
   }
   if (normalized === "completed") {
-    return "border-secondary/40 bg-secondary/10 text-secondary";
+    return "bg-secondary/10 text-secondary";
   }
   if (normalized === "completed_with_errors" || normalized === "partial_with_errors" || normalized === "failed") {
-    return "border-danger/40 bg-danger/10 text-danger";
+    return "bg-danger/10 text-danger";
   }
   if (normalized === "ready" || normalized === "partial") {
-    return "border-primary/40 bg-primary/10 text-primary";
+    return "bg-primary/10 text-primary";
   }
-  return "border-outline/50 bg-surface/60 text-text-dim";
+  return "glass-tile text-text-dim";
 }
 
 function ratioWidth(count: number, total: number): string {
@@ -394,6 +394,38 @@ function fullProseText(value: string | null | undefined, limit = 8000): string {
   if (!normalized) return ""
   if (normalized.length <= limit) return normalized
   return `${normalized.slice(0, limit - 1).trimEnd()}…`
+}
+
+/** Turn opaque facet keys/labels (outcome_reason, Feedback reason) into plain language. */
+function humanizeFacetLabel(label: string | null | undefined, key?: string | null): string {
+  const raw = (label ?? key ?? "").trim()
+  if (!raw) return "Explanation"
+  const normalized = raw.toLowerCase().replace(/[_-]+/g, " ")
+  if (normalized === "outcome reason") return "Why this outcome"
+  if (normalized === "feedback reason") return "Why they rated it this way"
+  if (normalized.endsWith(" reason")) {
+    return `Why: ${raw.replace(/\s*reason$/i, "").trim() || "explanation"}`
+  }
+  return raw
+}
+
+/** Soften reporting.json titles that still say "Feedback reason by …". */
+function humanizeAnalysisTitle(title: string | null | undefined): string {
+  const raw = (title ?? "").trim()
+  if (!raw) return "Analysis"
+  return raw
+    .replace(/^Outcome reason\b/i, "Why this outcome")
+    .replace(/^Feedback reason\b/i, "Why they rated it this way")
+    .replace(/\breason by\b/gi, "explanations by")
+}
+
+function humanizeValueType(valueType: string | null | undefined): string | null {
+  if (!valueType) return null
+  const normalized = valueType.trim().toLowerCase()
+  if (normalized === "boolean") return "yes/no check"
+  if (normalized === "enum" || normalized === "categorical") return "category"
+  if (normalized === "number" || normalized === "numerical") return "score"
+  return valueType.replace(/_/g, " ")
 }
 
 function primaryFacetForContext(context: AggregationContext): AggregationField | null {
@@ -424,10 +456,6 @@ function contextTypeMeta(contextType: AggregationContextType | null | undefined)
   return contextType ? CONTEXT_TYPE_META[contextType] ?? null : null
 }
 
-function contextTypeBadgeLabel(context: AggregationContext): string | null {
-  return contextTypeMeta(context.contextType)?.badge ?? null
-}
-
 function contextTypeDescription(context: AggregationContext): string | null {
   return contextTypeMeta(context.contextType)?.description ?? null
 }
@@ -437,7 +465,9 @@ function isHeuristicAggregationSummary(text: string): boolean {
   return (
     /^All \d+ available trials reported the same text:/i.test(normalized) ||
     /^Collected \d+ text responses across \d+ unique values/i.test(normalized) ||
-    /^All \d+ answers (point to the same theme|converge on one theme):/i.test(normalized) ||
+    /^All \d+ answers (point to the same theme|converge on one theme|converge on one main topic):/i.test(
+      normalized,
+    ) ||
     /^Across \d+ answers/i.test(normalized)
   )
 }
@@ -902,15 +932,26 @@ function buildSurveyAgreementStat(
   }
 }
 
-function buildScoreMetricStrip(contexts: AggregationContext[]): string[] {
-  const stats: string[] = []
+type ScoreMetricStat = { key: string; label: string; avg: string; range: string | null }
+
+function buildScoreMetricStrip(contexts: AggregationContext[]): ScoreMetricStat[] {
+  const stats: ScoreMetricStat[] = []
   const seen = new Set<string>()
   for (const context of contexts) {
     for (const facet of context.facets) {
       if (facet.role !== "score" || facet.kind !== "numerical" || seen.has(facet.key)) continue
       if (looksLikeRatingFacet(facet)) continue
       seen.add(facet.key)
-      stats.push(`${facet.label}: ${formatNumericalSummary(facet)}`)
+      const avg = facet.numerical?.avg
+      if (avg == null) continue
+      const min = facet.numerical?.min
+      const max = facet.numerical?.max
+      stats.push({
+        key: facet.key,
+        label: facet.label,
+        avg: metricValue(avg),
+        range: min != null && max != null && min !== max ? `${metricValue(min)}–${metricValue(max)}` : null,
+      })
     }
   }
   return stats
@@ -1016,15 +1057,16 @@ function summaryBucketsForContext(context: AggregationContext): CountBarItem[] {
 
 function contextLeadText(context: AggregationContext): string {
   const summary = context.summaries?.find((item) => item.overall?.summary)?.overall?.summary
-  if (summary && !isHeuristicAggregationSummary(summary)) return previewText(summary, 140)
+  // Collapsed cards keep a short tease; expand for the full quote.
+  if (summary && !isHeuristicAggregationSummary(summary)) return previewText(summary, 220)
 
   const explanation = explanationFacetForContext(context)
   const explanationSample = explanation?.textual?.samples?.[0]
   if (explanationSample && !isHeuristicAggregationSummary(explanation?.textual?.summary ?? explanationSample)) {
-    return previewText(explanationSample, 140)
+    return previewText(explanationSample, 220)
   }
   if (explanation?.textual?.summary && !isHeuristicAggregationSummary(explanation.textual.summary)) {
-    return previewText(explanation.textual.summary, 140)
+    return previewText(explanation.textual.summary, 220)
   }
 
   const primary = primaryFacetForContext(context)
@@ -1136,18 +1178,18 @@ function InsightChip({
     danger: "text-danger",
   }
   const toneBoxClass: Record<NonNullable<typeof tone>, string> = {
-    success: "border-secondary/45 bg-secondary/10",
-    primary: "border-primary/45 bg-primary/15",
-    warn: "border-warn/45 bg-warn/10",
-    danger: "border-danger/45 bg-danger/10",
+    success: "bg-secondary/10",
+    primary: "bg-primary/15",
+    warn: "bg-warn/10",
+    danger: "bg-danger/10",
   }
   const colored = variant === "semantic"
   const meterTone = tone === "primary" ? "warn" : tone
 
   return (
     <div
-      className={`min-w-[108px] rounded-lg border px-2.5 py-1.5 ${
-        colored ? toneBoxClass[tone] : "border-outline/40 bg-surface/55"
+      className={`min-w-[108px] rounded-lg px-2.5 py-1.5 ${
+        colored ? toneBoxClass[tone] : "glass-tile"
       }`}
     >
       <div className="text-[11px] uppercase tracking-wide text-text-dim">{label}</div>
@@ -1181,7 +1223,7 @@ function BatchInsightsPanel({
   if (category === "survey") return null
 
   return (
-    <div className="mt-3 space-y-3 rounded-xl border border-primary/30 bg-primary/10 p-3">
+    <div className="mt-3 space-y-3 rounded-xl bg-primary/10 p-3">
       <div>
         <div className="flex items-center gap-2 text-[13px] font-medium uppercase tracking-wide text-primary">
           <Sym name="insights" size={14} />
@@ -1245,14 +1287,38 @@ function ContractBatchInsights({
   )
 }
 
-function ScoreMetricStrip({ stats, trialCount }: { stats: string[]; trialCount: number }) {
+function shortMetricLabel(label: string): string {
+  return label
+    .replace(/\bcount\b/gi, "")
+    .replace(/\blevel\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+function ScoreMetricStrip({ stats, trialCount }: { stats: ScoreMetricStat[]; trialCount: number }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-outline/40 bg-surface/45 px-3 py-2.5">
-      <div className="flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-text-main">
+    <div className="overflow-hidden rounded-lg glass-tile px-3 py-2.5">
+      <div className="mb-2 flex items-baseline justify-between gap-3">
+        <span className="text-[12px] font-medium uppercase tracking-wide text-text-dim">
+          Conversation metrics
+        </span>
+        <span className="font-mono text-[12px] text-text-dim">{trialCount} personas</span>
+      </div>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
         {stats.map((stat) => (
-          <span key={stat}>{stat}</span>
+          <div key={stat.key} className="rounded-md bg-surface/45 px-2.5 py-2">
+            <div
+              className="text-[11px] font-medium uppercase leading-snug tracking-wide text-text-dim"
+              title={stat.label}
+            >
+              {shortMetricLabel(stat.label)}
+            </div>
+            <div className="mt-1.5 font-mono text-[20px] leading-none text-text-main">{stat.avg}</div>
+            <div className="mt-1 text-[12px] text-text-dim">
+              {stat.range ? <>avg · range {stat.range}</> : "average across personas"}
+            </div>
+          </div>
         ))}
-        <span className="text-text-dim">· {trialCount} personas</span>
       </div>
     </div>
   )
@@ -1265,42 +1331,65 @@ function DistributionBreakdownTable({
   breakdown: DistributionBreakdown
   trialCount: number
 }) {
-  const detailSamples = breakdown.detailField?.textual?.samples ?? []
-  const unanimousDetail =
-    detailSamples.length > 0 && new Set(detailSamples.map((sample) => sample.trim())).size === 1
-      ? detailSamples[0]?.trim()
-      : null
+  const detailSamples = (breakdown.detailField?.textual?.samples ?? [])
+    .map((sample) => sample.trim())
+    .filter(Boolean)
+  const uniqueDetails = [...new Set(detailSamples)]
+  const detailLabel = humanizeFacetLabel(
+    breakdown.detailField?.label ?? "Persona explanation",
+    breakdown.detailField?.key ?? breakdown.detailField?.role,
+  )
+  const unanimousDetail = uniqueDetails.length === 1 ? uniqueDetails[0] : null
 
   return (
-    <div className="overflow-hidden rounded-lg border border-outline/40 bg-surface/45">
+    <div className="overflow-hidden rounded-lg glass-tile">
       <div className="border-b border-outline/35 bg-surface/30 px-3 py-1.5">
         <div className="text-[12px] font-medium uppercase tracking-wide text-text-dim">{breakdown.contextLabel}</div>
       </div>
-      <div className="grid gap-2 border-b border-outline/35 bg-surface/30 px-3 py-1.5 text-[11px] uppercase tracking-wide text-text-dim sm:grid-cols-[minmax(0,1.4fr)_auto_auto_auto]">
+      <div className="flex items-baseline justify-between gap-3 border-b border-outline/35 bg-surface/30 px-3 py-1.5 text-[11px] uppercase tracking-wide text-text-dim">
         <span>{breakdown.dimensionLabel}</span>
-        <span className="sm:text-right">Count</span>
-        <span className="sm:text-right">Share</span>
-        <span className="sm:text-right">{breakdown.detailField?.label ?? "Detail"}</span>
+        <span className="shrink-0">Count · Share</span>
       </div>
       <div className="divide-y divide-outline/30">
         {breakdown.rows.map((row) => (
-          <div
-            key={row.label}
-            className="grid gap-2 px-3 py-2.5 sm:grid-cols-[minmax(0,1.4fr)_auto_auto_auto]"
-          >
-            <div className="min-w-0">
-              <div className="truncate text-[15px] font-medium text-text-main">{row.label}</div>
-            </div>
-            <div className="text-[14px] font-mono text-text-main sm:text-right">{row.count}</div>
-            <div className="text-[13px] text-text-dim sm:text-right">
-              {Math.round((row.count / Math.max(trialCount, 1)) * 100)}%
-            </div>
-            <div className="truncate text-[13px] text-text-variant sm:text-right">
-              {unanimousDetail ?? (detailSamples.length > 0 ? "varies" : "—")}
+          <div key={row.label} className="flex items-baseline justify-between gap-3 px-3 py-2.5">
+            <div className="min-w-0 text-[15px] font-medium leading-snug text-text-main">{row.label}</div>
+            <div className="flex shrink-0 items-baseline gap-2">
+              <span className="font-mono text-[14px] text-text-main">{row.count}</span>
+              <span className="text-[13px] text-text-dim">
+                {Math.round((row.count / Math.max(trialCount, 1)) * 100)}%
+              </span>
             </div>
           </div>
         ))}
       </div>
+      {unanimousDetail ? (
+        <div className="border-t border-outline/35 bg-surface/20 px-3 py-2.5">
+          <div className="text-[11px] uppercase tracking-wide text-text-dim">
+            {detailLabel} · same across all personas
+          </div>
+          <p className="mt-1 text-[13px] leading-relaxed text-text-variant">{fullProseText(unanimousDetail)}</p>
+        </div>
+      ) : uniqueDetails.length > 0 ? (
+        <div className="space-y-2 border-t border-outline/35 bg-surface/20 px-3 py-2.5">
+          <div className="text-[11px] uppercase tracking-wide text-text-dim">
+            {detailLabel} · {uniqueDetails.length} distinct explanations
+          </div>
+          {uniqueDetails.slice(0, 3).map((sample) => (
+            <p
+              key={sample.slice(0, 48)}
+              className="rounded-md bg-surface/40 px-2.5 py-2 text-[13px] leading-relaxed text-text-variant"
+            >
+              {fullProseText(sample)}
+            </p>
+          ))}
+          {uniqueDetails.length > 3 ? (
+            <p className="text-[12px] text-text-dim">
+              +{uniqueDetails.length - 3} more in the detailed report below.
+            </p>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   )
 }
@@ -1317,7 +1406,7 @@ function PersonaTextSnapshots({
   const visibleRows = trialCount <= 8 ? rowCount : Math.min(3, rowCount)
 
   return (
-    <div className="overflow-hidden rounded-lg border border-outline/40 bg-surface/45">
+    <div className="overflow-hidden rounded-lg glass-tile">
       <div className="border-b border-outline/35 px-3 py-2 text-[12px] font-medium uppercase tracking-wide text-text-dim">
         Persona voice
       </div>
@@ -1351,7 +1440,7 @@ function CompactContextGroup({ contexts }: { contexts: AggregationContext[] }) {
   if (contexts.length === 0) return null
 
   return (
-    <section className="overflow-hidden rounded-xl border border-outline/45 bg-surface/30">
+    <section className="overflow-hidden rounded-xl glass-panel">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -1725,7 +1814,7 @@ function BatchReportMetaByline({ meta }: { meta: BatchReportPdfMeta }) {
             : "grid-cols-1";
 
   return (
-    <div className={`mt-3 grid gap-px overflow-hidden rounded-lg border border-outline/40 bg-outline/40 ${colClass}`}>
+    <div className={`mt-3 grid gap-px overflow-hidden rounded-lg bg-outline/25 ${colClass}`}>
       {facts.map((fact) => (
         <BatchReportMetaFact key={fact.label} label={fact.label} value={fact.value} title={fact.title} />
       ))}
@@ -1851,14 +1940,14 @@ function AggregationDashboard({
                 void downloadPdf();
               }}
               disabled={downloadBusy}
-              className={`inline-flex items-center gap-1.5 rounded-md border border-outline/50 bg-surface/60 px-2.5 py-1 text-[12px] font-medium text-text-variant transition hover:border-primary/40 hover:bg-surface hover:text-text-main disabled:opacity-55 ${FOCUS_RING}`}
+              className={`glass-tile glass-tile--hover inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[12px] font-medium text-text-variant transition hover:text-text-main disabled:opacity-55 ${FOCUS_RING}`}
             >
               <Sym name="download" size={14} />
               {downloadBusy ? "Preparing PDF…" : "Download PDF"}
             </button>
             {showReportingBadge ? (
               <span
-                className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${reportingStatusClassName(
+                className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-mono text-[12px] uppercase tracking-wide ${reportingStatusClassName(
                   reporting.status,
                 )}`}
               >
@@ -1933,14 +2022,10 @@ function AggregationDashboard({
               type="button"
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
-              className={`glow flex w-full items-center justify-between gap-3 rounded-xl border px-3 py-2.5 text-left transition-colors ${FOCUS_RING} ${
-                open
-                  ? "border-primary bg-primary-dim text-on-primary hover:bg-primary"
-                  : "border-primary bg-primary text-on-primary hover:bg-primary-dim"
-              }`}
+              className={`glass-tile glass-tile--hover flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left transition-colors ${FOCUS_RING}`}
             >
               <div className="min-w-0">
-                <div className="text-[14px] font-medium text-on-primary">
+                <div className="text-[14px] font-semibold text-primary">
                   {open
                     ? isSurvey
                       ? "Hide per-question report"
@@ -1949,16 +2034,17 @@ function AggregationDashboard({
                       ? "Show per-question report"
                       : "Show detailed report"}
                 </div>
-                <div className="mt-0.5 text-[13px] leading-relaxed text-on-primary/80">
+                <div className="mt-0.5 text-[13px] leading-relaxed text-text-dim">
                   {isSurvey
-                    ? `${detailCount} ${detailLabel} · answer mix, open Reasons for quotes`
+                    ? `${detailCount} ${detailLabel} · answer mix and persona explanations`
                     : `${detailCount} ${detailLabel} · signals, grouped summaries, and evidence`}
                 </div>
               </div>
-              <div className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-white/15 bg-white/10 px-2.5 py-1.5 text-[13px] text-on-primary">
-                <span>{open ? "Collapse" : "Expand"}</span>
-                <Sym name={open ? "expand_less" : "expand_more"} size={16} />
-              </div>
+              <Sym
+                name={open ? "expand_less" : "expand_more"}
+                size={18}
+                className="shrink-0 text-text-dim"
+              />
             </button>
           </div>
         ) : null}
@@ -1971,7 +2057,7 @@ function AggregationDashboard({
               title={isSurvey ? "Per-question report" : "Detailed contexts"}
               subtitle={
                 isSurvey
-                  ? "Answer mix per question. Open Reasons for quotes."
+                  ? "Answer mix per question, with persona explanations underneath."
                   : "Decision and feedback first. Expand any card for signals, grouped summaries, and evidence."
               }
             />
@@ -2102,13 +2188,13 @@ function ChoiceCompositionChart({
           {multi ? (
             <span className="text-[12px] text-text-dim">Multi-select · shares can exceed 100%</span>
           ) : null}
-          <span className="rounded-md border border-outline/40 bg-surface/50 px-2 py-1 text-[13px] text-text-variant">
+          <span className="rounded-md glass-tile px-2 py-1 text-[13px] text-text-variant">
             {consensus}
           </span>
         </div>
       </div>
 
-      <div className="rounded-lg border border-outline/40 bg-surface/40 px-3 py-3">
+      <div className="rounded-lg glass-tile px-3 py-3">
         <div className="space-y-2.5">
           {ranked.map((item, index) => {
             const share = Math.round((item.count / denom) * 100)
@@ -2151,6 +2237,14 @@ function ChoiceCompositionChart({
 }
 
 type FreeTextTheme = { label: string; count: number; samples: string[] }
+
+/** Long "themes" that are just the full quote — treat as evidence, not a topic tag. */
+function isQuoteLikeTheme(theme: FreeTextTheme): boolean {
+  const label = theme.label.trim()
+  if (label.length >= 120) return true
+  const sample = theme.samples[0]?.trim() ?? ""
+  return sample.length > 0 && (label === sample || sample.startsWith(label.slice(0, 40)))
+}
 
 function freeTextThemes(primary: AggregationField | null): FreeTextTheme[] {
   const counts = primary?.textual?.counts ?? []
@@ -2205,31 +2299,32 @@ function freeTextSignalTags(judges: AggregationJudge[]): FreeTextTheme[] {
 
 function freeTextThemeSummary(present: number, themes: FreeTextTheme[], uniqueHint: number): string | null {
   if (present <= 0) return null
-  if (themes.length === 0) {
+  const topicThemes = themes.filter((theme) => !isQuoteLikeTheme(theme))
+  if (topicThemes.length === 0) {
     return uniqueHint > 0
-      ? `${present} written answer${present === 1 ? "" : "s"} · ${uniqueHint} distinct theme${uniqueHint === 1 ? "" : "s"}`
+      ? `${present} written answer${present === 1 ? "" : "s"} · ${uniqueHint} distinct main topic${uniqueHint === 1 ? "" : "s"}`
       : `${present} written answer${present === 1 ? "" : "s"}`
   }
-  if (themes.length === 1) {
-    return `All ${present} answers converge on one theme: "${themes[0].label}".`
+  if (topicThemes.length === 1) {
+    return `All ${present} answers converge on one main topic: "${topicThemes[0].label}".`
   }
 
-  const primary = themes[0]
-  const secondary = themes[1]
-  const smaller = themes.slice(2)
+  const primary = topicThemes[0]
+  const secondary = topicThemes[1]
+  const smaller = topicThemes.slice(2)
   const smallerAnswers = smaller.reduce((sum, theme) => sum + theme.count, 0)
 
   if (primary.count + secondary.count >= Math.max(2, Math.round(present * 0.65))) {
-    let summary = `Across ${present} answers, the dominant themes are "${primary.label}" (${primary.count}) and "${secondary.label}" (${secondary.count}).`
+    let summary = `Across ${present} answers, the dominant main topics are "${primary.label}" (${primary.count}) and "${secondary.label}" (${secondary.count}).`
     if (smallerAnswers > 0) {
-      summary = `${summary.slice(0, -1)}, with ${smallerAnswers} more in ${smaller.length} smaller theme${smaller.length === 1 ? "" : "s"}.`
+      summary = `${summary.slice(0, -1)}, with ${smallerAnswers} more in ${smaller.length} smaller topic${smaller.length === 1 ? "" : "s"}.`
     }
     return summary
   }
 
-  let summary = `Across ${present} answers, responses form ${themes.length} themes. The largest is "${primary.label}" (${primary.count}), followed by "${secondary.label}" (${secondary.count}).`
+  let summary = `Across ${present} answers, responses form ${topicThemes.length} main topics. The largest is "${primary.label}" (${primary.count}), followed by "${secondary.label}" (${secondary.count}).`
   if (smallerAnswers > 0) {
-    summary += ` The remaining ${smallerAnswers} answers fall into ${smaller.length} smaller theme${smaller.length === 1 ? "" : "s"}.`
+    summary += ` The remaining ${smallerAnswers} answers fall into ${smaller.length} smaller topic${smaller.length === 1 ? "" : "s"}.`
   }
   return summary
 }
@@ -2261,7 +2356,7 @@ function FreeTextThemeTags({ themes, label }: { themes: FreeTextTheme[]; label: 
         {themes.map((theme) => (
           <span
             key={`${theme.label}-${theme.count}`}
-            className="inline-flex max-w-full items-start gap-1.5 rounded-lg border border-outline/45 bg-surface/70 px-2.5 py-1.5 text-[13px] leading-snug text-text-main"
+            className="inline-flex max-w-full items-start gap-1.5 rounded-lg glass-tile px-2.5 py-1.5 text-[13px] leading-snug text-text-main"
           >
             <span className="min-w-0 whitespace-normal break-words">{theme.label}</span>
             <span className="shrink-0 font-mono text-text-dim">{theme.count}</span>
@@ -2286,7 +2381,7 @@ function FreeTextThemeExamples({ themes }: { themes: FreeTextTheme[] }) {
             {theme.samples.slice(0, 2).map((sample) => (
               <div
                 key={`${theme.label}-${sample.slice(0, 40)}`}
-                className="rounded-md border border-outline/40 bg-surface/60 px-3 py-2 text-[14px] leading-relaxed text-text-variant"
+                className="rounded-md glass-tile px-3 py-2 text-[14px] leading-relaxed text-text-variant"
               >
                 {sample}
               </div>
@@ -2396,7 +2491,7 @@ function LikertSpectrumChart({
 
   return (
     <div className="space-y-3">
-      <div className="relative rounded-lg border border-outline/40 bg-surface/40 px-3 pb-2 pt-4">
+      <div className="relative rounded-lg glass-tile px-3 pb-2 pt-4">
         {avgPct != null ? (
           <div
             className="pointer-events-none absolute bottom-8 top-3 z-10 w-px -translate-x-1/2 bg-text-main/70"
@@ -2487,7 +2582,7 @@ function LikertQuestionBody({
           </div>
           {avgLabel ? <div className="pb-1 text-[15px] text-text-main">{avgLabel}</div> : null}
         </div>
-        <div className="rounded-md border border-outline/40 bg-surface/50 px-2 py-1 text-[13px] text-text-variant">
+        <div className="rounded-md glass-tile px-2 py-1 text-[13px] text-text-variant">
           {consensus}
         </div>
       </div>
@@ -2538,8 +2633,9 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
   const judges = context.judges ?? []
   const freeText = isFreeText ? freeTextCoverage(primaryFacet) : null
   const freeTextSignalThemes = isFreeText ? freeTextSignalTags(judges) : []
-  const freeTextDisplayThemes =
+  const freeTextDisplayThemes = (
     freeTextSignalThemes.length > 0 ? freeTextSignalThemes : (freeText?.themes ?? [])
+  ).filter((theme) => !isQuoteLikeTheme(theme))
 
   const reasonSamples = (explanationFacet?.textual?.samples ?? []).filter((sample) => sample.trim().length > 0)
   const reasonSummary =
@@ -2547,6 +2643,10 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
       ? explanationFacet.textual.summary
       : null
   const hasReasons = reasonSamples.length > 0 || Boolean(reasonSummary)
+  const reasonTitle = humanizeFacetLabel(
+    explanationFacet?.label ?? "Reasons",
+    explanationFacet?.key ?? "explanation",
+  )
   const quoteCount = reasonSamples.length
   const crossFacetViews = crossFacetViewsForContext(context)
   const hasGroupedAnalysis = summaries.length > 0 || judges.length > 0 || crossFacetViews.length > 0
@@ -2571,7 +2671,7 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
             : null
 
   return (
-    <section className="overflow-hidden rounded-xl border border-outline/50 bg-surface/35">
+    <section className="overflow-hidden rounded-xl glass-panel">
       <div className="px-4 py-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -2601,7 +2701,7 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
                     </p>
                     <FreeTextThemeTags
                       themes={freeTextDisplayThemes}
-                      label={freeTextSignalThemes.length > 0 ? "Signals" : "Themes"}
+                      label={freeTextSignalThemes.length > 0 ? "Signals" : "Main topics"}
                     />
                   </>
                 )
@@ -2648,9 +2748,9 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
             className={`flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-2.5 text-left transition-colors duration-200 hover:bg-surface/40 ${FOCUS_RING}`}
           >
             <div className="min-w-0">
-              <div className="text-[14px] font-medium text-text-main">Examples by theme</div>
+              <div className="text-[14px] font-medium text-text-main">Examples by main topic</div>
               <div className="mt-0.5 text-[13px] text-text-dim">
-                {freeTextDisplayThemes.length} theme{freeTextDisplayThemes.length === 1 ? "" : "s"}
+                {freeTextDisplayThemes.length} topic{freeTextDisplayThemes.length === 1 ? "" : "s"}
                 {" · "}1–2 quotes each
               </div>
             </div>
@@ -2719,11 +2819,11 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
                 className={`flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-2.5 text-left transition-colors duration-200 hover:bg-surface/40 ${FOCUS_RING}`}
               >
                 <div className="min-w-0">
-                  <div className="text-[14px] font-medium text-text-main">Reasons</div>
+                  <div className="text-[14px] font-medium text-text-main">{reasonTitle}</div>
                   <div className="mt-0.5 text-[13px] text-text-dim">
                     {quoteCount > 0
-                      ? `${quoteCount} quote${quoteCount === 1 ? "" : "s"}`
-                      : "Why personas answered this way"}
+                      ? `${quoteCount} persona quote${quoteCount === 1 ? "" : "s"} explaining their answer`
+                      : "Persona explanations for the answer above"}
                   </div>
                 </div>
                 <Sym
@@ -2935,7 +3035,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
   )
 
   return (
-    <section className="overflow-hidden rounded-xl border border-outline/50 bg-surface/35">
+    <section className="overflow-hidden rounded-xl glass-panel">
       <div className="space-y-4 px-4 py-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
@@ -2953,7 +3053,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
         </div>
 
         {primaryRating ? (
-          <div className="rounded-xl border border-outline/40 bg-surface/55 p-3">
+          <div className="rounded-xl glass-tile p-3">
             <div className="mb-2 text-[13px] font-medium uppercase tracking-wide text-text-dim">
               {primaryRating.label}
             </div>
@@ -2971,7 +3071,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
                 1,
               )
               return (
-                <div key={facet.key} className="rounded-xl border border-outline/40 bg-surface/55 p-3">
+                <div key={facet.key} className="rounded-xl glass-tile p-3">
                   <div className="mb-2 text-[13px] font-medium uppercase tracking-wide text-text-dim">
                     {facet.label}
                   </div>
@@ -2985,7 +3085,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
         {otherRatings.length > 0 ? (
           <div className="grid gap-3 lg:grid-cols-2">
             {otherRatings.map((facet) => (
-              <div key={facet.key} className="rounded-xl border border-outline/40 bg-surface/55 p-3">
+              <div key={facet.key} className="rounded-xl glass-tile p-3">
                 <div className="mb-2 text-[13px] font-medium uppercase tracking-wide text-text-dim">
                   {facet.label}
                 </div>
@@ -3000,17 +3100,35 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
           const signalThemes = freeTextSignalTags(
             judges.filter((judge) => judge.targetFacetKey === facet.facetKey || judge.targetFacetKey === facet.key),
           )
-          const themes = signalThemes.length > 0 ? signalThemes : coverage.themes
+          const themes = (signalThemes.length > 0 ? signalThemes : coverage.themes).filter(
+            (theme) => !isQuoteLikeTheme(theme),
+          )
+          const facetTitle = humanizeFacetLabel(facet.label, facet.key)
+          const showSummary =
+            coverage.summary &&
+            !isHeuristicAggregationSummary(coverage.summary) &&
+            // Avoid repeating the same long quote under both summary and examples.
+            !(
+              (facet.textual?.samples?.length ?? 0) === 1 &&
+              coverage.summary.trim() === (facet.textual?.samples?.[0] ?? "").trim()
+            )
           return (
-            <div key={facet.key} className="space-y-2 rounded-xl border border-outline/40 bg-surface/55 p-3">
-              <div className="text-[13px] font-medium uppercase tracking-wide text-text-dim">{facet.label}</div>
-              {coverage.summary ? (
+            <div key={facet.key} className="space-y-2 rounded-xl glass-tile p-3">
+              <div>
+                <div className="text-[13px] font-medium uppercase tracking-wide text-text-dim">{facetTitle}</div>
+                {facet.role === "explanation" ? (
+                  <p className="mt-0.5 text-[12px] leading-relaxed text-text-dim">
+                    The persona&apos;s own words explaining the ratings above, from their post-chat self-report.
+                  </p>
+                ) : null}
+              </div>
+              {showSummary ? (
                 <p className="text-[14px] leading-relaxed text-text-main">{coverage.summary}</p>
               ) : null}
-              <FreeTextThemeTags themes={themes} label="Themes" />
+              {themes.length > 0 ? <FreeTextThemeTags themes={themes} label="Main topics" /> : null}
               {(facet.textual?.samples?.length ?? 0) > 0 ? (
                 <DisclosurePanel
-                  title={`Examples (${facet.textual?.samples?.length ?? 0})`}
+                  title={`Persona quotes (${facet.textual?.samples?.length ?? 0})`}
                   defaultOpen
                 >
                   <SampleList samples={facet.textual?.samples ?? []} defaultExpanded />
@@ -3022,16 +3140,22 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
 
         {analysisCount > 0 ? (
           <div>
-            <button
-              type="button"
-              onClick={() => setMoreOpen((value) => !value)}
-              aria-expanded={moreOpen}
-              aria-controls={morePanelId}
-              className={`inline-flex items-center gap-1 rounded-md border border-outline/50 bg-surface/60 px-2 py-1 text-[12px] uppercase tracking-wide text-text-dim hover:bg-surface/80 ${FOCUS_RING}`}
-            >
-              {moreOpen ? "Hide analyses" : "Show analyses"}
-              <Sym name={moreOpen ? "expand_less" : "expand_more"} size={14} />
-            </button>
+            <div className="flex flex-wrap items-start gap-2">
+              <button
+                type="button"
+                onClick={() => setMoreOpen((value) => !value)}
+                aria-expanded={moreOpen}
+                aria-controls={morePanelId}
+                className={`inline-flex items-center gap-1 rounded-md glass-tile glass-tile--hover px-2 py-1 text-[12px] uppercase tracking-wide text-text-dim ${FOCUS_RING}`}
+              >
+                {moreOpen ? "Hide LLM analyses" : `Show LLM analyses (${analysisCount})`}
+                <Sym name={moreOpen ? "expand_less" : "expand_more"} size={14} />
+              </button>
+              <span className="min-w-0 flex-1 text-[12px] leading-relaxed text-text-dim">
+                Auto-generated after the batch finishes: the reporting model groups persona answers and
+                runs the signal checks defined in this task&apos;s <span className="font-mono">reporting.json</span>.
+              </span>
+            </div>
             {moreOpen ? (
               <div id={morePanelId} className="mt-3 space-y-4 border-t border-outline/40 pt-3">
                 {summaries.length > 0 ? (
@@ -3076,7 +3200,6 @@ function ContextCard({ context }: { context: AggregationContext }) {
   const primaryFacet = primaryFacetForContext(context)
   const distributionItems = summaryBucketsForContext(context)
   const leadText = contextLeadText(context)
-  const typeBadge = contextTypeBadgeLabel(context)
   const typeDescription = contextTypeDescription(context)
   const summaryCount = context.summaries?.length ?? 0
   const judgeCount = context.judges?.length ?? 0
@@ -3090,7 +3213,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
   const primaryValue = primaryFacet?.categorical?.counts?.[0]?.value ?? null
 
   return (
-    <section className="overflow-hidden rounded-xl border border-outline/50 bg-surface/35">
+    <section className="overflow-hidden rounded-xl glass-panel">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -3102,14 +3225,15 @@ function ContextCard({ context }: { context: AggregationContext }) {
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <FieldTitle field={context.label} />
-              {typeBadge ? <InlineBadge>{typeBadge}</InlineBadge> : null}
               {unanimousPrimary && primaryValue ? (
-                <span className="inline-flex items-center gap-1 rounded-md border border-secondary/35 bg-secondary/10 px-2 py-0.5 text-[13px] font-medium text-secondary">
+                <span className="inline-flex items-center gap-1 rounded-md bg-secondary/10 px-2 py-0.5 text-[13px] font-medium text-secondary">
                   <Sym name="check_circle" size={12} fill={1} />
                   {primaryValue}
                 </span>
               ) : null}
-              {analysisCount > 0 ? <InlineBadge>{analysisCount} analyses</InlineBadge> : null}
+              {analysisCount > 0 ? (
+                <span className="text-[12px] text-text-dim">{analysisCount} analyses</span>
+              ) : null}
             </div>
             {typeDescription ? (
               <p className="mt-1 text-[13px] leading-relaxed text-text-dim">{typeDescription}</p>
@@ -3118,7 +3242,11 @@ function ContextCard({ context }: { context: AggregationContext }) {
               <p className="mt-1.5 max-w-4xl text-[14px] leading-relaxed text-text-main">{leadText}</p>
             ) : null}
           </div>
-          <span className="inline-flex items-center gap-1 rounded-md border border-outline/50 bg-surface/60 px-2 py-1 text-[12px] uppercase tracking-wide text-text-dim">
+          <span
+            className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-[12px] uppercase tracking-wide ${
+              open ? "glass-tile glass-tile--active text-primary" : "glass-tile text-text-dim"
+            }`}
+          >
             {open ? "Collapse" : "Expand"}
             <Sym name={open ? "expand_less" : "expand_more"} size={14} />
           </span>
@@ -3127,7 +3255,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
         {!unanimousPrimary ? (
           <div className={`mt-3 grid gap-2 ${showPrimaryPreview && showDistribution ? "lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" : ""}`}>
             {primaryFacet && showPrimaryPreview ? (
-              <div className="rounded-xl border border-outline/40 bg-surface/55 p-2.5">
+              <div className="rounded-xl glass-tile p-2.5">
                 <div className="mb-1.5 flex items-center justify-between gap-2">
                   <div className="text-[13px] font-medium uppercase tracking-wide text-text-dim">Primary signal</div>
                   {primaryFacet.role ? <InlineBadge>{primaryFacet.role}</InlineBadge> : null}
@@ -3137,7 +3265,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
             ) : null}
 
             {showDistribution ? (
-              <div className="rounded-xl border border-outline/40 bg-surface/55 p-2.5">
+              <div className="rounded-xl glass-tile p-2.5">
                 <div className="mb-1.5 text-[13px] font-medium uppercase tracking-wide text-text-dim">
                   Grouped responses
                 </div>
@@ -3151,7 +3279,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
             ) : null}
 
             {primaryFacet?.kind === "categorical" && !showPrimaryPreview && !showDistribution ? (
-              <div className="rounded-xl border border-outline/40 bg-surface/55 p-2.5">
+              <div className="rounded-xl glass-tile p-2.5">
                 <div className="mb-1.5 text-[13px] font-medium uppercase tracking-wide text-text-dim">
                   Distribution
                 </div>
@@ -3194,7 +3322,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
             <div className="space-y-3">
               <SubsectionTitle
                 title="Judges"
-                subtitle="Scored checks and bucket-level assessments."
+                subtitle="Yes/no signal scans the reporting model ran over persona explanations."
               />
               {context.judges?.map((judge) => (
                 <JudgeDisclosure key={judge.id} judge={judge} />
@@ -3225,15 +3353,20 @@ function ContextCard({ context }: { context: AggregationContext }) {
 function FacetCard({ field }: { field: AggregationField }) {
   const textSummary = field.textual?.summary ?? null
   const textSamples = field.textual?.samples ?? []
+  const title = humanizeFacetLabel(field.label, field.key)
 
   return (
-    <div className="rounded-xl border border-outline/40 bg-surface/50 p-3">
+    <div className="rounded-xl glass-tile p-3">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div className="min-w-0">
-          <div className="text-[15px] font-medium text-text-main">{field.label}</div>
+          <div className="text-[15px] font-medium text-text-main">{title}</div>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-[12px] uppercase tracking-wide text-text-dim">
             <span>{field.kind}</span>
-            {field.role ? <InlineBadge>{field.role}</InlineBadge> : null}
+            {field.role === "explanation" ? (
+              <InlineBadge>persona explanation</InlineBadge>
+            ) : field.role ? (
+              <InlineBadge>{field.role}</InlineBadge>
+            ) : null}
             <span>{field.presentCount} present</span>
             {field.missingCount > 0 ? <span>{field.missingCount} missing</span> : null}
           </div>
@@ -3263,13 +3396,13 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
 
   return (
     <DisclosurePanel
-      title={summary.title}
-      subtitle={summary.overall?.summary ? previewText(summary.overall.summary, 120) : undefined}
+      title={humanizeAnalysisTitle(summary.title)}
+      subtitle="LLM rollup of persona explanations by group"
       badge={summary.status ? summary.status.replace(/_/g, " ") : undefined}
     >
       {summary.error ? <p className="text-[14px] leading-relaxed text-danger">{summary.error}</p> : null}
       {summary.overall?.summary ? (
-        <p className="text-[14px] leading-relaxed text-text-main">{summary.overall.summary}</p>
+        <p className="text-[14px] leading-relaxed text-text-main">{fullProseText(summary.overall.summary)}</p>
       ) : null}
       {summary.buckets.length > 0 ? (
         <div className="mt-3 space-y-3">
@@ -3277,19 +3410,19 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
             items={summary.buckets.map((bucket) => ({
               label: bucket.bucket,
               count: bucket.count,
-              detail: bucket.summary ?? null,
             }))}
             total={total}
+            showDetails={false}
           />
           <div className="space-y-2">
             {summary.buckets.map((bucket) => (
-              <div key={`${summary.id}-${bucket.bucket}`} className="rounded-lg border border-outline/40 bg-surface/70 p-3">
+              <div key={`${summary.id}-${bucket.bucket}`} className="rounded-lg glass-tile p-3">
                 <div className="flex items-center justify-between gap-3 text-[14px]">
                   <span className="font-medium text-text-main">{bucket.bucket}</span>
                   <span className="font-mono text-text-variant">{bucket.count}</span>
                 </div>
                 {bucket.summary ? (
-                  <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{bucket.summary}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{fullProseText(bucket.summary)}</p>
                 ) : null}
                 {(bucket.samples?.length ?? 0) > 0 ? (
                   <div className="mt-2">
@@ -3307,29 +3440,45 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
 
 function JudgeDisclosure({ judge }: { judge: AggregationJudge }) {
   const total = judge.buckets.reduce((sum, bucket) => sum + bucket.count, 0)
+  const signalDefs = new Map((judge.signals ?? []).map((signal) => [signal.key, signal]))
 
   return (
     <DisclosurePanel
-      title={judge.title}
-      subtitle={judge.overallAssessment ? previewText(judge.overallAssessment, 120) : undefined}
+      title={humanizeAnalysisTitle(judge.title)}
+      subtitle="Yes/no signal scan over persona explanations"
       badge={judge.status ? judge.status.replace(/_/g, " ") : undefined}
     >
       {(judge.signals?.length ?? 0) > 0 ? (
-        <div className="mb-3 flex flex-wrap gap-2">
-          {judge.signals.map((signal) => (
-            <span
-              key={signal.key}
-              className="rounded border border-outline/40 bg-surface/70 px-2 py-1 text-[13px] text-text-variant"
-              title={signal.description ?? undefined}
-            >
-              {signal.label}
-              {signal.valueType ? ` · ${signal.valueType}` : ""}
-            </span>
-          ))}
+        <div className="mb-3 space-y-2">
+          <p className="text-[12px] leading-relaxed text-text-dim">
+            Each chip is a yes/no check the reporting model looks for in the text
+            {typeof judge.rubric === "string" && judge.rubric.trim()
+              ? ` — ${judge.rubric.trim()}`
+              : "."}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {judge.signals.map((signal) => {
+              const typeHint = humanizeValueType(signal.valueType)
+              return (
+                <span
+                  key={signal.key}
+                  className="rounded glass-tile px-2 py-1 text-[13px] text-text-variant"
+                  title={
+                    signal.description ||
+                    (typeHint
+                      ? `${signal.label} — ${typeHint}: marked true only when the text clearly supports it`
+                      : signal.label)
+                  }
+                >
+                  {signal.label}
+                  {typeHint ? (
+                    <span className="text-text-dim">{` · ${typeHint}`}</span>
+                  ) : null}
+                </span>
+              )
+            })}
+          </div>
         </div>
-      ) : null}
-      {typeof judge.rubric === "string" && judge.rubric.trim() ? (
-        <p className="mb-3 text-[14px] leading-relaxed text-text-variant">{judge.rubric}</p>
       ) : null}
       {judge.overallAssessment ? (
         <p className="mb-3 text-[14px] leading-relaxed text-text-main">{judge.overallAssessment}</p>
@@ -3341,35 +3490,45 @@ function JudgeDisclosure({ judge }: { judge: AggregationJudge }) {
             items={judge.buckets.map((bucket) => ({
               label: bucket.bucket,
               count: bucket.count,
-              detail: bucket.assessment ?? null,
             }))}
             total={total}
+            showDetails={false}
           />
           <div className="space-y-2">
             {judge.buckets.map((bucket) => (
-              <div key={`${judge.id}-${bucket.bucket}`} className="rounded-lg border border-outline/40 bg-surface/70 p-3">
+              <div key={`${judge.id}-${bucket.bucket}`} className="rounded-lg glass-tile p-3">
                 <div className="flex items-center justify-between gap-3 text-[14px]">
                   <span className="font-medium text-text-main">{bucket.bucket}</span>
                   <span className="font-mono text-text-variant">{bucket.count}</span>
                 </div>
                 {bucket.assessment ? (
-                  <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{bucket.assessment}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{fullProseText(bucket.assessment)}</p>
                 ) : null}
                 {(bucket.signals?.length ?? 0) > 0 ? (
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {bucket.signals?.map((signal) => (
-                      <span
-                        key={`${judge.id}-${bucket.bucket}-${signal.key}`}
-                        className={`rounded border px-2 py-1 text-[13px] ${
-                          signal.present
-                            ? "border-secondary/40 bg-secondary/10 text-secondary"
-                            : "border-outline/40 bg-surface text-text-dim"
-                        }`}
-                        title={signal.evidence ?? undefined}
-                      >
-                        {signal.key}
-                      </span>
-                    ))}
+                    {bucket.signals?.map((signal) => {
+                      const def = signalDefs.get(signal.key)
+                      const label = def?.label ?? signal.key.replace(/_/g, " ")
+                      return (
+                        <span
+                          key={`${judge.id}-${bucket.bucket}-${signal.key}`}
+                          className={`rounded px-2 py-1 text-[13px] ${
+                            signal.present
+                              ? "bg-secondary/10 text-secondary"
+                              : "glass-tile text-text-dim"
+                          }`}
+                          title={
+                            signal.evidence ||
+                            (signal.present
+                              ? `Found in this group: ${label}`
+                              : `Not found in this group: ${label}`)
+                          }
+                        >
+                          {signal.present ? "Yes · " : "No · "}
+                          {label}
+                        </span>
+                      )
+                    })}
                   </div>
                 ) : null}
                 {bucket.samples.length > 0 ? (
@@ -3395,7 +3554,7 @@ function CrossFacetViewDisclosure({
   const total = buckets.reduce((sum, bucket) => sum + bucket.count, 0)
   const title =
     crossFacetView.type === "text_by_primary_category"
-      ? "Reasons by response group"
+      ? "Explanations by response group"
       : crossFacetView.type.replace(/_/g, " ")
 
   return (
@@ -3417,7 +3576,7 @@ function CrossFacetViewDisclosure({
       />
       <div className="mt-3 space-y-2">
         {buckets.map((bucket) => (
-          <div key={`${crossFacetView.type}-${bucket.category}`} className="rounded-lg border border-outline/40 bg-surface/70 p-3">
+          <div key={`${crossFacetView.type}-${bucket.category}`} className="rounded-lg glass-tile p-3">
             <div className="flex items-center justify-between gap-3 text-[14px]">
               <span className="font-medium text-text-main">{bucket.category}</span>
               <span className="font-mono text-text-variant">{bucket.count}</span>
@@ -3556,7 +3715,7 @@ function FacetVisual({ field, compact = false }: { field: AggregationField; comp
     <div className="space-y-2">
       {field.textual?.summary ? (
         <p className="text-[14px] leading-relaxed text-text-main">
-          {compact ? previewText(field.textual.summary, 90) : field.textual.summary}
+          {compact ? previewText(field.textual.summary, 180) : fullProseText(field.textual.summary)}
         </p>
       ) : (
         <p className="text-[14px] text-text-variant">No text summary available.</p>
@@ -3602,7 +3761,7 @@ function CountBars({
               <div className="h-2 rounded-full bg-primary/75" style={{ width: ratioWidth(item.count, total) }} />
             </div>
             {showDetails && item.detail ? (
-              <p className="text-[13px] leading-relaxed text-text-dim">{previewText(item.detail, compact ? 90 : 140)}</p>
+              <p className="text-[13px] leading-relaxed text-text-dim">{fullProseText(item.detail)}</p>
             ) : null}
           </div>
         )
@@ -3626,7 +3785,7 @@ function SampleList({
       {shown.map((sample, index) => (
         <div
           key={`${index}-${sample.slice(0, 24)}`}
-          className="rounded-md border border-outline/40 bg-surface/60 px-3 py-2 text-[14px] leading-relaxed text-text-variant"
+          className="rounded-md glass-tile px-3 py-2 text-[14px] leading-relaxed text-text-variant"
         >
           {fullProseText(sample)}
         </div>
@@ -3636,7 +3795,7 @@ function SampleList({
           type="button"
           data-pdf-ignore
           onClick={() => setExpanded((value) => !value)}
-          className={`inline-flex items-center gap-1 rounded border border-outline/40 bg-surface/50 px-2 py-1 text-[13px] text-text-dim hover:bg-surface/70 ${FOCUS_RING}`}
+          className={`inline-flex items-center gap-1 rounded glass-tile glass-tile--hover px-2 py-1 text-[13px] text-text-dim ${FOCUS_RING}`}
         >
           <Sym name={expanded ? "expand_less" : "expand_more"} size={14} />
           {expanded ? "Show fewer quotes" : `Show ${samples.length - shown.length} more quotes`}
@@ -3663,7 +3822,7 @@ function DisclosurePanel({
   const panelId = useId()
 
   return (
-    <div className="overflow-hidden rounded-xl border border-outline/40 bg-surface/45">
+    <div className="overflow-hidden rounded-xl glass-tile">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -3716,9 +3875,10 @@ function SubsectionTitle({ title, subtitle }: { title: string; subtitle?: string
   )
 }
 
+/** Quiet inline metadata label — plain text so it never reads as a lit toggle. */
 function InlineBadge({ children }: { children: ReactNode }) {
   return (
-    <span className="rounded border border-outline/50 bg-surface/60 px-1.5 py-0.5 text-[12px] uppercase tracking-wide text-text-dim">
+    <span className="text-[11px] uppercase tracking-wider text-text-dim">
       {children}
     </span>
   )
@@ -3734,7 +3894,7 @@ function CoverageTile({
   hint?: string | null
 }) {
   return (
-    <div className="min-w-[108px] rounded-lg border border-outline/40 bg-surface/35 px-2.5 py-2">
+    <div className="min-w-[108px] rounded-lg glass-tile px-2.5 py-2">
       <div className="text-[11px] uppercase tracking-wide text-text-dim">{label}</div>
       <div className="mt-1 flex items-baseline gap-2">
         <span className="font-mono text-[18px] text-text-main">{value}</span>
@@ -3747,7 +3907,7 @@ function CoverageTile({
 /** Same question-type chip language as single-trial survey debrief / scorecard. */
 function SurveyQuestionTypesTile({ counts }: { counts: SurveyQuestionTypeCount[] }) {
   return (
-    <div className="min-w-[140px] rounded-lg border border-outline/40 bg-surface/35 px-2.5 py-2">
+    <div className="min-w-[140px] rounded-lg glass-tile px-2.5 py-2">
       <div className="text-[11px] uppercase tracking-wide text-text-dim">Question types</div>
       <div className="mt-1.5 flex flex-wrap gap-1.5">
         {counts.map((entry) => (
@@ -3824,7 +3984,7 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
         }
         meta={
           launch?.status ? (
-            <span className="rounded-lg border border-outline/50 bg-surface/60 px-2.5 py-1 font-mono text-[13px] text-text-variant backdrop-blur">
+            <span className="rounded-lg glass-tile px-2.5 py-1 font-mono text-[13px] text-text-variant backdrop-blur">
               {launch.status}
               {launch.exitCode != null ? ` · exit ${launch.exitCode}` : ""}
             </span>
@@ -3860,7 +4020,7 @@ export function HarborJobDetail({ jobName, onBack, onOpenTrial }: HarborJobDetai
       ) : (
         <>
           {launch?.error && (
-            <div className="mb-4 rounded-lg border border-danger/40 bg-danger/10 px-4 py-3 text-[15px] text-danger">
+            <div className="mb-4 rounded-lg bg-danger/10 px-4 py-3 text-[15px] text-danger">
               {launch.error}
             </div>
           )}

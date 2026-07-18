@@ -149,10 +149,10 @@ export function PersonaFilterModal({
                   key={source}
                   type="button"
                   onClick={() => toggleSource(source)}
-                  className={`rounded-full border px-3 py-1.5 text-[13px] transition ${FOCUS_RING} ${
+                  className={`rounded-full px-3 py-1.5 text-[13px] transition ${FOCUS_RING} ${
                     active
-                      ? "border-primary bg-primary/15 text-primary"
-                      : "border-outline/50 bg-surface/50 text-text-variant hover:border-primary/40"
+                      ? "glass-tile glass-tile--active text-primary"
+                      : "glass-tile glass-tile--hover text-text-variant"
                   }`}
                 >
                   {source}
@@ -222,10 +222,10 @@ export function PersonaFilterModal({
                                       key={value}
                                       type="button"
                                       onClick={() => toggleDimensionValue(dim.id, value)}
-                                      className={`rounded-full border px-2.5 py-1 text-[12px] ${FOCUS_RING} ${
+                                      className={`rounded-full px-2.5 py-1 text-[12px] ${FOCUS_RING} ${
                                         active
-                                          ? "border-primary bg-primary/15 text-primary"
-                                          : "border-outline/40 text-text-variant hover:border-primary/35"
+                                          ? "glass-tile glass-tile--active text-primary"
+                                          : "glass-tile glass-tile--hover text-text-variant"
                                       }`}
                                     >
                                       {value}
@@ -253,7 +253,7 @@ export function PersonaFilterModal({
                   key={chip.key}
                   type="button"
                   onClick={() => removeChip(chip)}
-                  className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[12px] text-primary"
+                  className="glass-tile glass-tile--active inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] text-primary"
                 >
                   <span className="text-text-dim">{chip.label}:</span> {chip.value}
                   <Sym name="close" size={12} />

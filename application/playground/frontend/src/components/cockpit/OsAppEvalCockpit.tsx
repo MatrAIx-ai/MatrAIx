@@ -23,6 +23,8 @@ import type {
   WebTrace,
 } from "@/lib/types";
 import { useHarborCockpitRun, type HarborCockpitPhase } from "@/lib/useHarborCockpitRun";
+import { usePgTaskIdDeepLink } from "@/lib/usePgTaskIdDeepLink";
+import { useUrlState } from "@/lib/useUrlState";
 import { useCockpitInstruction } from "@/lib/useCockpitInstruction";
 import { mapOsAppDebriefToJobView, formatCockpitRunError, harborTrialRecordingUrl } from "@/lib/harborCockpitMappers";
 import { RunHeader } from "./RunHeader";
@@ -108,6 +110,7 @@ export function OsAppEvalCockpit({
   onOpenHarborTrial,
   isActive = true,
 }: OsAppEvalCockpitProps) {
+  const { state: urlState } = useUrlState();
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, vncUrl, sandboxId, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<OsAppEvalJobView>({ taskKind: "os-app" });
   const [taskId, setTaskId] = useState("");
@@ -133,7 +136,7 @@ export function OsAppEvalCockpit({
     [tasksQuery.data?.tasks],
   );
   const setupTaskPath =
-    tasks.find((item) => item.id === taskId)?.taskPath ?? tasks[0]?.taskPath ?? null;
+    tasks.find((item) => item.id === taskId)?.taskPath ?? null;
   const {
     persona,
     personaModel,
@@ -185,7 +188,7 @@ export function OsAppEvalCockpit({
     selectedPersonaIds,
   );
   const activeTaskId = batchJobName && batchTaskId ? batchTaskId : taskId;
-  const task = tasks.find((item) => item.id === activeTaskId) ?? tasks[0] ?? null;
+  const task = tasks.find((item) => item.id === activeTaskId) ?? null;
 
   const cuaPersonaModelOptions = useMemo(
     () => cuaPersonaModelSelectOptions(task?.platform, personaModelOptions),
@@ -204,15 +207,15 @@ export function OsAppEvalCockpit({
     }
   }, [cuaPersonaModelOptions, personaModel, setPersonaModel]);
 
+  const osAppTaskIds = useMemo(() => tasks.map((item) => item.id), [tasks]);
+  usePgTaskIdDeepLink("os-app", osAppTaskIds, setTaskId, isActive);
+
   useEffect(() => {
+    if (urlState.pgTaskId) return;
     if (batchTaskId) {
       setTaskId(batchTaskId);
-      return;
     }
-    if (!taskId && tasks.length > 0) {
-      setTaskId(tasks[0].id);
-    }
-  }, [batchTaskId, taskId, tasks]);
+  }, [batchTaskId, urlState.pgTaskId]);
 
   const resolveCuaRuntime = useCallback(
     (id: string, platform?: string) => {
