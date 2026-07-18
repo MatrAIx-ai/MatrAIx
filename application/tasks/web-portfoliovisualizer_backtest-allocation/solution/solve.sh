@@ -40,8 +40,10 @@ payload = {
         "start_year": 2005,
         "initial_amount_usd": 10000,
         "allocation": [
-            {"asset_class": "US Stock Market (VTSMX)", "percent": 60},
-            {"asset_class": "Total US Bond Market (VBMFX)", "percent": 40},
+            {"asset_class": "US Stock Market (VTSMX)", "percent": 45},
+            {"asset_class": "Global ex-US Stock Market (VGTSX)", "percent": 20},
+            {"asset_class": "Total US Bond Market (VBMFX)", "percent": 25},
+            {"asset_class": "REIT (VGSIX)", "percent": 10},
         ],
     },
     "results": {
@@ -58,9 +60,12 @@ payload = {
     ],
     "satisfied": True,
     "reason": (
-        "A 60/40 mix matches a moderate risk tolerance over a 20-year retirement "
-        "horizon: the historical drawdown is tolerable and returns keep pace with "
-        "long-term goals without over-concentrating in equities."
+        "A diversified 65/25/10 mix — US and international equity, total bond "
+        "market, and a REIT sleeve — matches a moderate risk tolerance over a "
+        "20-year retirement horizon: spreading equity across US and ex-US plus a "
+        "real-asset allocation keeps the historical drawdown tolerable while "
+        "returns keep pace with long-term goals, without over-concentrating in "
+        "any single asset class."
     ),
 }
 output.write_text(json.dumps(payload, indent=2) + "\n")

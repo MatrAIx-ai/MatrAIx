@@ -18,10 +18,18 @@ fits your goals.
    aggressive). Honour any personal constraints — ethical/sector preferences,
    currency, or cultural/religious investment rules (for example avoiding
    interest-bearing instruments) and family obligations.
-2. **Input details gradually.** Set the allocation across asset classes one
-   step at a time (for example US stocks, international stocks, bonds, REITs,
-   gold/commodities, cash). Pick a start year and initial amount that match your
-   real horizon rather than the tool's defaults.
+2. **Build the allocation yourself — don't just re-weight the defaults.** The
+   tool pre-fills a couple of asset-class rows. Treat those as a starting point,
+   not the answer: use the **"Add Asset"** control (and the asset-class /
+   ticker dropdown) to add as many holdings as fit your persona before you set
+   any weights. You have the full menu available — broad asset classes (US
+   stocks, international/emerging stocks, total bond market, REITs,
+   gold/commodities, cash) **and** individual tickers or funds if you want more
+   precise exposure. How many holdings you add and which ones is your choice as
+   this persona: an aggressive, long-horizon investor might spread across many
+   equity sleeves, while a conservative one might hold just a few. Set the
+   allocation one step at a time, then pick a start year and initial amount that
+   match your real horizon rather than the tool's defaults.
 3. **Run the backtest** and read the key metrics the tool reports — final
    balance, CAGR, standard deviation, best/worst year, maximum drawdown, and
    the Sharpe ratio.
@@ -51,8 +59,10 @@ Write your configuration, the results you read, and your judgement to
     "start_year": 2005,
     "initial_amount_usd": 10000,
     "allocation": [
-      { "asset_class": "US Stock Market (VTSMX)", "percent": 60 },
-      { "asset_class": "Total US Bond Market (VBMFX)", "percent": 40 }
+      { "asset_class": "US Stock Market (VTSMX)", "percent": 45 },
+      { "asset_class": "Global ex-US Stock Market (VGTSX)", "percent": 20 },
+      { "asset_class": "Total US Bond Market (VBMFX)", "percent": 25 },
+      { "asset_class": "REIT (VGSIX)", "percent": 10 }
     ]
   },
   "results": {
@@ -74,7 +84,9 @@ Write your configuration, the results you read, and your judgement to
 Rules for the submission:
 
 - `allocation` must list at least two asset classes and the `percent` values
-  must sum to **100**.
+  must sum to **100**. Two is only the floor — add as many holdings as suit
+  your persona; a well-diversified portfolio usually spans several asset
+  classes, and you may include individual tickers/funds if that fits you.
 - `investment_goal` and `risk_tolerance` must use one of the enumerated values.
 - `goal_alignment` must be one of `aligned`, `partially_aligned`, `misaligned`.
 - `flagged_concerns` must be a list — include at least one concern if the

@@ -75,6 +75,12 @@ uv run harbor run -p application/tasks/web-portfoliovisualizer_backtest-allocati
   a reference submission and does not depend on scraping live metrics.
 - Live asset-class names follow the site's dropdown, e.g. `US Stock Market
   (VTSMX)`, `US Small Cap Value (VISVX)`, `Global ex-US Stock Market (VGTSX)`.
+- The instruction tells personas to build the allocation themselves via the
+  **Add Asset** control rather than only re-weighting the two default rows, and
+  makes clear they *may* add many asset classes or individual tickers/funds.
+  This is persona-driven, not enforced (the verifier floor stays at ≥2 classes
+  summing to 100), so how diversified each portfolio is becomes a real signal
+  that varies across the cohort instead of collapsing to a single 60/40 tweak.
 - Batch metrics — risk personalization (does the allocation match the stated
   risk tolerance and goal?) and risk-disclosure quality (did the persona flag
   optimistic CAGR extrapolation, short windows, or intolerable drawdowns?) —

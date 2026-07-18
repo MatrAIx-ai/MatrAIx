@@ -9,6 +9,14 @@ reviewers can see the aggregation → PDF pipeline without running the job.
   allocations (35/20/40/5 vs 60/20/15/5 equity/bond splits), read the results,
   and reached opposite `satisfied` verdicts; rendered from the job's
   `aggregation.json` after applying this task's `reporting.json` `contextRules`.
+- `cua-diversified-allocation-batch-report.pdf` — live CUA run
+  (`persona-computer-1`, persona 0042, Bedrock Claude Sonnet 4.5) after the
+  instruction was updated to prompt personas to build the allocation via
+  **Add Asset** rather than only re-weighting the defaults. The persona built a
+  **6-asset** portfolio (US + ex-US equity, bonds, REIT, gold, emerging markets),
+  read the live metrics, and returned `satisfied: false` with six flagged
+  concerns — demonstrating the richer, diversified submissions the change
+  unlocks. Reward 1.0.
 
 These are **sample artifacts, not part of the task contract** — safe to drop
 from the PR if the repo prefers not to track generated reports. Regenerate with:
