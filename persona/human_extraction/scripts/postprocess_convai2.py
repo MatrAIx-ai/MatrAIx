@@ -38,16 +38,12 @@ def build_record(uid, profile, order, allowed):
             field["description"] = (
                 "Mapped deterministically from an explicit persona sentence."
             )
-            field["provenance"] = "observed"
-        else:
-            field["provenance"] = "unobserved"
     return {
         "user_id": uid,
         "source": "convai2_personas",
         "model": None,
-        "extraction_method": "rule_based_crosswalk",
         "fields": fields,
-        "observed": json.dumps(observed, ensure_ascii=False, sort_keys=True),
+        "observed": observed,
     }
 
 
@@ -67,7 +63,6 @@ def write_parquet(path, profiles, order, allowed, batch_size=100):
             ("evidence", pa.string()),
             ("description", pa.string()),
             ("assignment_type", pa.string()),
-            ("provenance", pa.string()),
         ]
     )
     schema = pa.schema(
@@ -75,9 +70,8 @@ def write_parquet(path, profiles, order, allowed, batch_size=100):
             ("user_id", pa.string()),
             ("source", pa.string()),
             ("model", pa.string()),
-            ("extraction_method", pa.string()),
             ("fields", pa.list_(field_type)),
-            ("observed", pa.string()),
+            ("observed", pa.map_(pa.string(), pa.string())),
         ]
     )
     writer = pq.ParquetWriter(path, schema, compression="zstd")
@@ -112,7 +106,6 @@ def main():
         with opener(args.out, "wt", encoding="utf-8") as dst:
             for uid, profile in profiles.items():
                 record = build_record(uid, profile, order, allowed)
-                record["observed"] = json.loads(record["observed"])
                 dst.write(json.dumps(record, ensure_ascii=False) + "\n")
     print(f"wrote {len(profiles):,} personas ({len(order)} fields each) -> {args.out}")
 

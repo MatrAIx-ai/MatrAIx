@@ -49,8 +49,14 @@ python persona/human_extraction/scripts/postprocess_convai2.py \
 ```
 
 The output contains one JSON object per persona and a `fields` list with exactly
-1,290 ordered objects. Every field includes provenance: `observed` for exact
-crosswalk matches and `unobserved` for null dimensions.
+1,290 ordered objects. Exact crosswalk matches are also collected in the
+top-level `observed` object; all other dimensions remain null and unsupported.
+
+> **Coverage note:** this rule-only extraction is intentionally sparse. It maps
+> 0.262 dimensions per persona on average, and only 4,568 of 18,560 personas
+> (24.6%) receive any mapping. Treat it as a high-precision observed layer, not
+> a dense persona extraction. Rich ConvAI2 coverage requires the LLM extraction
+> layer on top of these deterministic assignments.
 
 ## Current extraction statistics
 
