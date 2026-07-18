@@ -568,6 +568,59 @@ def test_build_job_aggregation_promotes_choice_id_textual_to_categorical(tmp_pat
     assert counts == {"q0_pay_when_roi_clear": 3, "q0_wait_and_see": 1}
 
 
+def test_build_job_aggregation_promotes_subject_label_textual_to_categorical(
+    tmp_path: Path,
+) -> None:
+    """Discrete choice titles must exact-count, even when tagged textual/evidence."""
+    job_dir = tmp_path / "job-subject-labels"
+    labels = [
+        "Data Analysis for Social Scientists",
+        "Design of Electromechanical Robotic Systems",
+        "Kitchen Chemistry",
+        "Data Analysis for Social Scientists",
+        "Kitchen Chemistry",
+        "Introduction to Computer Science and Programming in Python",
+    ]
+    for index, label in enumerate(labels):
+        _write_trial(
+            job_dir,
+            f"trial-{index}",
+            {
+                "presenceCheck": {"passed": True},
+                "contexts": [
+                    {
+                        "key": "decision.primary",
+                        "label": "Decision",
+                        "contextType": "decision",
+                        "facets": [
+                            {
+                                "key": "decision_subject_label",
+                                "label": "Decision subject label",
+                                "role": "evidence",
+                                "kind": "textual",
+                                "value": label,
+                            }
+                        ],
+                    }
+                ],
+            },
+        )
+
+    aggregation = build_job_aggregation(job_dir, enable_llm=False)
+    assert aggregation is not None
+    facet = aggregation["contexts"][0]["facets"][0]
+    assert facet["kind"] == "categorical"
+    assert facet["presentCount"] == 6
+    counts = {row["value"]: row["count"] for row in facet["categorical"]["counts"]}
+    assert counts == {
+        "Data Analysis for Social Scientists": 2,
+        "Kitchen Chemistry": 2,
+        "Design of Electromechanical Robotic Systems": 1,
+        "Introduction to Computer Science and Programming in Python": 1,
+    }
+    assert "textual" not in facet or facet.get("textual") is None
+
+
 def test_aggregate_textual_clusters_near_duplicate_free_text(tmp_path: Path) -> None:
     job_dir = tmp_path / "job-free-text"
     answers = [

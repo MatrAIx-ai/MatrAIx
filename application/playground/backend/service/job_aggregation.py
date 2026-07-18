@@ -24,6 +24,14 @@ JUDGE_GROUP_BY_MODES = SUMMARY_GROUP_BY_MODES
 REPORTING_LLM_ENABLE_ENV = "PLAYGROUND_REPORTING_ENABLE_LLM"
 REPORTING_LLM_MODEL_ENV = "PLAYGROUND_REPORTING_LLM_MODEL"
 DEFAULT_REPORTING_LLM_MODEL = "openai/gpt-4o-mini"
+# Discrete selected-item titles (course/book/product names). Always exact-count;
+# never TF-IDF theme-cluster even when verifiers historically tagged them textual.
+DISCRETE_SUBJECT_LABEL_FACET_KEYS = frozenset(
+    {
+        "decision_subject_label",
+        "artifact_subject_label",
+    }
+)
 
 
 def _utc_now() -> str:
@@ -905,6 +913,16 @@ def _resolve_judge_directives(
     return resolved
 
 
+def _is_discrete_subject_label_facet(meta: dict[str, Any]) -> bool:
+    facet_key = str(meta.get("facetKey") or "").strip()
+    if not facet_key:
+        # Fall back for callers that only set the unqualified key.
+        facet_key = str(meta.get("key") or "").strip().rsplit(".", 1)[-1]
+    if facet_key in DISCRETE_SUBJECT_LABEL_FACET_KEYS:
+        return True
+    return facet_key.endswith("_subject_label")
+
+
 def _aggregate_field(
     *,
     meta: dict[str, Any],
@@ -914,15 +932,19 @@ def _aggregate_field(
     kind = str(meta.get("kind") or "").strip().lower()
     present_entries = [entry for entry in values if _has_value(entry.get("value"))]
     missing_count = max(artifact_ready_trials - len(present_entries), 0)
-    # Survey choice ids are often emitted as textual strings; recover a real distribution.
-    # Skip explanation/evidence roles — those are free-text even when short.
-    role = str(meta.get("role") or "").strip().lower()
-    if (
-        kind == "textual"
-        and role not in {"explanation", "evidence"}
-        and _entries_look_categorical(present_entries)
-    ):
+    # Catalog choice titles are discrete identities, not free-text themes.
+    if _is_discrete_subject_label_facet(meta):
         kind = "categorical"
+    else:
+        # Survey choice ids are often emitted as textual strings; recover a real distribution.
+        # Skip explanation/evidence roles — those are free-text even when short.
+        role = str(meta.get("role") or "").strip().lower()
+        if (
+            kind == "textual"
+            and role not in {"explanation", "evidence"}
+            and _entries_look_categorical(present_entries)
+        ):
+            kind = "categorical"
     payload = {
         **meta,
         "kind": kind,
