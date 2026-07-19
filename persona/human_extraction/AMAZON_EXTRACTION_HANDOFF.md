@@ -1,5 +1,10 @@
 # Amazon Persona Extraction — Handoff / Runbook
 
+> **Update (2026-07-15):** the extraction is now **38.2% complete (38,219 users)**; done
+> data is on HF `MatrAIx2026/MatrAIx2026` PR #53. For current status and the remaining
+> work (61,781 users), see **`docs/HANDOFF_continue_to_100k.md`**. The status below is the
+> older 2026-07-06 Slurm attempt (kept for the sharding mechanics).
+
 Goal: extract persona attributes for **100,000 Amazon reviewers** (one persona =
 one user, built from that user's full review history) using Qwen3.6-35B-A3B on
 vLLM. All code is on `main`. The run is **sharded (256 buckets), resumable, and
