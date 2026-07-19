@@ -180,6 +180,14 @@ def build_json_client(model: str, *, temperature: float = 0.7) -> Any:
             base_url=kwargs["base_url"],
             temperature=temperature,
         )
+    if value.startswith("deepseek/"):
+        kwargs = deepseek_openai_client_kwargs(value)
+        return OpenAIChatClient(
+            model=kwargs["model"],
+            api_key=kwargs["api_key"],
+            base_url=kwargs["base_url"],
+            temperature=temperature,
+        )
     if value.startswith("openai/"):
         return OpenAIChatClient(
             model=value.split("/", 1)[1],
