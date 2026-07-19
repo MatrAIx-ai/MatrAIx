@@ -51,6 +51,22 @@ uv run python application/tasks/game-starclash/scripts/run_arena.py \
   --out jobs/game-starclash-vision-smoke
 ```
 
+To run that same live vision brain **through a Docker batch job** (so it produces
+a Playground batch report, not just raw artifacts), use the checked-in recipe —
+the game hosts its own HUD locally inside the container, so no served URL or
+`network_mode` is required:
+
+```bash
+export MATRIX_STARCLASH_PLAYER_BRAIN=vision
+export MATRIX_STARCLASH_PLAYER_ID=0229          # a bare crew id from crew_manifest.yaml
+export ANTHROPIC_API_KEY=sk-ant-...             # or AWS_BEARER_TOKEN_BEDROCK + AWS_REGION
+uv run harbor run -c configs/jobs/example-job-recipe/appSim-game-starclash-vision-live.yaml
+```
+
+`solve.sh` honours `STARCLASH_PLAYER_BRAIN` (default `mock` — the no-API-key
+oracle), and `task.toml` `[solution.env]` forwards the model credentials into
+the container. Reward 1.0 with real `game_log.json` / `spectator.html`.
+
 `FileBridgeBrain` (`--brain bridge`) delegates every decision to an external process instead of calling an LLM API in-process: it writes each observation to `request_<n>.json` in `ARENA_BRIDGE_DIR` and blocks until a matching `response_<n>.json` appears (falling back to a safe default on timeout or an illegal response). This is how the game can be played by any external decision-maker — a human, a script, or a separate agent process with no `ANTHROPIC_API_KEY` of its own — without the engine needing to know or care what's on the other end:
 
 ```bash

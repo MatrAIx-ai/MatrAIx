@@ -17,14 +17,19 @@ python3 /app/scripts/stage_crew_personas.py --crew /app/input/crew_manifest.yaml
 # Player-vs-bots: run_arena.py reads STARCLASH_PLAYER_ID / STARCLASH_OPPONENT_BRAIN
 # from the environment (set via task.toml [solution.env]; the launch service
 # fills MATRIX_STARCLASH_PLAYER_ID with the sampled persona, else "auto" =
-# first crew persona). The sampled persona plays with --brain mock here (the
-# no-API-key oracle); the other seats are Bayesian bots. --player-id auto is
-# passed explicitly so this oracle is a full player-vs-bots game even when the
-# env var is unset.
+# first crew persona). The other seats are Bayesian bots. --player-id auto is
+# passed explicitly so this is a full player-vs-bots game even when the env var
+# is unset.
+#
+# Player brain: defaults to "mock" (the deterministic, no-API-key oracle). Set
+# STARCLASH_PLAYER_BRAIN=vision (with AWS_BEARER_TOKEN_BEDROCK + AWS_REGION, or
+# ANTHROPIC_API_KEY) to have the sampled persona play live via BrowserVisionBrain
+# — a real screenshot->click computer-use loop over the rendered HUD — so the
+# batch report reflects a genuine live run instead of the deterministic replay.
 python3 /app/scripts/run_arena.py \
   --map /app/input/ship_map.yaml \
   --crew /app/input/crew_manifest.yaml \
-  --brain mock \
+  --brain "${STARCLASH_PLAYER_BRAIN:-mock}" \
   --player-id "${STARCLASH_PLAYER_ID:-auto}" \
   --opponent-brain "${STARCLASH_OPPONENT_BRAIN:-bayesian}" \
   --seed 42 \

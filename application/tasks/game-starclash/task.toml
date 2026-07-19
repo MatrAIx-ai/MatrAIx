@@ -21,6 +21,16 @@ tags = ["multi-agent", "social-simulation", "rock-paper-scissors", "persona-reas
 [solution.env]
 STARCLASH_PLAYER_ID = "${MATRIX_STARCLASH_PLAYER_ID:-auto}"
 STARCLASH_OPPONENT_BRAIN = "${MATRIX_STARCLASH_OPPONENT_BRAIN:-bayesian}"
+# Player brain for the sampled seat: "mock" (default, deterministic no-API oracle)
+# or "vision" for a live BrowserVisionBrain run. Model credentials are forwarded
+# from the launch environment so a vision run authenticates inside the container:
+# ANTHROPIC_API_KEY for the direct Anthropic API, or an AWS Bedrock bearer token
+# + region on Bedrock-only hosts (run_arena.py prefers Bedrock when its token is
+# present, else falls back to the direct key).
+STARCLASH_PLAYER_BRAIN = "${MATRIX_STARCLASH_PLAYER_BRAIN:-mock}"
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+AWS_BEARER_TOKEN_BEDROCK = "${AWS_BEARER_TOKEN_BEDROCK:-}"
+AWS_REGION = "${AWS_REGION:-}"
 
 [verifier]
 timeout_sec = 300.0
