@@ -42,12 +42,12 @@ export function BenchPersonaCard({
 
   return (
     <div
-      className={`flex min-h-[10.5rem] w-full flex-col overflow-hidden rounded-xl border p-3 transition-all duration-200 ${
+      className={`flex min-h-[10.5rem] w-full flex-col overflow-hidden rounded-xl border border-transparent p-3 transition-all duration-200 ${
         selected
           ? "persona-card--selected"
           : disabled
-            ? "border-outline/45 bg-surface/30 opacity-80"
-            : "border-outline/45 bg-surface/40 hover:border-primary/30 hover:bg-surface/70"
+            ? "glass-tile glass-tile--dim opacity-80"
+            : "glass-tile glass-tile--hover"
       }`}
     >
       <div className="mb-2 flex items-start gap-2.5">

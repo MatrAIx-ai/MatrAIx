@@ -89,6 +89,11 @@ class MedicalHttpClient:
         payload, _cookie = self._request_json(method="GET", path="/health")
         return payload
 
+    def ready(self) -> Dict[str, Any]:
+        """Probe upstream capability readiness (not just process liveness)."""
+        payload, _cookie = self._request_json(method="GET", path="/ready")
+        return payload
+
     def chat(
         self, *, message: str, history: List[Dict[str, str]], cookie: Optional[str]
     ) -> tuple[Dict[str, Any], Optional[str]]:
@@ -252,11 +257,11 @@ class MedicalAssistantService:
         self._guard = threading.RLock()
 
     def ready(self) -> None:
-        payload = self.client.health()
-        status = str(payload.get("status", "ok")).lower()
+        payload = self.client.ready()
+        status = str(payload.get("status", "")).lower()
         if status not in {"ok", "healthy", "ready"}:
             raise RuntimeError(
-                "medical assistant health check returned status={!r}".format(status)
+                "medical assistant readiness check returned status={!r}".format(status)
             )
 
     def create_session(self, title: Optional[str] = None) -> MedicalSession:

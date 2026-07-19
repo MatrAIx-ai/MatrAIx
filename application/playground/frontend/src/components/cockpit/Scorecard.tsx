@@ -185,8 +185,8 @@ function CriterionRow({
 function ClarifyingLine({ asked, notes }: { asked: boolean; notes: string }) {
   return (
     <div
-      className={`flex items-start gap-2 rounded-md border px-3 py-2 ${
-        asked ? "border-secondary/40 bg-secondary/10" : "border-outline-dim bg-surface-low text-text-dim"
+      className={`flex items-start gap-2 rounded-md px-3 py-2 ${
+        asked ? "bg-secondary/10" : "glass-tile glass-tile--dim text-text-dim"
       }`}
     >
       <Sym

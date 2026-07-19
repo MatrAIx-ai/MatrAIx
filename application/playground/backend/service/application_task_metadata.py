@@ -96,13 +96,55 @@ def slug_from_harbor_task_name(task_name: str) -> str:
     return raw
 
 
+# ``[task].name`` slugs embed the application type (``survey-…``, ``chat-…``);
+# drop it from display titles since ``metadata.type`` already carries it.
+_TITLE_TYPE_PREFIXES = (
+    "computer-use-macos-",
+    "computer-use-ios-",
+    "computer-use-linux-",
+    "computer-use-",
+    "os-app-macos-",
+    "os-app-ios-",
+    "os-app-linux-",
+    "os-app-",
+    "survey-",
+    "chatbot-",
+    "chat-",
+    "web-",
+)
+
+# Known acronyms / product names that plain ``str.capitalize`` mangles.
+_TITLE_WORD_OVERRIDES = {
+    "ai": "AI",
+    "api": "API",
+    "mcp": "MCP",
+    "csv": "CSV",
+    "ios": "iOS",
+    "macos": "macOS",
+    "recai": "RecAI",
+    "openbb": "OpenBB",
+    "cfpb": "CFPB",
+    "fdic": "FDIC",
+    "cps": "CPS",
+    "cvs": "CVS",
+    "sppa": "SPPA",
+    "tus": "TUS",
+    "mu": "MU",
+    "vscode": "VSCode",
+}
+
+
 def title_from_harbor_task_name(task_name: str) -> str:
     """Derive UI title from ``[task].name`` (``application/<slug>``)."""
-    slug = slug_from_harbor_task_name(task_name)
-    words = [word for word in slug.replace("_", "-").split("-") if word]
+    slug = slug_from_harbor_task_name(task_name).replace("_", "-")
+    for prefix in _TITLE_TYPE_PREFIXES:
+        if slug.startswith(prefix) and len(slug) > len(prefix):
+            slug = slug[len(prefix) :]
+            break
+    words = [word for word in slug.split("-") if word]
     if not words:
         return ""
-    return " ".join(word.capitalize() for word in words)
+    return " ".join(_TITLE_WORD_OVERRIDES.get(word.lower(), word.capitalize()) for word in words)
 
 
 def infer_playground_entry(

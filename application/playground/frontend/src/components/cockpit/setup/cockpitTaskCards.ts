@@ -1,7 +1,77 @@
-import type { OsAppEvalTask, SurveyHarborTask, WebEvalTask } from "@/lib/types";
+import type { ChatbotEvalTask, OsAppEvalTask, SurveyHarborTask, WebEvalTask } from "@/lib/types";
 import { suggestedWebPersonaAgent, webPersonaAgentLabel } from "@/lib/personaAgentCatalog";
-import type { TaskCardModel } from "./TaskSelectionRail";
+import type { ChatTransport, TaskCardModel } from "./TaskSelectionRail";
 import { resolveTaskKind, taskCardTags, taskSearchTags, osChipLabel, osChipTone, type TaskCardTag } from "./taskCardLabels";
+
+function transportForChatTask(
+  task: Pick<ChatbotEvalTask, "transport" | "canStart">,
+): ChatTransport {
+  const transport = (task.transport || "").trim();
+  if (transport === "mcp") {
+    return task.canStart ? "mcp_sidecar" : "mcp_external";
+  }
+  if (transport === "external_http") return "api_external";
+  return "api_sidecar";
+}
+
+/** Map chatbot catalog rows into shared TaskCardModel cards (gallery + cockpit). */
+export function chatbotEvalTaskCards(
+  tasks: ChatbotEvalTask[],
+  opts?: { runningTaskIds?: ReadonlySet<string> },
+): TaskCardModel[] {
+  const runningTaskIds = opts?.runningTaskIds;
+  return tasks.map((task) => {
+    const transport = transportForChatTask(task);
+    const runningNow = Boolean(runningTaskIds?.has(task.id));
+    const available =
+      runningNow ? true : task.available === null || task.available === undefined ? null : task.available;
+    const statusTone: "secondary" | "danger" = available ? "secondary" : "danger";
+    const statusTags =
+      available === null
+        ? []
+        : [
+            {
+              label: available ? "Available" : "Unavailable",
+              tone: statusTone,
+            },
+          ];
+    return {
+      id: task.id,
+      title: task.title,
+      subtitle: task.description,
+      taskType: "chatbot" as const,
+      taskPath: task.taskPath,
+      transport,
+      available,
+      canStart: task.canStart ?? false,
+      statusLabel: available === null ? undefined : available ? "Available" : "Unavailable",
+      statusDetail: runningNow
+        ? "Sidecar started for this run."
+        : task.statusDetail ?? undefined,
+      capabilities: (task.capabilities ?? []).map((cap) => ({
+        id: cap.id,
+        label: cap.label,
+        kind: cap.kind,
+      })),
+      domain: task.domain,
+      difficulty: task.difficulty,
+      taskKind: task.taskKind,
+      profileMarkdown: task.profileMarkdown,
+      instructionMarkdown: task.instructionMarkdown,
+      tags: [
+        ...taskCardTags({
+          taskPath: task.taskPath,
+          taskKind: task.taskKind,
+          metaType: task.metaType,
+          domain: task.domain,
+          difficulty: task.difficulty,
+        }),
+        ...statusTags,
+      ],
+      searchTags: taskSearchTags(task.tags),
+    };
+  });
+}
 
 function availabilityRank(available?: boolean | null): number {
   if (available === true) return 0;

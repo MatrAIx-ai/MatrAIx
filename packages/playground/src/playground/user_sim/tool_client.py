@@ -192,6 +192,18 @@ def build_tool_step_client(
 
     value = (model or "openai/gpt-4o-mini").strip()
     if value.startswith("anthropic/"):
+        proxy_base = (
+            os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE") or ""
+        ).strip()
+        if proxy_base:
+            # Route Claude tool-calling through the proxy's OpenAI-compatible
+            # endpoint so it shares the global rate limiter. LiteLLM translates
+            # OpenAI tool schema <-> Anthropic tool_use.
+            return OpenAIToolStepClient(
+                value,
+                temperature=temperature,
+                capabilities=capabilities,
+            )
         return AnthropicToolStepClient(
             value.split("/", 1)[1],
             temperature=temperature,

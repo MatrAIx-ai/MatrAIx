@@ -32,11 +32,11 @@ import type { PlaygroundPersona } from "@/lib/types";
  * never invent a tone for a source we don't recognise.
  */
 const SOURCE_TONE: Record<string, string> = {
-  Nemotron: "text-secondary border-secondary/30 bg-secondary/10",
-  OASIS: "text-primary border-primary/30 bg-primary/10",
-  PersonaHub: "text-warn border-warn/30 bg-warn/10",
+  Nemotron: "text-secondary bg-secondary/10",
+  OASIS: "text-primary bg-primary/10",
+  PersonaHub: "text-warn bg-warn/10",
 };
-const NEUTRAL_TONE = "text-text-variant border-outline bg-surface-high";
+const NEUTRAL_TONE = "text-text-variant glass-tile";
 
 export interface PersonaCardProps {
   persona: PlaygroundPersona;
@@ -85,7 +85,7 @@ function PersonaCardInner({ persona, selected, onSelect }: PersonaCardProps) {
         {persona.source && (
           <span
             title={`Source dataset: ${persona.source}`}
-            className={`hud flex-none rounded border px-1.5 py-0.5 text-[11px] ${tone}`}
+            className={`hud flex-none rounded px-1.5 py-0.5 text-[11px] ${tone}`}
           >
             {persona.source}
           </span>

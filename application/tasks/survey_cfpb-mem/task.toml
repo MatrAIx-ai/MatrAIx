@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/survey-cfpb-mem"
+name = "application/cfpb-mem"
 
 [metadata]
 difficulty = "easy"

@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/os-app-macos-shortcuts-gallery-picks"
+name = "application/shortcuts-gallery-picks"
 
 [metadata]
 difficulty = "medium"

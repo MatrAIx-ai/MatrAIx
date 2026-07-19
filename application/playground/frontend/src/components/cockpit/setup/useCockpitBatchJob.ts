@@ -8,8 +8,11 @@ import type { HarborCockpitPhase } from "@/lib/useHarborCockpitRun";
 import type { HarborCockpitTaskKind } from "@/lib/harborCockpitMappers";
 import { useUrlState } from "@/lib/useUrlState";
 
-import { buildBatchGridCells } from "./BatchTrialGrid";
+import { useHarborBatchStatus } from "@/lib/useHarborBatchStatus";
+
+import { buildBatchCellsFromStatus, buildBatchGridCells } from "./BatchTrialGrid";
 import { readCockpitBatch, writeCockpitBatch } from "./cockpitBatchStorage";
+import { BATCH_MOSAIC_THRESHOLD } from "./useBatchGridLayout";
 import type { RunLaunchPhase } from "./RunLaunchBar";
 
 function initialBatchState(taskKind?: HarborCockpitTaskKind) {
@@ -34,7 +37,21 @@ export function useCockpitBatchJob(
   const [batchJobName, setBatchJobNameInternal] = useState<string | null>(initial.jobName);
   const [restoredPersonaIds, setRestoredPersonaIds] = useState<string[]>(initial.personaIds);
   const [restoredTaskId, setRestoredTaskId] = useState<string | null>(initial.taskId);
-  const batchLive = useHarborBatchLive(batchJobName);
+
+  // Freeze the cohort to the batch launch snapshot until the user resets.
+  const effectivePersonaIds = batchJobName
+    ? restoredPersonaIds.length > 0
+      ? restoredPersonaIds
+      : selectedPersonaIds
+    : selectedPersonaIds.length > 0
+      ? selectedPersonaIds
+      : restoredPersonaIds;
+
+  // Large cohorts drop the heavy per-trial live feed for a lightweight,
+  // incremental aggregate status feed that scales to tens of thousands.
+  const aggregate = effectivePersonaIds.length > BATCH_MOSAIC_THRESHOLD;
+  const batchLive = useHarborBatchLive(batchJobName, { enabled: !aggregate });
+  const statusFeed = useHarborBatchStatus(batchJobName, aggregate);
 
   const setBatchJobName = useCallback(
     (jobName: string | null, meta?: { taskId?: string }) => {
@@ -73,6 +90,8 @@ export function useCockpitBatchJob(
 
   const clearBatch = useCallback(() => setBatchJobName(null), [setBatchJobName]);
   const [cancelBusy, setCancelBusy] = useState(false);
+  const [retryBusy, setRetryBusy] = useState(false);
+  const [retryError, setRetryError] = useState<string | null>(null);
 
   const cancelBatch = useCallback(async () => {
     if (!batchJobName || cancelBusy) return;
@@ -85,14 +104,18 @@ export function useCockpitBatchJob(
     }
   }, [batchJobName, cancelBusy, clearBatch]);
 
-  // Freeze the cohort to the batch launch snapshot until the user resets.
-  const effectivePersonaIds = batchJobName
-    ? restoredPersonaIds.length > 0
-      ? restoredPersonaIds
-      : selectedPersonaIds
-    : selectedPersonaIds.length > 0
-      ? selectedPersonaIds
-      : restoredPersonaIds;
+  const retryFailed = useCallback(async () => {
+    if (!batchJobName || retryBusy) return;
+    setRetryBusy(true);
+    setRetryError(null);
+    try {
+      await api.retryHarborJobFailed(batchJobName);
+    } catch (exc) {
+      setRetryError(exc instanceof Error ? exc.message : String(exc));
+    } finally {
+      setRetryBusy(false);
+    }
+  }, [batchJobName, retryBusy]);
 
   const personaCardsQuery = useQuery({
     queryKey: ["batch-cohort-personas", effectivePersonaIds.join(",")],
@@ -113,26 +136,62 @@ export function useCockpitBatchJob(
     return map;
   }, [personaCardsQuery.data?.personas]);
 
+  const statusSnapshot = statusFeed.snapshot;
   const expectedTrialCount =
     effectivePersonaIds.length ||
+    statusSnapshot?.trialCount ||
     batchLive.live?.trialCount ||
     batchLive.live?.trials.length ||
     0;
-  const isBatchActive = Boolean(batchJobName && batchLive.isActive);
+
+  const completedTrials =
+    aggregate && statusSnapshot
+      ? statusSnapshot.counts.done + statusSnapshot.counts.error
+      : batchLive.live?.completedTrials ?? 0;
+
+  const failedTrials =
+    aggregate && statusSnapshot
+      ? statusSnapshot.counts.error
+      : (batchLive.live?.trials ?? []).filter(
+          (trial) => trial.completed && trial.error != null,
+        ).length;
+
+  const isBatchActive = Boolean(batchJobName)
+    ? aggregate
+      ? statusSnapshot == null ||
+        statusSnapshot.launchStatus === "running" ||
+        statusSnapshot.launchStatus === "queued" ||
+        completedTrials < expectedTrialCount
+      : batchLive.isActive
+    : false;
+
   const batchComplete =
     Boolean(batchJobName) &&
-    (batchLive.live?.completedTrials ?? 0) >= expectedTrialCount &&
+    completedTrials >= expectedTrialCount &&
     expectedTrialCount > 0;
 
-  const batchGridCells = useMemo(
-    () =>
-      buildBatchGridCells(effectivePersonaIds, batchLive.live?.trials, {
-        jobStarted: Boolean(batchJobName),
-        parallelTrials,
+  const batchGridCells = useMemo(() => {
+    if (aggregate && statusSnapshot) {
+      return buildBatchCellsFromStatus(statusSnapshot, {
+        expectedTotal: effectivePersonaIds.length,
+        personaIds: effectivePersonaIds,
         personaById,
-      }),
-    [effectivePersonaIds, batchLive.live?.trials, batchJobName, parallelTrials, personaById],
-  );
+      });
+    }
+    return buildBatchGridCells(effectivePersonaIds, batchLive.live?.trials, {
+      jobStarted: Boolean(batchJobName),
+      parallelTrials,
+      personaById,
+    });
+  }, [
+    aggregate,
+    statusSnapshot,
+    effectivePersonaIds,
+    batchLive.live?.trials,
+    batchJobName,
+    parallelTrials,
+    personaById,
+  ]);
 
   return {
     batchJobName,
@@ -143,11 +202,17 @@ export function useCockpitBatchJob(
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
+    completedTrials,
     expectedTrialCount,
     personaById,
+    batchError: aggregate ? statusFeed.error : batchLive.error,
   };
 }
 

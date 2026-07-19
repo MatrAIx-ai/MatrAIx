@@ -21,9 +21,19 @@ export interface CockpitSelectProps {
   disabled?: boolean;
   /** Fallback hint when the selected option has no summary. */
   hint?: string;
+  /** Render the label to the left of the field instead of above (denser). */
+  inlineLabel?: boolean;
 }
 
-export function CockpitSelect({ label, value, options, onChange, disabled, hint }: CockpitSelectProps) {
+export function CockpitSelect({
+  label,
+  value,
+  options,
+  onChange,
+  disabled,
+  hint,
+  inlineLabel = false,
+}: CockpitSelectProps) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -99,9 +109,18 @@ export function CockpitSelect({ label, value, options, onChange, disabled, hint 
   }, [options]);
 
   return (
-    <div ref={rootRef} className="flex flex-col gap-1.5">
-      <span className="text-[13px] font-medium text-text-dim normal-case tracking-normal">{label}</span>
-      <div className="relative">
+    <div
+      ref={rootRef}
+      className={inlineLabel ? "flex items-center gap-2" : "flex flex-col gap-1.5"}
+    >
+      <span
+        className={`text-[13px] font-medium text-text-dim normal-case tracking-normal ${
+          inlineLabel ? "shrink-0" : ""
+        }`}
+      >
+        {label}
+      </span>
+      <div className={inlineLabel ? "relative min-w-0 flex-1" : "relative"}>
         <button
           type="button"
           disabled={disabled}
@@ -110,7 +129,7 @@ export function CockpitSelect({ label, value, options, onChange, disabled, hint 
           aria-haspopup="listbox"
           aria-expanded={open}
           aria-label={`${label}: ${selected?.label ?? value}`}
-          className={`flex w-full items-center justify-between gap-2 rounded-lg border border-outline/50 bg-surface/60 px-2.5 py-2 text-left backdrop-blur transition ease-out hover:border-primary/40 hover:bg-surface/75 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING}`}
+          className={`glass-tile glass-tile--hover flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-left backdrop-blur transition ease-out active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55 disabled:active:scale-100 ${FOCUS_RING}`}
         >
           <span className="min-w-0 flex-1">
             <span className="block truncate text-[15px] font-medium text-text-main">

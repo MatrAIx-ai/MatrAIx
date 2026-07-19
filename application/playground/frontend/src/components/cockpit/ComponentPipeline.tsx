@@ -79,10 +79,10 @@ function scorerStatus(phase: PlaygroundRunPhase, jobPhase: string, hasQuestionna
 }
 
 const CHIP_TONE: Record<Tone, string> = {
-  active: "border-primary/30 bg-primary/10 text-primary",
-  done: "border-secondary/30 bg-secondary/10 text-secondary",
-  error: "border-danger/30 bg-danger/10 text-danger",
-  idle: "border-outline text-text-variant",
+  active: "bg-primary/10 text-primary",
+  done: "bg-secondary/10 text-secondary",
+  error: "bg-danger/10 text-danger",
+  idle: "glass-tile text-text-variant",
 };
 
 /** A live-run stage marker (done check / pulsing dot / error / hollow dot). */
@@ -132,7 +132,7 @@ export function ComponentPipeline({
               <span className="flex items-center gap-1.5">
                 <StateMarker tone={node.tone} />
                 <span className={node.tone === "idle" ? "text-text-variant" : "text-text-main"}>{node.label}</span>
-                <span className={`hud rounded border px-1.5 py-0.5 text-[11px] ${CHIP_TONE[node.tone]}`}>{node.status}</span>
+                <span className={`hud rounded px-1.5 py-0.5 text-[11px] ${CHIP_TONE[node.tone]}`}>{node.status}</span>
               </span>
               {i < nodes.length - 1 && <Sym name="chevron_right" size={14} className="text-text-dim" />}
             </div>

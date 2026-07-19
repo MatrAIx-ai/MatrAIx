@@ -43,15 +43,11 @@ function PipelineNode({ label, icon, detail, active = false, visible = true }: N
     <div
       className={`rise-in flex w-[118px] shrink-0 flex-col items-center rounded-2xl border px-3 py-4 text-center transition-all duration-500 sm:w-[132px] ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-      } ${
-        active
-          ? "border-primary/50 bg-primary/12 shadow-[0_0_32px_-6px_rgb(var(--primary)/0.65)]"
-          : "border-outline/40 bg-surface/35"
-      }`}
+      } ${active ? "glass-tile glass-tile--active" : "glass-tile"}`}
     >
       <div
-        className={`mb-2.5 grid h-12 w-12 place-items-center rounded-full border sm:h-[52px] sm:w-[52px] ${
-          active ? "border-primary/50 bg-primary/15" : "border-outline/50 bg-surface-high/50"
+        className={`mb-2.5 grid h-12 w-12 place-items-center rounded-full sm:h-[52px] sm:w-[52px] ${
+          active ? "bg-primary/15" : "bg-surface-high/60"
         }`}
       >
         <Sym name={icon} size={24} className={active ? "text-primary" : "text-text-variant"} />
@@ -74,18 +70,9 @@ function Arrow({ visible = true }: { visible?: boolean }) {
   );
 }
 
-function pathOptionInactiveClass(id: string, index: number): string {
-  if (id === "api_sidecar") return "border-primary/30 bg-surface/30";
-  if (id === "api_external") return "border-accent/30 bg-surface/30";
-  if (id === "mcp_sidecar") return "border-warn/30 bg-surface/30";
-  if (id === "mcp_external") return "border-secondary/30 bg-surface/30";
-  const classes = [
-    "border-primary/30 bg-surface/30",
-    "border-accent/30 bg-surface/30",
-    "border-secondary/30 bg-surface/30",
-    "border-warn/30 bg-surface/30",
-  ];
-  return classes[index % classes.length];
+/* All path options share the same neutral glass look when inactive. */
+function pathOptionInactiveClass(): string {
+  return "glass-tile glass-tile--dim";
 }
 
 type ForkSize = "narrow" | "default" | "dense";
@@ -120,13 +107,11 @@ function PathForkRow({
   option,
   active,
   visible,
-  index,
   forkSize = "default",
 }: {
   option: PipelinePathOption;
   active: boolean;
   visible: boolean;
-  index: number;
   forkSize?: ForkSize;
 }) {
   const dense = forkSize === "dense";
@@ -143,8 +128,8 @@ function PathForkRow({
           forkSize,
         )} ${
           active
-            ? "border-primary/50 bg-primary/12 shadow-[0_0_16px_-4px_rgb(var(--primary)/0.55)]"
-            : `${pathOptionInactiveClass(option.id, index)} opacity-50`
+            ? "glass-tile glass-tile--active"
+            : `${pathOptionInactiveClass()} opacity-60`
         }`}
       >
         <Sym
@@ -202,13 +187,12 @@ function PipelinePathFork({
       {caption && (
         <p className="hud mb-1 text-center text-[11px] tracking-wide text-text-dim sm:text-[12px]">{caption}</p>
       )}
-      {options.map((option, index) => (
+      {options.map((option) => (
         <PathForkRow
           key={option.id}
           option={option}
           active={option.id === selected}
           visible={visible}
-          index={index}
           forkSize={forkSize}
         />
       ))}
@@ -438,7 +422,7 @@ export function CockpitPipelineDiagram({
     <div
       className={`glass-panel flex w-full flex-1 min-h-0 flex-col rounded-xl px-4 py-4 sm:px-6 sm:py-5 ${className ?? ""}`}
     >
-      <p className="shrink-0 text-center font-display text-[16px] font-semibold tracking-wide text-primary sm:text-[18px]">
+      <p className="shrink-0 text-center font-display text-[16px] font-semibold tracking-wide text-text-main sm:text-[18px]">
         Simulation pipeline
       </p>
 

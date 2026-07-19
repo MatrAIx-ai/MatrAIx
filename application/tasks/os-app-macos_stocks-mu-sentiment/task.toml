@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/os-app-macos-stocks-mu-sentiment"
+name = "application/stocks-mu-sentiment"
 
 [metadata]
 difficulty = "medium"

@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/survey-tus-cps"
+name = "application/tus-cps"
 
 [metadata]
 difficulty = "easy"
