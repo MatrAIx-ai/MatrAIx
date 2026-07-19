@@ -5,6 +5,8 @@ import random
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
 
+from .hand_strength import classify_preflop
+
 
 class PersonaActionPolicy(ABC):
     """Abstract base class mapping persona dimensions to poker actions and verifier fields."""
@@ -43,7 +45,12 @@ class ComposedPolicy(PersonaActionPolicy):
 
 
 class RiskPolicy(PersonaActionPolicy):
-    """Maps risk_tolerance dimension to poker aggressiveness & risk_posture."""
+    """Maps risk_tolerance dimension to poker aggressiveness & risk_posture.
+
+    Preflop decisions use Sklansky hand-tier thresholding to produce
+    biologically plausible folding behavior. Post-flop decisions continue
+    to use the bet-position heuristic.
+    """
 
     _RISK_POSTURE_MAP = {
         "Low": "risk_averse",
@@ -51,17 +58,48 @@ class RiskPolicy(PersonaActionPolicy):
         "High": "risk_seeking",
     }
 
+    # NOTE FOR REVIEW: Fold thresholds calibrated conservatively.
+    # Each (risk_tolerance, tier) pair specifies the probability of folding
+    # when facing a bet preflop. These are tunable — Kate's poker expertise
+    # should validate the realism of these thresholds for evaluation purposes.
+    _FOLD_PREFLOP: dict[str, dict[int, float]] = {
+        "Low":      {1: 0.00, 2: 0.00, 3: 0.05, 4: 0.15, 5: 0.30, 6: 0.50, 7: 0.70, 8: 0.85},
+        "Moderate": {1: 0.00, 2: 0.00, 3: 0.02, 4: 0.08, 5: 0.15, 6: 0.30, 7: 0.50, 8: 0.65},
+        "High":     {1: 0.00, 2: 0.00, 3: 0.00, 4: 0.02, 5: 0.05, 6: 0.10, 7: 0.20, 8: 0.35},
+    }
+
     def decide(self, state: Any, dims: Dict[str, str], rng: random.Random) -> Optional[str]:
         rt = dims.get("risk_tolerance", "Moderate")
         player_behind = state.player_bet < state.bot_bet
 
+        # === PREFLOP: hand-strength-aware decision ===
+        # NOTE FOR REVIEW: Post-flop decisions continue to use the bet-position
+        # heuristic (see below). Full board-aware equity evaluation (using treys)
+        # is scoped as a follow-up and NOT implemented in this PR.
+        if getattr(state, "street", "") == "preflop":
+            if player_behind:
+                tier = classify_preflop(state.hole_cards)
+                fold_pct = self._FOLD_PREFLOP.get(rt, {}).get(tier, 0.65)
+                if rng.random() < fold_pct:
+                    return "fold"
+                if rt == "High":
+                    return "raise" if rng.random() < 0.5 else "call"
+                if rt == "Low":
+                    return "call"
+                return "call" if rng.random() < 0.7 else "raise"
+            else:
+                if rt == "High":
+                    return "raise" if rng.random() < 0.4 else "check"
+                return "check"
+
+        # === POSTFLOP: existing bet-position heuristic (UNCHANGED) ===
+        # NOTE: Post-flop hand evaluation using board-aware equity
+        # is a known limitation. See PR description for details.
         if rt == "Low":
-            # Risk-averse: fold to raises easily, prefer check/call
             if player_behind:
                 return "fold" if rng.random() < 0.6 else "call"
             return "check"
         elif rt == "High":
-            # Risk-seeking: raise aggressively, call down
             if player_behind:
                 return "raise" if rng.random() < 0.5 else "call"
             return "raise" if rng.random() < 0.4 else "check"
