@@ -342,7 +342,7 @@ def test_emit_structured_output():
                 "facets": [
                     # Shared web task_outcome facets (keep keys exactly as the spec names them).
                     {"key": "outcome_status", "label": "Outcome status", "role": "primary", "kind": "categorical", "value": outcome_status},
-                    {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "value": f"{display_name} ({dominant_trait}) finished with {final_stars} star(s), status {outcome_status}; run ended on {termination_reason}."},
+                    {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "explainsFacetKey": "outcome_status", "value": f"{display_name} ({dominant_trait}) finished with {final_stars} star(s), status {outcome_status}; run ended on {termination_reason}."},
                     # Task-specific facets behind the task_ prefix (task-spec/web contributor extension rule).
                     {"key": "task_dominant_trait", "label": "Dominant trait", "role": "primary", "kind": "categorical", "value": dominant_trait},
                     {"key": "task_final_stars", "label": "Final stars", "role": "score", "kind": "numerical", "value": final_stars},
@@ -358,7 +358,7 @@ def test_emit_structured_output():
                 "facets": [
                     {"key": "task_dominant_trait", "label": "Dominant trait", "role": "primary", "kind": "categorical", "value": dominant_trait},
                     {"key": "task_reasoning_event_count", "label": "Reasoning events", "role": "score", "kind": "numerical", "value": len(reasoning_events)},
-                    {"key": "task_reasoning_text", "label": "Reasoning trajectory", "role": "explanation", "kind": "textual", "value": reasoning_text},
+                    {"key": "task_reasoning_text", "label": "Reasoning trajectory", "role": "explanation", "kind": "textual", "explainsFacetKey": "task_dominant_trait", "value": reasoning_text},
                 ],
             }
         )
