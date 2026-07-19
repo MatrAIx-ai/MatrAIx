@@ -4,13 +4,15 @@ Read the scenario brief in `input/context.md`. Use the live Notion pricing page
 to select the **one standard workspace plan** that you would most realistically
 choose for the personal or work context represented in your persona.
 
-Activate **Pay monthly** before reading prices. Do not treat the mere presence
-of the “Pay monthly” label as evidence that monthly billing is selected: the
-page can display that label while showing annual-billing rates. Click the
-monthly control and verify its selected state or that the rendered plan-card
-prices update before recording them. If a text-label click fails, locate and
-use its interactive parent or associated control rather than assuming the
-state is already correct.
+Immediately after the pricing page loads, **click or otherwise activate Pay
+monthly at least once**, even if it appears to be selected or the prices
+already say “per month.” Do not treat the mere presence of the “Pay monthly”
+label as evidence that monthly billing is selected: the page can display that
+label while showing annual-billing rates. After activating the control, verify
+its selected state or that the rendered plan-card prices update before
+recording them. If a text-label click fails, locate and use its interactive
+parent or associated control rather than assuming the state is already
+correct.
 
 Inspect the summaries for all four plans—Free, Plus, Business, and
 Enterprise—and examine relevant parts of the visible feature comparison before
