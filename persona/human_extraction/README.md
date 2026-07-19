@@ -7,6 +7,14 @@ in contrast to `synthesis/`, which generates synthetic personas.
 > CUDA/driver gotchas, and the exact commands needed to reproduce the setup on a
 > fresh GPU node.
 
+## Where the 1290-dim outputs are collected
+
+Full extraction outputs (personas in the 1,290-dimension schema) are collected in the HF dataset
+repo **`MatrAIx2026/MatrAIx-1290-extractions`** — one folder per dataset, each with an
+`extraction_v1/` shard + `manifest.json`. See that repo's `CONTRIBUTING.md` for the folder/record
+layout and the required `validate_extraction.py` check before pushing. This repo holds the
+**scripts + a small sample**; full outputs are not committed here.
+
 ## What's here
 
 Layout (reorganized into folders):

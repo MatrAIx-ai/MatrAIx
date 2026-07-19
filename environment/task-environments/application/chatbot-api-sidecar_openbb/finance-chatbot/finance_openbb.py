@@ -476,6 +476,34 @@ class FinanceOpenBBApplication:
             raise HTTPException(status_code=422, detail="unknown applicationContext")
         if not os.environ.get("OPENAI_API_KEY"):
             raise RuntimeError("OPENAI_API_KEY is required for finance chatbot turns")
+        try:
+            from agents import Agent, Runner  # noqa: F401
+            from agents.mcp import MCPServerStreamableHttp  # noqa: F401
+        except ImportError as exc:
+            raise RuntimeError(
+                "Finance application runtime is not installed. Install "
+                "openai-agents in the chatbot sidecar image."
+            ) from exc
+        config = self.service.config
+        mcp_url = config.openbb_mcp_url
+        try:
+            import socket
+            from urllib.parse import urlparse
+
+            parsed = urlparse(mcp_url)
+            host = parsed.hostname
+            if not host:
+                raise RuntimeError("OPENBB_MCP_URL is missing a host")
+            port = parsed.port or (443 if parsed.scheme == "https" else 80)
+            with socket.create_connection(
+                (host, port),
+                timeout=min(5.0, config.mcp_timeout_seconds),
+            ):
+                pass
+        except Exception as exc:  # noqa: BLE001
+            raise RuntimeError(
+                "OpenBB MCP is not ready at {}: {}".format(mcp_url, exc)
+            ) from exc
 
     def create_session(
         self,

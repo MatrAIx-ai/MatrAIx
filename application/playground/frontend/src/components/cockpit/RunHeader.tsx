@@ -18,19 +18,25 @@ const SUBTITLES: Record<PlaygroundTaskType, string> = {
   "os-app": "Pick personas and an OS app task, then launch. Native apps on Linux, macOS, or iOS.",
 };
 
-const SUBTITLE_CLASS =
-  "mt-1 text-[14px] leading-relaxed text-text-variant sm:whitespace-nowrap sm:text-[15px]";
-
+/** Dense one-line header: title · subtitle inline · app-type switch right. */
 export function RunHeader({ taskType, onTaskTypeChange }: RunHeaderProps) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <div className="min-w-0 flex-1 pr-2 sm:pr-4">
-        <h1 className="font-display text-[20px] font-bold leading-tight tracking-tight text-text-main sm:text-[22px]">
-          Configure a simulation
-        </h1>
-        <p className={SUBTITLE_CLASS}>{SUBTITLES[taskType]}</p>
-      </div>
-      <TaskTypeSwitch value={taskType} onChange={onTaskTypeChange} className="shrink-0" />
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+      <h1 className="shrink-0 font-display text-[18px] font-bold leading-tight tracking-tight text-text-main">
+        Configure a simulation
+      </h1>
+      <p
+        className="min-w-0 flex-1 basis-64 truncate text-[13.5px] leading-snug text-text-variant"
+        title={SUBTITLES[taskType]}
+      >
+        {SUBTITLES[taskType]}
+      </p>
+      <TaskTypeSwitch
+        value={taskType}
+        onChange={onTaskTypeChange}
+        showLabel={false}
+        className="ml-auto shrink-0"
+      />
     </div>
   );
 }

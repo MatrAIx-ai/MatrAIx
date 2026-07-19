@@ -111,6 +111,21 @@ questionnaire contract.
 
 ## Reporting Policy
 
+### PR batch evidence (required)
+
+For multi-persona validation on a new or substantially changed task, attach the
+**Playground UI** batch PDF in the PR:
+
+1. Open the completed job in Playground **Runs**.
+2. On the persona-task batch report card, click **Download PDF**.
+3. Upload that file to the PR (filename typically ends in
+   `persona-task-batch-report.pdf`).
+
+That UI export is the reviewer-facing artifact. Do **not** attach the server
+text report from `GET /api/harbor/jobs/<job>/report.pdf` (or an equivalent
+FPDF/script export) as a substitute — layout and content differ from the UI
+report.
+
 Each task folder should include a `reporting.json` file, even if it currently
 contains only:
 
@@ -169,7 +184,7 @@ shape below is an **opt-in** Layer 2 example when `askRationale` is true:
       "match": {
         "contextType": "question_response"
       },
-      "summaryDirectives": [
+      "summaryAnalyses": [
         {
           "id": "question.reason_by_response",
           "targetFacetKey": "reason",
@@ -178,7 +193,7 @@ shape below is an **opt-in** Layer 2 example when `askRationale` is true:
           "summaryKind": "llm_bucket_summary"
         }
       ],
-      "judgeDirectives": [
+      "signalScans": [
         {
           "id": "question.reason_signal_scan",
           "targetFacetKey": "reason",

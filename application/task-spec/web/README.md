@@ -154,7 +154,7 @@ diagnostics include:
 |---|---|---|---|
 | `artifact_type` | `primary` | `categorical` | What result was produced |
 | `artifact_status` | `primary` | `categorical` | Shared correctness bucket |
-| `artifact_subject_label` | `evidence` | `textual` | Human-readable selected/submitted item |
+| `artifact_subject_label` | `evidence` | `categorical` | Human-readable selected/submitted item (exact-count identity) |
 | `artifact_subject_id` | `evidence` | `categorical` | Stable id when available |
 | `artifact_evidence` | `explanation` | `textual` | Concrete correctness rationale |
 
@@ -220,8 +220,8 @@ Keep using the platform's existing artifact shape:
 
 - verifier writes `verifier/structured_output.json`
 - task root defines `reporting.json`
-- both continue to use `contexts[]`, `facets[]`, `summaryDirectives[]`, and
-  `judgeDirectives[]`
+- both continue to use `contexts[]`, `facets[]`, `summaryAnalyses[]`, and
+  `signalScans[]`
 
 This contract adds **standard context types, facet keys, and small shared
 enumerations** so contributors can extend task-specific details without
@@ -264,7 +264,7 @@ The `decision` context should contain these standard facets:
 | `decision_outcome` | `primary` | `categorical` | Yes | Standard result bucket |
 | `basis_primary` | `primary` | `categorical` | Yes | Main reason axis |
 | `reason` | `explanation` | `textual` | Yes | Persona's free-text explanation |
-| `decision_subject_label` | `evidence` | `textual` | Yes | Human-readable choice label |
+| `decision_subject_label` | `evidence` | `categorical` | Yes | Human-readable choice label (exact-count identity, not free-text) |
 | `decision_subject_id` | `evidence` | `categorical` | Prefer | Stable id when available |
 
 Recommended extra facets:

@@ -86,7 +86,7 @@ function TaskStrategySummary({ strategy }: { strategy: TaskPersonaStrategy }) {
   const hasDetails = sources.length > 0 || dimEntries.length > 0 || stratify.length > 0;
 
   return (
-    <div className="border-t border-primary/15 pt-1.5">
+    <div className="border-t border-outline/35 pt-1.5">
       <button
         type="button"
         aria-expanded={expanded}
@@ -376,6 +376,7 @@ export function PersonaSamplingRail({
           {showModelSelector && (
             <CockpitSelect
               label="Model"
+              inlineLabel
               value={personaModel}
               options={personaModelOptions}
               disabled={disabled}
@@ -386,7 +387,7 @@ export function PersonaSamplingRail({
 
         {hasTaskStrategy && taskPersonaStrategy ? (
           <div
-            className="mb-2 rounded-lg border border-primary/20 bg-primary/5 px-2.5 py-1.5"
+            className="glass-tile mb-2 rounded-lg px-2.5 py-1.5"
             title={
               useTaskDefaultStrategy
                 ? "Filters follow persona_strategy.json"
@@ -394,7 +395,7 @@ export function PersonaSamplingRail({
             }
           >
             <CockpitToggle
-              label="Task default strategy"
+              label="Task default persona strategy"
               checked={useTaskDefaultStrategy}
               disabled={disabled}
               onChange={(checked) => onUseTaskDefaultStrategyChange?.(checked)}
@@ -423,7 +424,7 @@ export function PersonaSamplingRail({
         </div>
 
         {disabled && selectedPersonaIds.length > 0 ? (
-          <p className="mb-2 rounded-lg border border-primary/25 bg-primary/10 px-2.5 py-1.5 text-[12px] leading-snug text-text-variant">
+          <p className="glass-tile mb-2 rounded-lg px-2.5 py-1.5 text-[12px] leading-snug text-text-variant">
             Cohort locked for this run — use Reset to change personas or sample settings.
           </p>
         ) : null}
@@ -435,7 +436,7 @@ export function PersonaSamplingRail({
                 type="button"
                 disabled={disabled}
                 onClick={() => setFilterOpen(true)}
-                className={`flex w-full items-center gap-2 rounded-lg border border-outline/40 bg-surface/40 px-2.5 py-2 text-left transition hover:border-primary/35 hover:bg-surface/55 ${FOCUS_RING}`}
+                className={`glass-tile glass-tile--hover flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left transition ${FOCUS_RING}`}
               >
                 <Sym name="tune" size={16} className="shrink-0 text-primary" />
                 <span className="min-w-0 flex-1 text-[13px] font-medium text-text-main">

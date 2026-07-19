@@ -59,10 +59,10 @@ function ItemListField({ field }: { field: StructuredExposureField }) {
           return (
             <div
               key={`${item.itemId}-${item.rank}`}
-              className="relative rounded border border-outline bg-surface-low p-3 transition-colors hover:border-primary/60"
+              className="glass-tile relative rounded p-3"
             >
               {isFirst && (
-                <div className="hud absolute right-0 top-0 rounded-bl border-b border-l border-secondary/25 bg-secondary/10 px-1 py-0.5 text-[10px] text-secondary">
+                <div className="hud absolute right-0 top-0 rounded-bl bg-secondary/15 px-1 py-0.5 text-[10px] text-secondary">
                   Top
                 </div>
               )}

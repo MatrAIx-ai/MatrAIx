@@ -89,7 +89,12 @@ def ready(
             detail="applicationId must be {}".format(MEDICAL_APPLICATION_ID),
         )
     context = _context(application_context)
-    _application.ready(context)
+    try:
+        _application.ready(context)
+    except HTTPException:
+        raise
+    except Exception as exc:  # noqa: BLE001 - readiness should surface root cause.
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
     return {
         "status": "ready",
         "applicationId": MEDICAL_APPLICATION_ID,

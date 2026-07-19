@@ -343,6 +343,11 @@ Use this when a step above is not enough — not as a flat reading list.
 - [ ] If strategy filters are narrower than `bench-dev-sample` coverage, prefer `generate_dev_personas.py --strategy …` first (Playground auto top-up is a fallback; synthetic pools exist because the production persona dataset is not ready yet — use them to validate task design + persona reporting, see [authoring-bundle.md](authoring-bundle.md#ensuring-pool-coverage))
 - [ ] Interactive tasks: `self_report_schema.yaml` → `user_feedback` context when used
 - [ ] Smoke run passes on at least one persona before batch scale-up
+- [ ] Multi-persona batch validation: attach the **Playground UI** batch PDF
+      (Runs → job → **Download PDF** on the persona-task batch report). That
+      client-facing export is the required PR artifact. Do **not** substitute
+      the server text report from `GET …/report.pdf` or a hand-built PDF — those
+      do not match the UI report reviewers expect.
 
 ---
 

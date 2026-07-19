@@ -111,4 +111,28 @@ def test_sidecar_status_uses_tcp_probe_for_mcp(monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.setattr(svc, "sidecar_port_reachable", lambda _host, _port, timeout=1.5: True)
     status = svc.sidecar_status("acme_support_mcp")
     assert status["ok"] is True
-    assert "MCP server reachable" in status["detail"]
+    assert "MCP server ready" in status["detail"]
+
+
+def test_sidecar_reachable_probes_ready_endpoint(monkeypatch: pytest.MonkeyPatch) -> None:
+    seen: dict[str, str] = {}
+
+    class _Resp:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):  # noqa: ANN001
+            return False
+
+        def getcode(self):
+            return 200
+
+    def fake_urlopen(request, timeout=0):  # noqa: ANN001
+        seen["url"] = request.full_url
+        return _Resp()
+
+    monkeypatch.setattr(svc.urllib.request, "urlopen", fake_urlopen)
+    assert svc.sidecar_reachable("http://127.0.0.1:8902") is True
+    assert seen["url"] == "http://127.0.0.1:8902/ready"

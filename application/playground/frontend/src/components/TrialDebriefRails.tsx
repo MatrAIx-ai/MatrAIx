@@ -75,7 +75,7 @@ function DebriefRail({
             <span className="truncate font-display text-[15px] font-semibold text-text-main">{subtitle}</span>
           ) : null}
           {badge ? (
-            <span className="hud flex-none rounded border border-outline/50 bg-surface/50 px-1.5 py-0.5 text-[11px] text-text-dim">
+            <span className="hud flex-none rounded glass-tile px-1.5 py-0.5 text-[11px] text-text-dim">
               {badge}
             </span>
           ) : null}

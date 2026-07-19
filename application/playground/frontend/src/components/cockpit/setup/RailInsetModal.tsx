@@ -19,7 +19,7 @@ export function RailInsetModal({ open, title, subtitle, onClose, children }: Rai
       role="dialog"
       aria-modal="true"
       aria-label={title}
-      className="absolute inset-0 z-30 flex flex-col overflow-hidden border border-outline/60 bg-surface-lowest shadow-[0_0_0_1px_rgb(var(--outline)/0.35)]"
+      className="absolute inset-0 z-30 flex flex-col overflow-hidden border border-outline/30 bg-surface-lowest shadow-[0_18px_48px_-24px_rgb(0_0_0/0.5)]"
     >
       <div className="flex shrink-0 items-start justify-between gap-3 border-b border-outline bg-surface-low px-4 py-3">
         <div className="min-w-0 flex-1">

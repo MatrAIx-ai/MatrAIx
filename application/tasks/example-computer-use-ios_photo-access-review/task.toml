@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/computer-use-ios-photo-access-review"
+name = "application/photo-access-review"
 
 [metadata]
 difficulty = "easy"

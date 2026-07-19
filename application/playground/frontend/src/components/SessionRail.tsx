@@ -111,7 +111,7 @@ export function SessionRail({
         </div>
 
         {error ? (
-          <div className="rounded-md border border-warn/30 bg-warn/10 p-3">
+          <div className="rounded-md bg-warn/10 p-3">
             <div className="flex items-start gap-2">
               <Sym name="error" fill={1} size={16} className="mt-px flex-none text-warn" />
               <div className="min-w-0">
@@ -123,7 +123,7 @@ export function SessionRail({
               <button
                 type="button"
                 onClick={onRetry}
-                className={`mt-2.5 inline-flex items-center gap-1.5 rounded-md border border-warn/40 bg-warn/10 px-3 py-1.5 text-[13px] font-medium text-warn transition hover:bg-warn/20 active:scale-[0.98] ${FOCUS_RING}`}
+                className={`mt-2.5 inline-flex items-center gap-1.5 rounded-md bg-warn/10 px-3 py-1.5 text-[13px] font-medium text-warn transition hover:bg-warn/20 active:scale-[0.98] ${FOCUS_RING}`}
               >
                 <Sym name="refresh" size={14} />
                 Recheck
