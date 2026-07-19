@@ -39,6 +39,20 @@ def dashscope_openai_client_kwargs(model: str) -> Dict[str, str]:
     }
 
 
+_DEEPSEEK_MODEL_MAP = {
+    "deepseek-chat": "deepseek-v4-pro",
+    "deepseek-reasoner": "deepseek-v4-pro",
+    "deepseek-v4-flash": "deepseek-v4-flash",
+    "deepseek-v4-pro": "deepseek-v4-pro",
+}
+
+
+def deepseek_model_id(model: str) -> str:
+    """Return the DeepSeek API model name from a Harbor persona model string."""
+    bare = dashscope_model_id(model)
+    return _DEEPSEEK_MODEL_MAP.get(bare, bare)
+
+
 def deepseek_openai_client_kwargs(model: str) -> Dict[str, str]:
     """OpenAI SDK kwargs for DeepSeek chat."""
     api_key = (os.environ.get("DEEPSEEK_API_KEY") or "").strip()
@@ -52,7 +66,7 @@ def deepseek_openai_client_kwargs(model: str) -> Dict[str, str]:
         or DEEPSEEK_DEFAULT_BASE_URL
     ).strip()
     return {
-        "model": dashscope_model_id(model),
+        "model": deepseek_model_id(model),
         "api_key": api_key,
         "base_url": base_url,
     }
