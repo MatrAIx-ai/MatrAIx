@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import sys
 from server import create_session, post_message, get_conversation
 
@@ -43,8 +42,8 @@ def main() -> int:
 
     # Test diet detection
     sid2 = create_session()["sessionId"]
-    m6 = post_message(sid2, "I am vegan and want to build muscle.")
-    m7 = post_message(sid2, "No allergies, I work out 5x a week.")
+    _m6 = post_message(sid2, "I am vegan and want to build muscle.")
+    _m7 = post_message(sid2, "No allergies, I work out 5x a week.")
     m8 = post_message(sid2, "I am 28, 65kg, active.")
     has_vegan_plan = "tofu" in m8["reply"].lower() or "lentils" in m8["reply"].lower()
     print(f"Vegan meal plan detected: {has_vegan_plan}")
