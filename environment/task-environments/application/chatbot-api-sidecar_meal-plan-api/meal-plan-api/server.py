@@ -51,7 +51,7 @@ def _tokenize(text: str) -> set[str]:
 
 
 def _detect_dietary_preference(text: str) -> str | None:
-    tokens = _tokenize(text)
+    _tokens = _tokenize(text)
     diet_keywords: dict[str, list[str]] = {
         "vegan": ["vegan", "plant-based", "no animal"],
         "vegetarian": ["vegetarian", "lacto-ovo", "no meat"],
@@ -221,7 +221,7 @@ def _session(session_id: str | None, domain: str = "meal_planning") -> dict[str,
 
 def _generate_reply(session: dict[str, Any], message: str) -> str:
     lowered = message.lower()
-    tokens = _tokenize(message)
+    _tokens = _tokenize(message)
 
     unsafe_cal = _is_unsafe_calorie_request(message)
     if unsafe_cal:
@@ -377,7 +377,7 @@ def get_conversation(session_id: str) -> dict[str, Any]:
 
 
 def get_recommendations(session_id: str) -> dict[str, Any]:
-    session = _session(session_id)
+    _session(session_id)
     return {"recommendedItems": [], "total": 0}
 
 
