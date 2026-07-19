@@ -430,6 +430,7 @@ def test_output_schema() -> None:
             "label": "Reason",
             "role": "explanation",
             "kind": "textual",
+            "explainsFacetKey": "decision_subject_label",
             "value": reason,
         },
         {
@@ -504,6 +505,7 @@ def test_output_schema() -> None:
                         "label": "Comparison notes",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "exploration_style",
                         "value": (
                             "The persona compared the four Network & CDN plan "
                             "summaries and recorded one recommendation."
@@ -529,6 +531,7 @@ def test_output_schema() -> None:
                 "label": "Feedback reason",
                 "role": "explanation",
                 "kind": "textual",
+                "explainsFacetKey": "overall_experience_rating",
                 "value": feedback["feedback_reason"],
             },
             {
