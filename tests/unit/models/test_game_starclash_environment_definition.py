@@ -4,7 +4,7 @@ from pathlib import Path
 repo_root = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(repo_root / "environment" / "runtime"))
 
-from harbor.models.task.paths import TaskPaths
+from harbor.models.task.paths import TaskPaths  # noqa: E402
 
 
 def test_game_starclash_task_resolves_external_environment_definition() -> None:

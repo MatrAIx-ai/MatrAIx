@@ -1690,7 +1690,6 @@ def _challenge_modal_html(observation: Dict[str, Any], sprite_uri: Optional[str]
         return ""
     challenger = observation.get("pending_challenge_from") or {}
     name = challenger.get("display_name") or challenger.get("id") or "someone"
-    challenger_id = str(challenger.get("id") or "")
 
     # Resolve a friendly name for the optional private note target.
     name_by_id = {
@@ -3342,7 +3341,6 @@ def render_spectator_html(
     """
     room_name = game_log.get("room_name", "Main Chat Room")
     seed = game_log.get("seed")
-    max_ticks = game_log.get("max_ticks")
     termination_reason = game_log.get("termination_reason")
     personas: List[Dict[str, Any]] = game_log.get("personas", []) or []
     events: List[Dict[str, Any]] = game_log.get("events", []) or []

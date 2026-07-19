@@ -7,7 +7,7 @@ import yaml
 repo_root = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(repo_root / "environment" / "runtime"))
 
-from harbor.utils.crew_personas import (
+from harbor.utils.crew_personas import (  # noqa: E402
     container_path_for_persona,
     find_crew_manifest,
     persona_paths_from_manifest,

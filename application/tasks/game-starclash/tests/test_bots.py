@@ -270,7 +270,6 @@ def test_router_assigns_one_player_and_rest_bots():
     player_id = "0001"
     seed = 42
 
-    real_brain = brains.MockArenaBrain(seed=seed)
     bot_brains = {}
     for offset, pid in enumerate(persona_order):
         if pid == player_id:

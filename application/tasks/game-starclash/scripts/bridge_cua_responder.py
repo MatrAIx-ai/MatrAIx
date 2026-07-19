@@ -437,7 +437,7 @@ class CuaBridgeResponder:
             pass
         screenshot_bytes = page.screenshot(timeout=_SCREENSHOT_TIMEOUT_MS)
 
-        cua_dir = _write_cua_bundle(self.bridge_dir, seq, observation, html, screenshot_bytes)
+        _write_cua_bundle(self.bridge_dir, seq, observation, html, screenshot_bytes)
         print(
             f"[cua] cua_{seq}/ ready for persona {persona_id} "
             f"(headed={self.headed}, multi={self.multi_window}) "
