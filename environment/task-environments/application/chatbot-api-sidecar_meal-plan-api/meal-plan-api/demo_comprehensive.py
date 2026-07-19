@@ -1,5 +1,5 @@
 """Comprehensive demo of the meal-planning nutrition chatbot."""
-import json, sys
+import sys
 sys.path.insert(0, '.')
 from server import create_session, post_message, get_conversation
 
