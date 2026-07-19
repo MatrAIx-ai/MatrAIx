@@ -3,30 +3,31 @@
   "sources": [],
   "defaultMode": "stratified",
   "dimensionFilters": {
-    "age_bracket": [
-      "18-24",
-      "25-34",
-      "35-44",
-      "45-54",
-      "55-64",
-      "65+"
-    ],
-    "economic_motivation": [
-      "Cost-sensitive",
-      "Value-driven",
-      "Premium-seeking",
-      "Indifferent"
+    "skill_budgeting": [
+      "Master",
+      "Advanced",
+      "Intermediate",
+      "Beginner",
+      "None"
     ],
     "socioeconomic_band": [
+      "Low income",
       "Lower-middle",
       "Middle",
       "Upper-middle",
       "High income"
+    ],
+    "att_taking_on_debt": [
+      "Enthusiast",
+      "Positive",
+      "Neutral",
+      "Skeptical",
+      "Opposed"
     ]
   },
   "stratifyFields": [
-    "economic_motivation",
+    "skill_budgeting",
     "socioeconomic_band"
   ],
-  "sampleSize": 16
+  "sampleSize": 25
 }

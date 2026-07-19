@@ -3,30 +3,31 @@
   "sources": [],
   "defaultMode": "stratified",
   "dimensionFilters": {
-    "age_bracket": [
-      "18-24",
-      "25-34",
-      "35-44",
-      "45-54",
-      "55-64",
-      "65+"
-    ],
-    "economic_motivation": [
-      "Cost-sensitive",
-      "Value-driven",
-      "Premium-seeking",
-      "Indifferent"
+    "lstyle_banking_style": [
+      "Traditional bank",
+      "Neobank",
+      "Credit union",
+      "Mostly cash",
+      "Unbanked"
     ],
     "socioeconomic_band": [
+      "Low income",
       "Lower-middle",
       "Middle",
       "Upper-middle",
       "High income"
+    ],
+    "urbanicity": [
+      "Dense urban",
+      "Suburban",
+      "Small town",
+      "Rural",
+      "Nomadic / remote"
     ]
   },
   "stratifyFields": [
-    "economic_motivation",
+    "lstyle_banking_style",
     "socioeconomic_band"
   ],
-  "sampleSize": 16
+  "sampleSize": 25
 }

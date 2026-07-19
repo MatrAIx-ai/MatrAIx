@@ -3,6 +3,23 @@
   "sources": [],
   "defaultMode": "stratified",
   "dimensionFilters": {
+    "lstyle_work_schedule": [
+      "9-to-5",
+      "Flexible hours",
+      "Shift work",
+      "On-call",
+      "Freelance",
+      "Unemployed"
+    ],
+    "life_stage": [
+      "Student",
+      "Early career",
+      "Parent of young kids",
+      "Mid-life",
+      "Career change",
+      "Empty nester",
+      "Retirement"
+    ],
     "age_bracket": [
       "18-24",
       "25-34",
@@ -10,25 +27,11 @@
       "45-54",
       "55-64",
       "65+"
-    ],
-    "tech_savviness": [
-      "Digital native",
-      "Comfortable",
-      "Cautious adopter",
-      "Reluctant",
-      "Avoidant"
-    ],
-    "socioeconomic_band": [
-      "Low income",
-      "Lower-middle",
-      "Middle",
-      "Upper-middle",
-      "High income"
     ]
   },
   "stratifyFields": [
-    "age_bracket",
-    "tech_savviness"
+    "lstyle_work_schedule",
+    "life_stage"
   ],
-  "sampleSize": 25
+  "sampleSize": 42
 }

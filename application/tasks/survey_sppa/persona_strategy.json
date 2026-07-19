@@ -3,31 +3,31 @@
   "sources": [],
   "defaultMode": "stratified",
   "dimensionFilters": {
-    "age_bracket": [
-      "18-24",
-      "25-34",
-      "35-44",
-      "45-54",
-      "55-64",
-      "65+"
+    "big5_artistic_interest": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
     ],
-    "economic_motivation": [
-      "Cost-sensitive",
-      "Value-driven",
-      "Premium-seeking",
-      "Indifferent"
+    "urbanicity": [
+      "Dense urban",
+      "Suburban",
+      "Small town",
+      "Rural",
+      "Nomadic / remote"
     ],
-    "socioeconomic_band": [
-      "Low income",
-      "Lower-middle",
-      "Middle",
-      "Upper-middle",
-      "High income"
+    "highest_education": [
+      "Secondary",
+      "Vocational / cert",
+      "Some college",
+      "Bachelor's",
+      "Master's"
     ]
   },
   "stratifyFields": [
-    "economic_motivation",
-    "age_bracket"
+    "big5_artistic_interest",
+    "urbanicity"
   ],
-  "sampleSize": 20
+  "sampleSize": 25
 }
