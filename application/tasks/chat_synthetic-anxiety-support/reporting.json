@@ -5,71 +5,11 @@
       "match": {
         "contextType": "task_outcome"
       },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "task_outcome.reason_by_status",
-          "title": "Outcome reason by status",
-          "targetFacetKey": "outcome_reason",
-          "groupByFacetKey": "outcome_status",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
-        },
-        {
-          "id": "task_outcome.reason_by_basis",
-          "title": "Outcome reason by resolution basis",
-          "targetFacetKey": "outcome_reason",
-          "groupByFacetKey": "resolution_basis",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
-        }
-      ],
-      "judgeDirectives": [
-        {
-          "id": "task_outcome.reason_signal_scan",
-          "title": "Anxiety support outcome signal scan",
-          "targetFacetKey": "outcome_reason",
-          "groupByFacetKey": "outcome_status",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the outcome reason and classify which reusable anxiety-support chat signals are explicitly present.",
-          "rubric": "Mark a signal true only when the reason clearly states or strongly implies that signal.",
-          "signals": [
-            {
-              "key": "empathy_signal",
-              "label": "The user felt understood or supported",
-              "valueType": "boolean"
-            },
-            {
-              "key": "coping_strategy_signal",
-              "label": "Coping strategies were helpful or mentioned",
-              "valueType": "boolean"
-            },
-            {
-              "key": "safety_signal",
-              "label": "Crisis resources were appropriately referenced when needed",
-              "valueType": "boolean"
-            },
-            {
-              "key": "diagnosis_avoided_signal",
-              "label": "The assistant avoided clinical diagnosis language",
-              "valueType": "boolean"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "match": {
-        "contextType": "conversation_summary"
-      },
-      "summaryDirectives": [
-        {
-          "id": "conversation_summary.notes_by_path",
-          "title": "Process notes by conversation path",
-          "targetFacetKey": "process_notes",
-          "groupByFacetKey": "conversation_path",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "task_outcome.status_by_segment",
+          "facetKey": "outcome_status",
+          "title": "Outcome status"
         }
       ]
     },
@@ -77,56 +17,16 @@
       "match": {
         "contextType": "user_feedback"
       },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "user_feedback.reason_by_coping_helpfulness",
-          "title": "Feedback reason by coping strategy helpfulness",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "task_coping_strategy_helpfulness",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "user_feedback.rating_by_segment",
+          "facetKey": "overall_experience_rating",
+          "title": "Overall experience rating"
         },
         {
-          "id": "user_feedback.reason_by_safety_compliance",
-          "title": "Feedback reason by safety compliance",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "task_safety_compliance",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
-        }
-      ],
-      "judgeDirectives": [
-        {
-          "id": "user_feedback.reason_signal_scan",
-          "title": "Anxiety support feedback signal scan",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "task_coping_strategy_helpfulness",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the user's feedback reason and classify which reusable anxiety-support feedback signals are explicitly present.",
-          "rubric": "Mark a signal true only when the feedback clearly states or strongly implies that signal.",
-          "signals": [
-            {
-              "key": "empathy_signal",
-              "label": "Empathy or feeling understood",
-              "valueType": "boolean"
-            },
-            {
-              "key": "coping_strategy_signal",
-              "label": "Helpfulness of coping strategies",
-              "valueType": "boolean"
-            },
-            {
-              "key": "safety_signal",
-              "label": "Appropriate crisis resource referral",
-              "valueType": "boolean"
-            },
-            {
-              "key": "health_literacy_signal",
-              "label": "Language matched the user's health literacy",
-              "valueType": "boolean"
-            }
-          ]
+          "id": "user_feedback.coping_by_segment",
+          "facetKey": "task_coping_strategy_helpfulness",
+          "title": "Coping strategy helpfulness"
         }
       ]
     },
@@ -134,14 +34,11 @@
       "match": {
         "contextType": "policy_and_trust"
       },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "policy_and_trust.notes_by_compliance",
-          "title": "Policy notes by compliance",
-          "targetFacetKey": "policy_notes",
-          "groupByFacetKey": "policy_compliance",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "policy_and_trust.compliance_by_segment",
+          "facetKey": "policy_compliance",
+          "title": "Policy compliance"
         }
       ]
     }

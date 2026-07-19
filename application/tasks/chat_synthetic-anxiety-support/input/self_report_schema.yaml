@@ -31,8 +31,9 @@ fields:
     kind: integer
     minimum: 1
     maximum: 10
-  - key: reason
-    prompt: Briefly explain the rating in your own voice.
+    explanation:
+      key: reason
+      prompt: Briefly explain the rating in your own voice.
   - key: healthLiteracyMatch
     prompt: Did the assistant's language feel appropriate for your level of health knowledge?
     kind: boolean
