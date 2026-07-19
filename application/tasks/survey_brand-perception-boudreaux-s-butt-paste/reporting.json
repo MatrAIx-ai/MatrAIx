@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_trust"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Brand trust"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_familiarity"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Brand familiarity"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_quality"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Perceived quality"
+        }
+      ]
+    }
+  ]
 }

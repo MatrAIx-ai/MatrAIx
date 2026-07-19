@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_return_risk"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Return risk"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_return_reason"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Likely return reason"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_return_policy_weight"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Return policy weight"
+        }
+      ]
+    }
+  ]
 }

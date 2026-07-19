@@ -146,6 +146,7 @@ def main() -> int:
                     "label": "Reason",
                     "role": "explanation",
                     "kind": "textual",
+                    "explainsFacetKey": "response",
                     "value": rationale,
                 }
             )

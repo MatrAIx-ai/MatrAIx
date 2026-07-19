@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_giftable"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Gift suitability"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_recipient"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Likely gift recipient"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_gift_price_ok"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Gift price fit"
+        }
+      ]
+    }
+  ]
 }

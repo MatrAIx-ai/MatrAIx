@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_well_made"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Build quality"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_quality_signal"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Primary quality signal"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_durable"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Durability"
+        }
+      ]
+    }
+  ]
 }

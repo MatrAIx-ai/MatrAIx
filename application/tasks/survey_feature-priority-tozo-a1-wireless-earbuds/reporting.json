@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_single_most"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Top purchase factor"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_top_factors"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Purchase factors"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_specs_confidence"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Spec confidence"
+        }
+      ]
+    }
+  ]
 }

@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_overall_sat"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Overall satisfaction"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_expectation"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Expectation match"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_best_worst"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Satisfaction driver"
+        }
+      ]
+    }
+  ]
 }

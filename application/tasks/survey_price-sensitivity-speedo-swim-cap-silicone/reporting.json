@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_threshold"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Price threshold"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_price_vs_quality"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Price vs quality tradeoff"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_too_expensive"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Price pain"
+        }
+      ]
+    }
+  ]
 }

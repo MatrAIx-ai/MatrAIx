@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_worth_it"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Worth the price"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_value_tier"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Value tier"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_value_driver"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Value driver"
+        }
+      ]
+    }
+  ]
 }

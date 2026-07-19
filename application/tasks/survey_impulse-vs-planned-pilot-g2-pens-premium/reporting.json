@@ -1,4 +1,41 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_style"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Purchase style"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_trigger"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Impulse trigger"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_temptation"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Impulse pull"
+        }
+      ]
+    }
+  ]
 }

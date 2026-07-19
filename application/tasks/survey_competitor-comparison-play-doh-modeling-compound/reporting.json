@@ -1,4 +1,29 @@
 {
   "schemaVersion": "1.0",
-  "contextRules": []
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_vs_alternatives"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Standing vs alternatives"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_decider"
+      },
+      "distributions": [
+        {
+          "facetKey": "response",
+          "title": "Comparison decider"
+        }
+      ]
+    }
+  ]
 }
