@@ -363,7 +363,7 @@ function UserFeedbackPanel({
         </DashedNote>
       ) : (
         <div className="space-y-4">
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             Subjective reflection captured after task completion from{" "}
             <span className="font-mono">user_feedback.json</span>.
           </p>
@@ -630,7 +630,7 @@ function SurveyAnswerRow({
       <SurveyAnswerVisual answer={answer} question={question} />
 
       {answer.rationale ? (
-        <p className="mt-3 glass-tile glass-tile--dim rounded-lg px-3 py-2 text-[13px] leading-relaxed text-text-variant">
+        <p className="mt-3 glass-tile glass-tile--dim rounded-lg px-3 py-2 text-[14px] leading-relaxed text-text-variant">
           {singleChoice || likert ? "Why: " : ""}
           {answer.rationale}
           {conf != null && (
@@ -799,7 +799,7 @@ function SurveyTrajectoryMilestone({ event }: { event: SurveyTrajectoryEvent }) 
             </span>
           ) : null}
         </div>
-        {detail ? <p className="mt-0.5 text-[13px] leading-snug text-text-variant">{detail}</p> : null}
+        {detail ? <p className="mt-0.5 text-[14px] leading-snug text-text-variant">{detail}</p> : null}
       </div>
     </div>
   );
@@ -952,7 +952,7 @@ function WebDebrief({ run }: { run: RunDetailView }) {
                 <div className="mt-0.5 font-mono text-[12px] text-text-dim">{result.selectedProductId}</div>
               )}
               {result.reason && (
-                <p className="mt-1 text-[13px] leading-snug text-text-variant">
+                <p className="mt-1 text-[14px] leading-snug text-text-variant">
                   Why this one: {result.reason}
                 </p>
               )}
@@ -1014,7 +1014,7 @@ function TrialDecisionPanel({
                   <div key={f.key}>
                     <div className="text-[11px] text-text-dim">{f.label}</div>
                     <div
-                      className={`mt-0.5 text-[13px] leading-relaxed ${
+                      className={`mt-0.5 text-[14px] leading-relaxed ${
                         f.role === "explanation"
                           ? "col-span-full text-text-variant"
                           : f.role === "primary"

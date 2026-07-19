@@ -118,7 +118,7 @@ function SummarySignalCard({
         ) : null}
       </div>
       <div className="mt-2 text-[20px] font-semibold leading-tight text-text-main">{value}</div>
-      {detail ? <p className="mt-2 text-[13px] leading-relaxed text-text-variant">{detail}</p> : null}
+      {detail ? <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{detail}</p> : null}
     </div>
   );
 }
@@ -152,7 +152,7 @@ function ChatContractSummary({
     <div className="space-y-3 glass-tile rounded-md p-4">
       <div className="space-y-1">
         <SubsectionHeading>Trial summary</SubsectionHeading>
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Chat-specific signals from this trial: outcome, how the conversation unfolded, and the
           persona&apos;s post-chat rating.
         </p>
@@ -279,7 +279,7 @@ export function ChatObjectiveEvaluation({
         )}
       </div>
       {artifactMissing ? (
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Scores above were recovered from the live event stream. Artifact checks failed because
           output files were missing on this run. Re-run the job for a clean pass.
         </p>
@@ -343,7 +343,7 @@ export function ChatTrialDebriefBody({
       <section className="space-y-4">
         {showSectionHeadings && <SectionHeading>Evaluation</SectionHeading>}
         <div className="space-y-2 glass-tile rounded-md p-3">
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             Run checks confirm the conversation finished and artifacts are valid — not a quality
             score.
           </p>
@@ -352,7 +352,7 @@ export function ChatTrialDebriefBody({
         <ChatContractSummary trialEvaluation={trialEvaluation} />
         <div className="space-y-3 glass-tile rounded-md p-4">
           {showSectionHeadings && <SubsectionHeading>Persona self-report</SubsectionHeading>}
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             How the simulated user rated the chat after it ended.
           </p>
           <ChatSelfReport questionnaire={questionnaire} />
@@ -464,7 +464,7 @@ function DebriefScorecard({ q }: { q: PlaygroundQuestionnaire }) {
           </span>
         </div>
         {q.clarifyingNotes && (
-          <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
+          <p className="mt-1.5 text-[14px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
         )}
       </div>
     </div>
@@ -497,7 +497,7 @@ function CriterionBar({
       <div className="h-1.5 overflow-hidden rounded-full bg-field">
         <div className={`h-full ${color.bar}`} style={{ width: `${pct}%` }} />
       </div>
-      {rationale && <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{rationale}</p>}
+      {rationale && <p className="mt-1.5 text-[14px] leading-snug text-text-variant">{rationale}</p>}
     </div>
   );
 }
