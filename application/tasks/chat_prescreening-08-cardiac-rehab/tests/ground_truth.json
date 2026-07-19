@@ -1,0 +1,84 @@
+{
+ "protocol_id": "HEART-HOME-2026-008",
+ "cases": {
+  "C01": {
+   "sex": "male",
+   "age": 61,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "C02": {
+   "sex": "female",
+   "age": 80,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "C03": {
+   "sex": "male",
+   "age": 49,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2",
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "C04": {
+   "sex": "female",
+   "age": 66,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2"
+   ],
+   "criteria_unknown": []
+  },
+  "C05": {
+   "sex": "male",
+   "age": 72,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "C06": {
+   "sex": "female",
+   "age": 58,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "C07": {
+   "sex": "male",
+   "age": 78,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2",
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "C08": {
+   "sex": "female",
+   "age": 55,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC2"
+   ]
+  },
+  "C09": {
+   "sex": "male",
+   "age": 64,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  }
+ }
+}

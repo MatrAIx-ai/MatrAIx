@@ -1,0 +1,81 @@
+{
+ "protocol_id": "HBP-TM-2026-002",
+ "cases": {
+  "H01": {
+   "sex": "female",
+   "age": 58,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "H02": {
+   "sex": "male",
+   "age": 80,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "H03": {
+   "sex": "female",
+   "age": 49,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "H04": {
+   "sex": "male",
+   "age": 66,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "H05": {
+   "sex": "female",
+   "age": 71,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "H06": {
+   "sex": "male",
+   "age": 62,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3",
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "H07": {
+   "sex": "female",
+   "age": 20,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC1"
+   ],
+   "criteria_unknown": []
+  },
+  "H08": {
+   "sex": "male",
+   "age": 55,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC3"
+   ]
+  },
+  "H09": {
+   "sex": "male",
+   "age": 60,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  }
+ }
+}

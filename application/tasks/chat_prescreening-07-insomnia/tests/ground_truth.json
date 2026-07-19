@@ -1,0 +1,81 @@
+{
+ "protocol_id": "SLEEP-WELL-2026-007",
+ "cases": {
+  "N01": {
+   "sex": "female",
+   "age": 39,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "N02": {
+   "sex": "male",
+   "age": 57,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "N03": {
+   "sex": "female",
+   "age": 28,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "N04": {
+   "sex": "male",
+   "age": 63,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "N05": {
+   "sex": "female",
+   "age": 47,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "N06": {
+   "sex": "male",
+   "age": 52,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "N07": {
+   "sex": "female",
+   "age": 69,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2",
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "N08": {
+   "sex": "male",
+   "age": 35,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC2"
+   ]
+  },
+  "N09": {
+   "sex": "female",
+   "age": 44,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  }
+ }
+}

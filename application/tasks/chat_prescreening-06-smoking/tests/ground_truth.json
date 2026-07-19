@@ -1,0 +1,81 @@
+{
+ "protocol_id": "QUIT-PATCH-2026-006",
+ "cases": {
+  "S01": {
+   "sex": "male",
+   "age": 45,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "S02": {
+   "sex": "female",
+   "age": 70,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "S03": {
+   "sex": "male",
+   "age": 33,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC2"
+   ],
+   "criteria_unknown": []
+  },
+  "S04": {
+   "sex": "female",
+   "age": 51,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC4"
+   ],
+   "criteria_unknown": []
+  },
+  "S05": {
+   "sex": "male",
+   "age": 62,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "S06": {
+   "sex": "female",
+   "age": 58,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "S07": {
+   "sex": "male",
+   "age": 66,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2",
+    "EXC3"
+   ],
+   "criteria_unknown": []
+  },
+  "S08": {
+   "sex": "female",
+   "age": 44,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC2"
+   ]
+  },
+  "S09": {
+   "sex": "male",
+   "age": 57,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  }
+ }
+}

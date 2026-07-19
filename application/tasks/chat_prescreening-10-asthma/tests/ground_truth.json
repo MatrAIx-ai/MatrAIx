@@ -1,0 +1,82 @@
+{
+ "protocol_id": "BREATHE-EASY-2026-010",
+ "cases": {
+  "R01": {
+   "sex": "female",
+   "age": 29,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "R02": {
+   "sex": "male",
+   "age": 65,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  },
+  "R03": {
+   "sex": "female",
+   "age": 42,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC4"
+   ],
+   "criteria_unknown": []
+  },
+  "R04": {
+   "sex": "male",
+   "age": 58,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC1"
+   ],
+   "criteria_unknown": []
+  },
+  "R05": {
+   "sex": "female",
+   "age": 35,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC2"
+   ],
+   "criteria_unknown": []
+  },
+  "R06": {
+   "sex": "male",
+   "age": 24,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "INC3"
+   ],
+   "criteria_unknown": []
+  },
+  "R07": {
+   "sex": "female",
+   "age": 61,
+   "label": "likely_ineligible",
+   "criteria_not_met": [
+    "EXC3",
+    "EXC4"
+   ],
+   "criteria_unknown": []
+  },
+  "R08": {
+   "sex": "male",
+   "age": 50,
+   "label": "insufficient_information",
+   "criteria_not_met": [],
+   "criteria_unknown": [
+    "INC3",
+    "INC4"
+   ]
+  },
+  "R09": {
+   "sex": "female",
+   "age": 33,
+   "label": "likely_eligible",
+   "criteria_not_met": [],
+   "criteria_unknown": []
+  }
+ }
+}
