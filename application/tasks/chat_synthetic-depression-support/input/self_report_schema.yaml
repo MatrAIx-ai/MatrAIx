@@ -35,8 +35,9 @@ fields:
     kind: integer
     minimum: 1
     maximum: 10
-  - key: reason
-    prompt: Briefly explain the rating in your own voice.
+    explanation:
+      key: reason
+      prompt: Briefly explain the rating in your own voice.
   - key: wouldSeekProfessionalHelp
     prompt: After this conversation, would you seek further professional help?
     kind: boolean

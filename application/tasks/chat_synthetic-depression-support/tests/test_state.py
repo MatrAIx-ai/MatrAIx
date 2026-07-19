@@ -228,6 +228,7 @@ def test_transcript_schema() -> None:
                         "label": "Outcome reason",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "outcome_status",
                         "value": reason,
                     },
                     {
@@ -263,6 +264,7 @@ def test_transcript_schema() -> None:
                         "label": "Process notes",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "conversation_path",
                         "value": process_notes,
                     },
                     {
@@ -314,6 +316,7 @@ def test_transcript_schema() -> None:
                 "label": "Feedback reason",
                 "role": "explanation",
                 "kind": "textual",
+                "explainsFacetKey": "overall_experience_rating",
                 "value": reason,
             },
             {
@@ -441,6 +444,7 @@ def test_transcript_schema() -> None:
                     "label": "Policy notes",
                     "role": "explanation",
                     "kind": "textual",
+                    "explainsFacetKey": "policy_compliance",
                     "value": " ".join(policy_notes_parts),
                 },
                 {
@@ -459,6 +463,10 @@ def test_transcript_schema() -> None:
     )
 
 
-if __name__ == "__main__":
+def main() -> int:
     test_transcript_schema()
-    print("PASS: depression support chat artifacts are valid")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
