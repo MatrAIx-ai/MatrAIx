@@ -550,6 +550,57 @@
     animation: rb-pulse 1.4s ease-in-out infinite;
   }
 
+  /* Batch cohort: soft "alive" heartbeat for running trials. */
+  @keyframes batch-heartbeat-dot {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.75;
+      box-shadow: 0 0 0 0 rgb(251 191 36 / 0.28);
+    }
+    45% {
+      transform: scale(1.18);
+      opacity: 1;
+      box-shadow: 0 0 0 4px rgb(251 191 36 / 0);
+    }
+    70% {
+      transform: scale(1);
+      opacity: 0.8;
+      box-shadow: 0 0 0 0 rgb(251 191 36 / 0);
+    }
+  }
+  .animate-batch-heartbeat-dot {
+    animation: batch-heartbeat-dot 1.45s cubic-bezier(0.45, 0, 0.4, 1) infinite;
+  }
+
+  @keyframes batch-heartbeat-cell {
+    0%,
+    100% {
+      border-color: rgb(251 191 36 / 0.32);
+      box-shadow: 0 8px 22px -14px rgb(251 191 36 / 0.18);
+    }
+    50% {
+      border-color: rgb(251 191 36 / 0.52);
+      box-shadow: 0 10px 26px -12px rgb(251 191 36 / 0.3);
+    }
+  }
+  .animate-batch-heartbeat-cell {
+    animation: batch-heartbeat-cell 1.6s ease-in-out infinite;
+  }
+
+  @keyframes batch-heartbeat-wash {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  .animate-batch-heartbeat-wash {
+    animation: batch-heartbeat-wash 1.6s ease-in-out infinite;
+  }
+
   @keyframes rb-spin {
     to {
       transform: rotate(360deg);

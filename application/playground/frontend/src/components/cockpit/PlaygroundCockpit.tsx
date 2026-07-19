@@ -338,15 +338,20 @@ function ChatbotEvalCockpit({
     batchTaskId,
     batchPersonaIds,
     setBatchJobName,
-    batchLive,
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
+    completedTrials: batchCompletedTrials,
     expectedTrialCount,
     personaById,
+    batchError,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "chatbot");
   const [exportSnapshot, setExportSnapshot] = useState<ExportSnapshot | null>(null);
 
@@ -744,14 +749,14 @@ function ChatbotEvalCockpit({
   const runLaunchPhase = resolveRunLaunchPhase(
     batchJobName,
     batchComplete,
-    batchLive.error,
+    batchError,
     phase,
   );
 
   const runProgressPct = batchJobName
     ? computeBatchProgressPct(
         batchJobName,
-        batchLive.live?.completedTrials,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : pipelinePhase === "done"
@@ -766,7 +771,7 @@ function ChatbotEvalCockpit({
 
   const runProgressLabel = batchJobName
     ? formatBatchProgressLabel(
-        batchLive.live?.completedTrials ?? 0,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : pipelinePhase === "building"
@@ -866,7 +871,7 @@ function ChatbotEvalCockpit({
             onParallelTrialsChange={setParallelTrials}
             isRunning={runBusy}
             onRun={() => void handleLaunch()}
-            error={launchError ?? (verifierOnlyFailure ? null : error) ?? batchLive.error}
+            error={launchError ?? (verifierOnlyFailure ? null : error) ?? batchError ?? retryError}
             runPhase={runLaunchPhase}
             progressPct={runProgressPct}
             progressLabel={runProgressLabel}
@@ -885,6 +890,9 @@ function ChatbotEvalCockpit({
             }
             onDownload={!batchJobName ? handleExport : undefined}
             canDownload={canExport}
+            onRetryFailed={batchJobName ? () => void retryFailed() : undefined}
+            failedCount={failedTrials}
+            retryBusy={retryBusy}
           />
         </div>
       }

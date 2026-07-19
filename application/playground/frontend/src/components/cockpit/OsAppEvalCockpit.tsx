@@ -170,14 +170,19 @@ export function OsAppEvalCockpit({
     batchTaskId,
     batchPersonaIds,
     setBatchJobName,
-    batchLive,
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
     expectedTrialCount,
+    completedTrials: batchCompletedTrials,
+    batchError,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "os-app");
 
 
@@ -381,11 +386,11 @@ export function OsAppEvalCockpit({
   const runLaunchPhase = resolveRunLaunchPhase(
     batchJobName,
     batchComplete,
-    batchLive.error,
+    batchError,
     phase,
   );
   const runProgressPct = batchJobName
-    ? computeBatchProgressPct(batchJobName, batchLive.live?.completedTrials, expectedTrialCount)
+    ? computeBatchProgressPct(batchJobName, batchCompletedTrials, expectedTrialCount)
     : phase === "done"
       ? 100
       : phase === "launching"
@@ -397,7 +402,7 @@ export function OsAppEvalCockpit({
             : 0;
   const runProgressLabel = batchJobName
     ? formatBatchProgressLabel(
-        batchLive.live?.completedTrials ?? 0,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : phase === "launching"
@@ -495,7 +500,8 @@ export function OsAppEvalCockpit({
           onRun={() => void handleLaunch()}
           error={
             launchError ??
-            batchLive.error ??
+            batchError ??
+            retryError ??
             (failed && !batchJobName ? null : displayError)
           }
           onNewRun={showLiveCenter ? handleNewRun : undefined}
@@ -510,6 +516,9 @@ export function OsAppEvalCockpit({
           }
           onDownload={!batchJobName ? handleExport : undefined}
           canDownload={canExport}
+          onRetryFailed={batchJobName ? () => void retryFailed() : undefined}
+          failedCount={failedTrials}
+          retryBusy={retryBusy}
         />
       }
       right={

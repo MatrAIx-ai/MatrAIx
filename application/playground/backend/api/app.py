@@ -859,6 +859,34 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+    @app.post(
+        "/api/harbor/jobs/{job_name}/retry-failed",
+        tags=["harbor-jobs"],
+    )
+    def retry_harbor_job_failed(
+        job_name: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.retry_failed(job_name)
+        except ValueError as exc:
+            message = str(exc)
+            status = 404 if "not found" in message.lower() else 400
+            raise HTTPException(status_code=status, detail=message) from exc
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/status",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_job_status(
+        job_name: str,
+        since: int = Query(default=0, ge=0),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.get_job_status(job_name, since=since)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
     @app.get(
         "/api/harbor/jobs/{job_name}/trials/{trial_name}/events",
         tags=["harbor-jobs"],

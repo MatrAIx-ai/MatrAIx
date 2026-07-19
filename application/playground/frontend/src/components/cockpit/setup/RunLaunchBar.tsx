@@ -23,6 +23,10 @@ export interface RunLaunchBarProps {
   cancelRunBusy?: boolean;
   onDownload?: () => void;
   canDownload?: boolean;
+  /** Re-run only the failed trials in-place (batch only). */
+  onRetryFailed?: () => void;
+  failedCount?: number;
+  retryBusy?: boolean;
   /** When the live panel already shows a failure card, keep the bar to actions only. */
   compactOnFailure?: boolean;
 }
@@ -46,6 +50,9 @@ export function RunLaunchBar({
   cancelRunBusy = false,
   onDownload,
   canDownload = false,
+  onRetryFailed,
+  failedCount = 0,
+  retryBusy = false,
 }: RunLaunchBarProps) {
   const active = runPhase !== "idle";
   const failed = runPhase === "error";
@@ -98,6 +105,21 @@ export function RunLaunchBar({
                 >
                   <Sym name="stop_circle" size={16} />
                   {cancelRunBusy ? "Stopping…" : isBatch ? "Stop batch" : "Stop run"}
+                </button>
+              )}
+              {onRetryFailed && isBatch && (done || failed) && failedCount > 0 && (
+                <button
+                  type="button"
+                  onClick={onRetryFailed}
+                  disabled={retryBusy}
+                  className={`inline-flex items-center gap-1.5 rounded-lg border border-[#e5c07b]/45 bg-[#e5c07b]/10 px-3.5 py-2 text-[14px] font-medium text-[#e5c07b] transition hover:border-[#e5c07b]/60 hover:bg-[#e5c07b]/16 active:scale-[0.98] disabled:opacity-50 ${FOCUS_RING}`}
+                >
+                  <Sym
+                    name="replay"
+                    size={16}
+                    className={retryBusy ? "animate-rb-spin" : undefined}
+                  />
+                  {retryBusy ? "Retrying…" : `Retry failed (${failedCount})`}
                 </button>
               )}
               {onDownload && (done || failed) && !onViewJob && (

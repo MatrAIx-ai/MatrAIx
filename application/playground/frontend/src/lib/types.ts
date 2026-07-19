@@ -588,6 +588,25 @@ export interface HarborJobLiveResponse {
   trials: HarborJobLiveTrial[];
 }
 
+/** Coarse trial status codes for the incremental cohort status feed. */
+export type HarborStatusCode = 0 | 1 | 2 | 3; // pending | running | done | error
+
+export interface HarborJobStatusResponse {
+  jobName: string;
+  launchStatus?: string | null;
+  version: number;
+  trialCount: number;
+  counts: { pending: number; running: number; done: number; error: number };
+  full: boolean;
+  /** Present when `full` — the complete positional snapshot. */
+  statuses?: HarborStatusCode[];
+  trialNames?: string[];
+  personaIds?: (string | null)[];
+  personaNames?: (string | null)[];
+  /** Present when `!full` — `[index, code]` deltas since the requested version. */
+  changes?: [number, HarborStatusCode][];
+}
+
 export interface HarborLaunchView {
   status?: string;
   configPath?: string | null;

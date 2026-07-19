@@ -233,14 +233,19 @@ export function SurveyEvalCockpit({
     batchTaskId,
     batchPersonaIds,
     setBatchJobName,
-    batchLive,
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
     expectedTrialCount,
+    completedTrials: batchCompletedTrials,
+    batchError,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "survey");
   const setupLocked = phase !== "idle" || Boolean(batchJobName);
   const visiblePersonaIds = setupLocked && batchPersonaIds.length > 0 ? batchPersonaIds : selectedPersonaIds;
@@ -475,11 +480,11 @@ export function SurveyEvalCockpit({
   const runLaunchPhase = resolveRunLaunchPhase(
     batchJobName,
     batchComplete,
-    batchLive.error,
+    batchError,
     phase,
   );
   const runProgressPct = batchJobName
-    ? computeBatchProgressPct(batchJobName, batchLive.live?.completedTrials, expectedTrialCount)
+    ? computeBatchProgressPct(batchJobName, batchCompletedTrials, expectedTrialCount)
     : phase === "done"
       ? 100
       : phase === "launching"
@@ -491,7 +496,7 @@ export function SurveyEvalCockpit({
             : 0;
   const runProgressLabel = batchJobName
     ? formatBatchProgressLabel(
-        batchLive.live?.completedTrials ?? 0,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : phase === "launching"
@@ -586,7 +591,7 @@ export function SurveyEvalCockpit({
           onParallelTrialsChange={setParallelTrials}
           runBusy={runBusy}
           onRun={() => void handleLaunch()}
-          error={launchError ?? error ?? batchLive.error}
+          error={launchError ?? error ?? batchError ?? retryError}
           onNewRun={showLiveCenter ? handleNewRun : undefined}
           onCancelRun={onCancelRun}
           cancelRunBusy={cancelRunBusy}
@@ -599,6 +604,9 @@ export function SurveyEvalCockpit({
           }
           onDownload={!batchJobName ? handleExport : undefined}
           canDownload={canExport}
+          onRetryFailed={batchJobName ? () => void retryFailed() : undefined}
+          failedCount={failedTrials}
+          retryBusy={retryBusy}
         />
       }
       right={

@@ -30,6 +30,9 @@ export interface CockpitRunCenterProps {
   cancelRunBusy?: boolean;
   onDownload?: () => void;
   canDownload?: boolean;
+  onRetryFailed?: () => void;
+  failedCount?: number;
+  retryBusy?: boolean;
 }
 
 /** Center column: pipeline (idle) → live stage or batch grid (running) + progress launch bar. */
@@ -58,6 +61,9 @@ export function CockpitRunCenter({
   cancelRunBusy,
   onDownload,
   canDownload,
+  onRetryFailed,
+  failedCount,
+  retryBusy,
 }: CockpitRunCenterProps) {
   return (
     <div className="flex h-full min-h-0 w-full flex-col gap-2 overflow-hidden">
@@ -91,6 +97,9 @@ export function CockpitRunCenter({
         cancelRunBusy={cancelRunBusy}
         onDownload={onDownload}
         canDownload={canDownload}
+        onRetryFailed={onRetryFailed}
+        failedCount={failedCount}
+        retryBusy={retryBusy}
       />
     </div>
   );
