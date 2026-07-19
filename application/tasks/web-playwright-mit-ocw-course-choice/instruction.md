@@ -1,15 +1,31 @@
 # Choose an MIT OpenCourseWare course
 
-Read the scenario brief in `input/context.md`. Use the live MIT OpenCourseWare
-website to choose the **one course you would most want to study next**.
+## Your situation
 
-Search or browse the catalog, then open and inspect at least **three distinct
-course pages** before deciding. Compare the course descriptions, level, topics,
-and available learning-resource types when they are relevant to you.
-When course resource formats matter to your decision, treat your preference for
-reading versus watching course material separately from your preferred format
-for receiving answers.
+You are a self-directed learner choosing one university-level course to study
+next. Read the scenario brief in `input/context.md`, then use the live MIT
+OpenCourseWare website to make the choice.
 
+## Your goal
+
+Search or browse the public catalog, open and inspect at least **three distinct
+course detail pages**, compare the courses, and choose the one you most want to
+study next.
+
+## Constraints on your behavior
+
+- Use only information visible on the live MIT OCW site. Do not invent course
+  metadata, prerequisites, or time commitments.
+- When course resource formats matter to your decision, treat your preference
+  for reading versus watching course material separately from your preferred
+  format for receiving answers.
+- Do not log in, enroll, download, donate, purchase, share, contact anyone, or
+  visit a third-party site.
+
+## Interaction requirements
+
+Use the live website in the browser. Compare course descriptions, levels,
+topics, and available learning-resource types when they are relevant to you.
 Save your choice to `/app/output/course_choice.json`:
 
 ```json
@@ -20,7 +36,7 @@ Save your choice to `/app/output/course_choice.json`:
   "basis_primary": "<price|quality|features|convenience|taste|trust|familiarity|novelty|fit|other>",
   "basis_secondary": "<optional second value from the same enumeration>",
   "exploration_style": "<compared_multiple|deep_research>",
-  "reason": "<why this course fits you, grounded in your persona and the pages you inspected>",
+  "reason": "<why this course fits your background, interests, goals, and learning preferences, grounded in the pages you inspected>",
   "task_course_url": "https://ocw.mit.edu/courses/<course-slug>/",
   "task_course_number": "<course number exactly as shown>",
   "task_course_level": "<course level exactly as shown>",
@@ -37,7 +53,7 @@ Save your choice to `/app/output/course_choice.json`:
 }
 ```
 
-Requirements:
+## Termination criteria
 
 - `task_options_considered` must contain at least three distinct courses whose
   detail pages you actually opened.
@@ -50,8 +66,13 @@ Requirements:
   `basis_primary`.
 - Because comparison is required, use `compared_multiple` or `deep_research`
   for `exploration_style`.
-- Keep `reason` specific to both your persona and evidence from the selected
+- Keep `reason` specific to what matters to you and evidence from the selected
   course page.
+- Finish after saving the completed JSON file.
 
-No login, enrollment, download, donation, purchase, sharing, contact action, or
-third-party-site visit is required.
+## Success judgment
+
+The task is successful when the saved JSON follows the required structure, the
+candidate list contains at least three course pages you visited, the selected
+course matches one candidate, and all recorded titles, course numbers, levels,
+slugs, and URLs are faithful to the live site.
