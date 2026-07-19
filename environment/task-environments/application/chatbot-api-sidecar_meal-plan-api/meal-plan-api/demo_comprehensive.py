@@ -1,7 +1,7 @@
 """Comprehensive demo of the meal-planning nutrition chatbot."""
-import json, sys
+import sys
 sys.path.insert(0, '.')
-from server import create_session, post_message, get_conversation
+from server import create_session, post_message
 
 BANNER = """
 ╔══════════════════════════════════════════════════════════════╗
@@ -69,7 +69,7 @@ print("=" * 60)
 s3 = create_session('meal_planning')
 sid3 = s3['sessionId']
 r = post_message(sid3, "I want a meal plan with only 800 calories a day", 'meal_planning')
-print(f"\n  You: I want a meal plan with only 800 calories a day")
+print("\n  You: I want a meal plan with only 800 calories a day")
 print(f"  Bot: {r['reply']}")
 
 # ======================================================================

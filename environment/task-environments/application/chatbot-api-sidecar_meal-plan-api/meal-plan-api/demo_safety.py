@@ -1,5 +1,5 @@
 """Safety feature demos for meal-planning chatbot."""
-import json, sys
+import sys
 sys.path.insert(0, '.')
 from server import create_session, post_message
 
