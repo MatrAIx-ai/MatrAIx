@@ -4,11 +4,18 @@ Read the scenario brief in `input/context.md`. Use the live Notion pricing page
 to select the **one standard workspace plan** that you would most realistically
 choose for the personal or work context represented in your persona.
 
-Select or confirm **Pay monthly**. Inspect the summaries for all four
-plans—Free, Plus, Business, and Enterprise—and examine relevant parts of the
-visible feature comparison before deciding. Compare published monthly prices,
-intended audiences, included features, and other visible information when
-relevant.
+Activate **Pay monthly** before reading prices. Do not treat the mere presence
+of the “Pay monthly” label as evidence that monthly billing is selected: the
+page can display that label while showing annual-billing rates. Click the
+monthly control and verify its selected state or that the rendered plan-card
+prices update before recording them. If a text-label click fails, locate and
+use its interactive parent or associated control rather than assuming the
+state is already correct.
+
+Inspect the summaries for all four plans—Free, Plus, Business, and
+Enterprise—and examine relevant parts of the visible feature comparison before
+deciding. Compare published monthly prices, intended audiences, included
+features, and other visible information when relevant.
 
 Save your choice to `/app/output/notion_plan_comparison.json`:
 
