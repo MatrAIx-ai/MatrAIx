@@ -40,6 +40,10 @@ def _nonempty(value: object, field: str, *, maximum_length: int | None = None) -
     return cleaned
 
 
+def _normalize_whitespace(value: str) -> str:
+    return " ".join(value.split())
+
+
 def _integer_rating(value: object, field: str) -> int:
     assert isinstance(value, int) and not isinstance(value, bool), (
         f"{field} must be an integer"
@@ -453,8 +457,8 @@ def test_output_schema() -> None:
             "key": "task_price_text",
             "label": "Selected plan price",
             "role": "evidence",
-            "kind": "textual",
-            "value": selected_price,
+            "kind": "categorical",
+            "value": _normalize_whitespace(selected_price),
         },
     ]
     if basis_secondary is not None:
