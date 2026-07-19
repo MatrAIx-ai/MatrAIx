@@ -114,10 +114,27 @@ class AnthropicJSONClient:
         return coerce_json("\n".join(text_parts))
 
 
+def _llm_proxy_base_url() -> str:
+    """Return the LiteLLM proxy base URL if proxy mode is on, else ''.
+
+    When set, OpenAI-family clients already route through the proxy via the
+    openai SDK's OPENAI_BASE_URL handling, so we can send Claude through the
+    proxy's OpenAI-compatible endpoint too and share the global rate limiter
+    (instead of the direct-to-Anthropic urllib client).
+    """
+    return (
+        os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE") or ""
+    ).strip()
+
+
 def build_json_client(model: str, *, temperature: float = 0.7) -> Any:
     """Return a JSON-mode client for a configured persona model string."""
     value = (model or "openai/gpt-4o-mini").strip()
     if value.startswith("anthropic/"):
+        if _llm_proxy_base_url():
+            # Route Claude through the proxy's OpenAI-compatible endpoint; base
+            # url + api key come from OPENAI_* env (proxy master key).
+            return OpenAIChatClient(model=value, temperature=temperature)
         return AnthropicJSONClient(value.split("/", 1)[1], temperature=temperature)
     if value.startswith("dashscope/"):
         kwargs = dashscope_openai_client_kwargs(value)
