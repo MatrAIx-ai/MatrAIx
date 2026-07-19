@@ -23,12 +23,12 @@ type Tone = "ready" | "setup" | "offline" | "checking";
 
 type PreflightCheck = PreflightResponse["checks"][number];
 
-/** Tokenized chip classes per tone (tinted backgrounds + matching text). */
+/** Tokenized chip classes per tone (tinted fill + matching text, no stroke). */
 const TONE_CLASS: Record<Tone, string> = {
-  ready: "border-secondary/30 bg-secondary/10 text-secondary",
-  setup: "border-warn/30 bg-warn/10 text-warn",
-  offline: "border-danger/30 bg-danger/10 text-danger",
-  checking: "border-warn/30 bg-warn/10 text-warn",
+  ready: "bg-secondary/12 text-secondary",
+  setup: "bg-warn/12 text-warn",
+  offline: "bg-danger/12 text-danger",
+  checking: "bg-warn/12 text-warn",
 };
 
 const DOT_CLASS: Record<Tone, string> = {
@@ -76,10 +76,9 @@ export function PreflightChip() {
     };
   }, [open]);
 
-  // Resolve the tone + label + sub-line.
+  // Resolve the tone + compact chip label (details live in the popover).
   let tone: Tone;
   let label: string;
-  let sub: string | null = null;
   const data = preflight.data;
   const requiredFailing = data?.checks.filter((c) => !c.ok && !c.optional) ?? [];
   const optionalFailing = data?.checks.filter((c) => !c.ok && c.optional) ?? [];
@@ -91,18 +90,12 @@ export function PreflightChip() {
   } else if (preflight.isError || !data) {
     tone = "offline";
     label = "Backend offline";
-    sub = "Start the Playground backend to send messages";
   } else if (!data.ready) {
     tone = "setup";
     label = requiredFailing.length === 1 ? "1 issue" : `${requiredFailing.length} issues`;
-    sub = requiredFailing[0]?.name ?? null;
   } else if (optionalFailing.length > 0) {
     tone = "setup";
     label = "Almost ready";
-    sub =
-      optionalFailing.length === 1
-        ? optionalFailing[0]?.name ?? null
-        : `${optionalFailing.length} optional items`;
   } else {
     tone = "ready";
     label = "Env ready";
@@ -119,7 +112,7 @@ export function PreflightChip() {
         onClick={() => data && setOpen((v) => !v)}
         aria-expanded={data ? open : undefined}
         aria-label={`Readiness: ${label}`}
-        className={`flex h-9 items-center gap-2 rounded-full border px-3 text-xs font-medium transition ${TONE_CLASS[tone]} ${FOCUS_RING} ${
+        className={`flex h-9 items-center gap-2 whitespace-nowrap rounded-full px-3 text-xs font-medium transition ${TONE_CLASS[tone]} ${FOCUS_RING} ${
           data ? "cursor-pointer hover:opacity-90 active:scale-[0.98]" : "cursor-default"
         }`}
       >
@@ -128,7 +121,6 @@ export function PreflightChip() {
           aria-hidden
         />
         {label}
-        {sub && <span className="hidden font-normal opacity-80 sm:inline">· {sub}</span>}
       </button>
 
       {open && data && (

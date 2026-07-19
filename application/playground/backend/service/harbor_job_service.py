@@ -344,11 +344,12 @@ def _job_list_status(
     *,
     trial_count: int,
     completed_trials: int,
+    failed_trials_on_disk: int,
     job_result: dict[str, Any] | None,
     launch: HarborLaunchRecord | None,
 ) -> tuple[str, int]:
     """Return ``(status, failedTrials)`` for a Harbor job list row."""
-    failed_trials = 0
+    failed_trials = failed_trials_on_disk
     if isinstance(job_result, dict):
         stats = job_result.get("stats")
         if isinstance(stats, dict):
@@ -360,19 +361,22 @@ def _job_list_status(
                 return "failed", failed_trials
             return "success", 0
 
-    if launch is not None:
-        if launch.status in {"queued", "running"}:
-            return "running", 0
-        if launch.status == "failed":
-            return "failed", failed_trials
-
-    if trial_count > 0 and completed_trials < trial_count:
+    # An in-memory launch record only exists while THIS backend process is
+    # driving the run (records are created at launch and never expire until the
+    # process ends). So a live "queued"/"running" record is the only reliable
+    # signal that the job is actually progressing right now.
+    if launch is not None and launch.status in {"queued", "running"}:
         return "running", 0
+    if launch is not None and launch.status == "failed":
+        return "failed", failed_trials
 
+    # Nothing is actively driving the job: either the launch finished without a
+    # job-level result.json, or the backend was restarted / the run was killed
+    # (the in-memory record is gone). Derive a terminal status from on-disk trial
+    # completion instead of reporting a stale, never-ending "running".
     if trial_count > 0 and completed_trials >= trial_count:
-        return "running", 0
-
-    return "running", 0
+        return ("failed", failed_trials) if failed_trials > 0 else ("success", 0)
+    return "failed", failed_trials
 
 
 def _job_listing_times(job_dir: Path) -> tuple[str | None, str | None, str | None, float]:
@@ -429,6 +433,34 @@ def _slug(value: str) -> str:
     return slug or "harbor-job"
 
 
+# Coarse trial status codes for the lightweight, incremental status feed.
+# Kept as small ints so deltas stay tiny for tens-of-thousands cohorts.
+STATUS_CODE_PENDING = 0
+STATUS_CODE_RUNNING = 1
+STATUS_CODE_DONE = 2
+STATUS_CODE_ERROR = 3
+
+
+@dataclass
+class _JobStatusState:
+    """In-memory incremental status snapshot for one job.
+
+    Trials are append-only and identified by their sorted directory name, so a
+    positional ``codes`` array is stable. Finalized trials (done/error) are never
+    re-read from disk, making steady-state polling O(active trials). ``history``
+    records the per-version code deltas so late-joining clients can catch up
+    without a full payload.
+    """
+
+    trial_names: list[str] = field(default_factory=list)
+    persona_ids: list[str | None] = field(default_factory=list)
+    persona_names: list[str | None] = field(default_factory=list)
+    codes: list[int] = field(default_factory=list)
+    version: int = 0
+    # history[v] holds the (index, code) changes that advanced version v -> v+1.
+    history: list[list[tuple[int, int]]] = field(default_factory=list)
+
+
 @dataclass
 class HarborLaunchRecord:
     job_name: str
@@ -456,6 +488,8 @@ class HarborJobService:
     _launches: dict[str, HarborLaunchRecord] = field(default_factory=dict)
     _reporting_jobs: set[str] = field(default_factory=set)
     _guard: threading.Lock = field(default_factory=threading.Lock)
+    _status_states: dict[str, "_JobStatusState"] = field(default_factory=dict)
+    _status_guard: threading.Lock = field(default_factory=threading.Lock)
 
     @classmethod
     def from_repo(cls, *, repo_root: Path | None = None, jobs_dir: Path | None = None) -> "HarborJobService":
@@ -661,10 +695,18 @@ class HarborJobService:
             return
         if not self._job_reporting_ready(job_name, trials):
             return
+        with self._guard:
+            actively_tracked = job_name in self._reporting_jobs
         live = read_reporting_status_artifact(job_dir)
         if isinstance(live, dict):
             live_status = str(live.get("status") or "").strip().lower()
-            if live_status in {"queued", "running", "failed"}:
+            # "failed" is terminal until inputs change. "queued"/"running" only
+            # block re-scheduling when THIS process is actually running the job;
+            # otherwise the artifact is orphaned from a prior process (e.g. a
+            # restart killed the worker) and would wedge reporting forever.
+            if live_status == "failed":
+                return
+            if live_status in {"queued", "running"} and actively_tracked:
                 return
         if aggregation is None:
             aggregation = build_job_aggregation(
@@ -733,10 +775,24 @@ class HarborJobService:
         for job_name in self._list_job_names():
             job_dir = self.jobs_dir / job_name
             trials = self._list_trial_names(job_name)
-            aggregation = self._build_job_aggregation_view(job_name, job_dir, trials=trials)
+            # The listing does NOT embed each job's full aggregation — that is a
+            # multi-MB payload per job the Runs list never reads (fetched on
+            # demand via GET /api/harbor/jobs/{job}/aggregation). We still drive
+            # the reporting scheduler here, but with aggregation built lazily so
+            # the expensive build only runs for jobs that are actually ready to
+            # report, not for every job on every poll.
+            self._maybe_schedule_reporting(job_name, job_dir, trials=trials)
             started_at, updated_at, finished_at, sort_ts = _job_listing_times(job_dir)
             completed_trials = sum(
                 1 for trial_name in trials if self._trial_has_result(job_name, trial_name)
+            )
+            failed_trials_on_disk = sum(
+                1
+                for trial_name in trials
+                if _trial_result_error(
+                    self._read_json(job_dir / trial_name / "result.json")
+                )
+                is not None
             )
             job_result = self._read_json(job_dir / "result.json")
             with self._guard:
@@ -744,6 +800,7 @@ class HarborJobService:
             status, failed_trials = _job_list_status(
                 trial_count=len(trials),
                 completed_trials=completed_trials,
+                failed_trials_on_disk=failed_trials_on_disk,
                 job_result=job_result,
                 launch=launch,
             )
@@ -767,7 +824,6 @@ class HarborJobService:
                     "status": status,
                     "failedTrials": failed_trials,
                     "launchStatus": launch.status if launch is not None else None,
-                    "aggregation": aggregation,
                     "_sortTs": sort_ts,
                 }
             )
@@ -787,9 +843,12 @@ class HarborJobService:
                     raise ValueError("Job not found: {}".format(job_name))
         with self._guard:
             self._launches.pop(job_name, None)
+        with self._status_guard:
+            self._status_states.pop(job_name, None)
         config_path = self.generated_configs_dir / "{}.yaml".format(job_name)
         if config_path.is_file():
             config_path.unlink()
+        self._launch_meta_path(job_name).unlink(missing_ok=True)
 
     def get_job(self, job_name: str) -> dict[str, Any] | None:
         job_dir = self.jobs_dir / job_name
@@ -1066,11 +1125,34 @@ class HarborJobService:
         with self._guard:
             self._launches[resolved_job_name] = record
 
-        if _should_use_local_distributed_harbor(
+        use_local_distributed = _should_use_local_distributed_harbor(
             execution_mode=execution_mode,
             execution_plane=resolved_plane,
             trial_profile=trial_profile,
-        ):
+        )
+
+        # Persist the exact dispatch inputs so "retry failed" can replay the
+        # identical run in-place (Harbor resumes and only re-runs deleted trials).
+        self._persist_launch_meta(
+            resolved_job_name,
+            {
+                "configPath": _rel_path(config_path, self.repo_root),
+                "executionPlane": resolved_plane,
+                "executionMode": execution_mode,
+                "useLocalDistributed": use_local_distributed,
+                "trialProfile": trial_profile,
+                "surveyTaskPath": resolved_survey_task_path,
+                "chatTaskPath": resolved_chat_task_path,
+                "osAppSubmissionProfile": os_app_submission_profile,
+                "chatDomain": chat_domain,
+                "chatApplicationId": chat_application_id,
+                "chatApplicationContext": chat_application_context,
+                "chatMaxTurns": chat_max_turns,
+                "jobConfig": job_config,
+            },
+        )
+
+        if use_local_distributed:
             self._executor.submit(
                 self._run_local_distributed,
                 resolved_job_name,
@@ -1464,6 +1546,232 @@ class HarborJobService:
             "completedTrials": completed_count,
             "trials": live_trials,
         }
+
+    def _coarse_trial_code(self, job_dir: Path, trial_name: str) -> int:
+        """Cheap per-trial status from on-disk markers (no event parsing).
+
+        Only called for trials not yet finalized, so the single ``result.json``
+        parse happens at most once per trial across the job's lifetime.
+        """
+        trial_dir = job_dir / trial_name
+        result_path = trial_dir / "result.json"
+        if result_path.is_file():
+            error = _trial_result_error(self._read_json(result_path))
+            return STATUS_CODE_ERROR if error else STATUS_CODE_DONE
+        if (
+            (trial_dir / "config.json").is_file()
+            or (trial_dir / "trial.log").is_file()
+            or (trial_dir / "agent").is_dir()
+        ):
+            return STATUS_CODE_RUNNING
+        return STATUS_CODE_PENDING
+
+    def _refresh_status_state(self, job_name: str) -> _JobStatusState:
+        """Recompute coarse statuses, appending new trials and recording deltas."""
+        job_dir = self.jobs_dir / job_name
+        names = self._list_trial_names(job_name)
+        state = self._status_states.get(job_name)
+        if state is None:
+            state = _JobStatusState()
+            self._status_states[job_name] = state
+
+        # Directory names are sorted; on any order/shrink drift, rebuild from scratch.
+        prefix = names[: len(state.trial_names)]
+        if prefix != state.trial_names:
+            state = _JobStatusState()
+            self._status_states[job_name] = state
+
+        changes: list[tuple[int, int]] = []
+
+        # Append newly created trial dirs (persona meta parsed once, then cached).
+        for index in range(len(state.trial_names), len(names)):
+            name = names[index]
+            meta = _persona_meta_from_trial(job_dir / name)
+            code = self._coarse_trial_code(job_dir, name)
+            state.trial_names.append(name)
+            state.persona_ids.append(meta.get("persona_id"))
+            state.persona_names.append(meta.get("display_name"))
+            state.codes.append(code)
+            changes.append((index, code))
+
+        # Re-check only trials that have not finalized yet.
+        for index, name in enumerate(state.trial_names):
+            if state.codes[index] >= STATUS_CODE_DONE:
+                continue
+            new_code = self._coarse_trial_code(job_dir, name)
+            if new_code != state.codes[index]:
+                state.codes[index] = new_code
+                changes.append((index, new_code))
+
+        if changes:
+            state.history.append(changes)
+            state.version += 1
+        return state
+
+    def get_job_status(self, job_name: str, *, since: int = 0) -> dict[str, Any]:
+        """Lightweight, incremental cohort status: aggregate counts + coarse codes.
+
+        Designed for very large cohorts (thousands to tens of thousands). Returns
+        a full snapshot when ``since`` is 0 or stale, otherwise only the code
+        deltas since that version. Finalized trials are frozen, so steady-state
+        cost is O(active trials).
+        """
+        job_dir = self.jobs_dir / job_name
+        with self._guard:
+            launch = self._launches.get(job_name)
+        if not job_dir.is_dir() and launch is None:
+            raise ValueError("Job not found: {}".format(job_name))
+        launch_status = launch.status if launch else None
+
+        with self._status_guard:
+            state = self._refresh_status_state(job_name)
+            counts = {"pending": 0, "running": 0, "done": 0, "error": 0}
+            for code in state.codes:
+                if code == STATUS_CODE_ERROR:
+                    counts["error"] += 1
+                elif code == STATUS_CODE_DONE:
+                    counts["done"] += 1
+                elif code == STATUS_CODE_RUNNING:
+                    counts["running"] += 1
+                else:
+                    counts["pending"] += 1
+
+            payload: dict[str, Any] = {
+                "jobName": job_name,
+                "launchStatus": launch_status,
+                "version": state.version,
+                "trialCount": len(state.trial_names),
+                "counts": counts,
+            }
+
+            if 1 <= since <= state.version:
+                merged: list[tuple[int, int]] = []
+                for batch in state.history[since : state.version]:
+                    merged.extend(batch)
+                payload["full"] = False
+                payload["changes"] = [[index, code] for index, code in merged]
+            else:
+                payload["full"] = True
+                payload["statuses"] = list(state.codes)
+                payload["trialNames"] = list(state.trial_names)
+                payload["personaIds"] = list(state.persona_ids)
+                payload["personaNames"] = list(state.persona_names)
+            return payload
+
+    def _launch_meta_path(self, job_name: str) -> Path:
+        return self.generated_configs_dir / "{}.launch.json".format(job_name)
+
+    def _persist_launch_meta(self, job_name: str, meta: dict[str, Any]) -> None:
+        try:
+            self.generated_configs_dir.mkdir(parents=True, exist_ok=True)
+            self._launch_meta_path(job_name).write_text(
+                json.dumps(meta, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+        except Exception:  # noqa: BLE001
+            # Retry is a convenience; never let metadata persistence break a launch.
+            pass
+
+    def failed_trial_count(self, job_name: str) -> int:
+        job_dir = self.jobs_dir / job_name
+        if not job_dir.is_dir():
+            return 0
+        count = 0
+        for trial_name in self._list_trial_names(job_name):
+            result = self._read_json(job_dir / trial_name / "result.json")
+            if _trial_result_error(result) is not None:
+                count += 1
+        return count
+
+    def retry_failed(self, job_name: str) -> dict[str, Any]:
+        """Re-run only the failed trials in-place.
+
+        Failed trials also write ``result.json``, so Harbor's resume would skip
+        them. We delete the failed trial dirs, reset job-level completion and
+        reporting, then re-dispatch the *identical* generated config — Harbor
+        preserves the succeeded trials and re-runs just the deleted ones.
+        """
+        _validate_job_name(job_name)
+        job_dir = self.jobs_dir / job_name
+        if not job_dir.is_dir():
+            raise ValueError("Job not found: {}".format(job_name))
+
+        with self._guard:
+            record = self._launches.get(job_name)
+        if record is not None and record.status in {"queued", "running"}:
+            raise ValueError("Job is still running")
+
+        failed_dirs = [
+            job_dir / trial_name
+            for trial_name in self._list_trial_names(job_name)
+            if _trial_result_error(self._read_json(job_dir / trial_name / "result.json"))
+            is not None
+        ]
+        if not failed_dirs:
+            return {"jobName": job_name, "retried": 0}
+
+        meta = self._read_json(self._launch_meta_path(job_name))
+        if not meta:
+            raise ValueError(
+                "Cannot retry: launch metadata is unavailable for {}".format(job_name)
+            )
+        config_rel = str(meta.get("configPath") or "")
+        config_path = self.repo_root / config_rel if config_rel else None
+        if config_path is None or not config_path.is_file():
+            raise ValueError(
+                "Cannot retry: generated config is unavailable for {}".format(job_name)
+            )
+
+        for trial_dir in failed_dirs:
+            shutil.rmtree(trial_dir, ignore_errors=True)
+        # Reset job-level completion + reporting so status and reporting recompute.
+        (job_dir / "result.json").unlink(missing_ok=True)
+        reporting_status_artifact_path(job_dir).unlink(missing_ok=True)
+        with self._status_guard:
+            self._status_states.pop(job_name, None)
+
+        plane = str(meta.get("executionPlane") or "harbor")
+        with self._guard:
+            self._launches[job_name] = HarborLaunchRecord(
+                job_name=job_name,
+                status="queued",
+                config_path=config_rel or None,
+                started_at=_utc_now(),
+                execution_plane=plane,
+            )
+
+        if meta.get("useLocalDistributed"):
+            self._executor.submit(
+                self._run_local_distributed,
+                job_name,
+                meta.get("jobConfig") or {},
+                meta.get("surveyTaskPath"),
+                meta.get("chatTaskPath"),
+                meta.get("chatDomain"),
+                meta.get("chatApplicationId"),
+                meta.get("chatApplicationContext"),
+                meta.get("chatMaxTurns"),
+                meta.get("trialProfile"),
+            )
+        else:
+            dispatch_kwargs = (
+                job_name,
+                config_path,
+                meta.get("surveyTaskPath"),
+                meta.get("chatTaskPath"),
+                meta.get("osAppSubmissionProfile"),
+                meta.get("chatDomain"),
+                meta.get("chatApplicationId"),
+                meta.get("chatApplicationContext"),
+                meta.get("chatMaxTurns"),
+                meta.get("trialProfile"),
+            )
+            if plane == "remote":
+                self._executor.submit(self._dispatch_remote, *dispatch_kwargs)
+            else:
+                self._executor.submit(self._run_harbor, *dispatch_kwargs)
+
+        return {"jobName": job_name, "retried": len(failed_dirs)}
 
     def get_trial_debrief(self, job_name: str, trial_name: str) -> dict[str, Any]:
         from backend.service.harbor_trial_debrief import map_trial_debrief

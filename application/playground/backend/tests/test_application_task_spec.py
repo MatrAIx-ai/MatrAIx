@@ -54,7 +54,7 @@ def test_canonical_survey_task_shape() -> None:
     task = TASKS_ROOT / "example-survey_product-feedback"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
-    assert raw["task"]["name"] == "application/survey-product-feedback"
+    assert raw["task"]["name"] == "application/product-feedback"
     assert raw["metadata"]["type"] == "survey"
     assert raw["metadata"]["domain"] == "software"
     assert "/app/output" in raw["artifacts"]
@@ -87,7 +87,7 @@ def test_canonical_chatbot_task_shape() -> None:
     sidecar = ENVIRONMENTS_ROOT / "chatbot-api-sidecar_recai"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
-    assert raw["task"]["name"] == "application/chat-recai"
+    assert raw["task"]["name"] == "application/recai"
     assert raw["metadata"]["type"] == "chatbot"
     assert raw["metadata"]["domain"] == "commerce-retail"
     assert raw["environment"]["definition"] == "application/shared-chat-persona"
@@ -104,7 +104,7 @@ def test_canonical_web_task_shape() -> None:
     env = ENVIRONMENTS_ROOT / "shared-web-playwright"
     raw = tomllib.loads((task / "task.toml").read_text(encoding="utf-8"))
 
-    assert raw["task"]["name"] == "application/web-playwright-quote-choice"
+    assert raw["task"]["name"] == "application/playwright-quote-choice"
     assert raw["metadata"]["type"] == "web"
     assert raw["metadata"]["domain"] == "arts-culture"
     assert raw["environment"]["definition"] == "application/shared-web-playwright"

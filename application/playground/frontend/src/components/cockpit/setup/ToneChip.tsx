@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type ToneChipTone = "primary" | "accent" | "secondary" | "warn" | "danger";
+export type ToneChipTone = "neutral" | "primary" | "accent" | "secondary" | "warn" | "danger";
 
 export interface ToneChipProps {
   tone: ToneChipTone;
@@ -15,6 +15,7 @@ export interface ToneChipProps {
 }
 
 const TONE_CLASS: Record<ToneChipTone, string> = {
+  neutral: "",
   primary: "tone-chip--primary",
   accent: "tone-chip--accent",
   secondary: "tone-chip--secondary",

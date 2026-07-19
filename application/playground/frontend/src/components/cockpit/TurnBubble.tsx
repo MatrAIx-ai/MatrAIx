@@ -29,17 +29,18 @@ function isHiccup(message: string | null | undefined): boolean {
 export interface PersonaBubbleProps {
   message: string;
   personaId?: string | null;
+  personaName?: string | null;
   personaDimensions?: Record<string, string>;
 }
 
 /** The persona's message: left-aligned, on a bordered surface. */
-export function PersonaBubble({ message, personaId, personaDimensions }: PersonaBubbleProps) {
+export function PersonaBubble({ message, personaId, personaName, personaDimensions }: PersonaBubbleProps) {
   return (
     <div className="flex w-full items-start gap-2.5 pr-10">
       <PersonaChatAvatar personaId={personaId} dimensions={personaDimensions} />
       <div className="flex min-w-0 flex-1 flex-col items-start">
-        <div className="hud mb-1.5 text-[11px] text-text-dim">Persona</div>
-        <div className="w-full break-words rounded-md rounded-tl-sm border border-outline bg-surface px-4 py-3 text-[15px] leading-relaxed text-text-main">
+        <div className="hud mb-1.5 text-[11px] text-text-dim">{personaName?.trim() || "Persona"}</div>
+        <div className="glass-tile w-full break-words rounded-md rounded-tl-sm px-4 py-3 text-[15px] leading-relaxed text-text-main">
           {message?.trim() ? message : <span className="italic text-text-dim">(the user said nothing)</span>}
         </div>
       </div>
@@ -77,7 +78,7 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
       <div className="flex max-w-full items-start gap-2.5">
         <div className="flex min-w-0 flex-col items-end">
           <div className="hud mb-1.5 text-[11px] text-primary">{appName}</div>
-          <div className="max-w-full rounded-md rounded-tr-sm border border-outline bg-surface px-4 py-4">
+          <div className="glass-tile max-w-full rounded-md rounded-tr-sm px-4 py-4">
             {!hiccup ? (
               <Markdown
                 className={`text-[15px] leading-relaxed text-text-main ${
@@ -113,17 +114,15 @@ export function RecBotBubble({ turn, domain, appName, foldOpen, onToggleFold }: 
             <div className="mt-2.5 flex items-center gap-2">
               {hasPlan && (
                 <span
-                  className={`hud rounded border px-2 py-1 text-[11px] ${
-                    planFailed
-                      ? "border-danger/25 bg-danger/10 text-danger"
-                      : "border-secondary/25 bg-secondary/10 text-secondary"
+                  className={`hud rounded px-2 py-1 text-[11px] ${
+                    planFailed ? "bg-danger/10 text-danger" : "bg-secondary/10 text-secondary"
                   }`}
                 >
                   {planFailed ? "Tool call failed" : "Tool call OK"}
                 </span>
               )}
               {latency && (
-                <span className="hud flex items-center gap-1 rounded border border-outline px-2 py-1 text-[11px] text-text-dim">
+                <span className="glass-tile hud flex items-center gap-1 rounded px-2 py-1 text-[11px] text-text-dim">
                   <Sym name="timer" size={11} />
                   {latency}
                 </span>

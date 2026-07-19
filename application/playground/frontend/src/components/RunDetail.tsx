@@ -74,7 +74,8 @@ function runDebriefMetaLine(run: RunDetailView, appType: RunApplicationType): st
   } else if (appType === "os-app") {
     parts.push(run.taskTitle || "OS app task");
   } else {
-    const app = appName(run.config?.applicationId);
+    const applicationId = run.config?.applicationId?.trim() || null;
+    const app = applicationId ? appName(applicationId) : run.taskTitle || appName(null);
     const domain = run.config?.domain ? `${fmtDomain(run.config.domain)} catalog` : "";
     parts.push(domain ? `${app} · ${domain}` : app);
   }
@@ -109,23 +110,6 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
         compact
         eyebrow="MatrAIx · Runs"
         title={metaLine || harborTrial.trialName}
-        subtitle={
-          <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-text-variant">
-            <span className="font-mono text-[12px] opacity-70" title={harborTrial.trialName}>
-              {harborTrial.trialName}
-            </span>
-            <span className="text-outline" aria-hidden>·</span>
-            <span className="font-mono text-[12px] opacity-70" title={harborTrial.jobName}>
-              {harborTrial.jobName}
-            </span>
-            {absoluteWhen ? (
-              <>
-                <span className="text-outline" aria-hidden>·</span>
-                <span className="text-[12px]" title={absoluteWhen}>{fmtRunDateFriendly(absoluteWhen)}</span>
-              </>
-            ) : null}
-          </span>
-        }
         meta={run ? <AppTypeTag type={appType} /> : null}
         actions={
           <>
@@ -150,6 +134,11 @@ export function RunDetail({ harborTrial, onBack }: RunDetailProps) {
           </>
         }
       />
+
+      <p className="-mt-2 mb-3.5 break-all font-mono text-[12px] leading-relaxed text-text-dim">
+        {harborTrial.trialName} · {harborTrial.jobName}
+        {absoluteWhen ? ` · ${fmtRunDateFriendly(absoluteWhen)}` : ""}
+      </p>
 
       {query.isLoading ? (
         <DetailLoading />
@@ -374,7 +363,7 @@ function UserFeedbackPanel({
         </DashedNote>
       ) : (
         <div className="space-y-4">
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             Subjective reflection captured after task completion from{" "}
             <span className="font-mono">user_feedback.json</span>.
           </p>
@@ -393,7 +382,7 @@ function UserFeedbackPanel({
             {effort != null ? <StatTile caption="Effort" value={effort} /> : null}
             {clarity != null ? <StatTile caption="Next step clarity" value={clarity} /> : null}
             {feltUnderstood != null ? (
-              <div className="flex flex-col justify-center rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm">
+              <div className="flex flex-col justify-center rounded-lg glass-tile p-4 backdrop-blur-sm">
                 <span className="hud text-[11px] text-text-dim">Felt understood</span>
                 <div className="mt-1.5">
                   <ValidityBadge
@@ -411,7 +400,7 @@ function UserFeedbackPanel({
               {extraEntries.map(([key, value]) => (
                 <div
                   key={key}
-                  className="rounded-lg border border-outline/40 bg-surface/40 p-3 backdrop-blur-sm"
+                  className="rounded-lg glass-tile p-3 backdrop-blur-sm"
                 >
                   <div className="text-[12px] uppercase tracking-wide text-text-dim">
                     {humanizeFeedbackKey(key)}
@@ -425,7 +414,7 @@ function UserFeedbackPanel({
           ) : null}
 
           {reason ? (
-            <div className="rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm">
+            <div className="rounded-lg glass-tile p-4 backdrop-blur-sm">
               <div className="text-[12px] uppercase tracking-wide text-text-dim">
                 Reasoning
               </div>
@@ -465,6 +454,7 @@ function ChatbotDebrief({ run }: { run: RunDetailView }) {
         metricScores={run.metricScores}
         verifier={run.verifier}
         trialEvaluation={run.trialEvaluation}
+        taskTitle={run.taskTitle}
       />
     </TrialDebriefChrome>
   );
@@ -512,13 +502,13 @@ function SurveyDebrief({ run }: { run: RunDetailView }) {
       <DebriefPanel bodyClassName="p-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <StatTile lead caption="Questions answered" value={`${c.numAnswered}/${c.numQuestions}`} />
-          <div className="flex flex-col justify-center rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm">
+          <div className="flex flex-col justify-center rounded-lg glass-tile p-4 backdrop-blur-sm">
             <span className="hud text-[11px] text-text-dim">Answers look valid</span>
             <div className="mt-1.5">
               <ValidityBadge valid={c.valid} validLabel="Valid" invalidLabel="Needs review" />
             </div>
           </div>
-          <div className="flex flex-col justify-center rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm">
+          <div className="flex flex-col justify-center rounded-lg glass-tile p-4 backdrop-blur-sm">
             <span className="hud text-[11px] text-text-dim">Question types</span>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {typeCounts.length === 0 ? (
@@ -640,7 +630,7 @@ function SurveyAnswerRow({
       <SurveyAnswerVisual answer={answer} question={question} />
 
       {answer.rationale ? (
-        <p className="mt-3 rounded-lg border border-outline/30 bg-surface/25 px-3 py-2 text-[13px] leading-relaxed text-text-variant">
+        <p className="mt-3 glass-tile glass-tile--dim rounded-lg px-3 py-2 text-[14px] leading-relaxed text-text-variant">
           {singleChoice || likert ? "Why: " : ""}
           {answer.rationale}
           {conf != null && (
@@ -761,7 +751,7 @@ function SurveyAnswerVisual({
 
   const fallback = fmtAnswerValue(answer.value, question);
   return (
-    <p className="rounded-lg border border-outline/30 bg-surface/35 px-3 py-2 text-[14px] leading-relaxed text-text-main break-words">
+    <p className="glass-tile rounded-lg px-3 py-2 text-[14px] leading-relaxed text-text-main break-words">
       {fallback || "(no answer)"}
     </p>
   );
@@ -809,7 +799,7 @@ function SurveyTrajectoryMilestone({ event }: { event: SurveyTrajectoryEvent }) 
             </span>
           ) : null}
         </div>
-        {detail ? <p className="mt-0.5 text-[13px] leading-snug text-text-variant">{detail}</p> : null}
+        {detail ? <p className="mt-0.5 text-[14px] leading-snug text-text-variant">{detail}</p> : null}
       </div>
     </div>
   );
@@ -832,7 +822,7 @@ function SurveyTrajectoryQaCard({
   return (
     <div className="relative flex items-start gap-3 py-1.5 pl-1">
       <span className="relative z-[1] mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-primary" />
-      <div className="min-w-0 flex-1 rounded-lg border border-outline/35 bg-surface/40 px-2.5 py-2">
+      <div className="min-w-0 flex-1 glass-tile rounded-lg px-2.5 py-2">
         <div className="flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-1.5">
             <span className="hud text-[11px] text-primary">{index != null ? `Q${index}` : "Q"}</span>
@@ -944,9 +934,9 @@ function WebDebrief({ run }: { run: RunDetailView }) {
             />
           </div>
 
-          <div className="flex items-center gap-4 rounded-lg border border-outline/40 bg-surface/40 p-4 backdrop-blur-sm lg:col-span-7">
+          <div className="flex items-center gap-4 rounded-lg glass-tile p-4 backdrop-blur-sm lg:col-span-7">
             <div
-              className="grid h-12 w-12 shrink-0 place-items-center rounded-lg border border-outline/40 bg-surface-high/80"
+              className="grid h-12 w-12 shrink-0 place-items-center glass-tile rounded-lg"
               aria-hidden
             >
               <Sym name="inventory_2" size={22} className="text-primary" />
@@ -962,7 +952,7 @@ function WebDebrief({ run }: { run: RunDetailView }) {
                 <div className="mt-0.5 font-mono text-[12px] text-text-dim">{result.selectedProductId}</div>
               )}
               {result.reason && (
-                <p className="mt-1 text-[13px] leading-snug text-text-variant">
+                <p className="mt-1 text-[14px] leading-snug text-text-variant">
                   Why this one: {result.reason}
                 </p>
               )}
@@ -1012,7 +1002,7 @@ function TrialDecisionPanel({
         {contexts.map((ctx) => (
           <div
             key={ctx.key}
-            className="rounded-lg border border-outline/40 bg-surface/40 p-3 backdrop-blur-sm"
+            className="rounded-lg glass-tile p-3 backdrop-blur-sm"
           >
             <div className="flex items-center gap-2 text-[12px] font-medium uppercase tracking-wide text-text-dim">
               {ctx.label}
@@ -1024,7 +1014,7 @@ function TrialDecisionPanel({
                   <div key={f.key}>
                     <div className="text-[11px] text-text-dim">{f.label}</div>
                     <div
-                      className={`mt-0.5 text-[13px] leading-relaxed ${
+                      className={`mt-0.5 text-[14px] leading-relaxed ${
                         f.role === "explanation"
                           ? "col-span-full text-text-variant"
                           : f.role === "primary"
@@ -1106,7 +1096,7 @@ function DetailLoading() {
 function DetailNotFound() {
   return (
     <StudioGlassPanel className="px-6 py-14 text-center rise-in">
-      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md border border-dashed border-outline bg-surface-high">
+      <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md glass-tile">
         <Sym name="search_off" size={26} className="text-text-dim" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
@@ -1128,7 +1118,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
       : "Something went wrong loading the details. Try again in a moment.";
   return (
     <StudioGlassPanel className="border-l-4 border-l-danger px-5 py-8 text-center rise-in">
-      <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md border border-danger/30 bg-danger/10">
+      <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
@@ -1140,7 +1130,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
       <button
         type="button"
         onClick={onRetry}
-        className={`mt-4 inline-flex items-center gap-1.5 rounded-md border border-danger/40 bg-danger/10 px-4 py-2 text-[14px] text-danger transition ease-out hover:border-danger/60 hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
+        className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-danger/10 px-4 py-2 text-[14px] text-danger transition ease-out hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
         Try again

@@ -133,8 +133,8 @@ export function VerifierStrip({ verifier }: { verifier: VerifierSummary }) {
   const passed = verifier.passed;
   return (
     <div
-      className={`mt-3 rounded-md border px-3 py-2 ${
-        passed ? "border-secondary/40 bg-secondary/10" : "border-danger/40 bg-danger/10"
+      className={`mt-3 rounded-md px-3 py-2 ${
+        passed ? "bg-secondary/10" : "bg-danger/10"
       }`}
     >
       <div className="flex items-center gap-2">
@@ -157,7 +157,7 @@ export function VerifierStrip({ verifier }: { verifier: VerifierSummary }) {
 
 function MetricTile({ value, caption }: { value: string; caption: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-md border border-outline bg-surface py-2.5">
+    <div className="glass-tile flex flex-col items-center justify-center rounded-md py-2.5">
       <span className="font-display text-[22px] font-bold tabular-nums text-text-main">{value}</span>
       <span className="mt-0.5 text-center hud text-[12px] leading-tight text-text-dim">{caption}</span>
     </div>
@@ -215,18 +215,16 @@ export function WebEvalScorecard({ webResult, verifier, phase }: WebEvalScorecar
         <CriterionRow label="Was it easy to use?" score={webResult.easeOfUse} max={10} />
       </div>
 
-      <div className="flex items-start gap-3 rounded-md border border-outline bg-surface px-3 py-2.5">
-        <div className="grid h-10 w-10 shrink-0 place-items-center rounded border border-outline bg-surface-high">
+      <div className="glass-tile flex items-start gap-3 rounded-md px-3 py-2.5">
+        <div className="glass-tile grid h-10 w-10 shrink-0 place-items-center rounded">
           <Sym name="inventory_2" size={20} className="text-primary" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[15px] font-semibold text-text-main">{webResult.selectedProductName}</span>
             <span
-              className={`hud rounded border px-1.5 py-0.5 text-[11px] ${
-                webResult.valid
-                  ? "border-secondary/30 bg-secondary/10 text-secondary"
-                  : "border-danger/30 bg-danger/10 text-danger"
+              className={`hud rounded px-1.5 py-0.5 text-[11px] ${
+                webResult.valid ? "bg-secondary/10 text-secondary" : "bg-danger/10 text-danger"
               }`}
             >
               {webResult.valid ? "Complete" : "Incomplete"}

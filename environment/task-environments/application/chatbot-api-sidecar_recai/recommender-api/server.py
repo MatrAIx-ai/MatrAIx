@@ -183,6 +183,17 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/health":
             self._send(HTTPStatus.OK, {"status": "ok", "sessions": len(SESSIONS)})
             return
+        if parsed.path in {"/ready", "/v1/ready"}:
+            # Thin stub: session + message handlers are in-process and always loaded.
+            self._send(
+                HTTPStatus.OK,
+                {
+                    "status": "ready",
+                    "sessions": len(SESSIONS),
+                    "capabilities": ["text_chat", "session", "recommendations"],
+                },
+            )
+            return
         if parsed.path == "/v1/conversation":
             self._send(HTTPStatus.OK, get_conversation(session_id))
             return

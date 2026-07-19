@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/chat-api-support-chatbot"
+name = "application/api-support-chatbot"
 
 [metadata]
 difficulty = "easy"

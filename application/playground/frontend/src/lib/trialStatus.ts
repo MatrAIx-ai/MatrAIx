@@ -78,8 +78,11 @@ export function deriveHarborJobListStatus(
 
   const trialCount = job.trialCount ?? 0;
   const completed = job.completedTrials ?? 0;
-  if (trialCount > 0 && completed < trialCount) return "running";
-  return "running";
+  // Without an explicit backend status or a job-level result, treat a fully
+  // completed cohort as success and anything else as terminal rather than
+  // reporting a stale, never-ending "running".
+  if (trialCount > 0 && completed >= trialCount) return "success";
+  return "failed";
 }
 
 const HARBOR_JOB_STATUS_LABEL: Record<"running" | "success" | "failed", string> = {
