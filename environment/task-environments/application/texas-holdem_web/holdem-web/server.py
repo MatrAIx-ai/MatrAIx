@@ -19,19 +19,20 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.mount("/static", StaticFiles(directory="static"), name="static")
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 _state: Optional[g.GameState] = None
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "game": "texas-holdem"}
 
 
 @app.get("/", response_class=HTMLResponse)
 def root():
-    return FileResponse("static/index.html")
+    return FileResponse(str(STATIC_DIR / "index.html"))
 
 
 @app.post("/new-game")

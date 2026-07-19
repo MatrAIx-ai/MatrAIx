@@ -4,10 +4,79 @@ import json
 import os
 import re
 from pathlib import Path
+import yaml
 
 OUTPUT = Path(os.environ.get("MATRIX_OUTPUT_DIR", "/app/output")) / "holdem_result.json"
 
 GAME_ID = "texas-holdem-heads-up-v1"
+
+
+def _load_persona() -> dict:
+    persona_dir = Path(os.environ.get(
+        "PERSONA_INPUT_DIR",
+        os.environ.get("MATRIX_INPUT_DIR", "/app/input")
+    ))
+    path = persona_dir / "persona.yaml"
+    if path.is_file():
+        try:
+            return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        except Exception:
+            return {}
+    return {}
+
+
+def _compute_persona_consistency(data: dict) -> dict:
+    persona = _load_persona()
+    dims = persona.get("dimensions", {}) if isinstance(persona, dict) else {}
+    if not dims:
+        return {"score": 1.0, "breakdown": {"no_persona_data": True}}
+    scores = []
+    risk_map = {
+        ("Low", "risk_averse"): 1.0, ("Low", "balanced"): 0.5,
+        ("Low", "risk_seeking"): 0.0, ("Low", "opportunistic"): 0.0,
+        ("Moderate", "balanced"): 1.0, ("Moderate", "risk_averse"): 0.5,
+        ("Moderate", "risk_seeking"): 0.5,
+        ("High", "risk_seeking"): 1.0, ("High", "opportunistic"): 1.0,
+        ("High", "balanced"): 0.5, ("High", "risk_averse"): 0.0,
+        ("Risk-averse", "risk_averse"): 1.0, ("Risk-averse", "balanced"): 0.5,
+        ("Risk-averse", "risk_seeking"): 0.0, ("Risk-tolerant", "risk_seeking"): 1.0,
+        ("Risk-tolerant", "balanced"): 0.5, ("Risk-tolerant", "risk_averse"): 0.0,
+        ("Cautious", "risk_averse"): 1.0, ("Cautious", "balanced"): 0.5,
+        ("Balanced", "balanced"): 1.0, ("Balanced", "risk_averse"): 0.5,
+    }
+    rt, rp = dims.get("risk_tolerance"), data.get("risk_posture")
+    if rt and rp:
+        scores.append(("risk_alignment", risk_map.get((rt, rp), 0.5)))
+
+    dec_map = {
+        ("Analytical", "deep_research"): 1.0, ("Analytical", "compared_multiple"): 1.0,
+        ("Analytical", "hesitant"): 0.5, ("Analytical", "quick_pick"): 0.0,
+        ("Impulsive", "quick_pick"): 1.0, ("Impulsive", "compared_multiple"): 0.5,
+        ("Impulsive", "hesitant"): 0.0, ("Impulsive", "deep_research"): 0.0,
+        ("Cautious", "hesitant"): 1.0, ("Cautious", "deep_research"): 0.5,
+        ("Cautious", "compared_multiple"): 0.5, ("Cautious", "quick_pick"): 0.0,
+        ("Intuitive", "quick_pick"): 0.5, ("Intuitive", "compared_multiple"): 0.5,
+        ("Intuitive", "hesitant"): 0.5, ("Intuitive", "deep_research"): 0.5,
+        ("Deliberative", "deep_research"): 1.0, ("Deliberative", "compared_multiple"): 1.0,
+    }
+    ds, es = dims.get("decision_style"), data.get("exploration_style")
+    if ds and es:
+        scores.append(("decision_alignment", dec_map.get((ds, es), 0.5)))
+
+    if not scores:
+        return {"score": 1.0, "breakdown": {"no_mappable_dims": True}}
+    avg = round(sum(s for _, s in scores) / len(scores), 2)
+    return {"score": avg, "breakdown": {n: s for n, s in scores}}
+
+
+def _compute_aggression_frequency(data: dict) -> float:
+    actions = []
+    for acts in data.get("street_actions", {}).values():
+        if isinstance(acts, list):
+            actions.extend(acts)
+    if not actions:
+        return 0.0
+    return round(sum(1 for a in actions if a in ("raise", "bet")) / len(actions), 2)
 
 VALID_HAND_RANKS = {
     "straight_flush",
@@ -286,6 +355,20 @@ def _contexts(*, data: dict) -> list[dict]:
                     "role": "evidence",
                     "kind": "numerical",
                     "value": seed,
+                },
+                {
+                    "key": "persona_consistency_score",
+                    "label": "Persona-behavior consistency",
+                    "role": "score",
+                    "kind": "numerical",
+                    "value": _compute_persona_consistency(data)["score"],
+                },
+                {
+                    "key": "aggression_frequency",
+                    "label": "Aggression frequency",
+                    "role": "evidence",
+                    "kind": "numerical",
+                    "value": _compute_aggression_frequency(data),
                 },
             ],
         },

@@ -1,0 +1,13 @@
+schemaVersion: "1.0"
+jobName: texas-holdem-r3-production-1000-persona
+applicationType: texas-holdem_web
+n_concurrent_trials: 16
+n_attempts: 1
+agents:
+  - name: persona-texas-holdem
+    model_name: claude-sonnet-4-20250514
+    config:
+      max_tokens: 4096
+personaStrategy: application/tasks/texas-holdem_web/persona_strategy.json
+personaPoolSize: 1000
+personaPoolPath: persona/datasets/_generated/bench-dev-1000

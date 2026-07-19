@@ -1,0 +1,13 @@
+schemaVersion: "1.0"
+jobName: texas-holdem-r1-demo-8-persona
+applicationType: texas-holdem_web
+n_concurrent_trials: 4
+n_attempts: 1
+agents:
+  - name: persona-texas-holdem
+    model_name: claude-sonnet-4-20250514
+    config:
+      max_tokens: 4096
+personaStrategy: application/tasks/texas-holdem_web/persona_strategy.json
+personaPoolSize: 8
+personaPoolPath: persona/datasets/_generated/strategy-texas-holdem

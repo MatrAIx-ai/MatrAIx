@@ -70,6 +70,23 @@
               "valueType": "boolean"
             }
           ]
+        },
+        {
+          "id": "decision.persona_alignment_judge",
+          "title": "Persona-behavior alignment judge",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "risk_posture",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Evaluate whether the persona played consistent with their specified risk posture and decision style.",
+          "rubric": "Mark true if the gameplay actions and reasoning reflect their stated persona dimensions.",
+          "signals": [
+            {
+              "key": "persona_consistency_signal",
+              "label": "Persona behavioral consistency",
+              "valueType": "boolean"
+            }
+          ]
         }
       ]
     },
