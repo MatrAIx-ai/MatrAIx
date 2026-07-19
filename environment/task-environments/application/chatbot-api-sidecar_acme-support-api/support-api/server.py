@@ -57,6 +57,27 @@ def _bot_reply(customer_message: str) -> str:
     )
 
 
+@app.get("/health")
+@app.get("/v1/health")
+def health():
+    return jsonify({"status": "ok"})
+
+
+@app.get("/ready")
+@app.get("/v1/ready")
+def ready():
+    # Exercise the reply path so Service up means the bot can answer.
+    sample = _bot_reply("hello")
+    if not str(sample).strip():
+        return jsonify({"status": "error", "detail": "empty bot reply"}), 503
+    return jsonify(
+        {
+            "status": "ready",
+            "capabilities": ["text_chat", "conversation"],
+        }
+    )
+
+
 @app.post("/v1/messages")
 def post_message():
     payload = request.get_json(silent=True) or {}

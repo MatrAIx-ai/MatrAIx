@@ -365,8 +365,8 @@ export function TaskSelectionRail({
                         serviceUp
                           ? card.statusDetail ??
                             (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
-                              ? "MCP server is reachable."
-                              : "Chat API is reachable.")
+                              ? "MCP server is ready."
+                              : "Chat API is ready (capability check passed).")
                           : canStart
                             ? card.transport === "mcp_sidecar" || card.transport === "mcp_external"
                               ? "Start local MCP sidecar."
@@ -384,8 +384,8 @@ export function TaskSelectionRail({
                       <p className="mt-1 text-[13px] leading-relaxed text-text-variant">
                         {card.statusDetail ??
                           (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
-                            ? "MCP-backed task; no local HTTP health toggle is available."
-                            : "No HTTP health check is configured for this task.")}
+                            ? "MCP-backed task; no local HTTP readiness toggle is available."
+                            : "No HTTP readiness check is configured for this task.")}
                       </p>
                     </div>
                   )}

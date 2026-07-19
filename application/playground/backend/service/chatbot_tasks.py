@@ -113,9 +113,9 @@ def _task_availability(task_config: ChatbotTaskConfig) -> dict[str, Any]:
                 "canStart": False,
                 "healthUrl": base_url,
                 "statusDetail": (
-                    "Chat API reachable at {}.".format(base_url)
+                    "Chat API ready at {}.".format(base_url)
                     if ok
-                    else "Chat API not reachable at {}.".format(base_url)
+                    else "Chat API not ready at {}.".format(base_url)
                 ),
             }
         if task_config.transport == "mcp":
@@ -123,13 +123,13 @@ def _task_availability(task_config: ChatbotTaskConfig) -> dict[str, Any]:
                 "available": None,
                 "canStart": False,
                 "healthUrl": "",
-                "statusDetail": "MCP-backed task; no HTTP health check is configured.",
+                "statusDetail": "MCP-backed task; no HTTP readiness check is configured.",
             }
         return {
             "available": None,
             "canStart": False,
             "healthUrl": "",
-            "statusDetail": "No HTTP health check is configured for this chatbot task.",
+            "statusDetail": "No HTTP readiness check is configured for this chatbot task.",
         }
     return {
         "available": status["ok"],
