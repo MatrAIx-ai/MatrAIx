@@ -10,50 +10,30 @@ export function StudioMeshShell({ children }: { children: ReactNode }) {
 }
 
 export interface StudioPageHeaderProps {
-  eyebrow: string;
+  /** Deprecated — no longer rendered; the top nav already gives context. */
+  eyebrow?: string;
   title: string;
   subtitle?: ReactNode;
   actions?: ReactNode;
   meta?: ReactNode;
-  /** Tighter title block for dense list pages (Runs, etc.). */
+  /** Deprecated — the header is always dense now. */
   compact?: boolean;
 }
 
-export function StudioPageHeader({
-  eyebrow,
-  title,
-  subtitle,
-  actions,
-  meta,
-  compact = false,
-}: StudioPageHeaderProps) {
+/** Dense one-line page header: title · subtitle inline, meta/actions right. */
+export function StudioPageHeader({ title, subtitle, actions, meta }: StudioPageHeaderProps) {
   return (
-    <div
-      className={`flex flex-wrap items-center gap-x-3 ${compact ? "mb-3 gap-y-1" : "mb-5 items-start gap-y-3"}`}
-    >
-      <div className="min-w-0 flex-1">
-        <span className={`hud text-primary ${compact ? "text-[11px]" : "text-[12px]"}`}>{eyebrow}</span>
-        <h1
-          className={`font-display font-bold tracking-tight text-text-main ${
-            compact ? "text-[20px] leading-tight" : "text-[22px]"
-          }`}
-        >
-          {title}
-        </h1>
-        {subtitle && (
-          <p
-            className={
-              compact
-                ? "mt-0.5 truncate text-[14px] leading-snug text-text-variant"
-                : "mt-1.5 text-[15px] leading-relaxed text-text-variant"
-            }
-          >
-            {subtitle}
-          </p>
-        )}
-      </div>
+    <div className="mb-3.5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+      <h1 className="shrink-0 font-display text-[19px] font-bold leading-tight tracking-tight text-text-main">
+        {title}
+      </h1>
+      {subtitle && (
+        <div className="min-w-0 flex-1 basis-64 text-[13.5px] leading-snug text-text-variant">
+          {subtitle}
+        </div>
+      )}
       {meta}
-      {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
+      {actions && <div className="ml-auto flex flex-wrap items-center gap-2">{actions}</div>}
     </div>
   );
 }
@@ -71,7 +51,7 @@ export function StudioGlassPanel({
 export function StudioPageFrame({ children }: { children: ReactNode }) {
   return (
     <div className="custom-scrollbar min-h-0 flex-1 overflow-auto">
-      <div className="mx-auto w-full max-w-[1180px] px-5 py-6 xl:px-6 xl:py-7">{children}</div>
+      <div className="mx-auto w-full max-w-[1180px] px-5 py-4 xl:px-6 xl:py-5">{children}</div>
     </div>
   );
 }
@@ -92,7 +72,7 @@ export function StudioToolbarButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`flex items-center gap-1.5 rounded-lg border border-outline/50 bg-surface/60 px-3 py-2 text-[14px] text-text-variant backdrop-blur transition ease-out hover:border-primary/40 hover:bg-surface hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
+      className={`glass-tile glass-tile--hover flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[13px] text-text-variant backdrop-blur transition ease-out hover:text-text-main active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-55 ${FOCUS_RING}`}
     >
       {icon && <Sym name={icon} size={16} className={disabled ? "" : ""} />}
       {children}

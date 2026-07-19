@@ -59,10 +59,10 @@ export function CockpitCountField({
               type="button"
               disabled={disabled}
               onClick={() => onChange(preset)}
-              className={`rounded-md border px-2 py-0.5 font-mono text-[12px] transition ${FOCUS_RING} ${
+              className={`rounded-md px-2 py-0.5 font-mono text-[12px] transition ${FOCUS_RING} ${
                 value === preset
-                  ? "border-primary/50 bg-primary/15 text-primary"
-                  : "border-outline/40 text-text-dim hover:border-primary/35 hover:text-text-variant"
+                  ? "glass-tile glass-tile--active text-primary"
+                  : "glass-tile glass-tile--hover text-text-dim hover:text-text-variant"
               }`}
             >
               {preset}

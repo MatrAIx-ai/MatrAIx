@@ -1,16 +1,18 @@
 /**
  * MatrAIx application shell.
  *
- * Routes: Home · Playground · Runs · Persona World.
+ * Routes: Persona World · Task Gallery · Home · Playground · Runs.
  */
 import { useCallback, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { TopBar, type StudioMode } from "@/components/TopBar";
 import { PlaygroundCockpit } from "@/components/cockpit/PlaygroundCockpit";
+import type { PlaygroundTaskType } from "@/components/cockpit/TaskTypeSwitch";
 import { HomeView } from "@/components/HomeView";
 import { PersonaStoreView } from "@/components/PersonaStoreView";
 import { RunsView } from "@/components/RunsView";
+import { TaskGalleryView } from "@/components/TaskGalleryView";
 import { AppFooter } from "@/components/AppFooter";
 
 import { api } from "@/lib/api";
@@ -27,12 +29,12 @@ export default function App() {
   const mode = parseMode(urlState.mode);
   const activeHarborJobId = urlState.harborJob;
   const activeHarborTrialId = urlState.harborTrial;
+  const galleryViewActive = urlState.view === "gallery";
   const storeViewActive = urlState.view === "store";
   const runsViewActive =
     urlState.view === "runs" || activeHarborJobId !== null || activeHarborTrialId !== null;
 
   const [, setPlaygroundDomain] = useState<Domain>("movie");
-  const [playgroundFooter, setPlaygroundFooter] = useState<string>("survey");
 
   const optionsQuery = useQuery<ConfigOptionsResponse>({
     queryKey: ["config", "options"],
@@ -49,6 +51,10 @@ export default function App() {
     });
   }, [setUrlState]);
 
+  const openTaskGallery = useCallback(() => {
+    setUrlState({ view: "gallery", harborJob: null, harborTrial: null });
+  }, [setUrlState]);
+
   const openPersonaStore = useCallback(() => {
     setUrlState({ view: "store", harborJob: null, harborTrial: null });
   }, [setUrlState]);
@@ -56,6 +62,20 @@ export default function App() {
   const openRunsList = useCallback(() => {
     setUrlState({ view: "runs", harborJob: null, harborTrial: null });
   }, [setUrlState]);
+
+  const openInPlayground = useCallback(
+    (taskType: PlaygroundTaskType, taskId: string) => {
+      setUrlState({
+        mode: "playground",
+        view: null,
+        pgTask: taskType,
+        pgTaskId: taskId,
+        harborJob: null,
+        harborTrial: null,
+      });
+    },
+    [setUrlState],
+  );
 
   const openHarborJob = useCallback(
     (jobName: string) => {
@@ -99,32 +119,36 @@ export default function App() {
     [setUrlState],
   );
 
-  const shellFooterContext = storeViewActive
-    ? "persona world"
-    : runsViewActive
-      ? "runs"
-      : mode === "playground"
-        ? playgroundFooter
-        : "home";
-
-  const topBar = (
+  const renderTopBar = (variant: "solid" | "glass" = "solid") => (
     <TopBar
       mode={mode}
       onModeChange={setMode}
       runsActive={runsViewActive}
+      galleryActive={galleryViewActive}
       storeActive={storeViewActive}
       onOpenHome={openHome}
       onOpenRuns={openRunsList}
+      onOpenTaskGallery={openTaskGallery}
       onOpenPersonaStore={openPersonaStore}
+      variant={variant}
     />
   );
+  const topBar = renderTopBar();
+
+  if (galleryViewActive) {
+    return (
+      <div className="flex h-screen flex-col">
+        {topBar}
+        <TaskGalleryView onOpenInPlayground={openInPlayground} />
+      </div>
+    );
+  }
 
   if (storeViewActive) {
     return (
       <div className="flex h-screen flex-col">
         {topBar}
         <PersonaStoreView />
-        <AppFooter context={shellFooterContext} />
       </div>
     );
   }
@@ -142,7 +166,6 @@ export default function App() {
                 onOpenHarborJob={openHarborJob}
                 onOpenHarborTrial={openHarborTrial}
                 onDomainChange={setPlaygroundDomain}
-                onFooterContextChange={setPlaygroundFooter}
               />
             </div>
             <RunsView
@@ -156,7 +179,6 @@ export default function App() {
               backLabel="Back to playground"
             />
           </div>
-          <AppFooter context={shellFooterContext} />
         </div>
       );
     }
@@ -174,17 +196,17 @@ export default function App() {
           onClose={closeRunsView}
           backLabel="Back to home"
         />
-        <AppFooter context={shellFooterContext} />
       </div>
     );
   }
 
   if (mode === "home") {
+    // Home: the stage fills the viewport; top/bottom bars float as glass.
     return (
-      <div className="flex h-screen flex-col">
-        {topBar}
+      <div className="relative flex h-screen flex-col">
+        {renderTopBar("glass")}
         <HomeView onOpenPlayground={() => setMode("playground")} />
-        <AppFooter context={shellFooterContext} />
+        <AppFooter context="home" variant="glass" />
       </div>
     );
   }
@@ -199,10 +221,8 @@ export default function App() {
           onOpenHarborJob={openHarborJob}
           onOpenHarborTrial={openHarborTrial}
           onDomainChange={setPlaygroundDomain}
-          onFooterContextChange={setPlaygroundFooter}
         />
       </div>
-      <AppFooter context={shellFooterContext} />
     </div>
   );
 }

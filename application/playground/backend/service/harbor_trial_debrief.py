@@ -178,6 +178,46 @@ def _task_path_from_trial(trial_dir: Path) -> str | None:
     return None
 
 
+def _task_title_from_trial(repo_root: Path, trial_dir: Path) -> str | None:
+    """UI title for the trial's task, derived from ``[task].name`` in task.toml."""
+    from backend.service.application_task_metadata import title_from_harbor_task_name
+
+    task_rel = _task_path_from_trial(trial_dir)
+    if not task_rel:
+        return None
+    toml_path = repo_root / task_rel / "task.toml"
+    if not toml_path.is_file():
+        return None
+    try:
+        import tomllib
+
+        data = tomllib.loads(toml_path.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return None
+    task_block = data.get("task")
+    name = task_block.get("name") if isinstance(task_block, dict) else None
+    if isinstance(name, str) and name.strip():
+        return title_from_harbor_task_name(name.strip()) or None
+    return None
+
+
+def _chat_application_id_from_trial(repo_root: Path, trial_dir: Path) -> str:
+    """The task-declared chat applicationId (``input/chatbot.yaml``), or ""."""
+    task_rel = _task_path_from_trial(trial_dir)
+    if not task_rel:
+        return ""
+    ensure_harbor_source_imports()
+    try:
+        from playground.chatbot_task_config import load_chatbot_task_config_for_task_path
+
+        cfg = load_chatbot_task_config_for_task_path(task_rel, repo_root=repo_root)
+    except Exception:  # noqa: BLE001
+        return ""
+    if cfg is None:
+        return ""
+    return cfg.runtime_defaults.application_id or cfg.application_id or ""
+
+
 def _application_type_from_task_toml(repo_root: Path, task_rel: str) -> str | None:
     toml_path = repo_root / task_rel / "task.toml"
     if not toml_path.is_file():
@@ -728,6 +768,8 @@ def _map_chatbot_debrief(
     output_dir: Path,
     persona: Persona,
     created_at: str,
+    trial_dir: Path,
+    repo_root: Path,
 ) -> dict[str, Any]:
     ensure_harbor_source_imports()
     from playground.harbor.playground import (
@@ -736,9 +778,13 @@ def _map_chatbot_debrief(
 
     transcript = _read_json(output_dir / "transcript.json")
     domain = str(transcript.get("domain") or "movie")
+    config = PlaygroundConfig(domain=domain, engine="gpt-4o-mini")
+    # The task declares which chat app is under test; never leave the
+    # PlaygroundConfig default ("recai") in the debrief when it is unknown.
+    config.application_id = _chat_application_id_from_trial(repo_root, trial_dir)
     result = build_result_from_harbor_artifacts(
         output_dir=output_dir,
-        config=PlaygroundConfig(domain=domain, engine="gpt-4o-mini"),
+        config=config,
         persona=persona,
         sut_description="Chat application under test.",
         created_at=created_at,
@@ -1360,6 +1406,9 @@ def map_trial_debrief(
                     "outputDir": None,
                     "personaPath": persona_rel,
                 }
+                task_title = _task_title_from_trial(repo_root, trial_dir)
+                if task_title and not debrief.get("taskTitle"):
+                    debrief["taskTitle"] = task_title
                 _enrich_debrief_prompts(
                     debrief,
                     trial_dir=trial_dir,
@@ -1380,6 +1429,9 @@ def map_trial_debrief(
             app_type=app_type,
             persona_rel=persona_rel,
         )
+        task_title = _task_title_from_trial(repo_root, trial_dir)
+        if task_title and not debrief.get("taskTitle"):
+            debrief["taskTitle"] = task_title
         _enrich_debrief_prompts(
             debrief,
             trial_dir=trial_dir,
@@ -1398,6 +1450,8 @@ def map_trial_debrief(
                 output_dir=output_dir,
                 persona=persona,
                 created_at=created_at,
+                trial_dir=trial_dir,
+                repo_root=repo_root,
             )
         else:
             done = _read_chat_done_event(trial_dir)
@@ -1487,6 +1541,9 @@ def map_trial_debrief(
         "outputDir": str(output_dir.relative_to(repo_root)),
         "personaPath": persona_rel,
     }
+    task_title = _task_title_from_trial(repo_root, trial_dir)
+    if task_title and not debrief.get("taskTitle"):
+        debrief["taskTitle"] = task_title
     user_feedback = _read_user_feedback_artifact(trial_dir, output_dir=output_dir)
     if user_feedback is not None:
         debrief["userFeedback"] = user_feedback

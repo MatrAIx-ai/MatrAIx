@@ -16,7 +16,7 @@ _TASK_TOML_TEMPLATE = """version = "1.0"
 artifacts = ["/app/output"]
 
 [task]
-name = "application/survey-{slug}"
+name = "application/{slug}"
 
 [metadata]
 difficulty = "easy"

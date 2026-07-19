@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { Markdown } from "@/components/Markdown";
@@ -36,6 +37,10 @@ export function BenchPersonaDetailPanel({
   className = "",
 }: BenchPersonaDetailPanelProps) {
   const personaId = persona?.personaId ?? null;
+  const [recordOpen, setRecordOpen] = useState(false);
+  useEffect(() => {
+    setRecordOpen(false);
+  }, [personaId]);
   const detailQuery = useQuery({
     queryKey: ["persona-pool-detail", personaId],
     queryFn: () => api.getPersonaPoolPersona(personaId!),
@@ -55,9 +60,11 @@ export function BenchPersonaDetailPanel({
       : roster.primary
     : null;
   const markdown = detailQuery.data?.profileMarkdown?.trim() ?? "";
+  // No `w-full` here: callers control the width (a conflicting width class
+  // used to let the panel swallow the whole row and crush the card grid).
   const shellClass = embedded
     ? `flex h-full min-h-0 w-full flex-col overflow-hidden ${className}`
-    : `glass-panel flex h-full min-h-0 w-full flex-col overflow-hidden rounded-xl border border-outline/40 ${className}`;
+    : `glass-panel flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl ${className}`;
 
   return (
     <aside
@@ -133,8 +140,20 @@ export function BenchPersonaDetailPanel({
         )}
         {markdown ? (
           <div className="mt-4 border-t border-outline/25 pt-4">
-            <p className="cockpit-field-label mb-2 text-[12px] text-text-dim">Record</p>
-            <Markdown className="text-[14px] leading-relaxed text-text-variant">{markdown}</Markdown>
+            <button
+              type="button"
+              onClick={() => setRecordOpen((open) => !open)}
+              aria-expanded={recordOpen}
+              className={`glass-tile glass-tile--hover flex w-full items-center justify-between rounded-md px-3 py-2 ${FOCUS_RING}`}
+            >
+              <span className="cockpit-field-label text-[12px] text-text-dim">Full record</span>
+              <Sym name={recordOpen ? "expand_less" : "expand_more"} size={16} className="text-text-dim" />
+            </button>
+            {recordOpen ? (
+              <Markdown className="custom-scrollbar mt-2 max-h-80 overflow-y-auto text-[13px] leading-relaxed text-text-variant">
+                {markdown}
+              </Markdown>
+            ) : null}
           </div>
         ) : null}
 

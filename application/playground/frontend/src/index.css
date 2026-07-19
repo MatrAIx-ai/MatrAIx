@@ -14,17 +14,18 @@
 :root {
   color-scheme: dark;
 
-  /* Surfaces — page → panels → inputs */
-  --surface-lowest: 14 14 15;   /* header, rails, inset wells */
-  --surface-dim: 19 19 20;      /* page background */
-  --surface-low: 28 27 28;      /* secondary fills, hover */
-  --surface: 32 31 32;          /* panels / cards */
-  --surface-high: 42 42 43;     /* raised chips, icon tiles */
-  --field: 13 13 14;            /* text inputs, code wells */
+  /* Surfaces — page → panels → inputs (neutral black, aligned with Home). */
+  --surface-lowest: 9 9 10;     /* header, rails, inset wells */
+  --surface-dim: 4 4 5;         /* page background — same as Home stage */
+  --surface-low: 17 17 18;      /* secondary fills, hover */
+  --surface: 21 21 22;          /* panels / cards */
+  --surface-high: 30 30 31;     /* raised chips, icon tiles */
+  --field: 11 11 12;            /* text inputs, code wells */
 
-  /* Lines */
-  --outline: 63 72 82;          /* default borders, scrollbar thumb */
-  --outline-dim: 42 42 44;      /* hairlines, dividers */
+  /* Lines — neutral gray, no blue cast; kept faint so separation comes
+     from surface fills, not strokes */
+  --outline: 48 48 52;          /* default borders, scrollbar thumb */
+  --outline-dim: 30 30 32;      /* hairlines, dividers */
 
   /* Brand — same blue ramp in dark and light */
   --primary: 0 118 194;
@@ -73,8 +74,8 @@
   --surface-high: 231 236 241;
   --field: 237 241 245;
 
-  --outline: 203 213 225;
-  --outline-dim: 226 232 240;
+  --outline: 209 214 220;
+  --outline-dim: 229 232 236;
 
   --primary: 0 118 194;
   --primary-dim: 0 92 152;
@@ -189,51 +190,96 @@
   }
 }
 
-/* Cyan glow — RESERVED for the single primary CTA on a view. */
+/* Cyan glow — RESERVED for the single primary CTA on a view. Kept subtle. */
 .glow {
-  box-shadow: 0 10px 34px -10px rgb(var(--primary) / 0.5);
+  box-shadow: 0 8px 24px -10px rgb(var(--primary) / 0.32);
 }
 
 /* Frosted glass panels for the cockpit setup shell. */
 @layer components {
+  /* NASA-panel frosted glass: depth from fill + shadow, no visible stroke. */
   .glass-panel {
-    border: 1px solid rgb(var(--outline) / 0.45);
+    border: 1px solid rgb(var(--outline) / 0.12);
     background: linear-gradient(
       145deg,
-      rgb(var(--surface) / 0.72) 0%,
-      rgb(var(--surface-low) / 0.55) 100%
+      rgb(var(--surface) / 0.78) 0%,
+      rgb(var(--surface-low) / 0.6) 100%
     );
-    backdrop-filter: blur(18px) saturate(1.35);
-    -webkit-backdrop-filter: blur(18px) saturate(1.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     box-shadow:
-      0 1px 0 rgb(255 255 255 / 0.04) inset,
+      0 1px 0 rgb(255 255 255 / 0.05) inset,
       0 18px 48px -28px rgb(0 0 0 / 0.55);
   }
 
   .glass-panel-strong {
-    border: 1px solid rgb(var(--primary) / 0.22);
+    border: 1px solid rgb(var(--outline) / 0.12);
     background: linear-gradient(
       160deg,
-      rgb(var(--surface) / 0.88) 0%,
-      rgb(var(--surface-lowest) / 0.65) 100%
+      rgb(var(--surface) / 0.9) 0%,
+      rgb(var(--surface-lowest) / 0.7) 100%
     );
-    backdrop-filter: blur(22px) saturate(1.5);
-    -webkit-backdrop-filter: blur(22px) saturate(1.5);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.05) inset,
+      0 18px 48px -28px rgb(0 0 0 / 0.5);
   }
 
+  /* Neutral stage everywhere — matches the Home backdrop, no blue wash. */
   .cockpit-mesh-bg {
-    background:
-      radial-gradient(ellipse 75% 50% at 12% -8%, rgb(var(--primary) / 0.1), transparent 55%),
-      radial-gradient(ellipse 60% 45% at 88% 100%, rgb(var(--primary) / 0.06), transparent 50%),
-      rgb(var(--surface-dim));
+    background: rgb(var(--surface-dim));
   }
 
   .glass-panel-rail {
-    border-left: 3px solid rgb(var(--primary) / 0.45);
+    border-left: 2px solid rgb(var(--primary) / 0.16);
     box-shadow:
-      inset 4px 0 20px -16px rgb(var(--primary) / 0.25),
       0 1px 0 rgb(255 255 255 / 0.04) inset,
       0 18px 48px -28px rgb(0 0 0 / 0.55);
+  }
+
+  /* Small frosted tiles — pipeline nodes, cards, chips. Dark: white-glass
+     fill + inset highlight. Light: gray fill + soft drop shadow for depth. */
+  .glass-tile {
+    border: 1px solid transparent;
+    background-color: rgb(255 255 255 / 0.05);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+  }
+
+  :root.light .glass-tile {
+    background-color: rgb(15 30 45 / 0.05);
+    box-shadow:
+      0 1px 2px rgb(15 30 45 / 0.08),
+      0 6px 16px -12px rgb(15 30 45 / 0.22);
+  }
+
+  .glass-tile--hover:hover:not(:disabled) {
+    background-color: rgb(255 255 255 / 0.09);
+  }
+
+  :root.light .glass-tile--hover:hover:not(:disabled) {
+    background-color: rgb(15 30 45 / 0.085);
+  }
+
+  .glass-tile--dim {
+    background-color: rgb(255 255 255 / 0.03);
+  }
+
+  :root.light .glass-tile--dim {
+    background-color: rgb(15 30 45 / 0.03);
+    box-shadow: none;
+  }
+
+  .glass-tile--active {
+    background-color: rgb(var(--primary) / 0.12);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+  }
+
+  :root.light .glass-tile--active {
+    background-color: rgb(var(--primary) / 0.1);
+    box-shadow:
+      0 1px 2px rgb(15 30 45 / 0.1),
+      0 6px 16px -12px rgb(15 30 45 / 0.22);
   }
 
   .cockpit-field-label {
@@ -244,7 +290,7 @@
     color: rgb(var(--text-dim));
   }
 
-  /* Filled tone chips — shared by persona dims, transport, status. */
+  /* Frosted glass tone chips — neutral fill; the tone lives in text + dot. */
   .tone-chip {
     display: inline-flex;
     align-items: center;
@@ -255,6 +301,16 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 1.25;
+    background-color: rgb(255 255 255 / 0.06);
+    color: rgb(var(--text-variant));
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  :root.light .tone-chip {
+    background-color: rgb(15 30 45 / 0.06);
+    box-shadow: 0 1px 2px rgb(15 30 45 / 0.06);
   }
 
   .tone-chip__key {
@@ -293,34 +349,25 @@
     animation: cockpit-chip-pulse 1.4s ease-in-out infinite;
   }
 
+  /* Tone variants keep the neutral glass fill; color lives in the text. */
   .tone-chip--primary {
-    border-color: rgb(var(--primary) / 0.42);
-    background-color: rgb(var(--primary) / 0.22);
-    color: rgb(var(--text-main));
+    color: rgb(var(--primary-light));
   }
 
   .tone-chip--accent {
-    border-color: rgb(var(--accent) / 0.42);
-    background-color: rgb(var(--accent) / 0.22);
-    color: rgb(var(--text-main));
+    color: rgb(var(--accent));
   }
 
   .tone-chip--secondary {
-    border-color: rgb(var(--secondary) / 0.45);
-    background-color: rgb(var(--secondary) / 0.22);
-    color: rgb(var(--text-main));
+    color: rgb(var(--secondary));
   }
 
   .tone-chip--warn {
-    border-color: rgb(var(--warn) / 0.45);
-    background-color: rgb(var(--warn) / 0.22);
-    color: rgb(var(--text-main));
+    color: rgb(var(--warn));
   }
 
   .tone-chip--danger {
-    border-color: rgb(var(--danger) / 0.45);
-    background-color: rgb(var(--danger) / 0.2);
-    color: rgb(var(--text-main));
+    color: rgb(var(--danger));
   }
 
   .tone-chip--primary .tone-chip__dot {
@@ -343,107 +390,63 @@
     background: rgb(var(--danger));
   }
 
+  /* Selected / emphasized — slightly stronger glass + a faint tint. */
   .tone-chip--solid {
     font-weight: 600;
   }
 
-  /* Selected / emphasized — stronger tint, text stays main (not inverted). */
   .tone-chip--solid.tone-chip--primary {
-    border-color: rgb(var(--primary) / 0.58);
-    background-color: rgb(var(--primary) / 0.3);
-    color: rgb(var(--text-main));
-  }
-
-  .tone-chip--solid.tone-chip--accent {
-    border-color: rgb(var(--accent) / 0.58);
-    background-color: rgb(var(--accent) / 0.3);
-    color: rgb(var(--text-main));
-  }
-
-  .tone-chip--solid.tone-chip--secondary {
-    border-color: rgb(var(--secondary) / 0.58);
-    background-color: rgb(var(--secondary) / 0.3);
-    color: rgb(var(--text-main));
-  }
-
-  .tone-chip--solid.tone-chip--warn {
-    border-color: rgb(var(--warn) / 0.58);
-    background-color: rgb(var(--warn) / 0.32);
-    color: rgb(var(--text-main));
-  }
-
-  .tone-chip--solid.tone-chip--danger {
-    border-color: rgb(var(--danger) / 0.58);
-    background-color: rgb(var(--danger) / 0.28);
-    color: rgb(var(--text-main));
-  }
-
-  .tone-chip--muted {
-    border-color: rgb(var(--outline) / 0.45);
-    background-color: rgb(var(--surface-high) / 0.9);
-    color: rgb(var(--text-dim));
-  }
-
-  :root.light .tone-chip--primary {
     background-color: rgb(var(--primary) / 0.14);
   }
 
-  :root.light .tone-chip--accent {
+  .tone-chip--solid.tone-chip--accent {
     background-color: rgb(var(--accent) / 0.14);
   }
 
-  :root.light .tone-chip--secondary {
+  .tone-chip--solid.tone-chip--secondary {
     background-color: rgb(var(--secondary) / 0.14);
   }
 
-  :root.light .tone-chip--warn {
-    background-color: rgb(var(--warn) / 0.16);
+  .tone-chip--solid.tone-chip--warn {
+    background-color: rgb(var(--warn) / 0.14);
   }
 
-  :root.light .tone-chip--danger {
-    background-color: rgb(var(--danger) / 0.12);
+  .tone-chip--solid.tone-chip--danger {
+    background-color: rgb(var(--danger) / 0.14);
   }
 
-  :root.light .tone-chip--solid.tone-chip--primary {
-    background-color: rgb(var(--primary) / 0.2);
-  }
-
-  :root.light .tone-chip--solid.tone-chip--accent {
-    background-color: rgb(var(--accent) / 0.2);
-  }
-
-  :root.light .tone-chip--solid.tone-chip--secondary {
-    background-color: rgb(var(--secondary) / 0.2);
-  }
-
-  :root.light .tone-chip--solid.tone-chip--warn {
-    background-color: rgb(var(--warn) / 0.22);
-  }
-
-  :root.light .tone-chip--solid.tone-chip--danger {
-    background-color: rgb(var(--danger) / 0.16);
+  .tone-chip--muted {
+    color: rgb(var(--text-dim));
   }
 
   .persona-card--selected {
-    border-color: rgb(var(--primary) / 0.55);
-    background-color: rgb(var(--primary) / 0.2);
-    box-shadow:
-      inset 4px 0 0 0 rgb(var(--primary)),
-      0 0 0 1px rgb(var(--primary) / 0.2);
+    border-color: transparent;
+    background-color: rgb(var(--primary) / 0.12);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
   }
 
   :root.light .persona-card--selected {
-    background-color: rgb(var(--primary) / 0.12);
+    background-color: rgb(var(--primary) / 0.1);
+    box-shadow:
+      0 1px 2px rgb(15 30 45 / 0.1),
+      0 6px 16px -12px rgb(15 30 45 / 0.22);
   }
 
   .cockpit-segment {
     display: flex;
     gap: 0.25rem;
     border-radius: 0.375rem;
-    border: 1px solid rgb(var(--outline) / 0.55);
-    background: rgb(var(--surface-low));
+    border: 1px solid transparent;
+    background: rgb(var(--surface-high) / 0.45);
     padding: 0.25rem;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  :root.light .cockpit-segment {
+    background: rgb(15 30 45 / 0.055);
+    box-shadow: 0 1px 2px rgb(15 30 45 / 0.07);
   }
 
   .cockpit-segment--grid {
@@ -479,7 +482,7 @@
   .cockpit-segment__btn--active {
     background-color: rgb(var(--primary));
     color: rgb(var(--on-primary));
-    box-shadow: 0 4px 14px -4px rgb(var(--primary) / 0.65);
+    box-shadow: 0 2px 8px -3px rgb(0 0 0 / 0.4);
   }
 
   @keyframes cockpit-chip-pulse {
@@ -545,6 +548,57 @@
   }
   .animate-rb-pulse {
     animation: rb-pulse 1.4s ease-in-out infinite;
+  }
+
+  /* Batch cohort: soft "alive" heartbeat for running trials. */
+  @keyframes batch-heartbeat-dot {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.75;
+      box-shadow: 0 0 0 0 rgb(251 191 36 / 0.28);
+    }
+    45% {
+      transform: scale(1.18);
+      opacity: 1;
+      box-shadow: 0 0 0 4px rgb(251 191 36 / 0);
+    }
+    70% {
+      transform: scale(1);
+      opacity: 0.8;
+      box-shadow: 0 0 0 0 rgb(251 191 36 / 0);
+    }
+  }
+  .animate-batch-heartbeat-dot {
+    animation: batch-heartbeat-dot 1.45s cubic-bezier(0.45, 0, 0.4, 1) infinite;
+  }
+
+  @keyframes batch-heartbeat-cell {
+    0%,
+    100% {
+      border-color: rgb(251 191 36 / 0.32);
+      box-shadow: 0 8px 22px -14px rgb(251 191 36 / 0.18);
+    }
+    50% {
+      border-color: rgb(251 191 36 / 0.52);
+      box-shadow: 0 10px 26px -12px rgb(251 191 36 / 0.3);
+    }
+  }
+  .animate-batch-heartbeat-cell {
+    animation: batch-heartbeat-cell 1.6s ease-in-out infinite;
+  }
+
+  @keyframes batch-heartbeat-wash {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  .animate-batch-heartbeat-wash {
+    animation: batch-heartbeat-wash 1.6s ease-in-out infinite;
   }
 
   @keyframes rb-spin {
@@ -618,14 +672,62 @@
   /* -------------------------------------------------------------------------
      Landing — centered home (shares cockpit-mesh-bg via StudioMeshShell)
      ------------------------------------------------------------------------- */
+  /* Home stage owns the theme background (CosmicField is transparent overlays). */
+  .landing-home-stage {
+    background: #020406;
+    color: #e8eef2;
+  }
+
+  /* -------------------------------------------------------------------------
+     NASA-panel glass chrome — floating top/bottom bars over the Home stage.
+     Translucent navy glass + blue hairline on dark; frosted paper on light.
+     ------------------------------------------------------------------------- */
+  /* No hairline strokes: depth comes from the frosted fill + soft shadow. */
+  .nasa-glass-bar {
+    background: linear-gradient(180deg, rgb(13 13 15 / 0.66), rgb(6 6 8 / 0.4));
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 0 28px rgb(0 0 0 / 0.3);
+  }
+
+  :root.light .nasa-glass-bar {
+    background: linear-gradient(180deg, rgb(236 241 246 / 0.78), rgb(226 233 240 / 0.5));
+    box-shadow: 0 0 24px rgb(15 30 45 / 0.09);
+  }
+
+  .nasa-glass-pill {
+    background: rgb(255 255 255 / 0.06);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.08),
+      0 2px 12px rgb(0 0 0 / 0.25);
+  }
+
+  :root.light .nasa-glass-pill {
+    background: rgb(255 255 255 / 0.6);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.9),
+      0 2px 10px rgb(15 30 45 / 0.08);
+  }
+
+  :root.light .landing-home-stage {
+    background: linear-gradient(180deg, #d5dee8 0%, #e6edf3 45%, #f2f5f8 100%);
+    color: #11171f;
+  }
+
   .landing-home-hero {
     animation-delay: 0.08s;
   }
 
   .landing-home-globe {
-    width: min(380px, 78vw);
-    height: min(380px, 78vw);
-    opacity: 0.92;
+    width: min(460px, 88vw);
+    height: min(460px, 88vw);
+    opacity: 1;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .landing-home-globe canvas {
+    background: transparent !important;
   }
 
   .landing-home-title {
@@ -634,19 +736,70 @@
     font-weight: 600;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: rgb(var(--text-main));
+    color: #f3f6f8;
   }
 
+  :root.light .landing-home-title {
+    color: #11171f;
+  }
+
+  /* Both themes: muted → mid → brightest blue on the right. */
   .landing-home-title-accent {
-    background: linear-gradient(
-      92deg,
-      rgb(var(--primary-light)) 0%,
-      rgb(var(--primary)) 55%,
-      rgb(var(--accent)) 100%
-    );
+    background: linear-gradient(92deg, #8a9aaa 0%, #4c9abb 45%, #7ec8ea 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  :root.light .landing-home-title-accent {
+    background: linear-gradient(92deg, #26313c 0%, #1f639b 45%, #3ba3e8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .landing-home-subtitle {
+    color: #9aa8b5;
+  }
+
+  :root.light .landing-home-subtitle {
+    color: #64748b;
+  }
+
+  .landing-home-stage .landing-stat-value {
+    color: #f3f6f8;
+    text-shadow: 0 0 36px rgb(255 255 255 / 0.18);
+  }
+
+  :root.light .landing-home-stage .landing-stat-value {
+    color: #0f2435;
+    text-shadow: 0 0 28px rgb(255 255 255 / 0.4);
+  }
+
+  .landing-home-stage .landing-stat-label {
+    color: rgb(168 176 184 / 0.95);
+  }
+
+  :root.light .landing-home-stage .landing-stat-label {
+    color: rgb(70 80 90 / 0.9);
+  }
+
+  .landing-home-stage .landing-cta-primary {
+    background: linear-gradient(180deg, #2a7eb8 0%, #1f639b 100%);
+    box-shadow: 0 0 28px rgb(76 154 187 / 0.35);
+  }
+
+  .landing-home-stage .landing-cta-primary:hover {
+    background: linear-gradient(180deg, #4c9abb 0%, #1f639b 100%);
+    box-shadow: 0 0 40px rgb(76 154 187 / 0.45);
+  }
+
+  /* Same blue as dark — only the shadow softens on paper. */
+  :root.light .landing-home-stage .landing-cta-primary {
+    box-shadow: 0 4px 14px rgb(31 99 155 / 0.25);
+  }
+
+  :root.light .landing-home-stage .landing-cta-primary:hover {
+    box-shadow: 0 6px 20px rgb(31 99 155 / 0.3);
   }
 
   .landing-stat-block {
