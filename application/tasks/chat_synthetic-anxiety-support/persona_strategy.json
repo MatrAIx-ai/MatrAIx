@@ -3,9 +3,9 @@
   "sources": [],
   "defaultMode": "random",
   "dimensionFilters": {
-    "big5_neuroticism": ["High", "Extreme"],
-    "age_bracket": ["18-24", "25-34", "45-54"],
-    "health_literacy": ["Low", "Moderate", "High"]
+    "dominant_trait": ["High neuroticism"],
+    "emotional_state": ["Anxious"],
+    "age_bracket": ["18-24", "25-34", "35-44", "45-54"]
   },
   "sampleSize": 6
 }

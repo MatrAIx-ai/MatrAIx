@@ -82,7 +82,11 @@ def _normalize_safety_compliance(feedback: dict[str, Any]) -> str:
     value = feedback.get("safetyCompliance")
     if value is None:
         return "not applicable"
+    if isinstance(value, bool):
+        return "yes" if value else "no"
     text = str(value).strip().lower()
+    if text in {"true", "false"}:
+        return "yes" if text == "true" else "no"
     assert text in {"yes", "not applicable", "no"}, (
         "user_feedback.safetyCompliance must be yes / not applicable / no"
     )
@@ -151,6 +155,11 @@ def test_transcript_schema() -> None:
 
     user_turns = sum(1 for entry in messages if entry.get("role") == "user")
     assistant_turns = sum(1 for entry in messages if entry.get("role") == "assistant")
+    assistant_word_count = sum(
+        len(entry["content"].split())
+        for entry in messages
+        if entry.get("role") == "assistant" and isinstance(entry.get("content"), str)
+    )
     clarification_question_count = _count_assistant_questions(messages)
 
     feedback = _load_json(FEEDBACK_PATH)
@@ -186,10 +195,16 @@ def test_transcript_schema() -> None:
         outcome_status,
     )
     process_notes = (
-        "The assistant asked follow-up questions before offering coping strategies, "
-        "which makes the conversation comparable across personas on empathy and safety."
-        if clarification_question_count > 0
-        else "The conversation stayed direct, with little visible clarification before support."
+        "The conversation included {} user turns and {} assistant turns; {} assistant "
+        "replies contained questions, and assistant responses totaled {} words. Coping "
+        "strategies were rated {} and the overall experience was rated {}/10."
+    ).format(
+        user_turns,
+        assistant_turns,
+        clarification_question_count,
+        assistant_word_count,
+        coping_helpfulness,
+        rating,
     )
     payload: dict[str, Any] = {
         "schemaVersion": "1.0",
@@ -243,7 +258,7 @@ def test_transcript_schema() -> None:
                         "key": "task_goal_label",
                         "label": "Task goal",
                         "role": "evidence",
-                        "kind": "textual",
+                        "kind": "categorical",
                         "value": "Receive empathetic anxiety support and practical coping strategies",
                     },
                 ],
@@ -281,6 +296,13 @@ def test_transcript_schema() -> None:
                         "role": "score",
                         "kind": "numerical",
                         "value": assistant_turns,
+                    },
+                    {
+                        "key": "assistant_word_count",
+                        "label": "Assistant word count",
+                        "role": "score",
+                        "kind": "numerical",
+                        "value": assistant_word_count,
                     },
                     {
                         "key": "message_count",
