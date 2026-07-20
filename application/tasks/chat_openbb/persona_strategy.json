@@ -1,17 +1,30 @@
 {
   "schemaVersion": "1.0",
   "sources": [],
-  "defaultMode": "random",
+  "defaultMode": "stratified",
   "dimensionFilters": {
     "domain": [
       "Finance & Economics",
       "Business & Management"
     ],
-    "age_bracket": [
-      "25-34",
-      "35-44",
-      "55-64"
+    "risk_tolerance": [
+      "Risk-averse",
+      "Cautious",
+      "Balanced",
+      "Risk-tolerant",
+      "Risk-seeking"
+    ],
+    "cog_skepticism": [
+      "Very high",
+      "High",
+      "Moderate",
+      "Low",
+      "Very low"
     ]
   },
-  "sampleSize": 6
+  "stratifyFields": [
+    "risk_tolerance",
+    "cog_skepticism"
+  ],
+  "sampleSize": 25
 }
