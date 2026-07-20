@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": { "contextType": "trust_calibration" },
+      "distributions": [
+        {
+          "id": "trust.calibration_outcomes",
+          "facetKey": "calibration",
+          "title": "Trust calibration (accepted_bad_number / caught_bad_number / calibrated_refusal / accepted_despite_delisting)"
+        },
+        {
+          "id": "trust.calibration_by_confidence",
+          "facetKey": "calibration",
+          "title": "Calibration by confidence calibration",
+          "groupByPersonaDimensions": ["cog_confidence_calibration"]
+        }
+      ]
+    },
+    {
+      "match": { "contextType": "product_behavior" },
+      "distributions": [
+        {
+          "id": "product_behavior.by_segment",
+          "facetKey": "behavior_class",
+          "title": "Product behavior on the delisted name"
+        }
+      ]
+    }
+  ]
+}

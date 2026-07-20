@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "trust_level": [
+      "Trusting",
+      "Verifying",
+      "Skeptical",
+      "Hostile"
+    ],
+    "cog_skepticism": [
+      "Very high",
+      "High",
+      "Moderate",
+      "Low",
+      "Very low"
+    ],
+    "cog_confidence_calibration": [
+      "Overconfident",
+      "Confident",
+      "Well-calibrated",
+      "Cautious",
+      "Underconfident"
+    ],
+    "cog_detail_orientation": [
+      "Very high",
+      "High",
+      "Moderate",
+      "Low",
+      "None"
+    ],
+    "media_diet": [
+      "Academic journals",
+      "News",
+      "Social-media-heavy",
+      "Long-form",
+      "Video-first",
+      "Minimal"
+    ],
+    "domain": [
+      "Finance & Economics",
+      "Business & Management",
+      "Software & AI",
+      "Healthcare & Medicine",
+      "Education",
+      "Media & Journalism",
+      "Skilled Trades",
+      "Arts & Humanities"
+    ]
+  },
+  "stratifyFields": [
+    "trust_level",
+    "cog_skepticism"
+  ],
+  "sampleSize": 20
+}
