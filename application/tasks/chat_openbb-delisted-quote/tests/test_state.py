@@ -221,6 +221,14 @@ def main() -> int:
                              {**_VERDICT_NORM, "partially": "partially"})),
             facet("would_enter_reported", "Would enter in sheet (self-report)", "evidence",
                   "categorical", _norm_enum(fb.get("wouldEnterInSheet"), _VERDICT_NORM)),
+            facet("need_satisfaction", "Need or constraint satisfaction", "evidence",
+                  "categorical", _norm_enum(fb.get("needConstraintSatisfaction"),
+                                            {**_VERDICT_NORM, "partially": "partially"})),
+            facet("preference_satisfaction", "Personal preference satisfaction", "evidence",
+                  "categorical", _norm_enum(fb.get("personalPreferenceSatisfaction"),
+                                            {**_VERDICT_NORM, "partially": "partially"})),
+            facet("felt_understood", "Felt understood", "evidence", "categorical",
+                  _norm_enum(fb.get("feltUnderstood"), _VERDICT_NORM)),
         ]})
 
     (_verifier_dir() / "structured_output.json").write_text(json.dumps({

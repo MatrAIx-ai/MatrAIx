@@ -2,7 +2,9 @@
   "schemaVersion": "1.0",
   "contextRules": [
     {
-      "match": { "contextType": "trust_calibration" },
+      "match": {
+        "contextType": "trust_calibration"
+      },
       "distributions": [
         {
           "id": "trust.calibration_outcomes",
@@ -13,17 +15,63 @@
           "id": "trust.calibration_by_confidence",
           "facetKey": "calibration",
           "title": "Calibration by confidence calibration",
-          "groupByPersonaDimensions": ["cog_confidence_calibration"]
+          "groupByPersonaDimensions": [
+            "cog_confidence_calibration"
+          ]
         }
       ]
     },
     {
-      "match": { "contextType": "product_behavior" },
+      "match": {
+        "contextType": "product_behavior"
+      },
       "distributions": [
         {
           "id": "product_behavior.by_segment",
           "facetKey": "behavior_class",
           "title": "Product behavior on the delisted name"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "user_feedback"
+      },
+      "distributions": [
+        {
+          "id": "feedback.rating_by_segment",
+          "facetKey": "overall_experience_rating",
+          "title": "Satisfaction score (1-10)"
+        },
+        {
+          "id": "feedback.need_by_segment",
+          "facetKey": "need_satisfaction",
+          "title": "Need satisfaction"
+        },
+        {
+          "id": "feedback.would_enter_by_segment",
+          "facetKey": "would_enter_reported",
+          "title": "Would enter the number in the sheet"
+        },
+        {
+          "id": "feedback.rating_by_calibration_confidence",
+          "facetKey": "overall_experience_rating",
+          "title": "Satisfaction by confidence calibration",
+          "groupByPersonaDimensions": [
+            "cog_confidence_calibration"
+          ]
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "task_outcome"
+      },
+      "distributions": [
+        {
+          "id": "outcome.freshness_probe",
+          "facetKey": "freshness_probe_made",
+          "title": "Freshness probe made"
         }
       ]
     }
