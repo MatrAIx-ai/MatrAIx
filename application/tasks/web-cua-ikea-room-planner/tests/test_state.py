@@ -243,7 +243,7 @@ def test_judgement():
                 {"key": "goal_completion_bucket", "label": "Goal completion bucket", "role": "primary", "kind": "categorical", "value": "complete"},
                 {"key": "verifier_mode", "label": "Verifier mode", "role": "evidence", "kind": "categorical", "value": "artifact_schema"},
                 {"key": "primary_failure_reason", "label": "Primary failure reason", "role": "primary", "kind": "categorical", "value": "none"},
-                {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "value": f"The persona designed a {room_type} with {product_count} IKEA products ({plan_summary}), applied {len(mods)} modification(s), and saved a valid {OUTPUT.name} artifact."},
+                {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "explainsFacetKey": "outcome_status", "value": f"The persona designed a {room_type} with {product_count} IKEA products ({plan_summary}), applied {len(mods)} modification(s), and saved a valid {OUTPUT.name} artifact."},
             ],
         },
         {
@@ -253,7 +253,7 @@ def test_judgement():
             "facets": [
                 {"key": "artifact_type", "label": "Artifact type", "role": "primary", "kind": "categorical", "value": "task_submission"},
                 {"key": "artifact_status", "label": "Artifact status", "role": "primary", "kind": "categorical", "value": "correct"},
-                {"key": "artifact_evidence", "label": "Artifact evidence", "role": "explanation", "kind": "textual", "value": f"Room size {plan.get('approx_room_size_text')}, estimated total {plan.get('estimated_total_text')}, series combined: {series_summary}."},
+                {"key": "artifact_evidence", "label": "Artifact evidence", "role": "explanation", "kind": "textual", "explainsFacetKey": "artifact_status", "value": f"Room size {plan.get('approx_room_size_text')}, estimated total {plan.get('estimated_total_text')}, series combined: {series_summary}."},
             ],
         },
         {
@@ -264,7 +264,7 @@ def test_judgement():
                 # Standard web `decision` facets (keep keys exactly as specified).
                 {"key": "decision_outcome", "label": "Decision outcome", "role": "primary", "kind": "categorical", "value": decision_outcome},
                 {"key": "basis_primary", "label": "Primary basis", "role": "primary", "kind": "categorical", "value": "fit"},
-                {"key": "reason", "label": "Reason", "role": "explanation", "kind": "textual", "value": reason.strip()},
+                {"key": "reason", "label": "Reason", "role": "explanation", "kind": "textual", "explainsFacetKey": "decision_outcome", "value": reason.strip()},
                 {"key": "decision_subject_label", "label": "Chosen plan", "role": "evidence", "kind": "textual", "value": plan_summary},
                 {"key": "decision_subject_id", "label": "Plan id", "role": "evidence", "kind": "categorical", "value": decision_subject_id},
                 # Task-specific room-planning signals (task_ prefix per extension rules).
@@ -284,7 +284,7 @@ def test_judgement():
             "facets": [
                 {"key": "lifestyle_fit", "label": "Lifestyle fit", "role": "primary", "kind": "categorical", "value": lifestyle_fit},
                 {"key": "budget_band", "label": "Budget band", "role": "primary", "kind": "categorical", "value": budget_band},
-                {"key": "modification_notes", "label": "Modification notes", "role": "explanation", "kind": "textual", "value": mod_summary},
+                {"key": "modification_notes", "label": "Modification notes", "role": "explanation", "kind": "textual", "explainsFacetKey": "lifestyle_fit", "value": mod_summary},
             ],
         },
         {
@@ -295,9 +295,9 @@ def test_judgement():
                 {"key": "safety_present", "label": "Safety guidance present", "role": "primary", "kind": "categorical", "value": safety_present},
                 {"key": "boundary_status", "label": "Professional boundary", "role": "primary", "kind": "categorical", "value": boundary_status},
                 {"key": "disclosure_present", "label": "Concern disclosure present", "role": "evidence", "kind": "categorical", "value": disclosure_present},
-                {"key": "safety_text", "label": "Safety guidance text", "role": "explanation", "kind": "textual", "value": safety_text},
-                {"key": "boundary_note", "label": "Professional boundary note", "role": "explanation", "kind": "textual", "value": boundary_note.strip()},
-                {"key": "disclosure_text", "label": "Flagged concerns text", "role": "explanation", "kind": "textual", "value": disclosure_text},
+                {"key": "safety_text", "label": "Safety guidance text", "role": "explanation", "kind": "textual", "explainsFacetKey": "safety_present", "value": safety_text},
+                {"key": "boundary_note", "label": "Professional boundary note", "role": "explanation", "kind": "textual", "explainsFacetKey": "boundary_status", "value": boundary_note.strip()},
+                {"key": "disclosure_text", "label": "Flagged concerns text", "role": "explanation", "kind": "textual", "explainsFacetKey": "disclosure_present", "value": disclosure_text},
             ],
         },
         {
@@ -308,7 +308,7 @@ def test_judgement():
                 {"key": "satisfaction", "label": "Satisfaction", "role": "primary", "kind": "categorical", "value": satisfaction},
                 {"key": "lifestyle_fit", "label": "Lifestyle fit", "role": "primary", "kind": "categorical", "value": lifestyle_fit},
                 {"key": "budget_fit", "label": "Budget fit", "role": "primary", "kind": "categorical", "value": budget_fit},
-                {"key": "feedback_reason", "label": "Feedback reason", "role": "explanation", "kind": "textual", "value": reason.strip()},
+                {"key": "feedback_reason", "label": "Feedback reason", "role": "explanation", "kind": "textual", "explainsFacetKey": "satisfaction", "value": reason.strip()},
             ],
         },
     ]

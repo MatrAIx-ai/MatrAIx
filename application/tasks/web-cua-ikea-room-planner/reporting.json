@@ -3,118 +3,71 @@
   "contextRules": [
     {
       "match": { "contextType": "task_outcome" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "task_outcome.explanation_by_status",
-          "title": "Room design outcome explanation by status",
-          "targetFacetKey": "outcome_explanation",
-          "groupByFacetKey": "outcome_status",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "task_outcome.status_by_segment",
+          "facetKey": "outcome_status",
+          "title": "Outcome status"
         }
       ]
     },
     {
       "match": { "contextType": "decision" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "decision.reason_by_lifestyle_fit",
-          "title": "Reason by lifestyle fit",
-          "targetFacetKey": "reason",
-          "groupByFacetKey": "task_lifestyle_fit",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "decision.room_type_by_segment",
+          "facetKey": "task_room_type",
+          "title": "Room type"
         },
         {
-          "id": "decision.reason_by_room_type",
-          "title": "Reason by room type",
-          "targetFacetKey": "reason",
-          "groupByFacetKey": "task_room_type",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "decision.budget_fit_by_segment",
+          "facetKey": "task_budget_fit",
+          "title": "Budget fit"
+        },
+        {
+          "id": "decision.lifestyle_fit_by_segment",
+          "facetKey": "task_lifestyle_fit",
+          "title": "Lifestyle fit"
         }
       ],
-      "judgeDirectives": [
+      "summaryAnalyses": [
         {
-          "id": "decision.personalization_scan",
-          "title": "Design personalization scan",
+          "id": "decision.reason_by_socioeconomic_band",
+          "title": "How each income segment furnished its room",
           "targetFacetKey": "reason",
-          "groupByFacetKey": "task_room_type",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the persona's reason together with the room type, style, and budget band, and classify whether the room plan is personalized to the persona's stated space, lifestyle, and budget.",
-          "rubric": "Mark a signal true only when the reason clearly states or strongly implies that signal.",
-          "signals": [
-            { "key": "space_matched_signal", "label": "Layout fits the stated space constraints", "valueType": "boolean" },
-            { "key": "lifestyle_matched_signal", "label": "Products match the stated lifestyle needs", "valueType": "boolean" },
-            { "key": "style_matched_signal", "label": "Selections match the stated style", "valueType": "boolean" },
-            { "key": "cultural_matched_signal", "label": "Respects stated cultural constraints", "valueType": "boolean" }
-          ]
-        }
-      ]
-    },
-    {
-      "match": { "contextType": "personalization" },
-      "summaryDirectives": [
-        {
-          "id": "personalization.mods_by_lifestyle_fit",
-          "title": "Modification notes by lifestyle fit",
-          "targetFacetKey": "modification_notes",
-          "groupByFacetKey": "lifestyle_fit",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "groupByPersonaDimension": "socioeconomic_band",
+          "summaryKind": "llm_bucket_summary",
+          "instruction": "For each socioeconomic segment, summarize in 1-2 sentences how these personas built their IKEA room plan and what drove the fit to their budget, space, and lifestyle, so a reviewer sees how furnishing choices differ across income bands. Be faithful and concise; do not invent facts."
         }
       ]
     },
     {
       "match": { "contextType": "safety_guidance" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "safety_guidance.text_by_presence",
-          "title": "Safety guidance text by presence",
-          "targetFacetKey": "safety_text",
-          "groupByFacetKey": "safety_present",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
-        }
-      ],
-      "judgeDirectives": [
+          "id": "safety_guidance.present_by_segment",
+          "facetKey": "safety_present",
+          "title": "Safety guidance present"
+        },
         {
-          "id": "safety_guidance.quality_scan",
-          "title": "Safety and boundary quality scan",
-          "targetFacetKey": "safety_text",
-          "groupByFacetKey": "boundary_status",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the persona's safety guidance and professional-boundary note and classify which realistic safety-and-boundary signals are explicitly present.",
-          "rubric": "Mark a signal true only when the guidance clearly states or strongly implies that signal.",
-          "signals": [
-            { "key": "anchoring_signal", "label": "Addresses tall-furniture anti-tip / wall anchoring", "valueType": "boolean" },
-            { "key": "clearance_signal", "label": "Addresses walkway clearance or footprint fit", "valueType": "boolean" },
-            { "key": "hazard_signal", "label": "Notes sharp-corner, trip, or child/pet hazards", "valueType": "boolean" },
-            { "key": "boundary_signal", "label": "Defers structural/architectural changes to a licensed professional", "valueType": "boolean" }
-          ]
+          "id": "safety_guidance.boundary_by_segment",
+          "facetKey": "boundary_status",
+          "title": "Professional boundary"
         }
       ]
     },
     {
       "match": { "contextType": "user_feedback" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "user_feedback.reason_by_satisfaction",
-          "title": "Feedback reason by satisfaction",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "satisfaction",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "user_feedback.satisfaction_by_segment",
+          "facetKey": "satisfaction",
+          "title": "Satisfaction"
         },
         {
-          "id": "user_feedback.reason_by_budget_fit",
-          "title": "Feedback reason by budget fit",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "budget_fit",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "user_feedback.budget_fit_by_segment",
+          "facetKey": "budget_fit",
+          "title": "Budget fit"
         }
       ]
     }
