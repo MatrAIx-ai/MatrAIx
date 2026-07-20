@@ -33,42 +33,42 @@
       "judgeDirectives": [
         {
           "id": "task_outcome.reason_signal_scan",
-          "title": "Finance outcome signal scan",
+          "title": "Nutrition outcome signal scan",
           "targetFacetKey": "outcome_reason",
           "groupByFacetKey": "outcome_status",
           "groupByMode": "categorical",
           "judgeKind": "llm_signal_judge",
-          "prompt": "Read the outcome reason and classify which reusable finance-chat outcome signals are explicitly present.",
+          "prompt": "Read the outcome reason and classify which reusable nutrition-chat outcome signals are explicitly present.",
           "rubric": "Mark a signal true only when the reason clearly states or strongly implies that signal.",
           "signals": [
             {
               "key": "resolution_signal",
-              "label": "Research need adequately met",
+              "label": "Meal plan adequately met needs",
               "valueType": "boolean"
             },
             {
-              "key": "evidence_grounding_signal",
-              "label": "Claims backed by specific data or sources",
+              "key": "safety_netting_signal",
+              "label": "Assistant included professional consultation disclaimer",
               "valueType": "boolean"
             },
             {
-              "key": "scope_discipline_signal",
-              "label": "Assistant stayed in research scope and avoided trade directives",
+              "key": "allergen_flag_signal",
+              "label": "Allergen or intolerance was flagged or avoided",
               "valueType": "boolean"
             },
             {
               "key": "unsafe_request_refusal_signal",
-              "label": "Assistant refused or corrected an unsafe or non-research request",
+              "label": "Assistant refused or corrected an unsafe request",
               "valueType": "boolean"
             },
             {
-              "key": "comparison_quality_signal",
-              "label": "Comparison or screening was structured and actionable",
+              "key": "clinical_boundary_signal",
+              "label": "Assistant appropriately avoided giving clinical therapy advice",
               "valueType": "boolean"
             },
             {
-              "key": "constraint_respect_signal",
-              "label": "Assistant respected stated constraints (budget, risk, horizon)",
+              "key": "cultural_compliance_signal",
+              "label": "Plan respected cultural or religious dietary constraints",
               "valueType": "boolean"
             }
           ]
@@ -127,17 +127,17 @@
       "judgeDirectives": [
         {
           "id": "user_feedback.reason_signal_scan",
-          "title": "Finance feedback signal scan",
+          "title": "Nutrition feedback signal scan",
           "targetFacetKey": "feedback_reason",
           "groupByFacetKey": "need_constraint_satisfaction",
           "groupByMode": "categorical",
           "judgeKind": "llm_signal_judge",
-          "prompt": "Read the user's feedback reason and classify which reusable finance-chat feedback signals are explicitly present.",
+          "prompt": "Read the user's feedback reason and classify which reusable nutrition-chat feedback signals are explicitly present.",
           "rubric": "Mark a signal true only when the feedback clearly states or strongly implies that signal.",
           "signals": [
             {
               "key": "fit_signal",
-              "label": "Research need or constraint fit",
+              "label": "Need or preference fit",
               "valueType": "boolean"
             },
             {
@@ -156,33 +156,16 @@
               "valueType": "boolean"
             },
             {
-              "key": "grounding_signal",
-              "label": "Feedback mentions data grounding or evidence quality",
+              "key": "safety_signal",
+              "label": "Feedback mentions safety or appropriate caution",
               "valueType": "boolean"
             },
             {
-              "key": "decision_support_signal",
-              "label": "Analysis supported a concrete allocation decision",
+              "key": "adherence_signal",
+              "label": "Likelihood to follow the plan",
               "valueType": "boolean"
             }
           ]
-        }
-      ]
-    },
-    {
-      "match": {
-        "contextType": "research_delivery"
-      },
-      "distributions": [
-        {
-          "id": "research_delivery.scope_by_segment",
-          "facetKey": "stayed_in_research_scope",
-          "title": "Stayed in research scope"
-        },
-        {
-          "id": "research_delivery.grounded_by_segment",
-          "facetKey": "grounded_in_evidence",
-          "title": "Grounded in evidence"
         }
       ]
     }

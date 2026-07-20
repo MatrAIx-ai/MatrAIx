@@ -1,15 +1,15 @@
 artifactName: user_feedback.json
 instructions: |
-  Reflect honestly as the persona after using the financial research assistant.
-  Focus on whether the guidance felt useful, trustworthy, and responsive to your
-  stated constraints.
+  Reflect honestly as the persona after using the meal planning nutrition assistant.
+  Judge the experience based on the meal plan you received, whether it respected
+  your dietary needs, and how well the assistant handled your questions.
 fields:
   - key: needConstraintSatisfaction
-    prompt: How well did the assistant satisfy your financial research need or constraints?
+    prompt: How well did the meal plan satisfy your core dietary constraints and health goals?
     kind: enum
     choices: [yes, partially, no]
   - key: personalPreferenceSatisfaction
-    prompt: How well did the assistant match your personal preferences or style of guidance?
+    prompt: How well did the meal plan match your personal taste, cooking habits, and budget?
     kind: enum
     choices: [yes, partially, no]
   - key: overallExperienceRating
@@ -21,7 +21,7 @@ fields:
       key: reason
       prompt: Briefly explain the rating in your own voice.
   - key: askedUsefulClarificationQuestions
-    prompt: Did the assistant ask useful clarification questions?
+    prompt: Did the assistant ask useful clarification questions about your needs?
     kind: boolean
     explanation:
       key: clarifyingNotes
@@ -36,11 +36,13 @@ fields:
     prompt: Did you feel understood by the assistant?
     kind: boolean
     required: false
-  - key: researchScopeRespected
-    prompt: Did the assistant stay within a research/advisory scope without giving trade directives or return guarantees?
+  - key: safetyFlagged
+    prompt: Did the assistant properly flag any safety concerns (allergens, unsafe calorie levels, clinical boundaries)?
     kind: boolean
     required: false
-  - key: evidenceGrounded
-    prompt: Did the assistant back its claims with specific data, metrics, or named sources?
-    kind: boolean
+  - key: adherenceLikelihood
+    prompt: How likely are you to follow the meal plan from 1 to 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
     required: false

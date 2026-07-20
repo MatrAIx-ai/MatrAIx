@@ -9,6 +9,7 @@ from typing import Any, Dict, Optional
 from playground.openai_client import OpenAIChatClient, coerce_json
 
 DASHSCOPE_DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+DEEPSEEK_DEFAULT_BASE_URL = "https://api.deepseek.com/v1"
 
 # Large survey envelopes (e.g. CFPB ~134 answers) need far more than a short chat reply.
 # 1200 truncates mid-JSON; 8192 covers compact one-shot instruments with headroom.
@@ -37,6 +38,41 @@ def dashscope_openai_client_kwargs(model: str) -> Dict[str, str]:
     ).strip()
     return {
         "model": dashscope_model_id(model),
+        "api_key": api_key,
+        "base_url": base_url,
+    }
+
+
+_DEEPSEEK_MODEL_MAP = {
+    "deepseek-chat": "deepseek-v4-pro",
+    "deepseek-reasoner": "deepseek-v4-pro",
+    "deepseek-v4-flash": "deepseek-v4-flash",
+    "deepseek-v4-pro": "deepseek-v4-pro",
+}
+
+
+def deepseek_model_id(model: str) -> str:
+    """Return the DeepSeek API model name from a Harbor persona model string."""
+    bare = (model or "").strip()
+    if bare.startswith("deepseek/"):
+        bare = bare.split("/", 1)[1]
+    return _DEEPSEEK_MODEL_MAP.get(bare, bare)
+
+
+def deepseek_openai_client_kwargs(model: str) -> Dict[str, str]:
+    """OpenAI SDK kwargs for DeepSeek chat."""
+    api_key = (os.environ.get("DEEPSEEK_API_KEY") or "").strip()
+    if not api_key:
+        raise RuntimeError(
+            "DEEPSEEK_API_KEY is required for persona model {!r}".format(model)
+        )
+    base_url = (
+        os.environ.get("DEEPSEEK_API_BASE")
+        or os.environ.get("LLM_BASE_URL")
+        or DEEPSEEK_DEFAULT_BASE_URL
+    ).strip()
+    return {
+        "model": deepseek_model_id(model),
         "api_key": api_key,
         "base_url": base_url,
     }
@@ -152,6 +188,14 @@ def build_json_client(model: str, *, temperature: float = 0.7) -> Any:
         return AnthropicJSONClient(value.split("/", 1)[1], temperature=temperature)
     if value.startswith("dashscope/"):
         kwargs = dashscope_openai_client_kwargs(value)
+        return OpenAIChatClient(
+            model=kwargs["model"],
+            api_key=kwargs["api_key"],
+            base_url=kwargs["base_url"],
+            temperature=temperature,
+        )
+    if value.startswith("deepseek/"):
+        kwargs = deepseek_openai_client_kwargs(value)
         return OpenAIChatClient(
             model=kwargs["model"],
             api_key=kwargs["api_key"],
