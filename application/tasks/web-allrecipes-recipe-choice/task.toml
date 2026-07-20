@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/web-playwright-allrecipes-recipe-choice"
+name = "application/allrecipes-recipe-choice"
 
 [metadata]
 difficulty = "easy"

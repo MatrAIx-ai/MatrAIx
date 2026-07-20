@@ -135,7 +135,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="notion_plan_comparison.json",
         submission_profile="notion_plan_comparison",
     ),
-    "web-playwright-allrecipes-recipe-choice": PlaygroundTaskEntry(
+    "web-allrecipes-recipe-choice": PlaygroundTaskEntry(
         application_type="web",
         site_name="Allrecipes",
         site_url="https://www.allrecipes.com/",

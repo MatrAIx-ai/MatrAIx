@@ -41,11 +41,9 @@ def test_notion_plan_comparison_is_registered():
 
 
 def test_allrecipes_recipe_choice_is_registered():
-    task = get_web_eval_task("web-playwright-allrecipes-recipe-choice")
+    task = get_web_eval_task("web-allrecipes-recipe-choice")
 
-    assert task.task_path == (
-        "application/tasks/web-playwright-allrecipes-recipe-choice"
-    )
+    assert task.task_path == "application/tasks/web-allrecipes-recipe-choice"
     assert task.task_kind == "task"
     assert task.site_name == "Allrecipes"
     assert task.site_url == "https://www.allrecipes.com/"
