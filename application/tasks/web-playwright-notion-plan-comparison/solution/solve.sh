@@ -92,7 +92,7 @@ with sync_playwright() as playwright:
                 "task_relevance_note": (
                     "This was a plausible comparison option because its standard "
                     "monthly price, intended audience, and visible features could "
-                    "be weighed against the persona's realistic context."
+                    "be weighed against the user's realistic context."
                 ),
             }
         )

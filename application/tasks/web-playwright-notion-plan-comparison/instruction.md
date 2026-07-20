@@ -1,8 +1,30 @@
 # Compare Notion workspace plans
 
-Read the scenario brief in `input/context.md`. Use the live Notion pricing page
-to select the **one standard workspace plan** that you would most realistically
-choose for the personal or work context represented in your persona.
+## Your situation
+
+You are deciding which Notion workspace plan to use for a realistic personal
+or work need. Read the scenario brief in `input/context.md`, then make the
+choice as yourself.
+
+## Your goal
+
+Use the live Notion pricing page to compare the four standard workspace plans
+and select the **one plan you would most realistically choose**.
+
+## Constraints on your behavior
+
+- Use only information visible on the live Notion pricing page.
+- Do not invent an exact team size, compliance requirement, security policy,
+  organizational rule, or other need that is not included in the information
+  provided about you or on the page.
+- If the information provided about you does not include a work or organization
+  context, choose for your own individual use.
+- Use the standard public plan cards. Do not apply education discounts,
+  promotions, or negotiated pricing.
+- Do not log in, create an account or workspace, sign up, purchase, request a
+  demo, contact sales, contact anyone, or visit a third-party site.
+
+## Interaction requirements
 
 Immediately after the pricing page loads, **click or otherwise activate Pay
 monthly at least once**, even if it appears to be selected or the prices
@@ -29,7 +51,7 @@ Save your choice to `/app/output/notion_plan_comparison.json`:
   "basis_primary": "<price|quality|features|convenience|taste|trust|familiarity|novelty|fit|other>",
   "basis_secondary": "<optional second value from the same enumeration>",
   "exploration_style": "<compared_multiple|deep_research>",
-  "reason": "<why this plan fits your persona and realistic context, grounded in the page>",
+  "reason": "<why this plan fits your realistic use context and priorities, grounded in the page>",
   "task_billing_mode": "monthly",
   "task_source_url": "https://www.notion.com/pricing",
   "task_price_text": "<selected plan standard monthly price text as shown>",
@@ -46,7 +68,7 @@ Save your choice to `/app/output/notion_plan_comparison.json`:
 }
 ```
 
-Requirements:
+## Termination criteria
 
 - `task_options_considered` must contain exactly one entry for each standard
   plan: Free, Plus, Business, and Enterprise.
@@ -62,12 +84,16 @@ Requirements:
   `basis_primary`.
 - Because comparison is required, use `compared_multiple` or `deep_research`
   for `exploration_style`.
-- Keep `reason` specific to your persona, realistic use context, and visible
+- Keep `reason` specific to your realistic use context, priorities, and visible
   differences among the plans.
 - Do not invent an exact team size, compliance requirement, security policy,
-  or organizational rule that is not stated in your persona or on the page.
-- If your persona has no work or organization context, choose for your own
-  individual use.
+  or organizational rule that is not included in the information provided
+  about you or on the page.
+- Finish after saving the completed JSON file.
 
-No login, account creation, signup, purchase, demo request, or contact-sales
-action is required.
+## Success judgment
+
+The task is successful when the saved JSON follows the required structure,
+records monthly billing, includes one internally consistent entry for each of
+the four standard plans, selects one of those entries, and keeps every plan
+label, monthly price, and audience description faithful to the live page.

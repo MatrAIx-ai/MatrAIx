@@ -231,7 +231,7 @@ def _execution_contexts(
                     "role": "explanation",
                     "kind": "textual",
                     "value": (
-                        "The persona completed a standard monthly Notion plan "
+                        "The user completed a standard monthly Notion plan "
                         "choice after comparing all four plans."
                     ),
                 },
@@ -526,7 +526,7 @@ def test_output_schema() -> None:
                         "kind": "textual",
                         "explainsFacetKey": "exploration_style",
                         "value": (
-                            "The persona compared the four standard monthly "
+                            "The user compared the four standard monthly "
                             "Notion plan summaries and recorded one choice."
                         ),
                     },
