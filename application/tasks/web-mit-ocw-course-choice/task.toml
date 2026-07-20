@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/web-playwright-mit-ocw-course-choice"
+name = "application/mit-ocw-course-choice"
 
 [metadata]
 difficulty = "easy"

@@ -19,11 +19,9 @@ def test_all_registered_web_tasks_have_absolute_paths():
 
 
 def test_mit_ocw_course_choice_is_registered():
-    task = get_web_eval_task("web-playwright-mit-ocw-course-choice")
+    task = get_web_eval_task("web-mit-ocw-course-choice")
 
-    assert task.task_path == (
-        "application/tasks/web-playwright-mit-ocw-course-choice"
-    )
+    assert task.task_path == "application/tasks/web-mit-ocw-course-choice"
     assert task.task_kind == "task"
     assert task.site_name == "MIT OpenCourseWare"
     assert task.site_url == "https://ocw.mit.edu/search/"

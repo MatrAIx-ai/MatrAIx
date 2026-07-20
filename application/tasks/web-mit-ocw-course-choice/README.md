@@ -24,14 +24,14 @@ uv run harbor run \
   -a persona-openhands-sdk \
   -m anthropic/claude-sonnet-4-6 \
   --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
-  -p application/tasks/web-playwright-mit-ocw-course-choice
+  -p application/tasks/web-mit-ocw-course-choice
 ```
 
 Oracle (live Playwright browsing; needs outbound network):
 
 ```bash
 uv run harbor run \
-  -p application/tasks/web-playwright-mit-ocw-course-choice \
+  -p application/tasks/web-mit-ocw-course-choice \
   -a oracle
 ```
 
