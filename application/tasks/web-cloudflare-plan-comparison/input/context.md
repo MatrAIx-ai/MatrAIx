@@ -7,10 +7,10 @@ organization type or size represented in your work context.
 Browse the public pricing page at https://www.cloudflare.com/plans/ as
 yourself. Compare the Free, Pro, Business, and Contract plans. Let your
 organization context, spending posture, decision-making priorities, and other
-relevant persona attributes shape the recommendation.
+relevant information provided about you shape the recommendation.
 
 Use only information visible on the live page. Do not invent quantitative
 traffic, compliance, security, support, or uptime requirements that are not
-stated in your persona or on the page. The organization context may describe
-either a size band or a sector, such as academia or the public sector; do not
-force those categories into one size ordering.
+included in the information provided about you or on the page. The organization
+context may describe either a size band or a sector, such as academia or the
+public sector; do not force those categories into one size ordering.

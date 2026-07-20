@@ -1,8 +1,8 @@
 artifactName: user_feedback.json
 instructions: |
-  Reflect honestly as the persona after recommending a Cloudflare plan.
+  Reflect honestly after recommending a Cloudflare plan.
   Base your answers on the plan you selected, the alternatives you compared,
-  and how confident you feel that the recommendation fits your context.
+  and how confident you feel that the recommendation fits your realistic context.
 fields:
   - key: needConstraintSatisfaction
     prompt: How well did the selected plan satisfy the organization's practical needs or constraints?

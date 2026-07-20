@@ -220,7 +220,7 @@ def _execution_contexts(
                     "role": "explanation",
                     "kind": "textual",
                     "value": (
-                        "The persona completed a Cloudflare Network & CDN plan "
+                        "The user completed a Cloudflare Network & CDN plan "
                         "recommendation after comparing all four plans."
                     ),
                 },
@@ -507,7 +507,7 @@ def test_output_schema() -> None:
                         "kind": "textual",
                         "explainsFacetKey": "exploration_style",
                         "value": (
-                            "The persona compared the four Network & CDN plan "
+                            "The user compared the four Network & CDN plan "
                             "summaries and recorded one recommendation."
                         ),
                     },
