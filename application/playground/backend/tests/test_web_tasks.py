@@ -19,11 +19,9 @@ def test_all_registered_web_tasks_have_absolute_paths():
 
 
 def test_notion_plan_comparison_is_registered():
-    task = get_web_eval_task("web-playwright-notion-plan-comparison")
+    task = get_web_eval_task("web-notion-plan-comparison")
 
-    assert task.task_path == (
-        "application/tasks/web-playwright-notion-plan-comparison"
-    )
+    assert task.task_path == "application/tasks/web-notion-plan-comparison"
     assert task.task_kind == "task"
     assert task.site_name == "Notion pricing"
     assert task.site_url == "https://www.notion.com/pricing"

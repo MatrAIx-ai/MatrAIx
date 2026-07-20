@@ -121,7 +121,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="portfolio_backtest.json",
         submission_profile="portfolio_backtest",
     ),
-    "web-playwright-notion-plan-comparison": PlaygroundTaskEntry(
+    "web-notion-plan-comparison": PlaygroundTaskEntry(
         application_type="web",
         site_name="Notion pricing",
         site_url="https://www.notion.com/pricing",

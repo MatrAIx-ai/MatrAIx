@@ -24,14 +24,14 @@ uv run harbor run \
   -a persona-openhands-sdk \
   -m anthropic/claude-sonnet-4-6 \
   --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
-  -p application/tasks/web-playwright-notion-plan-comparison
+  -p application/tasks/web-notion-plan-comparison
 ```
 
 Oracle (live Playwright browsing; needs outbound network):
 
 ```bash
 uv run harbor run \
-  -p application/tasks/web-playwright-notion-plan-comparison \
+  -p application/tasks/web-notion-plan-comparison \
   -a oracle
 ```
 
