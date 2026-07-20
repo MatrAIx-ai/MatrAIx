@@ -63,6 +63,9 @@ class HostEnvironment(BaseEnvironment):
         self._compose_project = self._compose_project_name()
         self._sidecar_services: list[str] = []
         self._sidecar_compose_path: Path | None = None
+        # When True, trials reuse the Cockpit/playground shared sidecar and must
+        # not ``compose down`` it on stop (other trials / the UI still need it).
+        self._uses_shared_sidecar = False
 
     @staticmethod
     def type() -> EnvironmentType:
@@ -197,16 +200,58 @@ class HostEnvironment(BaseEnvironment):
             return build
         return "."
 
+    def _write_sidecar_markers(self, api_url: str, *, mcp: bool = False) -> None:
+        trial_dir = self.trial_paths.trial_dir
+        trial_dir.mkdir(parents=True, exist_ok=True)
+        marker = trial_dir / self._sidecar_api_marker
+        marker.write_text(api_url.rstrip("/") + "\n", encoding="utf-8")
+        if mcp:
+            mcp_marker = trial_dir / ".sidecar_mcp_url"
+            base = api_url.rstrip("/")
+            mcp_url = base if base.endswith("/mcp") else base + "/mcp"
+            mcp_marker.write_text(mcp_url + "\n", encoding="utf-8")
+
     async def _start_sidecars(self, force_build: bool) -> None:
         services = self._discover_sidecar_services()
         if not services:
             return
+
+        # Prefer the fixed-port Playground shared stack (one per application) so
+        # batch cohorts do not each spawn a heavy medical/finance compose.
+        try:
+            from playground.inprocess.chatbot_shared_sidecar import (
+                ensure_shared_sidecar_for_services,
+            )
+
+            shared = await asyncio.to_thread(
+                ensure_shared_sidecar_for_services,
+                compose_dir=self.environment_dir,
+                service_names=services,
+                force_build=force_build,
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise RuntimeError(
+                "failed to start shared chat sidecar: {}".format(exc)
+            ) from exc
+
+        if shared is not None:
+            api_url, spec = shared
+            self._uses_shared_sidecar = True
+            self._sidecar_services = []
+            self._sidecar_compose_path = None
+            self._write_sidecar_markers(api_url, mcp=(spec.probe == "tcp"))
+            return
+
+        # Unknown compose layouts still get an ephemeral per-trial sidecar.
         self._sidecar_services = services
-        service_name = services[0]
         from playground.inprocess.chatbot_sidecar_compose import (
             write_standalone_sidecar_compose,
         )
+        from playground.inprocess.chatbot_shared_sidecar import (
+            pick_primary_sidecar_service,
+        )
 
+        service_name = pick_primary_sidecar_service(services) or services[0]
         compose_dir = self.trial_paths.trial_dir / "host_compose"
         compose_path = write_standalone_sidecar_compose(
             compose_dir=self.environment_dir,
@@ -262,8 +307,7 @@ class HostEnvironment(BaseEnvironment):
         host, _, port = port_line.rpartition(":")
         api_url = "http://{}:{}".format(host or "127.0.0.1", port)
         await self._wait_for_sidecar_port(host or "127.0.0.1", int(port))
-        marker = self.trial_paths.trial_dir / self._sidecar_api_marker
-        marker.write_text(api_url + "\n", encoding="utf-8")
+        self._write_sidecar_markers(api_url)
 
     async def _wait_for_sidecar_port(
         self,
@@ -296,6 +340,14 @@ class HostEnvironment(BaseEnvironment):
         await self._start_sidecars(force_build)
 
     async def stop(self, delete: bool) -> None:
+        marker = self.trial_paths.trial_dir / self._sidecar_api_marker
+        mcp_marker = self.trial_paths.trial_dir / ".sidecar_mcp_url"
+        if self._uses_shared_sidecar:
+            # Leave the shared playground-<app> stack running for other trials
+            # and for Cockpit "Service up".
+            marker.unlink(missing_ok=True)
+            mcp_marker.unlink(missing_ok=True)
+            return
         if self._sidecar_services:
             compose_path = self._sidecar_compose_path
             command = [
@@ -312,8 +364,8 @@ class HostEnvironment(BaseEnvironment):
             if delete:
                 command.extend(["--volumes", "--rmi", "local"])
             await self._run_command(command, timeout_sec=120)
-            marker = self.trial_paths.trial_dir / self._sidecar_api_marker
             marker.unlink(missing_ok=True)
+            mcp_marker.unlink(missing_ok=True)
 
     async def upload_file(self, source_path: Path | str, target_path: str) -> None:
         if self._maps_to_repo_tests(target_path):

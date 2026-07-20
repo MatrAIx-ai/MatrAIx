@@ -16,9 +16,11 @@ import type { PreflightResponse } from "@/lib/types";
 export interface AppFooterProps {
   /** The active surface context, e.g. "chatbot · RecAI · movie" (real values). */
   context: string;
+  /** "glass" floats over the Home stage as a NASA-panel frosted bar. */
+  variant?: "solid" | "glass";
 }
 
-export function AppFooter({ context }: AppFooterProps) {
+export function AppFooter({ context, variant = "solid" }: AppFooterProps) {
   // Read-only: shares PreflightChip's cache. No refetchInterval -> no extra poll.
   const preflight = useQuery<PreflightResponse>({
     queryKey: ["preflight"],
@@ -44,14 +46,20 @@ export function AppFooter({ context }: AppFooterProps) {
   }
 
   return (
-    <footer className="flex-shrink-0 border-t border-outline bg-surface-lowest">
+    <footer
+      className={`nasa-glass-bar flex-shrink-0 ${
+        variant === "glass" ? "absolute inset-x-0 bottom-0 z-20" : ""
+      }`}
+    >
       <div className="flex items-center justify-between gap-4 px-5 py-2 text-text-dim">
         <div className="hud flex min-w-0 items-center gap-3 text-[11px]">
           <span className="flex-none text-text-variant">
             Matr<span className="text-primary">AI</span>x
           </span>
           <span className="flex-none text-outline">·</span>
-          <span className="min-w-0 truncate" title={context}>{context}</span>
+          <span className="min-w-0 truncate text-primary/75" title={context}>
+            {context}
+          </span>
         </div>
         <div
           className="hud flex flex-shrink-0 items-center gap-2 text-[11px] text-text-variant"

@@ -2,10 +2,12 @@ import type {
   ConfigOptionsResponse,
   PlaygroundPersonasResponse,
   PlaygroundResult,
+  HarborJobAggregation,
   HarborJobDetail,
   HarborJobLaunchResponse,
   HarborJobsListResponse,
   HarborJobLiveResponse,
+  HarborJobStatusResponse,
   HarborTrialEventsResponse,
   PersonaPoolCatalog,
   PersonaPoolCardsResponse,
@@ -131,8 +133,13 @@ export const api = {
     ),
   getHarborJob: (jobName: string) =>
     request<HarborJobDetail>(`/api/harbor/jobs/${encodeURIComponent(jobName)}`),
+  retryHarborJobFailed: (jobName: string) =>
+    request<{ jobName: string; retried: number }>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/retry-failed`,
+      { method: "POST" },
+    ),
   getHarborJobAggregation: (jobName: string) =>
-    request<HarborJobDetail["aggregation"]>(
+    request<HarborJobAggregation>(
       `/api/harbor/jobs/${encodeURIComponent(jobName)}/aggregation`,
     ),
   downloadHarborJobReportPdf: (jobName: string) =>
@@ -142,6 +149,10 @@ export const api = {
     ),
   getHarborJobLive: (jobName: string) =>
     request<HarborJobLiveResponse>(`/api/harbor/jobs/${encodeURIComponent(jobName)}/live`),
+  getHarborJobStatus: (jobName: string, since = 0) =>
+    request<HarborJobStatusResponse>(
+      `/api/harbor/jobs/${encodeURIComponent(jobName)}/status${qs({ since })}`,
+    ),
   getHarborTrialDebrief: (jobName: string, trialName: string) =>
     request<PlaygroundResult>(
       `/api/harbor/jobs/${encodeURIComponent(jobName)}/trials/${encodeURIComponent(trialName)}/debrief`,

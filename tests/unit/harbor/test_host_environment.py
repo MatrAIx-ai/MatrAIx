@@ -146,6 +146,54 @@ async def test_host_upload_dir_skips_repo_tests(tmp_path: Path) -> None:
 
 
 @pytest.mark.asyncio
+async def test_host_start_sidecars_reuses_shared_playground_stack(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    tests_dir = tmp_path / "task" / "tests"
+    tests_dir.mkdir(parents=True)
+    env_dir = tmp_path / "environment"
+    env_dir.mkdir()
+    (env_dir / "docker-compose.yaml").write_text(
+        "\n".join(
+            [
+                "services:",
+                "  main:",
+                "    depends_on: [multi-agent-medical-assistant-api]",
+                "  multi-agent-medical-assistant-api:",
+                "    build: {context: ./multi-agent-medical-assistant-api}",
+                "  multi-agent-medical-assistant:",
+                "    build: {context: ./multi-agent-medical-assistant}",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    env = _host_env(tmp_path, session_id="chat_medical__shared", tests_dir=tests_dir)
+    env.environment_dir = env_dir
+
+    def fake_ensure(*, compose_dir, service_names, force_build=False):  # noqa: ANN001
+        from playground.inprocess.chatbot_shared_sidecar import shared_spec_for_service
+
+        assert "multi-agent-medical-assistant-api" in service_names
+        spec = shared_spec_for_service("multi-agent-medical-assistant-api")
+        assert spec is not None
+        return ("http://127.0.0.1:8902", spec)
+
+    monkeypatch.setattr(
+        "playground.inprocess.chatbot_shared_sidecar.ensure_shared_sidecar_for_services",
+        fake_ensure,
+    )
+    await env._start_sidecars(force_build=False)
+    assert env._uses_shared_sidecar is True
+    assert env._sidecar_services == []
+    marker = env.trial_paths.trial_dir / ".sidecar_api_url"
+    assert marker.read_text(encoding="utf-8").strip() == "http://127.0.0.1:8902"
+
+    await env.stop(delete=True)
+    assert not marker.exists()
+
+
+@pytest.mark.asyncio
 async def test_host_download_dir_noops_when_source_equals_destination(tmp_path: Path) -> None:
     trial_paths = TrialPaths(trial_dir=tmp_path / "trial")
     output_dir = trial_paths.host_artifact_path("main", "/app/output")

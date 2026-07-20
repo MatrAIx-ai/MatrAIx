@@ -577,62 +577,70 @@ function drawFrontMatter(pdf: jsPDF, meta: BatchReportPdfMeta): number {
     }
   }
 
-  // ---- Cohort (compact) ----
+  // Persona cohort roster and coverage stats are NOT drawn here:
+  //  - coverage stats already appear as tiles in the captured on-screen report;
+  //  - the full persona roster is appended at the very end (drawPersonaRoster).
+  return cursor.page;
+}
+
+/**
+ * Append the full persona roster as the last section of the report, on its own
+ * page(s). Kept out of the front matter so the setup stays compact and the
+ * detailed per-persona list lands at the end.
+ */
+function drawPersonaRoster(pdf: jsPDF, meta: BatchReportPdfMeta): number {
   const personas = meta.personas ?? [];
-  ensureSpace(pdf, meta, cursor, 16);
-  cursor.y += 1;
-  cursor.y += drawSectionRule(
-    pdf,
-    SIDE_MM,
-    cursor.y,
-    contentW,
-    `Persona cohort  (${personas.length})`,
-  );
+  const contentW = A4_WIDTH_MM - SIDE_MM * 2;
+
+  pdf.addPage();
+  drawWatermark(pdf);
+  drawContentHeader(pdf, meta, "Persona cohort");
+  let y = HEADER_MM + 6;
+
+  y += drawSectionRule(pdf, SIDE_MM, y, contentW, `Persona cohort  (${personas.length})`);
+
+  const newPage = () => {
+    pdf.addPage();
+    drawWatermark(pdf);
+    drawContentHeader(pdf, meta, "Persona cohort");
+    y = HEADER_MM + 6;
+  };
 
   if (!personas.length) {
     pdf.setFont("helvetica", "");
     pdf.setFontSize(9);
     pdf.setTextColor(MUTED.r, MUTED.g, MUTED.b);
-    pdf.text("Roster unavailable for this job.", SIDE_MM, cursor.y + 4);
-    cursor.y += 8;
-  } else {
-    const colW = (contentW - 4) / 2;
-    const mid = Math.ceil(personas.length / 2);
-    const left = personas.slice(0, mid);
-    const right = personas.slice(mid);
-    const rowH = 4.2;
-    for (let i = 0; i < left.length; i += 1) {
-      ensureSpace(pdf, meta, cursor, rowH + 1);
-      pdf.setFont("helvetica", "");
-      pdf.setFontSize(8);
-      pdf.setTextColor(INK.r, INK.g, INK.b);
-      const l = left[i];
-      pdf.text(wrapLines(pdf, `${l.id}  ${l.name}`, colW - 2, 1)[0], SIDE_MM, cursor.y + 3);
-      const r = right[i];
-      if (r) {
-        pdf.text(
-          wrapLines(pdf, `${r.id}  ${r.name}`, colW - 2, 1)[0],
-          SIDE_MM + colW + 4,
-          cursor.y + 3,
-        );
-      }
-      cursor.y += rowH;
+    pdf.text("Roster unavailable for this job.", SIDE_MM, y + 4);
+    return 1;
+  }
+
+  let pages = 1;
+  const colW = (contentW - 4) / 2;
+  const rowH = 4.6;
+  const mid = Math.ceil(personas.length / 2);
+  const left = personas.slice(0, mid);
+  const right = personas.slice(mid);
+  for (let i = 0; i < left.length; i += 1) {
+    if (y + rowH > PAGE_BOTTOM) {
+      newPage();
+      pages += 1;
     }
-  }
-
-  const snap = (meta.snapshot ?? []).filter((s) => s.label.toLowerCase() !== "questions");
-  if (snap.length) {
-    ensureSpace(pdf, meta, cursor, 8);
-    cursor.y += 2;
-    const parts = snap.map((s) => `${s.label}: ${s.value}${s.hint ? s.hint.replace("/", " /") : ""}`);
     pdf.setFont("helvetica", "");
-    pdf.setFontSize(8);
-    pdf.setTextColor(MUTED.r, MUTED.g, MUTED.b);
-    pdf.text(parts.join("   |   "), SIDE_MM, cursor.y + 3);
-    cursor.y += 6;
+    pdf.setFontSize(8.5);
+    pdf.setTextColor(INK.r, INK.g, INK.b);
+    const l = left[i];
+    pdf.text(wrapLines(pdf, `${l.id}  ${l.name}`, colW - 2, 1)[0], SIDE_MM, y + 3);
+    const r = right[i];
+    if (r) {
+      pdf.text(
+        wrapLines(pdf, `${r.id}  ${r.name}`, colW - 2, 1)[0],
+        SIDE_MM + colW + 4,
+        y + 3,
+      );
+    }
+    y += rowH;
   }
-
-  return cursor.page;
+  return pages;
 }
 
 export async function exportBatchReportPdf(
@@ -688,26 +696,18 @@ export async function exportBatchReportPdf(
       compress: true,
     });
 
-    const frontPages = drawFrontMatter(pdf, meta);
-    const resultPages = Math.max(1, slices.length);
-    const totalPages = frontPages + resultPages;
-
-    for (let p = 1; p <= frontPages; p += 1) {
-      pdf.setPage(p);
-      drawContentFooter(pdf, meta, p, totalPages);
-    }
+    drawFrontMatter(pdf, meta);
 
     if (slices.length === 0) {
       pdf.addPage();
       drawWatermark(pdf);
       drawContentHeader(pdf, meta, "Batch results");
-      drawContentFooter(pdf, meta, totalPages, totalPages);
       pdf.setFont("helvetica", "");
       pdf.setFontSize(11);
       pdf.setTextColor(MUTED.r, MUTED.g, MUTED.b);
       pdf.text("No report content was available to capture.", SIDE_MM, contentTopMm + 10);
     } else {
-      slices.forEach((slice, index) => {
+      slices.forEach((slice) => {
         pdf.addPage();
         drawWatermark(pdf);
         drawContentHeader(pdf, meta, "Batch results");
@@ -721,8 +721,17 @@ export async function exportBatchReportPdf(
           undefined,
           "FAST",
         );
-        drawContentFooter(pdf, meta, frontPages + index + 1, totalPages);
       });
+    }
+
+    // Full persona roster as the closing section.
+    drawPersonaRoster(pdf, meta);
+
+    // Footers last, once total page count is known.
+    const totalPages = pdf.getNumberOfPages();
+    for (let p = 1; p <= totalPages; p += 1) {
+      pdf.setPage(p);
+      drawContentFooter(pdf, meta, p, totalPages);
     }
 
     pdf.setProperties({

@@ -37,20 +37,27 @@ async function fetchLiveSnapshot(jobName: string): Promise<HarborJobLiveResponse
   }
 }
 
-export function useHarborBatchLive(jobName: string | null) {
+export function useHarborBatchLive(jobName: string | null, options?: { enabled?: boolean }) {
+  const enabled = options?.enabled ?? true;
   const [live, setLive] = useState<HarborJobLiveResponse | null>(null);
   const [selectedTrial, setSelectedTrial] = useState<string | null>(null);
   const [liveByTrial, setLiveByTrial] = useState<Record<string, HarborCockpitLiveState>>({});
   const [error, setError] = useState<string | null>(null);
   const offsetsRef = useRef<Record<string, number>>({});
   const eventsApiMissingRef = useRef(false);
+  const selectedTrialRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    selectedTrialRef.current = selectedTrial;
+  }, [selectedTrial]);
 
   const selectTrial = useCallback((trialName: string) => {
+    selectedTrialRef.current = trialName;
     setSelectedTrial(trialName);
   }, []);
 
   useEffect(() => {
-    if (!jobName) {
+    if (!jobName || !enabled) {
       setLive(null);
       setSelectedTrial(null);
       setLiveByTrial({});
@@ -68,14 +75,25 @@ export function useHarborBatchLive(jobName: string | null) {
         setLive(snapshot);
         if (!eventsApiMissingRef.current) setError(null);
 
+        let activeTrialName = selectedTrialRef.current;
         setSelectedTrial((current) => {
-          if (current) return current;
+          if (current) {
+            activeTrialName = current;
+            return current;
+          }
           const active =
             snapshot.trials.find((trial) => !trial.completed) ?? snapshot.trials[0];
-          return active?.trialName ?? null;
+          activeTrialName = active?.trialName ?? null;
+          return activeTrialName;
         });
 
-        for (const trial of snapshot.trials) {
+        // Only stream bubble-by-bubble events for the trial currently in view —
+        // fetching events for every trial does not scale to large cohorts. The
+        // grid derives per-trial stage from the snapshot's `phase`/`stage`.
+        const trial = activeTrialName
+          ? snapshot.trials.find((item) => item.trialName === activeTrialName)
+          : undefined;
+        if (trial) {
           const offset = offsetsRef.current[trial.trialName] ?? 0;
           try {
             const payload = await api.getHarborTrialEvents(jobName, trial.trialName, offset);
@@ -122,7 +140,7 @@ export function useHarborBatchLive(jobName: string | null) {
       cancelled = true;
       window.clearInterval(id);
     };
-  }, [jobName]);
+  }, [jobName, enabled]);
 
   const selectedLive = selectedTrial ? liveByTrial[selectedTrial] ?? null : null;
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 
-from backend.service.harbor_job_service import HarborJobService
+from backend.service.harbor_job_service import HarborJobService, HarborLaunchRecord
 
 
 def test_launch_writes_job_config(tmp_path, monkeypatch):
@@ -172,6 +172,94 @@ def test_launch_with_explicit_persona_ids(tmp_path, monkeypatch):
     assert "application/tasks/example-survey_product-feedback" in text
     assert service._executor.calls
     assert service._executor.calls[0][0].__name__ == "_run_local_distributed"
+    service.shutdown()
+
+
+def test_retry_failed_reruns_only_failed_trials(tmp_path, monkeypatch):
+    repo = tmp_path
+    jobs_dir = repo / "jobs"
+    jobs_dir.mkdir()
+    pool = repo / "persona" / "datasets" / "bench-dev-sample"
+    pool.mkdir(parents=True)
+    (pool / "persona_0001.yaml").write_text(
+        "persona_id: '0001'\nversion: '1.0'\nsource: Nemotron\ndimensions: {}\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr("playground.harbor.playground._repo_root", lambda: repo)
+    service = HarborJobService(
+        repo_root=repo,
+        jobs_dir=jobs_dir,
+        generated_configs_dir=repo / "configs" / "jobs" / "application-task-job-recipe",
+        command_runner=lambda *args, **kwargs: 0,
+        harbor_command=("echo", "harbor"),
+    )
+    service._executor = _FakeExecutor()
+
+    job_name = service.launch(
+        task_path="application/tasks/example-survey_product-feedback",
+        persona_ids=["0001"],
+        persona_model="anthropic/claude-haiku-4-5",
+        job_name="retry-job",
+    )
+    # Launch metadata is persisted so a retry can replay the identical dispatch.
+    meta_path = service._launch_meta_path(job_name)
+    assert meta_path.is_file()
+    assert len(service._executor.calls) == 1
+
+    # Mark the launch record finished so retry is allowed.
+    service._launches[job_name].status = "completed"
+
+    job_dir = jobs_dir / job_name
+    ok_dir = job_dir / "trial-ok"
+    ok_dir.mkdir(parents=True)
+    (ok_dir / "result.json").write_text("{}", encoding="utf-8")
+    fail_dir = job_dir / "trial-fail"
+    fail_dir.mkdir(parents=True)
+    (fail_dir / "result.json").write_text(
+        json.dumps({"exception_info": {"exception_message": "boom"}}),
+        encoding="utf-8",
+    )
+    (job_dir / "result.json").write_text(
+        json.dumps({"finished_at": "2026-07-01T12:00:00Z", "stats": {"n_errored_trials": 1}}),
+        encoding="utf-8",
+    )
+
+    assert service.failed_trial_count(job_name) == 1
+
+    result = service.retry_failed(job_name)
+    assert result == {"jobName": job_name, "retried": 1}
+
+    # Succeeded trial preserved; failed trial removed for Harbor to re-run.
+    assert ok_dir.is_dir()
+    assert not fail_dir.exists()
+    # Job-level completion cleared so status/reporting recompute.
+    assert not (job_dir / "result.json").exists()
+    # A fresh dispatch was submitted and the record is active again.
+    assert len(service._executor.calls) == 2
+    assert service._launches[job_name].status == "queued"
+
+    service.shutdown()
+
+
+def test_retry_failed_no_failures_is_noop(tmp_path, monkeypatch):
+    repo = tmp_path
+    jobs_dir = repo / "jobs"
+    job_dir = jobs_dir / "clean-job"
+    trial_dir = job_dir / "trial-ok"
+    trial_dir.mkdir(parents=True)
+    (trial_dir / "result.json").write_text("{}", encoding="utf-8")
+
+    service = HarborJobService(
+        repo_root=repo,
+        jobs_dir=jobs_dir,
+        generated_configs_dir=repo / "configs" / "jobs",
+    )
+    service._executor = _FakeExecutor()
+
+    assert service.retry_failed("clean-job") == {"jobName": "clean-job", "retried": 0}
+    assert service._executor.calls == []
+    assert trial_dir.is_dir()
     service.shutdown()
 
 
@@ -365,7 +453,7 @@ def test_get_job_surfaces_reporting_queue_status(tmp_path, monkeypatch):
                         "key": "question.q1",
                         "label": "Question 1",
                         "contextType": "question_response",
-                        "summaryDirectives": [
+                        "summaryAnalyses": [
                             {
                                 "id": "question.reason_summary",
                                 "title": "Reason summary",
@@ -396,10 +484,18 @@ def test_get_job_surfaces_reporting_queue_status(tmp_path, monkeypatch):
     detail = service.get_job("demo-job")
 
     assert detail is not None
-    assert detail["aggregation"]["reporting"]["status"] == "queued"
+    # Job detail no longer embeds the full aggregation payload or schedules
+    # reporting — that happens via get_job_aggregation / list_jobs.
+    assert detail.get("aggregation") is None
+    assert service._executor.calls == []
+
+    aggregation = service.get_job_aggregation("demo-job")
+    assert aggregation["reporting"]["status"] == "queued"
     assert len(service._executor.calls) == 1
     status_path = jobs_dir / "demo-job" / "reporting_status.json"
     assert status_path.is_file()
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    assert status["status"] == "queued"
 
     service.shutdown()
 
@@ -485,6 +581,65 @@ def test_trial_live_stage_from_artifacts(tmp_path):
     assert _resolve_trial_stage(trial_dir, phase="persona_kickoff", completed=False) == "agent_running"
 
 
+def test_get_job_status_incremental(tmp_path):
+    jobs_dir = tmp_path / "jobs"
+    job_dir = jobs_dir / "pg-batch"
+    job_dir.mkdir(parents=True)
+    for name in ("t0", "t1", "t2"):
+        (job_dir / name).mkdir()
+
+    service = HarborJobService(
+        repo_root=tmp_path,
+        jobs_dir=jobs_dir,
+        generated_configs_dir=tmp_path / "generated",
+    )
+
+    first = service.get_job_status("pg-batch", since=0)
+    assert first["full"] is True
+    assert first["trialCount"] == 3
+    assert first["statuses"] == [0, 0, 0]
+    assert first["counts"] == {"pending": 3, "running": 0, "done": 0, "error": 0}
+
+    # t0 finishes successfully -> incremental delta only.
+    (job_dir / "t0" / "result.json").write_text("{}", encoding="utf-8")
+    delta = service.get_job_status("pg-batch", since=first["version"])
+    assert delta["full"] is False
+    assert delta["changes"] == [[0, 2]]
+    assert delta["counts"]["done"] == 1
+
+    # t1 fails.
+    (job_dir / "t1" / "result.json").write_text(
+        json.dumps({"exception_info": {"exception_message": "boom"}}),
+        encoding="utf-8",
+    )
+    delta2 = service.get_job_status("pg-batch", since=delta["version"])
+    assert delta2["full"] is False
+    assert delta2["changes"] == [[1, 3]]
+    assert delta2["counts"] == {"pending": 1, "running": 0, "done": 1, "error": 1}
+
+    # A stale/zero cursor always yields a fresh full snapshot.
+    full = service.get_job_status("pg-batch", since=0)
+    assert full["full"] is True
+    assert full["statuses"] == [2, 3, 0]
+
+
+def test_get_job_status_running_marker(tmp_path):
+    jobs_dir = tmp_path / "jobs"
+    job_dir = jobs_dir / "pg-batch"
+    job_dir.mkdir(parents=True)
+    (job_dir / "t0").mkdir()
+    (job_dir / "t0" / "config.json").write_text("{}", encoding="utf-8")
+
+    service = HarborJobService(
+        repo_root=tmp_path,
+        jobs_dir=jobs_dir,
+        generated_configs_dir=tmp_path / "generated",
+    )
+    snapshot = service.get_job_status("pg-batch", since=0)
+    assert snapshot["statuses"] == [1]
+    assert snapshot["counts"]["running"] == 1
+
+
 def test_list_jobs_reports_success_and_failed_status(tmp_path):
     import json
 
@@ -523,10 +678,28 @@ def test_list_jobs_reports_success_and_failed_status(tmp_path):
     running_job.mkdir()
     (running_job / "trial-a").mkdir()
 
+    # An orphaned job (trial dirs present but incomplete, and no in-memory launch
+    # record because the backend was restarted) is terminal, not "running".
+    orphaned_job = jobs_dir / "job-orphaned"
+    orphaned_job.mkdir()
+    (orphaned_job / "trial-a").mkdir()
+
+    # A fully completed cohort without a job-level result.json still resolves to
+    # a terminal status from disk instead of a stale "running".
+    completed_job = jobs_dir / "job-completed"
+    completed_job.mkdir()
+    (completed_job / "trial-a").mkdir()
+    (completed_job / "trial-a" / "result.json").write_text("{}", encoding="utf-8")
+
     service = HarborJobService(
         repo_root=tmp_path,
         jobs_dir=jobs_dir,
         generated_configs_dir=tmp_path / "configs",
+    )
+    # Only "job-running" is actively driven by this process.
+    service._launches["job-running"] = HarborLaunchRecord(
+        job_name="job-running",
+        status="running",
     )
     rows = {row["jobName"]: row for row in service.list_jobs()}
 
@@ -535,6 +708,8 @@ def test_list_jobs_reports_success_and_failed_status(tmp_path):
     assert rows["job-failed"]["status"] == "failed"
     assert rows["job-failed"]["failedTrials"] == 1
     assert rows["job-running"]["status"] == "running"
+    assert rows["job-orphaned"]["status"] == "failed"
+    assert rows["job-completed"]["status"] == "success"
     service.shutdown()
 
 

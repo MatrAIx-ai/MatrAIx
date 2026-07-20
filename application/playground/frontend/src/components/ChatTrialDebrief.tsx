@@ -29,6 +29,8 @@ export interface ChatTrialDebriefBodyProps {
   metricScores?: RunDetailView["metricScores"];
   verifier?: ChatTrialVerifier | null;
   trialEvaluation?: TrialEvaluationArtifact | null;
+  /** Task title — the SUT label when `config.applicationId` is unknown. */
+  taskTitle?: string | null;
   /** When false, hide section headings (embedded in batch monitor). */
   showSectionHeadings?: boolean;
 }
@@ -40,7 +42,7 @@ function clamp(value: number, max: number): number {
 
 function DashedNote({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-8 text-center text-[15px] text-text-variant">
+    <div className="rounded-md glass-tile glass-tile--dim px-4 py-8 text-center text-[15px] text-text-variant">
       {children}
     </div>
   );
@@ -106,17 +108,17 @@ function SummarySignalCard({
   detail?: string | null;
 }) {
   return (
-    <div className="rounded-md border border-outline/40 bg-surface p-4">
+    <div className="rounded-md glass-panel p-4">
       <div className="flex items-center justify-between gap-2">
         <span className="hud text-[11px] text-text-dim">{title}</span>
         {eyebrow ? (
-          <span className="inline-flex items-center rounded border border-outline/40 bg-surface-high px-2 py-0.5 text-[12px] text-text-variant">
+          <span className="inline-flex items-center glass-tile rounded px-2 py-0.5 text-[12px] text-text-variant">
             {eyebrow}
           </span>
         ) : null}
       </div>
       <div className="mt-2 text-[20px] font-semibold leading-tight text-text-main">{value}</div>
-      {detail ? <p className="mt-2 text-[13px] leading-relaxed text-text-variant">{detail}</p> : null}
+      {detail ? <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{detail}</p> : null}
     </div>
   );
 }
@@ -147,10 +149,10 @@ function ChatContractSummary({
   const feedbackReason = previewText(facetText(feedback, "feedback_reason"), 140);
 
   return (
-    <div className="space-y-3 rounded-md border border-outline bg-surface-low p-4">
+    <div className="space-y-3 glass-tile rounded-md p-4">
       <div className="space-y-1">
         <SubsectionHeading>Trial summary</SubsectionHeading>
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Chat-specific signals from this trial: outcome, how the conversation unfolded, and the
           persona&apos;s post-chat rating.
         </p>
@@ -202,7 +204,7 @@ export function ChatSelfReport({
   return (
     <div className="space-y-4">
       <div
-        className={`rounded-md border border-outline bg-surface p-5 border-l-4 ${
+        className={`rounded-md glass-panel p-5 border-l-4 ${
           overall == null ? "border-l-outline" : bandBorderL(band)
         }`}
       >
@@ -257,10 +259,8 @@ export function ChatObjectiveEvaluation({
         <StatTile caption="Turns" value={metrics?.numTurns ?? "-"} />
         {verifier ? (
           <div
-            className={`flex flex-col justify-center rounded-lg border px-3 py-2.5 ${
-              verifier.passed
-                ? "border-secondary/40 bg-secondary/10"
-                : "border-danger/40 bg-danger/10"
+            className={`flex flex-col justify-center rounded-lg px-3 py-2.5 ${
+              verifier.passed ? "bg-secondary/10" : "bg-danger/10"
             }`}
           >
             <span className="hud text-[11px] text-text-dim">Run complete</span>
@@ -272,20 +272,20 @@ export function ChatObjectiveEvaluation({
             </div>
           </div>
         ) : (
-          <div className="flex flex-col justify-center rounded-lg border border-dashed border-outline/50 bg-surface/40 px-3 py-2.5">
+          <div className="flex flex-col justify-center rounded-lg glass-tile glass-tile--dim px-3 py-2.5">
             <span className="hud text-[11px] text-text-dim">Run complete</span>
             <span className="mt-1 text-[15px] text-text-variant">Checks pending</span>
           </div>
         )}
       </div>
       {artifactMissing ? (
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Scores above were recovered from the live event stream. Artifact checks failed because
           output files were missing on this run. Re-run the job for a clean pass.
         </p>
       ) : null}
       {verifier?.detail && !verifier.passed ? (
-        <pre className="custom-scrollbar max-h-24 overflow-auto whitespace-pre-wrap rounded-md border border-outline/40 bg-surface/50 px-3 py-2 font-mono text-[12px] leading-snug text-text-variant">
+        <pre className="custom-scrollbar max-h-24 overflow-auto whitespace-pre-wrap rounded-md glass-tile px-3 py-2 font-mono text-[12px] leading-snug text-text-variant">
           {verifier.detail}
         </pre>
       ) : null}
@@ -308,7 +308,7 @@ export function ChatTrialTranscript({
     return <DashedNote>No conversation turns were recorded for this trial.</DashedNote>;
   }
   return (
-    <div className="space-y-7 rounded-md border border-outline bg-surface p-5">
+    <div className="space-y-7 rounded-md glass-panel p-5">
       {transcript.map((turn, i) => (
         <TranscriptTurn
           key={turn.turnIndex ?? i}
@@ -332,25 +332,27 @@ export function ChatTrialDebriefBody({
   metricScores,
   verifier,
   trialEvaluation,
+  taskTitle,
   showSectionHeadings = true,
 }: ChatTrialDebriefBodyProps) {
-  const app = appName(config.applicationId);
+  const applicationId = config.applicationId?.trim() || null;
+  const app = applicationId ? appName(applicationId) : taskTitle?.trim() || appName(null);
 
   return (
     <div className="space-y-6">
       <section className="space-y-4">
         {showSectionHeadings && <SectionHeading>Evaluation</SectionHeading>}
-        <div className="space-y-2 rounded-md border border-outline/50 bg-surface/40 p-3">
-          <p className="text-[13px] leading-relaxed text-text-variant">
+        <div className="space-y-2 glass-tile rounded-md p-3">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             Run checks confirm the conversation finished and artifacts are valid — not a quality
             score.
           </p>
           <ChatObjectiveEvaluation metrics={metricScores} verifier={verifier} />
         </div>
         <ChatContractSummary trialEvaluation={trialEvaluation} />
-        <div className="space-y-3 rounded-md border border-outline bg-surface-low p-4">
+        <div className="space-y-3 glass-tile rounded-md p-4">
           {showSectionHeadings && <SubsectionHeading>Persona self-report</SubsectionHeading>}
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             How the simulated user rated the chat after it ended.
           </p>
           <ChatSelfReport questionnaire={questionnaire} />
@@ -402,6 +404,7 @@ function TranscriptTurn({
       <PersonaBubble
         message={turn.userMessage}
         personaId={persona?.id}
+        personaName={persona?.name}
         personaDimensions={persona?.dimensions ?? undefined}
       />
       {turn.decision && turn.decision !== "continue" ? (
@@ -424,8 +427,8 @@ function TranscriptTurn({
 function DecisionTag({ decision }: { decision: string }) {
   const satisfied = decision === "satisfied";
   const cls = satisfied
-    ? "text-secondary border border-secondary/30 bg-secondary/10"
-    : "text-warn border border-warn/30 bg-warn/10";
+    ? "text-secondary bg-secondary/10"
+    : "text-warn bg-warn/10";
   const label = satisfied ? "Got what they needed" : decision === "give_up" ? "Gave up" : humanizeToken(decision);
   return (
     <span className={`inline-flex items-center rounded px-1.5 py-px hud text-[11px] ${cls}`}>{label}</span>
@@ -434,7 +437,7 @@ function DecisionTag({ decision }: { decision: string }) {
 
 function DebriefScorecard({ q }: { q: PlaygroundQuestionnaire }) {
   return (
-    <div className="space-y-5 rounded-md border border-outline bg-surface p-4">
+    <div className="space-y-5 rounded-md glass-panel p-4">
       <CriterionBar
         label="Stayed within my requirements"
         score={q.constraintSatisfaction}
@@ -451,17 +454,17 @@ function DebriefScorecard({ q }: { q: PlaygroundQuestionnaire }) {
         <div className="flex items-center justify-between gap-2">
           <span className="text-[14px] font-medium text-text-main">Asked helpful follow-up questions</span>
           <span
-            className={`inline-flex items-center rounded border px-2 py-1 hud text-[11px] ${
+            className={`inline-flex items-center rounded px-2 py-1 hud text-[11px] ${
               q.askedUsefulClarifyingQuestions
-                ? "border-secondary/30 bg-secondary/10 text-secondary"
-                : "border-outline bg-surface-high text-text-variant"
+                ? "bg-secondary/10 text-secondary"
+                : "glass-tile text-text-variant"
             }`}
           >
             {q.askedUsefulClarifyingQuestions ? "Yes" : "Not this time"}
           </span>
         </div>
         {q.clarifyingNotes && (
-          <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
+          <p className="mt-1.5 text-[14px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
         )}
       </div>
     </div>
@@ -494,7 +497,7 @@ function CriterionBar({
       <div className="h-1.5 overflow-hidden rounded-full bg-field">
         <div className={`h-full ${color.bar}`} style={{ width: `${pct}%` }} />
       </div>
-      {rationale && <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{rationale}</p>}
+      {rationale && <p className="mt-1.5 text-[14px] leading-snug text-text-variant">{rationale}</p>}
     </div>
   );
 }

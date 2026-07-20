@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/survey-household-pulse"
+name = "application/household-pulse"
 
 [metadata]
 difficulty = "easy"

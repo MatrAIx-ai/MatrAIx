@@ -106,8 +106,15 @@ class _FakeOkResponse:
 def test_sidecar_reachable_true_on_2xx(monkeypatch):
     from backend.api import app as appmod
 
-    monkeypatch.setattr(appmod.urllib.request, "urlopen", lambda req, timeout=0: _FakeOkResponse())
+    seen: dict[str, str] = {}
+
+    def _open(req, timeout=0):
+        seen["url"] = getattr(req, "full_url", None) or str(req)
+        return _FakeOkResponse()
+
+    monkeypatch.setattr(appmod.urllib.request, "urlopen", _open)
     assert appmod._sidecar_reachable("http://sidecar.test:8902") is True
+    assert seen["url"] == "http://sidecar.test:8902/ready"
 
 
 def test_sidecar_reachable_false_when_unreachable(monkeypatch):
@@ -129,7 +136,7 @@ def test_preflight_marks_down_sidecars_optional(client, monkeypatch):
     for name in ("OpenBB (finance)", "Medical assistant"):
         assert by_name[name]["ok"] is False
         assert by_name[name]["optional"] is True
-        assert "not running" in by_name[name]["detail"]
+        assert "not ready" in by_name[name]["detail"]
     assert body["ready"] == all(c["ok"] for c in body["checks"] if not c.get("optional"))
 
 
@@ -140,7 +147,7 @@ def test_preflight_reachable_sidecar_shows_ok(client, monkeypatch):
     body = client.get("/api/preflight").json()
     medical = next(c for c in body["checks"] if c["name"] == "Medical assistant")
     assert medical["ok"] is True
-    assert "reachable" in medical["detail"]
+    assert "ready" in medical["detail"]
 
 
 def test_preflight_recai_resources_optional(client):

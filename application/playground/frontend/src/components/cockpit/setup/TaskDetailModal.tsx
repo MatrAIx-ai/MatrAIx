@@ -65,9 +65,11 @@ export interface TaskDetailModalProps {
   open: boolean;
   card: TaskCardModel | null;
   onClose: () => void;
+  /** Optional primary CTA (e.g. Open in Playground from Task Gallery). */
+  primaryAction?: { label: string; onClick: () => void };
 }
 
-export function TaskDetailModal({ open, card, onClose }: TaskDetailModalProps) {
+export function TaskDetailModal({ open, card, onClose, primaryAction }: TaskDetailModalProps) {
   const taskPath = card?.taskPath?.trim() ?? "";
 
   const detailQuery = useQuery({
@@ -127,7 +129,7 @@ export function TaskDetailModal({ open, card, onClose }: TaskDetailModalProps) {
               </ToneChip>
             )}
             {(card.tags ??
-              (card.tagLabels?.map((label) => ({ label, tone: "secondary" as const })) ??
+              (card.tagLabels?.map((label) => ({ label, tone: "neutral" as const })) ??
                 [])).map((tag) => (
               <ToneChip
                 key={tag.label}
@@ -171,6 +173,19 @@ export function TaskDetailModal({ open, card, onClose }: TaskDetailModalProps) {
 
           {!loading && !failed && taskPath && sections.length === 0 ? (
             <p className="text-[14px] text-text-dim">No task documents are available for this task.</p>
+          ) : null}
+
+          {primaryAction ? (
+            <div className="border-t border-outline/30 pt-3">
+              <button
+                type="button"
+                onClick={primaryAction.onClick}
+                className={`inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-md bg-primary/12 px-3 text-[13px] font-semibold text-primary hover:bg-primary/18 ${FOCUS_RING}`}
+              >
+                <Sym name="play_arrow" size={16} />
+                {primaryAction.label}
+              </button>
+            </div>
           ) : null}
         </div>
       )}

@@ -30,10 +30,10 @@ const TYPE_TONE: Record<string, "primary" | "accent" | "warn" | "neutral"> = {
 };
 
 const TYPE_CHIP_CLASS: Record<"primary" | "accent" | "warn" | "neutral", string> = {
-  primary: "border-primary/40 bg-primary/10 text-primary",
-  accent: "border-accent/40 bg-accent/10 text-accent",
-  warn: "border-warn/40 bg-warn/10 text-warn",
-  neutral: "border-outline/50 bg-surface-high text-text-variant",
+  primary: "border-transparent bg-primary/10 text-primary",
+  accent: "border-transparent bg-accent/10 text-accent",
+  warn: "border-transparent bg-warn/10 text-warn",
+  neutral: "border-transparent bg-surface-high/70 text-text-variant",
 };
 
 export type SurveyQuestionTypeCount = {
