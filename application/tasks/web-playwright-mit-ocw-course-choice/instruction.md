@@ -31,7 +31,7 @@ Save your choice to `/app/output/course_choice.json`:
 ```json
 {
   "decision_subject_id": "<course slug from the selected MIT OCW URL>",
-  "decision_subject_label": "<course title exactly as shown>",
+  "decision_subject_label": "<course title copied from the main heading of its canonical course detail page>",
   "decision_outcome": "selected",
   "basis_primary": "<price|quality|features|convenience|taste|trust|familiarity|novelty|fit|other>",
   "basis_secondary": "<optional second value from the same enumeration>",
@@ -43,7 +43,7 @@ Save your choice to `/app/output/course_choice.json`:
   "task_options_considered": [
     {
       "decision_subject_id": "<course slug>",
-      "decision_subject_label": "<course title exactly as shown>",
+      "decision_subject_label": "<course title copied from the main heading of its canonical course detail page>",
       "task_course_url": "https://ocw.mit.edu/courses/<course-slug>/",
       "task_course_number": "<course number exactly as shown>",
       "task_course_level": "<course level exactly as shown>",
@@ -57,6 +57,9 @@ Save your choice to `/app/output/course_choice.json`:
 
 - `task_options_considered` must contain at least three distinct courses whose
   detail pages you actually opened.
+- For every course you record, copy its title from the main heading of that
+  course's canonical detail page, not from a search result, recommendation
+  card, browser title, or snippet.
 - The selected course must appear in `task_options_considered`, with matching
   title, slug, URL, course number, and level.
 - Use the course-page URL slug as `decision_subject_id`.
