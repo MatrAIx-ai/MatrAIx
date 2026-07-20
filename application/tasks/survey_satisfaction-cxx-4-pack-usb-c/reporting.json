@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_overall_sat.response_by_segment",
           "facetKey": "response",
           "title": "Overall satisfaction"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_expectation.response_by_segment",
           "facetKey": "response",
           "title": "Expectation match"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_best_worst.response_by_segment",
           "facetKey": "response",
           "title": "Satisfaction driver"
         }

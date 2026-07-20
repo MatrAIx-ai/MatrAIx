@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_style.response_by_segment",
           "facetKey": "response",
           "title": "Purchase style"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_trigger.response_by_segment",
           "facetKey": "response",
           "title": "Impulse trigger"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_temptation.response_by_segment",
           "facetKey": "response",
           "title": "Impulse pull"
         }

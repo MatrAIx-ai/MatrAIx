@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_threshold.response_by_segment",
           "facetKey": "response",
           "title": "Price threshold"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_price_vs_quality.response_by_segment",
           "facetKey": "response",
           "title": "Price vs quality tradeoff"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_too_expensive.response_by_segment",
           "facetKey": "response",
           "title": "Price pain"
         }

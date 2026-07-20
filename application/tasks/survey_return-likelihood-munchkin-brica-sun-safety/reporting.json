@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_return_risk.response_by_segment",
           "facetKey": "response",
           "title": "Return risk"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_return_reason.response_by_segment",
           "facetKey": "response",
           "title": "Likely return reason"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_return_policy_weight.response_by_segment",
           "facetKey": "response",
           "title": "Return policy weight"
         }

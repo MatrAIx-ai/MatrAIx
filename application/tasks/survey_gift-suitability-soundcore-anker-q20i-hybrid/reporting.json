@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_giftable.response_by_segment",
           "facetKey": "response",
           "title": "Gift suitability"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_recipient.response_by_segment",
           "facetKey": "response",
           "title": "Likely gift recipient"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_gift_price_ok.response_by_segment",
           "facetKey": "response",
           "title": "Gift price fit"
         }

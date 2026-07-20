@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_nps.response_by_segment",
           "facetKey": "response",
           "title": "Recommendation likelihood (NPS)"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_reason_type.response_by_segment",
           "facetKey": "response",
           "title": "Recommendation driver"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_who.response_by_segment",
           "facetKey": "response",
           "title": "Recommendation audience"
         }

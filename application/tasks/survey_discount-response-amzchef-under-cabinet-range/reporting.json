@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_discount_needed.response_by_segment",
           "facetKey": "response",
           "title": "Discount needed to buy"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_promo_type.response_by_segment",
           "facetKey": "response",
           "title": "Preferred promo type"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_deal_seeking.response_by_segment",
           "facetKey": "response",
           "title": "Deal seeking"
         }

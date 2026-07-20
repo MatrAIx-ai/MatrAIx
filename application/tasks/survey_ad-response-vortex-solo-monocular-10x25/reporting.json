@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_attention.response_by_segment",
           "facetKey": "response",
           "title": "Ad attention"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_action.response_by_segment",
           "facetKey": "response",
           "title": "Post-ad action"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_believability.response_by_segment",
           "facetKey": "response",
           "title": "Claim believability"
         }

@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_trust_reviews.response_by_segment",
           "facetKey": "response",
           "title": "Review trust"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_review_weight.response_by_segment",
           "facetKey": "response",
           "title": "Review influence"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_review_check.response_by_segment",
           "facetKey": "response",
           "title": "Review focus"
         }

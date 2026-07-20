@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_single_most.response_by_segment",
           "facetKey": "response",
           "title": "Top purchase factor"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_top_factors.response_by_segment",
           "facetKey": "response",
           "title": "Purchase factors"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_specs_confidence.response_by_segment",
           "facetKey": "response",
           "title": "Spec confidence"
         }

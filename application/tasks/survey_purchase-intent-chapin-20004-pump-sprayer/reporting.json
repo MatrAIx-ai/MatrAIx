@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_purchase_intent.response_by_segment",
           "facetKey": "response",
           "title": "Purchase intent"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_price_fairness.response_by_segment",
           "facetKey": "response",
           "title": "Price fairness"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_overall_likelihood.response_by_segment",
           "facetKey": "response",
           "title": "Purchase likelihood"
         }

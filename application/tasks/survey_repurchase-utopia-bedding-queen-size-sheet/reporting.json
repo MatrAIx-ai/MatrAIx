@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_rebuy.response_by_segment",
           "facetKey": "response",
           "title": "Repurchase intent"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_switch_trigger.response_by_segment",
           "facetKey": "response",
           "title": "Switch trigger"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_brand_loyalty.response_by_segment",
           "facetKey": "response",
           "title": "Brand loyalty"
         }

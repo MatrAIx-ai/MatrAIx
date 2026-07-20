@@ -8,6 +8,7 @@
       },
       "distributions": [
         {
+          "id": "q_wait.response_by_segment",
           "facetKey": "response",
           "title": "Acceptable delivery wait"
         }
@@ -20,6 +21,7 @@
       },
       "distributions": [
         {
+          "id": "q_ship_cost.response_by_segment",
           "facetKey": "response",
           "title": "Shipping cost attitude"
         }
@@ -32,6 +34,7 @@
       },
       "distributions": [
         {
+          "id": "q_speed_matters.response_by_segment",
           "facetKey": "response",
           "title": "Speed importance"
         }
