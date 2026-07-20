@@ -38,3 +38,14 @@ def test_notion_plan_comparison_is_registered():
     assert task.site_url == "https://www.notion.com/pricing"
     assert task.output_artifact == "notion_plan_comparison.json"
     assert task.submission_profile == "notion_plan_comparison"
+
+
+def test_openlibrary_book_choice_is_registered():
+    task = get_web_eval_task("web-openlibrary-book-choice")
+
+    assert task.task_path == "application/tasks/web-openlibrary-book-choice"
+    assert task.task_kind == "task"
+    assert task.site_name == "Open Library"
+    assert task.site_url == "https://openlibrary.org/"
+    assert task.output_artifact == "book_choice.json"
+    assert task.submission_profile == "book_choice"

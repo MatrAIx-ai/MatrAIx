@@ -135,6 +135,13 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="notion_plan_comparison.json",
         submission_profile="notion_plan_comparison",
     ),
+    "web-openlibrary-book-choice": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="Open Library",
+        site_url="https://openlibrary.org/",
+        output_artifact="book_choice.json",
+        submission_profile="book_choice",
+    ),
     # Chatbot
     "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),
