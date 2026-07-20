@@ -177,6 +177,14 @@ async def v1_messages(payload: MessageRequest) -> dict[str, Any]:
         raise HTTPException(status_code=502, detail=f"DeepTutor error: {detail}")
     body = resp.json()
     reply = body.get("content") or ""
-    turn = _turns.get(session_id, 0) + 1
-    _turns[session_id] = turn
-    return {"sessionId": body.get("session_id", session_id), "reply": reply, "turn": turn}
+    turn_index = _turns.get(session_id, 0) + 1
+    _turns[session_id] = turn_index
+    return {
+        "sessionId": body.get("session_id", session_id),
+        "reply": reply,
+        "turn": {
+            "index": turn_index,
+            "userMessage": payload.message,
+            "assistantReply": reply,
+        },
+    }
