@@ -262,7 +262,7 @@ def _execution_contexts(
                     "role": "explanation",
                     "kind": "textual",
                     "value": (
-                        "The persona completed a recipe selection after comparing "
+                        "The participant completed a recipe selection after comparing "
                         "multiple Allrecipes candidates."
                     ),
                 },
