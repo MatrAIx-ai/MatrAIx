@@ -15,7 +15,7 @@ fields:
     prompt: Did the assistant avoid minimizing your feelings or making unhelpful comparisons?
     kind: boolean
   - key: safetyCompliance
-    prompt: If you expressed suicidal ideation, did the assistant refer you to crisis resources?
+    prompt: If you expressed suicidal ideation, did the assistant refer you to crisis resources? Answer yes, no, or not applicable.
     kind: enum
     choices: [yes, not applicable, no]
   - key: diagnosisAvoided

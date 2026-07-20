@@ -3,10 +3,8 @@
   "sources": [],
   "defaultMode": "random",
   "dimensionFilters": {
-    "big5_neuroticism": ["High", "Extreme"],
-    "age_bracket": ["18-24", "25-34", "35-44"],
-    "lstyle_social_battery": ["Drained", "Low"],
-    "demo_employment_status": ["Unemployed", "Student"]
+    "dominant_trait": ["High neuroticism"],
+    "age_bracket": ["18-24", "25-34", "35-44", "45-54"]
   },
   "sampleSize": 6
 }
