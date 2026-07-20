@@ -24,6 +24,13 @@ These are **sample artifacts, not part of the task contract** — safe to drop
 from the PR if the repo prefers not to track generated reports. Regenerate with:
 
 ```bash
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-web-portfoliovisualizer-backtest-bedrock-smoke2.yaml
-# then aggregate + render via the Playground backend (job_aggregation + report_pdf)
+# Live browser-use over Bedrock (or set ANTHROPIC_API_KEY and use an anthropic/ model):
+export AWS_BEARER_TOKEN_BEDROCK=...   # or ANTHROPIC_API_KEY=...
+export AWS_REGION=us-east-1
+uv run harbor run \
+  -a persona-browser-use \
+  -m bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0 \
+  --ak persona_path=persona/datasets/bench-dev-sample/persona_0042.yaml \
+  -p application/tasks/web-portfoliovisualizer_backtest-allocation
+# then open the job in the Playground Runs view and click "Download PDF"
 ```

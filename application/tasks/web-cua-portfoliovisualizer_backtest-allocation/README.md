@@ -46,12 +46,6 @@ uv run harbor run \
   --env-file .env
 ```
 
-Or via the checked-in recipe:
-
-```bash
-uv run harbor run -c configs/jobs/example-job-recipe/appSim-web-portfoliovisualizer-backtest-local.yaml
-```
-
 Oracle (reference submission; best-effort page reachability, needs outbound
 network):
 

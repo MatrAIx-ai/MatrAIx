@@ -3,96 +3,66 @@
   "contextRules": [
     {
       "match": { "contextType": "task_outcome" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "task_outcome.explanation_by_status",
-          "title": "Backtest outcome explanation by status",
-          "targetFacetKey": "outcome_explanation",
-          "groupByFacetKey": "outcome_status",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "task_outcome.status_by_segment",
+          "facetKey": "outcome_status",
+          "title": "Outcome status"
         }
       ]
     },
     {
       "match": { "contextType": "decision" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "decision.reason_by_alignment",
-          "title": "Reason by goal alignment",
-          "targetFacetKey": "reason",
-          "groupByFacetKey": "task_goal_alignment",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "decision.risk_posture_by_segment",
+          "facetKey": "risk_posture",
+          "title": "Risk posture"
         },
         {
-          "id": "decision.reason_by_risk",
-          "title": "Reason by risk posture",
-          "targetFacetKey": "reason",
-          "groupByFacetKey": "risk_posture",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "decision.goal_alignment_by_segment",
+          "facetKey": "task_goal_alignment",
+          "title": "Goal alignment"
+        },
+        {
+          "id": "decision.equity_weight_by_segment",
+          "facetKey": "task_equity_weight_percent",
+          "title": "Equity weight (%)"
         }
       ],
-      "judgeDirectives": [
+      "summaryAnalyses": [
         {
-          "id": "decision.risk_personalization_scan",
-          "title": "Risk personalization scan",
+          "id": "decision.reason_by_risk_tolerance",
+          "title": "How each risk segment built its allocation",
           "targetFacetKey": "reason",
-          "groupByFacetKey": "risk_posture",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the persona's reason and risk tolerance and classify whether the chosen allocation is personalized to that risk tolerance and investment goal.",
-          "rubric": "Mark a signal true only when the reason clearly states or strongly implies that signal.",
-          "signals": [
-            { "key": "risk_matched_signal", "label": "Allocation matches stated risk tolerance", "valueType": "boolean" },
-            { "key": "goal_matched_signal", "label": "Allocation matches stated investment goal", "valueType": "boolean" },
-            { "key": "horizon_signal", "label": "Time horizon reasoning present", "valueType": "boolean" }
-          ]
+          "groupByPersonaDimension": "risk_tolerance",
+          "summaryKind": "llm_bucket_summary",
+          "instruction": "For each risk-tolerance segment, summarize in 1-2 sentences how these personas constructed their portfolio and what drove the fit to their goal and horizon, so a reviewer sees how allocation choices differ across risk appetites. Be faithful and concise; do not invent facts."
         }
       ]
     },
     {
       "match": { "contextType": "risk_disclosure" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "risk_disclosure.text_by_presence",
-          "title": "Risk disclosure text by presence",
-          "targetFacetKey": "disclosure_text",
-          "groupByFacetKey": "disclosure_present",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
-        }
-      ],
-      "judgeDirectives": [
-        {
-          "id": "risk_disclosure.quality_scan",
-          "title": "Risk disclosure quality scan",
-          "targetFacetKey": "disclosure_text",
-          "groupByFacetKey": "disclosure_present",
-          "groupByMode": "categorical",
-          "judgeKind": "llm_signal_judge",
-          "prompt": "Read the persona's flagged risk concerns and classify which realistic risk-communication signals are explicitly present.",
-          "rubric": "Mark a signal true only when the disclosure clearly states or strongly implies that signal.",
-          "signals": [
-            { "key": "cagr_extrapolation_signal", "label": "Warns against extrapolating past CAGR", "valueType": "boolean" },
-            { "key": "short_window_signal", "label": "Notes a short or unrepresentative backtest window", "valueType": "boolean" },
-            { "key": "drawdown_signal", "label": "Considers tolerability of the maximum drawdown", "valueType": "boolean" },
-            { "key": "optimism_signal", "label": "Flags overly optimistic projections", "valueType": "boolean" }
-          ]
+          "id": "risk_disclosure.present_by_segment",
+          "facetKey": "disclosure_present",
+          "title": "Risk disclosure present"
         }
       ]
     },
     {
       "match": { "contextType": "user_feedback" },
-      "summaryDirectives": [
+      "distributions": [
         {
-          "id": "user_feedback.reason_by_satisfaction",
-          "title": "Feedback reason by satisfaction",
-          "targetFacetKey": "feedback_reason",
-          "groupByFacetKey": "satisfaction",
-          "groupByMode": "categorical",
-          "summaryKind": "llm_bucket_summary"
+          "id": "user_feedback.satisfaction_by_segment",
+          "facetKey": "satisfaction",
+          "title": "Satisfaction"
+        },
+        {
+          "id": "user_feedback.goal_alignment_by_segment",
+          "facetKey": "goal_alignment",
+          "title": "Goal alignment"
         }
       ]
     }

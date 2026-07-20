@@ -198,7 +198,7 @@ def test_judgement():
                 {"key": "goal_completion_bucket", "label": "Goal completion bucket", "role": "primary", "kind": "categorical", "value": "complete"},
                 {"key": "verifier_mode", "label": "Verifier mode", "role": "evidence", "kind": "categorical", "value": "artifact_schema"},
                 {"key": "primary_failure_reason", "label": "Primary failure reason", "role": "primary", "kind": "categorical", "value": "none"},
-                {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "value": f"The persona built a {alloc_summary} portfolio, ran the backtest, and saved a valid {OUTPUT.name} artifact."},
+                {"key": "outcome_explanation", "label": "Outcome explanation", "role": "explanation", "kind": "textual", "explainsFacetKey": "outcome_status", "value": f"The persona built a {alloc_summary} portfolio, ran the backtest, and saved a valid {OUTPUT.name} artifact."},
             ],
         },
         {
@@ -208,7 +208,7 @@ def test_judgement():
             "facets": [
                 {"key": "artifact_type", "label": "Artifact type", "role": "primary", "kind": "categorical", "value": "task_submission"},
                 {"key": "artifact_status", "label": "Artifact status", "role": "primary", "kind": "categorical", "value": "correct"},
-                {"key": "artifact_evidence", "label": "Artifact evidence", "role": "explanation", "kind": "textual", "value": f"Backtest results captured: {json.dumps(data.get('results', {}), ensure_ascii=False)}."},
+                {"key": "artifact_evidence", "label": "Artifact evidence", "role": "explanation", "kind": "textual", "explainsFacetKey": "artifact_status", "value": f"Backtest results captured: {json.dumps(data.get('results', {}), ensure_ascii=False)}."},
             ],
         },
         {
@@ -219,7 +219,7 @@ def test_judgement():
                 # Standard web `decision` facets (keep keys exactly as specified).
                 {"key": "decision_outcome", "label": "Decision outcome", "role": "primary", "kind": "categorical", "value": decision_outcome},
                 {"key": "basis_primary", "label": "Primary basis", "role": "primary", "kind": "categorical", "value": "fit"},
-                {"key": "reason", "label": "Reason", "role": "explanation", "kind": "textual", "value": reason.strip()},
+                {"key": "reason", "label": "Reason", "role": "explanation", "kind": "textual", "explainsFacetKey": "decision_outcome", "value": reason.strip()},
                 {"key": "decision_subject_label", "label": "Chosen allocation", "role": "evidence", "kind": "textual", "value": alloc_summary},
                 {"key": "decision_subject_id", "label": "Allocation id", "role": "evidence", "kind": "categorical", "value": decision_subject_id},
                 # Recommended standard extra facet.
@@ -237,7 +237,7 @@ def test_judgement():
             "facets": [
                 {"key": "disclosure_present", "label": "Disclosure present", "role": "primary", "kind": "categorical", "value": disclosure_present},
                 {"key": "risk_tolerance", "label": "Risk tolerance", "role": "primary", "kind": "categorical", "value": risk_tolerance},
-                {"key": "disclosure_text", "label": "Disclosure text", "role": "explanation", "kind": "textual", "value": disclosure_text},
+                {"key": "disclosure_text", "label": "Disclosure text", "role": "explanation", "kind": "textual", "explainsFacetKey": "disclosure_present", "value": disclosure_text},
             ],
         },
         {
@@ -247,7 +247,7 @@ def test_judgement():
             "facets": [
                 {"key": "satisfaction", "label": "Satisfaction", "role": "primary", "kind": "categorical", "value": satisfaction},
                 {"key": "goal_alignment", "label": "Goal alignment", "role": "primary", "kind": "categorical", "value": goal_alignment},
-                {"key": "feedback_reason", "label": "Feedback reason", "role": "explanation", "kind": "textual", "value": reason.strip()},
+                {"key": "feedback_reason", "label": "Feedback reason", "role": "explanation", "kind": "textual", "explainsFacetKey": "satisfaction", "value": reason.strip()},
             ],
         },
     ]
