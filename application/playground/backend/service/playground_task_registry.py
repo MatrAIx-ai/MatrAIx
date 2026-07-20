@@ -107,6 +107,20 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="book_interest.json",
         submission_profile="book_interest",
     ),
+    "web-portfoliovisualizer_backtest-allocation": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="Portfolio Visualizer",
+        site_url="https://www.portfoliovisualizer.com/backtest-portfolio",
+        output_artifact="portfolio_backtest.json",
+        submission_profile="portfolio_backtest",
+    ),
+    "web-cua-portfoliovisualizer_backtest-allocation": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="Portfolio Visualizer",
+        site_url="https://www.portfoliovisualizer.com/backtest-portfolio",
+        output_artifact="portfolio_backtest.json",
+        submission_profile="portfolio_backtest",
+    ),
     # Chatbot
     "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),
