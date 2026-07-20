@@ -195,7 +195,7 @@ def _execution_contexts(
                     "role": "explanation",
                     "kind": "textual",
                     "value": (
-                        f"The persona selected {subject_label} after recording "
+                        f"The user selected {subject_label} after recording "
                         f"{candidate_count} distinct MIT OCW candidates."
                     ),
                 },
