@@ -11,12 +11,14 @@ mkdir -p "$D/jobs/sbatch_logs" "$D/results"
 cd "$D/jobs"
 common="ALL,REPO_ROOT=$R,PYTHON_BIN=$P,HF_BIN=$HF,INPUT_ROOT=$INPUT,CODEBOOK=$CODEBOOK,OUTPUT=$OUTPUT,REPO_ID=MatrAIx2026/MatrAIx_Persona_1M_Public_Release"
 build=$(sbatch --parsable --job-name=persona1m_build \
-  --dependency=afterok:33386509 --export="$common" "$D/jobs/build.job")
+  --export="$common" "$D/jobs/build.job")
 upload=""
 if [[ -n "${HF_TOKEN_matraix:-${HF_TOKEN:-}}" ]]; then
   upload=$(sbatch --parsable --job-name=persona1m_upload \
     --dependency="afterok:$build" --export="$common" "$D/jobs/upload.job")
 fi
 printf '{"build_job":"%s","upload_job":%s,"authentication_required":%s,"output":"%s","repo":"%s"}\n' \
-  "$build" "${upload:+\"$upload\"}" "$(if [[ -z "$upload" ]]; then printf true; else printf false; fi)" \
-  "$OUTPUT" "MatrAIx2026/MatrAIx_Persona_1M_Public_Release" | sed 's/"upload_job":,/"upload_job":null,/' | tee "$D/results/submission.json"
+  "$build" "${upload:+\"$upload\"}" \
+  "$(if [[ -z "$upload" ]]; then printf true; else printf false; fi)" \
+  "$OUTPUT" "MatrAIx2026/MatrAIx_Persona_1M_Public_Release" \
+  | sed 's/"upload_job":,/"upload_job":null,/' | tee "$D/results/submission.json"
