@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from backend.service.job_aggregation import build_job_aggregation
+from backend.service.job_aggregation import _prose_theme_summary, build_job_aggregation
 
 
 def _write_trial(job_dir: Path, trial_name: str, payload: dict) -> None:
@@ -1366,7 +1366,9 @@ def test_aggregate_textual_clusters_near_duplicate_free_text(tmp_path: Path) -> 
     assert facet["kind"] == "textual"
     textual = facet["textual"]
     assert textual["count"] == 6
-    assert 2 <= textual["uniqueCount"] <= 4
+    assert textual["uniqueCount"] == 4
+    assert textual["themeCount"] == len(textual["counts"])
+    assert len(textual["samples"]) == 4
     assert sum(row["count"] for row in textual["counts"]) == 6
     # Near-duplicate unit-test answers should land in one theme.
     unit_theme = next(row for row in textual["counts"] if "unit test" in row["value"].lower())
@@ -1377,3 +1379,13 @@ def test_aggregate_textual_clusters_near_duplicate_free_text(tmp_path: Path) -> 
     other = next(row for row in textual["counts"] if "completely different" in row["value"].lower())
     assert other["count"] == 1
     assert "theme" in textual["summary"].lower()
+
+
+def test_theme_summary_does_not_equate_one_cluster_with_identical_answers() -> None:
+    summary = _prose_theme_summary(
+        6,
+        [{"value": "A representative response", "count": 6, "samples": []}],
+        distinct_count=6,
+    )
+
+    assert summary == "Across 6 answers, 6 distinct responses share one broad theme."
