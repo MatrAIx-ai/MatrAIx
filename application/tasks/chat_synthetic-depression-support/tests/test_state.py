@@ -183,6 +183,17 @@ def test_transcript_schema() -> None:
     outcome_status = _derive_outcome_status(phq9_coverage, rating)
     resolution_basis = "user_feedback"
     next_step_owner = _derive_next_step_owner(reason, outcome_status)
+    outcome_reason = (
+        "The persona rated the experience {}/10 and reported {} of 9 PHQ-9 "
+        "domains explored."
+    ).format(
+        rating,
+        phq9_coverage if phq9_coverage is not None else "an unknown number of",
+    )
+    if would_seek_help is not None:
+        outcome_reason += " They {} seek further professional help.".format(
+            "would" if would_seek_help == "true" else "would not"
+        )
 
     conversation_path = _derive_conversation_path(
         clarification_question_count,
@@ -238,7 +249,7 @@ def test_transcript_schema() -> None:
                         "role": "explanation",
                         "kind": "textual",
                         "explainsFacetKey": "outcome_status",
-                        "value": reason,
+                        "value": outcome_reason,
                     },
                     {
                         "key": "next_step_owner",
