@@ -38,22 +38,23 @@ def _decode_write_command(cmd: str) -> tuple[str, str]:
     # Prefer the explicit `target=...` assignment from the dual-write command.
     for part in shlex.split(cmd):
         if part.startswith("target="):
-            target_path = part.split("=", 1)[1]
+            # Shell forms like `target='/path';` leave a trailing `;` on this token.
+            target_path = part.split("=", 1)[1].rstrip(";")
             break
     else:
         parts = shlex.split(cmd)
         redirect_idx = parts.index(">")
-        target_path = parts[redirect_idx + 1]
+        target_path = parts[redirect_idx + 1].rstrip(";")
 
     encoded = None
     for part in shlex.split(cmd):
         if part.startswith("encoded="):
-            encoded = part.split("=", 1)[1]
+            encoded = part.split("=", 1)[1].rstrip(";")
             break
     if encoded is None:
         parts = shlex.split(cmd)
         printf_idx = parts.index("printf")
-        encoded = parts[printf_idx + 2]
+        encoded = parts[printf_idx + 2].rstrip(";")
     return target_path, base64.b64decode(encoded).decode("utf-8")
 
 
