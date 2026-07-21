@@ -110,14 +110,9 @@
       },
       "distributions": [
         {
-          "id": "outcome.by_action_type",
-          "facetKey": "corporate_action_type",
-          "title": "Corporate action type asked"
-        },
-        {
-          "id": "outcome.by_scenario",
-          "facetKey": "scenario_id",
-          "title": "Scenario coverage"
+          "id": "outcome.coverage",
+          "facetKey": "scenario_coverage",
+          "title": "Ticker coverage (N of 4)"
         },
         {
           "id": "outcome.freshness_probe",
