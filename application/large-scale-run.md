@@ -18,12 +18,29 @@ https://github.com/MatrAIx-ai/MatrAIx
 
 ## Personas
 
-Run each task with **1000 personas**, generated in **stratified mode**
-from the task's own `persona_strategy.json`. Set `sampleSize` to `1000`
-to request an exact total of 1000 personas. Do not also set
-`sampleSizePerValueGroup`: the two fields are mutually exclusive, and
-`sampleSizePerValueGroup` sets a quota for every stratum rather than an
-exact total.
+Run each task with the **existing cohort of 1000 persona profiles** stored in
+the task's source folder in the
+[MatrAIx2026/Demo_Application_Data](https://huggingface.co/datasets/MatrAIx2026/Demo_Application_Data/tree/main)
+dataset. Open the matching type and task folder, then download its
+`Persona Profiles/` folder. Do not replace this cohort with personas from
+`persona/datasets/bench-dev-sample`, and do not generate a new cohort from the
+task's `persona_strategy.json`.
+
+For the **Notion pricing plan-comparison web task**, reuse the 1000 profiles
+from the GitHub pricing plan-fit task:
+
+https://huggingface.co/datasets/MatrAIx2026/Demo_Application_Data/tree/main/Type%203%20-%20Website/web-github-pricing_plan-fit/Persona%20Profiles
+
+This is the authoritative input cohort for the Notion run. Preserve the
+downloaded filenames and provenance files. Before running, verify that the
+folder contains exactly 1000 numbered `persona_*.yaml` files; keep
+`manifest.json`, `persona.jsonl`, and `SOURCE_README.md` with the cohort for
+auditing.
+
+For other representative tasks, use the same procedure: select the matching
+type folder, open the designated source task folder, and use the cohort inside
+its `Persona Profiles/` folder. If the planning spreadsheet does not identify
+the source task folder, confirm it with the application owner before running.
 
 ## Running
 
@@ -32,9 +49,10 @@ to specify what model to use.
 
 ## Where to find what you need to save
 
-You need to know where to find the artifacts folder, and where to package
-up the generated persona files. They are under `_generated`, and it is
-better to package them before a clean-up for the next task.
+Package the run artifacts produced by Harbor together with the exact downloaded
+`Persona Profiles/` cohort used as input. Do not substitute profiles from a
+different local directory when packaging the run. Record the Hugging Face
+source URL and, when available, the source dataset revision in the run README.
 
 ## What to save
 
@@ -49,13 +67,14 @@ dataset's main that matches the task's type (for example
 
 ```
 folder: <type folder>/modelname_taskname
-├── persona profile/          1000 personas automatically generated
-│                             (stratified mode with sampleSize set to 1000),
-│                             each persona has its own yaml file
+├── Persona Profiles/         exact 1000-persona input cohort downloaded
+│                             from the designated Hugging Face source folder,
+│                             including its provenance and manifest files
 ├── artifact/                 all telemetries
 ├── report/                   (optional) reports generated
 ├── README                    a small description of the task and the
-│                             configurations of the run
+│                             configurations of the run, plus the persona
+│                             source URL and dataset revision
 └── persona_strategy.json
 ```
 
