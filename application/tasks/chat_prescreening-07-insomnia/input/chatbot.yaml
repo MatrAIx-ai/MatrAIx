@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: SLEEP-WELL-2026-007
   response:
     sessionIdField: sessionId
     replyField: reply

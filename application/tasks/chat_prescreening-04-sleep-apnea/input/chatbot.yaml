@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: CPAP-COACH-2026-004
   response:
     sessionIdField: sessionId
     replyField: reply

@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: DLC-T2D-2026-001
   response:
     sessionIdField: sessionId
     replyField: reply

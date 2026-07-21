@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: HBP-TM-2026-002
   response:
     sessionIdField: sessionId
     replyField: reply

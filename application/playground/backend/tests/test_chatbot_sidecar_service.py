@@ -34,6 +34,7 @@ def test_list_sidecar_statuses(monkeypatch: pytest.MonkeyPatch) -> None:
         "acme_support_api",
         "acme_support_mcp",
         "meal_planning_nutrition",
+        "prescreening_assistant",
     }
     assert all(item["ok"] for item in statuses)
     by_id = {item["applicationId"]: item for item in statuses}

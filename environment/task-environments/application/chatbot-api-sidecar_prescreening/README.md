@@ -1,6 +1,6 @@
 # Shared clinical-trial pre-screening task environment
 
-Shared runtime for the ten `application/tasks/prescreening-NN-*_chatbot` tasks.
+Shared runtime for the ten `application/tasks/chat_prescreening-*` tasks.
 
 `docker-compose.yaml` starts a vendored screener sidecar (`prescreening-chatbot`,
 Flask, port 8000) that `main` waits on. The sidecar is a deterministic,

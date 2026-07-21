@@ -22,6 +22,7 @@ protocol:
     staticBody:
       applicationId: prescreening_assistant
       applicationContext: clinical_trial_prescreening
+      protocolId: KNEE-MOVE-2026-005
   response:
     sessionIdField: sessionId
     replyField: reply

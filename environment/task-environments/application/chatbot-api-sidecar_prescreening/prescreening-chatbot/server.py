@@ -1,6 +1,6 @@
 """Clinical-trial pre-screening chatbot sidecar (rule-based smoke implementation).
 
-A deterministic screener for the `prescreening-NN-*_chatbot` tasks: it loads a
+A deterministic screener for the `chat_prescreening-*` tasks: it loads a
 trial protocol (criteria, probe questions, applicability rules) from
 ./protocols/, walks the participant through every applicable criterion one
 question at a time, and ends with the fenced-JSON final assessment the task
@@ -236,6 +236,7 @@ def post_message():
             "sex": None,
             "stage": "sex" if _uses_sex(protocol) else "criteria",
             "turn": 0,
+            "messages": [],
         }
         _sessions[session_id] = state
         if state["stage"] == "sex":
@@ -250,7 +251,27 @@ def post_message():
         reply = _advance(state, message)
 
     state["turn"] += 1
-    return jsonify({"sessionId": session_id, "reply": reply, "turn": state["turn"]})
+    state["messages"].append({"role": "user", "content": message})
+    state["messages"].append({"role": "assistant", "content": reply})
+    turn_view = {
+        "index": state["turn"],
+        "userMessage": message,
+        "assistantReply": reply,
+    }
+    return jsonify({"sessionId": session_id, "reply": reply, "turn": turn_view})
+
+
+@app.get("/v1/conversation")
+def get_conversation():
+    session_id = str(request.args.get("sessionId") or "").strip()
+    state = _sessions.get(session_id)
+    if state is None:
+        return jsonify({"sessionId": session_id, "messages": []})
+    return jsonify({
+        "sessionId": session_id,
+        "domain": "clinical_trial_prescreening",
+        "messages": state["messages"],
+    })
 
 
 if __name__ == "__main__":
