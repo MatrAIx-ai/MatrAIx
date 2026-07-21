@@ -107,6 +107,19 @@ def _optional_score(feedback: dict[str, Any], key: str) -> int | None:
     return value
 
 
+def _enum_text(feedback: dict[str, Any], key: str) -> str | None:
+    value = feedback.get(key)
+    if value is None:
+        return None
+    text = str(value).strip().lower()
+    if text in {"true", "1"}:
+        return "yes"
+    if text in {"false", "0"}:
+        return "no"
+    assert text in {"yes", "partially", "no"}, f"{key} must be yes / partially / no"
+    return text
+
+
 def test_transcript_schema() -> None:
     protocol = _load_json(TESTS_DIR / "protocol.json")
     transcript = _load_json(TRANSCRIPT_PATH)
@@ -237,16 +250,45 @@ def test_transcript_schema() -> None:
             "user_feedback.overallExperienceRating is required when feedback exists"
         )
         fb_reason = _require_string(feedback.get("reason"), "user_feedback.reason")
+        # Emit every field the self-report schema collects: a user_feedback
+        # context suppresses the platform's own synthesis, so anything omitted
+        # here is silently dropped from aggregation and reports.
         facets = [
             {"key": "overall_experience_rating", "label": "Overall experience rating",
              "role": "score", "kind": "numerical", "value": rating},
             {"key": "feedback_reason", "label": "Feedback reason",
              "role": "explanation", "kind": "textual", "value": fb_reason},
         ]
+        need = _enum_text(feedback, "needConstraintSatisfaction")
+        if need is not None:
+            facets.append({"key": "need_constraint_satisfaction",
+                           "label": "Need or constraint satisfaction",
+                           "role": "primary", "kind": "categorical", "value": need})
+        preference = _enum_text(feedback, "personalPreferenceSatisfaction")
+        if preference is not None:
+            facets.append({"key": "personal_preference_satisfaction",
+                           "label": "Personal preference satisfaction",
+                           "role": "evidence", "kind": "categorical", "value": preference})
+        clarify = feedback.get("askedUsefulClarificationQuestions")
+        if isinstance(clarify, bool):
+            facets.append({"key": "clarification_questions_useful",
+                           "label": "Clarification questions useful",
+                           "role": "primary", "kind": "categorical",
+                           "value": "true" if clarify else "false"})
+        notes = feedback.get("clarifyingNotes")
+        if isinstance(notes, str) and notes.strip():
+            facets.append({"key": "clarifying_notes", "label": "Clarifying notes",
+                           "role": "explanation", "kind": "textual",
+                           "value": notes.strip()})
         trust = _optional_score(feedback, "trustLevel")
         if trust is not None:
             facets.append({"key": "trust_level", "label": "Trust level",
                            "role": "score", "kind": "numerical", "value": trust})
+        understood = feedback.get("feltUnderstood")
+        if isinstance(understood, bool):
+            facets.append({"key": "felt_understood", "label": "Felt understood",
+                           "role": "evidence", "kind": "categorical",
+                           "value": "true" if understood else "false"})
         payload["contexts"].append({
             "key": "user_feedback.primary",
             "label": "User feedback",

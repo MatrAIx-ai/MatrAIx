@@ -33,8 +33,11 @@ PROTOCOLS_DIR = Path(__file__).resolve().parent / "protocols"
 
 UNKNOWN_RE = re.compile(
     r"\b(don'?t know|do not know|not sure|unsure|no idea|can'?t remember|"
-    r"cannot remember|not certain|never (checked|measured|tested)|"
-    r"i'?d have to check|would have to check)\b",
+    r"cannot remember|not certain|never (checked|measured|tested|asked|got|received)|"
+    r"couldn'?t (tell|say)|can'?t (tell|say|recall)|don'?t (remember|recall)|"
+    r"don'?t have (it|that|the \w+|my \w+|any \w+) "
+    r"(handy|with me|on me|on hand|right now|in front of me)|"
+    r"i'?d have to (check|look|ask|find|dig)|would have to (check|look|ask|find|dig))\b",
     re.IGNORECASE,
 )
 NO_RE = re.compile(
@@ -87,40 +90,98 @@ _BOUND_PATTERNS = [
 ]
 
 
-def _criterion_bounds(text):
-    """(lo, hi, lo_inclusive, hi_inclusive) when the criterion states exactly one
-    numeric condition; None when zero or several (multi-constraint criteria fall
-    back to the yes/no confirmation flow)."""
+def _bounds_with_span(text):
+    """((lo, hi, lo_inc, hi_inc), span) when the criterion states exactly one
+    numeric condition; None when zero or several (multi-constraint criteria
+    fall back to the confirmation flow). ``span`` is the matched clause plus a
+    little trailing context, used for unit detection."""
     lowered = text.lower()
-    found = []
     for pattern, build in _BOUND_PATTERNS:
         match = re.search(pattern, lowered)
         if match:
-            found.append(build(match))
-            lowered = lowered.replace(match.group(0), " ", 1)
-            if any(re.search(p, lowered) for p, _ in _BOUND_PATTERNS):
+            remainder = lowered.replace(match.group(0), " ", 1)
+            if any(re.search(p, remainder) for p, _ in _BOUND_PATTERNS):
                 return None  # more than one numeric condition -> ambiguous
-            break
-    return found[0] if found else None
+            span = lowered[match.start():min(len(lowered), match.end() + 20)]
+            return build(match), span
+    return None
+
+
+_TIME_IN_DAYS = {"hour": 1 / 24, "day": 1.0, "week": 7.0, "month": 30.44,
+                 "year": 365.25}
+_FOREIGN_UNIT_RE = re.compile(
+    r"\b(mg|mcg|ml|kg|lbs?|pounds?|packs?|pills?|tablets?|dollars?)\b",
+    re.IGNORECASE,
+)
+_RATE_RE = re.compile(r"\b(?:per|a|each|every)\s+(day|week|month)\b", re.IGNORECASE)
+
+
+def _time_unit(text: str) -> str | None:
+    match = re.search(r"\b(hour|day|week|month|year)s?\b", text, re.IGNORECASE)
+    return match.group(1).lower() if match else None
 
 
 def _numeric_answer(criterion, message):
     """Compare a single number in the reply against the criterion's stated
-    bounds. Returns 'yes' (condition satisfied) / 'no', or None when not
-    applicable (no bounds, or not exactly one number in the reply)."""
-    bounds = _criterion_bounds(criterion["text"])
-    if bounds is None:
+    bounds, converting compatible time/rate units. Returns 'yes' (condition
+    satisfied) / 'no', or None when not confidently comparable (falls back to
+    the confirmation flow)."""
+    found = _bounds_with_span(criterion["text"])
+    if found is None:
         return None
+    (lo, hi, lo_inc, hi_inc), span = found
     numbers = NUMBER_RE.findall(message)
     if len(numbers) != 1:
         return None
     value = float(numbers[0])
-    lo, hi, lo_inc, hi_inc = bounds
+
+    if _FOREIGN_UNIT_RE.search(message):
+        return None  # doses, weights, pack counts: not the criterion's quantity
+    if value >= 1900 and _time_unit(message) is None:
+        return None  # looks like a calendar year ("diagnosed in 2019")
+
+    crit_rate = _RATE_RE.search(span) or _RATE_RE.search(criterion["text"])
+    reply_rate = _RATE_RE.search(message)
+    crit_unit = _time_unit(span)
+    reply_unit = _time_unit(_RATE_RE.sub(" ", message))
+
+    if crit_rate and reply_rate:
+        # frequencies: convert the reply onto the criterion's per-<unit> basis
+        value *= (_TIME_IN_DAYS[crit_rate.group(1).lower()]
+                  / _TIME_IN_DAYS[reply_rate.group(1).lower()])
+    elif crit_rate or reply_rate:
+        bare_vs_rate = (crit_rate and reply_rate is None and reply_unit is None) or \
+            (reply_rate and crit_rate is None and crit_unit is None)
+        if not bare_vs_rate:
+            return None
+    elif crit_unit:
+        # durations: convert both sides to days
+        reply_days_unit = reply_unit or crit_unit  # bare: assume criterion unit
+        value *= _TIME_IN_DAYS[reply_days_unit]
+        scale = _TIME_IN_DAYS[crit_unit]
+        lo = lo * scale if lo != float("-inf") else lo
+        hi = hi * scale if hi != float("inf") else hi
+    elif reply_unit:
+        return None  # reply carries a time unit but the criterion bound does not
+
     ok_lo = value >= lo if lo_inc else value > lo
     ok_hi = value <= hi if hi_inc else value < hi
     return "yes" if (ok_lo and ok_hi) else "no"
-FEMALE_RE = re.compile(r"\b(female|woman|girl|f)\b", re.IGNORECASE)
-MALE_RE = re.compile(r"\b(male|man|boy|m)\b", re.IGNORECASE)
+FEMALE_RE = re.compile(r"\b(female|woman|girl)\b", re.IGNORECASE)
+MALE_RE = re.compile(r"\b(male|man|boy)\b", re.IGNORECASE)
+
+
+def _parse_sex(message: str) -> str | None:
+    bare = message.strip().rstrip(".!").lower()
+    if bare in ("f", "female"):
+        return "female"
+    if bare in ("m", "male"):
+        return "male"
+    if FEMALE_RE.search(message):
+        return "female"
+    if MALE_RE.search(message):
+        return "male"
+    return None
 
 _sessions: dict[str, dict] = {}
 
@@ -162,12 +223,22 @@ def _applicable(criterion: dict, sex: str | None) -> bool:
     )
 
 
+MIXED_RE = re.compile(
+    r"\b(but|however|although|though|except)\b|won'?t|refuse|not willing|rather not",
+    re.IGNORECASE,
+)
+
+
 def _parse_yes_no_unknown(text: str) -> str | None:
     if UNKNOWN_RE.search(text):
         return "unknown"
-    if NO_RE.search(text):
+    negative = bool(NO_RE.search(text))
+    positive = bool(YES_RE.search(text))
+    if (negative and positive) or (positive and MIXED_RE.search(text)):
+        return None  # mixed signals ("Yes ... but I won't") -> confirmation flow
+    if negative:
         return "no"
-    if YES_RE.search(text):
+    if positive:
         return "yes"
     return None
 
@@ -250,10 +321,7 @@ def _final_assessment(state: dict) -> str:
 def _advance(state: dict, message: str) -> str:
     # Optional one-time sex question so sex-conditional criteria can be skipped.
     if state["stage"] == "sex":
-        if FEMALE_RE.search(message):
-            state["sex"] = "female"
-        elif MALE_RE.search(message):
-            state["sex"] = "male"
+        state["sex"] = _parse_sex(message)
         state["criteria"] = [
             c for c in state["protocol"]["criteria"] if _applicable(c, state["sex"])
         ]
