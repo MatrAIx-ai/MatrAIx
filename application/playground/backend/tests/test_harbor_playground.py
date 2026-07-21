@@ -123,13 +123,13 @@ def test_build_result_from_harbor_artifacts_maps_transcript_feedback_and_metrics
     }
     assert payload["questionnaire"] == {
         "constraintSatisfaction": 3,
-        "constraintRationale": "The final choice fit, but the first response was broad.",
+        "constraintRationale": "",
         "preferenceSatisfaction": 5,
-        "preferenceRationale": "The final choice fit, but the first response was broad.",
+        "preferenceRationale": "",
         "overallRating": 8,
         "ratingReason": "The final choice fit, but the first response was broad.",
         "askedUsefulClarifyingQuestions": True,
-        "clarifyingNotes": "The final choice fit, but the first response was broad.",
+        "clarifyingNotes": "",
     }
     assert payload["metricScores"] == {"numTurns": 2}
 
@@ -419,9 +419,9 @@ def test_build_result_from_harbor_artifacts_accepts_application_scorer_questionn
 
     assert result.to_dict()["questionnaire"] == {
         "constraintSatisfaction": 3,
-        "constraintRationale": "Good grounded recommendation.",
+        "constraintRationale": "",
         "preferenceSatisfaction": 5,
-        "preferenceRationale": "Good grounded recommendation.",
+        "preferenceRationale": "",
         "overallRating": 8,
         "ratingReason": "Good grounded recommendation.",
         "askedUsefulClarifyingQuestions": True,
