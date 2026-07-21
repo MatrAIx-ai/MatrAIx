@@ -28,6 +28,10 @@ STARCLASH_OPPONENT_BRAIN = "${MATRIX_STARCLASH_OPPONENT_BRAIN:-bayesian}"
 # + region on Bedrock-only hosts (run_arena.py prefers Bedrock when its token is
 # present, else falls back to the direct key).
 STARCLASH_PLAYER_BRAIN = "${MATRIX_STARCLASH_PLAYER_BRAIN:-mock}"
+# Optional: "1" spawns the sampled player at the room center with bots ringed
+# around it in duel range from tick 0 (see run_arena.py --center-player). Off
+# by default, so the deterministic oracle's spawn placement is unchanged.
+STARCLASH_CENTER_PLAYER = "${MATRIX_STARCLASH_CENTER_PLAYER:-}"
 ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
 AWS_BEARER_TOKEN_BEDROCK = "${AWS_BEARER_TOKEN_BEDROCK:-}"
 AWS_REGION = "${AWS_REGION:-}"

@@ -40,6 +40,7 @@ Design notes (see task-level discussion for the full tradeoff writeup):
 from __future__ import annotations
 
 import base64
+import math
 import random
 from typing import Any, Dict, List, Optional
 
@@ -210,10 +211,19 @@ class BrowserVisionBrain(ArenaBrain):
         html = render_observation_html(observation)
         page.set_content(html, timeout=_NAV_TIMEOUT_MS)
 
+        # A compact text sidecar describing this turn's goal, legal actions,
+        # and (crucially) how the DUEL control works, computed once per
+        # decide() call and passed alongside every screenshot in the loop.
+        # Without it the model was seeing the HUD but was never told the
+        # game's objective or that challenging is an arm-then-click sequence
+        # (a bare canvas click is always a MOVE), so it moved/waited forever
+        # and never dueled - see the module note and _context_note below.
+        context_note = self._context_note(observation)
+
         step_history: List[Dict[str, Any]] = []
         for _step in range(_MAX_STEPS):
             screenshot_bytes = page.screenshot(timeout=_SCREENSHOT_TIMEOUT_MS)
-            primitive = self._ask_vision_model(screenshot_bytes, step_history)
+            primitive = self._ask_vision_model(screenshot_bytes, step_history, context_note)
             step_history.append(primitive)
 
             # Keep the latest non-empty rationale the model offered this turn.
@@ -254,10 +264,142 @@ class BrowserVisionBrain(ArenaBrain):
 
         return page.evaluate("() => window.__lastAction")
 
+    # -- per-turn text sidecar -----------------------------------------
+
+    def _context_note(self, observation: dict) -> str:
+        """Build a short natural-language brief for THIS turn: the game
+        goal, this persona's state, the legal actions, and how to perform
+        the ones the HUD makes non-obvious (DUEL is an arm-then-click
+        sequence; a plain canvas click is always a MOVE). The vision model
+        otherwise gets only pixels and cannot infer the objective or the
+        control map from the screenshot alone - this is the same kind of
+        game/goal briefing ClaudeArenaBrain._build_system_prompt already
+        gives the text brain, condensed to the essentials a click-driver
+        needs. Never leaks hidden info (opponents' hands, their submitted
+        card) - it is built only from fields already in `observation`.
+        """
+        menu = observation.get("action_menu", {}) or {}
+        actions: List[str] = list(menu.get("actions", []))
+        self_state = observation.get("self", {}) or {}
+        hand = list(self_state.get("hand") or [])
+        stars = self_state.get("stars")
+
+        lines: List[str] = [
+            "GAME: Starclash - a social Rock-Paper-Scissors duel for stars "
+            "aboard a starship. Rock beats Scissors, Scissors beats Paper, "
+            "Paper beats Rock. Win a duel to take a star; lose all your stars "
+            "and you are out. A strong run plays through your whole hand while "
+            "keeping your standing, so SEEK DUELS rather than idling.",
+            f"YOU: {stars} star(s), hand: {', '.join(hand) if hand else 'empty'}.",
+        ]
+
+        # Battle-card sub-step: the single most important instruction is
+        # which cards are playable and where the card row is.
+        if "play_card" in actions:
+            available = list(menu.get("available_cards") or hand)
+            lines.append(
+                "TURN: A duel is underway - you must play one card. Click one "
+                f"of your cards ({', '.join(available) or 'none'}) in the card "
+                "row to submit it."
+            )
+            return "\n".join(lines)
+
+        # Challenge-response sub-step.
+        if "accept" in actions and "decline" in actions:
+            challenger = observation.get("pending_challenge_from") or {}
+            who = challenger.get("display_name") or challenger.get("id") or "someone"
+            lines.append(
+                f"TURN: {who} challenged you to a duel. Click ACCEPT to fight "
+                "(good when your hand matches up well) or DECLINE to refuse."
+            )
+            return "\n".join(lines)
+
+        # Free-action sub-step: this is where the agent was getting stuck.
+        challengeable = list(menu.get("challengeable_targets") or [])
+        nearest = self._nearest_challengeable(observation, challengeable)
+        if "challenge" in actions and challengeable:
+            target_hint = ""
+            if nearest is not None:
+                target_hint = (
+                    f" The closest is {nearest.get('short_name') or nearest.get('id')} "
+                    f"(id {nearest.get('id')}) at their marker on the map."
+                )
+            lines.append(
+                "TURN: You can DUEL now - someone challengeable is in range"
+                f"{target_hint} Easiest way to challenge: click directly on "
+                "that pilot's marker on the room map. (You can also click the "
+                "DUEL button in the bottom hotbar first, then their marker.) "
+                "Clicking empty floor instead just MOVES you there, so aim for "
+                "the pilot's marker to duel them."
+            )
+        else:
+            # No one in range: the only way to make progress is to close in.
+            approach = self._nearest_opponent_hint(observation)
+            lines.append(
+                "TURN: No one is close enough to duel yet. Click the MOVE "
+                "button (or press W/A/S/D), then click a point on the map "
+                "toward the nearest pilot to close the distance so you can "
+                "duel next turn." + (f" {approach}" if approach else "")
+            )
+        lines.append(
+            "Other options: SAY (public chat), DM (private message), WAIT "
+            "(hold). Prefer dueling or approaching over waiting."
+        )
+        return "\n".join(lines)
+
+    @staticmethod
+    def _nearest_challengeable(
+        observation: dict, challengeable: List[str]
+    ) -> Optional[Dict[str, Any]]:
+        """The challengeable roster row closest to self, or None."""
+        if not challengeable:
+            return None
+        self_state = observation.get("self", {}) or {}
+        sx = float(self_state.get("x", 0.0))
+        sy = float(self_state.get("y", 0.0))
+        best = None
+        best_d = None
+        for row in observation.get("arena_roster") or []:
+            if row.get("id") not in challengeable:
+                continue
+            if row.get("x") is None or row.get("y") is None:
+                continue
+            d = math.hypot(float(row["x"]) - sx, float(row["y"]) - sy)
+            if best_d is None or d < best_d:
+                best_d = d
+                best = row
+        return best
+
+    @staticmethod
+    def _nearest_opponent_hint(observation: dict) -> str:
+        """Human-readable pointer to the nearest live opponent (any distance),
+        so the move brief can name a direction to head toward."""
+        self_state = observation.get("self", {}) or {}
+        sx = float(self_state.get("x", 0.0))
+        sy = float(self_state.get("y", 0.0))
+        best = None
+        best_d = None
+        for row in observation.get("arena_roster") or []:
+            if row.get("is_self") or row.get("eliminated"):
+                continue
+            if row.get("x") is None or row.get("y") is None:
+                continue
+            d = math.hypot(float(row["x"]) - sx, float(row["y"]) - sy)
+            if best_d is None or d < best_d:
+                best_d = d
+                best = row
+        if best is None:
+            return ""
+        name = best.get("short_name") or best.get("display_name") or best.get("id")
+        return f"Nearest pilot is {name} near map position ({best.get('x'):.0f}, {best.get('y'):.0f})."
+
     # -- model call (isolated so tests can monkeypatch/override it) -----
 
     def _ask_vision_model(
-        self, screenshot_bytes: bytes, step_history: List[Dict[str, Any]]
+        self,
+        screenshot_bytes: bytes,
+        step_history: List[Dict[str, Any]],
+        context_note: str = "",
     ) -> Dict[str, Any]:
         """Ask Claude for exactly ONE primitive action given the current
         screenshot and the primitives already taken this decide() call.
@@ -313,38 +455,44 @@ class BrowserVisionBrain(ArenaBrain):
             if step_history
             else "No primitives performed yet this turn."
         )
+        user_content: List[Dict[str, Any]] = []
+        if context_note:
+            user_content.append({"type": "text", "text": context_note})
+        user_content.append({"type": "text", "text": history_note})
+        user_content.append(
+            {
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": "image/png",
+                    "data": image_b64,
+                },
+            }
+        )
         response = self._client.messages.create(
             model=self.model,
             max_tokens=512,
             system=(
-                "You are looking at a screenshot of a small game UI. Decide the "
-                "single next primitive action needed to complete one legal game "
-                "action (e.g. click a button, click a point on a map/canvas, or "
-                "type into a text field then click its submit button). Call "
+                "You are PLAYING a small game by driving its UI from "
+                "screenshots. The turn brief (goal + your legal actions this "
+                "turn) is given as text; the screenshot shows the current "
+                "screen. Decide the single next primitive action needed to "
+                "carry out one legal game action (e.g. click a button, click a "
+                "point on a map/canvas, or type into a text field then click "
+                "its submit button). Some actions need more than one click: to "
+                "DUEL an opponent you must first click the DUEL button to arm "
+                "duel mode and THEN click that opponent's marker on the map - a "
+                "plain map click with duel mode off only moves you. Follow the "
+                "turn brief's instructions for the action you intend. Call "
                 "'done' once you've already clicked whatever finalizes the "
-                "action (the page will record the result itself - you do not "
-                "need to report what happened, only drive the clicks/typing). "
-                "On every primitive, also give a short first-person 'reasoning' "
+                "action (the page records the result itself - you do not need "
+                "to report what happened, only drive the clicks/typing). On "
+                "every primitive, also give a short first-person 'reasoning' "
                 "sentence, in character as this persona, for why you're doing it."
             ),
             tools=[tool],
             tool_choice={"type": "tool", "name": "act"},
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": history_note},
-                        {
-                            "type": "image",
-                            "source": {
-                                "type": "base64",
-                                "media_type": "image/png",
-                                "data": image_b64,
-                            },
-                        },
-                    ],
-                }
-            ],
+            messages=[{"role": "user", "content": user_content}],
         )
         for block in getattr(response, "content", []) or []:
             if getattr(block, "type", None) == "tool_use" and getattr(block, "name", None) == "act":

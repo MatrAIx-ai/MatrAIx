@@ -98,6 +98,7 @@ class ArenaEngine:
         proximity_radius: float = 3.0,
         max_move_distance: float = 2.0,
         start_area: Optional[Dict[str, float]] = None,
+        center_spawn_id: Optional[str] = None,
     ) -> None:
         self.personas: Dict[str, PersonaState] = {p.id: p for p in personas}
         self.persona_order: List[str] = [p.id for p in personas]
@@ -128,6 +129,12 @@ class ArenaEngine:
             "y_min": 0.0,
             "y_max": room_height,
         }
+        # Optional "arena" spawn: place this persona id at the room center and
+        # ring the others evenly around it, all within proximity_radius, so the
+        # centered player starts already able to duel every opponent (no long
+        # approach walk). None => the default seeded scatter in start_area. Kept
+        # opt-in so the deterministic oracle's spawn placement is unchanged.
+        self.center_spawn_id = center_spawn_id
 
         self._spawn_personas(personas)
         self._deal_cards()
@@ -150,7 +157,18 @@ class ArenaEngine:
         Rejection sampling enforces a minimum separation so the crew doesn't
         stack on top of each other at tick 0; if the area is tight, separation
         relaxes gradually before falling back to a plain uniform draw.
+
+        Exception: when `center_spawn_id` names a persona, that persona is
+        placed dead-center and the others are spread evenly on a ring around
+        it (see `_spawn_centered`), so a single sampled player starts
+        surrounded and in-range of every opponent from tick 0.
         """
+        if self.center_spawn_id is not None and any(
+            p.id == self.center_spawn_id for p in personas
+        ):
+            self._spawn_centered(personas)
+            return
+
         x_min = self.start_area.get("x_min", 0.0)
         x_max = self.start_area.get("x_max", self.room_width)
         y_min = self.start_area.get("y_min", 0.0)
@@ -202,6 +220,47 @@ class ArenaEngine:
                 persona.x = x
                 persona.y = y
                 placed.append((x, y))
+
+    def _spawn_centered(self, personas: List[PersonaState]) -> None:
+        """Place `center_spawn_id` at the room center and ring the other
+        personas evenly around it at a fixed radius, so the centered persona
+        starts within `proximity_radius` of every opponent (in duel range from
+        tick 0). The ring radius is capped just below `proximity_radius` so the
+        surround is guaranteed in-range, and clamped so the whole ring stays
+        inside the room bounds. A small seeded angular jitter + a seeded start
+        angle keep placement deterministic under a fixed seed without stacking
+        opponents at identical points. The ring personas keep their registration
+        order, so which opponent sits where is stable for a given seed/roster.
+        """
+        cx = self.room_width / 2.0
+        cy = self.room_height / 2.0
+
+        center = next(p for p in personas if p.id == self.center_spawn_id)
+        others = [p for p in personas if p.id != self.center_spawn_id]
+
+        center.x = cx
+        center.y = cy
+
+        n = len(others)
+        if n == 0:
+            return
+
+        # Ring radius: inside proximity_radius (so every opponent is
+        # challengeable at t0) but not on top of the center, and never so large
+        # the ring leaves the room.
+        max_fit = max(0.0, min(cx, cy) - 0.5)
+        radius = min(self.proximity_radius * 0.85, max_fit)
+        radius = max(radius, 1.0 if max_fit >= 1.0 else max_fit)
+
+        start_angle = self.rng.uniform(0.0, 2.0 * math.pi)
+        for i, persona in enumerate(others):
+            base = start_angle + (2.0 * math.pi * i) / n
+            jitter = self.rng.uniform(-0.15, 0.15)
+            angle = base + jitter
+            x = cx + radius * math.cos(angle)
+            y = cy + radius * math.sin(angle)
+            persona.x = min(max(x, 0.0), self.room_width)
+            persona.y = min(max(y, 0.0), self.room_height)
 
     # ------------------------------------------------------------------
     # Setup

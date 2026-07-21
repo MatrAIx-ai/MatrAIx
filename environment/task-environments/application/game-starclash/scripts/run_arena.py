@@ -209,6 +209,17 @@ def main() -> None:
     )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-ticks", type=int, default=16)
+    parser.add_argument(
+        "--center-player",
+        action="store_true",
+        help=(
+            "Player-vs-bots only: spawn the --player-id persona at the room "
+            "center with the bots ringed around it within proximity_radius, so "
+            "the player starts in duel range of every opponent from tick 0 "
+            "(no long approach walk). Ignored without --player-id. Also "
+            "settable via STARCLASH_CENTER_PLAYER=1."
+        ),
+    )
     parser.add_argument("--out", required=True, help="Output directory for game_log.json / final_state.json")
     parser.add_argument(
         "--render-spectator",
@@ -236,6 +247,10 @@ def main() -> None:
     if env_opponent and env_opponent.strip() in ("bayesian", "mock"):
         # Only honoured when player-vs-bots is active (see --player-id).
         args.opponent_brain = env_opponent.strip()
+    if not args.center_player:
+        env_center = os.environ.get("STARCLASH_CENTER_PLAYER", "").strip().lower()
+        if env_center in ("1", "true", "yes", "on"):
+            args.center_player = True
 
     # repo_root: crew manifest persona_paths are relative to the repo root
     # (e.g. "persona/datasets/bench-dev-sample/persona_0001.yaml"). Walk up
@@ -262,6 +277,16 @@ def main() -> None:
     hand_size = int(crew_manifest.get("hand_size", 4))
     personas = load_personas(crew_manifest, repo_root, seed=args.seed)
 
+    # Resolve the centered player id (for --center-player) BEFORE constructing
+    # the engine, since spawn placement happens in the constructor. This mirrors
+    # the "auto" -> first-persona resolution done for player-vs-bots below, but
+    # has to run earlier; centering only applies in player-vs-bots mode.
+    center_spawn_id = None
+    if args.center_player and args.player_id is not None and personas:
+        resolved = personas[0].id if args.player_id == "auto" else args.player_id
+        if any(p.id == resolved for p in personas):
+            center_spawn_id = resolved
+
     engine = ArenaEngine(
         personas=personas,
         room_name=room_name,
@@ -274,6 +299,7 @@ def main() -> None:
         proximity_radius=proximity_radius,
         max_move_distance=max_move_distance,
         start_area=start_area,
+        center_spawn_id=center_spawn_id,
     )
 
     initial_persona_card_counts = {
@@ -376,13 +402,25 @@ def main() -> None:
             spectator_path = None
 
     # Human-readable summary.
-    num_battles = sum(1 for e in engine.events if e.get("type") == "battle_resolved")
+    battle_events = [e for e in engine.events if e.get("type") == "battle_resolved"]
+    num_battles = len(battle_events)
     survivors = [p for p in personas if not p.is_eliminated()]
     print("=== Starclash - run summary ===")
     print(f"Room: {room_name}")
     print(f"Seed: {args.seed}  Brain: {args.brain}  Ticks run: {engine.tick}/{args.max_ticks}")
     print(f"Termination reason: {final['termination_reason']}")
-    print(f"Battles resolved: {num_battles}")
+    # "Battles resolved" counts duels across ALL seats (players + bots), not
+    # the sampled player's own duels - label it that way so a player-vs-bots
+    # run's total can't be misread as "the sampled agent fought N times". In
+    # player-vs-bots mode, also report how many of those the player was in.
+    print(f"Battles resolved (all seats): {num_battles}")
+    if args.player_id is not None:
+        player_battles = sum(
+            1
+            for e in battle_events
+            if args.player_id in (e.get("persona_a"), e.get("persona_b"))
+        )
+        print(f"  ...of which the player ({args.player_id}) fought: {player_battles}")
     if len(survivors) == 1:
         winner = survivors[0]
         print(

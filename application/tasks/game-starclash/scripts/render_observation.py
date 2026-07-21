@@ -2570,6 +2570,22 @@ def render_observation_html(
       return;
     }}
 
+    // Single-click challenge: even when duel mode wasn't explicitly armed,
+    // a click that lands directly on a challengeable pilot's marker issues
+    // the challenge. This halves the interaction cost of a duel (no separate
+    // "arm DUEL first" step) and matches how a driver naturally reasons
+    // ("click the opponent to fight them"). Clicking empty floor still moves,
+    // so movement is unaffected - only a click ON a challengeable target,
+    // which would otherwise just walk you onto their tile, now duels instead.
+    if (CHALLENGE_LEGAL && !challengeArmed) {{
+      var directOcc = occupantAt(px, py, canvas);
+      if (directOcc && directOcc.challengeable) {{
+        submitChallenge(directOcc.id);
+        disarmModes();
+        return;
+      }}
+    }}
+
     if (MOVE_LEGAL && !challengeArmed) {{
       var room = canvasToRoom(px, py, canvas);
       submitMoveTo(room[0], room[1]);
