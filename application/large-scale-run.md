@@ -19,8 +19,11 @@ https://github.com/MatrAIx-ai/MatrAIx
 ## Personas
 
 Run each task with **1000 personas**, generated in **stratified mode**
-from the task's own `persona_strategy.json`. Increase
-`sampleSizePerValueGroup` as needed to reach the 1000-persona goal.
+from the task's own `persona_strategy.json`. Set `sampleSize` to `1000`
+to request an exact total of 1000 personas. Do not also set
+`sampleSizePerValueGroup`: the two fields are mutually exclusive, and
+`sampleSizePerValueGroup` sets a quota for every stratum rather than an
+exact total.
 
 ## Running
 
@@ -47,8 +50,7 @@ dataset's main that matches the task's type (for example
 ```
 folder: <type folder>/modelname_taskname
 ├── persona profile/          1000 personas automatically generated
-│                             (stratified mode; increase
-│                             sampleSizePerValueGroup to make it to 1000),
+│                             (stratified mode with sampleSize set to 1000),
 │                             each persona has its own yaml file
 ├── artifact/                 all telemetries
 ├── report/                   (optional) reports generated
@@ -57,4 +59,8 @@ folder: <type folder>/modelname_taskname
 └── persona_strategy.json
 ```
 
-**Final note:** everything generated should be uploaded to Hugging Face.
+**Final note:** upload everything generated to
+[MatrAIx2026/Demo_Application_Data](https://huggingface.co/datasets/MatrAIx2026/Demo_Application_Data/tree/main)
+on Hugging Face. Put each `modelname_taskname` folder under the matching task
+type folder on the dataset's `main` branch (for example, `Type 1 - Survey/`,
+`Type 2 - Chatbot/`, `Type 3 - Website/`, or `Type 4 - App/`).
