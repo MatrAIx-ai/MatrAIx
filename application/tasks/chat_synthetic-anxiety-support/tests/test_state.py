@@ -189,6 +189,14 @@ def test_transcript_schema() -> None:
     outcome_status = _derive_outcome_status(coping_helpfulness, rating)
     resolution_basis = "user_feedback"
     next_step_owner = _derive_next_step_owner(reason, outcome_status)
+    outcome_reason = (
+        "The persona rated the experience {}/10 and described the coping "
+        "strategies as {}."
+    ).format(rating, coping_helpfulness)
+    if would_seek_help is not None:
+        outcome_reason += " They {} seek further professional help.".format(
+            "would" if would_seek_help == "true" else "would not"
+        )
 
     conversation_path = _derive_conversation_path(
         clarification_question_count,
@@ -245,7 +253,7 @@ def test_transcript_schema() -> None:
                         "role": "explanation",
                         "kind": "textual",
                         "explainsFacetKey": "outcome_status",
-                        "value": reason,
+                        "value": outcome_reason,
                     },
                     {
                         "key": "next_step_owner",
