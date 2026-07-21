@@ -18,8 +18,6 @@ needs a live --brain vision run.
 import os
 import sys
 
-import pytest
-
 _SCRIPTS = os.path.join(os.path.dirname(__file__), "..", "scripts")
 sys.path.insert(0, os.path.abspath(_SCRIPTS))
 
