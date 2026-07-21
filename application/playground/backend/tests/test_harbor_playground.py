@@ -549,7 +549,9 @@ def test_build_result_from_harbor_artifacts_reads_verifier_feedback(tmp_path):
     questionnaire = result.to_dict()["questionnaire"]
     assert questionnaire["overallRating"] == 8
     assert questionnaire["ratingReason"] == "Verifier scorer output."
-    assert questionnaire["constraintRationale"] == "Verifier scorer output."
+    assert questionnaire["constraintRationale"] == ""
+    assert questionnaire["preferenceRationale"] == ""
+    assert questionnaire["clarifyingNotes"] == "The agent asked about tone."
 
 
 def test_build_result_from_harbor_artifacts_ignores_legacy_application_result_fields(
