@@ -44,11 +44,20 @@ PARTNER_DESCRIPTION = os.environ.get(
 )
 STARTUP_TIMEOUT_SECONDS = float(os.environ.get("DEEPTUTOR_STARTUP_TIMEOUT", "180"))
 
+DOMAIN = os.environ.get("DEEPTUTOR_TASK_DOMAIN", "education")
+
 app = FastAPI()
 _bootstrap_lock = asyncio.Lock()
 _bootstrapped = False
 _partner_id: str | None = None
-_turns: dict[str, int] = {}
+_sessions: dict[str, dict[str, Any]] = {}
+
+
+def _session_record(session_id: str) -> dict[str, Any]:
+    return _sessions.setdefault(
+        session_id,
+        {"sessionId": session_id, "domain": DOMAIN, "messages": [], "turns": []},
+    )
 
 
 class MessageRequest(BaseModel):
@@ -248,14 +257,25 @@ async def v1_messages(payload: MessageRequest) -> dict[str, Any]:
         raise HTTPException(status_code=502, detail=f"DeepTutor error: {detail}")
     body = resp.json()
     reply = body.get("content") or ""
-    turn_index = _turns.get(session_id, 0) + 1
-    _turns[session_id] = turn_index
+    session = _session_record(session_id)
+    session["messages"].append({"role": "user", "content": payload.message})
+    session["messages"].append({"role": "assistant", "content": reply})
+    turn = {
+        "index": len(session["turns"]) + 1,
+        "userMessage": payload.message,
+        "assistantReply": reply,
+    }
+    session["turns"].append(turn)
     return {
         "sessionId": body.get("session_id", session_id),
         "reply": reply,
-        "turn": {
-            "index": turn_index,
-            "userMessage": payload.message,
-            "assistantReply": reply,
-        },
+        "turn": turn,
     }
+
+
+@app.get("/v1/conversation")
+async def v1_conversation(sessionId: str) -> dict[str, Any]:
+    session = _sessions.get(sessionId)
+    if session is None:
+        raise HTTPException(status_code=404, detail=f"unknown session: {sessionId}")
+    return session
