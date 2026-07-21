@@ -142,6 +142,44 @@ def _derive_conversation_path(question_count: int, outcome_status: str) -> str:
     return "stalled"
 
 
+def _outcome_reason(outcome_status: str) -> str:
+    return {
+        "resolved": (
+            "The persona reported that the conversation substantially addressed "
+            "the support goal and provided a usable coping approach."
+        ),
+        "partially_resolved": (
+            "The persona found some support useful but reported that important "
+            "needs or coping guidance remained insufficiently addressed."
+        ),
+        "unresolved": (
+            "The persona reported that the conversation did not adequately "
+            "address the support goal."
+        ),
+    }[outcome_status]
+
+
+def _process_notes(conversation_path: str) -> str:
+    return {
+        "clarify_then_resolve": (
+            "The assistant asked focused questions before offering support that "
+            "the persona considered sufficient."
+        ),
+        "direct_resolution": (
+            "The assistant addressed the support goal directly without an "
+            "extended clarification phase."
+        ),
+        "clarify_then_partial": (
+            "The assistant asked clarifying questions and offered support, but "
+            "the persona reported meaningful gaps at the end."
+        ),
+        "stalled": (
+            "The conversation ended without enough clarification or progress to "
+            "address the support goal."
+        ),
+    }[conversation_path]
+
+
 def test_transcript_schema() -> None:
     transcript = _load_json(TRANSCRIPT_PATH)
     _require_string(transcript.get("sessionId"), "transcript.sessionId")
@@ -189,31 +227,13 @@ def test_transcript_schema() -> None:
     outcome_status = _derive_outcome_status(coping_helpfulness, rating)
     resolution_basis = "user_feedback"
     next_step_owner = _derive_next_step_owner(reason, outcome_status)
-    outcome_reason = (
-        "The persona rated the experience {}/10 and described the coping "
-        "strategies as {}."
-    ).format(rating, coping_helpfulness)
-    if would_seek_help is not None:
-        outcome_reason += " They {} seek further professional help.".format(
-            "would" if would_seek_help == "true" else "would not"
-        )
+    outcome_reason = _outcome_reason(outcome_status)
 
     conversation_path = _derive_conversation_path(
         clarification_question_count,
         outcome_status,
     )
-    process_notes = (
-        "The conversation included {} user turns and {} assistant turns; {} assistant "
-        "replies contained questions, and assistant responses totaled {} words. Coping "
-        "strategies were rated {} and the overall experience was rated {}/10."
-    ).format(
-        user_turns,
-        assistant_turns,
-        clarification_question_count,
-        assistant_word_count,
-        coping_helpfulness,
-        rating,
-    )
+    process_notes = _process_notes(conversation_path)
     payload: dict[str, Any] = {
         "schemaVersion": "1.0",
         "artifactType": "matraix.trial_evaluation",
