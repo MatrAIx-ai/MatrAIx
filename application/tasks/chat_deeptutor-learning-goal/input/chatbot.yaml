@@ -3,6 +3,7 @@ runtimeDefaults:
   applicationId: deeptutor
   applicationContext: education_tutoring
   domain: education
+  maxTurns: 16
 capabilities:
   - text_chat
 connection:
