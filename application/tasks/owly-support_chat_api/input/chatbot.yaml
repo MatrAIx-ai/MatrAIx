@@ -1,0 +1,26 @@
+transport: sidecar_http
+runtimeDefaults:
+  applicationId: owly_support
+  applicationContext: customer_support
+  domain: customer_support
+connection:
+  baseUrlEnv: CHATBOT_API_URL
+  baseUrl: http://owly-api:3000
+  healthPath: /api/health
+protocol:
+  sendMessage:
+    method: POST
+    path: /api/chat
+    sessionIdField: conversationId
+    messageField: message
+    titleField: ""
+    botTypeField: ""
+    staticBody:
+      channel: api
+  response:
+    sessionIdField: conversationId
+    replyField: response
+artifacts:
+  transcript: transcript.json
+  applicationResult: application_result.json
+  feedback: user_feedback.json

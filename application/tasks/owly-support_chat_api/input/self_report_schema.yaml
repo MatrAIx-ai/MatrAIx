@@ -1,0 +1,27 @@
+artifactName: user_feedback.json
+instructions: |
+  Reflect honestly as the persona after chatting with customer support.
+  Judge the experience based on what the support agent said, whether you now
+  have a clear path for your return and refund, and how confident you feel
+  about what happens next.
+fields:
+  - key: needConstraintSatisfaction
+    prompt: How well did support resolve your core question or request?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: personalPreferenceSatisfaction
+    prompt: How well did the interaction match how you personally like to be treated by support?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: overallExperienceRating
+    prompt: Overall, how would you rate the experience from 1 to 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
+  - key: reason
+    prompt: Briefly explain the rating in your own voice.
+  - key: askedUsefulClarificationQuestions
+    prompt: Did the support agent ask useful clarification questions?
+    kind: boolean
+  - key: clarifyingNotes
+    prompt: Which clarification questions helped, or why they did not.

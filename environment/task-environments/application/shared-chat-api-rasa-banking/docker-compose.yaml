@@ -1,0 +1,62 @@
+services:
+  main:
+    depends_on:
+      banking-api:
+        condition: service_healthy
+
+  duckling:
+    image: rasa/duckling:latest
+    expose:
+      - "8000"
+
+  rasa-actions:
+    # Upstream financial-demo root Dockerfile is the action-server image
+    # (rasa/rasa-sdk:3.1.0 + custom actions on the SDK default port 5055).
+    build:
+      context: https://github.com/RasaHQ/financial-demo.git#7627cebef1571d55855b886cf4ac20459af9566c
+    expose:
+      - "5055"
+
+  rasa:
+    build:
+      context: ./rasa
+    expose:
+      - "5005"
+    depends_on:
+      - duckling
+      - rasa-actions
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; s=socket.create_connection(('localhost',5005),timeout=2); s.close()",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+  banking-api:
+    build:
+      context: ./banking-api
+    expose:
+      - "8000"
+    environment:
+      RASA_URL: http://rasa:5005
+    depends_on:
+      rasa:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; s=socket.create_connection(('localhost',8000),timeout=2); s.close()",
+        ]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+      start_period: 5s
