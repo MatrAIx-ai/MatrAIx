@@ -138,15 +138,49 @@ async def _ensure_partner(client: httpx.AsyncClient) -> str:
     return partner_id
 
 
+async def _probe_partner(client: httpx.AsyncClient, partner_id: str) -> str | None:
+    """Send one probe message; return None on success, else the error text."""
+    resp = await client.post(
+        f"{DEEPTUTOR_BASE}/api/v1/partners/{partner_id}/chat",
+        json={"content": "Reply with the single word: ready", "session_id": "bootstrap-probe"},
+    )
+    if resp.status_code != 200:
+        return f"probe HTTP {resp.status_code}: {resp.text[:200]}"
+    reply = str(resp.json().get("content") or "")
+    if reply.startswith("Sorry, the turn failed"):
+        return reply[:300]
+    return None
+
+
+async def _restart_partner(client: httpx.AsyncClient, partner_id: str) -> None:
+    await client.post(f"{DEEPTUTOR_BASE}/api/v1/partners/{partner_id}/stop")
+    await asyncio.sleep(2)
+    resp = await client.post(f"{DEEPTUTOR_BASE}/api/v1/partners/{partner_id}/start")
+    resp.raise_for_status()
+
+
 async def _bootstrap() -> str:
     global _bootstrapped, _partner_id
     async with _bootstrap_lock:
         if _bootstrapped and _partner_id:
             return _partner_id
-        async with httpx.AsyncClient(timeout=30) as client:
+        async with httpx.AsyncClient(timeout=120) as client:
             await _wait_for_backend(client)
             await _seed_catalog(client)
-            _partner_id = await _ensure_partner(client)
+            partner_id = await _ensure_partner(client)
+            # The partner runtime may capture LLM config at start; if it raced
+            # the catalog seed, its first calls use stale defaults. Probe with
+            # a real turn and restart the partner once if the LLM call fails.
+            if LLM_API_KEY:
+                error = await _probe_partner(client, partner_id)
+                if error is not None:
+                    log.warning("bootstrap probe failed (%s); restarting partner", error)
+                    await _restart_partner(client, partner_id)
+                    error = await _probe_partner(client, partner_id)
+                    if error is not None:
+                        raise RuntimeError(f"partner still failing after restart: {error}")
+                log.info("bootstrap probe ok — tutor answers with a live LLM")
+            _partner_id = partner_id
         _bootstrapped = True
         return _partner_id
 
