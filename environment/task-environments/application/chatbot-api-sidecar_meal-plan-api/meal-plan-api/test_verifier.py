@@ -46,7 +46,7 @@ def main() -> int:
     feedback_path.write_text(json.dumps(feedback, indent=2), encoding="utf-8")
 
     tests_dir = Path(__file__).resolve().parent.parent.parent.parent.parent.parent
-    tests_dir = tests_dir / "application" / "tasks" / "meal-planning-nutrition_chatbot" / "tests"
+    tests_dir = tests_dir / "application" / "tasks" / "chat_meal-planning-nutrition" / "tests"
     test_state_py = tests_dir / "test_state.py"
     sys.path.insert(0, str(tests_dir))
 

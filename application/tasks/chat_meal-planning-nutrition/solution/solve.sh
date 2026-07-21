@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Reference solution for the meal-planning-nutrition_chatbot task.
+# Reference solution for the chat_meal-planning-nutrition task.
 # This script simulates a persona conversation with the meal-plan-api sidecar.
 
 API_BASE="${CHATBOT_API_URL:-http://meal-plan-api:8000}"

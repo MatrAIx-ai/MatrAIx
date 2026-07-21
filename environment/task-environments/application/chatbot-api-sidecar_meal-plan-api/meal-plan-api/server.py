@@ -525,6 +525,9 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/health":
             self._send(HTTPStatus.OK, {"status": "ok", "sessions": len(SESSIONS)})
             return
+        if parsed.path in {"/ready", "/v1/ready"}:
+            self._send(HTTPStatus.OK, {"status": "ready", "sessions": len(SESSIONS)})
+            return
         if parsed.path == "/v1/conversation":
             self._send(HTTPStatus.OK, get_conversation(session_id))
             return

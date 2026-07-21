@@ -128,6 +128,10 @@ def main() -> None:
             feedback.get("needConstraintSatisfaction"),
             "user_feedback.needConstraintSatisfaction",
         )
+        preference_satisfaction = _normalize_feedback_bucket(
+            feedback.get("personalPreferenceSatisfaction"),
+            "user_feedback.personalPreferenceSatisfaction",
+        )
         clarification_useful = feedback.get("askedUsefulClarificationQuestions")
         assert isinstance(clarification_useful, bool), "user_feedback.askedUsefulClarificationQuestions must be boolean"
         trust_level_val = _optional_score(feedback, "trustLevel")
@@ -148,6 +152,7 @@ def main() -> None:
             "rating": rating,
             "reason": reason,
             "need_satisfaction": need_satisfaction,
+            "preference_satisfaction": preference_satisfaction,
             "clarification_useful": clarification_useful,
             "trust_level_val": trust_level_val,
             "felt_understood_val": felt_understood_val,
@@ -303,6 +308,13 @@ def main() -> None:
                     "role": "evidence",
                     "kind": "categorical",
                     "value": fd["need_satisfaction"],
+                },
+                {
+                    "key": "personal_preference_satisfaction",
+                    "label": "Preference satisfaction",
+                    "role": "evidence",
+                    "kind": "categorical",
+                    "value": fd["preference_satisfaction"],
                 },
             ],
         }

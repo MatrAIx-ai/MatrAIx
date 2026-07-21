@@ -27,24 +27,24 @@ The verifier checks artifact shape, multi-turn coverage, session consistency, an
 
 Canonical contributor-facing docs:
 
-- `application/tasks/meal-planning-nutrition_chatbot/instruction.md`
-- `application/tasks/meal-planning-nutrition_chatbot/input/context.md`
-- `application/tasks/meal-planning-nutrition_chatbot/input/protocol.md`
-- `application/tasks/meal-planning-nutrition_chatbot/input/chatbot.yaml`
-- `application/tasks/meal-planning-nutrition_chatbot/input/self_report_schema.yaml`
+- `application/tasks/chat_meal-planning-nutrition/instruction.md`
+- `application/tasks/chat_meal-planning-nutrition/input/context.md`
+- `application/tasks/chat_meal-planning-nutrition/input/protocol.md`
+- `application/tasks/chat_meal-planning-nutrition/input/chatbot.yaml`
+- `application/tasks/chat_meal-planning-nutrition/input/self_report_schema.yaml`
 
 ## Smoke run
 
 ```bash
 uv run python application/scripts/generate_application_job.py \
-  --task application/tasks/meal-planning-nutrition_chatbot \
+  --task application/tasks/chat_meal-planning-nutrition \
   --execution-mode auto \
   --persona-ids 0042
 
 export ANTHROPIC_API_KEY="sk-ant-..."
 export OPENAI_API_KEY="sk-..."
-export MATRIX_CHATBOT_TASK_PATH="application/tasks/meal-planning-nutrition_chatbot"
-uv run harbor run -c configs/jobs/application-task-job-recipe/meal-planning-nutrition-chatbot-auto-n1.yaml
+export MATRIX_CHATBOT_TASK_PATH="application/tasks/chat_meal-planning-nutrition"
+uv run harbor run -c configs/jobs/application-task-job-recipe/chat-meal-planning-nutrition-4p.yaml
 ```
 
 See [Application Quickstart](../../QUICKSTART.md) for the UI path.

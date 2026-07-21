@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = ["/app/output"]
 
 [task]
-name = "application/meal-planning-nutrition-chatbot"
+name = "application/chat_meal-planning-nutrition"
 
 [metadata]
 difficulty = "medium"
