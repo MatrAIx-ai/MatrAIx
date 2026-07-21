@@ -9,7 +9,7 @@ Synthetic dev persona pool for docs, smoke tests, Harbor tasks, and Playground U
 | Persona version | `1.0` |
 | Source labels | `Nemotron`, `OASIS`, `PersonaHub`, `PRIMEX` (random per persona) |
 | Smoke | `persona_0042.yaml` |
-| Dimensions | **124** — catalog index 1–47 (core) + all `cog_*` + food/diet extras (`lstyle_diet_type`, habits, dietary restriction, `att_veganism`, `fam_nutrition`) + all `cuis_*` |
+| Dimensions | **124** — standard `load_dev_dimension_ids()` set: core (index 1–47) + all `cog_*` + food/diet (`lstyle_diet_type`, habits, dietary restriction, `att_veganism`, `fam_nutrition`) + all `cuis_*` |
 | UI grouping | `persona/schema/dimension_categories.json` |
 
 Personas are sampled so **linked dimensions stay consistent** (no counterfactual combos like `18–24` + `Retirement`, or `Student` + `VP`). Independent dims (`economic_motivation`, cognitive style, food prefs, etc.) are random.

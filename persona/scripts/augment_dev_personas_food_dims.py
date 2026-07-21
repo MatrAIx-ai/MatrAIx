@@ -19,7 +19,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from matraix.persona_consistency import (  # noqa: E402
-    EXTRA_DEV_DIMENSION_IDS,
+    DEV_FOOD_DIMENSION_IDS,
     load_dev_dimension_ids,
     load_dev_dimension_index_order,
 )
@@ -39,7 +39,7 @@ def _food_dim_ids(dev_ids: tuple[str, ...]) -> list[str]:
     return [
         dim_id
         for dim_id in dev_ids
-        if dim_id in EXTRA_DEV_DIMENSION_IDS or dim_id.startswith("cuis_")
+        if dim_id in DEV_FOOD_DIMENSION_IDS or dim_id.startswith("cuis_")
     ]
 
 
