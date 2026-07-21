@@ -27,3 +27,14 @@ def test_mit_ocw_course_choice_is_registered():
     assert task.site_url == "https://ocw.mit.edu/search/"
     assert task.output_artifact == "course_choice.json"
     assert task.submission_profile == "course_choice"
+
+
+def test_notion_plan_comparison_is_registered():
+    task = get_web_eval_task("web-notion-plan-comparison")
+
+    assert task.task_path == "application/tasks/web-notion-plan-comparison"
+    assert task.task_kind == "task"
+    assert task.site_name == "Notion pricing"
+    assert task.site_url == "https://www.notion.com/pricing"
+    assert task.output_artifact == "notion_plan_comparison.json"
+    assert task.submission_profile == "notion_plan_comparison"
