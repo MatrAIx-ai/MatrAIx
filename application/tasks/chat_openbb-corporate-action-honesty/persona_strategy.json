@@ -13,8 +13,7 @@
       "Very high",
       "High",
       "Moderate",
-      "Low",
-      "Very low"
+      "Low"
     ],
     "cog_confidence_calibration": [
       "Overconfident",
@@ -23,35 +22,15 @@
       "Cautious",
       "Underconfident"
     ],
-    "cog_detail_orientation": [
-      "Very high",
-      "High",
-      "Moderate",
-      "Low",
-      "None"
-    ],
-    "media_diet": [
-      "Academic journals",
-      "News",
-      "Social-media-heavy",
-      "Long-form",
-      "Video-first",
-      "Minimal"
-    ],
     "domain": [
       "Finance & Economics",
-      "Business & Management",
-      "Software & AI",
-      "Healthcare & Medicine",
-      "Education",
-      "Media & Journalism",
-      "Skilled Trades",
-      "Arts & Humanities"
+      "Business & Management"
     ]
   },
   "stratifyFields": [
     "trust_level",
     "cog_skepticism"
   ],
-  "sampleSize": 20
+  "sampleSize": 16,
+  "sampleSizePerValueGroup": 1
 }

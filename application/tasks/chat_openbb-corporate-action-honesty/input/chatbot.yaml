@@ -5,7 +5,6 @@ runtimeDefaults:
   domain: financial_research
 capabilities:
   - text_chat
-  - structured_exposure
 connection:
   baseUrlEnv: CHATBOT_UPSTREAM_FINANCE
   legacyBaseUrlEnv: FINANCE_CHATBOT_URL
@@ -27,16 +26,9 @@ protocol:
     sessionIdField: sessionId
     replyField: reply
     turnField: turn
-structuredExposure:
-  fields:
-    - key: groundedItems
-      label: Suggested tickers, funds, or instruments
-      selector: groundedItems
-      format: item_list
-    - key: toolCalls
-      label: Data tool calls made for this turn
-      selector: rawToolOutputs.toolCalls
-      format: item_list
+# No structuredExposure: this SUT's groundedItems are tool-call shells
+# ("OpenBB equity_price_quote"), not product-facing quote cards. Persona
+# should judge only the assistant chat reply.
 artifacts:
   transcript: transcript.json
   applicationResult: application_result.json

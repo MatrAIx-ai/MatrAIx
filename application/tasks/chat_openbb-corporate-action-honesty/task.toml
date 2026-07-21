@@ -2,19 +2,18 @@ version = "1.0"
 artifacts = ["/app/output"]
 
 [task]
-name = "application/openbb-delisted-quote"
+name = "application/openbb-corporate-action-honesty"
 
 [metadata]
 difficulty = "medium"
 type = "chatbot"
 domain = "finance-research"
 tags = [
-  "data reliability",
-  "corporate actions",
-  "delisting",
-  "stock split",
+  "corporate-action honesty",
+  "ticker failure modes",
+  "HCP ANSS CMG LAZR",
+  "wouldStillContinueUse",
   "openbb",
-  "trust calibration",
   "multi turn chat",
 ]
 
