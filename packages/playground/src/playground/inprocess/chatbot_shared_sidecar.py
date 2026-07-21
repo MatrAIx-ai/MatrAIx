@@ -50,6 +50,7 @@ _PRIMARY_SERVICE_ORDER: tuple[str, ...] = (
     "support-api",
     "support-bot",
     "meal-plan-api",
+    "tutor-adapter",
 )
 
 _SHARED_BY_SERVICE: dict[str, SharedSidecarSpec] = {
@@ -97,6 +98,13 @@ _SHARED_BY_SERVICE: dict[str, SharedSidecarSpec] = {
         build_context="meal-plan-api",
         host_port=8905,
         primary_env="CHATBOT_API_URL",
+    ),
+    "tutor-adapter": SharedSidecarSpec(
+        application_id="deeptutor",
+        service_name="tutor-adapter",
+        build_context="tutor-adapter",
+        host_port=8906,
+        primary_env="CHATBOT_UPSTREAM_DEEPTUTOR",
     ),
 }
 
@@ -221,7 +229,7 @@ def start_shared_sidecar(
             cwd=str(compose_dir),
             capture_output=True,
             text=True,
-            timeout=900 if spec.application_id in {"medical_assistant", "finance_openbb"} else 300,
+            timeout=900 if spec.application_id in {"medical_assistant", "finance_openbb", "deeptutor"} else 300,
             check=False,
         )
         if result.returncode != 0:
@@ -233,7 +241,7 @@ def start_shared_sidecar(
                 )
             )
 
-        wait_sec = 180.0 if spec.application_id in {"medical_assistant", "finance_openbb"} else 60.0
+        wait_sec = 180.0 if spec.application_id in {"medical_assistant", "finance_openbb", "deeptutor"} else 60.0
         if not _wait_until_ready(spec, timeout_sec=wait_sec):
             raise RuntimeError(
                 "shared chatbot sidecar {} started but is not ready at {}".format(

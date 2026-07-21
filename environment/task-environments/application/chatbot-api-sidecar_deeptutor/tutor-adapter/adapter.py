@@ -159,30 +159,53 @@ async def _restart_partner(client: httpx.AsyncClient, partner_id: str) -> None:
     resp.raise_for_status()
 
 
+async def _bootstrap_once() -> str:
+    async with httpx.AsyncClient(timeout=120) as client:
+        await _wait_for_backend(client)
+        await _seed_catalog(client)
+        partner_id = await _ensure_partner(client)
+        # The partner runtime may capture LLM config at start; if it raced
+        # the catalog seed, its first calls use stale defaults. Probe with
+        # a real turn and restart the partner once if the LLM call fails.
+        if LLM_API_KEY:
+            error = await _probe_partner(client, partner_id)
+            if error is not None:
+                log.warning("bootstrap probe failed (%s); restarting partner", error)
+                await _restart_partner(client, partner_id)
+                error = await _probe_partner(client, partner_id)
+                if error is not None:
+                    raise RuntimeError(f"partner still failing after restart: {error}")
+            log.info("bootstrap probe ok — tutor answers with a live LLM")
+        return partner_id
+
+
 async def _bootstrap() -> str:
     global _bootstrapped, _partner_id
     async with _bootstrap_lock:
         if _bootstrapped and _partner_id:
             return _partner_id
-        async with httpx.AsyncClient(timeout=120) as client:
-            await _wait_for_backend(client)
-            await _seed_catalog(client)
-            partner_id = await _ensure_partner(client)
-            # The partner runtime may capture LLM config at start; if it raced
-            # the catalog seed, its first calls use stale defaults. Probe with
-            # a real turn and restart the partner once if the LLM call fails.
-            if LLM_API_KEY:
-                error = await _probe_partner(client, partner_id)
-                if error is not None:
-                    log.warning("bootstrap probe failed (%s); restarting partner", error)
-                    await _restart_partner(client, partner_id)
-                    error = await _probe_partner(client, partner_id)
-                    if error is not None:
-                        raise RuntimeError(f"partner still failing after restart: {error}")
-                log.info("bootstrap probe ok — tutor answers with a live LLM")
-            _partner_id = partner_id
-        _bootstrapped = True
-        return _partner_id
+        last_error: Exception | None = None
+        for attempt in range(1, 4):
+            try:
+                _partner_id = await _bootstrap_once()
+                _bootstrapped = True
+                return _partner_id
+            except Exception as exc:  # noqa: BLE001 - retried below
+                last_error = exc
+                log.warning("bootstrap attempt %d failed: %s", attempt, exc)
+                await asyncio.sleep(3 * attempt)
+        raise RuntimeError(f"bootstrap failed after 3 attempts: {last_error}")
+
+
+@app.on_event("startup")
+async def _kickoff_bootstrap() -> None:
+    async def _run() -> None:
+        try:
+            await _bootstrap()
+        except Exception as exc:  # noqa: BLE001 - surfaced via /ready and /health
+            log.error("background bootstrap failed: %s", exc)
+
+    asyncio.get_running_loop().create_task(_run())
 
 
 @app.get("/health")
@@ -191,6 +214,20 @@ async def health() -> dict[str, Any]:
         await _bootstrap()
     except Exception as exc:  # noqa: BLE001 - health must report, not crash
         return {"status": "starting", "detail": str(exc)}
+    return {"status": "ok", "partner_id": _partner_id}
+
+
+@app.get("/ready")
+async def ready() -> Any:
+    """Shared-sidecar readiness: 200 only once the tutor verifiably answers."""
+    from fastapi.responses import JSONResponse
+
+    if _bootstrapped and _partner_id:
+        return {"status": "ok", "partner_id": _partner_id}
+    try:
+        await _bootstrap()
+    except Exception as exc:  # noqa: BLE001
+        return JSONResponse(status_code=503, content={"status": "starting", "detail": str(exc)})
     return {"status": "ok", "partner_id": _partner_id}
 
 
