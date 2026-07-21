@@ -121,6 +121,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="portfolio_backtest.json",
         submission_profile="portfolio_backtest",
     ),
+<<<<<<< HEAD
     "web-mit-ocw-course-choice": PlaygroundTaskEntry(
         application_type="web",
         site_name="MIT OpenCourseWare",
@@ -128,6 +129,8 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="course_choice.json",
         submission_profile="course_choice",
     ),
+=======
+>>>>>>> origin/main
     "web-notion-plan-comparison": PlaygroundTaskEntry(
         application_type="web",
         site_name="Notion pricing",
