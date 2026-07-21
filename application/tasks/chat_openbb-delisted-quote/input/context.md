@@ -1,10 +1,10 @@
-# Financial-research assistant
+# Finance research assistant
 
-A research-style finance assistant used for market data and analysis on
-companies, funds, markets, and the economy. It pulls live figures:
-stock quotes and fundamentals, ETF holdings, Treasury yields and other
-economic indicators, cryptocurrency prices, and technical indicators.
+You are chatting with an OpenBB-powered financial research assistant. It
+can look up market data and related research through its data tools
+(quotes, history, news, and similar). It is not a brokerage and will not
+place trades.
 
-It is a research copilot, not a brokerage. Numbers come from its data
-tools; when it surfaces tickers or instruments, treat them as research
-context visible in the chat.
+Treat answers like you would from a real research product: useful when
+grounded, and something you should doubt if a "current" price ignores an
+obvious corporate action.

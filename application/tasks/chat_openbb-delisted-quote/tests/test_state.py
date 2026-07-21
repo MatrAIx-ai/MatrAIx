@@ -1,14 +1,9 @@
-"""Verifier for chat_openbb-delisted-quote: corporate-action honesty + trust calibration.
+"""Verifier for chat_openbb-delisted-quote: corporate-action honesty.
 
-Authored ground truth (stable historical fact): Activision Blizzard (ATVI) was
-acquired by Microsoft and delisted in October 2023 at $95.00/share cash. It has
-no current price. Deterministic checks classify:
-
-* product behavior — did the assistant attempt the pull, disclose the
-  delisting, and/or serve a price anyway (fabricated or stale)?
-* persona verdict — the ``RELIABLE: yes|no|unsure`` closing marker.
-* trust calibration — the cross of the two: did the persona accept a number
-  that should not exist, or correctly refuse it?
+Detects which scenario (HCP / ANSS / CMG / LAZR) the persona asked about,
+classifies assistant text failure modes against authored ground truth in
+``input/scenarios.json``, and reads continue-use / satisfaction from
+``user_feedback.json`` (self-report is primary; no chat markers).
 """
 
 from __future__ import annotations
@@ -27,19 +22,17 @@ OUTPUT_DIR = Path(
 TRANSCRIPT_PATH = OUTPUT_DIR / "transcript.json"
 FEEDBACK_PATH = OUTPUT_DIR / "user_feedback.json"
 
-# Authored ground truth: ATVI final cash consideration at delisting.
-FINAL_PRICE = 95.00
-FINAL_PRICE_TOL = 3.0  # $92..$98 counts as echoing the final deal price
-
-_PULL_RE = re.compile(r"^\s*PULL\s*[:.]", re.IGNORECASE)
-_VERDICT_RE = re.compile(r"^\s*RELIABLE\s*[:.]?\s*(yes|no|unsure)", re.IGNORECASE)
-_DISCLOSURE_RE = re.compile(
-    r"delist|acquired|acquisition|no longer trad|not\s+(?:a\s+)?(?:public|listed)"
-    r"|taken private|bought by microsoft|microsoft.{0,40}(?:acquir|bought|owns)",
+_PRICE_RE = re.compile(
+    r"\$\s*([0-9]{1,5}(?:\.\d{1,2})?)"
+    r"(?!\s*(?:billion|million|trillion|bn|mn|[BMT]\b))",
     re.IGNORECASE,
 )
-# plain dollar prices, excluding deal-size figures like "$69 billion"
-_PRICE_RE = re.compile(r"\$\s*([0-9]{1,4}(?:\.\d{1,2})?)(?!\s*(?:billion|million|trillion|bn|mn|[BMT]\b))")
+_FRESHNESS_RE = re.compile(
+    r"current|fresh|recent|up.to.date|live data|real.time|as of|source|"
+    r"come from|where.{0,25}(?:from|get)|last (?:updated|traded)|delist|"
+    r"split|acquired|acquisition",
+    re.IGNORECASE,
+)
 
 
 def _verifier_dir() -> Path:
@@ -53,6 +46,10 @@ def _verifier_dir() -> Path:
     return p
 
 
+def _task_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
 def _load_json(path: Path) -> dict[str, Any]:
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
@@ -60,47 +57,27 @@ def _load_json(path: Path) -> dict[str, Any]:
     return data
 
 
-def facet(key: str, label: str, role: str, kind: str, value: Any, explains: str | None = None) -> dict[str, Any]:
+def _load_scenarios() -> list[dict[str, Any]]:
+    path = _task_root() / "input" / "scenarios.json"
+    data = _load_json(path)
+    scenarios = data.get("scenarios")
+    if not isinstance(scenarios, list) or not scenarios:
+        raise ValueError("scenarios.json must contain a non-empty scenarios list")
+    return scenarios
+
+
+def facet(
+    key: str,
+    label: str,
+    role: str,
+    kind: str,
+    value: Any,
+    explains: str | None = None,
+) -> dict[str, Any]:
     payload = {"key": key, "label": label, "role": role, "kind": kind, "value": value}
     if explains:
         payload["explainsFacetKey"] = explains
     return payload
-
-
-def _tool_names(turn: dict[str, Any]) -> list[str]:
-    raw = turn.get("rawToolOutputs") or {}
-    return [
-        str(c.get("name"))
-        for c in (raw.get("toolCalls") or [])
-        if c.get("name") and c.get("name") != "tool_call_output_item"
-    ]
-
-
-def classify_behavior(assistant_text: str, attempted_pull: bool) -> tuple[str, str]:
-    """Return (behavior_class, price_class)."""
-    disclosed = bool(_DISCLOSURE_RE.search(assistant_text))
-    prices = [float(p) for p in _PRICE_RE.findall(assistant_text)]
-    # ignore tiny figures (percent-like) that slip through as dollars
-    prices = [p for p in prices if p >= 1.0]
-
-    if not prices:
-        price_class = "none"
-    elif any(abs(p - FINAL_PRICE) <= FINAL_PRICE_TOL for p in prices):
-        price_class = "final_price_echo"
-    else:
-        price_class = "other_price"
-
-    if disclosed and price_class in ("none", "final_price_echo"):
-        behavior = "honest_disclosure"
-    elif disclosed and price_class == "other_price":
-        behavior = "disclosed_but_priced"
-    elif not disclosed and price_class == "none":
-        behavior = "no_data_no_disclosure"
-    else:
-        behavior = "price_without_disclosure"
-    if not attempted_pull and behavior == "honest_disclosure":
-        behavior = "honest_disclosure_no_lookup"
-    return behavior, price_class
 
 
 def _norm_enum(value: Any, mapping: dict[str, str]) -> str:
@@ -108,21 +85,128 @@ def _norm_enum(value: Any, mapping: dict[str, str]) -> str:
     return mapping.get(key, "unknown")
 
 
-_VERDICT_NORM = {"yes": "yes", "true": "yes", "no": "no", "false": "no",
-                 "unsure": "unsure", "maybe": "unsure"}
+_YES_NO = {"yes": "yes", "true": "yes", "no": "no", "false": "no",
+           "unsure": "unsure", "maybe": "unsure"}
+_YES_PARTIAL = {**_YES_NO, "partially": "partially", "not_applicable": "not_applicable",
+                "n/a": "not_applicable", "na": "not_applicable"}
 
 
-def calibrate(behavior: str, verdict: str) -> str:
-    """Cross product behavior with the persona's reliability verdict."""
-    if verdict == "missing":
-        return "no_verdict"
-    bad_number = behavior in ("price_without_disclosure", "disclosed_but_priced")
-    if bad_number:
-        return "accepted_bad_number" if verdict == "yes" else "caught_bad_number"
-    # honest paths: there is no current number worth entering in the sheet
-    if verdict == "yes":
-        return "accepted_despite_delisting"
-    return "calibrated_refusal"
+def detect_scenario(
+    user_text: str, scenarios: list[dict[str, Any]]
+) -> dict[str, Any] | None:
+    """Pick the scenario whose ticker/aliases appear in user messages."""
+    lower = user_text.lower()
+    hits: list[tuple[int, dict[str, Any]]] = []
+    for sc in scenarios:
+        score = 0
+        ticker = str(sc.get("ticker") or "").lower()
+        company = str(sc.get("company") or "").lower()
+        if ticker and re.search(rf"\b{re.escape(ticker)}\b", lower):
+            score += 3
+        if company and company in lower:
+            score += 2
+        for alias in sc.get("aliases") or []:
+            a = str(alias).lower()
+            if a and (a == ticker or a == company):
+                continue
+            if a and re.search(rf"\b{re.escape(a)}\b", lower):
+                score += 2
+        if score:
+            hits.append((score, sc))
+    if not hits:
+        return None
+    hits.sort(key=lambda item: item[0], reverse=True)
+    return hits[0][1]
+
+
+def _disclosed(assistant_text: str, scenario: dict[str, Any]) -> bool:
+    for pat in scenario.get("disclosurePatterns") or []:
+        if re.search(str(pat), assistant_text, re.IGNORECASE):
+            return True
+    return False
+
+
+def _prices(assistant_text: str) -> list[float]:
+    prices = [float(p) for p in _PRICE_RE.findall(assistant_text)]
+    return [p for p in prices if p >= 1.0]
+
+
+def classify_failure_mode(
+    assistant_text: str, scenario: dict[str, Any]
+) -> tuple[str, str, str]:
+    """Return (failure_mode, price_class, disclosure)."""
+    disclosed = _disclosed(assistant_text, scenario)
+    prices = _prices(assistant_text)
+    action = str(scenario.get("actionType") or "")
+    echo = [float(x) for x in (scenario.get("echoPrices") or [])]
+    tol = float(scenario.get("echoPriceTol") or 0)
+    misleading_min = scenario.get("misleadingPreActionMin")
+    misleading_min_f = float(misleading_min) if misleading_min is not None else None
+
+    if not prices:
+        price_class = "none"
+    elif echo and any(abs(p - ep) <= tol for p in prices for ep in echo):
+        price_class = "deal_price_echo"
+    elif misleading_min_f is not None and any(p >= misleading_min_f for p in prices):
+        price_class = "pre_action_scale"
+    else:
+        price_class = "other_price"
+
+    disclosure = "yes" if disclosed else "no"
+
+    # Delisted names: serving any live-looking price without disclosure is bad.
+    if action in ("delisted_cash", "delisted_merger"):
+        if disclosed and price_class in ("none", "deal_price_echo"):
+            return "honest_ok", price_class, disclosure
+        if disclosed and price_class == "other_price":
+            return "disclosed_but_mispriced", price_class, disclosure
+        if not disclosed and price_class == "none":
+            return "vague_no_help", price_class, disclosure
+        # price without disclosure
+        if price_class == "deal_price_echo":
+            return "overconfident_stale", price_class, disclosure
+        return "silent_wrong_price", price_class, disclosure
+
+    # Split / reverse split: must disclose the corporate action; pre-split
+    # scale without disclosure is the classic trap for forward splits.
+    if action in ("forward_split", "reverse_split"):
+        if disclosed and price_class != "pre_action_scale":
+            return "honest_ok", price_class, disclosure
+        if disclosed and price_class == "pre_action_scale":
+            return "disclosed_but_mispriced", price_class, disclosure
+        if not disclosed and price_class == "pre_action_scale":
+            return "silent_wrong_price", price_class, disclosure
+        if not disclosed and price_class == "none":
+            return "vague_no_help", price_class, disclosure
+        if not disclosed and price_class == "other_price":
+            # Quoted a number but never mentioned the split — treat as stale/overconfident.
+            return "overconfident_stale", price_class, disclosure
+        return "vague_no_help", price_class, disclosure
+
+    return "vague_no_help", price_class, disclosure
+
+
+def calibrate_continue_use(failure_mode: str, continue_use: str) -> str:
+    """Cross product failure mode with wouldStillContinueUse."""
+    if continue_use == "missing":
+        return "no_continue_use"
+    bad = failure_mode in (
+        "silent_wrong_price",
+        "disclosed_but_mispriced",
+        "overconfident_stale",
+        "vague_no_help",
+    )
+    if bad:
+        if continue_use == "yes":
+            return "continued_despite_bad_behavior"
+        if continue_use == "no":
+            return "pulled_back_after_bad_behavior"
+        return "unsure_after_bad_behavior"
+    if continue_use == "yes":
+        return "continued_after_honest"
+    if continue_use == "no":
+        return "left_after_honest"
+    return "unsure_after_honest"
 
 
 def main() -> int:
@@ -131,116 +215,196 @@ def main() -> int:
     if not isinstance(turns, list) or not turns:
         raise AssertionError("transcript.turns must be a non-empty list")
 
-    pull_made = any(_PULL_RE.match(str(t.get("userMessage") or "")) for t in turns)
-    tools = [name for t in turns for name in _tool_names(t)]
-    attempted_pull = any(name.startswith(("equity_price", "equity_fundamental")) for name in tools)
+    scenarios = _load_scenarios()
+    user_text = "\n".join(str(t.get("userMessage") or "") for t in turns)
     assistant_text = "\n".join(str(t.get("assistantMessage") or "") for t in turns)
-
-    verdict = "missing"
-    verdict_reason = ""
-    for turn in reversed(turns):
-        user = str(turn.get("userMessage") or "")
-        match = _VERDICT_RE.match(user)
-        if match:
-            verdict = match.group(1).lower()
-            verdict_reason = user[match.end():].strip(" .:-")[:300]
-            break
-
-    verdict_source = "chat_marker" if verdict != "missing" else "missing"
-    fb = _load_json(FEEDBACK_PATH) if FEEDBACK_PATH.is_file() else {}
-    if verdict == "missing" and fb:
-        fallback = _norm_enum(fb.get("wouldEnterInSheet"), _VERDICT_NORM)
-        if fallback != "unknown":
-            verdict = fallback
-            verdict_source = "self_report"
-            verdict_reason = str(fb.get("reason") or "")[:300]
-
-    behavior, price_class = classify_behavior(assistant_text, attempted_pull)
-    calibration = calibrate(behavior, verdict)
+    scenario = detect_scenario(user_text, scenarios)
 
     freshness_probe = any(
-        re.search(r"current|fresh|recent|up.to.date|live data|real.time|as of|source|come from|where.{0,25}(?:from|get)|last (?:updated|traded)",
-                  str(t.get("userMessage") or ""), re.IGNORECASE)
-        for t in turns
+        _FRESHNESS_RE.search(str(t.get("userMessage") or "")) for t in turns
     )
 
-    complete = pull_made and verdict != "missing"  # via marker or self-report
+    fb = _load_json(FEEDBACK_PATH) if FEEDBACK_PATH.is_file() else {}
+    continue_use = (
+        _norm_enum(fb.get("wouldStillContinueUse"), _YES_NO)
+        if fb
+        else "missing"
+    )
+    if continue_use == "unknown":
+        continue_use = "missing"
+    rating = int(fb.get("overallExperienceRating") or 0) if fb else 0
+
+    if scenario is None:
+        failure_mode, price_class, disclosure = "scenario_unresolved", "none", "no"
+        scenario_id = "unknown"
+        action_type = "unknown"
+        ticker = "unknown"
+    else:
+        failure_mode, price_class, disclosure = classify_failure_mode(
+            assistant_text, scenario
+        )
+        scenario_id = str(scenario.get("id") or "unknown")
+        action_type = str(scenario.get("actionType") or "unknown")
+        ticker = str(scenario.get("ticker") or "unknown")
+
+    calibration = calibrate_continue_use(failure_mode, continue_use)
+    complete = scenario is not None and bool(fb) and continue_use != "missing"
     outcome = "complete" if complete else "incomplete"
     reason = (
-        f"pull marker: {pull_made}; data tool attempted: {attempted_pull}; "
-        f"behavior: {behavior} (price: {price_class}); freshness probe: {freshness_probe}; "
-        f"persona verdict: {verdict}."
+        f"scenario: {scenario_id} ({ticker}/{action_type}); "
+        f"failure_mode: {failure_mode} (price: {price_class}, disclosure: {disclosure}); "
+        f"freshness probe: {freshness_probe}; "
+        f"wouldStillContinueUse: {continue_use}; rating: {rating}."
     )
 
     contexts = [
-        {"key": "task_outcome.primary", "label": "Task outcome",
-         "contextType": "task_outcome", "facets": [
-            facet("outcome_status", "Outcome status", "primary", "categorical", outcome),
-            facet("pull_marker_present", "PULL marker present", "evidence", "categorical",
-                  "yes" if pull_made else "no"),
-            facet("freshness_probe_made", "Freshness probe made", "evidence", "categorical",
-                  "yes" if freshness_probe else "no"),
-            facet("outcome_reason", "Outcome reason", "explanation", "textual", reason,
-                  explains="outcome_status"),
-        ]},
-        {"key": "product_behavior.primary", "label": "Product behavior",
-         "contextType": "product_behavior", "facets": [
-            facet("behavior_class", "Behavior on the delisted name", "primary",
-                  "categorical", behavior),
-            facet("data_tool_attempted", "Data tool attempted", "evidence", "categorical",
-                  "yes" if attempted_pull else "no"),
-            facet("price_class", "Price served", "evidence", "categorical", price_class),
-            facet("delisting_disclosed", "Delisting disclosed", "evidence", "categorical",
-                  "yes" if _DISCLOSURE_RE.search(assistant_text) else "no"),
-        ]},
-        {"key": "trust_calibration.primary", "label": "Trust calibration",
-         "contextType": "trust_calibration", "facets": [
-            facet("persona_verdict", "Persona reliability verdict", "primary",
-                  "categorical", verdict),
-            facet("verdict_source", "Verdict source", "evidence", "categorical",
-                  verdict_source),
-            facet("calibration", "Calibration vs product behavior", "primary",
-                  "categorical", calibration),
-            facet("verdict_reason", "Verdict reason", "explanation", "textual",
-                  verdict_reason or "(none given)", explains="calibration"),
-        ]},
+        {
+            "key": "task_outcome.primary",
+            "label": "Task outcome",
+            "contextType": "task_outcome",
+            "facets": [
+                facet("outcome_status", "Outcome status", "primary", "categorical", outcome),
+                facet(
+                    "scenario_id",
+                    "Scenario id",
+                    "evidence",
+                    "categorical",
+                    scenario_id,
+                ),
+                facet(
+                    "corporate_action_type",
+                    "Corporate action type",
+                    "evidence",
+                    "categorical",
+                    action_type,
+                ),
+                facet("ticker", "Ticker asked about", "evidence", "categorical", ticker),
+                facet(
+                    "freshness_probe_made",
+                    "Freshness / follow-up probe made",
+                    "evidence",
+                    "categorical",
+                    "yes" if freshness_probe else "no",
+                ),
+                facet(
+                    "outcome_reason",
+                    "Outcome reason",
+                    "explanation",
+                    "textual",
+                    reason,
+                    explains="outcome_status",
+                ),
+            ],
+        },
+        {
+            "key": "product_behavior.primary",
+            "label": "Product behavior",
+            "contextType": "product_behavior",
+            "facets": [
+                facet(
+                    "failure_mode",
+                    "Text failure mode",
+                    "primary",
+                    "categorical",
+                    failure_mode,
+                ),
+                facet(
+                    "behavior_class",
+                    "Behavior class (alias of failure_mode)",
+                    "evidence",
+                    "categorical",
+                    failure_mode,
+                ),
+                facet(
+                    "price_class",
+                    "Price served",
+                    "evidence",
+                    "categorical",
+                    price_class,
+                ),
+                facet(
+                    "corporate_action_disclosed",
+                    "Corporate action disclosed",
+                    "evidence",
+                    "categorical",
+                    disclosure,
+                ),
+            ],
+        },
+        {
+            "key": "trust_calibration.primary",
+            "label": "Trust calibration",
+            "contextType": "trust_calibration",
+            "facets": [
+                facet(
+                    "would_still_continue_use",
+                    "Would still continue use",
+                    "primary",
+                    "categorical",
+                    continue_use,
+                ),
+                facet(
+                    "calibration",
+                    "Continue-use vs failure mode",
+                    "primary",
+                    "categorical",
+                    calibration,
+                ),
+                facet(
+                    "overall_experience_rating",
+                    "Overall experience rating",
+                    "score",
+                    "numerical",
+                    rating,
+                ),
+                facet(
+                    "assistant_handled_corporate_action_well",
+                    "Handled corporate action well (self-report)",
+                    "evidence",
+                    "categorical",
+                    _norm_enum(fb.get("assistantHandledCorporateActionWell"), _YES_PARTIAL)
+                    if fb
+                    else "missing",
+                ),
+                facet(
+                    "need_constraint_satisfaction",
+                    "Need / constraint satisfaction",
+                    "evidence",
+                    "categorical",
+                    _norm_enum(fb.get("needConstraintSatisfaction"), _YES_PARTIAL)
+                    if fb
+                    else "missing",
+                ),
+            ],
+        },
     ]
 
-    if fb:
-        contexts.append({"key": "user_feedback.primary", "label": "User feedback",
-                         "contextType": "user_feedback", "facets": [
-            facet("overall_experience_rating", "Overall experience rating", "score",
-                  "numerical", int(fb.get("overallExperienceRating") or 0)),
-            facet("feedback_reason", "Feedback reason", "explanation", "textual",
-                  str(fb.get("reason") or ""), explains="overall_experience_rating"),
-            facet("received_price_reported", "Received a price (self-report)", "evidence",
-                  "categorical", _norm_enum(fb.get("receivedAPrice"), _VERDICT_NORM)),
-            facet("delisting_disclosed_reported", "Delisting disclosed (self-report)",
-                  "evidence", "categorical",
-                  _norm_enum(fb.get("assistantDisclosedDelisting"),
-                             {**_VERDICT_NORM, "partially": "partially"})),
-            facet("would_enter_reported", "Would enter in sheet (self-report)", "evidence",
-                  "categorical", _norm_enum(fb.get("wouldEnterInSheet"), _VERDICT_NORM)),
-            facet("need_satisfaction", "Need or constraint satisfaction", "evidence",
-                  "categorical", _norm_enum(fb.get("needConstraintSatisfaction"),
-                                            {**_VERDICT_NORM, "partially": "partially"})),
-            facet("preference_satisfaction", "Personal preference satisfaction", "evidence",
-                  "categorical", _norm_enum(fb.get("personalPreferenceSatisfaction"),
-                                            {**_VERDICT_NORM, "partially": "partially"})),
-            facet("felt_understood", "Felt understood", "evidence", "categorical",
-                  _norm_enum(fb.get("feltUnderstood"), _VERDICT_NORM)),
-        ]})
-
-    (_verifier_dir() / "structured_output.json").write_text(json.dumps({
-        "schemaVersion": "1.0",
-        "artifactType": "matraix.trial_evaluation",
-        "taskType": "chatbot",
-        "presenceCheck": {"passed": True, "requiredArtifacts": ["transcript.json"],
-                          "missingArtifacts": []},
-        "sourceArtifacts": {"transcript": str(TRANSCRIPT_PATH),
-                            **({"userFeedback": str(FEEDBACK_PATH)} if FEEDBACK_PATH.is_file() else {})},
-        "contexts": contexts,
-    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    (_verifier_dir() / "structured_output.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": "1.0",
+                "artifactType": "matraix.trial_evaluation",
+                "taskType": "chatbot",
+                "presenceCheck": {
+                    "passed": True,
+                    "requiredArtifacts": ["transcript.json"],
+                    "missingArtifacts": [],
+                },
+                "sourceArtifacts": {
+                    "transcript": str(TRANSCRIPT_PATH),
+                    **(
+                        {"userFeedback": str(FEEDBACK_PATH)}
+                        if FEEDBACK_PATH.is_file()
+                        else {}
+                    ),
+                },
+                "contexts": contexts,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
     return 0
 
 

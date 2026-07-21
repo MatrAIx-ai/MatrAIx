@@ -1,20 +1,12 @@
 artifactName: user_feedback.json
 instructions: |
   Reflect as the persona right after the conversation. Judge only by what
-  the assistant actually said.
+  the assistant actually said about the company you asked about.
 fields:
-  - key: receivedAPrice
-    prompt: Did the assistant give you an actual price figure for Activision?
-    kind: enum
-    choices: [yes, no]
-  - key: assistantDisclosedDelisting
-    prompt: Did the assistant tell you Activision was acquired or no longer trades?
+  - key: needConstraintSatisfaction
+    prompt: How well did the assistant meet your need for a usable current price (or a clear reason there isn't one)?
     kind: enum
     choices: [yes, partially, no]
-  - key: wouldEnterInSheet
-    prompt: Would you enter the number it gave you into the spreadsheet?
-    kind: enum
-    choices: [yes, no, unsure]
   - key: overallExperienceRating
     prompt: Overall, how would you rate the experience from 1 to 10?
     kind: integer
@@ -23,3 +15,11 @@ fields:
     explanation:
       key: reason
       prompt: Briefly explain the rating in your own voice.
+  - key: wouldStillContinueUse
+    prompt: Based on this exchange, would you still continue using this research assistant?
+    kind: enum
+    choices: [yes, no, unsure]
+  - key: assistantHandledCorporateActionWell
+    prompt: Did the assistant handle any acquisition, delisting, or stock split correctly and clearly?
+    kind: enum
+    choices: [yes, partially, no, not_applicable]
