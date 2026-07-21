@@ -65,6 +65,21 @@ CORE_DEV_DIMENSION_ORDER = {
     dim_id: index for index, dim_id in enumerate(CORE_DEV_DIMENSION_IDS, start=1)
 }
 
+# Food / diet / cooking dims for nutrition and lifestyle tasks. Kept as an
+# explicit allowlist (plus ``cuis_*``) so we do not raise CORE_DEV_MAX_INDEX and
+# pull in the full fam_* / att_* floods that start at catalog index 48+.
+EXTRA_DEV_DIMENSION_IDS = frozenset(
+    {
+        "lstyle_diet_type",
+        "fam_nutrition",
+        "att_veganism",
+        "health_dietary_restriction",
+        "habit_meal_prepping",
+        "habit_skipping_breakfast",
+        "habit_late_night_snacking",
+    }
+)
+
 # life_stage must be plausible for age_bracket (no counterfactual life arcs).
 LIFE_STAGE_BY_AGE: dict[str, list[str]] = {
     "Under 5": ["Student"],
@@ -207,7 +222,7 @@ def _catalog_order(row: dict[str, Any]) -> int:
 def load_dev_dimension_ids(
     *, catalog_path: str = DEFAULT_CATALOG_PATH
 ) -> tuple[str, ...]:
-    """Dev persona fields: core block (index ≤ 47) + all ``cog_*`` communication dims."""
+    """Dev persona fields: core (index ≤ 47) + ``cog_*`` + food/diet extras + ``cuis_*``."""
     ids: list[str] = []
     for row in _load_catalog_rows(catalog_path):
         dim_id = str(row["id"])
@@ -216,6 +231,8 @@ def load_dev_dimension_ids(
             index <= CORE_DEV_MAX_INDEX
             or dim_id in CORE_DEV_DIMENSION_ORDER
             or dim_id.startswith("cog_")
+            or dim_id in EXTRA_DEV_DIMENSION_IDS
+            or dim_id.startswith("cuis_")
         ):
             ids.append(dim_id)
     return tuple(ids)
