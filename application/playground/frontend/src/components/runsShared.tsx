@@ -115,6 +115,8 @@ export type RunDetailView = Omit<
   } | null;
   /** Raw post-run self-reflection artifact from ``user_feedback.json`` when present. */
   userFeedback?: UserFeedbackArtifact | null;
+  /** Task-owned self-report schema used to render personalized feedback fields. */
+  selfReportSchema?: import("@/lib/types").SelfReportSchema | null;
   /** Raw trial-level structured evaluation from ``verifier/structured_output.json`` when present. */
   trialEvaluation?: TrialEvaluationArtifact | null;
   /** Harbor task ``instruction.md`` when the debrief API enriches it. */
@@ -245,7 +247,7 @@ export function fmtSource(source: string | null | undefined): string {
 /** A quiet domain pill (reused across list / detail / compare headers). */
 export function DomainPill({ domain }: { domain: string | null | undefined }) {
   return (
-    <span className="inline-flex items-center rounded border border-outline bg-surface-high px-2 py-0.5 text-[13px] font-medium text-text-variant">
+    <span className="glass-tile inline-flex items-center rounded px-2 py-0.5 text-[13px] font-medium text-text-variant">
       {fmtDomain(domain)}
     </span>
   );
@@ -254,7 +256,7 @@ export function DomainPill({ domain }: { domain: string | null | undefined }) {
 /** A small muted source tag next to a persona name. */
 export function SourceTag({ source }: { source: string | null | undefined }) {
   return (
-    <span className="inline-flex shrink-0 items-center rounded bg-surface-high px-1.5 py-px font-mono text-[12px] text-text-variant">
+    <span className="glass-tile inline-flex shrink-0 items-center rounded px-1.5 py-px font-mono text-[12px] text-text-variant">
       {fmtSource(source)}
     </span>
   );
@@ -264,7 +266,7 @@ export function SourceTag({ source }: { source: string | null | undefined }) {
 export function RecChip({ item }: { item: RunRecItem }) {
   return (
     <span
-      className="inline-flex max-w-full items-center gap-1.5 rounded border border-outline bg-surface-low px-2 py-1 text-[13px]"
+      className="glass-tile inline-flex max-w-full items-center gap-1.5 rounded px-2 py-1 text-[13px]"
       title={item.title ?? undefined}
     >
       <span className="font-mono text-[12px] text-text-dim">{item.id}</span>
@@ -284,9 +286,11 @@ const APP_DISPLAY_NAMES: Record<string, string> = {
   medical_assistant: "Medical assistant",
 };
 
-/** The app's real name for the transcript label + meta line (defaults to RecAI). */
+/** The app's real name for the transcript label + meta line. No hardcoded
+ * product fallback — callers should prefer the trial's task title when the
+ * applicationId is unknown. */
 export function appName(applicationId: string | null | undefined): string {
-  if (!applicationId) return "RecAI";
+  if (!applicationId) return "Chat app";
   return APP_DISPLAY_NAMES[applicationId] ?? fmtDomain(applicationId);
 }
 
@@ -308,7 +312,7 @@ export function AppTypeTag({ type }: { type?: string | null }) {
   const meta = APP_TYPE_META[key] ?? APP_TYPE_META.chatbot;
   return (
     <span
-      className="inline-flex items-center gap-1 rounded border border-outline bg-surface-high px-1.5 py-0.5 text-[13px] text-text-variant"
+      className="glass-tile inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[13px] text-text-variant"
       title="Application type for this run."
     >
       <Sym name={meta.icon} size={13} />
@@ -362,7 +366,7 @@ export function StatTile({
   const leadBorder = lead ? `border-l-4 ${band ? bandBorderL(band) : "border-l-secondary"}` : "";
   const captionTone = lead ? (color ? color.text : "text-secondary") : "text-text-dim";
   return (
-    <div className={`flex flex-col justify-center rounded-lg border border-outline/40 bg-surface/50 p-4 backdrop-blur-sm ${leadBorder}`}>
+    <div className={`glass-tile flex flex-col justify-center rounded-lg p-4 backdrop-blur-sm ${leadBorder}`}>
       <span className={`hud text-[11px] ${captionTone}`}>{caption}</span>
       <div className="mt-1.5 flex items-baseline gap-1">
         <span

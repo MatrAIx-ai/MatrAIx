@@ -21,19 +21,23 @@ def fail(message: str) -> None:
 
 
 def _verifier_dir() -> Path:
-    base = (
-        os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("HARBOR_VERIFIER_DIR")
-        or "/logs/verifier"
-    )
-    path = Path(base)
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
+    if explicit:
+        path = Path(explicit)
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
+    container_default = Path("/logs/verifier")
     try:
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        container_default.mkdir(parents=True, exist_ok=True)
+        return container_default
     except OSError:
-        path = Path(__file__).resolve().parent.parent / "verifier"
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        pass
+
+    raise RuntimeError(
+        "HARBOR_VERIFIER_DIR is required when running outside a Harbor trial "
+        "container. Point it at jobs/<job>/<trial>/verifier for local harness runs."
+    )
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -77,6 +81,37 @@ def _count_support_questions(messages: list[dict[str, Any]]) -> int:
         and isinstance(entry.get("content"), str)
         and "?" in entry["content"]
     )
+
+
+def _support_messages(messages: list[dict[str, Any]]) -> list[str]:
+    return [
+        entry["content"].strip()
+        for entry in messages
+        if entry.get("role") == "support"
+        and isinstance(entry.get("content"), str)
+        and entry["content"].strip()
+    ]
+
+
+def _support_output_text(messages: list[dict[str, Any]]) -> str:
+    replies = _support_messages(messages)
+    if not replies:
+        return "The support agent produced no visible replies in this conversation."
+    return "\n".join(f"Reply {index}: {text}" for index, text in enumerate(replies, start=1))
+
+
+def _resolution_progression(messages: list[dict[str, Any]]) -> str:
+    """Whether the agent moved the case forward or looped on prior replies.
+
+    Derived only from the support agent's own replies so it reflects SUT behavior.
+    """
+    replies = _support_messages(messages)
+    if len(replies) <= 1:
+        return "single_response"
+    normalized = [" ".join(reply.lower().split()) for reply in replies]
+    if len(set(normalized)) < len(normalized):
+        return "looped"
+    return "advanced"
 
 
 def _derive_outcome_status_from_transcript(combined_lower: str, support_count: int) -> str:
@@ -220,8 +255,8 @@ def build_evaluation_payload(
             "missingArtifacts": [],
         },
         "sourceArtifacts": {
-            "transcript": str(TRANSCRIPT_PATH),
-            "userFeedback": str(FEEDBACK_PATH) if feedback is not None else None,
+            "transcript": "/app/output/transcript.json",
+            "userFeedback": "/app/output/user_feedback.json" if feedback is not None else None,
         },
         "contexts": [
             {
@@ -248,6 +283,7 @@ def build_evaluation_payload(
                         "label": "Outcome reason",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "outcome_status",
                         "value": outcome_reason,
                     },
                     {
@@ -283,6 +319,7 @@ def build_evaluation_payload(
                         "label": "Process notes",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "conversation_path",
                         "value": process_notes,
                     },
                     {
@@ -337,6 +374,7 @@ def build_evaluation_payload(
                         "label": "Feedback reason",
                         "role": "explanation",
                         "kind": "textual",
+                        "explainsFacetKey": "overall_experience_rating",
                         "value": feedback_reason,
                     },
                     {
@@ -363,6 +401,30 @@ def build_evaluation_payload(
                 ],
             }
         )
+
+    payload["contexts"].append(
+        {
+            "key": "resolution_delivery.primary",
+            "label": "Resolution delivery",
+            "contextType": "resolution_delivery",
+            "facets": [
+                {
+                    "key": "resolution_progression",
+                    "label": "Resolution progression",
+                    "role": "primary",
+                    "kind": "categorical",
+                    "value": _resolution_progression(messages),
+                },
+                {
+                    "key": "support_replies",
+                    "label": "Support agent replies",
+                    "role": "explanation",
+                    "kind": "textual",
+                    "value": _support_output_text(messages),
+                },
+            ],
+        }
+    )
 
     return payload
 

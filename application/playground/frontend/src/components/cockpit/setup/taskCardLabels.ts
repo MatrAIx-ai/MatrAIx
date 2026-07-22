@@ -71,10 +71,7 @@ export const CHIP_TEXT_CLASS = "text-[11px]";
 
 /** OS chips use a distinct tone so they do not collide with difficulty (secondary). */
 export function osChipTone(os?: string | null): ToneChipTone {
-  const key = (os ?? "").trim().toLowerCase();
-  if (key === "macos") return "warn";
-  if (key === "ios") return "warn";
-  if (key === "linux") return "warn";
+  void os;
   return "warn";
 }
 
@@ -83,22 +80,14 @@ export function osChipTone(os?: string | null): ToneChipTone {
 export function taskCardTags({
   taskPath,
   taskKind,
-  metaType,
   domain,
   difficulty,
 }: TaskCardTagInput): TaskCardTag[] {
   const kind = resolveTaskKind(taskPath, taskKind);
-  const chips: TaskCardTag[] = [
-    {
-      label: taskKindLabel(kind),
-      tone: kind === "example" ? "primary" : "warn",
-    },
-  ];
-
-  const typeLabel = metaType?.trim();
-  if (typeLabel) {
-    chips.push({ label: formatChipLabel(typeLabel), tone: "primary" });
-  }
+  // One tone per chip category so they read at a glance:
+  // kind → neutral, domain → accent, difficulty → secondary. The task type is
+  // NOT repeated here — it already renders as its own chip / tab context.
+  const chips: TaskCardTag[] = [{ label: taskKindLabel(kind), tone: "neutral" }];
 
   const domainLabel = domain?.trim();
   if (domainLabel) {

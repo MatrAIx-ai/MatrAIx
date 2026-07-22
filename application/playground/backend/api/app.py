@@ -156,19 +156,20 @@ _BUNDLE_DOMAINS = ("movie", "beauty_product", "game")
 _DOMAIN_LABELS = {"movie": "Movies", "beauty_product": "Beauty products", "game": "Games"}
 
 
-def _sidecar_reachable(base_url: str, timeout: float = 1.5) -> bool:
-    """True if a chatbot sidecar answers ``GET /health`` with a 2xx.
+def _sidecar_reachable(base_url: str, timeout: float = 5.0) -> bool:
+    """True if a chatbot sidecar answers ``GET /ready`` with a 2xx.
 
-    A short timeout keeps the (frequently polled) readiness check snappy; a
-    refused connection (the common "not running" case) fails instantly.
+    ``/ready`` means capability readiness (declared chat paths can load), not
+    mere process liveness. Refused connections fail quickly; cold medical
+    imports may need a few seconds on first probe.
     """
-    url = "{}/health".format(base_url.rstrip("/"))
+    url = "{}/ready".format(base_url.rstrip("/"))
     try:
         request = urllib.request.Request(url, method="GET")
         with urllib.request.urlopen(request, timeout=timeout) as response:
             status = getattr(response, "status", None) or response.getcode()
             return 200 <= int(status) < 300
-    except Exception:  # noqa: BLE001 - any failure means "not reachable"
+    except Exception:  # noqa: BLE001 - any failure means "not ready"
         return False
 
 
@@ -201,9 +202,9 @@ def preflight_checks() -> List[Dict[str, Any]]:
       available to run.
 
     Check *names* are human-readable and never echo raw environment-variable
-    names. Inspection is filesystem-only except for a short ``/health`` probe of
-    the optional finance/medical sidecars; it never imports RecAI or any
-    application backend.
+    names. Inspection is filesystem-only except for a short ``/ready`` probe of
+    the optional chatbot sidecars; it never imports RecAI or any application
+    backend.
     """
     checks: List[Dict[str, Any]] = []
 
@@ -289,9 +290,9 @@ def preflight_checks() -> List[Dict[str, Any]]:
             "optional": True,
             "applicationId": "recai",
             "detail": (
-                "RecAI chat API reachable at {}.".format(recai_url)
+                "RecAI chat API ready at {}.".format(recai_url)
                 if recai_api_ok
-                else "RecAI chat API not running at {}. Start it before a Harbor chat run.".format(
+                else "RecAI chat API not ready at {}. Start it before a Harbor chat run.".format(
                     recai_url
                 )
             ),
@@ -299,8 +300,8 @@ def preflight_checks() -> List[Dict[str, Any]]:
     )
 
     # The finance/medical adapters route to HTTP sidecars. Probe each one's
-    # /health so readiness reflects whether it is actually running. They are
-    # marked optional: a down sidecar shows here but does not gate overall
+    # /ready so readiness reflects full capability readiness (not just liveness).
+    # Marked optional: a down sidecar shows here but does not gate overall
     # readiness (RecAI / Survey / Web still run without them).
     from playground.inprocess.chatbot_eval import _sidecar_base_url
 
@@ -316,9 +317,9 @@ def preflight_checks() -> List[Dict[str, Any]]:
             "optional": True,
             "applicationId": "finance_openbb",
             "detail": (
-                "Finance sidecar reachable at {}.".format(finance_url)
+                "Finance sidecar ready at {}.".format(finance_url)
                 if finance_ok
-                else "Finance sidecar not running at {}. Start it to run a finance chat.".format(
+                else "Finance sidecar not ready at {}. Start it to run a finance chat.".format(
                     finance_url
                 )
             ),
@@ -327,7 +328,7 @@ def preflight_checks() -> List[Dict[str, Any]]:
     medical_url = _sidecar_base_url(
         "CHATBOT_UPSTREAM_MEDICAL", "MEDICAL_CHATBOT_URL", "http://127.0.0.1:8902"
     )
-    medical_ok = _sidecar_reachable(medical_url)
+    medical_ok = _sidecar_reachable(medical_url, timeout=10.0)
     checks.append(
         {
             "group": "Chatbot",
@@ -336,9 +337,9 @@ def preflight_checks() -> List[Dict[str, Any]]:
             "optional": True,
             "applicationId": "medical_assistant",
             "detail": (
-                "Medical sidecar reachable at {}.".format(medical_url)
+                "Medical sidecar ready at {}.".format(medical_url)
                 if medical_ok
-                else "Medical sidecar not running at {}. Start it to run a medical chat.".format(
+                else "Medical sidecar not ready at {}. Start it to run a medical chat.".format(
                     medical_url
                 )
             ),
@@ -355,9 +356,9 @@ def preflight_checks() -> List[Dict[str, Any]]:
             "optional": True,
             "applicationId": "acme_support_mcp",
             "detail": (
-                "MCP server reachable at {}.".format(mcp_url)
+                "MCP server ready at {}.".format(mcp_url)
                 if mcp_ok
-                else "MCP server not running at {}. Start it to run the MCP chat task.".format(
+                else "MCP server not ready at {}. Start it to run the MCP chat task.".format(
                     mcp_url
                 )
             ),
@@ -859,6 +860,34 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
 
+    @app.post(
+        "/api/harbor/jobs/{job_name}/retry-failed",
+        tags=["harbor-jobs"],
+    )
+    def retry_harbor_job_failed(
+        job_name: str, services: AppState = Depends(get_services)
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.retry_failed(job_name)
+        except ValueError as exc:
+            message = str(exc)
+            status = 404 if "not found" in message.lower() else 400
+            raise HTTPException(status_code=status, detail=message) from exc
+
+    @app.get(
+        "/api/harbor/jobs/{job_name}/status",
+        tags=["harbor-jobs"],
+    )
+    def get_harbor_job_status(
+        job_name: str,
+        since: int = Query(default=0, ge=0),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        try:
+            return services.harbor_jobs.get_job_status(job_name, since=since)
+        except ValueError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+
     @app.get(
         "/api/harbor/jobs/{job_name}/trials/{trial_name}/events",
         tags=["harbor-jobs"],
@@ -1125,6 +1154,30 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     @app.get(
+        "/api/tasks/persona-strategy",
+        response_model=schemas.TaskPersonaStrategyResponse,
+        tags=["tasks"],
+    )
+    def get_task_persona_strategy(
+        task_path: str = Query(..., alias="taskPath"),
+        services: AppState = Depends(get_services),
+    ) -> Dict[str, Any]:
+        from backend.service.task_persona_strategy_service import (
+            get_task_persona_strategy as load_task_persona_strategy,
+        )
+
+        try:
+            strategy = load_task_persona_strategy(
+                task_path,
+                repo_root=services.harbor_jobs.repo_root,
+            )
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        return {"personaStrategy": strategy}
+
+    @app.get(
         "/api/persona-pool/cohorts",
         response_model=schemas.PersonaCohortListResponse,
         tags=["persona-pool"],
@@ -1191,15 +1244,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def survey_eval_harbor_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.survey_harbor_tasks import list_survey_harbor_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_survey_harbor_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_survey_harbor_tasks()]}
 
     # ----------------------------- Chatbot eval --------------------------- #
     @app.get(
@@ -1209,15 +1255,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def chatbot_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.chatbot_tasks import list_chatbot_eval_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_chatbot_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_chatbot_eval_tasks()]}
 
     # ------------------------------- WebEval ------------------------------ #
     @app.get(
@@ -1226,16 +1265,9 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
         tags=["web-eval"],
     )
     def web_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
-        from backend.service.task_detail_service import attach_task_profile_markdown
         from backend.service.web_tasks import list_web_eval_tasks
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_web_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_web_eval_tasks()]}
 
     # ----------------------------- OS app eval ---------------------------- #
     @app.get(
@@ -1245,15 +1277,8 @@ def create_app(catalog_path: Optional[str] = None) -> FastAPI:
     )
     def os_app_eval_tasks(services: AppState = Depends(get_services)) -> Dict[str, Any]:
         from backend.service.os_app_tasks import list_os_app_eval_tasks
-        from backend.service.task_detail_service import attach_task_profile_markdown
 
-        root = services.harbor_jobs.repo_root
-        return {
-            "tasks": [
-                attach_task_profile_markdown(task.to_dict(), repo_root=root)
-                for task in list_os_app_eval_tasks()
-            ]
-        }
+        return {"tasks": [task.to_summary_dict() for task in list_os_app_eval_tasks()]}
 
     # --- static SPA (production single-origin) ------------------------- #
     # Mount LAST so it does not shadow the /api routes. Only when a build

@@ -2,7 +2,7 @@ version = "1.0"
 artifacts = [ "/app/output",]
 
 [task]
-name = "application/survey-cps-food-security"
+name = "application/cps-food-security"
 
 [metadata]
 difficulty = "easy"

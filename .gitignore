@@ -1,3 +1,7 @@
+# macOS filesystem cruft
+.DS_Store
+**/.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -240,6 +244,13 @@ persona/synthesis/reports/**/shard_*
 persona/synthesis/generated/
 persona/synthesis/jobs/**/sbatch_logs/
 
+# Persona post-processing generated datasets and scheduler artifacts
+persona/post_process/coreset_1m/results/
+persona/post_process/unified_dataset/results/
+persona/post_process/**/jobs/manifests/
+persona/post_process/**/jobs/sbatch_logs/
+/sbatch_logs/
+
 # PersonaBench migration outputs and large generated Persona artifacts.
 persona/curation/attribute_pool/outputs/
 persona/curation/attribute_pool/sources/acs_pums/*.csv
@@ -250,15 +261,20 @@ persona/datasets/bench-dev-*/
 persona/datasets/_generated/
 configs/jobs/application-task-job-recipe/*.yaml
 configs/jobs/application-task-job-recipe/*.meta.json
+configs/jobs/application-task-job-recipe/*.launch.json
 !configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.yaml
 !configs/jobs/application-task-job-recipe/appSim-example-survey-product-feedback-random-n4.meta.json
 configs/jobs/persona-task-grounding-job-recipe/*.yaml
 configs/jobs/persona-task-grounding-job-recipe/*.meta.json
+configs/jobs/persona-task-grounding-job-recipe/*.launch.json
 !configs/jobs/persona-task-grounding-job-recipe/playground-example-survey-product-feedback-economic-motivation-pg2.yaml
 !configs/jobs/persona-task-grounding-job-recipe/playground-example-survey-product-feedback-economic-motivation-pg2.meta.json
 
 # Local Harbor job outputs (recipes live under configs/jobs/)
 /jobs/*
+
+# Trial verifier output accidentally written under task folders during local runs
+application/tasks/*/verifier/
 
 # Playground local runtime cache (Cockpit / harness sessions)
 /data/cache/

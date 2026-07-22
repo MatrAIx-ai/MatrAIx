@@ -48,6 +48,7 @@ def discover_managed_copies() -> list[ManagedCopy]:
             if task_root.is_dir()
         ),
         ENV_SNIPPET_ROOTS[0].glob("shared-chat-persona/Dockerfile"),
+        ENV_SNIPPET_ROOTS[0].glob("shared-web-cli/Dockerfile"),
     ]
     seen: set[Path] = set()
     for group in dockerfile_globs:

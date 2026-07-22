@@ -1,8 +1,8 @@
 version = "1.0"
-artifacts = [ "/tmp/os-app-linux-note-to-csv",]
+artifacts = [ "/app/output",]
 
 [task]
-name = "application/computer-use-linux-note-to-csv"
+name = "application/note-to-csv"
 
 [metadata]
 difficulty = "easy"

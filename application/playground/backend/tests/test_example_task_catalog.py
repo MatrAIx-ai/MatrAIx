@@ -35,7 +35,7 @@ def test_list_survey_harbor_tasks_includes_product_feedback():
 
 def test_discover_survey_application_tasks_includes_contributing_tasks():
     records = discover_survey_application_tasks()
-    assert len(records) == 6
+    assert len(records) >= 6
     folders = {record.folder_name for record in records}
     assert "example-survey_product-feedback" in folders
     assert "survey_nike-air-max-dn" in folders

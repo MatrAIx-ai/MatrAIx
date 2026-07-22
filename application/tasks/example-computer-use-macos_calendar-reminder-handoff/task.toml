@@ -1,8 +1,8 @@
 version = "1.0"
-artifacts = [ "/tmp/os-app-macos-calendar-reminder-handoff",]
+artifacts = [ "/app/output",]
 
 [task]
-name = "application/computer-use-macos-calendar-reminder-handoff"
+name = "application/calendar-reminder-handoff"
 
 [metadata]
 difficulty = "easy"

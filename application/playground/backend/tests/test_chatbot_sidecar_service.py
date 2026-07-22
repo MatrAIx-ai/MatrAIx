@@ -16,6 +16,7 @@ def test_resolve_health_url_defaults(monkeypatch: pytest.MonkeyPatch) -> None:
     assert svc.resolve_health_url("finance_openbb") == "http://127.0.0.1:8901"
     assert svc.resolve_health_url("medical_assistant") == "http://127.0.0.1:8902"
     assert svc.resolve_health_url("acme_support_mcp") == "http://127.0.0.1:8903"
+    assert svc.resolve_health_url("meal_planning_nutrition") == "http://127.0.0.1:8905"
 
 
 def test_sidecar_status_unknown_application() -> None:
@@ -32,6 +33,7 @@ def test_list_sidecar_statuses(monkeypatch: pytest.MonkeyPatch) -> None:
         "medical_assistant",
         "acme_support_api",
         "acme_support_mcp",
+        "meal_planning_nutrition",
     }
     assert all(item["ok"] for item in statuses)
     by_id = {item["applicationId"]: item for item in statuses}
@@ -40,6 +42,7 @@ def test_list_sidecar_statuses(monkeypatch: pytest.MonkeyPatch) -> None:
     assert by_id["medical_assistant"]["canStart"] is True
     assert by_id["acme_support_api"]["canStart"] is True
     assert by_id["acme_support_mcp"]["canStart"] is True
+    assert by_id["meal_planning_nutrition"]["canStart"] is True
 
 
 def test_start_sidecar_runs_compose_for_sidecar_only(
@@ -111,4 +114,28 @@ def test_sidecar_status_uses_tcp_probe_for_mcp(monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.setattr(svc, "sidecar_port_reachable", lambda _host, _port, timeout=1.5: True)
     status = svc.sidecar_status("acme_support_mcp")
     assert status["ok"] is True
-    assert "MCP server reachable" in status["detail"]
+    assert "MCP server ready" in status["detail"]
+
+
+def test_sidecar_reachable_probes_ready_endpoint(monkeypatch: pytest.MonkeyPatch) -> None:
+    seen: dict[str, str] = {}
+
+    class _Resp:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):  # noqa: ANN001
+            return False
+
+        def getcode(self):
+            return 200
+
+    def fake_urlopen(request, timeout=0):  # noqa: ANN001
+        seen["url"] = request.full_url
+        return _Resp()
+
+    monkeypatch.setattr(svc.urllib.request, "urlopen", fake_urlopen)
+    assert svc.sidecar_reachable("http://127.0.0.1:8902") is True
+    assert seen["url"] == "http://127.0.0.1:8902/ready"

@@ -53,6 +53,7 @@ import { useCockpitSetupLock } from "./setup/useCockpitSetupLock";
 import { api, ApiError } from "@/lib/api";
 import { useHarborCockpitRun, type HarborCockpitPhase } from "@/lib/useHarborCockpitRun";
 import { useUrlState } from "@/lib/useUrlState";
+import { usePgTaskIdDeepLink } from "@/lib/usePgTaskIdDeepLink";
 import { useCockpitInstruction } from "@/lib/useCockpitInstruction";
 import { mapChatbotDebriefToJobView, mapChatbotLiveToJobView, isRewardOnlyTrialFailure } from "@/lib/harborCockpitMappers";
 import { type PlaygroundRunPhase } from "@/lib/usePlayground";
@@ -64,8 +65,8 @@ import type {
   PlaygroundJobView,
 } from "@/lib/types";
 import { personaModelPipelineLabel } from "@/lib/personaAgentCatalog";
-import { sortByAvailability } from "./setup/cockpitTaskCards";
-import { taskCardTags, taskSearchTags } from "./setup/taskCardLabels";
+import { chatbotEvalTaskCards, sortByAvailability } from "./setup/cockpitTaskCards";
+import { mergeChatbotTaskAvailability } from "@/lib/chatbotTaskAvailability";
 
 /** Per-app display name + icon (presentational; the data layer is app-agnostic). */
 const APP_NAME: Record<string, string> = {
@@ -267,6 +268,7 @@ function ChatbotEvalCockpit({
   onTaskTypeChange,
   isActive,
 }: ChatbotEvalCockpitProps) {
+  const { state: urlState } = useUrlState();
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<PlaygroundJobView>({ taskKind: "chatbot" });
 
@@ -279,17 +281,25 @@ function ChatbotEvalCockpit({
   const tasksQuery = useQuery({
     queryKey: ["chatbot-eval-tasks"],
     queryFn: api.listChatbotEvalTasks,
+    enabled: isActive,
     staleTime: 60_000,
-    refetchInterval: sidecarStartingId ? 3_000 : 15_000,
   });
-  const chatbotTasks = useMemo(
-    () => sortByAvailability(tasksQuery.data?.tasks ?? []),
-    [tasksQuery.data?.tasks],
-  );
+  const sidecarsQuery = useQuery({
+    queryKey: ["chatbot-sidecars"],
+    queryFn: api.getChatbotSidecars,
+    enabled: isActive,
+    staleTime: 10_000,
+    refetchInterval: isActive && sidecarStartingId ? 3_000 : isActive ? 15_000 : false,
+  });
+  const chatbotTasks = useMemo(() => {
+    const sidecars = sidecarsQuery.data?.sidecars ?? [];
+    const merged = (tasksQuery.data?.tasks ?? []).map((task) =>
+      mergeChatbotTaskAvailability(task, sidecars),
+    );
+    return sortByAvailability(merged);
+  }, [tasksQuery.data?.tasks, sidecarsQuery.data?.sidecars]);
   const setupTaskPath =
-    chatbotTasks.find((task) => task.id === selectedTaskId)?.taskPath ??
-    chatbotTasks[0]?.taskPath ??
-    null;
+    chatbotTasks.find((task) => task.id === selectedTaskId)?.taskPath ?? null;
   const {
     persona,
     personaModel,
@@ -328,29 +338,49 @@ function ChatbotEvalCockpit({
     batchTaskId,
     batchPersonaIds,
     setBatchJobName,
-    batchLive,
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
+    completedTrials: batchCompletedTrials,
     expectedTrialCount,
     personaById,
+    batchError,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "chatbot");
   const [exportSnapshot, setExportSnapshot] = useState<ExportSnapshot | null>(null);
+
+  // After navigating away/back, single-trial restore brings back the transcript
+  // but strategy hydrate used to wipe the left-rail selection. Re-adopt the
+  // persona id from the restored job when the rail is empty.
+  useEffect(() => {
+    const id = typeof job?.personaId === "string" ? job.personaId.trim() : "";
+    if (!id || phase === "idle" || selectedPersonaIds.length > 0) return;
+    setSelectedPersonaIds([id]);
+  }, [job?.personaId, phase, selectedPersonaIds.length, setSelectedPersonaIds]);
 
   useEffect(() => {
     if (!batchTaskId) return;
     setSelectedTaskId(batchTaskId);
   }, [batchTaskId]);
 
+  const chatbotTaskIds = useMemo(() => chatbotTasks.map((task) => task.id), [chatbotTasks]);
+  usePgTaskIdDeepLink("chatbot", chatbotTaskIds, setSelectedTaskId, isActive);
+
+  // No auto-selection: the pipeline stays unlit until the operator explicitly
+  // picks a task (deep links and batch adoption still apply).
   useEffect(() => {
+    if (urlState.pgTaskId) return;
     if (!chatbotTasks.length) return;
     setSelectedTaskId((current) =>
-      current && chatbotTasks.some((task) => task.id === current) ? current : chatbotTasks[0]?.id ?? "",
+      current && chatbotTasks.some((task) => task.id === current) ? current : "",
     );
-  }, [chatbotTasks]);
+  }, [chatbotTasks, urlState.pgTaskId]);
 
   // Adopt engine default once config metadata arrives. Sidecar context/domain
   // come only from chatbot.yaml and are passed through as opaque runtime defaults.
@@ -362,7 +392,7 @@ function ChatbotEvalCockpit({
   }, [options]);
 
   const selectedTask = useMemo(
-    () => chatbotTasks.find((task) => task.id === selectedTaskId) ?? chatbotTasks[0] ?? null,
+    () => chatbotTasks.find((task) => task.id === selectedTaskId) ?? null,
     [chatbotTasks, selectedTaskId],
   );
   const applicationId = (selectedTask?.applicationId ||
@@ -388,14 +418,14 @@ function ChatbotEvalCockpit({
       setSidecarStartingId(taskId);
       try {
         await api.startChatbotSidecar(appId);
-        await tasksQuery.refetch();
+        await sidecarsQuery.refetch();
       } catch (e) {
         setSidecarActionError(e instanceof Error ? e.message : "Failed to start sidecar");
       } finally {
         setSidecarStartingId(null);
       }
     },
-    [chatbotTasks, tasksQuery],
+    [chatbotTasks, sidecarsQuery],
   );
 
   // Live persona + controls, mirrored to a ref so the "run finished" effect can
@@ -692,58 +722,7 @@ function ChatbotEvalCockpit({
     return ids;
   }, [isRunning, selectedTaskId, isBatchActive, batchTaskId]);
   const chatTaskCards = useMemo<TaskCardModel[]>(
-    () =>
-      chatbotTasks.map((task) => {
-        const transport = transportForChatTask(task);
-        const runningNow = runningChatTaskIds.has(task.id);
-        const available =
-          runningNow ? true : task.available === null || task.available === undefined ? null : task.available;
-        const statusTone: "secondary" | "danger" = available ? "secondary" : "danger";
-        const statusTags =
-          available === null
-            ? []
-            : [
-                {
-                  label: available ? "Available" : "Unavailable",
-                  tone: statusTone,
-                },
-              ];
-        return {
-          id: task.id,
-          title: task.title,
-          subtitle: task.description,
-          taskType: "chatbot",
-          taskPath: task.taskPath,
-          transport,
-          available,
-          canStart: task.canStart ?? false,
-          statusLabel: available === null ? undefined : available ? "Available" : "Unavailable",
-          statusDetail: runningNow
-            ? "Sidecar started for this run."
-            : task.statusDetail ?? undefined,
-          capabilities: (task.capabilities ?? []).map((cap) => ({
-            id: cap.id,
-            label: cap.label,
-            kind: cap.kind,
-          })),
-          domain: task.domain,
-          difficulty: task.difficulty,
-          taskKind: task.taskKind,
-          profileMarkdown: task.profileMarkdown,
-          instructionMarkdown: task.instructionMarkdown,
-          tags: [
-            ...taskCardTags({
-              taskPath: task.taskPath,
-              taskKind: task.taskKind,
-              metaType: task.metaType,
-              domain: task.domain,
-              difficulty: task.difficulty,
-            }),
-            ...statusTags,
-          ],
-          searchTags: taskSearchTags(task.tags),
-        };
-      }),
+    () => chatbotEvalTaskCards(chatbotTasks, { runningTaskIds: runningChatTaskIds }),
     [chatbotTasks, runningChatTaskIds],
   );
   const verifierOnlyFailure = isRewardOnlyTrialFailure(error ?? job?.error ?? null, {
@@ -779,14 +758,14 @@ function ChatbotEvalCockpit({
   const runLaunchPhase = resolveRunLaunchPhase(
     batchJobName,
     batchComplete,
-    batchLive.error,
+    batchError,
     phase,
   );
 
   const runProgressPct = batchJobName
     ? computeBatchProgressPct(
         batchJobName,
-        batchLive.live?.completedTrials,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : pipelinePhase === "done"
@@ -801,7 +780,7 @@ function ChatbotEvalCockpit({
 
   const runProgressLabel = batchJobName
     ? formatBatchProgressLabel(
-        batchLive.live?.completedTrials ?? 0,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : pipelinePhase === "building"
@@ -864,6 +843,7 @@ function ChatbotEvalCockpit({
           domain={(requestDomain || applicationContext || "movie") as Domain}
           appName={chatTaskLabel}
           personaId={persona?.id}
+          personaName={persona?.name}
           personaDimensions={
             persona?.id ? personaById[persona.id]?.dimensions ?? {} : {}
           }
@@ -900,7 +880,7 @@ function ChatbotEvalCockpit({
             onParallelTrialsChange={setParallelTrials}
             isRunning={runBusy}
             onRun={() => void handleLaunch()}
-            error={launchError ?? (verifierOnlyFailure ? null : error) ?? batchLive.error}
+            error={launchError ?? (verifierOnlyFailure ? null : error) ?? batchError ?? retryError}
             runPhase={runLaunchPhase}
             progressPct={runProgressPct}
             progressLabel={runProgressLabel}
@@ -919,6 +899,9 @@ function ChatbotEvalCockpit({
             }
             onDownload={!batchJobName ? handleExport : undefined}
             canDownload={canExport}
+            onRetryFailed={batchJobName ? () => void retryFailed() : undefined}
+            failedCount={failedTrials}
+            retryBusy={retryBusy}
           />
         </div>
       }

@@ -2,6 +2,7 @@
  * PersonaStoreContent: bench-dev-sample persona grid (shared by Persona Store page + ⌘K drawer).
  */
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useQuery } from "@tanstack/react-query";
 
 import { BenchPersonaCard } from "./cockpit/setup/BenchPersonaCard";
@@ -82,6 +83,21 @@ export function PersonaStoreContent({
     return () => window.clearTimeout(id);
   }, [autoFocusSearch]);
 
+  // Detail modal: lock page scroll and close on Escape while open.
+  useEffect(() => {
+    if (!viewing) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setViewing(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [viewing]);
+
   const catalogQuery = useQuery<PersonaPoolCatalog>({
     queryKey: ["persona-pool-catalog"],
     queryFn: () => api.getPersonaPoolCatalog(),
@@ -135,9 +151,9 @@ export function PersonaStoreContent({
 
   return (
     <>
-      <StudioGlassPanel className="mb-5 p-4">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <div className="flex h-9 min-w-0 flex-1 items-center rounded-lg border border-outline/50 bg-surface/60 backdrop-blur transition-colors focus-within:border-primary/50">
+      <StudioGlassPanel className="mb-4 p-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="glass-tile flex h-9 min-w-0 flex-1 basis-56 items-center rounded-lg transition-colors focus-within:bg-surface-high/50">
             <Sym name="search" size={16} className="ml-3 flex-none text-text-dim" />
             <input
               ref={inputRef}
@@ -145,7 +161,7 @@ export function PersonaStoreContent({
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search persona id or name…"
               aria-label="Search personas"
-              className="h-full w-full min-w-0 bg-transparent px-3 text-[15px] text-text-main outline-none placeholder:text-text-variant"
+              className="h-full w-full min-w-0 bg-transparent px-3 text-[14px] text-text-main outline-none placeholder:text-text-variant"
             />
             {query && (
               <button
@@ -158,60 +174,50 @@ export function PersonaStoreContent({
               </button>
             )}
           </div>
-          <div className="rounded-lg border border-outline/50 bg-surface/60 px-3 py-1.5 text-center backdrop-blur sm:shrink-0">
-            <div className="hud text-[11px] text-text-dim">Pool</div>
-            <div className="font-mono text-[16px] font-bold text-primary">{loadedLabel}</div>
-          </div>
-        </div>
 
-        <div className="mt-3 flex flex-col gap-2.5 border-t border-outline/20 pt-3 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex min-w-0 flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3">
-            <span className="cockpit-field-label shrink-0 text-[12px] text-text-dim">Source</span>
-            <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by data source">
+          <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Filter by data source">
+            <FilterChip
+              label="All"
+              active={activeSource === "all"}
+              onClick={() => setSourceFilter(null)}
+            />
+            {personaSources.map((source) => (
               <FilterChip
-                label="All"
-                active={activeSource === "all"}
-                onClick={() => setSourceFilter(null)}
+                key={source}
+                label={source}
+                title={`Source: ${source}`}
+                active={activeSource === source}
+                onClick={() => setSourceFilter(source)}
               />
-              {personaSources.map((source) => (
-                <FilterChip
-                  key={source}
-                  label={source}
-                  title={`Source: ${source}`}
-                  active={activeSource === source}
-                  onClick={() => setSourceFilter(source)}
-                />
-              ))}
-            </div>
+            ))}
           </div>
 
-          <div className="flex shrink-0 items-center gap-2 lg:pl-4">
-            <span className="hidden h-6 w-px bg-outline/30 lg:block" aria-hidden />
-            <span className="cockpit-field-label shrink-0 text-[12px] text-text-dim lg:sr-only">
-              Dimensions
-            </span>
-            <button
-              type="button"
-              onClick={() => setFilterModalOpen(true)}
-              className={`inline-flex h-8 items-center gap-1.5 rounded-md border px-3 text-[13px] font-medium transition-colors ${FOCUS_RING} ${
-                filterCount > filters.sources.length
-                  ? "border-primary bg-primary/10 text-primary"
-                  : "border-outline/50 bg-surface/50 text-text-variant hover:border-primary/40 hover:text-text-main"
-              }`}
-            >
-              <Sym name="tune" size={15} />
-              Dimension filters
-              {filterCount > filters.sources.length ? (
-                <span className="rounded bg-primary px-1.5 py-0.5 text-[11px] font-bold text-on-primary">
-                  {filterCount - filters.sources.length}
-                </span>
-              ) : null}
-            </button>
+          <button
+            type="button"
+            onClick={() => setFilterModalOpen(true)}
+            className={`inline-flex h-8 shrink-0 items-center gap-1.5 rounded-md px-3 text-[13px] font-medium transition-colors ${FOCUS_RING} ${
+              filterCount > filters.sources.length
+                ? "glass-tile glass-tile--active text-primary"
+                : "glass-tile glass-tile--hover text-text-variant hover:text-text-main"
+            }`}
+          >
+            <Sym name="tune" size={15} />
+            Dimension filters
+            {filterCount > filters.sources.length ? (
+              <span className="rounded bg-primary px-1.5 py-0.5 text-[11px] font-bold text-on-primary">
+                {filterCount - filters.sources.length}
+              </span>
+            ) : null}
+          </button>
+
+          <div className="flex shrink-0 items-baseline gap-1.5 pl-1">
+            <span className="hud text-[11px] text-text-dim">Pool</span>
+            <span className="font-mono text-[15px] font-bold text-primary">{loadedLabel}</span>
           </div>
         </div>
 
         {(filterCount > 0 || debouncedQuery) && (
-          <p className="mt-3 text-[13px] text-text-variant">
+          <p className="mt-2 text-[13px] text-text-variant">
             Showing <span className="font-semibold text-text-main">{personas.length}</span> of{" "}
             {all.length} loaded · bench-dev-sample
           </p>
@@ -234,49 +240,49 @@ export function PersonaStoreContent({
           emptyPoolMessage={personaPoolEmptyMessage(catalogQuery.data)}
         />
       ) : (
-        <div className={`flex min-h-0 gap-4 ${viewing ? "items-stretch" : ""}`}>
-          <div className="min-w-0 flex-1">
-            <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {personas.map((persona, i) => (
-                <div
-                  key={persona.personaId}
-                  className="rise-in h-full"
-                  style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
-                >
-                  <BenchPersonaCard
-                    persona={persona}
-                    selected={persona.personaId === (selectedId ?? null) || persona.personaId === viewing?.personaId}
-                    onToggle={() => {
-                      setViewing((current) =>
-                        current?.personaId === persona.personaId ? null : persona,
-                      );
-                    }}
-                    onOpenDetail={() => setViewing(persona)}
-                  />
-                </div>
-              ))}
+        <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {personas.map((persona, i) => (
+            <div
+              key={persona.personaId}
+              className="rise-in h-full"
+              style={{ animationDelay: `${Math.min(i, 6) * 30}ms` }}
+            >
+              <BenchPersonaCard
+                persona={persona}
+                selected={persona.personaId === (selectedId ?? null) || persona.personaId === viewing?.personaId}
+                onToggle={() => {
+                  setViewing((current) =>
+                    current?.personaId === persona.personaId ? null : persona,
+                  );
+                }}
+                onOpenDetail={() => setViewing(persona)}
+              />
             </div>
-          </div>
-
-          {viewing ? (
-            <BenchPersonaDetailPanel
-              persona={viewing}
-              onClose={() => setViewing(null)}
-              onUse={onSelect ? handleSelect : undefined}
-              className="hidden w-[min(100%,22rem)] shrink-0 lg:flex"
-            />
-          ) : null}
+          ))}
         </div>
       )}
 
-      {viewing ? (
-        <BenchPersonaDetailPanel
-          persona={viewing}
-          onClose={() => setViewing(null)}
-          onUse={onSelect ? handleSelect : undefined}
-          className="mt-4 lg:hidden"
-        />
-      ) : null}
+      {viewing
+        ? createPortal(
+            <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6">
+              <button
+                type="button"
+                className="absolute inset-0 bg-surface-dim/75 backdrop-blur-sm"
+                aria-label="Close persona details"
+                onClick={() => setViewing(null)}
+              />
+              <div className="relative z-10 flex max-h-[min(85vh,720px)] w-full max-w-md">
+                <BenchPersonaDetailPanel
+                  persona={viewing}
+                  onClose={() => setViewing(null)}
+                  onUse={onSelect ? handleSelect : undefined}
+                  className="glass-panel-strong w-full shadow-2xl"
+                />
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
 
       <PersonaFilterModal
         open={filterModalOpen}
@@ -310,10 +316,10 @@ function FilterChip({
       onClick={onClick}
       title={title}
       aria-pressed={active}
-      className={`inline-flex h-8 items-center rounded-md border px-3 text-[13px] font-medium transition-colors ${FOCUS_RING} ${
+      className={`inline-flex h-8 items-center rounded-md px-3 text-[13px] font-medium transition-colors ${FOCUS_RING} ${
         active
-          ? "border-primary bg-primary text-on-primary"
-          : "border-outline/50 bg-surface/50 text-text-variant hover:border-primary/40 hover:text-text-main"
+          ? "bg-primary text-on-primary"
+          : "glass-tile glass-tile--hover text-text-variant hover:text-text-main"
       }`}
     >
       {label}

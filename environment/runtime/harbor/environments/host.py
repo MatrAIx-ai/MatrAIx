@@ -23,7 +23,12 @@ _CONTAINER_PATH_PATTERN = re.compile(
 
 
 class HostEnvironment(BaseEnvironment):
-    """Run agent + verifier on the host without building the task main image."""
+    """Run agent + verifier on the host without building the task main image.
+
+    Verifier scripts run from the repo ``task/tests/`` tree (same as Playground
+    host verifier for os-app). Virtual ``/tests/`` paths rewrite to that directory;
+    outputs land under ``trial/verifier/`` and ``trial/artifacts/``.
+    """
 
     _sidecar_api_marker = ".sidecar_api_url"
 
@@ -34,6 +39,7 @@ class HostEnvironment(BaseEnvironment):
         session_id: str,
         trial_paths: TrialPaths,
         task_env_config: EnvironmentConfig,
+        tests_dir: Path | str | None = None,
         *args,
         **kwargs,
     ) -> None:
@@ -45,11 +51,21 @@ class HostEnvironment(BaseEnvironment):
             task_env_config=task_env_config,
             **kwargs,
         )
-        self._workspace_root = self.trial_paths.trial_dir / "host_workspace"
-        self._tests_root = self.trial_paths.trial_dir / "host_tests"
+        if tests_dir is None:
+            raise ValueError(
+                "HostEnvironment requires tests_dir (repo task tests/ path)"
+            )
+        self._tests_root = Path(tests_dir).resolve()
+        if not self._tests_root.is_dir():
+            raise FileNotFoundError(
+                "HostEnvironment tests_dir does not exist: {}".format(self._tests_root)
+            )
         self._compose_project = self._compose_project_name()
         self._sidecar_services: list[str] = []
         self._sidecar_compose_path: Path | None = None
+        # When True, trials reuse the Cockpit/playground shared sidecar and must
+        # not ``compose down`` it on stop (other trials / the UI still need it).
+        self._uses_shared_sidecar = False
 
     @staticmethod
     def type() -> EnvironmentType:
@@ -87,6 +103,11 @@ class HostEnvironment(BaseEnvironment):
         else:
             raise ValueError("unsupported host container path: {}".format(container_path))
         return host_path.resolve()
+
+    def _maps_to_repo_tests(self, container_path: str) -> bool:
+        path = PurePosixPath(container_path.rstrip("/") or "/")
+        parts = [part for part in path.parts if part != "/"]
+        return bool(parts) and parts[0] == "tests"
 
     def _rewrite_command_paths(self, command: str) -> str:
         rewritten = command
@@ -179,16 +200,58 @@ class HostEnvironment(BaseEnvironment):
             return build
         return "."
 
+    def _write_sidecar_markers(self, api_url: str, *, mcp: bool = False) -> None:
+        trial_dir = self.trial_paths.trial_dir
+        trial_dir.mkdir(parents=True, exist_ok=True)
+        marker = trial_dir / self._sidecar_api_marker
+        marker.write_text(api_url.rstrip("/") + "\n", encoding="utf-8")
+        if mcp:
+            mcp_marker = trial_dir / ".sidecar_mcp_url"
+            base = api_url.rstrip("/")
+            mcp_url = base if base.endswith("/mcp") else base + "/mcp"
+            mcp_marker.write_text(mcp_url + "\n", encoding="utf-8")
+
     async def _start_sidecars(self, force_build: bool) -> None:
         services = self._discover_sidecar_services()
         if not services:
             return
+
+        # Prefer the fixed-port Playground shared stack (one per application) so
+        # batch cohorts do not each spawn a heavy medical/finance compose.
+        try:
+            from playground.inprocess.chatbot_shared_sidecar import (
+                ensure_shared_sidecar_for_services,
+            )
+
+            shared = await asyncio.to_thread(
+                ensure_shared_sidecar_for_services,
+                compose_dir=self.environment_dir,
+                service_names=services,
+                force_build=force_build,
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise RuntimeError(
+                "failed to start shared chat sidecar: {}".format(exc)
+            ) from exc
+
+        if shared is not None:
+            api_url, spec = shared
+            self._uses_shared_sidecar = True
+            self._sidecar_services = []
+            self._sidecar_compose_path = None
+            self._write_sidecar_markers(api_url, mcp=(spec.probe == "tcp"))
+            return
+
+        # Unknown compose layouts still get an ephemeral per-trial sidecar.
         self._sidecar_services = services
-        service_name = services[0]
         from playground.inprocess.chatbot_sidecar_compose import (
             write_standalone_sidecar_compose,
         )
+        from playground.inprocess.chatbot_shared_sidecar import (
+            pick_primary_sidecar_service,
+        )
 
+        service_name = pick_primary_sidecar_service(services) or services[0]
         compose_dir = self.trial_paths.trial_dir / "host_compose"
         compose_path = write_standalone_sidecar_compose(
             compose_dir=self.environment_dir,
@@ -244,8 +307,7 @@ class HostEnvironment(BaseEnvironment):
         host, _, port = port_line.rpartition(":")
         api_url = "http://{}:{}".format(host or "127.0.0.1", port)
         await self._wait_for_sidecar_port(host or "127.0.0.1", int(port))
-        marker = self.trial_paths.trial_dir / self._sidecar_api_marker
-        marker.write_text(api_url + "\n", encoding="utf-8")
+        self._write_sidecar_markers(api_url)
 
     async def _wait_for_sidecar_port(
         self,
@@ -272,41 +334,50 @@ class HostEnvironment(BaseEnvironment):
         )
 
     async def start(self, force_build: bool) -> None:
-        self._workspace_root.mkdir(parents=True, exist_ok=True)
-        self._tests_root.mkdir(parents=True, exist_ok=True)
         output_dir = self.resolve_container_path("/app/output")
         output_dir.mkdir(parents=True, exist_ok=True)
         self.trial_paths.verifier_dir.mkdir(parents=True, exist_ok=True)
         await self._start_sidecars(force_build)
 
     async def stop(self, delete: bool) -> None:
-        if not self._sidecar_services:
-            return
-        compose_path = self._sidecar_compose_path
-        command = [
-            "docker",
-            "compose",
-            "--project-name",
-            self._compose_project,
-            "--project-directory",
-            str(self.environment_dir),
-        ]
-        if compose_path is not None:
-            command.extend(["-f", str(compose_path)])
-        command.extend(["down", "--remove-orphans"])
-        if delete:
-            command.extend(["--volumes", "--rmi", "local"])
-        await self._run_command(command, timeout_sec=120)
         marker = self.trial_paths.trial_dir / self._sidecar_api_marker
-        marker.unlink(missing_ok=True)
+        mcp_marker = self.trial_paths.trial_dir / ".sidecar_mcp_url"
+        if self._uses_shared_sidecar:
+            # Leave the shared playground-<app> stack running for other trials
+            # and for Cockpit "Service up".
+            marker.unlink(missing_ok=True)
+            mcp_marker.unlink(missing_ok=True)
+            return
+        if self._sidecar_services:
+            compose_path = self._sidecar_compose_path
+            command = [
+                "docker",
+                "compose",
+                "--project-name",
+                self._compose_project,
+                "--project-directory",
+                str(self.environment_dir),
+            ]
+            if compose_path is not None:
+                command.extend(["-f", str(compose_path)])
+            command.extend(["down", "--remove-orphans"])
+            if delete:
+                command.extend(["--volumes", "--rmi", "local"])
+            await self._run_command(command, timeout_sec=120)
+            marker.unlink(missing_ok=True)
+            mcp_marker.unlink(missing_ok=True)
 
     async def upload_file(self, source_path: Path | str, target_path: str) -> None:
+        if self._maps_to_repo_tests(target_path):
+            return
         source = Path(source_path)
         destination = self.resolve_container_path(target_path)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
 
     async def upload_dir(self, source_dir: Path | str, target_dir: str) -> None:
+        if self._maps_to_repo_tests(target_dir):
+            return
         source = Path(source_dir)
         destination = self.resolve_container_path(target_dir.rstrip("/") + "/.")
         if destination.name == ".":
@@ -346,15 +417,13 @@ class HostEnvironment(BaseEnvironment):
         user: str | int | None = None,
     ) -> ExecResult:
         del user
-        self._workspace_root.mkdir(parents=True, exist_ok=True)
-        self._tests_root.mkdir(parents=True, exist_ok=True)
         self.trial_paths.verifier_dir.mkdir(parents=True, exist_ok=True)
         output_dir = self.resolve_container_path("/app/output")
         output_dir.mkdir(parents=True, exist_ok=True)
 
         rewritten = self._normalize_shell_invocation(self._rewrite_command_paths(command))
         self._ensure_redirect_targets(rewritten)
-        workdir = self._workspace_root.resolve()
+        workdir = self._tests_root
         if cwd:
             workdir = self.resolve_container_path(cwd)
         merged_env = dict(env or {})

@@ -125,7 +125,7 @@ def _build_execution_contexts(
                     "key": "artifact_subject_label",
                     "label": "Artifact subject label",
                     "role": "evidence",
-                    "kind": "textual",
+                    "kind": "categorical",
                     "value": subject_label.strip(),
                 },
                 {
@@ -173,19 +173,23 @@ def _build_execution_contexts(
 
 
 def _verifier_dir() -> Path:
-    base = (
-        os.environ.get("HARBOR_VERIFIER_DIR")
-        or os.environ.get("HARBOR_VERIFIER_DIR")
-        or "/logs/verifier"
-    )
-    path = Path(base)
+    explicit = os.environ.get("HARBOR_VERIFIER_DIR")
+    if explicit:
+        path = Path(explicit)
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+
+    container_default = Path("/logs/verifier")
     try:
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        container_default.mkdir(parents=True, exist_ok=True)
+        return container_default
     except OSError:
-        path = Path(__file__).resolve().parent.parent / "verifier"
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+        pass
+
+    raise RuntimeError(
+        "HARBOR_VERIFIER_DIR is required when running outside a Harbor trial "
+        "container. Point it at jobs/<job>/<trial>/verifier for local harness runs."
+    )
 
 
 def _write_structured_output(payload: dict[str, object]) -> None:
@@ -305,6 +309,7 @@ def test_output_schema():
                     "label": "Reason",
                     "role": "explanation",
                     "kind": "textual",
+                    "explainsFacetKey": "decision_outcome",
                     "value": reason.strip(),
                 },
                 {
@@ -318,14 +323,14 @@ def test_output_schema():
                     "key": "decision_subject_label",
                     "label": "Decision subject label",
                     "role": "evidence",
-                    "kind": "textual",
+                    "kind": "categorical",
                     "value": subject_label.strip(),
                 },
                 {
                     "key": "task_author",
                     "label": "Quote author",
                     "role": "evidence",
-                    "kind": "textual",
+                    "kind": "categorical",
                     "value": author.strip(),
                 },
             ],
@@ -347,6 +352,7 @@ def test_output_schema():
                     "label": "Comparison notes",
                     "role": "explanation",
                     "kind": "textual",
+                    "explainsFacetKey": "exploration_style",
                     "value": "The persona described a {} browsing pattern before picking this quote.".format(
                         exploration_style.replace("_", " ")
                     ),
@@ -369,6 +375,7 @@ def test_output_schema():
                 "label": "Feedback reason",
                 "role": "explanation",
                 "kind": "textual",
+                "explainsFacetKey": "overall_experience_rating",
                 "value": feedback["feedback_reason"],
             },
             {

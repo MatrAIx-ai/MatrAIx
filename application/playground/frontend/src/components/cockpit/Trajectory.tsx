@@ -35,6 +35,7 @@ export interface TrajectoryProps {
   appName: string;
   /** Active persona id for transcript avatars. */
   personaId?: string | null;
+  personaName?: string | null;
   personaDimensions?: Record<string, string>;
   /** SUT description for the scenario banner. */
   sutDescription: string | null;
@@ -80,6 +81,7 @@ export function Trajectory({
   domain,
   appName,
   personaId = null,
+  personaName = null,
   personaDimensions = {},
   sutDescription,
   phase,
@@ -180,6 +182,7 @@ export function Trajectory({
               <PersonaBubble
                 message={turn.userMessage}
                 personaId={personaId}
+                personaName={personaName}
                 personaDimensions={personaDimensions}
               />
               <RecBotBubble
@@ -199,6 +202,7 @@ export function Trajectory({
             <PersonaBubble
               message={draft.userMessage}
               personaId={personaId}
+              personaName={personaName}
               personaDimensions={personaDimensions}
             />
             {draft.assistantMessage ? (
@@ -213,7 +217,11 @@ export function Trajectory({
               <GeneratingBubble appName={appName} />
             ) : null}
             {personaThinking && (
-              <PersonaThinkingBubble personaId={personaId} personaDimensions={personaDimensions} />
+              <PersonaThinkingBubble
+                personaId={personaId}
+                personaName={personaName}
+                personaDimensions={personaDimensions}
+              />
             )}
           </div>
         )}
@@ -259,9 +267,11 @@ export function Trajectory({
 /** Persona is composing the next message after the app replied. */
 function PersonaThinkingBubble({
   personaId,
+  personaName = null,
   personaDimensions = {},
 }: {
   personaId?: string | null;
+  personaName?: string | null;
   personaDimensions?: Record<string, string>;
 }) {
   return (
@@ -269,7 +279,7 @@ function PersonaThinkingBubble({
       <PersonaChatAvatar personaId={personaId} dimensions={personaDimensions} />
       <div className="flex min-w-0 flex-1 flex-col items-start">
         <div className="hud mb-1.5 flex items-center gap-2 text-[11px] text-text-dim">
-          <span>Persona · thinking</span>
+          <span>{personaName?.trim() || "Persona"} · thinking</span>
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
         </div>
         <div className="max-w-[70%] rounded-md rounded-tl-sm border border-outline bg-surface px-4 py-3">

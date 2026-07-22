@@ -194,8 +194,54 @@ text = text.replace(
     1,
 )
 agent.write_text(text)
+
+app_py = Path("app.py")
+app_text = app_py.read_text()
+health_marker = (
+    '@app.get("/health")\n'
+    "def health_check():\n"
+    '    """Health check endpoint for Docker health checks"""\n'
+    '    return {"status": "healthy"}\n'
+)
+ready_block = (
+    '@app.get("/health")\n'
+    "def health_check():\n"
+    '    """Health check endpoint for Docker health checks"""\n'
+    '    return {"status": "healthy"}\n'
+    "\n"
+    "_CAPABILITY_READY_OK = False\n"
+    "_CAPABILITY_READY_ERROR = None\n"
+    "\n"
+    '@app.get("/ready")\n'
+    "def ready_check():\n"
+    '    """Full capability readiness for chat/RAG/image paths."""\n'
+    "    global _CAPABILITY_READY_OK, _CAPABILITY_READY_ERROR\n"
+    "    if _CAPABILITY_READY_OK:\n"
+    '        return {"status": "ready"}\n'
+    "    if _CAPABILITY_READY_ERROR is not None:\n"
+    "        raise HTTPException(status_code=503, detail=_CAPABILITY_READY_ERROR)\n"
+    "    try:\n"
+    "        from agents.rag_agent.doc_parser import MedicalDocParser\n"
+    "        from agents.rag_agent.reranker import Reranker\n"
+    "        from agents.rag_agent.vectorstore_qdrant import VectorStore\n"
+    "\n"
+    "        _ = (MedicalDocParser, Reranker, VectorStore)\n"
+    "    except Exception as exc:\n"
+    '        _CAPABILITY_READY_ERROR = "capability check failed: {}".format(exc)\n'
+    "        raise HTTPException(\n"
+    "            status_code=503, detail=_CAPABILITY_READY_ERROR\n"
+    "        ) from exc\n"
+    "    _CAPABILITY_READY_OK = True\n"
+    '    return {"status": "ready"}\n'
+)
+if health_marker not in app_text:
+    raise SystemExit("medical ready patch failed: /health marker not found")
+app_py.write_text(app_text.replace(health_marker, ready_block, 1))
 PY
 
+# Keep the install list slim, but include MedicalRAG import-path deps
+# (agents/rag_agent → doc_parser/vectorstore/reranker). Pins match upstream
+# requirements.txt at MEDICAL_ASSISTANT_REF.
 RUN pip install --no-cache-dir \
     fastapi==0.115.11 \
     uvicorn==0.34.0 \
@@ -210,7 +256,18 @@ RUN pip install --no-cache-dir \
     Werkzeug==3.1.3 \
     pydub==0.25.1 \
     elevenlabs==1.54.0 \
-    Jinja2==3.1.6
+    Jinja2==3.1.6 \
+    docling==2.31.0 \
+    docling-core==2.28.1 \
+    docling-ibm-models==3.4.2 \
+    docling-parse==4.0.1 \
+    qdrant-client==1.13.3 \
+    langchain-qdrant==0.2.0 \
+    fastembed==0.6.1 \
+    sentence-transformers==3.4.1
+
+# Fail the image build if MedicalRAG's import path is still missing deps.
+RUN python -c "from agents.rag_agent.doc_parser import MedicalDocParser"
 
 RUN mkdir -p uploads/backend uploads/frontend uploads/skin_lesion_output uploads/speech data
 

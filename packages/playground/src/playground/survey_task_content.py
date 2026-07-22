@@ -13,6 +13,7 @@ from backend.service.survey_instruction_builder import (
     render_survey_task_instruction_markdown,
 )
 from backend.service.survey_types import SurveyInstrument, SurveyTaskContent
+from playground.survey_list_meta import read_survey_questionnaire_list_meta
 from playground.task_content_bundle import (
     content_dir_for_task_path,
     input_dir_for_task_path,
@@ -39,19 +40,48 @@ def is_example_survey_task_folder(folder: str) -> bool:
     return folder.startswith("example-survey_")
 
 
-def survey_questionnaire_id_for_task_folder(folder: str) -> str | None:
+def _default_repo_root() -> Path:
+    return Path(__file__).resolve().parents[4]
+
+
+def survey_questionnaire_id_for_task_folder(folder: str, *, repo_root: Path | None = None) -> str | None:
     for questionnaire_id, mapped_folder in _TASK_FOLDER_BY_QUESTIONNAIRE_ID.items():
         if mapped_folder == folder:
             return questionnaire_id
+    root = repo_root or _default_repo_root()
+    questionnaire_id, _ = read_survey_questionnaire_list_meta(root / "application" / "tasks" / folder)
+    return questionnaire_id
+
+
+def survey_task_folder_for_questionnaire_id(
+    questionnaire_id: str,
+    *,
+    repo_root: Path | None = None,
+) -> str | None:
+    mapped = _TASK_FOLDER_BY_QUESTIONNAIRE_ID.get(questionnaire_id)
+    if mapped:
+        return mapped
+    root = repo_root or _default_repo_root()
+    tasks_dir = root / "application" / "tasks"
+    if not tasks_dir.is_dir():
+        return None
+    for child in sorted(tasks_dir.iterdir()):
+        if not child.is_dir():
+            continue
+        if not (child.name.startswith("survey_") or child.name.startswith("example-survey_")):
+            continue
+        qid, _ = read_survey_questionnaire_list_meta(child)
+        if qid == questionnaire_id:
+            return child.name
     return None
 
 
-def survey_task_folder_for_questionnaire_id(questionnaire_id: str) -> str | None:
-    return _TASK_FOLDER_BY_QUESTIONNAIRE_ID.get(questionnaire_id)
-
-
-def survey_task_path_for_questionnaire_id(questionnaire_id: str) -> str | None:
-    folder = survey_task_folder_for_questionnaire_id(questionnaire_id)
+def survey_task_path_for_questionnaire_id(
+    questionnaire_id: str,
+    *,
+    repo_root: Path | None = None,
+) -> str | None:
+    folder = survey_task_folder_for_questionnaire_id(questionnaire_id, repo_root=repo_root)
     if not folder:
         return None
     return "application/tasks/{}".format(folder)
@@ -152,7 +182,7 @@ def load_survey_task_content_for_questionnaire_id(
     repo_root: Path,
     fallback_questionnaire: SurveyInstrument | None = None,
 ) -> SurveyTaskContent | None:
-    task_path = survey_task_path_for_questionnaire_id(questionnaire_id)
+    task_path = survey_task_path_for_questionnaire_id(questionnaire_id, repo_root=repo_root)
     if not task_path:
         return None
     return load_survey_task_content_for_task_path(

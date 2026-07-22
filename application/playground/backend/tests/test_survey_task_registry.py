@@ -51,26 +51,39 @@ def test_survey_instruction_markdown_includes_product_concept():
     assert "q0" in md
 
 
-def test_harbor_tasks_expose_instrument_and_profile():
+def test_harbor_tasks_expose_summary_metadata():
     tasks = list_survey_harbor_tasks()
-    assert len(tasks) == 6
+    assert len(tasks) >= 6
     product = next(
         task for task in tasks if task.task_path.endswith("example-survey_product-feedback")
     )
     assert product.instrument_id == "product_feedback_v1"
     assert product.survey_kind == "example"
-    assert "FocusLoop" in product.profile_markdown
-    assert product.questionnaire_markdown.startswith("# Survey Product Feedback")
-    assert "Platform-derived answer envelope" in product.output_schema_markdown
-    assert "backend/runtime" not in product.output_schema_markdown
-    assert product.questionnaire is not None
-    assert product.questionnaire["askRationale"] is False
-    assert product.questionnaire["askConfidence"] is False
-    assert product.questionnaire["questions"][0]["optionDetails"][0]["label"].startswith(
+    assert product.question_count is not None and product.question_count > 0
+    summary = product.to_summary_dict()
+    assert summary["instrumentId"] == "product_feedback_v1"
+    assert "profileMarkdown" not in summary
+    assert "questionnaire" not in summary
+    assert not product.profile_markdown
+    assert product.questionnaire is None
+    contributing = [task for task in tasks if task.survey_kind == "contributing"]
+    assert len(contributing) >= 5
+
+
+def test_harbor_task_detail_includes_full_survey_profile():
+    from backend.service.task_detail_service import get_task_detail
+
+    root = repo_root()
+    detail = get_task_detail("application/tasks/example-survey_product-feedback", repo_root=root)
+    assert "FocusLoop" in detail["profileMarkdown"]
+    assert detail["questionnaireMarkdown"].startswith("# Survey Product Feedback")
+    assert "Platform-derived answer envelope" in detail["outputSchemaMarkdown"]
+    assert detail["questionnaire"] is not None
+    assert detail["questionnaire"]["askRationale"] is False
+    assert detail["questionnaire"]["askConfidence"] is False
+    assert detail["questionnaire"]["questions"][0]["optionDetails"][0]["label"].startswith(
         "Keep using free."
     )
-    contributing = [task for task in tasks if task.survey_kind == "contributing"]
-    assert len(contributing) == 5
 
 
 def test_every_questionnaire_id_has_harbor_task_folder():

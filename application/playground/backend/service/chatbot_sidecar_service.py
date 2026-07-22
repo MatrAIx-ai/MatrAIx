@@ -84,6 +84,17 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
         legacy_env=None,
         probe="tcp",
     ),
+    "meal_planning_nutrition": SidecarSpec(
+        application_id="meal_planning_nutrition",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_meal-plan-api"
+        ),
+        service_name="meal-plan-api",
+        build_context="meal-plan-api",
+        host_port=8905,
+        primary_env="CHATBOT_API_URL",
+        legacy_env=None,
+    ),
 }
 
 
@@ -118,7 +129,7 @@ def sidecar_port_reachable(host: str, port: int, *, timeout: float = 1.5) -> boo
         return False
 
 
-def _sidecar_probe_ok(spec: SidecarSpec, health_url: str, *, timeout: float = 1.5) -> bool:
+def _sidecar_probe_ok(spec: SidecarSpec, health_url: str, *, timeout: float = 5.0) -> bool:
     if spec.probe == "tcp":
         return sidecar_port_reachable("127.0.0.1", spec.host_port, timeout=timeout)
     return sidecar_reachable(health_url, timeout=timeout)
@@ -131,15 +142,22 @@ def _wait_for_sidecar_probe(
     timeout_sec: float = 30.0,
 ) -> bool:
     deadline = time.monotonic() + timeout_sec
+    # Medical /ready may cold-import heavy RAG deps on first call.
+    probe_timeout = 10.0 if spec.application_id == "medical_assistant" else 5.0
     while time.monotonic() < deadline:
-        if _sidecar_probe_ok(spec, health_url, timeout=2.0):
+        if _sidecar_probe_ok(spec, health_url, timeout=probe_timeout):
             return True
         time.sleep(0.5)
     return False
 
 
-def sidecar_reachable(base_url: str, *, timeout: float = 1.5) -> bool:
-    url = "{}/health".format(base_url.rstrip("/"))
+def sidecar_reachable(base_url: str, *, timeout: float = 5.0) -> bool:
+    """True when the sidecar answers ``GET /ready`` with 2xx (full capability ready).
+
+    Prefer ``/ready`` over ``/health`` so Playground "Service up" means the chatbot
+    can exercise its declared paths, not merely that the process is listening.
+    """
+    url = "{}/ready".format(base_url.rstrip("/"))
     try:
         request = urllib.request.Request(url, method="GET")
         with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -167,12 +185,18 @@ def _standalone_compose_path(spec: SidecarSpec, compose_dir: Path) -> Path:
     )
 
 
+def sidecar_can_start(application_id: str) -> bool:
+    spec = _SIDECAR_SPECS.get(application_id)
+    return bool(spec and spec.compose_dir and spec.service_name and spec.build_context)
+
+
 def sidecar_status(application_id: str, *, repo_root: Path | None = None) -> dict[str, Any]:
     spec = _SIDECAR_SPECS.get(application_id)
     if spec is None:
         raise ValueError("unknown chatbot application: {}".format(application_id))
     health_url = resolve_health_url(application_id)
-    ok = _sidecar_probe_ok(spec, health_url)
+    probe_timeout = 10.0 if application_id == "medical_assistant" else 5.0
+    ok = _sidecar_probe_ok(spec, health_url, timeout=probe_timeout)
     can_start = bool(spec.compose_dir and spec.service_name and spec.build_context)
     service_label = "MCP server" if spec.probe == "tcp" else "Chat API"
     return {
@@ -181,15 +205,15 @@ def sidecar_status(application_id: str, *, repo_root: Path | None = None) -> dic
         "healthUrl": health_url,
         "canStart": can_start,
         "detail": (
-            "{} reachable at {}.".format(service_label, health_url)
+            "{} ready at {}.".format(service_label, health_url)
             if ok
             else (
-                "{} not reachable at {}. Start the local sidecar to run this task.".format(
+                "{} not ready at {}. Start the local sidecar to run this task.".format(
                     service_label,
                     health_url,
                 )
                 if can_start
-                else "{} not reachable at {}. Configure the upstream endpoint for this task.".format(
+                else "{} not ready at {}. Configure the upstream endpoint for this task.".format(
                     service_label,
                     health_url,
                 )
@@ -253,7 +277,8 @@ def start_sidecar(application_id: str, *, repo_root: Path | None = None) -> dict
     if not ok:
         service_label = "MCP server" if spec.probe == "tcp" else "sidecar"
         status["detail"] = (
-            "{} started but is not ready yet at {}. Retry in a few seconds.".format(
+            "{} started but capability readiness failed at {}. "
+            "Check sidecar logs, then retry.".format(
                 service_label.capitalize(),
                 health_url,
             )

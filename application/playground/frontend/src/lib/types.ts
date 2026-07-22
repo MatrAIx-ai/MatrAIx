@@ -161,6 +161,24 @@ export interface PlaygroundQuestionnaire {
   [key: string]: string | number | boolean | null | undefined;
 }
 
+/** Task-owned ``input/self_report_schema.yaml`` field (debrief / UI). */
+export interface SelfReportSchemaField {
+  key: string;
+  prompt: string;
+  kind: string;
+  required?: boolean;
+  minimum?: number | null;
+  maximum?: number | null;
+  choices?: string[];
+  explains?: string | null;
+}
+
+export interface SelfReportSchema {
+  artifactName?: string;
+  instructions?: string;
+  fields: SelfReportSchemaField[];
+}
+
 export interface UserFeedbackArtifact {
   [key: string]: string | number | boolean | null | undefined;
 }
@@ -271,6 +289,7 @@ export interface SurveyHarborTask {
   description: string;
   taskPath: string;
   instrumentId: string;
+  questionCount?: number;
   profileMarkdown?: string;
   instructionMarkdown?: string;
   contextMarkdown?: string;
@@ -523,7 +542,7 @@ export interface HarborJobSummary {
   applicationType?: string | null;
   /** Display title derived from ``task.toml`` ``[task].name``. */
   taskTitle?: string | null;
-  /** Full Harbor task name, e.g. ``application/chat-recai``. */
+  /** Full Harbor task name, e.g. ``application/recai``. */
   taskName?: string | null;
   domain?: string | null;
   difficulty?: string | null;
@@ -585,6 +604,25 @@ export interface HarborJobLiveResponse {
   trialCount: number;
   completedTrials: number;
   trials: HarborJobLiveTrial[];
+}
+
+/** Coarse trial status codes for the incremental cohort status feed. */
+export type HarborStatusCode = 0 | 1 | 2 | 3; // pending | running | done | error
+
+export interface HarborJobStatusResponse {
+  jobName: string;
+  launchStatus?: string | null;
+  version: number;
+  trialCount: number;
+  counts: { pending: number; running: number; done: number; error: number };
+  full: boolean;
+  /** Present when `full` — the complete positional snapshot. */
+  statuses?: HarborStatusCode[];
+  trialNames?: string[];
+  personaIds?: (string | null)[];
+  personaNames?: (string | null)[];
+  /** Present when `!full` — `[index, code]` deltas since the requested version. */
+  changes?: [number, HarborStatusCode][];
 }
 
 export interface HarborLaunchView {
@@ -676,6 +714,28 @@ export interface JobAggregationCrossFacetView {
   buckets?: JobAggregationCrossFacetViewBucket[];
 }
 
+export interface JobAggregationPersonaDistributionBucket {
+  /** Persona segment value (e.g. a life_stage or age_bracket). */
+  bucket: string;
+  count: number;
+  numerical?: JobAggregationNumerical | null;
+  categorical?: JobAggregationCategorical | null;
+}
+
+export interface JobAggregationPersonaDistribution {
+  id: string;
+  facetKey: string;
+  facetLabel: string;
+  kind: "numerical" | "categorical" | string;
+  groupByPersonaDimension: string;
+  groupByLabel: string;
+  lens?: string | null;
+  total: number;
+  /** Stable category column order (categorical only). */
+  categories?: string[] | null;
+  buckets: JobAggregationPersonaDistributionBucket[];
+}
+
 export interface JobAggregationSummaryBucket {
   bucket: string;
   count: number;
@@ -689,9 +749,15 @@ export interface JobAggregationSummary {
   title: string;
   targetFacetKey: string;
   groupByFacetKey?: string | null;
+  groupByPersonaDimension?: string | null;
+  groupByLabel?: string | null;
   groupByMode?: string | null;
+  /** Which analysis tab: "general" (auto), "task" (SUT), or "persona" (customer insight). */
+  lens?: string | null;
   summaryKind?: string | null;
   instruction?: string | null;
+  /** True for auto-synthesized reason summaries (Common), false/absent for reporting.json ones (Custom). */
+  auto?: boolean | null;
   status?: string | null;
   error?: string | null;
   overall?: JobAggregationTextual | null;
@@ -705,12 +771,23 @@ export interface JobAggregationJudgeSignal {
   description?: string | null;
 }
 
+export interface JobAggregationJudgeSignalStat {
+  key: string;
+  label: string;
+  /** How many scanned samples exhibit this signal. */
+  present: number;
+  /** Total scanned samples in scope (overall, or the group for a bucket). */
+  total: number;
+  examples?: string[] | null;
+}
+
 export interface JobAggregationJudgeBucket {
   bucket: string;
   count: number;
   samples: string[];
   assessment?: string | null;
   signals?: JobAggregationJudgeSignalResult[] | null;
+  signalStats?: JobAggregationJudgeSignalStat[] | null;
 }
 
 export interface JobAggregationJudgeSignalResult {
@@ -724,11 +801,19 @@ export interface JobAggregationJudge {
   title: string;
   targetFacetKey: string;
   groupByFacetKey?: string | null;
+  groupByPersonaDimension?: string | null;
+  groupByLabel?: string | null;
   groupByMode?: string | null;
+  /** Which analysis tab: "task" (SUT) or "persona" (customer insight). */
+  lens?: string | null;
   judgeKind?: string | null;
   prompt?: string | null;
   rubric?: unknown;
   signals: JobAggregationJudgeSignal[];
+  /** Per-signal prevalence across all scanned samples (primary view). */
+  signalStats?: JobAggregationJudgeSignalStat[] | null;
+  /** Total scanned samples backing signalStats. */
+  total?: number | null;
   status?: string | null;
   error?: string | null;
   overall?: {
@@ -773,6 +858,16 @@ export interface HarborJobAggregationContext {
   facets: JobAggregationField[];
   summaries?: JobAggregationSummary[];
   judges?: JobAggregationJudge[];
+  /** Default persona-insight lens: signals cross-tabbed by persona segment. */
+  personaDistributions?: JobAggregationPersonaDistribution[];
+  /**
+   * Cohort-level single facets for Persona insights (no persona cross).
+   * Authors declare these with ``groupByPersonaDimensions: []`` / ``standalone: true``
+   * (capped at 2 per context).
+   */
+  personaStandaloneFacets?: JobAggregationField[];
+  /** Every eligible facet × persona-dimension pairing, for the interactive explorer. */
+  personaDistributionOptions?: JobAggregationPersonaDistribution[];
   crossFacetViews?: JobAggregationCrossFacetView[];
   /** @deprecated Renamed to `crossFacetViews`. Kept for older aggregation artifacts. */
   relationships?: JobAggregationCrossFacetView[];
@@ -805,6 +900,7 @@ export interface HarborJobDetail {
   result?: Record<string, unknown> | null;
   trials: HarborTrialView[];
   launch?: HarborLaunchView | null;
+  /** @deprecated Prefer GET …/aggregation; job detail no longer embeds the full report. */
   aggregation?: HarborJobAggregation | null;
 }
 

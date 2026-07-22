@@ -1,8 +1,8 @@
 version = "1.0"
-artifacts = [ "/tmp/os-app-macos-stocks-mu-sentiment",]
+artifacts = [ "/app/output",]
 
 [task]
-name = "application/os-app-macos-stocks-mu-sentiment"
+name = "application/stocks-mu-sentiment"
 
 [metadata]
 difficulty = "medium"
@@ -35,7 +35,7 @@ gpus = 0
 
 [environment.healthcheck]
 command = """
-mkdir -p /tmp/os-app-macos-stocks-mu-sentiment
+mkdir -p /app/output
 mkdir -p /tmp/harbor/verifier 2>/dev/null; chmod 777 /tmp/harbor/verifier 2>/dev/null || true
 osascript <<'APPLESCRIPT'
 tell application "Stocks" to activate

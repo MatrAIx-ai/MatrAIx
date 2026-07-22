@@ -7,8 +7,10 @@ export interface UrlState {
   view: string | null;
   harborJob: string | null;
   harborTrial: string | null;
-  /** Playground task tab (chatbot | survey | web | cua). */
+  /** Playground task tab (chatbot | survey | web | os-app). */
   pgTask: string | null;
+  /** Deep-link task id from Task Gallery into Playground selection. */
+  pgTaskId: string | null;
   /** Active single-run Harbor job in the cockpit (not the Runs sub-view). */
   cockpitJob: string | null;
   cockpitTrial: string | null;
@@ -24,6 +26,7 @@ const KEYS = [
   "harborJob",
   "harborTrial",
   "pgTask",
+  "pgTaskId",
   "cockpitJob",
   "cockpitTrial",
   "cockpitBatch",

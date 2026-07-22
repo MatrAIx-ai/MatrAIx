@@ -84,6 +84,12 @@ Every PR should include:
 - Test or validation commands that were run.
 - Any generated data policy decision, especially for large files.
 
+**Application task PRs** that add or materially change a scenario under
+`application/tasks/` should attach the **Playground UI** batch report PDF
+(Runs → **Download PDF** on the persona-task batch report). Do not substitute
+the server text `report.pdf` API export. Details:
+[application/tasks/README.md — PR batch evidence](application/tasks/README.md#pr-batch-evidence-required).
+
 ## What not to merge
 
 Do not merge raw migration snapshot directories such as `MatrAIx/`,

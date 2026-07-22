@@ -1,9 +1,13 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { useVirtualizer } from "@tanstack/react-virtual";
 
 import type { ConfigOptionValue } from "@/lib/types";
+import { isPinnedTask, recordRecentTaskSelection, togglePinnedTask } from "@/lib/cockpitTaskRailStorage";
+import { domainOptionsForTaskCards, orderTaskCards } from "@/lib/taskRailOrdering";
 import { FOCUS_RING, Sym } from "../cockpitShared";
-import { USE_COMPUTER_URL, cuaRuntimeSelectOptions, webPersonaAgentSelectOptions } from "@/lib/personaAgentCatalog";
+import { USE_COMPUTER_URL, cuaRuntimeSelectOptions } from "@/lib/personaAgentCatalog";
 import { CockpitSelect } from "./CockpitSelect";
+import { WebAgentSettings } from "./WebAgentSettings";
 import type { PlaygroundTaskType } from "../TaskTypeSwitch";
 import { CockpitRailHeader } from "./CockpitRailHeader";
 import { CockpitToggle } from "./CockpitToggle";
@@ -85,6 +89,20 @@ function transportLabel(transport?: ChatTransport): string {
   return "—";
 }
 
+const VIRTUALIZE_THRESHOLD = 30;
+const ESTIMATED_CARD_HEIGHT = 132;
+
+/** Sentinel for the "no domain filter" dropdown entry. */
+const ALL_DOMAINS = "__all__";
+
+function formatDomainLabel(domain: string): string {
+  return domain
+    .split(/[-_/]/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
 export function TaskSelectionRail({
   taskType,
   chatTasks,
@@ -112,6 +130,9 @@ export function TaskSelectionRail({
   const [settingsOpen, setSettingsOpen] = useState<string | null>(null);
   const [detailCard, setDetailCard] = useState<TaskCardModel | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [domainFilter, setDomainFilter] = useState<string | null>(null);
+  const [pinRevision, setPinRevision] = useState(0);
+  const listRef = useRef<HTMLDivElement>(null);
 
   const cards =
     taskType === "chatbot"
@@ -124,7 +145,25 @@ export function TaskSelectionRail({
             ? cuaTasks
             : [];
 
-  const filteredCards = useMemo(() => {
+  const domainOptions = useMemo(() => domainOptionsForTaskCards(cards), [cards]);
+
+  // Domains can grow without bound, so they live in a dropdown, not a chip row.
+  const domainSelectOptions = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const card of cards) {
+      const domain = (card.domain ?? "").trim().toLowerCase();
+      if (domain) counts.set(domain, (counts.get(domain) ?? 0) + 1);
+    }
+    return [
+      { value: ALL_DOMAINS, label: `All domains · ${cards.length}` },
+      ...domainOptions.map((domain) => ({
+        value: domain,
+        label: `${formatDomainLabel(domain)} · ${counts.get(domain) ?? 0}`,
+      })),
+    ];
+  }, [cards, domainOptions]);
+
+  const searchFilteredCards = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
     if (!query) return cards;
     return cards.filter((card) => {
@@ -132,6 +171,7 @@ export function TaskSelectionRail({
         card.id,
         card.title,
         card.subtitle ?? "",
+        card.domain ?? "",
         ...(card.tags?.map((tag) => tag.label) ?? []),
         ...(card.searchTags ?? []),
         card.statusLabel ?? "",
@@ -142,69 +182,60 @@ export function TaskSelectionRail({
     });
   }, [cards, searchQuery]);
 
-  return (
-    <aside className="glass-panel glass-panel-rail relative flex h-full min-h-0 flex-col rounded-xl p-4">
-      <CockpitRailHeader label="Task" />
+  const filteredCards = useMemo(
+    () => orderTaskCards(searchFilteredCards, taskType, domainFilter),
+    [searchFilteredCards, taskType, domainFilter, pinRevision],
+  );
 
-      <label className="mb-2.5 flex flex-col gap-1">
-        <span className="sr-only">Search tasks</span>
-        <div className="relative">
-          <Sym
-            name="search"
-            size={16}
-            className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-text-dim"
-          />
-          <input
-            type="search"
-            value={searchQuery}
+  const useVirtualList = filteredCards.length > VIRTUALIZE_THRESHOLD && settingsOpen === null;
+  const virtualizer = useVirtualizer({
+    count: useVirtualList ? filteredCards.length : 0,
+    getScrollElement: () => listRef.current,
+    estimateSize: () => ESTIMATED_CARD_HEIGHT,
+    overscan: 8,
+  });
+
+  const handleSelectTask = useCallback(
+    (card: TaskCardModel) => {
+      recordRecentTaskSelection(taskType, card.id);
+      onSelectTask(card);
+    },
+    [onSelectTask, taskType],
+  );
+
+  const handleTogglePin = useCallback(
+    (taskId: string) => {
+      togglePinnedTask(taskType, taskId);
+      setPinRevision((value) => value + 1);
+    },
+    [taskType],
+  );
+
+  const renderTaskCard = (card: TaskCardModel) => {
+    const selected = selectedTaskId === card.id;
+    const settingsId = settingsOpen === card.id;
+    const unavailable = card.available === false;
+    const pinned = isPinnedTask(taskType, card.id);
+    return (
+      <div
+        className={`rounded-lg border border-transparent transition ${
+          selected
+            ? "persona-card--selected"
+            : unavailable
+              ? "glass-tile glass-tile--dim opacity-75"
+              : "glass-tile glass-tile--hover"
+        }`}
+      >
+        <div className="flex items-start gap-3 p-3">
+          <button
+            type="button"
             disabled={disabled}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Filter by name, description, or tag…"
-            className="h-9 w-full rounded-lg border border-outline/50 bg-surface/60 pl-9 pr-2.5 text-[14px] text-text-main placeholder:text-text-dim"
-          />
-        </div>
-      </label>
-
-      {tasksLoading && (
-        <p className="mb-2 text-[13px] text-text-dim">Loading tasks…</p>
-      )}
-      {tasksError && (
-        <p className="mb-2 text-[13px] text-danger">{tasksError}</p>
-      )}
-
-      <div className="custom-scrollbar min-h-0 flex-1 space-y-2.5 overflow-y-auto pr-0.5">
-        {filteredCards.length === 0 && !tasksLoading && (
-          <p className="rounded-lg border border-outline/35 bg-surface/25 px-3 py-4 text-center text-[13px] text-text-dim">
-            {searchQuery.trim() ? "No tasks match your search." : "No tasks available."}
-          </p>
-        )}
-        {filteredCards.map((card) => {
-          const selected = selectedTaskId === card.id;
-          const settingsId = settingsOpen === card.id;
-          const unavailable = card.available === false;
-          return (
-            <div
-              key={card.id}
-              className={`rounded-lg border transition ${
-                selected
-                  ? "border-primary/55 bg-primary/10 shadow-[0_0_0_1px_rgb(var(--primary)/0.2)]"
-                  : unavailable
-                    ? "border-outline/35 bg-surface/20 opacity-75"
-                    : "border-outline/40 bg-surface/30 hover:border-primary/25"
-              }`}
-            >
-              <div className="flex items-start gap-3 p-3">
-                <button
-                  type="button"
-                  disabled={disabled}
-                  onClick={() => onSelectTask(card)}
-                  className={`flex min-w-0 flex-1 items-start gap-3 text-left ${FOCUS_RING}`}
-                >
+            onClick={() => handleSelectTask(card)}
+            className={`flex min-w-0 flex-1 items-start gap-3 text-left ${FOCUS_RING}`}
+          >
                   <div
-                    className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg border ${
-                      selected
-                        ? "border-primary/45 bg-primary/15"
-                        : "border-outline/40 bg-surface-high/60"
+                    className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg ${
+                      selected ? "bg-primary/15" : "bg-surface-high/60"
                     }`}
                   >
                     <Sym
@@ -229,9 +260,9 @@ export function TaskSelectionRail({
                         </ToneChip>
                       )}
                       {(card.tags ??
-                        (card.tagLabels?.map((label) => ({ label, tone: "secondary" as ToneChipTone })) ??
+                        (card.tagLabels?.map((label) => ({ label, tone: "neutral" as ToneChipTone })) ??
                           (card.statusLabel
-                            ? [{ label: card.statusLabel, tone: "secondary" as ToneChipTone }]
+                            ? [{ label: card.statusLabel, tone: "neutral" as ToneChipTone }]
                             : []))).map((tag) => (
                         <ToneChip
                           key={tag.label}
@@ -244,6 +275,14 @@ export function TaskSelectionRail({
                       ))}
                     </div>
                   </div>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleTogglePin(card.id)}
+                  className={`shrink-0 rounded-md p-1.5 ${pinned ? "text-primary" : "text-text-dim hover:bg-surface-high hover:text-primary"} ${FOCUS_RING}`}
+                  aria-label={pinned ? `Unpin ${card.title}` : `Pin ${card.title}`}
+                >
+                  <Sym name={pinned ? "keep" : "keep_off"} size={16} />
                 </button>
                 <button
                   type="button"
@@ -276,12 +315,11 @@ export function TaskSelectionRail({
               </div>
               {settingsId && taskType === "web" && resolveWebPersonaAgent && onWebPersonaAgentChange && (
                 <div className="border-t border-outline/30 px-3 py-3">
-                  <CockpitSelect
-                    label="Agent capability"
-                    value={resolveWebPersonaAgent(card.id)}
-                    options={webPersonaAgentSelectOptions()}
+                  <WebAgentSettings
+                    taskId={card.id}
+                    agentId={resolveWebPersonaAgent(card.id)}
                     disabled={disabled}
-                    onChange={(agentId) => onWebPersonaAgentChange(card.id, agentId)}
+                    onAgentChange={onWebPersonaAgentChange}
                   />
                 </div>
               )}
@@ -327,8 +365,8 @@ export function TaskSelectionRail({
                         serviceUp
                           ? card.statusDetail ??
                             (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
-                              ? "MCP server is reachable."
-                              : "Chat API is reachable.")
+                              ? "MCP server is ready."
+                              : "Chat API is ready (capability check passed).")
                           : canStart
                             ? card.transport === "mcp_sidecar" || card.transport === "mcp_external"
                               ? "Start local MCP sidecar."
@@ -339,15 +377,15 @@ export function TaskSelectionRail({
                       }
                     />
                   ) : (
-                    <div className="rounded-md border border-outline/35 bg-surface/30 px-3 py-2">
+                    <div className="glass-tile glass-tile--dim rounded-md px-3 py-2">
                       <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-text-dim">
                         Connection
                       </p>
                       <p className="mt-1 text-[13px] leading-relaxed text-text-variant">
                         {card.statusDetail ??
                           (card.transport === "mcp_sidecar" || card.transport === "mcp_external"
-                            ? "MCP-backed task; no local HTTP health toggle is available."
-                            : "No HTTP health check is configured for this task.")}
+                            ? "MCP-backed task; no local HTTP readiness toggle is available."
+                            : "No HTTP readiness check is configured for this task.")}
                       </p>
                     </div>
                   )}
@@ -363,7 +401,7 @@ export function TaskSelectionRail({
                         {card.capabilities!.map((cap) => (
                           <span
                             key={cap.id}
-                            className="rounded border border-outline/40 bg-surface/40 px-2 py-0.5 text-[12px] text-text-variant"
+                            className="glass-tile rounded px-2 py-0.5 text-[12px] text-text-variant"
                             title={cap.kind === "exposure" ? "Visible in replies" : "UserSim tool"}
                           >
                             {cap.label}
@@ -378,7 +416,7 @@ export function TaskSelectionRail({
                       value={engine}
                       disabled={disabled}
                       onChange={(e) => onEngineChange(e.target.value)}
-                      className="h-8 rounded-md border border-outline/50 bg-surface/60 px-2 text-[14px] font-medium text-text-main"
+                      className="glass-tile h-8 rounded-md px-2 text-[14px] font-medium text-text-main"
                     >
                       {engineOptions.map((opt) => (
                         <option key={opt.value} value={opt.value}>
@@ -411,7 +449,7 @@ export function TaskSelectionRail({
                           const next = e.currentTarget.valueAsNumber;
                           if (Number.isFinite(next) && next >= 1) onMaxTurnsChange(next);
                         }}
-                        className="h-8 rounded-md border border-outline/50 bg-surface/60 px-2 text-[14px] font-medium text-text-main"
+                        className="glass-tile h-8 rounded-md px-2 text-[14px] font-medium text-text-main"
                       />
                     </label>
                   )}
@@ -419,8 +457,82 @@ export function TaskSelectionRail({
                 );
               })()}
             </div>
-          );
-        })}
+    );
+  };
+
+  return (
+    <aside className="glass-panel glass-panel-rail relative flex h-full min-h-0 flex-col rounded-xl p-4">
+      <CockpitRailHeader label="Task" />
+
+      <label className="mb-2.5 flex flex-col gap-1">
+        <span className="sr-only">Search tasks</span>
+        <div className="relative">
+          <Sym
+            name="search"
+            size={16}
+            className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-text-dim"
+          />
+          <input
+            type="search"
+            value={searchQuery}
+            disabled={disabled}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Filter by name, description, or tag…"
+            className="glass-tile h-9 w-full rounded-lg pl-9 pr-2.5 text-[14px] text-text-main placeholder:text-text-dim"
+          />
+        </div>
+      </label>
+
+      {domainOptions.length > 1 && (
+        <div className="mb-2.5">
+          <CockpitSelect
+            label="Domain"
+            inlineLabel
+            value={domainFilter ?? ALL_DOMAINS}
+            options={domainSelectOptions}
+            disabled={disabled}
+            onChange={(next) => setDomainFilter(next === ALL_DOMAINS ? null : next)}
+          />
+        </div>
+      )}
+
+      {tasksLoading && (
+        <p className="mb-2 text-[13px] text-text-dim">Loading tasks…</p>
+      )}
+      {tasksError && (
+        <p className="mb-2 text-[13px] text-danger">{tasksError}</p>
+      )}
+
+      <div ref={listRef} className="custom-scrollbar min-h-0 flex-1 overflow-y-auto pr-0.5">
+        {filteredCards.length === 0 && !tasksLoading && (
+          <p className="glass-tile glass-tile--dim rounded-lg px-3 py-4 text-center text-[13px] text-text-dim">
+            {searchQuery.trim() || domainFilter ? "No tasks match your filters." : "No tasks available."}
+          </p>
+        )}
+        {useVirtualList ? (
+          <div
+            className="relative w-full"
+            style={{ height: `${virtualizer.getTotalSize()}px` }}
+          >
+            {virtualizer.getVirtualItems().map((virtualRow) => {
+              const card = filteredCards[virtualRow.index];
+              if (!card) return null;
+              return (
+                <div
+                  key={card.id}
+                  className="absolute left-0 top-0 w-full pb-2.5"
+                  style={{ transform: `translateY(${virtualRow.start}px)` }}
+                >
+                  {renderTaskCard(card)}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="space-y-2.5">
+            {filteredCards.map((card) => renderTaskCard(card))}
+          </div>
+        )}
       </div>
 
       <TaskDetailModal

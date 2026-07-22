@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 from pathlib import Path
 
 from harbor.models.task.paths import TaskPaths
@@ -18,7 +19,7 @@ def test_example_survey_task_metadata_is_clean() -> None:
     task_text = (EXAMPLE_SURVEY / "task.toml").read_text(encoding="utf-8")
     task = tomllib.loads(task_text)
 
-    assert task["task"]["name"] == "application/survey-product-feedback"
+    assert task["task"]["name"] == "application/product-feedback"
     assert task["metadata"]["type"] == "survey"
     assert "matraix/" not in task_text.lower()
 
@@ -62,16 +63,21 @@ def test_example_survey_verifier_accepts_minimal_valid_result(tmp_path: Path) ->
     assert spec.loader is not None
     spec.loader.exec_module(module)
 
+    verifier_dir = tmp_path / "verifier"
+    verifier_dir.mkdir()
+    os.environ["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
     module.OUTPUT_DIR = output_dir
     module.RESULT_PATH = output_dir / "survey_result.json"
     assert module.main() == 0
+    payload = json.loads((verifier_dir / "structured_output.json").read_text(encoding="utf-8"))
+    assert payload["sourceArtifacts"]["surveyResult"] == "/app/output/survey_result.json"
 
 
 def test_recommender_chat_task_metadata_is_clean() -> None:
     task_text = (RECOMMENDER_CHAT / "task.toml").read_text(encoding="utf-8")
     task = tomllib.loads(task_text)
 
-    assert task["task"]["name"] == "application/chat-recai"
+    assert task["task"]["name"] == "application/recai"
     assert task["metadata"]["type"] == "chatbot"
     assert task["metadata"]["domain"] == "commerce-retail"
     assert "matraix/" not in task_text.lower()
@@ -127,10 +133,15 @@ def test_recommender_chat_verifier_accepts_minimal_valid_result(tmp_path: Path) 
     assert spec.loader is not None
     spec.loader.exec_module(module)
 
+    verifier_dir = tmp_path / "verifier"
+    verifier_dir.mkdir()
+    os.environ["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
     module.OUTPUT_DIR = output_dir
     module.TRANSCRIPT_PATH = output_dir / "transcript.json"
     module.FEEDBACK_PATH = output_dir / "user_feedback.json"
     assert module.main() == 0
+    payload = json.loads((verifier_dir / "structured_output.json").read_text(encoding="utf-8"))
+    assert payload["sourceArtifacts"]["transcript"] == "/app/output/transcript.json"
 
 
 def test_recommender_chat_sidecar_contract() -> None:

@@ -5,11 +5,10 @@
 import type { ReactNode } from "react";
 
 import { PersonaBubble, RecBotBubble } from "./cockpit/TurnBubble";
-import { SCORE_BAND_CLASS, humanizeToken, scoreBand } from "./cockpit/cockpitShared";
+import { humanizeToken } from "./cockpit/cockpitShared";
 import {
   StatTile,
   appName,
-  bandBorderL,
   type RunConfig,
   type RunDetailView,
   type RunPersona,
@@ -18,6 +17,8 @@ import {
 import type { TurnView } from "@/lib/types";
 import type { PlaygroundQuestionnaire } from "@/lib/types";
 import type { TrialEvaluationArtifact, TrialEvaluationContext } from "@/lib/types";
+import type { SelfReportSchema, UserFeedbackArtifact } from "@/lib/types";
+import { SchemaSelfReportPanel } from "./SchemaSelfReportPanel";
 
 export type ChatTrialVerifier = NonNullable<RunDetailView["verifier"]>;
 
@@ -26,21 +27,20 @@ export interface ChatTrialDebriefBodyProps {
   transcript: RunTranscriptTurn[];
   persona?: RunPersona | null;
   questionnaire?: PlaygroundQuestionnaire | null;
+  userFeedback?: UserFeedbackArtifact | null;
+  selfReportSchema?: SelfReportSchema | null;
   metricScores?: RunDetailView["metricScores"];
   verifier?: ChatTrialVerifier | null;
   trialEvaluation?: TrialEvaluationArtifact | null;
+  /** Task title — the SUT label when `config.applicationId` is unknown. */
+  taskTitle?: string | null;
   /** When false, hide section headings (embedded in batch monitor). */
   showSectionHeadings?: boolean;
 }
 
-function clamp(value: number, max: number): number {
-  if (Number.isNaN(value)) return 0;
-  return Math.max(0, Math.min(max, value));
-}
-
 function DashedNote({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-md border border-dashed border-outline bg-surface-low px-4 py-8 text-center text-[15px] text-text-variant">
+    <div className="rounded-md glass-tile glass-tile--dim px-4 py-8 text-center text-[15px] text-text-variant">
       {children}
     </div>
   );
@@ -106,17 +106,17 @@ function SummarySignalCard({
   detail?: string | null;
 }) {
   return (
-    <div className="rounded-md border border-outline/40 bg-surface p-4">
+    <div className="rounded-md glass-panel p-4">
       <div className="flex items-center justify-between gap-2">
         <span className="hud text-[11px] text-text-dim">{title}</span>
         {eyebrow ? (
-          <span className="inline-flex items-center rounded border border-outline/40 bg-surface-high px-2 py-0.5 text-[12px] text-text-variant">
+          <span className="inline-flex items-center glass-tile rounded px-2 py-0.5 text-[12px] text-text-variant">
             {eyebrow}
           </span>
         ) : null}
       </div>
       <div className="mt-2 text-[20px] font-semibold leading-tight text-text-main">{value}</div>
-      {detail ? <p className="mt-2 text-[13px] leading-relaxed text-text-variant">{detail}</p> : null}
+      {detail ? <p className="mt-2 text-[14px] leading-relaxed text-text-variant">{detail}</p> : null}
     </div>
   );
 }
@@ -147,10 +147,10 @@ function ChatContractSummary({
   const feedbackReason = previewText(facetText(feedback, "feedback_reason"), 140);
 
   return (
-    <div className="space-y-3 rounded-md border border-outline bg-surface-low p-4">
+    <div className="space-y-3 glass-tile rounded-md p-4">
       <div className="space-y-1">
         <SubsectionHeading>Trial summary</SubsectionHeading>
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Chat-specific signals from this trial: outcome, how the conversation unfolded, and the
           persona&apos;s post-chat rating.
         </p>
@@ -189,51 +189,130 @@ function ChatContractSummary({
   );
 }
 
+const _DEFAULT_FEEDBACK_KEYS = new Set([
+  "needConstraintSatisfaction",
+  "personalPreferenceSatisfaction",
+  "overallExperienceRating",
+  "reason",
+  "askedUsefulClarificationQuestions",
+  "clarifyingNotes",
+  "trustLevel",
+  "feltUnderstood",
+]);
+
+function inferSchemaFromFeedback(feedback: UserFeedbackArtifact): SelfReportSchema {
+  const fields: SelfReportSchema["fields"] = [];
+  for (const [key, value] of Object.entries(feedback)) {
+    if (value === null || value === undefined || value === "") continue;
+    let kind = "string";
+    let minimum: number | null = null;
+    let maximum: number | null = null;
+    if (typeof value === "boolean") kind = "boolean";
+    else if (typeof value === "number") {
+      kind = "integer";
+      if (key === "overallExperienceRating" || /rating|score/i.test(key)) {
+        minimum = 1;
+        maximum = 10;
+      }
+    } else if (
+      typeof value === "string" &&
+      ["yes", "no", "partially", "unsure", "true", "false"].includes(value.trim().toLowerCase())
+    ) {
+      kind = "enum";
+    }
+    fields.push({
+      key,
+      prompt: humanizeToken(key),
+      kind,
+      minimum,
+      maximum,
+      explains:
+        key === "reason"
+          ? "overallExperienceRating"
+          : key === "clarifyingNotes"
+            ? "askedUsefulClarificationQuestions"
+            : null,
+    });
+  }
+  const rank = (key: string) => {
+    if (key === "overallExperienceRating") return 0;
+    if (key === "reason") return 1;
+    if (_DEFAULT_FEEDBACK_KEYS.has(key)) return 2;
+    return 3;
+  };
+  fields.sort((a, b) => rank(a.key) - rank(b.key) || a.key.localeCompare(b.key));
+  return { fields };
+}
+
 /** Persona simulator self-report after the chat (from ``user_feedback.json``). */
 export function ChatSelfReport({
   questionnaire,
+  userFeedback,
+  selfReportSchema,
 }: {
   questionnaire: PlaygroundQuestionnaire | null | undefined;
+  userFeedback?: UserFeedbackArtifact | null;
+  selfReportSchema?: SelfReportSchema | null;
 }) {
-  const overall = questionnaire?.overallRating ?? null;
-  const band = scoreBand(overall == null ? null : overall / 10);
-  const color = SCORE_BAND_CLASS[band];
+  const feedback: UserFeedbackArtifact | null =
+    userFeedback && Object.keys(userFeedback).length > 0
+      ? userFeedback
+      : questionnaire
+        ? ({
+            overallExperienceRating: questionnaire.overallRating,
+            reason: questionnaire.ratingReason,
+            needConstraintSatisfaction:
+              (questionnaire.constraintSatisfaction ?? 0) > 0
+                ? questionnaire.constraintSatisfaction >= 4
+                  ? "yes"
+                  : questionnaire.constraintSatisfaction >= 3
+                    ? "partially"
+                    : "no"
+                : undefined,
+            personalPreferenceSatisfaction:
+              (questionnaire.preferenceSatisfaction ?? 0) > 0
+                ? questionnaire.preferenceSatisfaction >= 4
+                  ? "yes"
+                  : questionnaire.preferenceSatisfaction >= 3
+                    ? "partially"
+                    : "no"
+                : undefined,
+            askedUsefulClarificationQuestions: questionnaire.askedUsefulClarifyingQuestions,
+            clarifyingNotes: questionnaire.clarifyingNotes,
+            ...Object.fromEntries(
+              Object.entries(questionnaire).filter(
+                ([key]) =>
+                  ![
+                    "overallRating",
+                    "ratingReason",
+                    "constraintSatisfaction",
+                    "constraintRationale",
+                    "preferenceSatisfaction",
+                    "preferenceRationale",
+                    "askedUsefulClarifyingQuestions",
+                    "clarifyingNotes",
+                  ].includes(key),
+              ),
+            ),
+          } as UserFeedbackArtifact)
+        : null;
+
+  const schema =
+    selfReportSchema?.fields?.length
+      ? selfReportSchema
+      : feedback
+        ? inferSchemaFromFeedback(feedback)
+        : null;
+
+  if (schema?.fields?.length && feedback) {
+    return <SchemaSelfReportPanel schema={schema} feedback={feedback} />;
+  }
 
   return (
-    <div className="space-y-4">
-      <div
-        className={`rounded-md border border-outline bg-surface p-5 border-l-4 ${
-          overall == null ? "border-l-outline" : bandBorderL(band)
-        }`}
-      >
-        <span className={`hud text-[11px] ${overall == null ? "text-text-dim" : color.text}`}>
-          Overall satisfaction
-        </span>
-        <div className="mt-1.5 flex items-baseline gap-1.5">
-          <span
-            className={`font-display text-[40px] font-bold leading-none tabular-nums ${
-              overall == null ? "text-text-dim" : color.text
-            }`}
-          >
-            {overall == null ? "-" : overall}
-          </span>
-          <span className="text-[15px] text-text-dim">/ 10</span>
-        </div>
-        <p className="mt-3 text-[14px] leading-relaxed text-text-variant">
-          {questionnaire?.ratingReason ||
-            "After the chat, the persona simulator rates how well the app understood and met their needs."}
-        </p>
-      </div>
-
-      {questionnaire ? (
-        <DebriefScorecard q={questionnaire} />
-      ) : (
-        <DashedNote>
-          No persona self-report was recorded. The simulator writes{" "}
-          <span className="font-mono text-[13px]">user_feedback.json</span> after the conversation ends.
-        </DashedNote>
-      )}
-    </div>
+    <DashedNote>
+      No persona self-report was recorded. The simulator writes{" "}
+      <span className="font-mono text-[13px]">user_feedback.json</span> after the conversation ends.
+    </DashedNote>
   );
 }
 
@@ -257,10 +336,8 @@ export function ChatObjectiveEvaluation({
         <StatTile caption="Turns" value={metrics?.numTurns ?? "-"} />
         {verifier ? (
           <div
-            className={`flex flex-col justify-center rounded-lg border px-3 py-2.5 ${
-              verifier.passed
-                ? "border-secondary/40 bg-secondary/10"
-                : "border-danger/40 bg-danger/10"
+            className={`flex flex-col justify-center rounded-lg px-3 py-2.5 ${
+              verifier.passed ? "bg-secondary/10" : "bg-danger/10"
             }`}
           >
             <span className="hud text-[11px] text-text-dim">Run complete</span>
@@ -272,20 +349,20 @@ export function ChatObjectiveEvaluation({
             </div>
           </div>
         ) : (
-          <div className="flex flex-col justify-center rounded-lg border border-dashed border-outline/50 bg-surface/40 px-3 py-2.5">
+          <div className="flex flex-col justify-center rounded-lg glass-tile glass-tile--dim px-3 py-2.5">
             <span className="hud text-[11px] text-text-dim">Run complete</span>
             <span className="mt-1 text-[15px] text-text-variant">Checks pending</span>
           </div>
         )}
       </div>
       {artifactMissing ? (
-        <p className="text-[13px] leading-relaxed text-text-variant">
+        <p className="text-[14px] leading-relaxed text-text-variant">
           Scores above were recovered from the live event stream. Artifact checks failed because
           output files were missing on this run. Re-run the job for a clean pass.
         </p>
       ) : null}
       {verifier?.detail && !verifier.passed ? (
-        <pre className="custom-scrollbar max-h-24 overflow-auto whitespace-pre-wrap rounded-md border border-outline/40 bg-surface/50 px-3 py-2 font-mono text-[12px] leading-snug text-text-variant">
+        <pre className="custom-scrollbar max-h-24 overflow-auto whitespace-pre-wrap rounded-md glass-tile px-3 py-2 font-mono text-[12px] leading-snug text-text-variant">
           {verifier.detail}
         </pre>
       ) : null}
@@ -308,7 +385,7 @@ export function ChatTrialTranscript({
     return <DashedNote>No conversation turns were recorded for this trial.</DashedNote>;
   }
   return (
-    <div className="space-y-7 rounded-md border border-outline bg-surface p-5">
+    <div className="space-y-7 rounded-md glass-panel p-5">
       {transcript.map((turn, i) => (
         <TranscriptTurn
           key={turn.turnIndex ?? i}
@@ -329,31 +406,39 @@ export function ChatTrialDebriefBody({
   transcript,
   persona,
   questionnaire,
+  userFeedback,
+  selfReportSchema,
   metricScores,
   verifier,
   trialEvaluation,
+  taskTitle,
   showSectionHeadings = true,
 }: ChatTrialDebriefBodyProps) {
-  const app = appName(config.applicationId);
+  const applicationId = config.applicationId?.trim() || null;
+  const app = applicationId ? appName(applicationId) : taskTitle?.trim() || appName(null);
 
   return (
     <div className="space-y-6">
       <section className="space-y-4">
         {showSectionHeadings && <SectionHeading>Evaluation</SectionHeading>}
-        <div className="space-y-2 rounded-md border border-outline/50 bg-surface/40 p-3">
-          <p className="text-[13px] leading-relaxed text-text-variant">
+        <div className="space-y-2 glass-tile rounded-md p-3">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             Run checks confirm the conversation finished and artifacts are valid — not a quality
             score.
           </p>
           <ChatObjectiveEvaluation metrics={metricScores} verifier={verifier} />
         </div>
         <ChatContractSummary trialEvaluation={trialEvaluation} />
-        <div className="space-y-3 rounded-md border border-outline bg-surface-low p-4">
+        <div className="space-y-3 glass-tile rounded-md p-4">
           {showSectionHeadings && <SubsectionHeading>Persona self-report</SubsectionHeading>}
-          <p className="text-[13px] leading-relaxed text-text-variant">
+          <p className="text-[14px] leading-relaxed text-text-variant">
             How the simulated user rated the chat after it ended.
           </p>
-          <ChatSelfReport questionnaire={questionnaire} />
+          <ChatSelfReport
+            questionnaire={questionnaire}
+            userFeedback={userFeedback}
+            selfReportSchema={selfReportSchema}
+          />
         </div>
       </section>
 
@@ -402,6 +487,7 @@ function TranscriptTurn({
       <PersonaBubble
         message={turn.userMessage}
         personaId={persona?.id}
+        personaName={persona?.name}
         personaDimensions={persona?.dimensions ?? undefined}
       />
       {turn.decision && turn.decision !== "continue" ? (
@@ -424,78 +510,11 @@ function TranscriptTurn({
 function DecisionTag({ decision }: { decision: string }) {
   const satisfied = decision === "satisfied";
   const cls = satisfied
-    ? "text-secondary border border-secondary/30 bg-secondary/10"
-    : "text-warn border border-warn/30 bg-warn/10";
+    ? "text-secondary bg-secondary/10"
+    : "text-warn bg-warn/10";
   const label = satisfied ? "Got what they needed" : decision === "give_up" ? "Gave up" : humanizeToken(decision);
   return (
     <span className={`inline-flex items-center rounded px-1.5 py-px hud text-[11px] ${cls}`}>{label}</span>
-  );
-}
-
-function DebriefScorecard({ q }: { q: PlaygroundQuestionnaire }) {
-  return (
-    <div className="space-y-5 rounded-md border border-outline bg-surface p-4">
-      <CriterionBar
-        label="Stayed within my requirements"
-        score={q.constraintSatisfaction}
-        max={5}
-        rationale={q.constraintRationale}
-      />
-      <CriterionBar
-        label="Matched my preferences"
-        score={q.preferenceSatisfaction}
-        max={5}
-        rationale={q.preferenceRationale}
-      />
-      <div className="border-t border-outline pt-3">
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-[14px] font-medium text-text-main">Asked helpful follow-up questions</span>
-          <span
-            className={`inline-flex items-center rounded border px-2 py-1 hud text-[11px] ${
-              q.askedUsefulClarifyingQuestions
-                ? "border-secondary/30 bg-secondary/10 text-secondary"
-                : "border-outline bg-surface-high text-text-variant"
-            }`}
-          >
-            {q.askedUsefulClarifyingQuestions ? "Yes" : "Not this time"}
-          </span>
-        </div>
-        {q.clarifyingNotes && (
-          <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{q.clarifyingNotes}</p>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function CriterionBar({
-  label,
-  score,
-  max,
-  rationale,
-}: {
-  label: string;
-  score: number;
-  max: number;
-  rationale: string;
-}) {
-  const value = clamp(score, max);
-  const band = scoreBand(value / max);
-  const color = SCORE_BAND_CLASS[band];
-  const pct = (value / max) * 100;
-  return (
-    <div>
-      <div className="mb-1.5 flex items-center justify-between gap-2">
-        <span className="text-[14px] font-medium text-text-main">{label}</span>
-        <span className={`font-mono text-[14px] font-bold tabular-nums ${color.text}`}>
-          {value} / {max}
-        </span>
-      </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-field">
-        <div className={`h-full ${color.bar}`} style={{ width: `${pct}%` }} />
-      </div>
-      {rationale && <p className="mt-1.5 text-[13px] leading-snug text-text-variant">{rationale}</p>}
-    </div>
   );
 }
 

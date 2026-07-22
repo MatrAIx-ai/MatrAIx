@@ -15,6 +15,9 @@ class SelfReportField:
     minimum: int | None = None
     maximum: int | None = None
     choices: Tuple[str, ...] = ()
+    # Key of the field this textual field explains. When set, reporting groups
+    # this explanation by that target field (no heuristic axis guessing).
+    explains: str | None = None
 
 
 @dataclass(frozen=True)
@@ -53,6 +56,7 @@ DEFAULT_CHATBOT_SELF_REPORT_SCHEMA = SelfReportSchema(
         SelfReportField(
             key="reason",
             prompt="Briefly explain the rating in your own voice.",
+            explains="overallExperienceRating",
         ),
         SelfReportField(
             key="askedUsefulClarificationQuestions",
@@ -62,6 +66,7 @@ DEFAULT_CHATBOT_SELF_REPORT_SCHEMA = SelfReportSchema(
         SelfReportField(
             key="clarifyingNotes",
             prompt="Which clarifying questions helped, or why they did not.",
+            explains="askedUsefulClarificationQuestions",
         ),
         SelfReportField(
             key="trustLevel",
@@ -175,6 +180,27 @@ def coerce_self_report_payload(
             if text or schema_field.required:
                 payload[schema_field.key] = text
     return payload
+
+
+def schema_to_public_dict(schema: SelfReportSchema) -> Dict[str, Any]:
+    """Serialize a self-report schema for debrief / UI (task-agnostic)."""
+    return {
+        "artifactName": schema.artifact_name,
+        "instructions": schema.instructions,
+        "fields": [
+            {
+                "key": schema_field.key,
+                "prompt": schema_field.prompt,
+                "kind": schema_field.kind,
+                "required": schema_field.required,
+                "minimum": schema_field.minimum,
+                "maximum": schema_field.maximum,
+                "choices": list(schema_field.choices),
+                "explains": schema_field.explains,
+            }
+            for schema_field in schema.fields
+        ],
+    }
 
 
 def field_keys(schema: SelfReportSchema) -> Tuple[str, ...]:

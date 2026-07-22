@@ -9,6 +9,7 @@ import urllib.request
 from typing import Any, Dict, List, Optional, Protocol, Sequence
 
 from playground.chatbot_capabilities import ChatbotCapability
+from playground.openai_client import openai_model_supports_custom_temperature
 from playground.user_sim.tools import (
     ToolCall,
     anthropic_tool_definitions,
@@ -61,8 +62,6 @@ class OpenAIToolStepClient:
         self._client = client
 
     def complete_with_tools(self, messages: List[Dict[str, Any]]) -> List[ToolCall]:
-        from playground.openai_client import openai_model_supports_custom_temperature
-
         kwargs: Dict[str, Any] = {
             "model": self.model,
             "messages": messages,
@@ -124,11 +123,12 @@ class AnthropicToolStepClient:
         body = {
             "model": self.model,
             "max_tokens": 1200,
-            "temperature": self.temperature,
             "system": "\n\n".join(system_parts),
             "messages": convo,
             "tools": self._tools,
         }
+        if openai_model_supports_custom_temperature(self.model):
+            body["temperature"] = self.temperature
         request = urllib.request.Request(
             "https://api.anthropic.com/v1/messages",
             data=json.dumps(body).encode("utf-8"),
@@ -192,6 +192,18 @@ def build_tool_step_client(
 
     value = (model or "openai/gpt-4o-mini").strip()
     if value.startswith("anthropic/"):
+        proxy_base = (
+            os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE") or ""
+        ).strip()
+        if proxy_base:
+            # Route Claude tool-calling through the proxy's OpenAI-compatible
+            # endpoint so it shares the global rate limiter. LiteLLM translates
+            # OpenAI tool schema <-> Anthropic tool_use.
+            return OpenAIToolStepClient(
+                value,
+                temperature=temperature,
+                capabilities=capabilities,
+            )
         return AnthropicToolStepClient(
             value.split("/", 1)[1],
             temperature=temperature,

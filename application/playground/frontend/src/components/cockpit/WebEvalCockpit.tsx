@@ -23,9 +23,12 @@ import { listWebEvalTasks, api, ApiError } from "@/lib/api";
 import { FALLBACK_WEB_TASKS } from "@/lib/fallbackTasks";
 import { mergeTaskCatalog } from "@/lib/mergeTaskCatalog";
 import {
-  findWebPersonaAgent,
+  findPersonaAgent,
   personaModelPipelineLabel,
   suggestedWebPersonaAgent,
+  webAgentFamily,
+  webHarnessPipelineLabel,
+  webPersonaModelSelectOptions,
   WEB_PERSONA_AGENTS,
 } from "@/lib/personaAgentCatalog";
 import type {
@@ -38,6 +41,8 @@ import type {
   WebTrace,
 } from "@/lib/types";
 import { useHarborCockpitRun, type HarborCockpitPhase } from "@/lib/useHarborCockpitRun";
+import { usePgTaskIdDeepLink } from "@/lib/usePgTaskIdDeepLink";
+import { useUrlState } from "@/lib/useUrlState";
 import { useCockpitInstruction } from "@/lib/useCockpitInstruction";
 import { mapWebDebriefToJobView, attachHarborTraceScreenshotUrls, formatCockpitRunError } from "@/lib/harborCockpitMappers";
 import { RunHeader } from "./RunHeader";
@@ -127,6 +132,7 @@ export function WebEvalCockpit({
   onOpenHarborTrial,
   isActive = true,
 }: WebEvalCockpitProps) {
+  const { state: urlState } = useUrlState();
   const { run, job, phase, isRunning, error, timedOut, retry, reset, harborPhase, harborJobName, harborTrialName, cancelRun, cancelBusy: harborCancelBusy } =
     useHarborCockpitRun<WebEvalJobView>({ taskKind: "web" });
   const [liveTrace, setLiveTrace] = useState<WebTrace | null>(null);
@@ -144,6 +150,7 @@ export function WebEvalCockpit({
   const tasksQuery = useQuery<WebEvalTasksResponse>({
     queryKey: ["web-eval-tasks"],
     queryFn: listWebEvalTasks,
+    enabled: isActive,
     staleTime: 10 * 60_000,
     refetchOnWindowFocus: false,
     retry: 1,
@@ -153,7 +160,7 @@ export function WebEvalCockpit({
     [tasksQuery.data?.tasks],
   );
   const setupTaskPath =
-    tasks.find((item) => item.id === taskId)?.taskPath ?? tasks[0]?.taskPath ?? null;
+    tasks.find((item) => item.id === taskId)?.taskPath ?? null;
   const {
     persona,
     personaModel,
@@ -187,14 +194,19 @@ export function WebEvalCockpit({
     batchTaskId,
     batchPersonaIds,
     setBatchJobName,
-    batchLive,
     clearBatch,
     cancelBatch,
     cancelBusy,
+    retryFailed,
+    retryBusy,
+    retryError,
+    failedTrials,
     isBatchActive,
     batchComplete,
     batchGridCells,
     expectedTrialCount,
+    completedTrials: batchCompletedTrials,
+    batchError,
   } = useCockpitBatchJob(selectedPersonaIds, parallelTrials, "web");
 
 
@@ -205,30 +217,41 @@ export function WebEvalCockpit({
     selectedPersonaIds,
   );
   const activeTaskId = batchJobName && batchTaskId ? batchTaskId : taskId;
-  const task = tasks.find((item) => item.id === activeTaskId) ?? tasks[0] ?? null;
+  const task = tasks.find((item) => item.id === activeTaskId) ?? null;
 
-  const pipelinePersonaModelLabel = useMemo(
-    () => personaModelPipelineLabel(personaModel, personaModelOptions),
-    [personaModel, personaModelOptions],
-  );
+  const webTaskIds = useMemo(() => tasks.map((item) => item.id), [tasks]);
+  usePgTaskIdDeepLink("web", webTaskIds, setTaskId, isActive);
 
   useEffect(() => {
+    if (urlState.pgTaskId) return;
     if (batchTaskId) {
       setTaskId(batchTaskId);
-      return;
     }
-    if (!taskId && tasks.length > 0) {
-      setTaskId(tasks[0].id);
-    }
-  }, [batchTaskId, taskId, tasks]);
+  }, [batchTaskId, urlState.pgTaskId]);
 
   const resolveWebAgent = useCallback(
     (id: string) => webAgentByTaskId[id] ?? suggestedWebPersonaAgent(id),
     [webAgentByTaskId],
   );
   const activeWebAgent = task ? resolveWebAgent(task.id) : WEB_PERSONA_AGENTS[0].value;
+  const activeWebAgentFamily = webAgentFamily(activeWebAgent);
 
-  // Report the honest footer context up (the active website).
+  const webPersonaModelOptions = useMemo(
+    () => webPersonaModelSelectOptions(activeWebAgent, personaModelOptions),
+    [activeWebAgent, personaModelOptions],
+  );
+
+  const pipelinePersonaModelLabel = useMemo(
+    () => personaModelPipelineLabel(personaModel, webPersonaModelOptions),
+    [personaModel, webPersonaModelOptions],
+  );
+
+  useEffect(() => {
+    if (webPersonaModelOptions.length === 0) return;
+    if (!webPersonaModelOptions.some((opt) => opt.value === personaModel)) {
+      setPersonaModel(webPersonaModelOptions[0]?.value ?? personaModel);
+    }
+  }, [webPersonaModelOptions, personaModel, setPersonaModel]);
   useEffect(() => {
     if (!isActive) return;
     onFooterContextChange?.(`web · ${task?.siteName ?? "Website"}`);
@@ -412,11 +435,11 @@ export function WebEvalCockpit({
   const runLaunchPhase = resolveRunLaunchPhase(
     batchJobName,
     batchComplete,
-    batchLive.error,
+    batchError,
     phase,
   );
   const runProgressPct = batchJobName
-    ? computeBatchProgressPct(batchJobName, batchLive.live?.completedTrials, expectedTrialCount)
+    ? computeBatchProgressPct(batchJobName, batchCompletedTrials, expectedTrialCount)
     : phase === "done"
       ? 100
       : phase === "launching"
@@ -428,7 +451,7 @@ export function WebEvalCockpit({
             : 0;
   const runProgressLabel = batchJobName
     ? formatBatchProgressLabel(
-        batchLive.live?.completedTrials ?? 0,
+        batchCompletedTrials,
         expectedTrialCount,
       )
     : phase === "launching"
@@ -468,7 +491,7 @@ export function WebEvalCockpit({
           taskPath={task?.taskPath ?? null}
           personaModel={personaModel}
           onPersonaModelChange={setPersonaModel}
-          personaModelOptions={personaModelOptions}
+          personaModelOptions={webPersonaModelOptions}
           mode={samplingMode}
           onModeChange={setSamplingMode}
           selectedPersonaIds={visiblePersonaIds}
@@ -500,8 +523,14 @@ export function WebEvalCockpit({
               taskType="web"
               personaModelLabel={pipelinePersonaModelLabel}
               webCapabilityTierId={
-                task ? findWebPersonaAgent(resolveWebAgent(task.id))?.tier : undefined
+                activeWebAgentFamily === "browser"
+                  ? findPersonaAgent(activeWebAgent)?.tier
+                  : undefined
               }
+              webHarnessLabel={
+                activeWebAgentFamily === "cli" ? webHarnessPipelineLabel(activeWebAgent) : undefined
+              }
+              webAgentFamily={activeWebAgentFamily}
               hasPersona={visiblePersonaIds.length > 0}
               hasTask={Boolean(task?.taskPath)}
             />
@@ -522,7 +551,7 @@ export function WebEvalCockpit({
           onParallelTrialsChange={setParallelTrials}
           runBusy={runBusy}
           onRun={() => void handleLaunch()}
-          error={formatCockpitRunError(launchError ?? error ?? batchLive.error)}
+          error={formatCockpitRunError(launchError ?? error ?? batchError ?? retryError)}
           onNewRun={showLiveCenter ? handleNewRun : undefined}
           onCancelRun={onCancelRun}
           cancelRunBusy={cancelRunBusy}
@@ -535,6 +564,9 @@ export function WebEvalCockpit({
           }
           onDownload={!batchJobName ? handleExport : undefined}
           canDownload={canExport}
+          onRetryFailed={batchJobName ? () => void retryFailed() : undefined}
+          failedCount={failedTrials}
+          retryBusy={retryBusy}
         />
       }
       right={

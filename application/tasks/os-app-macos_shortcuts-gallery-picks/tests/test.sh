@@ -4,11 +4,6 @@ set -uo pipefail
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
 
-# Ensure VERIFIER_DIR exists and is writable; fall back to /tmp if not.
-if ! mkdir -p "${VERIFIER_DIR}" 2>/dev/null || ! [ -w "${VERIFIER_DIR}" ]; then
-  VERIFIER_DIR="/tmp/verifier_output"
-  mkdir -p "${VERIFIER_DIR}"
-fi
 export VERIFIER_DIR
 
 set +e
@@ -21,21 +16,48 @@ import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/os-app-macos-shortcuts-gallery-picks/picks.json")
+OUTPUT_DIR = Path(
+    os.environ.get("HARBOR_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or "/app/output"
+)
 
-if not path.is_file():
-    logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
-    fa_path = logs_root / "agent" / "final_answer.txt"
-    if fa_path.is_file():
+path = OUTPUT_DIR / "picks.json"
+
+def _recover_submission_from_final_answer() -> None:
+    if path.is_file():
+        return
+    candidates = [
+        OUTPUT_DIR / "final_answer.txt",
+        Path("/tmp/harbor/logs/agent/final_answer.txt"),
+        Path("/logs/agent/final_answer.txt"),
+    ]
+    for fa_path in candidates:
+        if not fa_path.is_file():
+            continue
         raw = fa_path.read_text(encoding="utf-8", errors="replace").strip()
         match = re.search(r"\{[\s\S]*\}", raw)
-        if match:
-            try:
-                candidate = json.loads(match.group())
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_text(json.dumps(candidate, indent=2, ensure_ascii=False))
-            except (json.JSONDecodeError, OSError):
-                pass
+        if not match:
+            continue
+        try:
+            candidate = json.loads(match.group())
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(candidate, dict):
+            continue
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
+                json.dumps(candidate, indent=2, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            return
+        except OSError:
+            continue
+
+
+_recover_submission_from_final_answer()
 
 if not path.is_file():
     sys.exit(f"missing {path}")
@@ -79,7 +101,7 @@ for i, pick in enumerate(picks):
 if len(set(pick_names)) < 3:
     sys.exit("all three picks must be distinct shortcuts")
 
-feedback_path = Path("/app/output/user_feedback.json")
+feedback_path = OUTPUT_DIR / "user_feedback.json"
 satisfaction_buckets = {"yes", "partially", "no"}
 
 
@@ -138,16 +160,14 @@ def load_user_feedback() -> dict[str, object] | None:
 
 feedback = load_user_feedback()
 
-verifier_dir = Path(
-    os.environ.get("VERIFIER_DIR")
-    or os.environ.get("HARBOR_VERIFIER_DIR")
-    or "/logs/verifier"
-)
+verifier_dir_raw = os.environ.get("VERIFIER_DIR") or os.environ.get("HARBOR_VERIFIER_DIR")
+if not verifier_dir_raw:
+    sys.exit("VERIFIER_DIR or HARBOR_VERIFIER_DIR is required")
+verifier_dir = Path(verifier_dir_raw)
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
-except OSError:
-    verifier_dir = Path("/tmp/verifier_output")
-    verifier_dir.mkdir(parents=True, exist_ok=True)
+except OSError as exc:
+    sys.exit(f"cannot create verifier directory {verifier_dir}: {exc}")
 
 picks_label = "; ".join(
     f"{n} ({c})" for n, c in zip(pick_names, pick_categories)
@@ -361,6 +381,7 @@ for i, (name, cat, reason) in enumerate(zip(pick_names, pick_categories, pick_re
                     "label": "Reason",
                     "role": "explanation",
                     "kind": "textual",
+                    "explainsFacetKey": "decision_category",
                     "value": reason,
                 },
             ],
@@ -448,6 +469,7 @@ if feedback is not None:
             "label": "Feedback reason",
             "role": "explanation",
             "kind": "textual",
+            "explainsFacetKey": "need_constraint_satisfaction",
             "value": feedback["feedback_reason"],
         },
         {

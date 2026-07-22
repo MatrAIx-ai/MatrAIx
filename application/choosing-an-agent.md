@@ -84,9 +84,9 @@ differ by agent:
 |-------|------------------|-------|
 | `persona-json-survey` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY` | Match `-m` / YAML `model_name`. Auto host-native survey. |
 | `persona-user-sim` | Persona: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY`; often `OPENAI_API_KEY` for SUT | Persona model via `-m`; chat sidecar engine via `MATRIX_CHATBOT_ENGINE` (default `gpt-4o-mini`). |
-| `persona-claude-code` | `ANTHROPIC_API_KEY` | Anthropic models |
-| `persona-gemini-cli` | `GEMINI_API_KEY` | Google models, e.g. `google/gemini-2.5-pro` |
-| `persona-codex` | `OPENAI_API_KEY` | OpenAI models, e.g. `openai/gpt-4o` |
+| `persona-claude-code` | `ANTHROPIC_API_KEY` (or subscription — see below) | Anthropic models |
+| `persona-gemini-cli` | `GEMINI_API_KEY` (or subscription — see below) | Google models, e.g. `google/gemini-2.5-pro` |
+| `persona-codex` | `OPENAI_API_KEY` (or subscription — see below) | OpenAI models, e.g. `openai/gpt-4o` |
 | `persona-openhands-sdk` | **`LLM_API_KEY`** (or `DASHSCOPE_API_KEY` when `-m` is `dashscope/*`) | Not the provider-native name for Anthropic/OpenAI. Map before run, e.g. `export LLM_API_KEY="$ANTHROPIC_API_KEY"` (match `-m`). DashScope models auto-map `DASHSCOPE_API_KEY` → `LLM_API_KEY`. |
 | `persona-browser-use` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `LLM_API_KEY` | DashScope: set `DASHSCOPE_API_KEY` (+ optional `DASHSCOPE_API_BASE`). |
 | `persona-cocoa` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `LLM_API_KEY` | Task image must be AIO Sandbox-based. |
@@ -116,7 +116,33 @@ export LLM_API_KEY="$ANTHROPIC_API_KEY"
 export USE_COMPUTER_API_KEY=...  # persona-computer-1 on use.computer (macOS/iOS)
 ```
 
-Variable names per agent: see the export blocks in [choosing-an-agent.md](choosing-an-agent.md).
+Variable names per agent: see the export blocks below.
+
+### CLI subscription auth (optional)
+
+For **`persona-claude-code`**, **`persona-codex`**, and **`persona-gemini-cli`**, the
+default path is an **API key** on the Harbor runner (the machine that launches Docker
+trials). If you already use the vendor CLI through a **subscription**, you can opt in
+instead — Harbor uploads your local credential file into the trial container.
+
+**Playground:** copy `application/playground/.env.local.example` to `.env.local`,
+uncomment the matching block, restart the backend (`run_dev.sh` / `run_demo.sh`).
+
+| Harness | Host setup (once) | Enable in `.env.local` or shell |
+|---------|-------------------|----------------------------------|
+| `persona-codex` | `codex login` → `~/.codex/auth.json` | `CODEX_FORCE_AUTH_JSON=1` |
+| `persona-claude-code` | `claude setup-token` → paste token | `CLAUDE_FORCE_OAUTH=1` and `CLAUDE_CODE_OAUTH_TOKEN=...` |
+| `persona-gemini-cli` | Gemini CLI login → `~/.gemini/oauth_creds.json` | `GEMINI_FORCE_OAUTH=1` |
+
+Optional explicit paths: `CODEX_AUTH_JSON_PATH`, `GEMINI_OAUTH_CREDS_PATH`.
+
+If both an API key and subscription flags are set, **API keys win** unless you set
+`CLAUDE_FORCE_OAUTH=1` or `CODEX_FORCE_AUTH_JSON=1` (Claude/Codex drop the key and
+use subscription). Match `-m` / Playground persona model to the harness vendor as
+usual.
+
+Web CLI runs (Playground **Web → CLI family**) use the same runner credentials; see
+[web-interaction.md](web-interaction.md) § CLI harness on web tasks.
 
 ## Examples
 

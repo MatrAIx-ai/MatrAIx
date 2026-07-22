@@ -3,6 +3,7 @@ set -euo pipefail
 
 # shellcheck disable=SC1091
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/verifier_env.sh"
+export VERIFIER_DIR
 
 python3 <<'PY'
 from __future__ import annotations
@@ -13,21 +14,115 @@ import re
 import sys
 from pathlib import Path
 
-path = Path("/tmp/os-app-ios-news-subscription-decision/decision.json")
 
-if not path.is_file():
-    logs_root = Path("/tmp/harbor/logs") if Path("/tmp/harbor/logs").is_dir() else Path("/logs")
-    fa_path = logs_root / "agent" / "final_answer.txt"
-    if fa_path.is_file():
+def _llm_signal_facets(text, *, specs, context_desc, rubric):
+    """Best-effort LLM signal extraction rendered as categorical facets.
+
+    Returns [] on any failure (missing OPENAI_API_KEY, no network, bad JSON, or a
+    timeout). Grading must never depend on this: these signals are additive
+    reporting facets only, so a failed call simply omits them and the trial still
+    passes on its deterministic facts.
+    """
+    import urllib.request
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    body_text = (text or "").strip()
+    if not api_key or not body_text:
+        return []
+    model = os.environ.get("MODEL_NAME", "gpt-4o-mini")
+    base = (
+        os.environ.get("OPENAI_BASE_URL")
+        or os.environ.get("OPENAI_API_BASE")
+        or "https://api.openai.com/v1"
+    ).rstrip("/")
+    schema = "\n".join(f"- {key}: {label}" for key, label in specs)
+    system = (
+        f"{context_desc} Return ONLY a JSON object whose keys are exactly these, "
+        f"each a boolean:\n{schema}\nRubric: {rubric}"
+    )
+    request_body = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": body_text[:12000]},
+        ],
+        "temperature": 0,
+        "response_format": {"type": "json_object"},
+    }
+    try:
+        request = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=json.dumps(request_body).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=30) as response:
+            completion = json.loads(response.read().decode("utf-8"))
+        content = completion["choices"][0]["message"]["content"]
+        parsed = json.loads(content)
+    except Exception:  # grading must survive any LLM failure
+        return []
+    facets = []
+    for key, label in specs:
+        value = parsed.get(key)
+        if isinstance(value, bool):
+            facets.append(
+                {
+                    "key": key,
+                    "label": label,
+                    "role": "evidence",
+                    "kind": "categorical",
+                    "value": "true" if value else "false",
+                }
+            )
+    return facets
+
+
+OUTPUT_DIR = Path(
+    os.environ.get("HARBOR_OUTPUT_DIR")
+    or os.environ.get("MATRIX_OUTPUT_DIR")
+    or os.environ.get("PLAYGROUND_OUTPUT_DIR")
+    or "/app/output"
+)
+
+path = OUTPUT_DIR / "decision.json"
+
+def _recover_submission_from_final_answer() -> None:
+    if path.is_file():
+        return
+    candidates = [
+        OUTPUT_DIR / "final_answer.txt",
+        Path("/tmp/harbor/logs/agent/final_answer.txt"),
+        Path("/logs/agent/final_answer.txt"),
+    ]
+    for fa_path in candidates:
+        if not fa_path.is_file():
+            continue
         raw = fa_path.read_text(encoding="utf-8", errors="replace").strip()
         match = re.search(r"\{[\s\S]*\}", raw)
-        if match:
-            try:
-                candidate = json.loads(match.group())
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_text(json.dumps(candidate, indent=2, ensure_ascii=False))
-            except (json.JSONDecodeError, OSError):
-                pass
+        if not match:
+            continue
+        try:
+            candidate = json.loads(match.group())
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(candidate, dict):
+            continue
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
+                json.dumps(candidate, indent=2, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            return
+        except OSError:
+            continue
+
+
+_recover_submission_from_final_answer()
 
 if not path.is_file():
     sys.exit(f"missing {path}")
@@ -67,7 +162,7 @@ decision = "subscribe" if clicked else "decline"
 basis = "pack_value" if clicked else "price"
 highlights_label = ", ".join(cleaned_highlights)
 
-feedback_path = Path("/app/output/user_feedback.json")
+feedback_path = OUTPUT_DIR / "user_feedback.json"
 satisfaction_buckets = {"yes", "partially", "no"}
 
 
@@ -126,16 +221,14 @@ def load_user_feedback() -> dict[str, object] | None:
 
 feedback = load_user_feedback()
 
-verifier_dir = Path(
-    os.environ.get("HARBOR_VERIFIER_DIR")
-    or os.environ.get("HARBOR_VERIFIER_DIR")
-    or "/logs/verifier"
-)
+verifier_dir_raw = os.environ.get("VERIFIER_DIR") or os.environ.get("HARBOR_VERIFIER_DIR")
+if not verifier_dir_raw:
+    sys.exit("VERIFIER_DIR or HARBOR_VERIFIER_DIR is required")
+verifier_dir = Path(verifier_dir_raw)
 try:
     verifier_dir.mkdir(parents=True, exist_ok=True)
-except OSError:
-    verifier_dir = Path.cwd() / "verifier"
-    verifier_dir.mkdir(parents=True, exist_ok=True)
+except OSError as exc:
+    sys.exit(f"cannot create verifier directory {verifier_dir}: {exc}")
 
 source_artifacts = {
     "decision": str(path),
@@ -395,6 +488,7 @@ contexts = [
                 "label": "Reason",
                 "role": "explanation",
                 "kind": "textual",
+                "explainsFacetKey": "decision_outcome",
                 "value": reason.strip(),
             },
             {
@@ -502,6 +596,7 @@ if feedback is not None:
             "label": "Feedback reason",
             "role": "explanation",
             "kind": "textual",
+            "explainsFacetKey": "need_constraint_satisfaction",
             "value": feedback["feedback_reason"],
         },
         {
@@ -557,6 +652,27 @@ if feedback is not None:
             "facets": feedback_facets,
         }
     )
+
+_decision_signals = _llm_signal_facets(
+    reason.strip(),
+    specs=[
+        ("substitute_signal", "Already gets news elsewhere (substitution)"),
+        ("habit_signal", "Habit or effort barrier to adopting"),
+    ],
+    context_desc=(
+        "You advise the team that owns the Apple News+ subscription offer. Read the "
+        "persona's decision reason and flag which non-conversion drivers are present."
+    ),
+    rubric=(
+        "Mark true only when the reason clearly states or strongly implies it. Do not "
+        "infer from persona metadata that is not in the reason text."
+    ),
+)
+if _decision_signals:
+    for _ctx in contexts:
+        if _ctx.get("key") == "decision.primary":
+            _ctx["facets"].extend(_decision_signals)
+            break
 
 (verifier_dir / "structured_output.json").write_text(
     json.dumps(

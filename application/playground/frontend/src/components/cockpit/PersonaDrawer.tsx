@@ -30,11 +30,11 @@ import type { PlaygroundPersona } from "@/lib/types";
 
 /** Per-source provenance-chip tone; unknown sources fall to the neutral default. */
 const SOURCE_TONE: Record<string, string> = {
-  Nemotron: "text-secondary border-secondary/30 bg-secondary/10",
-  OASIS: "text-primary border-primary/30 bg-primary/10",
-  PersonaHub: "text-warn border-warn/30 bg-warn/10",
+  Nemotron: "text-secondary bg-secondary/10",
+  OASIS: "text-primary bg-primary/10",
+  PersonaHub: "text-warn bg-warn/10",
 };
-const NEUTRAL_TONE = "text-text-variant border-outline bg-surface-high";
+const NEUTRAL_TONE = "text-text-variant glass-tile";
 
 export interface PersonaDrawerProps {
   open: boolean;
@@ -145,7 +145,7 @@ export function PersonaDrawer({ open, onClose, persona, context, onUse }: Person
                 </h2>
                 <div className="mt-2 flex min-w-0 items-center gap-2">
                   {persona.source && (
-                    <span className={`hud flex-none rounded border px-1.5 py-0.5 text-[11px] ${tone}`}>
+                    <span className={`hud flex-none rounded px-1.5 py-0.5 text-[11px] ${tone}`}>
                       {persona.source}
                     </span>
                   )}

@@ -179,6 +179,27 @@ class OpenHandsSDK(BaseInstalledAgent):
         except (json.JSONDecodeError, OSError) as e:
             self.logger.error(f"Failed to parse trajectory file: {e}")
 
+    def _provider_api_key(self) -> str | None:
+        """Return the API key for this model's provider, if available.
+
+        Maps the model name to its provider's env var (e.g. dashscope ->
+        DASHSCOPE_API_KEY) so the correct per-provider key is used regardless of
+        a global LLM_API_KEY. Returns None if the model/provider can't be
+        resolved or no matching key is set.
+        """
+        if not self.model_name:
+            return None
+        try:
+            from harbor.agents.utils import get_api_key_var_names_from_model_name
+
+            for var_name in get_api_key_var_names_from_model_name(self.model_name):
+                value = self._get_env(var_name)
+                if value:
+                    return value
+        except Exception:
+            return None
+        return None
+
     @with_prompt_template
     async def run(
         self, instruction: str, environment: BaseEnvironment, context: AgentContext
@@ -188,20 +209,32 @@ class OpenHandsSDK(BaseInstalledAgent):
 
         env: dict[str, str] = {}
 
-        # Pass through LLM configuration from extra_env or environment
-        llm_api_key = self._get_env("LLM_API_KEY")
+        # Pass through LLM configuration from extra_env or environment.
+        #
+        # Resolve the provider-specific key for THIS model first (e.g.
+        # DASHSCOPE_API_KEY for dashscope/*, ANTHROPIC_API_KEY for anthropic/*).
+        # A global LLM_API_KEY set to one provider's key (a common shell export,
+        # e.g. LLM_API_KEY="$ANTHROPIC_API_KEY") must not shadow it and get sent
+        # to a different provider's endpoint (DashScope -> 401 invalid_api_key).
+        llm_api_key = self._provider_api_key()
+        if llm_api_key is None:
+            llm_api_key = self._get_env("LLM_API_KEY")
         if llm_api_key is None and self.model_name and self.model_name.startswith("dashscope/"):
             llm_api_key = self._get_env("DASHSCOPE_API_KEY")
         if llm_api_key is None:
             raise ValueError("LLM_API_KEY environment variable must be set")
         env["LLM_API_KEY"] = llm_api_key
 
-        llm_base_url = self._get_env("LLM_BASE_URL")
-        if llm_base_url is None and self.model_name and self.model_name.startswith("dashscope/"):
+        # dashscope talks through its OpenAI-compatible endpoint; prefer that base
+        # for dashscope models even if a global LLM_BASE_URL targets another provider.
+        if self.model_name and self.model_name.startswith("dashscope/"):
             llm_base_url = (
                 self._get_env("DASHSCOPE_API_BASE")
+                or self._get_env("LLM_BASE_URL")
                 or "https://dashscope.aliyuncs.com/compatible-mode/v1"
             )
+        else:
+            llm_base_url = self._get_env("LLM_BASE_URL")
         if llm_base_url is not None:
             env["LLM_BASE_URL"] = llm_base_url
 

@@ -293,6 +293,11 @@ Refresh batch reporting:
 uv run python application/scripts/report_job.py jobs/<job_name>
 ```
 
+For a **task PR**, also open the job in Playground **Runs** and download the
+persona-task batch report with **Download PDF**. Attach that UI PDF to the PR —
+not the server text `…/report.pdf` export. See
+[tasks/README.md — PR batch evidence](tasks/README.md#pr-batch-evidence-required).
+
 ---
 
 ## 9. Browse runs in the viewer

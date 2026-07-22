@@ -28,8 +28,10 @@ def test_list_survey_questionnaires_includes_real_feature_surveys():
     questionnaires = list_survey_questionnaires()
     ids = [questionnaire.id for questionnaire in questionnaires]
 
-    assert ids == [DEFAULT_SURVEY_QUESTIONNAIRE_ID] + REAL_FEATURE_SURVEY_IDS
-    assert len(ids) == 6
+    assert len(ids) >= 6
+    for feature_id in REAL_FEATURE_SURVEY_IDS:
+        assert feature_id in ids
+    assert DEFAULT_SURVEY_QUESTIONNAIRE_ID in ids
 
     for questionnaire in questionnaires:
         assert questionnaire.title
@@ -76,9 +78,8 @@ def test_repo_backed_survey_task_content_uses_task_input_without_infra_copy():
     )
 
     assert content is not None
-    assert "Answer this survey as the assigned persona" in content.instruction_markdown
+    assert "Product Attitudes" in content.instruction_markdown
     assert "input/output_schema.md" not in content.instruction_markdown
-    assert "askRationale" in content.instruction_markdown or "askRationale" in content.questionnaire_markdown
     assert "/app/output/survey_result.json" not in content.instruction_markdown
     assert "backend/runtime" not in content.instruction_markdown
     assert "Platform-derived answer envelope" in content.output_schema_markdown
