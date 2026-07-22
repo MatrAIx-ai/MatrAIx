@@ -244,17 +244,28 @@ async def ready() -> Any:
 async def v1_messages(payload: MessageRequest) -> dict[str, Any]:
     partner_id = await _bootstrap()
     session_id = payload.sessionId or uuid.uuid4().hex
+    resp = None
+    last_error = ""
     async with httpx.AsyncClient(timeout=180) as client:
-        try:
-            resp = await client.post(
-                f"{DEEPTUTOR_BASE}/api/v1/partners/{partner_id}/chat",
-                json={"content": payload.message, "session_id": session_id},
-            )
-        except httpx.HTTPError as exc:
-            raise HTTPException(status_code=502, detail=f"DeepTutor unreachable: {exc}")
-    if resp.status_code != 200:
-        detail = resp.text[:500]
-        raise HTTPException(status_code=502, detail=f"DeepTutor error: {detail}")
+        # Absorb transient upstream hiccups here so a momentary DeepTutor
+        # stall doesn't surface as a trial-level error in batch runs.
+        for attempt in range(3):
+            try:
+                resp = await client.post(
+                    f"{DEEPTUTOR_BASE}/api/v1/partners/{partner_id}/chat",
+                    json={"content": payload.message, "session_id": session_id},
+                )
+            except httpx.HTTPError as exc:
+                last_error = f"DeepTutor unreachable: {exc}"
+                resp = None
+            else:
+                if resp.status_code == 200:
+                    break
+                last_error = f"DeepTutor error: {resp.text[:500]}"
+            if attempt < 2:
+                await asyncio.sleep(5 * (attempt + 1))
+    if resp is None or resp.status_code != 200:
+        raise HTTPException(status_code=502, detail=last_error)
     body = resp.json()
     reply = body.get("content") or ""
     session = _session_record(session_id)
