@@ -17,6 +17,7 @@ import gzip
 import hashlib
 import json
 import re
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable, Iterator
@@ -28,6 +29,10 @@ DEFAULT_REPO_ID = "MatrAIx/MatrAIx"
 DEFAULT_ARTIFACT_PREFIX = (
     "amazon/modal_artifacts/"
     "amazon_reviews_2018_2023_user_buckets_min30_verified70_text2000"
+)
+DEFAULT_METADATA_ARTIFACT_PREFIX = (
+    "amazon/modal_artifacts/"
+    "amazon_reviews_2023_metadata_by_parent_asin_bucket_v2"
 )
 DEFAULT_OUTPUT_PATH = BASE_DIR / "raw" / "amazon_reviews_2023" / "user_histories.jsonl"
 
@@ -79,6 +84,10 @@ def user_bucket(user_id: str) -> str:
     return hashlib.sha1(user_id.encode("utf-8")).hexdigest()[:2]
 
 
+def parent_asin_bucket(parent_asin: str) -> str:
+    return hashlib.sha1(parent_asin.encode("utf-8")).hexdigest()[:2]
+
+
 def iter_jsonl_or_gz(path: Path) -> Iterator[dict[str, Any]]:
     opener = gzip.open if path.suffix == ".gz" else open
     with opener(path, "rt", encoding="utf-8") as fh:
@@ -116,18 +125,14 @@ def parse_categories(value: str) -> list[str]:
 
 
 def list_relevant_shards(
-    repo_id: str,
+    repo_files: list[str],
     artifact_prefix: str,
     buckets: set[str],
     categories: set[str],
-    token: str | bool | None,
 ) -> list[str]:
-    from huggingface_hub import list_repo_files
-
-    files = list_repo_files(repo_id, repo_type="dataset", token=token)
     prefix = artifact_prefix.rstrip("/") + "/"
     wanted = []
-    for filename in files:
+    for filename in repo_files:
         if not filename.startswith(prefix) or not filename.endswith(".parquet"):
             continue
         parts = filename[len(prefix) :].split("/")
@@ -149,17 +154,51 @@ def read_shard_rows(
     repo_id: str,
     filename: str,
     token: str | bool | None,
+    columns: list[str] | None = None,
+    download_delay_seconds: float = 0.0,
 ) -> list[dict[str, Any]]:
     from huggingface_hub import hf_hub_download
     import pyarrow.parquet as pq
 
+    if download_delay_seconds > 0:
+        time.sleep(download_delay_seconds)
     local_path = hf_hub_download(
         repo_id=repo_id,
         repo_type="dataset",
         filename=filename,
         token=token,
     )
-    return pq.read_table(local_path).to_pylist()
+    return pq.ParquetFile(local_path).read(columns=columns).to_pylist()
+
+
+def parse_category_path(value: Any) -> list[str]:
+    if value is None:
+        return []
+    parsed = value
+    if isinstance(value, str):
+        try:
+            parsed = json.loads(value)
+        except ValueError:
+            parsed = value
+    values: list[str] = []
+    if isinstance(parsed, list):
+        for item in parsed:
+            if isinstance(item, list):
+                values.extend(str(part) for part in item if part)
+            elif item:
+                values.append(str(item))
+    elif parsed:
+        values.append(str(parsed))
+    deduped = []
+    seen = set()
+    for item in values:
+        text = " ".join(item.split())
+        if text and text not in seen:
+            seen.add(text)
+            deduped.append(text)
+        if len(deduped) >= 6:
+            break
+    return deduped
 
 
 def normalize_review(row: dict[str, Any]) -> dict[str, Any]:
@@ -176,6 +215,117 @@ def normalize_review(row: dict[str, Any]) -> dict[str, Any]:
         "text": row.get("text") or "",
         "verified_purchase": row.get("verified_purchase"),
         "helpful_vote": row.get("helpful_vote"),
+    }
+
+
+def compact_product_info(row: dict[str, Any]) -> dict[str, Any]:
+    info: dict[str, Any] = {}
+    title = " ".join(str(row.get("title") or "").split())
+    if title:
+        info["product_title"] = title
+    main_category = " ".join(str(row.get("main_category") or "").split())
+    if main_category:
+        info["product_main_category"] = main_category
+    category_path = parse_category_path(row.get("categories_json"))
+    if category_path:
+        info["product_category_path"] = category_path
+    return info
+
+
+def parent_asins_by_category(
+    histories: dict[str, list[dict[str, Any]]],
+) -> dict[str, set[str]]:
+    parent_asins: dict[str, set[str]] = defaultdict(set)
+    for reviews in histories.values():
+        for review in reviews:
+            parent_asin = review.get("parent_asin")
+            category = review.get("category")
+            if parent_asin and category:
+                parent_asins[str(category)].add(str(parent_asin))
+    return parent_asins
+
+
+def list_relevant_metadata_shards(
+    repo_files: list[str],
+    metadata_prefix: str,
+    requested: dict[str, set[str]],
+) -> dict[tuple[str, str], list[str]]:
+    prefix = metadata_prefix.rstrip("/") + "/"
+    wanted_keys = {
+        (parent_asin_bucket(parent_asin), category)
+        for category, parent_asins in requested.items()
+        for parent_asin in parent_asins
+    }
+    shards: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for filename in repo_files:
+        if not filename.startswith(prefix) or not filename.endswith(".parquet"):
+            continue
+        parts = filename[len(prefix) :].split("/")
+        if len(parts) != 3:
+            continue
+        bucket_part, category_part, _name = parts
+        if not bucket_part.startswith("bucket=") or not category_part.startswith(
+            "source_category="
+        ):
+            continue
+        bucket = bucket_part.split("=", 1)[1]
+        category = category_part.split("=", 1)[1]
+        key = (bucket, category)
+        if key in wanted_keys:
+            shards[key].append(filename)
+    return {key: sorted(value) for key, value in shards.items()}
+
+
+def attach_compact_product_info(
+    histories: dict[str, list[dict[str, Any]]],
+    repo_files: list[str],
+    repo_id: str,
+    metadata_prefix: str,
+    token: str | bool | None,
+    download_delay_seconds: float,
+) -> dict[str, Any]:
+    requested = parent_asins_by_category(histories)
+    requested_pairs = sum(len(parent_asins) for parent_asins in requested.values())
+    if not requested_pairs:
+        return {"requested_category_parent_asin_pairs": 0, "matched_review_rows": 0}
+
+    metadata_shards = list_relevant_metadata_shards(repo_files, metadata_prefix, requested)
+    metadata: dict[tuple[str, str], dict[str, Any]] = {}
+    columns = ["parent_asin", "source_category", "main_category", "title", "categories_json"]
+    for (bucket, category), filenames in sorted(metadata_shards.items()):
+        wanted_parent_asins = requested.get(category, set())
+        log(
+            f"Loading compact product metadata bucket={bucket} "
+            f"source_category={category} ({len(filenames)} shards)"
+        )
+        for filename in filenames:
+            for row in read_shard_rows(
+                repo_id,
+                filename,
+                token=token,
+                columns=columns,
+                download_delay_seconds=download_delay_seconds,
+            ):
+                parent_asin = row.get("parent_asin")
+                if parent_asin in wanted_parent_asins:
+                    metadata[(str(parent_asin), category)] = compact_product_info(row)
+
+    matched_reviews = 0
+    for reviews in histories.values():
+        for review in reviews:
+            parent_asin = review.get("parent_asin")
+            category = review.get("category")
+            if not parent_asin or not category:
+                continue
+            info = metadata.get((str(parent_asin), str(category)))
+            if info:
+                review.update(info)
+                matched_reviews += 1
+
+    return {
+        "requested_category_parent_asin_pairs": requested_pairs,
+        "matched_category_parent_asin_pairs": len(metadata),
+        "matched_review_rows": matched_reviews,
     }
 
 
@@ -219,8 +369,30 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     )
     parser.add_argument("--repo-id", default=DEFAULT_REPO_ID)
     parser.add_argument("--artifact-prefix", default=DEFAULT_ARTIFACT_PREFIX)
+    parser.add_argument(
+        "--metadata-artifact-prefix",
+        default=DEFAULT_METADATA_ARTIFACT_PREFIX,
+        help=(
+            "HF artifact prefix for compact product metadata. Used only with "
+            "--include-product-info."
+        ),
+    )
     parser.add_argument("--categories", default="all")
+    parser.add_argument(
+        "--include-product-info",
+        action="store_true",
+        help="Join compact product_title/product_main_category/product_category_path from HF metadata.",
+    )
     parser.add_argument("--max-users", type=int, default=0, help="0 means all user IDs.")
+    parser.add_argument(
+        "--download-delay-seconds",
+        type=float,
+        default=0.0,
+        help=(
+            "Optional sleep before each hf_hub_download call. Useful for avoiding "
+            "Hugging Face Xet/API rate limits when many shards are touched."
+        ),
+    )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
     parser.add_argument(
         "--token",
@@ -237,17 +409,19 @@ def main(argv: Iterable[str]) -> int:
     selected_user_ids = set(user_ids)
     buckets = {user_bucket(user_id) for user_id in user_ids}
     categories = set(parse_categories(args.categories))
+    from huggingface_hub import list_repo_files
+
+    repo_files = list_repo_files(args.repo_id, repo_type="dataset", token=token)
 
     log(
         f"Loading {len(user_ids):,} users from {args.repo_id}/"
         f"{args.artifact_prefix} across {len(buckets)} buckets"
     )
     shards = list_relevant_shards(
-        repo_id=args.repo_id,
+        repo_files=repo_files,
         artifact_prefix=args.artifact_prefix,
         buckets=buckets,
         categories=categories,
-        token=token,
     )
     if not shards:
         raise RuntimeError("No matching HF Parquet shards found for requested buckets/categories.")
@@ -256,10 +430,27 @@ def main(argv: Iterable[str]) -> int:
     histories: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for index, filename in enumerate(shards, start=1):
         log(f"[{index:,}/{len(shards):,}] {filename}")
-        for row in read_shard_rows(args.repo_id, filename, token=token):
+        for row in read_shard_rows(
+            args.repo_id,
+            filename,
+            token=token,
+            download_delay_seconds=args.download_delay_seconds,
+        ):
             user_id = row.get("user_id")
             if user_id in selected_user_ids:
                 histories[user_id].append(normalize_review(row))
+
+    if args.include_product_info:
+        log(f"Joining compact product info from {args.metadata_artifact_prefix}")
+        summary = attach_compact_product_info(
+            histories=histories,
+            repo_files=repo_files,
+            repo_id=args.repo_id,
+            metadata_prefix=args.metadata_artifact_prefix,
+            token=token,
+            download_delay_seconds=args.download_delay_seconds,
+        )
+        log(f"Product info join summary: {json.dumps(summary, sort_keys=True)}")
 
     written = write_histories(args.output, histories, user_ids)
     missing = len(user_ids) - written

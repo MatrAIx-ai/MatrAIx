@@ -104,6 +104,56 @@ def _spread_across_time(
     return [reviews[idx] for idx in chosen_indexes]
 
 
+def _helpful_vote_number(review: dict[str, Any]) -> int:
+    try:
+        return int(_review_helpful_vote(review) or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _rating_number(review: dict[str, Any]) -> float | None:
+    try:
+        return float(review.get("rating"))
+    except (TypeError, ValueError):
+        return None
+
+
+def _has_text_review(review: dict[str, Any]) -> bool:
+    return bool(_review_text(review).strip())
+
+
+def _text_review_signal_score(review: dict[str, Any]) -> tuple[float, int]:
+    text = _review_text(review)
+    rating = _rating_number(review)
+    score = min(len(text), 4000) / 4000
+    score += min(_helpful_vote_number(review), 25) / 25
+    if _review_verified(review) is True:
+        score += 0.25
+    if _review_title_evidence(review):
+        score += 0.20
+    if _product_title(review) or _product_main_category(review) or _product_category_path(review):
+        score += 0.10
+    if rating is not None and rating != 3:
+        score += 0.10
+    return (score, len(text))
+
+
+def _select_high_signal_text_reviews(
+    reviews: list[dict[str, Any]],
+    max_reviews_per_user: int,
+) -> list[dict[str, Any]]:
+    text_reviews = [review for review in reviews if _has_text_review(review)]
+    if len(text_reviews) <= max_reviews_per_user:
+        return _sorted_reviews(text_reviews)
+    ranked = sorted(
+        enumerate(text_reviews),
+        key=lambda item: (_text_review_signal_score(item[1]), -item[0]),
+        reverse=True,
+    )
+    selected = [review for _idx, review in ranked[:max_reviews_per_user]]
+    return _sorted_reviews(selected)
+
+
 def _review_category(review: dict[str, Any]) -> str:
     return str(review.get("category") or review.get("source_category") or "Unknown")
 
@@ -120,19 +170,54 @@ def _first_nonblank(review: dict[str, Any], keys: tuple[str, ...], default: str 
 
 
 def _review_title(review: dict[str, Any]) -> str:
-    return _first_nonblank(review, ("title", "product_title"), "(untitled)")
+    return _first_nonblank(review, ("title", "review_title"), "(untitled)")
 
 
 def _review_title_evidence(review: dict[str, Any]) -> str:
-    return _first_nonblank(review, ("title", "product_title"))
+    return _first_nonblank(review, ("title", "review_title"))
 
 
 def _review_text(review: dict[str, Any]) -> str:
     return _first_nonblank(review, ("text", "review_text"))
 
 
+def _product_title(review: dict[str, Any]) -> str:
+    return _first_nonblank(review, ("product_title",))
+
+
+def _product_main_category(review: dict[str, Any]) -> str:
+    return _first_nonblank(review, ("product_main_category",))
+
+
+def _product_category_path(review: dict[str, Any]) -> list[str]:
+    value = review.get("product_category_path")
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except ValueError:
+            value = [value]
+    if not isinstance(value, list):
+        return []
+    path = []
+    seen = set()
+    for item in value:
+        text = str(item).strip()
+        if text and text not in seen:
+            seen.add(text)
+            path.append(text)
+        if len(path) >= 6:
+            break
+    return path
+
+
 def _has_review_evidence(review: dict[str, Any]) -> bool:
-    return bool(_review_title_evidence(review).strip() or _review_text(review).strip())
+    return bool(
+        _review_title_evidence(review).strip()
+        or _review_text(review).strip()
+        or _product_title(review).strip()
+        or _product_main_category(review).strip()
+        or _product_category_path(review)
+    )
 
 
 def _review_objects(raw_reviews: list[Any], *, user_id: str) -> list[dict[str, Any]]:
@@ -174,11 +259,27 @@ def _render_review(
         f"date: {_review_date(review)}",
         f"category: {_review_category(review)}",
         f"rating: {review.get('rating', 'unknown')}",
-        f"title: {_review_title(review)}",
-        f"verified: {_review_verified(review)}",
-        f"helpful_vote: {_review_helpful_vote(review)}",
-        f"text: {_compact_text(_review_text(review), max_review_text_chars)}",
+        f"review_title: {_review_title(review)}",
     ]
+    product_title = _product_title(review)
+    if product_title:
+        lines.append(f"product_title: {_compact_text(product_title, 220)}")
+    product_main_category = _product_main_category(review)
+    if product_main_category:
+        lines.append(f"product_main_category: {_compact_text(product_main_category, 120)}")
+    product_category_path = _product_category_path(review)
+    if product_category_path:
+        lines.append(
+            "product_category_path: "
+            + " > ".join(_compact_text(item, 80) for item in product_category_path)
+        )
+    lines.extend(
+        [
+            f"verified: {_review_verified(review)}",
+            f"helpful_vote: {_review_helpful_vote(review)}",
+            f"text: {_compact_text(_review_text(review), max_review_text_chars)}",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -205,6 +306,68 @@ def _profile_text(fold_texts: list[dict[str, Any]]) -> str:
     return FOLD_TEXT_SEPARATOR.join(
         str(fold["profile_text"]) for fold in fold_texts if fold["profile_text"]
     )
+
+
+def _format_counts(counts: Any, *, limit: int = 6) -> str:
+    if not isinstance(counts, dict) or not counts:
+        return ""
+    items = sorted(
+        counts.items(),
+        key=lambda item: (-int(item[1] or 0), str(item[0])),
+    )[:limit]
+    return ", ".join(f"{key}={value}" for key, value in items)
+
+
+def _render_summary_stats(row: dict[str, Any], *, max_chars: int = 4000) -> str:
+    stats = row.get("category_review_stats")
+    if not isinstance(stats, dict) or not stats:
+        return ""
+    split = row.get("temporal_split")
+    split = split if isinstance(split, dict) else {}
+    lines = ["=== Summary Stats ==="]
+    lines.append(
+        "construction_rows: "
+        f"{split.get('construction_row_count', row.get('review_count', 'unknown'))}; "
+        "validation_rows: "
+        f"{split.get('validation_row_count', row.get('validation_review_count', 'unknown'))}; "
+        "construction_text_reviews: "
+        f"{split.get('construction_text_review_count', 'unknown')}; "
+        "construction_ratings: "
+        f"{split.get('construction_rating_count', 'unknown')}"
+    )
+    sorted_stats = sorted(
+        stats.items(),
+        key=lambda pair: (-(pair[1].get("review_count", 0) or 0), str(pair[0])),
+    )
+    for category, item in sorted_stats[:12]:
+        if not isinstance(item, dict):
+            continue
+        mean_rating = item.get("mean_rating")
+        if isinstance(mean_rating, int | float):
+            mean_rating_text = f"{mean_rating:.2f}"
+        else:
+            mean_rating_text = "unknown"
+        parts = [
+            f"category={category}",
+            f"rows={item.get('review_count', 0)}",
+            f"text_reviews={item.get('text_review_count', 0)}",
+            f"rating_only={item.get('rating_only_count', 0)}",
+            f"mean_rating={mean_rating_text}",
+        ]
+        rating_counts = _format_counts(item.get("rating_counts"), limit=5)
+        if rating_counts:
+            parts.append(f"ratings={rating_counts}")
+        product_categories = _format_counts(item.get("product_category_counts"), limit=4)
+        if product_categories:
+            parts.append(f"product_categories={product_categories}")
+        rating_only_products = _format_counts(
+            item.get("rating_only_product_title_counts"),
+            limit=3,
+        )
+        if rating_only_products:
+            parts.append(f"rating_only_products={rating_only_products}")
+        lines.append("; ".join(parts))
+    return _compact_text("\n".join(lines), max_chars)
 
 
 def _fold_heading(fold: dict[str, Any], effective_cv_folds: int) -> str:
@@ -334,17 +497,22 @@ def build_task(
         raise ValueError(f"user {user_id}: expected reviews list")
 
     review_objects = _review_objects(raw_reviews, user_id=user_id)
-    usable_reviews = [review for review in review_objects if _has_review_evidence(review)]
-    if len(usable_reviews) < 2:
+    construction_reviews = [
+        review for review in review_objects if _has_review_evidence(review)
+    ]
+    selected_reviews = _select_high_signal_text_reviews(
+        construction_reviews,
+        max_reviews_per_user,
+    )
+    if len(selected_reviews) < 2:
         raise ValueError(
-            f"user {user_id}: fewer than 2 usable reviews with non-empty title or text "
-            f"({len(usable_reviews)} usable of {len(raw_reviews)} raw reviews)"
+            f"user {user_id}: fewer than 2 text reviews after filtering "
+            f"({len(selected_reviews)} selected text reviews of {len(raw_reviews)} "
+            "construction rows)"
         )
 
-    sorted_reviews = _sorted_reviews(usable_reviews)
-    selected_reviews = _spread_across_time(sorted_reviews, max_reviews_per_user)
-    usable_review_count = len(selected_reviews)
-    effective_cv_folds = min(cv_folds, usable_review_count)
+    selected_review_count = len(selected_reviews)
+    effective_cv_folds = min(cv_folds, selected_review_count)
     if effective_cv_folds < 2:
         raise ValueError(
             f"user {user_id}: effective_cv_folds must be at least 2, got {effective_cv_folds}"
@@ -379,25 +547,45 @@ def build_task(
                 ),
             }
         )
+    summary_text = _render_summary_stats(
+        row,
+        max_chars=max(0, min(4000, max_profile_text_chars // 4)),
+    )
+    fold_text_budget = max_profile_text_chars
+    if summary_text:
+        fold_text_budget -= len(summary_text) + len(FOLD_TEXT_SEPARATOR)
     cv_fold_texts = _limit_fold_texts_for_profile(
         cv_fold_texts,
-        max_profile_text_chars,
+        fold_text_budget,
         effective_min_support=effective_min_support,
+    )
+    fold_profile_text = _profile_text(cv_fold_texts)
+    profile_text = (
+        FOLD_TEXT_SEPARATOR.join(part for part in (summary_text, fold_profile_text) if part)
     )
 
     categories = sorted({_review_category(review) for review in selected_reviews})
+    construction_text_review_count = sum(1 for review in construction_reviews if _has_text_review(review))
+    construction_non_text_row_count = len(construction_reviews) - construction_text_review_count
     task = {
         "global_idx": global_idx,
         "task_id": f"{SOURCE}:{user_id}",
         "qid": f"amazon_user:{user_id}",
         "title": f"Amazon reviewer {user_id}",
         "source_url": f"amazon-reviews-2023://user/{user_id}",
-        "profile_text": _profile_text(cv_fold_texts),
+        "profile_text": profile_text,
         "source": SOURCE,
         "user_id": user_id,
         "review_count": len(raw_reviews),
-        "selected_review_count": usable_review_count,
+        "construction_row_count": len(construction_reviews),
+        "construction_text_review_count": construction_text_review_count,
+        "construction_non_text_row_count": construction_non_text_row_count,
+        "selected_review_count": selected_review_count,
+        "selected_text_review_count": selected_review_count,
+        "max_text_reviews_per_user": max_reviews_per_user,
+        "text_review_selection_policy": "top_high_signal_text_reviews_from_temporal_construction_split",
         "categories": categories,
+        "summary_stats": row.get("category_review_stats") or {},
         "cv_folds": cv_folds,
         "effective_cv_folds": effective_cv_folds,
         "min_support_folds": effective_min_support,
@@ -496,7 +684,7 @@ def build_amazon_collab_package(
     range_end: int,
     cv_folds: int = 3,
     min_support_folds: int = 2,
-    max_reviews_per_user: int = 90,
+    max_reviews_per_user: int = 200,
     max_review_text_chars: int = 900,
     max_profile_text_chars: int = 70000,
     all_dimensions: bool = False,
@@ -604,7 +792,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--dataset-sha256", required=True)
     parser.add_argument("--cv-folds", type=int, default=3)
     parser.add_argument("--min-support-folds", type=int, default=2)
-    parser.add_argument("--max-reviews-per-user", type=int, default=90)
+    parser.add_argument("--max-reviews-per-user", type=int, default=200)
     parser.add_argument("--max-review-text-chars", type=int, default=900)
     parser.add_argument("--max-profile-text-chars", type=int, default=70000)
     parser.add_argument("--all-dimensions", action="store_true")
