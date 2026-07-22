@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "pool": "persona/datasets/bench-dev-sample",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "tech_savviness": [
+      "Digital native",
+      "Comfortable",
+      "Cautious adopter",
+      "Reluctant",
+      "Avoidant"
+    ],
+    "risk_tolerance": [
+      "Risk-averse",
+      "Cautious",
+      "Balanced",
+      "Risk-tolerant",
+      "Risk-seeking"
+    ],
+    "age_bracket": [
+      "18-24",
+      "25-34",
+      "35-44",
+      "45-54",
+      "55-64",
+      "65-74"
+    ],
+    "english_proficiency": [
+      "Intermediate (B1-B2)",
+      "Fluent (C1-C2)",
+      "Native"
+    ]
+  },
+  "stratifyFields": [
+    "tech_savviness",
+    "risk_tolerance"
+  ],
+  "sampleSizePerValueGroup": 1
+}
