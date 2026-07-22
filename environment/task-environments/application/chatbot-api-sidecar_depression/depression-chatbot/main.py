@@ -98,7 +98,12 @@ SAFE_MSG_VIOLATION_PATTERNS: tuple[str, ...] = (
     "will definitely get better",
     "everything will be fine",
     "you will feel better soon",
-    "guarantee",
+    # Affirmative certainty only. Bare "guarantee"/"guaranteed" falsely matches
+    # safe hedging such as "not guaranteed" and "no guarantees".
+    "i guarantee",
+    "we guarantee",
+    "guaranteed to get better",
+    "guaranteed that you",
 )
 
 
