@@ -15,7 +15,7 @@ def test_resolve_health_url_defaults(monkeypatch: pytest.MonkeyPatch) -> None:
     assert svc.resolve_health_url("recai") == "http://127.0.0.1:8000"
     assert svc.resolve_health_url("finance_openbb") == "http://127.0.0.1:8901"
     assert svc.resolve_health_url("medical_assistant") == "http://127.0.0.1:8902"
-    assert svc.resolve_health_url("anxiety_support") == "http://127.0.0.1:8905"
+    assert svc.resolve_health_url("anxiety_support") == "http://127.0.0.1:8907"
     assert svc.resolve_health_url("acme_support_mcp") == "http://127.0.0.1:8903"
     assert svc.resolve_health_url("meal_planning_nutrition") == "http://127.0.0.1:8905"
 
