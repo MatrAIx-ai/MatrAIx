@@ -27,6 +27,7 @@ _SIDECAR_TASK_PATHS = {
     "finance_openbb": "application/tasks/chat_openbb",
     "medical_assistant": "application/tasks/chat_multi-agent-medical-assistant",
     "meal_planning_nutrition": "application/tasks/chat_meal-planning-nutrition",
+    "prescreening_assistant": "application/tasks/chat_prescreening-01-diabetes",
 }
 
 
@@ -114,6 +115,16 @@ def _application_for(application_id: str) -> Any:
                 "http://127.0.0.1:8905",
             ),
         )
+    if application_id == "prescreening_assistant":
+        return HTTPChatbotApplication(
+            application_id="prescreening_assistant",
+            default_context="clinical_trial_prescreening",
+            base_url=_sidecar_base_url(
+                "CHATBOT_UPSTREAM_PRESCREENING",
+                "PRESCREENING_CHATBOT_URL",
+                "http://127.0.0.1:8906",
+            ),
+        )
     raise ValueError("unsupported direct application: {}".format(application_id))
 
 
@@ -183,6 +194,7 @@ class HTTPChatbotApplication:
                 "finance_openbb": "CHATBOT_UPSTREAM_FINANCE",
                 "medical_assistant": "CHATBOT_UPSTREAM_MEDICAL",
                 "meal_planning_nutrition": "CHATBOT_API_URL",
+                "prescreening_assistant": "CHATBOT_UPSTREAM_PRESCREENING",
             }.get(self.application_id, "CHATBOT_API_URL")
             raise HTTPException(
                 status_code=503,

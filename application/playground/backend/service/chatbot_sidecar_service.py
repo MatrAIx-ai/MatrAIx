@@ -79,7 +79,7 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
         ),
         service_name="prescreening-chatbot",
         build_context="prescreening-chatbot",
-        host_port=8905,
+        host_port=8906,
         primary_env="CHATBOT_UPSTREAM_PRESCREENING",
         legacy_env="PRESCREENING_CHATBOT_URL",
     ),

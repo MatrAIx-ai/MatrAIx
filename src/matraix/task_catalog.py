@@ -110,6 +110,106 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "personalized recommendations",
         ],
     },
+    "chat_prescreening-01-diabetes": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "type 2 diabetes",
+            "A1c boundary values",
+            "insulin pump exclusion",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-02-hypertension": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "hypertension",
+            "medication count threshold",
+            "atrial fibrillation exclusion",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-03-migraine": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "episodic migraine",
+            "headache day counting",
+            "medication overuse",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-04-sleep-apnea": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "sleep apnea",
+            "CPAP adherence",
+            "inverted inclusion criterion",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-05-knee-oa": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "knee osteoarthritis",
+            "pain score window",
+            "mobility aid rules",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-06-smoking": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "smoking cessation",
+            "cigarettes per day floor",
+            "recent MI safety window",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-07-insomnia": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "insomnia",
+            "CBT-I",
+            "treated vs untreated apnea",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-08-cardiac-rehab": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "cardiac rehabilitation",
+            "event recency window",
+            "symptom trap",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-09-afib": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "atrial fibrillation screening",
+            "inverted exclusion criterion",
+            "anticoagulant vs aspirin",
+            "eligibility screening",
+        ],
+    },
+    "chat_prescreening-10-asthma": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "asthma",
+            "controller vs reliever inhaler",
+            "asthma vs COPD",
+            "eligibility screening",
+        ],
+    },
     "example-web-playwright_quote-choice": {
         "type": "web",
         "domain": DOMAIN_ARTS_CULTURE,
