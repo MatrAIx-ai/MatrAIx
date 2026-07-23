@@ -547,7 +547,11 @@ export function PersonaSamplingRail({
                 onClick={() => void handleGenerate()}
                 className={`flex h-9 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg bg-surface-high/90 text-[13px] font-medium text-text-main hover:bg-surface-high disabled:opacity-50 ${FOCUS_RING}`}
               >
-                <Sym name="auto_awesome" size={15} className="text-primary" />
+                <Sym
+                  name={generating ? "autorenew" : "auto_awesome"}
+                  size={15}
+                  className={generating ? "animate-rb-spin text-primary" : "text-primary"}
+                />
                 {generating ? "Generating…" : "Generate preview"}
               </button>
             </div>
