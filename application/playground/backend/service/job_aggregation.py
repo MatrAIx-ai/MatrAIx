@@ -3429,14 +3429,24 @@ def _cluster_text_values(values: list[str]) -> list[dict[str, Any]]:
     return ranked
 
 
-def _prose_theme_summary(answer_count: int, ranked_counts: list[dict[str, Any]]) -> str | None:
+def _prose_theme_summary(
+    answer_count: int,
+    ranked_counts: list[dict[str, Any]],
+    *,
+    distinct_count: int,
+) -> str | None:
     """Write a short narrative rollup — theme chips carry the full inventory."""
     if answer_count <= 0 or not ranked_counts:
         return None
     if len(ranked_counts) == 1:
-        return 'All {} answers converge on one theme: "{}".'.format(
+        if distinct_count == 1:
+            return 'All {} answers repeat the same response: "{}".'.format(
+                answer_count,
+                str(ranked_counts[0]["value"]),
+            )
+        return "Across {} answers, {} distinct responses share one broad theme.".format(
             answer_count,
-            str(ranked_counts[0]["value"]),
+            distinct_count,
         )
 
     primary = ranked_counts[0]
@@ -3489,13 +3499,25 @@ def _prose_theme_summary(answer_count: int, ranked_counts: list[dict[str, Any]])
 def _aggregate_textual(entries: list[dict[str, Any]]) -> dict[str, Any]:
     values = [str(entry.get("value") or "").strip() for entry in entries if str(entry.get("value") or "").strip()]
     ranked_counts = _cluster_text_values(values)
-    unique_count = len(ranked_counts)
-    # One representative sample per theme (not a global top-N dump).
-    samples = [str(item["value"]) for item in ranked_counts[:8]]
-    summary = _prose_theme_summary(len(values), ranked_counts)
+    distinct_values: list[str] = []
+    seen_values: set[str] = set()
+    for value in values:
+        normalized = _normalize_text_theme(value) or " ".join(value.lower().split())
+        if normalized in seen_values:
+            continue
+        seen_values.add(normalized)
+        distinct_values.append(value)
+    unique_count = len(distinct_values)
+    samples = distinct_values[:8]
+    summary = _prose_theme_summary(
+        len(values),
+        ranked_counts,
+        distinct_count=unique_count,
+    )
     return {
         "count": len(values),
         "uniqueCount": unique_count,
+        "themeCount": len(ranked_counts),
         "samples": samples,
         "counts": ranked_counts,
         "summary": summary,

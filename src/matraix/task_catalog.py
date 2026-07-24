@@ -110,6 +110,19 @@ APPLICATION_TASK_METADATA: dict[str, dict[str, object]] = {
             "personalized recommendations",
         ],
     },
+    "chat_synthetic-depression-support": {
+        "type": "chatbot",
+        "domain": DOMAIN_HEALTHCARE,
+        "tags": [
+            "mental health",
+            "depression support",
+            "synthetic chatbot",
+            "PHQ-9",
+            "safe messaging",
+            "crisis detection",
+            "multi turn chat",
+        ],
+    },
     "example-web-playwright_quote-choice": {
         "type": "web",
         "domain": DOMAIN_ARTS_CULTURE,
