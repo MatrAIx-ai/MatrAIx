@@ -135,6 +135,15 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="notion_plan_comparison.json",
         submission_profile="notion_plan_comparison",
     ),
+    "web-awesome-selfhosted-note-tool-comparison": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="awesome-selfhosted",
+        site_url=(
+            "https://awesome-selfhosted.net/tags/note-taking--editors.html"
+        ),
+        output_artifact="selfhosted_note_tool_comparison.json",
+        submission_profile="selfhosted_note_tool_comparison",
+    ),
     # Chatbot
     "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),

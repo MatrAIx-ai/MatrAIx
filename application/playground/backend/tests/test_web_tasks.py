@@ -38,3 +38,20 @@ def test_notion_plan_comparison_is_registered():
     assert task.site_url == "https://www.notion.com/pricing"
     assert task.output_artifact == "notion_plan_comparison.json"
     assert task.submission_profile == "notion_plan_comparison"
+
+
+def test_awesome_selfhosted_note_tool_comparison_is_registered():
+    task = get_web_eval_task("web-awesome-selfhosted-note-tool-comparison")
+
+    assert (
+        task.task_path
+        == "application/tasks/web-awesome-selfhosted-note-tool-comparison"
+    )
+    assert task.task_kind == "task"
+    assert task.site_name == "awesome-selfhosted"
+    assert (
+        task.site_url
+        == "https://awesome-selfhosted.net/tags/note-taking--editors.html"
+    )
+    assert task.output_artifact == "selfhosted_note_tool_comparison.json"
+    assert task.submission_profile == "selfhosted_note_tool_comparison"
