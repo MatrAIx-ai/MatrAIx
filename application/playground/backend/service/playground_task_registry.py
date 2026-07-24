@@ -144,6 +144,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
     ),
     # Chatbot
     "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
+    "chat_deeptutor-learning-goal": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_multi-agent-medical-assistant": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_meal-planning-nutrition": PlaygroundTaskEntry(application_type="chatbot"),
