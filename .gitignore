@@ -285,6 +285,11 @@ configs/jobs/_generated/
 plan.md
 user-simulator-chat-design.md
 
+# Starclash — regenerable local run artifacts
+application/tasks/game-starclash/scripts/_sample_output/
+environment/task-environments/application/game-starclash/scripts/_sample_output/
+tmp_arena_smoke/
+
 # Cursor IDE local config
 .cursor/
 

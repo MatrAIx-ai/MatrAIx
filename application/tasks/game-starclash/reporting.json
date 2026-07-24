@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": { "contextType": "task_outcome" },
+      "distributions": [
+        {
+          "id": "task_outcome.status_by_segment",
+          "facetKey": "outcome_status",
+          "title": "Game outcome status"
+        },
+        {
+          "id": "task_outcome.final_stars_by_segment",
+          "facetKey": "task_final_stars",
+          "title": "Final stars"
+        }
+      ],
+      "summaryAnalyses": [
+        {
+          "id": "task_outcome.explanation_by_trait",
+          "title": "How each trait segment fared and why",
+          "targetFacetKey": "outcome_explanation",
+          "groupByPersonaDimension": "dominant_trait",
+          "summaryKind": "llm_bucket_summary",
+          "instruction": "For each dominant-trait segment, summarize in 1-2 sentences how these personas fared in the match and what drove the result, so a reviewer sees how personality shaped play. Be faithful and concise; do not invent facts."
+        }
+      ]
+    },
+    {
+      "match": { "contextType": "task_reasoning_trajectory" },
+      "distributions": [
+        {
+          "id": "reasoning.event_count_by_segment",
+          "facetKey": "task_reasoning_event_count",
+          "title": "Reasoning events per persona"
+        }
+      ],
+      "summaryAnalyses": [
+        {
+          "id": "reasoning.trajectory_by_trait",
+          "title": "Reasoning trajectory by dominant trait",
+          "targetFacetKey": "task_reasoning_text",
+          "groupByPersonaDimension": "dominant_trait",
+          "summaryKind": "llm_bucket_summary",
+          "instruction": "For each dominant-trait segment, summarize in 1-2 sentences how the persona reasoned across the run (what they attended to, how they made their moves), so a reviewer sees how personality shaped decision-making. Be faithful and concise; do not invent facts."
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "reasoning.play_style_scan",
+          "title": "Play-style signal scan by trait",
+          "targetFacetKey": "task_reasoning_text",
+          "groupByPersonaDimension": "dominant_trait",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Read the persona's reasoning trajectory across the run and classify which play-style signals are present. This is a starting rubric; some signals are game-specific (duels, proximity-seeking, bluffing) and may be extended per game.",
+          "rubric": "Mark a signal true only when the reasoning text clearly states or strongly implies it.",
+          "signals": [
+            { "key": "confusion_signal", "label": "Seemed lost or contradictory about the game state", "valueType": "boolean" },
+            { "key": "engagement_signal", "label": "Seemed invested in moment-to-moment play", "valueType": "boolean" },
+            { "key": "funness_signal", "label": "Read as playful or fun rather than mechanical", "valueType": "boolean" }
+          ]
+        }
+      ]
+    }
+  ]
+}

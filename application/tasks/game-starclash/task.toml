@@ -1,0 +1,51 @@
+version = "1.0"
+artifacts = ["/app/output"]
+
+[task]
+name = "application/game-starclash"
+
+[metadata]
+difficulty = "medium"
+type = "web"
+domain = "software"
+tags = ["multi-agent", "social-simulation", "rock-paper-scissors", "persona-reasoning-styles", "reasoning-trajectory"]
+
+[solution]
+# Player-vs-bots wiring for Playground/Harbor runs. The Playground samples one
+# persona per trial; Starclash needs a full table, so run_arena.py runs that
+# sampled persona as the real player and fills the other seats with computer
+# bots (see scripts/brains.py:BayesianBotBrain). The launch service exports the
+# sampled persona id as MATRIX_STARCLASH_PLAYER_ID; when absent (e.g. the
+# oracle), "auto" makes the first crew persona the player. Harbor resolves the
+# ${VAR:-default} templates below from the launch-process environment.
+[solution.env]
+STARCLASH_PLAYER_ID = "${MATRIX_STARCLASH_PLAYER_ID:-auto}"
+STARCLASH_OPPONENT_BRAIN = "${MATRIX_STARCLASH_OPPONENT_BRAIN:-bayesian}"
+# Player brain for the sampled seat: "mock" (default, deterministic no-API oracle)
+# or "vision" for a live BrowserVisionBrain run. Model credentials are forwarded
+# from the launch environment so a vision run authenticates inside the container:
+# ANTHROPIC_API_KEY for the direct Anthropic API, or an AWS Bedrock bearer token
+# + region on Bedrock-only hosts (run_arena.py prefers Bedrock when its token is
+# present, else falls back to the direct key).
+STARCLASH_PLAYER_BRAIN = "${MATRIX_STARCLASH_PLAYER_BRAIN:-mock}"
+# Optional: "1" spawns the sampled player at the room center with bots ringed
+# around it in duel range from tick 0 (see run_arena.py --center-player). Off
+# by default, so the deterministic oracle's spawn placement is unchanged.
+STARCLASH_CENTER_PLAYER = "${MATRIX_STARCLASH_CENTER_PLAYER:-}"
+ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY:-}"
+AWS_BEARER_TOKEN_BEDROCK = "${AWS_BEARER_TOKEN_BEDROCK:-}"
+AWS_REGION = "${AWS_REGION:-}"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+definition = "application/game-starclash"
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0

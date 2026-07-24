@@ -1,0 +1,43 @@
+# Starclash live-vision batch run — the game plays itself live inside Docker.
+#
+# The sampled persona plays the game via a real screenshot -> click computer-use
+# loop over the rendered HUD (vision_brain.BrowserVisionBrain): run_arena.py
+# launches Playwright + headless Chromium *inside the task container*, renders
+# the game's own HUD, and drives it with a vision model — no external SPA. The
+# other three seats are Bayesian bots. Unlike the oracle recipe this is a
+# genuine live run that produces real game_log.json / spectator.html and a
+# batch report, reward 1.0.
+#
+# The oracle *agent* is used only as the deterministic launcher for solve.sh;
+# gameplay is selected by STARCLASH_PLAYER_BRAIN=vision, and the player seat +
+# model credentials are forwarded from the launch environment via task.toml
+# [solution.env]. Export before running (bare crew id, e.g. 0229 — NOT
+# "persona_0229"), with either a direct Anthropic key or a Bedrock bearer token:
+#
+#   export MATRIX_STARCLASH_PLAYER_BRAIN=vision
+#   export MATRIX_STARCLASH_PLAYER_ID=0229
+#   # Anthropic API:
+#   export ANTHROPIC_API_KEY=...
+#   # or, on a Bedrock-only host:
+#   export AWS_BEARER_TOKEN_BEDROCK=...        # Bedrock API key (bearer token)
+#   export AWS_REGION=us-east-1
+#   uv run harbor run -c configs/jobs/example-job-recipe/appSim-game-starclash-vision-live.yaml
+#
+# persona_path is passed as an oracle kwarg purely so the trial config records
+# the played persona for the batch-report cohort (the oracle ignores it).
+
+job_name: appSim-game-starclash-vision-live
+jobs_dir: jobs
+n_attempts: 1
+timeout_multiplier: 1.0
+n_concurrent_trials: 1
+quiet: false
+environment:
+  type: docker
+  delete: true
+agents:
+- name: oracle
+  kwargs:
+    persona_path: persona/datasets/bench-dev-sample/persona_0229.yaml
+tasks:
+- path: application/tasks/game-starclash

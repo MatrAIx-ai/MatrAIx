@@ -216,6 +216,14 @@ def build_job_aggregation(
             repo_root=repo_root,
             cache=reporting_cache,
         )
+        # Per-context-instance row index within this trial. Most tasks emit one
+        # context instance per contextType per trial, so rowKey collapses to the
+        # trial itself and grouping behaves exactly as before. Tasks that emit
+        # several instances of the same context key in one trial (e.g. one
+        # subject/persona per instance, as in a multi-agent game) get a distinct
+        # rowKey per instance so summaries/judges can group across those
+        # co-trial subjects instead of collapsing them into one bucket.
+        context_instance_index: dict[str, int] = {}
         for dimension in _load_task_stratify_fields(
             trial_dir=trial_dir,
             repo_root=repo_root,
@@ -227,6 +235,9 @@ def build_job_aggregation(
             context_key = str(context.get("key") or "").strip()
             if not context_key:
                 continue
+            instance_idx = context_instance_index.get(context_key, 0)
+            context_instance_index[context_key] = instance_idx + 1
+            row_key = "{}#{}#{}".format(trial_dir.name, context_key, instance_idx)
             resolved_summary_directives = _resolve_summary_directives(
                 context=context,
                 reporting_config=reporting_config,
@@ -318,6 +329,7 @@ def build_job_aggregation(
                 field_values.setdefault(qualified_key, []).append(
                     {
                         "trialName": trial_dir.name,
+                        "rowKey": row_key,
                         "personaId": persona_id,
                         "value": facet.get("value"),
                     }
@@ -2514,7 +2526,7 @@ def _aggregate_summary_directive(
     target_entries = [
         entry
         for entry in field_values.get(str(target_field.get("key")), [])
-        if _has_value(entry.get("value")) and entry.get("trialName") is not None
+        if _has_value(entry.get("value")) and _entry_row_key(entry) is not None
     ]
     if not target_entries:
         return None
@@ -2532,13 +2544,12 @@ def _aggregate_summary_directive(
         bucket_map["All"] = target_entries
     elif group_by_mode == "categorical":
         group_entries = {
-            str(entry.get("trialName")): _categorical_key(entry.get("value"))
+            _entry_row_key(entry): _categorical_key(entry.get("value"))
             for entry in field_values.get(str(group_by_field.get("key")), [])
-            if entry.get("trialName") is not None and _has_value(entry.get("value"))
+            if _entry_row_key(entry) is not None and _has_value(entry.get("value"))
         }
         for entry in target_entries:
-            trial_name = str(entry.get("trialName"))
-            bucket = group_entries.get(trial_name)
+            bucket = group_entries.get(_entry_row_key(entry))
             if bucket is None:
                 continue
             bucket_map.setdefault(bucket, []).append(entry)
@@ -2552,13 +2563,12 @@ def _aggregate_summary_directive(
         if not bands:
             return None
         group_entries = {
-            str(entry.get("trialName")): entry.get("value")
+            _entry_row_key(entry): entry.get("value")
             for entry in field_values.get(str(group_by_field.get("key")), [])
-            if entry.get("trialName") is not None and _has_value(entry.get("value"))
+            if _entry_row_key(entry) is not None and _has_value(entry.get("value"))
         }
         for entry in target_entries:
-            trial_name = str(entry.get("trialName"))
-            bucket = _match_numeric_band(group_entries.get(trial_name), bands)
+            bucket = _match_numeric_band(group_entries.get(_entry_row_key(entry)), bands)
             if bucket is None:
                 continue
             bucket_map.setdefault(bucket, []).append(entry)
@@ -2659,7 +2669,7 @@ def _aggregate_judge_directive(
     target_entries = [
         entry
         for entry in field_values.get(str(target_field.get("key")), [])
-        if _has_value(entry.get("value")) and entry.get("trialName") is not None
+        if _has_value(entry.get("value")) and _entry_row_key(entry) is not None
     ]
     if not target_entries:
         return None
@@ -2677,13 +2687,12 @@ def _aggregate_judge_directive(
         bucket_map["All"] = target_entries
     elif group_by_mode == "categorical":
         group_entries = {
-            str(entry.get("trialName")): _categorical_key(entry.get("value"))
+            _entry_row_key(entry): _categorical_key(entry.get("value"))
             for entry in field_values.get(str(group_by_field.get("key")), [])
-            if entry.get("trialName") is not None and _has_value(entry.get("value"))
+            if _entry_row_key(entry) is not None and _has_value(entry.get("value"))
         }
         for entry in target_entries:
-            trial_name = str(entry.get("trialName"))
-            bucket = group_entries.get(trial_name)
+            bucket = group_entries.get(_entry_row_key(entry))
             if bucket is None:
                 continue
             bucket_map.setdefault(bucket, []).append(entry)
@@ -2697,13 +2706,12 @@ def _aggregate_judge_directive(
         if not bands:
             return None
         group_entries = {
-            str(entry.get("trialName")): entry.get("value")
+            _entry_row_key(entry): entry.get("value")
             for entry in field_values.get(str(group_by_field.get("key")), [])
-            if entry.get("trialName") is not None and _has_value(entry.get("value"))
+            if _entry_row_key(entry) is not None and _has_value(entry.get("value"))
         }
         for entry in target_entries:
-            trial_name = str(entry.get("trialName"))
-            bucket = _match_numeric_band(group_entries.get(trial_name), bands)
+            bucket = _match_numeric_band(group_entries.get(_entry_row_key(entry)), bands)
             if bucket is None:
                 continue
             bucket_map.setdefault(bucket, []).append(entry)
@@ -3078,6 +3086,19 @@ def _match_numeric_band(value: Any, bands: list[dict[str, Any]]) -> str | None:
             continue
         return str(band["label"])
     return None
+
+
+def _entry_row_key(entry: dict[str, Any]) -> str | None:
+    """Join key for grouping a target facet row to its group-by facet row.
+
+    Prefers the per-context-instance ``rowKey`` (so several subjects emitted in
+    one trial group independently); falls back to ``trialName`` for artifacts
+    written before rowKey existed (one instance per trial → same behavior)."""
+    row_key = entry.get("rowKey")
+    if row_key is not None:
+        return str(row_key)
+    trial_name = entry.get("trialName")
+    return str(trial_name) if trial_name is not None else None
 
 
 def _has_value(value: Any) -> bool:

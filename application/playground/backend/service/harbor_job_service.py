@@ -1178,6 +1178,14 @@ class HarborJobService:
         with self._guard:
             self._launches[resolved_job_name] = record
 
+        # Crew-shaped web task (Starclash): pick which sampled persona plays as
+        # the real player (the rest become bots). None for every other task.
+        starclash_player_id = self._starclash_player_id(
+            task_path=task_path,
+            persona_ids=resolved_persona_ids,
+            repo_root=self.repo_root,
+        )
+
         use_local_distributed = _should_use_local_distributed_harbor(
             execution_mode=execution_mode,
             execution_plane=resolved_plane,
@@ -1217,6 +1225,7 @@ class HarborJobService:
                 chat_application_context,
                 chat_max_turns,
                 trial_profile,
+                starclash_player_id,
             )
         else:
             dispatch_kwargs = (
@@ -1230,6 +1239,7 @@ class HarborJobService:
                 chat_application_context,
                 chat_max_turns,
                 trial_profile,
+                starclash_player_id,
             )
             if resolved_plane == "remote":
                 self._executor.submit(self._dispatch_remote, *dispatch_kwargs)
@@ -1247,6 +1257,7 @@ class HarborJobService:
         chat_application_id: str | None,
         chat_application_context: str | None,
         chat_max_turns: int | None,
+        starclash_player_id: str | None = None,
         for_remote: bool = False,
     ) -> dict[str, str]:
         env = {} if for_remote else dict(os.environ)
@@ -1283,7 +1294,49 @@ class HarborJobService:
                 env["MATRIX_CHATBOT_APPLICATION_CONTEXT"] = chat_application_context
             if chat_max_turns is not None:
                 env["MATRIX_CHATBOT_MAX_TURNS"] = str(chat_max_turns)
+        if starclash_player_id:
+            # Crew-shaped web task (Starclash): the sampled persona plays as
+            # the real player and computer bots fill the other seats. task.toml
+            # [solution.env] reads this via ${MATRIX_STARCLASH_PLAYER_ID:-auto}.
+            env["MATRIX_STARCLASH_PLAYER_ID"] = starclash_player_id
         return env
+
+    @staticmethod
+    def _starclash_player_id(
+        *,
+        task_path: str,
+        persona_ids: list[str],
+        repo_root: Path,
+    ) -> str | None:
+        """Sampled persona to run as the Starclash player, or None.
+
+        Returns the first sampled persona that is actually in the task's crew
+        manifest (the crew roster is fixed by crew_manifest.yaml; a persona
+        sampled from the wider pool that isn't on the crew can't be the
+        player, so we fall back to run_arena.py's "auto" = first crew member).
+        None for non-crew tasks or when nothing matches."""
+        if not persona_ids or "game-starclash" not in task_path.replace("\\", "/"):
+            return None
+        try:
+            from harbor.utils.crew_personas import (
+                find_crew_manifest,
+                persona_paths_from_manifest,
+            )
+
+            task_dir = (repo_root / task_path).resolve()
+            manifest = find_crew_manifest(task_dir)
+            if manifest is None:
+                return None
+            crew_ids = {
+                Path(p).stem.replace("persona_", "")
+                for p in persona_paths_from_manifest(manifest)
+            }
+        except Exception:  # noqa: BLE001
+            return None
+        for pid in persona_ids:
+            if str(pid).replace("persona_", "") in crew_ids:
+                return str(pid).replace("persona_", "")
+        return None
 
     def _remote_client(self):
         if self.remote_runner_client is not None:
@@ -1305,6 +1358,7 @@ class HarborJobService:
         chat_application_context: str | None = None,
         chat_max_turns: int | None = None,
         trial_profile: str | None = None,
+        starclash_player_id: str | None = None,
     ) -> None:
         with self._guard:
             record = self._launches[job_name]
@@ -1318,6 +1372,7 @@ class HarborJobService:
             chat_application_id=chat_application_id,
             chat_application_context=chat_application_context,
             chat_max_turns=chat_max_turns,
+            starclash_player_id=starclash_player_id,
         )
         try:
             from backend.service.local_distributed_harbor import (
@@ -1363,6 +1418,7 @@ class HarborJobService:
         chat_application_context: str | None = None,
         chat_max_turns: int | None = None,
         trial_profile: str | None = None,
+        starclash_player_id: str | None = None,
     ) -> None:
         with self._guard:
             record = self._launches[job_name]
@@ -1381,6 +1437,7 @@ class HarborJobService:
             chat_application_id=chat_application_id,
             chat_application_context=chat_application_context,
             chat_max_turns=chat_max_turns,
+            starclash_player_id=starclash_player_id,
         )
         try:
             exit_code = self.command_runner(
@@ -1417,6 +1474,7 @@ class HarborJobService:
         chat_application_context: str | None = None,
         chat_max_turns: int | None = None,
         trial_profile: str | None = None,
+        starclash_player_id: str | None = None,
     ) -> None:
         del os_app_submission_profile
         with self._guard:
@@ -1431,6 +1489,7 @@ class HarborJobService:
             chat_application_id=chat_application_id,
             chat_application_context=chat_application_context,
             chat_max_turns=chat_max_turns,
+            starclash_player_id=starclash_player_id,
             for_remote=True,
         )
         payload = {

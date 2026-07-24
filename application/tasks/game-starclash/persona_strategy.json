@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [],
+  "defaultMode": "stratified",
+  "stratifyFields": [
+    "cog_detail_orientation"
+  ],
+  "dimensionFilters": {
+    "cog_detail_orientation": [
+      "Very high",
+      "High",
+      "Moderate",
+      "Low"
+    ]
+  },
+  "sampleSizePerValueGroup": 2
+}

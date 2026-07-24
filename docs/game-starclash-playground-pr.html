@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Starclash in the Playground — PR #197 status</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  :root{
+    --ink:#111827; --muted:#4b5563; --dim:#6b7280; --line:#e5e7eb;
+    --accent:#4f46e5; --good:#0f766e; --warn:#b45309; --warnbg:#fffbeb; --warnln:#f59e0b;
+    --code:#f3f4f6; --card:#f9fafb;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+    font-size:11px; line-height:1.5; margin:0;}
+  h1{font-size:22px; margin:0 0 2px;}
+  h2{font-size:14px; margin:20px 0 6px; padding-bottom:3px; border-bottom:2px solid var(--accent); color:var(--accent);}
+  h3{font-size:12px; margin:12px 0 4px;}
+  .sub{color:var(--dim); font-size:10px; margin-bottom:2px;}
+  p{margin:5px 0;}
+  code{background:var(--code); padding:1px 4px; border-radius:3px; font-family:Consolas,Menlo,monospace; font-size:10px;}
+  ul{margin:5px 0 5px 0; padding-left:18px;}
+  li{margin:2px 0;}
+  table{border-collapse:collapse; width:100%; margin:6px 0; font-size:10px;}
+  th,td{border:1px solid var(--line); padding:4px 7px; text-align:left; vertical-align:top;}
+  th{background:var(--card); font-weight:600;}
+  .pill{display:inline-block; padding:1px 7px; border-radius:10px; font-size:9px; font-weight:700; letter-spacing:.02em;}
+  .ok{background:#ecfdf5; color:var(--good); border:1px solid #99f6e4;}
+  .note{background:var(--warnbg); border:1px solid var(--warnln); border-left:4px solid var(--warnln);
+    padding:8px 11px; border-radius:5px; margin:8px 0; color:#7c4a03;}
+  .note b{color:var(--warn);}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:9px 12px; margin:6px 0;}
+  .grid{display:flex; gap:10px;}
+  .grid .card{flex:1;}
+  .kpi{font-size:20px; font-weight:800; color:var(--accent); line-height:1;}
+  .kpi small{font-size:9px; color:var(--dim); font-weight:600; display:block; margin-top:3px;}
+  .mono{font-family:Consolas,Menlo,monospace; font-size:9.5px;}
+  header{display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--ink); padding-bottom:8px;}
+  .foot{margin-top:16px; padding-top:6px; border-top:1px solid var(--line); color:var(--dim); font-size:9px;}
+  .flow{font-family:Consolas,Menlo,monospace; font-size:9.5px; background:var(--code); padding:8px 10px; border-radius:5px; white-space:pre-wrap;}
+  .chk{color:var(--good); font-weight:700;}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Starclash — Playground integration</h1>
+    <div class="sub">PR #197 · branch <code>app/game-starclash</code> · task <code>application/tasks/game-starclash</code></div>
+  </div>
+  <div style="text-align:right;">
+    <div class="pill ok">INDEPENDENT AUDIT: SOUND</div>
+    <div class="sub" style="margin-top:4px;">Generated 2026-07-18</div>
+  </div>
+</header>
+
+<h2>What this PR does</h2>
+<p>Starclash is a crew game (2–4 players share one room, move, chat, and duel at Rock-Paper-Scissors for
+stars). The Playground samples <b>one persona per trial</b>, which doesn't fill a table on its own. This PR
+makes the crew game runnable as a single-persona Playground/Harbor web task by adding a
+<b>player-vs-bots</b> mode, plus a real vision/computer-use brain, a natural end-state, and per-persona
+batch reporting.</p>
+
+<div class="note">
+  <b>⚠ Not a real multi-agent game yet.</b> In a trial, the one sampled persona is the real player;
+  <b>every other seat is a computer bot</b> (<code>BayesianBotBrain</code>), not a second sampled persona.
+  So a trial measures <i>one</i> persona's play against fixed bot opponents. Hosting several
+  <i>sampled</i> personas together in one live match (true multi-agent) requires a
+  <b>Playground orchestration change</b> — one trial that runs N persona agents in a shared game — which is
+  <b>not implemented here</b>. Comparing persona styles today is done <i>across separate sessions</i> (swap
+  the crew manifest), not within one live game.
+</div>
+
+<h2>Feature 1 — Player-vs-bots (the core of this PR)</h2>
+<table>
+  <tr><th style="width:26%;">Piece</th><th>What it does</th></tr>
+  <tr><td><code>brains.py: BayesianBotBrain</code></td><td>No-API-key, seeded (deterministic) computer opponent. Reads the <b>public</b> <code>arena_card_counts</code>, subtracts its own hand to estimate what opponents still hold, plays the expected-value-maximising counter card, accepts/declines duels by EV, and actively closes distance so duels happen.</td></tr>
+  <tr><td><code>run_arena.py</code> router</td><td>New <code>--player-id</code> / <code>--opponent-brain</code>. The named seat uses the real <code>--brain</code>; every other seat becomes a bot with a distinct seed. <code>--player-id auto</code> = first crew persona. Omitting it keeps the original all-brain behaviour (backward compatible).</td></tr>
+  <tr><td>Env + launch wiring</td><td><code>task.toml [solution.env]</code> → <code>solve.sh</code> → <code>run_arena.py</code>. The launch service (<code>harbor_job_service._starclash_player_id</code>) exports the sampled persona as the player <b>only when it is actually in the crew manifest</b>; otherwise falls back to <code>auto</code>. Returns <code>None</code> for every non-Starclash task, so nothing else is affected.</td></tr>
+  <tr><td>Default table</td><td>Default <code>crew_manifest.yaml</code> trimmed to <b>4 personas</b> → a default trial is <b>1 player + 3 bots = a full 4-seat table</b> (game max). Pinned by a test.</td></tr>
+</table>
+
+<div class="flow">MATRIX_STARCLASH_PLAYER_ID   (launch service: sampled persona if in crew, else unset)
+   └─▶ task.toml [solution.env]  STARCLASH_PLAYER_ID = ${MATRIX_STARCLASH_PLAYER_ID:-auto}
+        └─▶ solve.sh  --player-id "${STARCLASH_PLAYER_ID:-auto}"
+             └─▶ run_arena.py  → player seat = sampled persona · other seats = BayesianBotBrain</div>
+
+<h2>Feature 2 — Real vision / computer-use brain</h2>
+<p><code>vision_brain.py: BrowserVisionBrain</code> (<code>--brain vision</code>) renders each observation as an HTML
+HUD, loads it in a <b>real headless Chromium via Playwright</b>, screenshots it, and asks Claude
+(vision + forced tool-use) to click/type. The action is read back from the page's own
+<code>window.__lastAction</code> — genuine browser-use, not a JSON shortcut. Authenticates with a direct
+<code>ANTHROPIC_API_KEY</code> <b>or</b> an Amazon Bedrock bearer token (<code>AWS_BEARER_TOKEN_BEDROCK</code> +
+<code>AWS_REGION</code>), defaulting to <b>Claude Sonnet</b> (<code>us.anthropic.claude-sonnet-4-5</code>) on Bedrock.</p>
+
+<h2>Feature 3 — Natural end-state &amp; per-persona reporting</h2>
+<ul>
+  <li><b>engine.py:</b> a game now ends the moment every active persona has emptied its hand
+  (<code>termination_reason: all_cards_played</code>) — the intended end state — instead of burning the whole
+  tick budget.</li>
+  <li><b>reporting.json / verifier:</b> the verifier writes one <code>task_outcome</code> + one
+  <code>task_reasoning_trajectory</code> context <b>per crew persona</b>, grouped by <code>dominant_trait</code>, so
+  the batch report can compare outcomes and reasoning style across trait groups.</li>
+</ul>
+
+<h2>Verification — live runs I executed</h2>
+<div class="grid">
+  <div class="card"><div class="kpi">6<small>battles · live <b>vision/Sonnet</b> CUA run<br>(Bedrock, real Chromium, 3m35s)</small></div></div>
+  <div class="card"><div class="kpi">11/12<small>player reasoning lines are<br>screenshot-grounded (HUD-aware)</small></div></div>
+  <div class="card"><div class="kpi">22<small>ticks → <code>all_cards_played</code><br>oracle 4-seat run (mock + 3 bots)</small></div></div>
+  <div class="card"><div class="kpi">25<small>unit tests pass<br>14 bot + 11 state verifier</small></div></div>
+</div>
+<p><b>Live computer-use run</b> (persona <code>0229</code> on <code>--brain vision</code> via Bedrock Sonnet +
+3 Bayesian bots, seed 42, 16 ticks): <b>exit 0</b>, 6 battles, player won with 5 stars, one persona
+eliminated, valid self-contained <code>spectator.html</code>. It took <b>3m35s</b> of real API round-trips
+(not an instant mock), and <b>11 of 12</b> of the player's recorded reasoning lines reference visual HUD
+elements it could only know from a screenshot — e.g. <span class="mono">"clicking the MOVE button and
+selecting a destination tile"</span>, <span class="mono">"confirming with the center reticle"</span> —
+confirming genuine screenshot-and-click browser-use (Playwright), distinct from the bots' Bayesian lines and
+from any JSON fallback.</p>
+
+<div class="note">
+  <b>⚠ Playground-UI launch on this host.</b> The task's computer-use game logic is validated live (above).
+  Launching the <i>same</i> task through the Playground <b>backend UI</b> on this Windows machine failed
+  before any trial started with <code>WinError 2</code>: the backend's harbor launcher resolves a Unix
+  <code>.venv/bin/harbor</code> path and falls back to a bare <code>harbor</code> executable not on the
+  Windows <code>PATH</code>. This is a <b>pre-existing backend/environment issue, unrelated to the
+  game-starclash task code</b> (the task never executed in that path), and is out of scope for this PR. The
+  task <i>is</i> correctly discovered and launchable via <code>/api/web-eval/tasks</code>; a
+  Unix/CI host with <code>harbor</code> on PATH (or <code>MATRIX_HARBOR_COMMAND</code> set) runs the full
+  trial path.
+</div>
+
+<h2>Independent audit result</h2>
+<p>A separate verifier agent adversarially audited every change against the task's own rules. <b>Verdict:
+SOUND — no correctness bug.</b> The highest-risk check passed decisively:</p>
+<table>
+  <tr><th style="width:34%;">Check</th><th>Result</th></tr>
+  <tr><td>Bayesian posterior double-subtract</td><td><span class="chk">PASS</span> — <code>arena_card_counts</code> includes the bot's own cards, so subtracting own hand once is correct (not a bug).</td></tr>
+  <tr><td>Counter map ↔ engine RPS rules</td><td><span class="chk">PASS</span> — <code>_COUNTER</code> is the correct inverse of <code>engine._BEATS</code>.</td></tr>
+  <tr><td>Observation field names</td><td><span class="chk">PASS</span> — every field the bot reads is produced by <code>observations.py</code> (no silent degrade).</td></tr>
+  <tr><td>Env-wiring precedence &amp; task isolation</td><td><span class="chk">PASS</span> — CLI flag beats env; other tasks return <code>None</code>, unaffected.</td></tr>
+  <tr><td>Natural end-state edge cases</td><td><span class="chk">PASS</span> — <code>all_cards_played</code> can't fire on an empty active roster; <code>run()</code> matches <code>is_done()</code>.</td></tr>
+  <tr><td>Backward compatibility (no <code>--player-id</code>)</td><td><span class="chk">PASS</span> — identical to prior all-brain behaviour.</td></tr>
+  <tr><td>Task ↔ Docker script-copy parity</td><td><span class="chk">PASS</span> — all script + input copies byte-identical (the Docker copy is what actually runs).</td></tr>
+</table>
+<p>The one deviation the audit flagged — default roster was 5 seats vs. the intended max of 4 — has been
+<b>fixed in this update</b>: the manifest is trimmed to 4 and a test pins it.</p>
+
+<h2>Status summary</h2>
+<table>
+  <tr><th style="width:52%;">Item</th><th>Status</th></tr>
+  <tr><td>One sampled persona plays a full game vs. bots</td><td><span class="pill ok">DONE</span></td></tr>
+  <tr><td>Bayesian bots over public card counts, deterministic</td><td><span class="pill ok">DONE</span></td></tr>
+  <tr><td>Default 4-seat table (1 player + 3 bots)</td><td><span class="pill ok">DONE</span></td></tr>
+  <tr><td>Real vision/CUA brain (Sonnet via Bedrock), live-verified</td><td><span class="pill ok">DONE</span></td></tr>
+  <tr><td>Task discoverable/launchable as a Playground web task</td><td><span class="pill ok">DONE</span></td></tr>
+  <tr><td>Multiple <i>sampled</i> personas in one live match (true multi-agent)</td><td><span class="pill" style="background:#fef3c7;color:#92400e;border:1px solid #fbbf24;">NOT YET — needs Playground orchestration change</span></td></tr>
+</table>
+
+<div class="foot">
+  game-starclash · PR #197 · other players are computer bots pending a Playground multi-agent update ·
+  metrics from runs on seed 42, default 4-seat crew manifest.
+</div>
+
+</body>
+</html>
