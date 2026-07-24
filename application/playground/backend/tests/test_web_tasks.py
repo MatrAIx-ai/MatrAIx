@@ -38,3 +38,14 @@ def test_notion_plan_comparison_is_registered():
     assert task.site_url == "https://www.notion.com/pricing"
     assert task.output_artifact == "notion_plan_comparison.json"
     assert task.submission_profile == "notion_plan_comparison"
+
+
+def test_webmd_symptom_resource_choice_is_registered():
+    task = get_web_eval_task("web-webmd-symptom-resource-choice")
+
+    assert task.task_path == "application/tasks/web-webmd_symptom-resource-choice"
+    assert task.task_kind == "task"
+    assert task.site_name == "WebMD"
+    assert task.site_url == "https://www.webmd.com/"
+    assert task.output_artifact == "symptom_resource_choice.json"
+    assert task.submission_profile == "symptom_resource_choice"

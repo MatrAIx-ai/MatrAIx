@@ -999,28 +999,51 @@ def _enrich_survey_debrief_from_events(
     )
 
 
+def _infer_web_output_artifact(output_dir: Path) -> str | None:
+    skip = {
+        "survey_result.json",
+        "survey_responses.json",
+        "transcript.json",
+        "user_feedback.json",
+    }
+    for path in sorted(output_dir.glob("*.json")):
+        if path.name not in skip:
+            return path.name
+    return None
+
+
 def _resolve_web_eval_task(
     repo_root: Path,
     trial_dir: Path,
     output_dir: Path,
 ) -> "WebEvalTask":
+    from dataclasses import replace
+
     from backend.service.web_tasks import list_web_eval_tasks
     from backend.service.web_types import WebEvalTask
 
     task_rel = _task_path_from_trial(trial_dir)
+    resolved: WebEvalTask | None = None
     if task_rel:
         folder = Path(task_rel.replace("\\", "/")).name
         for task in list_web_eval_tasks():
             if Path(str(task.task_path)).name == folder:
-                return task
-    artifact_name = next(
-        (
-            path.name
-            for path in sorted(output_dir.glob("*.json"))
-            if path.name not in {"survey_result.json", "survey_responses.json", "transcript.json"}
-        ),
-        "web_result.json",
-    )
+                resolved = task
+                break
+
+    inferred = _infer_web_output_artifact(output_dir)
+    if resolved is not None:
+        artifact_name = resolved.output_artifact
+        if not (output_dir / artifact_name).is_file():
+            if inferred is not None:
+                artifact_name = inferred
+            elif artifact_name in {"", "web_result.json"}:
+                artifact_name = inferred or artifact_name
+        if artifact_name != resolved.output_artifact:
+            resolved = replace(resolved, output_artifact=artifact_name)
+        return resolved
+
+    artifact_name = inferred or "web_result.json"
     return WebEvalTask(
         id="harbor_web",
         title="Website task",

@@ -1,0 +1,273 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "task_outcome"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "task_outcome.explanation_by_status",
+          "title": "Outcome explanation by status",
+          "targetFacetKey": "outcome_explanation",
+          "groupByFacetKey": "outcome_status",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "task_outcome.web_failure_signal_scan",
+          "title": "Web failure signal scan",
+          "targetFacetKey": "outcome_explanation",
+          "groupByFacetKey": "primary_failure_reason",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Read each outcome explanation and classify which reusable web-execution failure signals are explicitly present.",
+          "rubric": "Mark a signal true only when the explanation clearly states or strongly implies that signal.",
+          "signals": [
+            {
+              "key": "navigation_signal",
+              "label": "Navigation failure",
+              "valueType": "boolean"
+            },
+            {
+              "key": "search_signal",
+              "label": "Search or filter misuse",
+              "valueType": "boolean"
+            },
+            {
+              "key": "live_site_signal",
+              "label": "Live-site brittleness",
+              "valueType": "boolean"
+            },
+            {
+              "key": "webmd_access_signal",
+              "label": "WebMD access or blocking issue",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "web_interaction"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "web_interaction.notes_by_path_type",
+          "title": "Web interaction notes by path type",
+          "targetFacetKey": "web_interaction_notes",
+          "groupByFacetKey": "navigation_path_type",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "web_artifact"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "web_artifact.evidence_by_status",
+          "title": "Web artifact evidence by status",
+          "targetFacetKey": "artifact_evidence",
+          "groupByFacetKey": "artifact_status",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "distributions": [
+        {
+          "id": "web_artifact.status_by_segment",
+          "facetKey": "artifact_status",
+          "title": "Artifact status"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "decision"
+      },
+      "distributions": [
+        {
+          "id": "decision.subject_by_segment",
+          "facetKey": "decision_subject_label",
+          "title": "Selected article"
+        },
+        {
+          "id": "decision.basis_by_segment",
+          "facetKey": "basis_primary",
+          "title": "Primary basis"
+        },
+        {
+          "id": "decision.topic_focus_by_segment",
+          "facetKey": "task_topic_focus",
+          "title": "Selected article topic focus"
+        }
+      ],
+      "summaryAnalyses": [
+        {
+          "id": "decision.reason_by_outcome",
+          "title": "Reason by decision outcome",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "decision_outcome",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        },
+        {
+          "id": "decision.reason_by_basis_primary",
+          "title": "Reason by primary basis",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "basis_primary",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "decision.reason_signal_scan",
+          "title": "Decision reason signal scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "basis_primary",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Read the persona's reason for choosing a WebMD article and classify which reusable decision signals are explicitly present.",
+          "rubric": "Mark a signal true only when the reason clearly states or strongly implies that signal. Do not infer medical correctness.",
+          "signals": [
+            {
+              "key": "fit_signal",
+              "label": "Symptom or concern fit",
+              "valueType": "boolean"
+            },
+            {
+              "key": "trust_signal",
+              "label": "Trust or source credibility",
+              "valueType": "boolean"
+            },
+            {
+              "key": "quality_signal",
+              "label": "Clarity or depth of explanation",
+              "valueType": "boolean"
+            },
+            {
+              "key": "convenience_signal",
+              "label": "Actionable next steps",
+              "valueType": "boolean"
+            },
+            {
+              "key": "seek_care_signal",
+              "label": "When-to-seek-care awareness",
+              "valueType": "boolean"
+            },
+            {
+              "key": "overconfidence_signal",
+              "label": "Overconfident self-diagnosis language",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "decision_process"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "decision_process.notes_by_style",
+          "title": "Comparison notes by exploration style",
+          "targetFacetKey": "comparison_notes",
+          "groupByFacetKey": "exploration_style",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "distributions": [
+        {
+          "id": "decision_process.style_by_segment",
+          "facetKey": "exploration_style",
+          "title": "Exploration style"
+        },
+        {
+          "id": "decision_process.options_count_by_segment",
+          "facetKey": "options_considered_count",
+          "title": "Options considered count"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "user_feedback"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "user_feedback.reason_by_need_satisfaction",
+          "title": "Feedback reason by need satisfaction",
+          "targetFacetKey": "feedback_reason",
+          "groupByFacetKey": "need_constraint_satisfaction",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "distributions": [
+        {
+          "id": "user_feedback.rating_by_segment",
+          "facetKey": "overall_experience_rating",
+          "title": "Overall experience rating"
+        },
+        {
+          "id": "user_feedback.trust_by_segment",
+          "facetKey": "trust_level",
+          "title": "Trust in WebMD content"
+        },
+        {
+          "id": "user_feedback.health_literacy_by_segment",
+          "facetKey": "task_health_literacy_fit",
+          "title": "Health literacy fit"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "user_feedback.reason_signal_scan",
+          "title": "Feedback signal scan",
+          "targetFacetKey": "feedback_reason",
+          "groupByFacetKey": "personal_preference_satisfaction",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Read the persona's feedback after browsing WebMD and classify which reusable subjective signals are explicitly present.",
+          "rubric": "Mark a signal true only when the feedback clearly states or strongly implies that signal.",
+          "signals": [
+            {
+              "key": "fit_signal",
+              "label": "Need or preference fit",
+              "valueType": "boolean"
+            },
+            {
+              "key": "trust_signal",
+              "label": "Trust or confidence",
+              "valueType": "boolean"
+            },
+            {
+              "key": "effort_signal",
+              "label": "Low or high effort",
+              "valueType": "boolean"
+            },
+            {
+              "key": "clarity_signal",
+              "label": "Clear next step or seek-care clarity",
+              "valueType": "boolean"
+            },
+            {
+              "key": "information_gap_signal",
+              "label": "Information gap or overload",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

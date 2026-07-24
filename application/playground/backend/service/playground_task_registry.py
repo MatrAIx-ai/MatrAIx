@@ -135,6 +135,13 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="notion_plan_comparison.json",
         submission_profile="notion_plan_comparison",
     ),
+    "web-webmd_symptom-resource-choice": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="WebMD",
+        site_url="https://www.webmd.com/",
+        output_artifact="symptom_resource_choice.json",
+        submission_profile="symptom_resource_choice",
+    ),
     # Chatbot
     "chat_recai": PlaygroundTaskEntry(application_type="chatbot"),
     "chat_openbb": PlaygroundTaskEntry(application_type="chatbot"),

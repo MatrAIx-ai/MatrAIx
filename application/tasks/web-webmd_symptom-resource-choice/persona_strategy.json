@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "pool": "persona/datasets/bench-dev-sample",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "trust_level": [
+      "Trusting",
+      "Skeptical",
+      "Verifying",
+      "Hostile"
+    ],
+    "safety_sensitivity": [
+      "Benign",
+      "Sensitive personal",
+      "High-stakes (medical/legal/financial)"
+    ],
+    "age_bracket": [
+      "18-24",
+      "25-34",
+      "35-44",
+      "45-54",
+      "55-64",
+      "65-74"
+    ],
+    "english_proficiency": [
+      "Basic (A1-A2)",
+      "Intermediate (B1-B2)",
+      "Fluent (C1-C2)",
+      "Native"
+    ]
+  },
+  "stratifyFields": [
+    "trust_level",
+    "safety_sensitivity"
+  ],
+  "sampleSizePerValueGroup": 1
+}

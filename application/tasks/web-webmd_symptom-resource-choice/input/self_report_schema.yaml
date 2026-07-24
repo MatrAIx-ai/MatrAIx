@@ -1,0 +1,44 @@
+artifactName: user_feedback.json
+instructions: |
+  Reflect honestly after choosing a WebMD article for your health concern.
+  Base your answers on the article you selected, the alternatives you compared,
+  and how the browsing experience felt — not on whether a doctor would agree
+  with your choice.
+fields:
+  - key: needConstraintSatisfaction
+    prompt: How well did the selected article address the health concern or symptom you brought to the task?
+    kind: enum
+    choices: ["yes", "partially", "no"]
+  - key: personalPreferenceSatisfaction
+    prompt: How well did the selected article match your preferences for tone, depth, and type of information?
+    kind: enum
+    choices: ["yes", "partially", "no"]
+  - key: overallExperienceRating
+    prompt: Overall, how would you rate the WebMD browsing and comparison experience from 1 to 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
+    explanation:
+      key: reason
+      prompt: Briefly explain the rating in your own voice.
+  - key: trustLevel
+    prompt: How much did you trust the health information on WebMD during this task, from 1 to 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
+    required: false
+  - key: effortRating
+    prompt: "Optional: how effortful did finding and comparing articles feel from 1 to 10, where higher means more effort?"
+    kind: integer
+    minimum: 1
+    maximum: 10
+    required: false
+  - key: clarityOfNextStep
+    prompt: "Optional: after reading, did you feel clearer about sensible next steps (including when professional care might be appropriate)?"
+    kind: boolean
+    required: false
+  - key: taskHealthLiteracyFit
+    prompt: "Optional: was the selected article written at a level that felt right for you — not too basic, not too technical?"
+    kind: enum
+    choices: ["yes", "partially", "no"]
+    required: false
