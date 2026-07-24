@@ -35,9 +35,12 @@ names one of the **9 labeled test cases** in `tests/ground_truth.json`
 deterministic ground truth.
 
 Known limitation: the stock chat harness does not yet tag a trial with a case
-id, so the label check only engages for runners that pass one (transcript
-`caseId`/`personaId` or the `MATRIX_TRIAL_CASE_ID` env var); otherwise trials
-verify structurally and report `partially_resolved`. Each case in
+id, so the extra label check only engages for runners that pass one (transcript
+`caseId`/`personaId` or the `MATRIX_TRIAL_CASE_ID` env var). Every trial is
+scored first on what the transcript alone shows: the screener must ask about
+every applicable criterion before concluding, and its verdict must follow from
+the criterion lists it reported. A persona run with no pinned case is therefore
+scored `resolved`/`objective_check` on its own merits. Each case in
 `tests/ground_truth.json` carries its full medical `profile` (including the
 deliberate boundary values), so a case-bound persona cohort can be
 materialized from it once the binding design is agreed.
