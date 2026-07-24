@@ -37,6 +37,23 @@
       ]
     },
     {
+      "match": { "contextType": "conversation_summary" },
+      "distributions": [
+        {
+          "id": "conversation_summary.path_by_segment",
+          "facetKey": "conversation_path",
+          "title": "Conversation path",
+          "groupByPersonaDimensions": ["age_bracket", "tech_savviness", "values_priority"]
+        },
+        {
+          "id": "conversation_summary.questions_by_segment",
+          "facetKey": "clarification_question_count",
+          "title": "Screening question count",
+          "groupByPersonaDimensions": ["age_bracket", "tech_savviness", "values_priority"]
+        }
+      ]
+    },
+    {
       "match": { "contextType": "user_feedback" },
       "distributions": [
         {
