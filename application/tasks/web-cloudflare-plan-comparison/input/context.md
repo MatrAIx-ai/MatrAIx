@@ -1,8 +1,8 @@
 # Task context
 
-Imagine that you are responsible for recommending a Cloudflare **Network &
-CDN** plan for a public-facing website at an organization matching the
-organization type or size represented in your work context.
+You are responsible for recommending a Cloudflare **Network & CDN** plan for a
+public-facing website. Use the organization type or size in your work context
+when deciding which plan fits best.
 
 Browse the public pricing page at https://www.cloudflare.com/plans/ as
 yourself. Compare the Free, Pro, Business, and Contract plans. Let your
