@@ -1,0 +1,1937 @@
+#!/usr/bin/env python3
+"""Extract Stack Overflow personas with manifest-defined structured output.
+
+V3 uses ``schema/dimension_chunks_finer.jsonl`` by default. The
+safe default is a CPU-only dry run; pass ``--execute`` to load vLLM and run
+inference.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import math
+import os
+import re
+import sys
+import time
+import unicodedata
+from collections import OrderedDict
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Iterator, Sequence
+
+try:
+    from persona.human_extraction.scripts import (
+        extract_personas_stackoverflow_vllm_v2 as _shared_policy,
+    )
+except ModuleNotFoundError:  # Direct script execution adds this directory to sys.path.
+    import extract_personas_stackoverflow_vllm_v2 as _shared_policy
+
+
+def find_repo_root(script_path: Path) -> Path:
+    script_dir = script_path.resolve().parent
+    for candidate in (script_dir, *script_dir.parents):
+        if (candidate / "persona" / "schema" / "dimensions.json").is_file():
+            return candidate
+    raise RuntimeError(
+        "Could not find the MatrAIx repository root above "
+        f"{script_dir}; expected persona/schema/dimensions.json"
+    )
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+HUMAN_EXTRACTION_ROOT = REPO_ROOT / "persona" / "human_extraction"
+DEFAULT_SURVEY_ROOT = HUMAN_EXTRACTION_ROOT / "data" / "stackoverflow_survey"
+DIMENSION_CHUNKS_JSONL = HUMAN_EXTRACTION_ROOT / "schema" / "dimension_chunks_finer.jsonl"
+
+EXTRACTOR_VERSION = "stackoverflow_vllm_v3"
+
+SURVEY_FILES = {
+    2023: "2023/results_2023_completeness_60.csv",
+    2024: "2024/results_2024_completeness_60_attention.csv",
+    2025: "2025/results_2025_completeness_60.csv",
+}
+MAPPING_FILES = {
+    2023: "2023/stackoverflow_column_mapping_2023.csv",
+    2024: "2024/stackoverflow_column_mapping_2024.csv",
+    2025: "2025/stackoverflow_column_mapping_2025.csv",
+}
+
+STACKOVERFLOW_2025_AI_STATUS_TO_VALUE = {
+    "AIToolCurrently mostly AI": "Currently mostly AI-assisted",
+    "AIToolCurrently partially AI": "Currently partially AI-assisted",
+    "AIToolPlan to mostly use AI": "Plans mostly AI use",
+    "AIToolPlan to partially use AI": "Plans partial AI use",
+    "AIToolDon't plan to use AI for this task": "Does not plan AI use",
+}
+STACKOVERFLOW_2025_AI_VALUE_PRIORITY = {
+    "Currently mostly AI-assisted": 5,
+    "Currently partially AI-assisted": 4,
+    "Plans mostly AI use": 3,
+    "Plans partial AI use": 2,
+    "Does not plan AI use": 1,
+}
+STACKOVERFLOW_2025_AI_TASK_TO_FIELD = {
+    "Writing code": "ai_task_code_generation",
+    "Debugging or fixing code": "ai_task_debugging_fixing",
+    "Testing code": "ai_task_testing",
+    "Committing and reviewing code": "ai_task_code_review",
+    "Documenting code": "ai_task_documentation",
+    "Creating or maintaining documentation": "ai_task_documentation",
+    "Learning about a codebase": "ai_task_codebase_learning",
+    "Project planning": "ai_task_project_planning",
+    "Deployment and monitoring": "ai_task_deployment_monitoring",
+    "Search for answers": "ai_task_search_answers",
+    "Learning new concepts or technologies": "ai_task_learning_concepts",
+    "Predictive analytics": "ai_task_data_generation_analytics",
+    "Generating content or synthetic data": "ai_task_data_generation_analytics",
+}
+STACKOVERFLOW_2025_AI_TASK_FIELD_ORDER = tuple(
+    dict.fromkeys(STACKOVERFLOW_2025_AI_TASK_TO_FIELD.values())
+)
+STACKOVERFLOW_2025_AI_TASK_FIELD_IDS = frozenset(
+    STACKOVERFLOW_2025_AI_TASK_FIELD_ORDER
+)
+AI_HISTORY_COLUMNS = (
+    "AISearchDevHaveWorkedWith",
+    "AISearchHaveWorkedWith",
+    "AIDevHaveWorkedWith",
+)
+AISELECT_ALLOWED_AGENT_FIELDS = frozenset(
+    {
+        "coding_agent_usage_frequency",
+        "coding_agent_workflow_impact",
+        "coding_agent_failure_tolerance",
+    }
+)
+AISELECT_UNRELATED_FIELD_IDS = frozenset(
+    {
+        "human_help_boundary_for_ai_coding",
+        "future_developer_skill_belief",
+    }
+)
+STACKOVERFLOW_2025_RANK_FIELD_MAP = {
+    "TechEndorse_1": ("coding_tool_ai_capability_importance", "importance"),
+    "TechEndorse_3": ("coding_tool_api_completeness_importance", "importance"),
+    "TechEndorse_8": (
+        "coding_tool_reliability_latency_importance",
+        "importance",
+    ),
+    "TechEndorse_6": ("coding_tool_open_source_importance", "importance"),
+    "TechOppose_9": ("coding_tool_security_privacy_blocker", "blocker"),
+    "TechOppose_16": ("coding_tool_ethics_blocker", "blocker"),
+    "TechOppose_11": ("coding_tool_alternative_sensitivity", "blocker"),
+    "TechOppose_13": ("coding_tool_obsolescence_blocker", "blocker"),
+}
+STACKOVERFLOW_2025_JOB_SAT_FIELD_MAP = {
+    "JobSatPoints_2": "val_independence",
+    "JobSatPoints_3": "val_community",
+    "JobSatPoints_6": "val_personal_growth",
+    "JobSatPoints_8": "val_security_stability",
+    "JobSatPoints_13": "val_recognition",
+    "JobSatPoints_14": "val_recognition",
+}
+STACKOVERFLOW_2025_SO_ACTION_STYLE_MAP = {
+    "SO_Actions_1": "Reads / searches only",
+    "SO_Actions_4": "Reads / searches only",
+    "SO_Actions_3": "Votes / bookmarks",
+    "SO_Actions_7": "Votes / bookmarks",
+    "SO_Actions_16": "Votes / bookmarks",
+    "SO_Actions_9": "Comments / discusses",
+    "SO_Actions_10": "Comments / discusses",
+    "SO_Actions_5": "Asks questions",
+    "SO_Actions_6": "Answers questions",
+}
+SOFT_COMPLETION_PREFIXES = (
+    "trait_",
+    "cog_",
+    "val_",
+    "schwartz_",
+    "sdt_",
+    "need_",
+    "big5_",
+    "bfi2_",
+    "mft_",
+    "interpersonal_",
+)
+SOFT_COMPLETION_FIELD_IDS = frozenset(
+    {
+        "decision_style",
+        "emotional_state",
+        "learning_style",
+    }
+)
+ORGANIZATION_LEVEL_COLUMNS = frozenset(
+    {"OrgSize", "ProfessionalCloud", "ProfessionalTech"}
+)
+PERSONAL_PRACTICE_FIELD_IDS = frozenset(
+    {
+        "habit_backing_up_files",
+        "code_testing_approach",
+        "code_observability_habit",
+        "debugging_strategy",
+        "codebase_onboarding_style",
+    }
+)
+
+DEFAULT_MODEL = "Qwen/Qwen3.6-35B-A3B"
+DEFAULT_OUTPUT_TEMPLATE = "extraction_stackoverflow_v3_{year}.jsonl"
+MISSING_TOKENS = {"", "na", "n/a", "none", "nan", "null", "<na>"}
+MAX_PROFILE_CHARS = 36_000
+MAX_EVIDENCE_CHARS = 1_200
+CSV_FIELD_SIZE_LIMIT = 100_000_000
+BARE_NUMERIC_EVIDENCE_PATTERN = re.compile(
+    r"[+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:\s*%)?\Z"
+)
+BARE_CATEGORICAL_EVIDENCE = frozenset(
+    {"yes", "no", "employed", "true", "false"}
+)
+EVIDENCE_SOURCE_CITATION_PATTERN = re.compile(
+    r"(?:^|[;\n]\s*)([A-Za-z][A-Za-z0-9_']*(?: [A-Za-z][A-Za-z0-9_']*)*)"
+    r"\s*(?==| - )"
+)
+EVIDENCE_META_REASONING_PATTERN = re.compile(
+    r"\b(?:i will|i'll|let's|let me|wait|actually|re-?evaluat(?:e|ing|ion)|re-read)\b"
+    r"|\b(?:the\s+)?prompt(?:['’]s)?\s+"
+    r"(?:says|states|instructs|requires|asks|allows|guidance|instructions?)\b"
+    r"|\b(?:i\s+(?:must|should)\s+omit|should\s+be\s+omitted)\b"
+    r"|\b(?:unsupported\s+dimension|zero\s+evidence)\b",
+    re.IGNORECASE,
+)
+ASSIGNMENT_TYPES = (
+    "direct",
+    "structured_claim",
+    "summary_inference",
+    "unsupported",
+)
+FIELD_KEYS = frozenset(
+    {
+        "field_id",
+        "value",
+        "confidence",
+        "evidence",
+        "assignment_type",
+    }
+)
+
+
+@dataclass(frozen=True)
+class DimensionChunk:
+    chunk_id: str
+    label: str
+    description: str
+    source_categories: tuple[str, ...]
+    dimensions: tuple[dict[str, Any], ...]
+
+    @property
+    def dimension_ids(self) -> tuple[str, ...]:
+        return tuple(dimension["id"] for dimension in self.dimensions)
+
+
+@dataclass(frozen=True)
+class DimensionManifest:
+    version: str
+    source_catalog_sha256: str
+    chunks: tuple[DimensionChunk, ...]
+
+
+@dataclass
+class YearWork:
+    year: int
+    survey_path: Path
+    mapping: dict[str, dict[str, str]]
+    output_path: Path
+    completed: set[int]
+    pending_count: int
+
+
+def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--year",
+        choices=("all", "2023", "2024", "2025"),
+        default="2025",
+        help="Survey year to process (default: 2025).",
+    )
+    parser.add_argument("--survey-root", type=Path, default=DEFAULT_SURVEY_ROOT)
+    parser.add_argument("--model", default=os.environ.get("VLLM_MODEL", DEFAULT_MODEL))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Output JSONL path; requires one specific year.",
+    )
+    parser.add_argument("--start-row", type=int, default=0)
+    parser.add_argument(
+        "--limit", type=int, default=None, help="Maximum rows after --start-row."
+    )
+    parser.add_argument(
+        "--batch-profiles",
+        type=int,
+        default=16,
+        help="Respondents per same-schema vLLM call/checkpoint.",
+    )
+    parser.add_argument("--max-tokens", type=int, default=8192)
+    parser.add_argument("--max-model-len", type=int, default=32768)
+    parser.add_argument("--max-num-seqs", type=int, default=128)
+    parser.add_argument("--dtype", default="bfloat16")
+    parser.add_argument("--gpu-memory-utilization", type=float, default=0.90)
+    parser.add_argument("--tensor-parallel-size", type=int, default=1)
+    parser.add_argument("--pipeline-parallel-size", type=int, default=1)
+    parser.add_argument(
+        "--distributed-executor-backend",
+        choices=("auto", "mp", "ray"),
+        default="auto",
+        help="vLLM worker backend; 'auto' uses vLLM's default.",
+    )
+    parser.add_argument(
+        "--quantization", default="none", help="vLLM method, or 'none'."
+    )
+    parser.add_argument("--download-dir", type=Path, default=None)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--overwrite", action="store_true", help="Replace output instead of resuming."
+    )
+    parser.add_argument(
+        "--execute",
+        action="store_true",
+        help="Load vLLM and extract; otherwise perform a GPU-free dry run.",
+    )
+    args = parser.parse_args(argv)
+
+    positive = {
+        "--batch-profiles": args.batch_profiles,
+        "--max-tokens": args.max_tokens,
+        "--max-model-len": args.max_model_len,
+        "--max-num-seqs": args.max_num_seqs,
+        "--tensor-parallel-size": args.tensor_parallel_size,
+        "--pipeline-parallel-size": args.pipeline_parallel_size,
+    }
+    for name, value in positive.items():
+        if value < 1:
+            parser.error(f"{name} must be at least 1")
+    if args.start_row < 0:
+        parser.error("--start-row must be at least 0")
+    if args.limit is not None and args.limit < 1:
+        parser.error("--limit must be at least 1")
+    if not 0 < args.gpu_memory_utilization <= 1:
+        parser.error("--gpu-memory-utilization must be in (0, 1]")
+    if args.output is not None and args.year == "all":
+        parser.error("--output requires one specific --year")
+    return args
+
+
+def requested_years(value: str) -> list[int]:
+    return sorted(SURVEY_FILES) if value == "all" else [int(value)]
+
+
+def load_dimension_manifest(
+    manifest_path: Path = DIMENSION_CHUNKS_JSONL,
+) -> DimensionManifest:
+    """Load the checked-in chunk manifest."""
+    records = [
+        json.loads(line)
+        for line in manifest_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    if not records:
+        raise ValueError(f"chunk manifest is empty: {manifest_path}")
+
+    context = records[0]["manifest_context"]
+    chunks = tuple(
+        DimensionChunk(
+            chunk_id=record["chunk_id"],
+            label=record["label"],
+            description=record["description"],
+            source_categories=tuple(record["source_categories"]),
+            dimensions=tuple(record["dimensions"]),
+        )
+        for record in records
+    )
+    return DimensionManifest(
+        version=context["manifest_version"],
+        source_catalog_sha256=context["source_catalog"]["canonical_json_sha256"],
+        chunks=chunks,
+    )
+
+
+def build_chunk_json_schema(chunk: DimensionChunk) -> dict[str, Any]:
+    """Couple each field ID to only its own authoritative value enum."""
+    branches: list[dict[str, Any]] = []
+    for dimension in chunk.dimensions:
+        branches.append(
+            {
+                "type": "object",
+                "properties": {
+                    "field_id": {"const": dimension["id"]},
+                    "value": {"type": "string", "enum": list(dimension["values"])},
+                    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+                    "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": MAX_EVIDENCE_CHARS,
+                    },
+                    "assignment_type": {
+                        "type": "string",
+                        "enum": list(ASSIGNMENT_TYPES),
+                    },
+                },
+                "required": sorted(FIELD_KEYS),
+                "additionalProperties": False,
+            }
+        )
+    return {
+        "type": "object",
+        "properties": {
+            "fields": {
+                "type": "array",
+                "maxItems": len(chunk.dimensions),
+                "items": {"oneOf": branches},
+            }
+        },
+        "required": ["fields"],
+        "additionalProperties": False,
+    }
+
+
+def _answer_variants(answer: str) -> tuple[str, ...]:
+    variants = [answer]
+    if ";" in answer:
+        variants.extend(part.strip() for part in answer.split(";") if part.strip())
+    return tuple(dict.fromkeys(variant.casefold() for variant in variants))
+
+
+def _citation_segment_has_answer(segment: str, answer: str) -> bool:
+    segment_casefold = segment.casefold().strip()
+    variants = _answer_variants(answer)
+
+    def has_supported_suffix(text: str, variant: str) -> bool:
+        if not text.startswith(variant):
+            return False
+        suffix = text[len(variant) :]
+        return (
+            not suffix
+            or re.match(
+                r"\s*(?:;|\n|\(|\[|\.\s*(?:summary\s*:|\Z)|summary\s*:)",
+                suffix,
+            )
+            is not None
+        )
+
+    if segment_casefold.startswith("="):
+        cited_answer = segment_casefold[1:].lstrip()
+        return any(has_supported_suffix(cited_answer, variant) for variant in variants)
+    return any(
+        re.search(
+            rf":\s*{re.escape(variant)}"
+            rf"(?=\s*(?:\Z|;|\n|\(|\[|\.\s*(?:summary\s*:|\Z)|summary\s*:))",
+            segment_casefold,
+        )
+        is not None
+        for variant in variants
+    )
+
+
+def validate_evidence_style(evidence: str, *, location: str) -> None:
+    """Reject overlong evidence and generated-summary deliberation leakage."""
+    if len(evidence) > MAX_EVIDENCE_CHARS:
+        raise ValueError(
+            f"{location} must be no longer than {MAX_EVIDENCE_CHARS} characters"
+        )
+    summary_match = re.search(
+        r"(?:\.\s*|\s+)summary\s*:\s*", evidence, re.IGNORECASE
+    )
+    if summary_match is None:
+        return
+    summary = evidence[summary_match.end() :]
+    if EVIDENCE_META_REASONING_PATTERN.search(summary):
+        raise ValueError(
+            f"{location} contains model deliberation instead of concise evidence"
+        )
+
+
+def evidence_cited_columns(evidence: str) -> tuple[str, ...]:
+    """Return source columns explicitly cited by an evidence string."""
+    return tuple(
+        dict.fromkeys(
+            match.group(1).strip()
+            for match in EVIDENCE_SOURCE_CITATION_PATTERN.finditer(evidence)
+        )
+    )
+
+
+def validate_evidence_provenance(
+    evidence: str, source_answers: dict[str, str], *, location: str
+) -> None:
+    """Require explicit, answer-consistent citations to this respondent's profile."""
+    citation_matches = list(EVIDENCE_SOURCE_CITATION_PATTERN.finditer(evidence))
+    citations = [match.group(1).strip() for match in citation_matches]
+    if not citations:
+        raise ValueError(
+            f"{location} must cite at least one current respondent source column"
+        )
+
+    unknown = list(dict.fromkeys(
+        column for column in citations if column not in source_answers
+    ))
+    if unknown:
+        raise ValueError(
+            f"{location} cites source columns absent from the current respondent "
+            f"profile: {unknown}"
+        )
+
+    for index, (column, column_match) in enumerate(zip(citations, citation_matches)):
+        segment_end = (
+            citation_matches[index + 1].start()
+            if index + 1 < len(citation_matches)
+            else len(evidence)
+        )
+        citation_segment = evidence[column_match.end() : segment_end]
+        if not _citation_segment_has_answer(
+            citation_segment, source_answers[column]
+        ):
+            raise ValueError(
+                f"{location} cites {column!r} without its current respondent answer"
+            )
+
+
+def validate_chunk_payload(
+    payload: Any,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
+) -> list[dict[str, Any]]:
+    """Strictly validate one decoded response against its current chunk."""
+    if not isinstance(payload, dict):
+        raise ValueError("response root must be a JSON object")
+    if set(payload) != {"fields"}:
+        raise ValueError("response root must contain exactly the 'fields' key")
+    fields = payload["fields"]
+    if not isinstance(fields, list):
+        raise ValueError("response fields must be a list")
+    if len(fields) > len(chunk.dimensions):
+        raise ValueError(
+            f"response has {len(fields)} fields for a {len(chunk.dimensions)}-dimension chunk"
+        )
+
+    allowed_values = {
+        dimension["id"]: set(dimension["values"]) for dimension in chunk.dimensions
+    }
+    seen: set[str] = set()
+    validated: list[dict[str, Any]] = []
+    for position, field in enumerate(fields):
+        location = f"fields[{position}]"
+        if not isinstance(field, dict):
+            raise ValueError(f"{location} must be an object")
+        keys = set(field)
+        if keys != FIELD_KEYS:
+            missing = sorted(FIELD_KEYS - keys)
+            extra = sorted(keys - FIELD_KEYS)
+            raise ValueError(
+                f"{location} has missing keys {missing} and extra keys {extra}"
+            )
+        field_id = field["field_id"]
+        if not isinstance(field_id, str) or field_id not in allowed_values:
+            raise ValueError(
+                f"{location}.field_id {field_id!r} is not in chunk {chunk.chunk_id}"
+            )
+        if field_id in seen:
+            raise ValueError(f"duplicate field_id in chunk output: {field_id}")
+        seen.add(field_id)
+        value = field["value"]
+        if not isinstance(value, str) or value not in allowed_values[field_id]:
+            raise ValueError(
+                f"{location} has invalid value {value!r} for field_id {field_id!r}"
+            )
+        confidence = field["confidence"]
+        if (
+            isinstance(confidence, bool)
+            or not isinstance(confidence, (int, float))
+            or not math.isfinite(confidence)
+            or not 0 <= confidence <= 1
+        ):
+            raise ValueError(f"{location}.confidence must be a finite number in [0, 1]")
+        if not isinstance(field["evidence"], str) or not field["evidence"].strip():
+            raise ValueError(f"{location}.evidence must be a non-empty string")
+        evidence = field["evidence"].strip()
+        validate_evidence_style(evidence, location=f"{location}.evidence")
+        if (
+            BARE_NUMERIC_EVIDENCE_PATTERN.fullmatch(evidence)
+            or evidence.casefold() in BARE_CATEGORICAL_EVIDENCE
+        ):
+            raise ValueError(
+                f"{location}.evidence must include source context, not only "
+                f"the bare answer {evidence!r}"
+            )
+        if source_answers is not None:
+            validate_evidence_provenance(
+                evidence, source_answers, location=f"{location}.evidence"
+            )
+        if field["assignment_type"] not in ASSIGNMENT_TYPES:
+            raise ValueError(
+                f"{location}.assignment_type {field['assignment_type']!r} is invalid"
+            )
+        is_language_field = field_id in {
+            "primary_language",
+            "english_proficiency",
+            "multilingualism",
+        } or field_id.startswith("lang_")
+        if (
+            is_language_field
+            and field["assignment_type"] == "direct"
+            and "Country" in evidence_cited_columns(evidence)
+        ):
+            raise ValueError(
+                f"{location}.assignment_type must be summary_inference for a "
+                "Country-based language completion"
+            )
+        validated.append(dict(field))
+    return validated
+
+
+def parse_and_validate_generation(
+    text: str, chunk: DimensionChunk, source_answers: dict[str, str] | None = None
+) -> list[dict[str, Any]]:
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"vLLM response is not exactly one JSON value: {error}") from error
+    return validate_chunk_payload(payload, chunk, source_answers)
+
+
+def salvage_chunk_payload(
+    payload: Any,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Keep independently valid fields and handle duplicates deterministically."""
+    if not isinstance(payload, dict) or set(payload) != {"fields"}:
+        raise ValueError("response root is not salvageable")
+    fields = payload["fields"]
+    if not isinstance(fields, list):
+        raise ValueError("response fields value is not a salvageable list")
+
+    valid_by_id: OrderedDict[str, list[tuple[int, dict[str, Any]]]] = OrderedDict()
+    issues: list[str] = []
+    for position, field in enumerate(fields):
+        try:
+            validated = validate_chunk_payload(
+                {"fields": [field]}, chunk, source_answers
+            )[0]
+        except (IndexError, ValueError) as error:
+            issues.append(f"fields[{position}] dropped: {error}")
+            continue
+        valid_by_id.setdefault(validated["field_id"], []).append(
+            (position, validated)
+        )
+
+    kept: list[tuple[int, dict[str, Any]]] = []
+    for field_id, occurrences in valid_by_id.items():
+        if len(occurrences) == 1:
+            kept.append(occurrences[0])
+            continue
+        first = occurrences[0][1]
+        if all(field == first for _, field in occurrences[1:]):
+            kept.append(occurrences[0])
+            issues.append(
+                f"field_id {field_id!r}: collapsed {len(occurrences)} exact duplicates"
+            )
+        else:
+            issues.append(
+                f"field_id {field_id!r}: dropped {len(occurrences)} conflicting duplicates"
+            )
+    kept.sort(key=lambda item: item[0])
+    return [field for _, field in kept], issues
+
+
+def parse_and_salvage_generation(
+    text: str,
+    chunk: DimensionChunk,
+    source_answers: dict[str, str] | None = None,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"vLLM response is not exactly one JSON value: {error}") from error
+    return salvage_chunk_payload(payload, chunk, source_answers)
+
+
+def is_present(value: Any) -> bool:
+    return value is not None and str(value).strip().lower() not in MISSING_TOKENS
+
+
+def normalize_prompt_text(value: Any) -> str:
+    text = str(value).replace("\r\n", "\n").replace("\r", "\n")
+    text = unicodedata.normalize("NFC", text)
+    return "".join(
+        character
+        for character in text
+        if character in "\n\t" or unicodedata.category(character) not in {"Cc", "Cf"}
+    )
+
+
+def clean_value(value: Any, max_chars: int = 800) -> str:
+    text = normalize_prompt_text(value).strip()
+    text = "\n".join(line.strip() for line in text.splitlines() if line.strip())
+    if len(text) <= max_chars:
+        return text
+    prefix = text[: max_chars - 3].rstrip()
+    boundary = max(prefix.rfind(" "), prefix.rfind("\n"))
+    if boundary >= max_chars // 2:
+        prefix = prefix[:boundary].rstrip()
+    return prefix + "..."
+
+
+def truncate_profile(text: str, max_chars: int = MAX_PROFILE_CHARS) -> str:
+    if len(text) <= max_chars:
+        return text
+    marker = "\n[Respondent profile truncated]"
+    prefix = text[: max_chars - len(marker)]
+    line_end = prefix.rfind("\n")
+    if line_end > 0:
+        prefix = prefix[:line_end]
+    return prefix.rstrip() + marker
+
+
+def load_mapping(path: Path) -> dict[str, dict[str, str]]:
+    required = {"column", "section", "matched_qname", "response_suffix", "description"}
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        missing = required - set(reader.fieldnames or [])
+        if missing:
+            raise ValueError(f"{path} is missing mapping columns: {sorted(missing)}")
+        mapping: dict[str, dict[str, str]] = {}
+        for row in reader:
+            column = row["column"]
+            if not column:
+                raise ValueError(f"{path} contains an empty mapped column")
+            if column in mapping:
+                raise ValueError(f"{path} maps {column!r} more than once")
+            mapping[column] = {
+                "section": row.get("section") or "Other survey answers",
+                "matched_qname": row.get("matched_qname") or "",
+                "response_suffix": row.get("response_suffix") or "",
+                "description": row.get("description") or column,
+            }
+    return mapping
+
+
+def survey_reader(path: Path) -> tuple[csv.DictReader, Any]:
+    csv.field_size_limit(CSV_FIELD_SIZE_LIMIT)
+    handle = path.open("r", encoding="utf-8-sig", newline="")
+    reader = csv.DictReader(handle)
+    if not reader.fieldnames:
+        handle.close()
+        raise ValueError(f"{path} has no CSV header")
+    duplicates = sorted(
+        name for name in set(reader.fieldnames) if reader.fieldnames.count(name) > 1
+    )
+    if duplicates:
+        handle.close()
+        raise ValueError(f"{path} has duplicate columns: {duplicates}")
+    return reader, handle
+
+
+def iter_survey_rows(path: Path) -> Iterator[tuple[int, dict[str, str]]]:
+    reader, handle = survey_reader(path)
+    try:
+        for row_index, row in enumerate(reader):
+            if None in row or any(value is None for value in row.values()):
+                raise ValueError(f"Malformed CSV data row at {path}:{row_index + 2}")
+            yield row_index, row  # type: ignore[misc]
+    finally:
+        handle.close()
+
+
+def validate_mapping_coverage(
+    survey_path: Path, mapping: dict[str, dict[str, str]]
+) -> None:
+    reader, handle = survey_reader(survey_path)
+    try:
+        columns = list(reader.fieldnames or [])
+    finally:
+        handle.close()
+    unmapped = [
+        column for column in columns if column != "completeness" and column not in mapping
+    ]
+    if unmapped:
+        raise ValueError(f"{survey_path} has unmapped columns: {', '.join(unmapped)}")
+
+
+def assemble_stackoverflow_profile(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> str:
+    items_by_section: dict[str, list[tuple[str, str, str]]] = OrderedDict()
+    for column, value in row.items():
+        if column == "completeness" or not is_present(value):
+            continue
+        entry = mapping.get(column, {})
+        clean_column = clean_value(column, max_chars=200)
+        section = clean_value(
+            entry.get("section") or "Other survey answers", max_chars=200
+        )
+        label = clean_value(entry.get("description") or column, max_chars=1_200)
+        items_by_section.setdefault(section, []).append(
+            (clean_column, label, clean_value(value))
+        )
+
+    response_id = clean_value(row.get("ResponseId", "unknown"), max_chars=200)
+    header = [
+        f"Stack Overflow Developer Survey respondent profile - year={year}, "
+        f"response_id={response_id}."
+    ]
+    if is_present(row.get("completeness")):
+        header.append(
+            f"Answer completeness score: {clean_value(row['completeness'], max_chars=100)}."
+        )
+    lines = [" ".join(header)]
+    for section, items in items_by_section.items():
+        lines.extend(("", f"## {section}"))
+        for column, label, value in items:
+            lines.append(
+                f"- {column} - {label}: {value}"
+                if label != column
+                else f"- {column}: {value}"
+            )
+    return truncate_profile("\n".join(lines))
+
+
+def visible_profile_source_answers(
+    row: dict[str, Any], profile_text: str
+) -> dict[str, str]:
+    """Index only source answers whose complete profile line survived truncation."""
+    source_answers: dict[str, str] = {}
+    for column, value in row.items():
+        if column == "completeness" or not is_present(value):
+            continue
+        clean_column = clean_value(column, max_chars=200)
+        if (
+            f"\n- {clean_column}:" not in profile_text
+            and f"\n- {clean_column} -" not in profile_text
+        ):
+            continue
+        source_answers[clean_column] = clean_value(value)
+    return source_answers
+
+
+def parse_positive_integer_rank(value: Any) -> int | None:
+    """Parse a positive integral survey rank without accepting arbitrary scores."""
+    if not is_present(value):
+        return None
+    text = str(value).strip()
+    if re.fullmatch(r"\d+", text) is None:
+        return None
+    rank = int(text)
+    return rank if rank > 0 else None
+
+
+def map_2025_rank_value(rank: int, scale: str) -> str:
+    """Map 2025 ordinal ranks to fixed five-level persona value scales."""
+    if scale == "importance":
+        if rank <= 2:
+            return "Critical"
+        if rank <= 5:
+            return "High"
+        if rank <= 9:
+            return "Moderate"
+        if rank <= 12:
+            return "Low"
+        return "Not a factor"
+    if scale == "blocker":
+        if rank == 1:
+            return "Hard blocker"
+        if rank <= 3:
+            return "Major concern"
+        if rank <= 7:
+            return "Moderate concern"
+        if rank <= 12:
+            return "Minor concern"
+        return "Not a concern"
+    raise ValueError(f"unknown 2025 rank scale: {scale}")
+
+
+def extract_2025_rank_fields(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Deterministically map selected 2025 ranks to schema-compatible fields."""
+    if year != 2025:
+        return []
+    fields: list[dict[str, Any]] = []
+    for column, (field_id, scale) in STACKOVERFLOW_2025_RANK_FIELD_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        entry = mapping.get(column, {})
+        label = clean_value(entry.get("description") or column, max_chars=1_000)
+        evidence = f"{column} - {label}: {rank}"
+        fields.append(
+            {
+                "field_id": field_id,
+                "value": map_2025_rank_value(rank, scale),
+                "confidence": 1.0,
+                "evidence": evidence,
+                "assignment_type": "direct",
+            }
+        )
+    return fields
+
+
+def map_2025_job_satisfaction_rank(rank: int) -> str:
+    """Map a 2025 job-satisfaction rank to the shared personal-value scale."""
+    if rank <= 3:
+        return "Core value"
+    if rank <= 6:
+        return "Important"
+    if rank <= 10:
+        return "Moderate"
+    if rank <= 13:
+        return "Minor"
+    return "Irrelevant"
+
+
+def extract_2025_job_satisfaction_fields(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Map only near-isomorphic 2025 job-satisfaction ranks to value fields."""
+    if year != 2025:
+        return []
+    candidates: dict[str, list[tuple[int, str]]] = {}
+    for column, field_id in STACKOVERFLOW_2025_JOB_SAT_FIELD_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        label = clean_value(
+            mapping.get(column, {}).get("description") or column,
+            max_chars=1_000,
+        )
+        candidates.setdefault(field_id, []).append(
+            (rank, f"{column} - {label}: {rank}")
+        )
+    fields: list[dict[str, Any]] = []
+    for field_id, ranked_evidence in candidates.items():
+        rank, evidence = min(ranked_evidence, key=lambda item: item[0])
+        fields.append(
+            {
+                "field_id": field_id,
+                "value": map_2025_job_satisfaction_rank(rank),
+                "confidence": 0.9,
+                "evidence": evidence,
+                "assignment_type": "structured_claim",
+            }
+        )
+    return fields
+
+
+def extract_2025_stackoverflow_participation_field(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Map explicit non-participation or the top-ranked 2025 SO action to style."""
+    if year != 2025:
+        return []
+    participation = row.get("SOPartFreq")
+    if is_present(participation) and "never participated" in str(
+        participation
+    ).casefold():
+        label = clean_value(
+            mapping.get("SOPartFreq", {}).get("description") or "SOPartFreq",
+            max_chars=1_000,
+        )
+        return [
+            {
+                "field_id": "stackoverflow_participation_style",
+                "value": "Does not participate",
+                "confidence": 1.0,
+                "evidence": f"SOPartFreq - {label}: {clean_value(participation)}",
+                "assignment_type": "direct",
+            }
+        ]
+
+    candidates: list[tuple[int, str, str]] = []
+    for column, style in STACKOVERFLOW_2025_SO_ACTION_STYLE_MAP.items():
+        rank = parse_positive_integer_rank(row.get(column))
+        if rank is None:
+            continue
+        label = clean_value(
+            mapping.get(column, {}).get("description") or column,
+            max_chars=1_000,
+        )
+        candidates.append((rank, style, f"{column} - {label}: {rank}"))
+    if not candidates:
+        return []
+    rank, style, evidence = min(candidates, key=lambda item: item[0])
+    return [
+        {
+            "field_id": "stackoverflow_participation_style",
+            "value": style,
+            "confidence": 0.9,
+            "evidence": evidence,
+            "assignment_type": "summary_inference",
+        }
+    ]
+
+
+def reconcile_ai_fields(
+    fields: list[dict[str, Any]],
+    row: dict[str, Any],
+    mapping: dict[str, dict[str, str]],
+) -> list[dict[str, Any]]:
+    """Resolve generic-AI fan-out and current-vs-past AI usage conflicts."""
+    ai_select = row.get("AISelect")
+    no_current_or_planned_ai = is_present(ai_select) and str(ai_select).strip().casefold() == (
+        "no, and i don't plan to"
+    )
+    reconciled: list[dict[str, Any]] = []
+    for original in fields:
+        field = dict(original)
+        field_id = str(field["field_id"])
+        citations = set(evidence_cited_columns(str(field.get("evidence", ""))))
+        only_generic_ai_select = citations == {"AISelect"}
+
+        unrelated_agent_completion = (
+            field_id.startswith("coding_agent_")
+            and field_id not in AISELECT_ALLOWED_AGENT_FIELDS
+        )
+        if only_generic_ai_select and (
+            unrelated_agent_completion
+            or field_id.startswith("coding_tool_")
+            or field_id.startswith("tool_")
+            or field_id in AISELECT_UNRELATED_FIELD_IDS
+        ):
+            continue
+
+        if only_generic_ai_select and (
+            field_id in {"att_ai", "coding_ai_usage_frequency"}
+            or field_id.startswith("ai_task_")
+        ):
+            field["assignment_type"] = "summary_inference"
+        reconciled.append(field)
+
+    past_use_columns = [
+        column for column in AI_HISTORY_COLUMNS if is_present(row.get(column))
+    ]
+    if not no_current_or_planned_ai or not past_use_columns:
+        return reconciled
+
+    history_column = past_use_columns[0]
+    history_answer = clean_value(row[history_column])
+    summary_evidence = (
+        f"AISelect={clean_value(ai_select)}; "
+        f"{history_column}={history_answer}. Summary: The respondent reports specific "
+        "past-year AI-tool use but no current use or future adoption plan, supporting "
+        "a tried-but-not-active status."
+    )
+    replacement = {
+        "field_id": "coding_ai_usage_frequency",
+        "value": "Tried but not active",
+        "confidence": 0.95,
+        "evidence": summary_evidence[:MAX_EVIDENCE_CHARS],
+        "assignment_type": "summary_inference",
+    }
+    return [
+        field
+        for field in reconciled
+        if field["field_id"] != "coding_ai_usage_frequency"
+    ] + [replacement]
+
+
+def filter_semantic_overreach(
+    fields: list[dict[str, Any]], row: dict[str, Any]
+) -> list[dict[str, Any]]:
+    """Drop recurring cross-construct completions that prompts alone do not prevent."""
+    filtered: list[dict[str, Any]] = []
+    for field in fields:
+        field_id = str(field["field_id"])
+        value = str(field["value"])
+        citations = set(evidence_cited_columns(str(field.get("evidence", ""))))
+
+        intent_only_programming_skill = (
+            field_id.startswith("prog_")
+            and "LanguageWantToWorkWith" in citations
+            and "LanguageHaveWorkedWith" not in citations
+        )
+        country_based_cultural_identity = (
+            field_id.startswith("cult_") and "Country" in citations
+        )
+        country_based_mobility = (
+            field_id == "lifex_geographic_mobility" and "Country" in citations
+        )
+        retirement_without_retirement_answer = (
+            field_id == "seniority"
+            and value == "Retired"
+            and not any(
+                "retired" in str(answer).casefold()
+                for answer in row.values()
+                if is_present(answer)
+            )
+        )
+        nonparticipation_without_never_answer = (
+            field_id == "stackoverflow_participation_style"
+            and value == "Does not participate"
+            and "never participated" not in str(row.get("SOPartFreq", "")).casefold()
+        )
+        git_nonuse_without_git_answer = (
+            field_id == "tool_git"
+            and value == "Never used"
+            and not any(
+                re.search(r"\bgit\b", str(row.get(column, "")), re.IGNORECASE)
+                for column in citations
+            )
+        )
+        organization_only_personal_practice = (
+            field_id in PERSONAL_PRACTICE_FIELD_IDS
+            and citations
+            and citations <= ORGANIZATION_LEVEL_COLUMNS
+        )
+        is_soft_completion = field_id in SOFT_COMPLETION_FIELD_IDS or field_id.startswith(
+            SOFT_COMPLETION_PREFIXES
+        )
+        one_source_soft_completion = (
+            field.get("assignment_type") == "summary_inference"
+            and is_soft_completion
+            and len(citations) < 2
+        )
+
+        if any(
+            (
+                intent_only_programming_skill,
+                country_based_cultural_identity,
+                country_based_mobility,
+                retirement_without_retirement_answer,
+                nonparticipation_without_never_answer,
+                git_nonuse_without_git_answer,
+                organization_only_personal_practice,
+                one_source_soft_completion,
+            )
+        ):
+            continue
+        filtered.append(field)
+    return filtered
+
+
+def extract_2025_ai_task_fields(
+    row: dict[str, Any], year: int, mapping: dict[str, dict[str, str]]
+) -> list[dict[str, Any]]:
+    """Deterministically map the 2025 AITool matrix to persona task fields."""
+    if year != 2025:
+        return []
+
+    candidates: dict[str, list[tuple[str, str]]] = {}
+    for column, target_value in STACKOVERFLOW_2025_AI_STATUS_TO_VALUE.items():
+        raw_value = row.get(column)
+        if not is_present(raw_value):
+            continue
+        entry = mapping.get(column, {})
+        clean_column = clean_value(column, max_chars=200)
+        label = clean_value(entry.get("description") or column, max_chars=1_200)
+        clean_raw_value = clean_value(raw_value)
+        evidence = (
+            f"{clean_column} - {label}: {clean_raw_value}"
+            if label != clean_column
+            else f"{clean_column}: {clean_raw_value}"
+        )
+        for item in str(raw_value).split(";"):
+            task = unicodedata.normalize("NFKC", item).strip()
+            field_id = STACKOVERFLOW_2025_AI_TASK_TO_FIELD.get(task)
+            if field_id is not None:
+                candidates.setdefault(field_id, []).append((target_value, evidence))
+
+    fields: list[dict[str, Any]] = []
+    for field_id in STACKOVERFLOW_2025_AI_TASK_FIELD_ORDER:
+        field_candidates = candidates.get(field_id)
+        if not field_candidates:
+            continue
+        selected_value = max(
+            (value for value, _ in field_candidates),
+            key=STACKOVERFLOW_2025_AI_VALUE_PRIORITY.__getitem__,
+        )
+        evidence_parts = list(dict.fromkeys(evidence for _, evidence in field_candidates))
+        fields.append(
+            {
+                "field_id": field_id,
+                "value": selected_value,
+                "confidence": 1.0,
+                "evidence": "; ".join(evidence_parts),
+                "assignment_type": "direct",
+            }
+        )
+    return fields
+
+
+def overlay_deterministic_fields(
+    generated_fields: list[dict[str, Any]],
+    deterministic_fields: list[dict[str, Any]],
+    reserved_field_ids: frozenset[str],
+) -> list[dict[str, Any]]:
+    """Replace model-generated reserved fields with deterministic assignments."""
+    return [
+        field
+        for field in generated_fields
+        if field["field_id"] not in reserved_field_ids
+    ] + deterministic_fields
+
+
+def drop_unsupported_fields(fields: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Defensively keep unsupported placeholders out of final JSONL records."""
+    return [
+        field for field in fields if field.get("assignment_type") != "unsupported"
+    ]
+
+
+def build_stackoverflow_prompt(
+    profile_text: str, chunk: DimensionChunk, year: int
+) -> str:
+    """Build V1's detailed sparse-extraction prompt for one manifest chunk."""
+    profile_text = normalize_prompt_text(profile_text)
+    if year == 2024:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: In the 2024 survey, JobSatPoints_* values are allocated points, not ordinal ranks. Interpret larger point values as a larger contribution within that points question.",
+            "- YEAR-SPECIFIC: The 2024 TechEndorse answer is a select-all response, not a rank ordering.",
+        ]
+    elif year == 2025:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: In the 2025 survey, TechEndorse_*, JobSatPoints_*, and SO_Actions_* are ordinal ranks: a smaller number means a higher position within that question's list.",
+            "- YEAR-SPECIFIC: A 2025 rank expresses relative order among the listed items, not an absolute rating or intensity score.",
+            '- YEAR-SPECIFIC: For mapped TechEndorse importance fields, use the deterministic buckets 1-2="Critical", 3-5="High", 6-9="Moderate", 10-12="Low", and 13+="Not a factor".',
+            '- YEAR-SPECIFIC: For mapped TechOppose blocker fields, use the deterministic buckets 1="Hard blocker", 2-3="Major concern", 4-7="Moderate concern", 8-12="Minor concern", and 13+="Not a concern".',
+            '- YEAR-SPECIFIC: For near-isomorphic JobSat value fields, use 1-3="Core value", 4-6="Important", 7-10="Moderate", 11-13="Minor", and 14+="Irrelevant". Do not convert other JobSat ranks directly into skills or psychometric traits.',
+            "- YEAR-SPECIFIC: For Stack Overflow participation style, explicit never-participated evidence wins; otherwise use the lowest-ranked available SO_Actions activity as the preferred summary style.",
+        ]
+    else:
+        year_specific_guidance = [
+            "- YEAR-SPECIFIC: Do not treat a numeric 2023 answer as a rank unless its question text explicitly defines it as a rank.",
+        ]
+    lines = [
+        "You are building a persona for a single Stack Overflow Developer Survey respondent from their survey answers.",
+        "",
+        "The input is a structured respondent profile assembled from one survey row. It may contain information about a broad range of dimensions about the respondent.",
+        "Only emit attributes from the CURRENT CHUNK DIMENSIONS list when directly or strongly supported by the respondent profile.",
+        "If the respondent profile does not contain information about a dimension, omit the dimension.",
+        "",
+        "Return ONLY one JSON object matching the supplied structured-output schema (no markdown, no commentary), with this shape:",
+        '{"fields": [{"field_id": "<one id from CURRENT CHUNK DIMENSIONS below>", "value": "<one allowed value, copied verbatim>", "confidence": 0.0, "evidence": "<grounded quote or faithful summary with source columns and answer values>", "assignment_type": "direct"}]}',
+        "",
+        "assignment_type values (Stack Overflow survey context):",
+        "- direct: explicitly answered in a survey field, or a deterministic recoding of an explicit answer into an exactly matching allowed value.",
+        "- structured_claim: a near-direct conclusion strongly supported by concrete survey answers that measure the same construct, with little ambiguity and no stereotype-based bridge.",
+        "- summary_inference: a plausible, non-sensitive persona completion supported by one or more concrete survey answers when the evidence is informative but does not directly or uniquely determine the selected value. Use sparingly.",
+        "",
+        "Sparse extraction policy:",
+        "- Return a sparse list: emit an object ONLY for dimensions that are clearly supported by the survey answers.",
+        "- Do NOT try to cover every dimension. Missing attributes are better than weak or invented attributes.",
+        "- Do not optimize for coverage or a target field count. Prioritize the strongest same-construct evidence; a useful rich persona may still be sparse.",
+        "- An empty fields list is a correct result when this chunk has no directly supported dimensions.",
+        "- Default decision: OMIT until concrete survey evidence constrains the target dimension. Direct and structured_claim assignments should distinguish the selected value; summary_inference may select one evidence-compatible value when incomplete evidence leaves several plausible alternatives.",
+        "- Omit unsupported dimensions entirely. Do not emit null values and do not emit unsupported placeholder objects.",
+        "- Assign a value only when the survey response directly supports, strongly implies, or meaningfully constrains that dimension.",
+        "- If the evidence is merely topical, stereotypical, or only weakly associated with the dimension, omit the dimension. Indirect but concrete evidence may support summary_inference under the completion policy below.",
+        "- Multiple weak proxies do not become strong evidence when combined. A plausible narrative or occupational stereotype is not a structured_claim.",
+        "- Do not reuse one broad answer to fan out into many loosely related dimensions. Each emitted field needs its own same-construct support.",
+        "- Summary inference is for useful non-sensitive persona enrichment, not a fallback for missing evidence or a way to fill coverage. Never use it to convert absence into a negative value or infer sensitive identity, demographics, or health.",
+        "- One strong source answer may support summary_inference when it directly constrains the target dimension but leaves multiple plausible allowed values. Broader cross-construct inferences, especially personality, values, preferences, habits, and skills, should use multiple independent, directionally consistent answers. Repeated facets of one broad answer, generic job or technology proxies, and several forms of the same absence do not count as independent evidence.",
+        '- For direct or structured_claim, omit an allowed value that is more specific than the survey answer unless that specificity is explicit. A non-sensitive, more-specific value may be selected as summary_inference only when it is a reasonable completion that does not contradict the evidence. For example, generic "Employed" does not directly prove "Full-time".',
+        "",
+        "High-precision source-to-target rules:",
+        "- Intent is not experience: WantToWorkWith, interested-in, admired, and future-plan answers may support preferences or intentions only. They do not establish current familiarity, proficiency, skill, habitual behavior, or actual usage. In particular, LanguageWantToWorkWith alone must never emit prog_*=Familiar (even at low confidence): wanting to use Rust next year is not evidence of any current Rust proficiency. Omit the prog_* field unless worked-with or explicit proficiency evidence is also present.",
+        "- Task use is not task mastery: using or planning to use AI for debugging, review, writing, analytics, or another task does not establish proficiency in that task and does not identify the respondent's dominant method or problem profile.",
+        "- Tenure and job title directly support role, seniority, and broad experience. Long professional tenure in an active developer role can strongly support high-confidence summary_inference for core skills that are intrinsic to that role: skill_coding, skill_debugging, and skill_problem_solving may reasonably reach Master for a long-tenured professional developer. Role-relevant system-design or code-review evidence may similarly support high levels. Do not spread tenure into unrelated skills such as writing, time management, leadership, research, or mentoring without separate responsibility-, behavior-, or achievement-specific evidence.",
+        "- Worked-with answers establish use or exposure. Do not infer Expert or Master from a technology list alone; use the least specific supported familiarity or proficiency value, or omit when the allowed scale cannot be justified.",
+        '- Current status is not complete history: an individual contributor is not proven to have no leadership or management skill; a current industry does not prove no experience in other industries. AISelect="No, and I don\'t plan to" positively supports ai_task_*=Does not plan AI use as summary_inference because the overall no-plan answer is compatible with every task subset, but it is not an explicit per-task response: do not mark these completions direct or force confidence to 1.0. Let confidence reflect evidence compatibility. The answer also constrains overall coding-AI adoption: coding_ai_usage_frequency may be "Never used" or "Tried but not active" as summary_inference, with specific past-use answers taking priority. Generic AI non-adoption may also support a cautious, low-confidence summary_inference about limited practical AI/ML familiarity when no domain-role, study, or tool evidence contradicts it; it is not direct proof of conceptual knowledge. AISelect="Yes" or generic future interest does not identify individual tasks; use AITool current/interested/not-interested answers for those. Generic AISelect does not constrain named-product history or agent memory, security, context-sharing, explanation, tool-integration, API, ethics, human-help, or similar preferences.',
+        "- Absence of evidence is not negative evidence. Never emit None, Never, Absent, no experience, no mobility, or a similar negative value merely because the profile does not mention the construct.",
+        "- Country directly supports region and may provide positive statistical support for a likely dominant, native, or working language as summary_inference. Never label a Country-based language completion as direct. Reduce certainty for multilingual countries and use professional or language-use context when available. If the country's likely dominant language is absent from primary_language's allowed values, omit primary_language rather than substitute an implausible listed language; prefer a matching lang_* dimension when available. Country alone still does not establish nationality, cultural identity, immigration history, hometown mobility, adversity, or other personal history.",
+        "- Never emit cult_* or lifex_geographic_mobility from Country, currency, current residence, or professional location. Cultural identity and migration history require explicit person-level evidence.",
+        '- "I used to be a developer by profession, but no longer am" means former/inactive developer, not retired. Emit seniority="Retired" only when a source answer explicitly states retirement.',
+        '- Infrequent Q&A participation is still participation. Emit stackoverflow_participation_style="Does not participate" only for an explicit never-participated answer; otherwise use a supported action style or omit.',
+        '- A broad category answer such as DevEnvsChoice="No" does not prove that a named tool such as Git was never used. Named-tool negative values require an answer that explicitly identifies that tool.',
+        '- Explicit freelancer, independent-contractor, or solo-work evidence may support company_size="Solo / freelance" because that allowed value includes freelance work. Self-employed status alone does not establish founder status, entrepreneurship history, exact headcount, or a strictly one-person organization.',
+        "- Compensation is individual compensation, not household income. Do not map CompTotal to a household-income dimension.",
+        "- A generic dependents answer that combines children and elderly people supports caregiving only. It does not establish parenting, children's ages, elder-care status, or that both groups are cared for.",
+        "- Organization-level practices and installed tools directly support claims about the respondent's work environment or exposure. A personal-practice summary_inference additionally requires at least one respondent-level role, tool-use, task, or workflow answer that connects the person to that practice. Organization-level evidence alone is insufficient, and the completion must never be labeled direct.",
+        "- Technology choices and professional roles may support tool exposure and role facts, but they do not by themselves establish stable personality traits, character strengths, psychological needs, moral foundations, learning pace, emotional state, or broad personal values. Emit such soft attributes as direct or structured_claim only when the survey measures the same construct. A summary_inference still requires at least two independent behavioral answers; technology or role alone is insufficient.",
+        "- BFI, SDT, moral-foundation, Schwartz-value, personality, and other psychometric completions should normally be summary_inference unless the survey directly measures the same construct. Require multiple independent, positively relevant answers and do not confuse observed professional behavior with a formally measured psychological score or need.",
+        "- For summary_inference personality, cognitive-style, broad-value, emotional-state, decision-style, or learning-style fields, require at least two independently cited source columns. Omit one-source soft completions even when the narrative sounds plausible.",
+        "- A people-manager or executive answer is strong evidence of management responsibility and experience and may support a skill_people_management or skill_leadership summary_inference. Use independent evidence such as management tenure, strategy ownership, mentoring, decision scope, or team responsibility to select higher proficiency levels or Strong/Signature trait_leadership values. Do not automatically map the role alone to Master or Signature.",
+        "- If a survey answer bucket crosses more than one allowed output range, omit the dimension rather than choosing one side of the boundary.",
+        "",
+        "Rules:",
+        "- Read survey question and answer context carefully to determine the most specific and accurate value for each dimension.",
+        "- Be especially careful when surveyanswer is given in a numerical scale, such as a Likert scale or a scale of 1 to 10. YOU MUST follow related question and answer definitions to determine the most specific and accurate value for the dimension.",
+        "- For a numeric answer mapped to a range-valued dimension, treat every range endpoint literally and select the range that contains the exact cited number.",
+        '- For example, years_experience evidence of 10 maps to "6-10", not "11-20"; evidence of 11 maps to "11-20", not "6-10".',
+        "- If several survey fields could support one dimension, choose the field whose question best matches the dimension, cite that field in evidence, and make the output value consistent with the cited answer.",
+        "- Never move a numeric answer into an adjacent range based on job title, seniority, age, or an overall impression of the respondent.",
+        "- Before returning JSON, verify that the specific numeric answer used to support a range-valued dimension falls within the selected allowed-value range.",
+        "- Determine what each numeric question measures from its full question context. Do not treat allocated points, ratings, or counts as ranks.",
+        "- A rank may support importance, priority, preference, or interest when the ranked item directly matches the dimension. It may support a behavior or strategy when the ranked options themselves are those behaviors or strategies and the selected allowed value matches the ranked option.",
+        "- Topical association alone is insufficient. A rank about importance or interest does not by itself establish frequency, proficiency, demonstrated skill, actual habitual behavior, or a dominant strategy unless the question explicitly ranks that same behavior, skill, or strategy.",
+        "- value MUST be exactly one of that dimension's allowed values, copied verbatim.",
+        "- Use each field_id at most once.",
+        "- Choose the single allowed value with the strongest and most specific support.",
+        "- If multiple allowed values are similarly plausible and none contradicts the evidence, select one reasonable value, mark it as summary_inference, and assign confidence from its compatibility with the evidence. Do not use catalog order mechanically.",
+        "- Every emitted field MUST include grounded evidence supported by the current respondent profile. Evidence may be a short source quote or a faithful summary of one or more concrete answers.",
+        "- A faithful evidence summary MUST preserve the source answers' meaning, including numerical value, ordering, time frame, and negation, and MUST NOT introduce facts that those answers do not support.",
+        "- Evidence MUST NOT merely restate the selected persona value or conclusion as its own support.",
+        "- Evidence for a plausibility-selected field MUST cite the survey answer that constrains the dimension and must not claim that the source uniquely determined the selected value.",
+        "- Evidence MUST identify every supporting original column name and actual answer value. Include readable question/sub-item context for a direct quote, or a concise faithful summary for combined evidence.",
+        "- Never cite a source column or answer that is absent from the current RESPONDENT PROFILE. Prompt instructions, format templates, and CURRENT CHUNK DIMENSIONS are not evidence sources.",
+        '- Bad evidence examples: "10", "8", "Yes", "No", "Employed". These are bare values without the survey question context.',
+        '- Canonical direct-evidence format: "<ORIGINAL_COLUMN_NAME> - <READABLE_QUESTION_OR_SUBITEM>: <ACTUAL_ANSWER_VALUE>".',
+        '- Canonical summary-evidence format: "<COLUMN_1>=<ANSWER_1>; <COLUMN_2>=<ANSWER_2>. Summary: <faithful summary supported by those answers>". A one-source summary uses "<COLUMN>=<ANSWER>. Summary: ...".',
+        f"- Keep evidence at or below {MAX_EVIDENCE_CHARS} characters. After the citations, write at most two concise Summary sentences. Never include deliberation, self-correction, candidate comparison, prompt discussion, or statements such as 'I will keep/omit it', 'let's re-evaluate', or 'the prompt says'.",
+        "- Text inside angle brackets in the two formats above is placeholder text only. Never copy those placeholders into evidence.",
+        "- Every emitted field MUST include a confidence between 0 and 1. Confidence is a non-normalized evidence-compatibility score: it measures how strongly the cited evidence positively supports the selected value as a reasonable persona completion. It is not the probability that the value is the unique factual truth, and confidence values across allowed values do not need to sum to 1. Multiple mutually exclusive values may each be highly compatible with incomplete evidence.",
+        "- High confidence requires positive, dimension-relevant evidence that makes the selected value more plausible than it would be without that evidence. Mere absence of contradiction is not positive support: do not emit or assign high confidence to a value only because the profile does not rule it out.",
+        '- A source positively constrains a dimension when observing that answer narrows or shifts the reasonable allowed values for that dimension. For example, AISelect="No" narrows coding-AI usage away from Daily or Weekly, while Country="United States" does not meaningfully constrain an unrelated hobby value.',
+        "- Do not assign confidence from assignment_type alone. A strongly supported summary may have high confidence, while a weak structured claim may have lower confidence.",
+        "- Prefer direct and high-precision structured_claim assignments when the evidence uniquely determines a value. Use summary_inference for supported, non-sensitive persona completion under the policy above; otherwise omit the dimension.",
+        "- Do not infer personality, worldview, family status, sensitive identity, health, politics, religion, income, or housing from generic developer-survey answers.",
+        "- Do not infer missing demographics, gender, sexuality, health, disability, family status, religion, ethnicity, politics, income, housing, or socioeconomic status from country, age, job title, technology stack, or developer role unless explicitly answered.",
+        "- Do not infer personality traits, values, hobbies, habits, or relationship attributes from technology choices alone.",
+        "- Do not infer generation from broad age buckets unless the bucket maps uniquely to one cohort.",
+        '- Treat "None of the above" and "None of these" as valid answers, not missing values.',
+        "- When unsure, omit the dimension.",
+        "- Return valid JSON only, with no markdown.",
+        "",
+        f"SURVEY-YEAR INTERPRETATION RULES FOR {year}:",
+        *year_specific_guidance,
+        "",
+        "RESPONDENT PROFILE:",
+        profile_text,
+        "",
+        f"CURRENT CHUNK: {chunk.chunk_id} - {chunk.label}",
+        f"CHUNK CONCEPT: {chunk.description}",
+        "Only the field IDs listed below exist for this request. Do not emit IDs from any other chunk.",
+        "",
+        "CURRENT CHUNK DIMENSIONS (field_id - label - description - allowed values):",
+    ]
+    for dimension in chunk.dimensions:
+        dimension_id = clean_value(dimension["id"], max_chars=200)
+        label = clean_value(dimension.get("label", dimension_id), max_chars=300)
+        description = clean_value(dimension.get("description", ""), max_chars=800)
+        allowed = " | ".join(
+            clean_value(value, max_chars=300) for value in dimension.get("values", [])
+        )
+        lines.append(
+            f"- {dimension_id} - {label} - {description} - "
+            f"[{allowed or '(free value)'}]"
+        )
+    return "\n".join(lines)
+
+
+def output_path_for_year(args: argparse.Namespace, year: int) -> Path:
+    return args.output or args.survey_root / DEFAULT_OUTPUT_TEMPLATE.format(year=year)
+
+
+def completed_row_indexes(
+    path: Path, *, year: int, model: str, manifest: DimensionManifest
+) -> set[int]:
+    completed: set[int] = set()
+    if not path.is_file():
+        return completed
+    with path.open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            if not line.strip():
+                continue
+            try:
+                record = json.loads(line)
+                expected = {
+                    "backend": "vllm",
+                    "extractor_version": EXTRACTOR_VERSION,
+                    "year": year,
+                    "model": model,
+                    "manifest_version": manifest.version,
+                    "source_catalog_sha256": manifest.source_catalog_sha256,
+                }
+                for key, value in expected.items():
+                    if record.get(key) != value:
+                        raise ValueError(
+                            f"record {key} is {record.get(key)!r}, expected {value!r}"
+                        )
+                completed.add(int(record["row_index"]))
+            except (json.JSONDecodeError, KeyError, TypeError, ValueError) as error:
+                raise ValueError(f"Invalid JSONL at {path}:{line_number}: {error}") from error
+    return completed
+
+
+def row_is_selected(args: argparse.Namespace, row_index: int, completed: set[int]) -> bool:
+    stop_before = None if args.limit is None else args.start_row + args.limit
+    return (
+        row_index >= args.start_row
+        and (stop_before is None or row_index < stop_before)
+        and row_index not in completed
+    )
+
+
+def prepare_year(
+    args: argparse.Namespace, year: int, manifest: DimensionManifest
+) -> YearWork:
+    survey_path = args.survey_root / SURVEY_FILES[year]
+    mapping_path = args.survey_root / MAPPING_FILES[year]
+    if not survey_path.is_file():
+        raise FileNotFoundError(f"Missing survey CSV: {survey_path}")
+    if not mapping_path.is_file():
+        raise FileNotFoundError(f"Missing mapping CSV: {mapping_path}")
+    mapping = load_mapping(mapping_path)
+    validate_mapping_coverage(survey_path, mapping)
+    output_path = output_path_for_year(args, year)
+    if args.execute:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+    completed = (
+        set()
+        if args.overwrite or not args.execute
+        else completed_row_indexes(
+            output_path, year=year, model=args.model, manifest=manifest
+        )
+    )
+    pending_count = 0
+    stop_before = None if args.limit is None else args.start_row + args.limit
+    for row_index, _ in iter_survey_rows(survey_path):
+        if stop_before is not None and row_index >= stop_before:
+            break
+        if row_is_selected(args, row_index, completed):
+            pending_count += 1
+    return YearWork(year, survey_path, mapping, output_path, completed, pending_count)
+
+
+def iter_pending_rows(
+    args: argparse.Namespace, work: YearWork
+) -> Iterator[tuple[int, dict[str, str]]]:
+    stop_before = None if args.limit is None else args.start_row + args.limit
+    for row_index, row in iter_survey_rows(work.survey_path):
+        if stop_before is not None and row_index >= stop_before:
+            break
+        if row_is_selected(args, row_index, work.completed):
+            yield row_index, row
+
+
+def batches(iterator: Iterator[Any], size: int) -> Iterator[list[Any]]:
+    batch: list[Any] = []
+    for item in iterator:
+        batch.append(item)
+        if len(batch) == size:
+            yield batch
+            batch = []
+    if batch:
+        yield batch
+
+
+def load_vllm(
+    args: argparse.Namespace, schemas: dict[str, dict[str, Any]]
+) -> tuple[Any, dict[str, Any]]:
+    if args.download_dir is not None:
+        os.environ.setdefault("HF_HOME", str(args.download_dir))
+        os.environ.setdefault("HF_HUB_CACHE", str(args.download_dir))
+        os.environ.setdefault("HF_XET_CACHE", str(args.download_dir / "xet"))
+    os.environ.setdefault("VLLM_WORKER_MULTIPROC_METHOD", "spawn")
+    try:
+        from vllm import LLM, SamplingParams
+        from vllm.sampling_params import StructuredOutputsParams
+    except ImportError as error:
+        raise RuntimeError(
+            "vLLM is not installed. Install it in the GPU environment before using "
+            "--execute; dry-run mode does not import vLLM."
+        ) from error
+
+    kwargs: dict[str, Any] = {
+        "model": args.model,
+        "dtype": args.dtype,
+        "tensor_parallel_size": args.tensor_parallel_size,
+        "gpu_memory_utilization": args.gpu_memory_utilization,
+        "max_model_len": args.max_model_len,
+        "max_num_seqs": args.max_num_seqs,
+        "enable_prefix_caching": True,
+        "language_model_only": True,
+        "trust_remote_code": True,
+        "seed": args.seed,
+    }
+    if args.pipeline_parallel_size != 1:
+        kwargs["pipeline_parallel_size"] = args.pipeline_parallel_size
+    if args.distributed_executor_backend != "auto":
+        kwargs["distributed_executor_backend"] = args.distributed_executor_backend
+    if args.download_dir is not None:
+        kwargs["download_dir"] = str(args.download_dir)
+    if args.quantization.lower() != "none":
+        kwargs["quantization"] = args.quantization
+    llm = LLM(**kwargs)
+    sampling_by_chunk = build_sampling_params_by_chunk(
+        args,
+        schemas,
+        sampling_params_class=SamplingParams,
+        structured_outputs_class=StructuredOutputsParams,
+    )
+    return llm, sampling_by_chunk
+
+
+def build_sampling_params_by_chunk(
+    args: argparse.Namespace,
+    schemas: dict[str, dict[str, Any]],
+    *,
+    sampling_params_class: Any,
+    structured_outputs_class: Any,
+) -> dict[str, Any]:
+    """Create a distinct guided-decoding configuration for every chunk."""
+    return {
+        chunk_id: sampling_params_class(
+            temperature=0.0,
+            top_p=1.0,
+            max_tokens=args.max_tokens,
+            seed=args.seed,
+            structured_outputs=structured_outputs_class(json=schema),
+        )
+        for chunk_id, schema in schemas.items()
+    }
+
+
+def validate_cluster_environment(args: argparse.Namespace) -> None:
+    if args.distributed_executor_backend == "ray":
+        return
+    visible = os.environ.get("CUDA_VISIBLE_DEVICES", "").strip()
+    if not visible:
+        return
+    if visible == "-1":
+        raise RuntimeError("CUDA_VISIBLE_DEVICES=-1 exposes no GPUs to vLLM")
+    visible_devices = [device.strip() for device in visible.split(",") if device.strip()]
+    required = args.tensor_parallel_size * args.pipeline_parallel_size
+    if required > len(visible_devices):
+        raise RuntimeError(
+            f"vLLM parallel sizes require {required} GPUs, but CUDA_VISIBLE_DEVICES "
+            f"exposes only {len(visible_devices)} ({visible!r})"
+        )
+
+
+def run_chat(llm: Any, conversations: list[Any], sampling: Any) -> list[Any]:
+    try:
+        return llm.chat(
+            conversations,
+            sampling,
+            chat_template_kwargs={"enable_thinking": False},
+            use_tqdm=False,
+        )
+    except TypeError as error:
+        if "chat_template_kwargs" not in str(error):
+            raise
+        return llm.chat(conversations, sampling, use_tqdm=False)
+
+
+def completion_details(output: Any) -> tuple[str, Any, Any]:
+    try:
+        completion = output.outputs[0]
+    except (AttributeError, IndexError, TypeError) as error:
+        raise ValueError("vLLM output contains no completion") from error
+    text = getattr(completion, "text", None)
+    if not isinstance(text, str):
+        raise ValueError("vLLM completion text is missing or is not a string")
+    return (
+        text,
+        getattr(completion, "finish_reason", None),
+        getattr(completion, "stop_reason", None),
+    )
+
+
+def log_invalid_generation(
+    *,
+    year: int,
+    row_index: int,
+    chunk: DimensionChunk,
+    attempt: int,
+    output: Any,
+    error: Exception,
+) -> None:
+    try:
+        text, finish_reason, stop_reason = completion_details(output)
+    except ValueError as details_error:
+        text = repr(output)
+        finish_reason = None
+        stop_reason = None
+        details = f"; output inspection failed: {details_error}"
+    else:
+        details = ""
+    print(
+        f"INVALID_GENERATION year={year} row={row_index} chunk={chunk.chunk_id} "
+        f"attempt={attempt} finish_reason={finish_reason!r} "
+        f"stop_reason={stop_reason!r} error={error}{details}",
+        file=sys.stderr,
+    )
+    print("--- RAW VLLM RESPONSE BEGIN ---", file=sys.stderr)
+    print(text, file=sys.stderr)
+    print("--- RAW VLLM RESPONSE END ---", file=sys.stderr, flush=True)
+
+
+def retry_conversation(conversation: list[dict[str, str]]) -> list[dict[str, str]]:
+    retry = [dict(message) for message in conversation]
+    retry[-1]["content"] += (
+        "\n\nRETRY: The previous response failed strict validation. Return one complete "
+        "JSON object matching this chunk's supplied schema. Keep fields sparse, use "
+        "each field ID at most once, and omit unsupported dimensions. Do not add "
+        "fields merely to replace rejected ones. Prefer direct or near-direct "
+        "same-construct assignments. A summary_inference is allowed only for a "
+        "non-sensitive, evidence-compatible persona completion. One source is enough "
+        "when it directly constrains the target dimension; broad skill, trait, value, "
+        "preference, or habit inferences require multiple independent sources. Calibrate "
+        "confidence as non-normalized evidence compatibility. High confidence requires "
+        "positive, dimension-relevant support; merely not contradicting the profile is "
+        "insufficient. If multiple "
+        "values are similarly plausible, choose one reasonable value as summary_inference "
+        "without mechanically using catalog order. Omit unsupported proxy-based claims. "
+        "Every evidence string must explicitly cite current respondent source "
+        "columns and their actual answer values; never cite an absent column."
+        f" Keep evidence at or below {MAX_EVIDENCE_CHARS} characters and use only "
+        "source citations plus at most two concise Summary sentences; do not include "
+        "deliberation, self-correction, candidate comparison, or prompt discussion."
+    )
+    return retry
+
+
+# V3 changes chunk granularity and manifest handling, not extraction semantics.
+# Keep prompt, validation, retry, and semantic filtering identical to V2 so the
+# two runtimes cannot silently drift in persona quality policy.
+validate_chunk_payload = _shared_policy.validate_chunk_payload
+build_stackoverflow_prompt = _shared_policy.build_stackoverflow_prompt
+filter_semantic_overreach = _shared_policy.filter_semantic_overreach
+retry_conversation = _shared_policy.retry_conversation
+
+
+def log_salvaged_generation(
+    *,
+    year: int,
+    row_index: int,
+    chunk: DimensionChunk,
+    kept_count: int,
+    issues: list[str],
+) -> None:
+    print(
+        f"SALVAGED_GENERATION year={year} row={row_index} chunk={chunk.chunk_id} "
+        f"kept={kept_count} issues={json.dumps(issues, ensure_ascii=False)}",
+        file=sys.stderr,
+        flush=True,
+    )
+
+
+def log_skipped_generation(
+    *,
+    year: int,
+    row_index: int,
+    chunk: DimensionChunk,
+    error: Exception | None,
+) -> None:
+    print(
+        f"SKIPPED_GENERATION year={year} row={row_index} chunk={chunk.chunk_id} "
+        f"fields=[] error={error}",
+        file=sys.stderr,
+        flush=True,
+    )
+
+
+def parse_generation_with_retry(
+    *,
+    llm: Any,
+    sampling: Any,
+    chunk: DimensionChunk,
+    conversation: list[dict[str, str]],
+    initial_output: Any,
+    year: int,
+    row_index: int,
+    source_answers: dict[str, str],
+) -> list[dict[str, Any]]:
+    output = initial_output
+    last_error: Exception | None = None
+    for attempt in (1, 2):
+        text: str | None = None
+        try:
+            text, _, _ = completion_details(output)
+            return parse_and_validate_generation(text, chunk, source_answers)
+        except ValueError as error:
+            last_error = error
+            log_invalid_generation(
+                year=year,
+                row_index=row_index,
+                chunk=chunk,
+                attempt=attempt,
+                output=output,
+                error=error,
+            )
+            if text is not None:
+                try:
+                    fields, issues = parse_and_salvage_generation(
+                        text, chunk, source_answers
+                    )
+                except ValueError:
+                    pass
+                else:
+                    log_salvaged_generation(
+                        year=year,
+                        row_index=row_index,
+                        chunk=chunk,
+                        kept_count=len(fields),
+                        issues=issues,
+                    )
+                    if fields:
+                        return fields
+            if attempt == 1:
+                retry_outputs = run_chat(
+                    llm, [retry_conversation(conversation)], sampling
+                )
+                if len(retry_outputs) != 1:
+                    raise RuntimeError(
+                        f"vLLM returned {len(retry_outputs)} outputs retrying one prompt"
+                    )
+                output = retry_outputs[0]
+    log_skipped_generation(
+        year=year,
+        row_index=row_index,
+        chunk=chunk,
+        error=last_error,
+    )
+    return []
+
+
+def merge_validated_fields(
+    merged: list[dict[str, Any]], fields: list[dict[str, Any]], seen: set[str]
+) -> None:
+    duplicate_ids = [field["field_id"] for field in fields if field["field_id"] in seen]
+    if duplicate_ids:
+        raise ValueError(
+            f"duplicate field_id across merged chunk outputs: {sorted(set(duplicate_ids))}"
+        )
+    merged.extend(fields)
+    seen.update(field["field_id"] for field in fields)
+
+
+def generate_profile_batch(
+    *,
+    llm: Any,
+    chunks: Sequence[DimensionChunk],
+    sampling_by_chunk: dict[str, Any],
+    profiles: dict[int, str],
+    source_answers_by_row: dict[int, dict[str, str]],
+    year: int,
+) -> dict[int, list[dict[str, Any]]]:
+    """Generate chunk-outer batches so every vLLM call has exactly one schema."""
+    merged = {row_index: [] for row_index in profiles}
+    seen = {row_index: set() for row_index in profiles}
+    row_indexes = list(profiles)
+    for chunk in chunks:
+        try:
+            sampling = sampling_by_chunk[chunk.chunk_id]
+        except KeyError as error:
+            raise RuntimeError(
+                f"missing structured sampling parameters for chunk {chunk.chunk_id}"
+            ) from error
+        conversations = [
+            [
+                {
+                    "role": "user",
+                    "content": build_stackoverflow_prompt(
+                        profiles[row_index], chunk, year
+                    ),
+                }
+            ]
+            for row_index in row_indexes
+        ]
+        outputs = run_chat(llm, conversations, sampling)
+        if len(outputs) != len(row_indexes):
+            raise RuntimeError(
+                f"vLLM returned {len(outputs)} outputs for {len(row_indexes)} prompts "
+                f"in chunk {chunk.chunk_id}"
+            )
+        for row_index, conversation, output in zip(
+            row_indexes, conversations, outputs
+        ):
+            fields = parse_generation_with_retry(
+                llm=llm,
+                sampling=sampling,
+                chunk=chunk,
+                conversation=conversation,
+                initial_output=output,
+                year=year,
+                row_index=row_index,
+                source_answers=source_answers_by_row[row_index],
+            )
+            merge_validated_fields(merged[row_index], fields, seen[row_index])
+    return merged
+
+
+def extract_year(
+    args: argparse.Namespace,
+    work: YearWork,
+    manifest: DimensionManifest,
+    llm: Any,
+    sampling_by_chunk: dict[str, Any],
+) -> None:
+    print(
+        f"year={work.year} pending={work.pending_count:,} "
+        f"chunks/respondent={len(manifest.chunks)} output={work.output_path}",
+        flush=True,
+    )
+    if work.pending_count == 0:
+        return
+    processed = 0
+    started = time.time()
+    if args.overwrite:
+        work.output_path.write_text("", encoding="utf-8")
+    with work.output_path.open("a", encoding="utf-8", newline="") as output_handle:
+        for batch in batches(iter_pending_rows(args, work), args.batch_profiles):
+            profiles = {
+                row_index: assemble_stackoverflow_profile(row, work.year, work.mapping)
+                for row_index, row in batch
+            }
+            source_answers_by_row = {
+                row_index: visible_profile_source_answers(row, profiles[row_index])
+                for row_index, row in batch
+            }
+            merged = generate_profile_batch(
+                llm=llm,
+                chunks=manifest.chunks,
+                sampling_by_chunk=sampling_by_chunk,
+                profiles=profiles,
+                source_answers_by_row=source_answers_by_row,
+                year=work.year,
+            )
+            for row_index, row in batch:
+                deterministic_ai_fields = extract_2025_ai_task_fields(
+                    row, work.year, work.mapping
+                )
+                deterministic_rank_fields = extract_2025_rank_fields(
+                    row, work.year, work.mapping
+                )
+                deterministic_job_fields = extract_2025_job_satisfaction_fields(
+                    row, work.year, work.mapping
+                )
+                deterministic_so_fields = (
+                    extract_2025_stackoverflow_participation_field(
+                        row, work.year, work.mapping
+                    )
+                )
+                deterministic_fields = (
+                    deterministic_ai_fields
+                    + deterministic_rank_fields
+                    + deterministic_job_fields
+                    + deterministic_so_fields
+                )
+                reserved_field_ids = (
+                    STACKOVERFLOW_2025_AI_TASK_FIELD_IDS
+                    if work.year == 2025
+                    else frozenset()
+                ) | frozenset(
+                    field["field_id"]
+                    for field in (
+                        deterministic_rank_fields
+                        + deterministic_job_fields
+                        + deterministic_so_fields
+                    )
+                )
+                final_fields = overlay_deterministic_fields(
+                    merged[row_index],
+                    deterministic_fields,
+                    reserved_field_ids,
+                )
+                final_fields = reconcile_ai_fields(
+                    final_fields, row, work.mapping
+                )
+                final_fields = filter_semantic_overreach(final_fields, row)
+                final_fields = drop_unsupported_fields(final_fields)
+                record = {
+                    "year": work.year,
+                    "row_index": row_index,
+                    "response_id": row.get("ResponseId", ""),
+                    "model": args.model,
+                    "backend": "vllm",
+                    "extractor_version": EXTRACTOR_VERSION,
+                    "manifest_version": manifest.version,
+                    "source_catalog_sha256": manifest.source_catalog_sha256,
+                    "fields": final_fields,
+                }
+                output_handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+            output_handle.flush()
+            os.fsync(output_handle.fileno())
+
+            processed += len(batch)
+            elapsed = max(time.time() - started, 1e-9)
+            rate = processed / elapsed
+            eta = (work.pending_count - processed) / max(rate, 1e-9)
+            print(
+                f"year={work.year} {processed:,}/{work.pending_count:,} "
+                f"({100 * processed / work.pending_count:.1f}%) "
+                f"{rate:.2f} respondents/s ETA={eta / 3600:.1f}h",
+                flush=True,
+            )
+
+
+def dry_run(
+    args: argparse.Namespace,
+    work_items: list[YearWork],
+    manifest: DimensionManifest,
+    schemas: dict[str, dict[str, Any]],
+) -> int:
+    branch_count = 0
+    for chunk in manifest.chunks:
+        schema = schemas[chunk.chunk_id]
+        branches = schema["properties"]["fields"]["items"]["oneOf"]
+        if len(branches) != len(chunk.dimensions):
+            raise ValueError(f"schema branch count mismatch for {chunk.chunk_id}")
+        validate_chunk_payload({"fields": []}, chunk)
+        branch_count += len(branches)
+
+    for work in work_items:
+        try:
+            row_index, row = next(iter_pending_rows(args, work))
+        except StopIteration:
+            print(
+                f"PASS year={work.year} pending=0 output={work.output_path} "
+                "prompt_sample=not-needed"
+            )
+            continue
+        profile = assemble_stackoverflow_profile(row, work.year, work.mapping)
+        for chunk in manifest.chunks:
+            prompt = build_stackoverflow_prompt(profile, chunk, work.year)
+            if profile not in prompt or chunk.chunk_id not in prompt:
+                raise ValueError(f"prompt validation failed for chunk {chunk.chunk_id}")
+        print(
+            f"PASS year={work.year} sample_row={row_index} pending={work.pending_count:,} "
+            f"profile_chars={len(profile):,}"
+        )
+    print(
+        f"DRY RUN PASSED: manifest_version={manifest.version} "
+        f"chunks={len(manifest.chunks)} schema_branches={branch_count} "
+        f"dimensions={branch_count} model_loaded=no"
+    )
+    return 0
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    args = parse_args(argv)
+    manifest = load_dimension_manifest()
+    schemas = {
+        chunk.chunk_id: build_chunk_json_schema(chunk) for chunk in manifest.chunks
+    }
+    work_items = [
+        prepare_year(args, year, manifest) for year in requested_years(args.year)
+    ]
+    if not args.execute:
+        return dry_run(args, work_items, manifest, schemas)
+    if not any(work.pending_count for work in work_items):
+        print("Nothing to do; all selected rows are already complete.")
+        return 0
+
+    validate_cluster_environment(args)
+    print(
+        f"Loading local vLLM model {args.model!r} "
+        f"(tensor_parallel_size={args.tensor_parallel_size}, "
+        f"pipeline_parallel_size={args.pipeline_parallel_size}, "
+        f"quantization={args.quantization})...",
+        flush=True,
+    )
+    started = time.time()
+    llm, sampling_by_chunk = load_vllm(args, schemas)
+    print(f"Model loaded in {time.time() - started:.0f}s", flush=True)
+    for work in work_items:
+        extract_year(args, work, manifest, llm, sampling_by_chunk)
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (FileNotFoundError, RuntimeError, ValueError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        raise SystemExit(1) from error
