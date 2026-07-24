@@ -1056,4 +1056,5 @@ export const HARBOR_CHAT_TASKS: Record<string, string> = {
   recai: HARBOR_TASK_PATHS.chatbot,
   finance_openbb: "application/tasks/chat_openbb",
   medical_assistant: "application/tasks/chat_multi-agent-medical-assistant",
+  anxiety_support: "application/tasks/chat_synthetic-anxiety-support",
 };

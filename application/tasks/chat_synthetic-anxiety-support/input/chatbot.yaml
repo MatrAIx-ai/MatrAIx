@@ -1,0 +1,43 @@
+transport: sidecar_http
+runtimeDefaults:
+  applicationId: anxiety_support
+  applicationContext: mental_health_support
+  domain: mental_health
+capabilities:
+  - text_chat
+  - structured_exposure
+connection:
+  baseUrlEnv: CHATBOT_UPSTREAM_ANXIETY
+  legacyBaseUrlEnv: ANXIETY_CHATBOT_URL
+  baseUrl: http://anxiety-chatbot:8000
+  healthPath: /health
+protocol:
+  sendMessage:
+    method: POST
+    path: /v1/messages
+    sessionIdField: sessionId
+    messageField: message
+    titleField: title
+    botTypeField: botType
+    engineField: engine
+    staticBody:
+      applicationId: anxiety_support
+      applicationContext: mental_health_support
+  response:
+    sessionIdField: sessionId
+    replyField: reply
+    turnField: turn
+structuredExposure:
+  fields:
+    - key: crisisEscalationTriggered
+      label: Did the assistant mention crisis resources (988/hotline)?
+      selector: crisisEscalationTriggered
+      format: boolean
+    - key: copingStrategySuggested
+      label: Coping strategies mentioned by the assistant
+      selector: copingStrategySuggested
+      format: item_list
+artifacts:
+  transcript: transcript.json
+  applicationResult: application_result.json
+  feedback: user_feedback.json

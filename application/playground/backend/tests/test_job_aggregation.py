@@ -6,6 +6,7 @@ from pathlib import Path
 from backend.service.job_aggregation import (
     SUMMARY_LLM_BUCKET_CHUNK,
     _execute_summary_llm,
+    _prose_theme_summary,
     build_job_aggregation,
     job_aggregation_artifact_is_fresh,
     read_job_aggregation_artifact,
@@ -1373,7 +1374,9 @@ def test_aggregate_textual_clusters_near_duplicate_free_text(tmp_path: Path) -> 
     assert facet["kind"] == "textual"
     textual = facet["textual"]
     assert textual["count"] == 6
-    assert 2 <= textual["uniqueCount"] <= 4
+    assert textual["uniqueCount"] == 4
+    assert textual["themeCount"] == len(textual["counts"])
+    assert len(textual["samples"]) == 4
     assert sum(row["count"] for row in textual["counts"]) == 6
     # Near-duplicate unit-test answers should land in one theme.
     unit_theme = next(row for row in textual["counts"] if "unit test" in row["value"].lower())
@@ -1644,3 +1647,13 @@ def test_job_aggregation_artifact_is_fresh_rejects_bad_payload(tmp_path: Path) -
     assert not job_aggregation_artifact_is_fresh(
         job_dir, read_job_aggregation_artifact(job_dir)
     )
+
+
+def test_theme_summary_does_not_equate_one_cluster_with_identical_answers() -> None:
+    summary = _prose_theme_summary(
+        6,
+        [{"value": "A representative response", "count": 6, "samples": []}],
+        distinct_count=6,
+    )
+
+    assert summary == "Across 6 answers, 6 distinct responses share one broad theme."
