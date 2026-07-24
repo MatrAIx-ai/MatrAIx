@@ -132,6 +132,16 @@ def shared_base_url(spec: SharedSidecarSpec) -> str:
     default = "http://127.0.0.1:{}".format(spec.host_port)
     if spec.application_id in {"recai", "acme_support_mcp", "acme_support_api"}:
         return os.environ.get(spec.primary_env, "").strip() or default
+    if spec.application_id == "prescreening_assistant":
+        # Scoped envs only, matching the backend health probe. The generic
+        # CHATBOT_API_URL belongs to recai/meal-planning, so honouring it here
+        # would send chat traffic to a different sidecar than the one the
+        # health card reports as ready.
+        return (
+            os.environ.get(spec.primary_env, "").strip()
+            or os.environ.get(spec.legacy_env or "", "").strip()
+            or default
+        )
     return _sidecar_base_url(spec.primary_env, spec.legacy_env or "", default)
 
 

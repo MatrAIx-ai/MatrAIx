@@ -119,10 +119,13 @@ def _application_for(application_id: str) -> Any:
         return HTTPChatbotApplication(
             application_id="prescreening_assistant",
             default_context="clinical_trial_prescreening",
-            base_url=_sidecar_base_url(
-                "CHATBOT_UPSTREAM_PRESCREENING",
-                "PRESCREENING_CHATBOT_URL",
-                "http://127.0.0.1:8906",
+            # Scoped envs only -- never the generic CHATBOT_API_URL, which
+            # belongs to recai/meal-planning and would point this client at a
+            # different sidecar than the health probe reports.
+            base_url=(
+                os.environ.get("CHATBOT_UPSTREAM_PRESCREENING", "").strip()
+                or os.environ.get("PRESCREENING_CHATBOT_URL", "").strip()
+                or "http://127.0.0.1:8906"
             ),
         )
     raise ValueError("unsupported direct application: {}".format(application_id))
