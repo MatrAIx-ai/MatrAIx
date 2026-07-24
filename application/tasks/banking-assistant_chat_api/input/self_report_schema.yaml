@@ -1,0 +1,26 @@
+artifactName: user_feedback.json
+instructions: |
+  Reflect honestly as the persona after chatting with the banking assistant.
+  Judge the experience based on what the assistant said, whether your banking
+  errand was actually handled, and how confident you feel about the outcome.
+fields:
+  - key: needConstraintSatisfaction
+    prompt: How well did the assistant handle your core banking errand?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: personalPreferenceSatisfaction
+    prompt: How well did the interaction match how you personally like to handle banking?
+    kind: enum
+    choices: [yes, partially, no]
+  - key: overallExperienceRating
+    prompt: Overall, how would you rate the experience from 1 to 10?
+    kind: integer
+    minimum: 1
+    maximum: 10
+  - key: reason
+    prompt: Briefly explain the rating in your own voice.
+  - key: askedUsefulClarificationQuestions
+    prompt: Did the assistant ask useful clarification questions?
+    kind: boolean
+  - key: clarifyingNotes
+    prompt: Which clarification or confirmation prompts helped, or why they did not.
