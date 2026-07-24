@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_style"
+      },
+      "distributions": [
+        {
+          "id": "q_style.response_by_segment",
+          "facetKey": "response",
+          "title": "Purchase style"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_trigger"
+      },
+      "distributions": [
+        {
+          "id": "q_trigger.response_by_segment",
+          "facetKey": "response",
+          "title": "Impulse trigger"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_temptation"
+      },
+      "distributions": [
+        {
+          "id": "q_temptation.response_by_segment",
+          "facetKey": "response",
+          "title": "Impulse pull"
+        }
+      ]
+    }
+  ]
+}

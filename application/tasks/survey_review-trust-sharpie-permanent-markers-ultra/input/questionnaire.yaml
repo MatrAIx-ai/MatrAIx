@@ -1,0 +1,41 @@
+schemaVersion: "1.0"
+id: review_trust_v1
+title: "Review Trust Survey — Sharpie Permanent Markers"
+description: "How much the persona relies on and trusts this product's ratings and reviews. This edition asks about Sharpie Permanent Markers from Sharpie."
+questions:
+  - id: q_trust_reviews
+    prompt: "I trust the star rating and reviews shown for the Sharpie Permanent Markers."
+    type: likert
+    construct: review_trust
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_review_weight
+    prompt: "How much would reviews influence your decision here?"
+    type: single_choice
+    construct: review_influence
+    required: true
+    options:
+      - id: "decisive"
+        label: "They would decide it."
+      - id: "major"
+        label: "A major factor."
+      - id: "minor"
+        label: "A minor factor."
+      - id: "none"
+        label: "I would ignore them."
+  - id: q_review_check
+    prompt: "What would you look at first in the reviews?"
+    type: single_choice
+    construct: review_focus
+    required: true
+    askRationale: true
+    options:
+      - id: "negative"
+        label: "The negative reviews."
+      - id: "recent"
+        label: "The most recent reviews."
+      - id: "count"
+        label: "The total number of reviews."
+      - id: "average"
+        label: "Just the average score."

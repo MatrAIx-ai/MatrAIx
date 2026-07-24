@@ -1,0 +1,41 @@
+schemaVersion: "1.0"
+id: repurchase_v1
+title: "Repurchase & Retention Survey — (Pack of 2) Replacement Remote Control Only"
+description: "Whether the persona would buy this product (or brand) again. This edition asks about (Pack of 2) Replacement Remote Control Only from Acoyer."
+questions:
+  - id: q_rebuy
+    prompt: "Would you buy the (Pack of 2) Replacement Remote Control again?"
+    type: single_choice
+    construct: repurchase_intent
+    required: true
+    askRationale: true
+    options:
+      - id: "definitely"
+        label: "Definitely."
+      - id: "maybe"
+        label: "Maybe, depending on price."
+      - id: "probably_not"
+        label: "Probably not."
+      - id: "never"
+        label: "Never again."
+  - id: q_brand_loyalty
+    prompt: "I would look to Acoyer first next time I need something similar."
+    type: likert
+    construct: brand_loyalty
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_switch_trigger
+    prompt: "What would most likely make you switch away?"
+    type: single_choice
+    construct: switch_trigger
+    required: true
+    options:
+      - id: "price_hike"
+        label: "A price increase."
+      - id: "better_option"
+        label: "A clearly better option."
+      - id: "bad_experience"
+        label: "A bad experience."
+      - id: "nothing"
+        label: "Nothing — I would stay."

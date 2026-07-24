@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_warranty_matters"
+      },
+      "distributions": [
+        {
+          "id": "q_warranty_matters.response_by_segment",
+          "facetKey": "response",
+          "title": "Warranty importance"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_warranty_length"
+      },
+      "distributions": [
+        {
+          "id": "q_warranty_length.response_by_segment",
+          "facetKey": "response",
+          "title": "Expected warranty length"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_support_channel"
+      },
+      "distributions": [
+        {
+          "id": "q_support_channel.response_by_segment",
+          "facetKey": "response",
+          "title": "Support factor"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_wait"
+      },
+      "distributions": [
+        {
+          "id": "q_wait.response_by_segment",
+          "facetKey": "response",
+          "title": "Acceptable delivery wait"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_ship_cost"
+      },
+      "distributions": [
+        {
+          "id": "q_ship_cost.response_by_segment",
+          "facetKey": "response",
+          "title": "Shipping cost attitude"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_speed_matters"
+      },
+      "distributions": [
+        {
+          "id": "q_speed_matters.response_by_segment",
+          "facetKey": "response",
+          "title": "Speed importance"
+        }
+      ]
+    }
+  ]
+}

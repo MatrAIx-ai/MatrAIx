@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_purchase_intent"
+      },
+      "distributions": [
+        {
+          "id": "q_purchase_intent.response_by_segment",
+          "facetKey": "response",
+          "title": "Purchase intent"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_price_fairness"
+      },
+      "distributions": [
+        {
+          "id": "q_price_fairness.response_by_segment",
+          "facetKey": "response",
+          "title": "Price fairness"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_overall_likelihood"
+      },
+      "distributions": [
+        {
+          "id": "q_overall_likelihood.response_by_segment",
+          "facetKey": "response",
+          "title": "Purchase likelihood"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+schemaVersion: "1.0"
+id: brand_perception_v1
+title: "Brand Perception Survey — GUUSMART Type C Charger 2-Pack 25W Type"
+description: "How the persona perceives the brand behind this product on trust, quality, and prestige. This edition asks about GUUSMART Type C Charger 2-Pack 25W Type from GUUSMART."
+questions:
+  - id: q_trust
+    prompt: "I trust GUUSMART to deliver what it promises."
+    type: likert
+    construct: brand_trust
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_quality
+    prompt: "I associate GUUSMART with high quality."
+    type: likert
+    construct: brand_quality
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_prestige
+    prompt: "Owning a product from GUUSMART says something positive about me."
+    type: likert
+    construct: brand_prestige
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_familiarity
+    prompt: "How familiar are you with GUUSMART?"
+    type: single_choice
+    construct: brand_familiarity
+    required: true
+    options:
+      - id: "very"
+        label: "Very familiar — I know it well."
+      - id: "somewhat"
+        label: "Somewhat familiar."
+      - id: "heard"
+        label: "I have only heard of it."
+      - id: "never"
+        label: "I have never heard of it before."
+  - id: q_association
+    prompt: "What word or feeling comes to mind first when you think of GUUSMART?"
+    type: free_text
+    construct: brand_association
+    required: true

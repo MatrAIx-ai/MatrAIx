@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_attention"
+      },
+      "distributions": [
+        {
+          "id": "q_attention.response_by_segment",
+          "facetKey": "response",
+          "title": "Ad attention"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_action"
+      },
+      "distributions": [
+        {
+          "id": "q_action.response_by_segment",
+          "facetKey": "response",
+          "title": "Post-ad action"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_believability"
+      },
+      "distributions": [
+        {
+          "id": "q_believability.response_by_segment",
+          "facetKey": "response",
+          "title": "Claim believability"
+        }
+      ]
+    }
+  ]
+}

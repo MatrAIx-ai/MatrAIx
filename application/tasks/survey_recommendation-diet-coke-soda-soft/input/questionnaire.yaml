@@ -1,0 +1,39 @@
+schemaVersion: "1.0"
+id: recommendation_nps_v1
+title: "Recommendation (NPS) Survey — Diet Coke Soda Soft Drink Cans"
+description: "How likely the persona is to recommend this product to others. This edition asks about Diet Coke Soda Soft Drink Cans from Diet Coke."
+questions:
+  - id: q_nps
+    prompt: "How likely are you to recommend the Diet Coke Soda Soft Drink Cans to a friend or colleague? (0 = not at all, 10 = extremely likely)"
+    type: likert
+    construct: net_promoter
+    required: true
+    minValue: 0
+    maxValue: 10
+  - id: q_who
+    prompt: "Who would you most likely recommend it to?"
+    type: single_choice
+    construct: recommend_audience
+    required: true
+    options:
+      - id: "anyone"
+        label: "Almost anyone."
+      - id: "specific"
+        label: "Only people with a specific need."
+      - id: "noone"
+        label: "No one right now."
+  - id: q_reason_type
+    prompt: "What would drive a recommendation most?"
+    type: single_choice
+    construct: recommend_driver
+    required: true
+    askRationale: true
+    options:
+      - id: "value"
+        label: "Great value for money."
+      - id: "quality"
+        label: "Strong quality."
+      - id: "experience"
+        label: "A good overall experience."
+      - id: "nothing"
+        label: "Nothing — I would not recommend it."

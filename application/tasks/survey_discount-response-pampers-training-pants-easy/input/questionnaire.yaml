@@ -1,0 +1,43 @@
+schemaVersion: "1.0"
+id: discount_response_v1
+title: "Discount Responsiveness Survey — Pampers Training Pants"
+description: "How the persona responds to discounts and promotions on this product. This edition asks about Pampers Training Pants from Pampers."
+questions:
+  - id: q_discount_needed
+    prompt: "What discount would it take to make you buy this?"
+    type: single_choice
+    construct: discount_threshold
+    required: true
+    options:
+      - id: "none"
+        label: "None — I would buy at full price."
+      - id: "ten"
+        label: "Around 10% off."
+      - id: "twentyfive"
+        label: "Around 25% off."
+      - id: "half"
+        label: "Around 50% off."
+      - id: "nothing_works"
+        label: "No discount would make me buy it."
+  - id: q_deal_seeking
+    prompt: "I usually wait for a sale before buying products like this."
+    type: likert
+    construct: deal_seeking
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_promo_type
+    prompt: "Which promotion would appeal to you most?"
+    type: single_choice
+    construct: promo_preference
+    required: true
+    askRationale: true
+    options:
+      - id: "percent_off"
+        label: "A percentage discount."
+      - id: "bundle"
+        label: "A bundle deal."
+      - id: "free_ship"
+        label: "Free shipping."
+      - id: "gift"
+        label: "A free gift with purchase."

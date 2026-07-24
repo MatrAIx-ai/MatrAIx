@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_nps"
+      },
+      "distributions": [
+        {
+          "id": "q_nps.response_by_segment",
+          "facetKey": "response",
+          "title": "Recommendation likelihood (NPS)"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_reason_type"
+      },
+      "distributions": [
+        {
+          "id": "q_reason_type.response_by_segment",
+          "facetKey": "response",
+          "title": "Recommendation driver"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_who"
+      },
+      "distributions": [
+        {
+          "id": "q_who.response_by_segment",
+          "facetKey": "response",
+          "title": "Recommendation audience"
+        }
+      ]
+    }
+  ]
+}

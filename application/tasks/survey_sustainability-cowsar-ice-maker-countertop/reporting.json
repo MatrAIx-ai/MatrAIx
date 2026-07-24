@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_eco_matters"
+      },
+      "distributions": [
+        {
+          "id": "q_eco_matters.response_by_segment",
+          "facetKey": "response",
+          "title": "Eco importance"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_pay_green"
+      },
+      "distributions": [
+        {
+          "id": "q_pay_green.response_by_segment",
+          "facetKey": "response",
+          "title": "Green premium willingness"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_eco_factor"
+      },
+      "distributions": [
+        {
+          "id": "q_eco_factor.response_by_segment",
+          "facetKey": "response",
+          "title": "Top eco factor"
+        }
+      ]
+    }
+  ]
+}

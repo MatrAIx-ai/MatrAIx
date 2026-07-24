@@ -1,0 +1,79 @@
+schemaVersion: "1.0"
+id: purchase_intent_v1
+title: "Purchase Intent Survey — Medium Hass Avocado"
+description: "Purchase intent, price fairness, and timing for a retail product whose listing recently changed. This edition asks about Medium Hass Avocado from Fresh Produce (Brands May Vary)."
+questions:
+  - id: q_purchase_intent
+    prompt: "At the current price, how would you describe your intent to buy the Medium Hass Avocado?"
+    type: single_choice
+    construct: purchase_intent
+    required: true
+    askRationale: true
+    options:
+      - id: "definitely_buy"
+        label: "I would definitely buy it at this price."
+      - id: "probably_buy"
+        label: "I would probably buy it, though the price gives me some pause."
+      - id: "undecided"
+        label: "I am genuinely undecided and would need more convincing."
+      - id: "probably_not"
+        label: "I would probably not buy it at this price."
+      - id: "definitely_not"
+        label: "I would definitely not buy it at this price."
+  - id: q_price_fairness
+    prompt: "How fair does the current price feel for what you get?"
+    type: single_choice
+    construct: price_fairness
+    required: true
+    options:
+      - id: "very_fair"
+        label: "Very fair — a good deal for the value."
+      - id: "somewhat_fair"
+        label: "Somewhat fair — roughly what I would expect."
+      - id: "borderline"
+        label: "Borderline — I would have to think about it."
+      - id: "somewhat_overpriced"
+        label: "Somewhat overpriced for what it offers."
+      - id: "very_overpriced"
+        label: "Very overpriced — well above what it is worth."
+  - id: q_alternative_seeking
+    prompt: "Before buying, would you actively look for a cheaper or better alternative?"
+    type: single_choice
+    construct: alternative_seeking
+    required: true
+    options:
+      - id: "yes"
+        label: "Yes, I would shop around before deciding."
+      - id: "no"
+        label: "No, I would buy this one without comparing."
+  - id: q_purchase_timing
+    prompt: "When would you realistically make this purchase?"
+    type: single_choice
+    construct: purchase_timing
+    required: true
+    options:
+      - id: "buy_now"
+        label: "Now — I would buy it at the current terms."
+      - id: "wait_for_deal"
+        label: "Later — I would wait for a discount or better timing."
+      - id: "not_buying"
+        label: "Never — I would not buy it at all."
+  - id: q_necessity
+    prompt: "How much do you actually need the Medium Hass Avocado?"
+    type: single_choice
+    construct: necessity_level
+    required: true
+    options:
+      - id: "essential"
+        label: "Essential — I need it and would prioritize buying it."
+      - id: "nice_to_have"
+        label: "Nice to have — I want it but could easily go without."
+      - id: "not_needed"
+        label: "Not needed — this is not something I would seek out."
+  - id: q_overall_likelihood
+    prompt: "Overall, how likely are you to purchase the Medium Hass Avocado in the next month?"
+    type: likert
+    construct: purchase_likelihood
+    required: true
+    minValue: 1
+    maxValue: 5

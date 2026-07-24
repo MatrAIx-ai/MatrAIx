@@ -1,0 +1,43 @@
+schemaVersion: "1.0"
+id: perceived_quality_v1
+title: "Perceived Quality Survey — LISEN Cell Phone Stand Phone Holder"
+description: "The persona's judgment of this product's quality from its listing. This edition asks about LISEN Cell Phone Stand Phone Holder from LISEN."
+questions:
+  - id: q_well_made
+    prompt: "This product looks well made."
+    type: likert
+    construct: build_quality
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_durable
+    prompt: "I expect the LISEN Cell Phone Stand Phone Holder to last a long time."
+    type: likert
+    construct: durability
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_reliable
+    prompt: "I expect the LISEN Cell Phone Stand Phone Holder to work reliably."
+    type: likert
+    construct: reliability
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_quality_signal
+    prompt: "What signals quality to you most here?"
+    type: single_choice
+    construct: quality_signal
+    required: true
+    askRationale: true
+    options:
+      - id: "brand"
+        label: "The brand."
+      - id: "reviews"
+        label: "The reviews and rating."
+      - id: "price"
+        label: "The price."
+      - id: "specs"
+        label: "The specifications."
+      - id: "nothing"
+        label: "Nothing stands out."

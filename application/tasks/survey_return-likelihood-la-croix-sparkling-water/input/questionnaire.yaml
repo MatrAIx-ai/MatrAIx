@@ -1,0 +1,45 @@
+schemaVersion: "1.0"
+id: return_likelihood_v1
+title: "Return Likelihood Survey — La Croix Sparkling Water"
+description: "How likely the persona would be to return this product after buying it. This edition asks about La Croix Sparkling Water from La Croix."
+questions:
+  - id: q_return_risk
+    prompt: "There is a real chance I would end up returning the La Croix Sparkling Water."
+    type: likert
+    construct: return_risk
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_return_reason
+    prompt: "If you returned it, what would be the most likely reason?"
+    type: single_choice
+    construct: return_reason
+    required: true
+    options:
+      - id: "not_as_described"
+        label: "It was not as described."
+      - id: "quality"
+        label: "Quality was disappointing."
+      - id: "changed_mind"
+        label: "I changed my mind."
+      - id: "better_deal"
+        label: "I found a better deal."
+      - id: "would_not"
+        label: "I would not return it."
+  - id: q_return_policy_weight
+    prompt: "How much does a generous return policy affect your decision to buy?"
+    type: single_choice
+    construct: return_policy_weight
+    required: true
+    options:
+      - id: "a_lot"
+        label: "A lot — it is a dealbreaker."
+      - id: "some"
+        label: "Somewhat."
+      - id: "little"
+        label: "Very little."
+  - id: q_return_note
+    prompt: "What would reassure you enough to keep it rather than return it?"
+    type: free_text
+    construct: return_reassurance
+    required: true

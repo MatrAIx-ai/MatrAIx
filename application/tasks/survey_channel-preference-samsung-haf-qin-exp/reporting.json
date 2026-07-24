@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_channel"
+      },
+      "distributions": [
+        {
+          "id": "q_channel.response_by_segment",
+          "facetKey": "response",
+          "title": "Preferred purchase channel"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_in_person_value"
+      },
+      "distributions": [
+        {
+          "id": "q_in_person_value.response_by_segment",
+          "facetKey": "response",
+          "title": "In-person shopping value"
+        }
+      ]
+    }
+  ]
+}

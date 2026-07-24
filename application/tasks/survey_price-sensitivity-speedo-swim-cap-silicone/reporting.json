@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_threshold"
+      },
+      "distributions": [
+        {
+          "id": "q_threshold.response_by_segment",
+          "facetKey": "response",
+          "title": "Price threshold"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_price_vs_quality"
+      },
+      "distributions": [
+        {
+          "id": "q_price_vs_quality.response_by_segment",
+          "facetKey": "response",
+          "title": "Price vs quality tradeoff"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_too_expensive"
+      },
+      "distributions": [
+        {
+          "id": "q_too_expensive.response_by_segment",
+          "facetKey": "response",
+          "title": "Price pain"
+        }
+      ]
+    }
+  ]
+}
