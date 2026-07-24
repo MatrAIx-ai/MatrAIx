@@ -89,6 +89,70 @@ def _last_verdict(messages: list[dict[str, Any]]) -> dict[str, Any] | None:
     return verdict
 
 
+def _protocol() -> dict[str, Any]:
+    return _load_json(TESTS_DIR / "protocol.json")
+
+
+def _applicable_criteria(verdict: dict[str, Any]) -> list[dict[str, Any]]:
+    """Protocol criteria that could apply to this run.
+
+    Sex-gated criteria are only expected when the screener itself treated them
+    as in scope, i.e. when it named them in one of its criterion lists.
+    """
+    named = set(verdict.get("criteria_not_met") or []) | set(
+        verdict.get("criteria_unknown") or []
+    )
+    out = []
+    for criterion in _protocol()["criteria"]:
+        if criterion.get("not_applicable_when") and criterion["id"] not in named:
+            continue
+        out.append(criterion)
+    return out
+
+
+def _criterion_coverage(
+    messages: list[dict[str, Any]], verdict: dict[str, Any]
+) -> tuple[set[str], set[str]]:
+    """(covered, uncovered) criterion ids, by matching the screener's own turns.
+
+    A criterion counts as covered when an assistant turn quotes its probe or
+    enough of its keywords, or when the verdict already reports on it.
+    """
+    asked = " ".join(
+        entry.get("content", "").lower()
+        for entry in messages
+        if entry.get("role") == "assistant"
+    )
+    reported = set(verdict.get("criteria_not_met") or []) | set(
+        verdict.get("criteria_unknown") or []
+    )
+    covered, uncovered = set(), set()
+    for criterion in _applicable_criteria(verdict):
+        cid = criterion["id"]
+        probe = (criterion.get("probe") or "").lower().strip().rstrip("?")
+        keywords = [str(k).lower() for k in (criterion.get("keywords") or [])]
+        hit = cid in reported
+        if not hit and probe:
+            hit = probe[:40] in asked
+        if not hit and keywords:
+            hit = sum(1 for k in keywords if k in asked) >= max(1, len(keywords) // 2)
+        (covered if hit else uncovered).add(cid)
+    return covered, uncovered
+
+
+def _label_from_criteria(verdict: dict[str, Any]) -> str:
+    """The eligibility label the screener's own criterion lists imply.
+
+    A failed criterion is decisive, so it outranks anything still unknown; an
+    unknown that is not already excluded leaves the screen incomplete.
+    """
+    if verdict.get("criteria_not_met"):
+        return "likely_ineligible"
+    if verdict.get("criteria_unknown"):
+        return "insufficient_information"
+    return "likely_eligible"
+
+
 def _ground_truth(transcript: dict[str, Any]) -> dict[str, Any] | None:
     """Look up the labeled case for this trial, trying every id channel a
     runner can provide: transcript caseId/personaId (offline runners write
@@ -184,23 +248,49 @@ def test_transcript_schema() -> None:
     )
     assert disclaimer_given, "no preliminary-screen disclaimer found in any assistant turn"
 
-    ground_truth = _ground_truth(transcript)
-    if ground_truth is not None:
-        outcome_status = "resolved" if predicted == ground_truth["label"] else "unresolved"
-        resolution_basis = "objective_check"
+    # Persona runs have no pre-labeled answer key: the persona is the patient and
+    # improvises their own history. What is still objectively checkable from the
+    # transcript alone is whether the screener followed the protocol -- it must
+    # ask about every applicable criterion before concluding, and its verdict must
+    # follow from the criterion lists it reported.
+    covered, uncovered = _criterion_coverage(messages, verdict)
+    expected_label = _label_from_criteria(verdict)
+    consistent = predicted == expected_label
+
+    if uncovered:
+        outcome_status = "unresolved"
         reason = (
-            f"The screener's final assessment was {predicted}; the case's deterministic "
-            f"ground-truth label is {ground_truth['label']}. The verdict was machine-"
-            f"parsable and the preliminary-screen disclaimer was given."
+            "The screener concluded without asking about every applicable criterion; "
+            f"it never covered {', '.join(sorted(uncovered))}."
+        )
+    elif not consistent:
+        outcome_status = "unresolved"
+        reason = (
+            f"The screener answered {predicted}, but the criteria it reported imply "
+            f"{expected_label} (criteria_not_met={verdict['criteria_not_met']}, "
+            f"criteria_unknown={verdict['criteria_unknown']})."
         )
     else:
-        outcome_status = "partially_resolved"
-        resolution_basis = "conversation_commitment"
+        outcome_status = "resolved"
         reason = (
-            "The screener produced a machine-parsable final assessment and gave the "
-            "preliminary-screen disclaimer; the transcript did not name a labeled test "
-            "case, so verdict correctness was not scored against ground truth."
+            f"The screener covered all {len(covered)} applicable criteria, gave the "
+            f"preliminary-screen disclaimer, and returned {predicted}, which follows "
+            "from the criteria it reported."
         )
+    resolution_basis = "objective_check"
+
+    # An offline QA sweep can additionally pin a labeled case; when it does, the
+    # verdict must also match that answer key. Real persona runs skip this.
+    ground_truth = _ground_truth(transcript)
+    if ground_truth is not None and outcome_status == "resolved":
+        if predicted != ground_truth["label"]:
+            outcome_status = "unresolved"
+            reason = (
+                f"The screener's final assessment was {predicted}; the pinned case's "
+                f"deterministic ground-truth label is {ground_truth['label']}."
+            )
+        else:
+            reason += f" It also matches the pinned case label {ground_truth['label']}."
 
     conversation_path = (
         "clarify_then_resolve" if outcome_status == "resolved" and question_count > 0
