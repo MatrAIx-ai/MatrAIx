@@ -95,6 +95,17 @@ _SIDECAR_SPECS: dict[str, SidecarSpec] = {
         primary_env="CHATBOT_API_URL",
         legacy_env=None,
     ),
+    "deeptutor": SidecarSpec(
+        application_id="deeptutor",
+        compose_dir=(
+            "environment/task-environments/application/chatbot-api-sidecar_deeptutor"
+        ),
+        service_name="tutor-adapter",
+        build_context="tutor-adapter",
+        host_port=8906,
+        primary_env="CHATBOT_UPSTREAM_DEEPTUTOR",
+        legacy_env=None,
+    ),
 }
 
 
