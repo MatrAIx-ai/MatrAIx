@@ -2,26 +2,23 @@
 
 ## Your situation
 
-You are responsible for recommending a Cloudflare **Network & CDN** plan for a
-realistic public-facing website. Read the scenario brief in `input/context.md`,
-then make the recommendation as yourself.
+You are responsible for recommending a Cloudflare **Network & CDN** plan for
+your organization's public-facing website. Read `input/context.md`, then make
+your recommendation.
 
 ## Your goal
 
 Use the live Cloudflare pricing page to compare the four Network & CDN plans
-and recommend the **one plan you would most realistically choose** for the
-organization context you are considering.
+and recommend the **one plan you would choose** for your organization.
 
 ## Constraints on your behavior
 
-- Use only information visible on the live Cloudflare pricing page.
-- Use the organization type or size included in the information provided about
-  you. The organization context may describe either a size band or a sector,
-  such as academia or the public sector; do not force those categories into
-  one size ordering.
+- Use only plan information visible on the live Cloudflare pricing page.
+- Use the organization type or size in your background. Your organization may
+  be identified by either its size or its sector, such as academia or the
+  public sector. Do not treat sectors as size categories.
 - Do not invent quantitative traffic, compliance, security, support, uptime,
-  or other requirements that are not included in the information provided
-  about you or on the page.
+  or other requirements that are not stated in your background or on the page.
 - Do not log in, create an account, sign up, purchase, check out, contact
   sales, contact anyone, or visit a linked plan-registration page.
 
@@ -43,7 +40,7 @@ Save your recommendation to
   "basis_primary": "<price|quality|features|convenience|taste|trust|familiarity|novelty|fit|other>",
   "basis_secondary": "<optional second value from the same enumeration>",
   "exploration_style": "<compared_multiple|deep_research>",
-  "reason": "<why this plan fits your realistic organization context and priorities, grounded in the page>",
+  "reason": "<why this plan fits your organization and priorities, grounded in the page>",
   "task_pricing_category": "Network & CDN",
   "task_source_url": "https://www.cloudflare.com/plans/",
   "task_price_text": "<selected plan price and billing text as shown>",
@@ -54,7 +51,7 @@ Save your recommendation to
       "decision_subject_label": "<Free|Pro|Business|Contract>",
       "task_price_text": "<price and billing text as shown>",
       "task_target_text": "<audience description as shown>",
-      "task_relevance_note": "<why this was a plausible or implausible option for the organization you are considering>"
+      "task_relevance_note": "<why this plan suits or does not suit your organization>"
     }
   ]
 }
@@ -74,11 +71,10 @@ Save your recommendation to
   `basis_primary`.
 - Because comparison is required, use `compared_multiple` or `deep_research`
   for `exploration_style`.
-- Keep `reason` specific to your realistic organization context, priorities,
-  and visible differences among the plans.
+- Keep `reason` specific to your organization, priorities, and visible
+  differences among the plans.
 - Do not invent quantitative traffic, compliance, security, support, or uptime
-  requirements that are not included in the information provided about you or
-  on the page.
+  requirements that are not stated in your background or on the page.
 - Finish after saving the completed JSON file.
 
 ## Success judgment

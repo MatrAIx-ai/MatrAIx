@@ -2,7 +2,7 @@
 
 MatrAIx **Playwright** web task on the live public Cloudflare pricing page. The
 participant compares all four **Network & CDN** plans and recommends the one
-that best fits the organization context in the information provided to them.
+that best fits their organization.
 
 - Start URL: https://www.cloudflare.com/plans/
 - Output: `/app/output/cloudflare_plan_comparison.json`

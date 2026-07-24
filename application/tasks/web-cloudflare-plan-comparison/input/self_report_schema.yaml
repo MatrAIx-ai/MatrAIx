@@ -2,14 +2,14 @@ artifactName: user_feedback.json
 instructions: |
   Reflect honestly after recommending a Cloudflare plan.
   Base your answers on the plan you selected, the alternatives you compared,
-  and how confident you feel that the recommendation fits your realistic context.
+  and how confident you feel that the recommendation fits your organization.
 fields:
   - key: needConstraintSatisfaction
-    prompt: How well did the selected plan satisfy the organization's practical needs or constraints?
+    prompt: How well did the selected plan satisfy your organization's practical needs or constraints?
     kind: enum
     choices: ["yes", "partially", "no"]
   - key: personalPreferenceSatisfaction
-    prompt: How well did the recommendation match your own priorities and spending posture?
+    prompt: How well did the recommendation match your priorities and approach to spending?
     kind: enum
     choices: ["yes", "partially", "no"]
   - key: overallExperienceRating
