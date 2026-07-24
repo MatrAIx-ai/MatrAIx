@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_giftable"
+      },
+      "distributions": [
+        {
+          "id": "q_giftable.response_by_segment",
+          "facetKey": "response",
+          "title": "Gift suitability"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_recipient"
+      },
+      "distributions": [
+        {
+          "id": "q_recipient.response_by_segment",
+          "facetKey": "response",
+          "title": "Likely gift recipient"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_gift_price_ok"
+      },
+      "distributions": [
+        {
+          "id": "q_gift_price_ok.response_by_segment",
+          "facetKey": "response",
+          "title": "Gift price fit"
+        }
+      ]
+    }
+  ]
+}

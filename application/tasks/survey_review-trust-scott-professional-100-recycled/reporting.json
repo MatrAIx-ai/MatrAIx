@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_trust_reviews"
+      },
+      "distributions": [
+        {
+          "id": "q_trust_reviews.response_by_segment",
+          "facetKey": "response",
+          "title": "Review trust"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_review_weight"
+      },
+      "distributions": [
+        {
+          "id": "q_review_weight.response_by_segment",
+          "facetKey": "response",
+          "title": "Review influence"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_review_check"
+      },
+      "distributions": [
+        {
+          "id": "q_review_check.response_by_segment",
+          "facetKey": "response",
+          "title": "Review focus"
+        }
+      ]
+    }
+  ]
+}

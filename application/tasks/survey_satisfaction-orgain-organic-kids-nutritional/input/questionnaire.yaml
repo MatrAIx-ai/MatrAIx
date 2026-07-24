@@ -1,0 +1,40 @@
+schemaVersion: "1.0"
+id: satisfaction_v1
+title: "Product Satisfaction Survey — Orgain Organic Kids Nutritional Dairy Protein Shakes"
+description: "Anticipated satisfaction with this product across several dimensions. This edition asks about Orgain Organic Kids Nutritional Dairy Protein Shakes from Orgain."
+questions:
+  - id: q_overall_sat
+    prompt: "Overall, I expect to be satisfied with the Orgain Organic Kids Nutritional Dairy Protein."
+    type: likert
+    construct: overall_satisfaction
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_expectation
+    prompt: "This product would meet my expectations."
+    type: likert
+    construct: expectation_match
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_value_sat
+    prompt: "I expect to feel good about what I paid."
+    type: likert
+    construct: value_satisfaction
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_best_worst
+    prompt: "Which is more likely to shape your satisfaction?"
+    type: single_choice
+    construct: satisfaction_driver
+    required: true
+    options:
+      - id: "performance"
+        label: "How well it performs."
+      - id: "price"
+        label: "Whether the price felt worth it."
+      - id: "durability"
+        label: "How long it lasts."
+      - id: "support"
+        label: "The seller / brand support."

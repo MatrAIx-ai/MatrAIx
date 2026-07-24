@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_worth_it"
+      },
+      "distributions": [
+        {
+          "id": "q_worth_it.response_by_segment",
+          "facetKey": "response",
+          "title": "Worth the price"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_value_tier"
+      },
+      "distributions": [
+        {
+          "id": "q_value_tier.response_by_segment",
+          "facetKey": "response",
+          "title": "Value tier"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_value_driver"
+      },
+      "distributions": [
+        {
+          "id": "q_value_driver.response_by_segment",
+          "facetKey": "response",
+          "title": "Value driver"
+        }
+      ]
+    }
+  ]
+}

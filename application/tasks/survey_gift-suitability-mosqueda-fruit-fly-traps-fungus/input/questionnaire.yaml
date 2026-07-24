@@ -1,0 +1,46 @@
+schemaVersion: "1.0"
+id: gift_suitability_v1
+title: "Gift Suitability Survey — Fruit Fly Traps Fungus Gnat Traps Yellow"
+description: "Whether the persona would consider this product as a gift. This edition asks about Fruit Fly Traps Fungus Gnat Traps Yellow from Mosqueda."
+questions:
+  - id: q_giftable
+    prompt: "Would this make a good gift?"
+    type: single_choice
+    construct: gift_fit
+    required: true
+    askRationale: true
+    options:
+      - id: "great"
+        label: "Yes — a great gift."
+      - id: "depends"
+        label: "It depends on the person."
+      - id: "no"
+        label: "No — not a good gift."
+  - id: q_recipient
+    prompt: "Who would this suit best as a gift?"
+    type: single_choice
+    construct: gift_recipient
+    required: true
+    options:
+      - id: "family"
+        label: "Family."
+      - id: "friend"
+        label: "A friend."
+      - id: "colleague"
+        label: "A colleague."
+      - id: "self"
+        label: "Honestly, myself."
+      - id: "noone"
+        label: "No one I can think of."
+  - id: q_gift_price_ok
+    prompt: "The price feels appropriate for a gift."
+    type: likert
+    construct: gift_price_fit
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_gift_occasion
+    prompt: "What occasion, if any, would you buy this for?"
+    type: free_text
+    construct: gift_occasion
+    required: true

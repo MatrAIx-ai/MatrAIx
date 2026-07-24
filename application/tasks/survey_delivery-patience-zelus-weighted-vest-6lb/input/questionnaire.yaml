@@ -1,0 +1,39 @@
+schemaVersion: "1.0"
+id: delivery_patience_v1
+title: "Delivery Patience Survey — ZELUS Weighted Vest"
+description: "How much delivery speed and shipping terms matter to the persona for this product. This edition asks about ZELUS Weighted Vest from ZELUS."
+questions:
+  - id: q_wait
+    prompt: "How long would you be willing to wait for delivery?"
+    type: single_choice
+    construct: delivery_patience
+    required: true
+    options:
+      - id: "same_day"
+        label: "Same or next day only."
+      - id: "few_days"
+        label: "A few days is fine."
+      - id: "week"
+        label: "Up to a week."
+      - id: "weeks"
+        label: "A couple of weeks is fine."
+  - id: q_speed_matters
+    prompt: "Fast delivery is important to me for the ZELUS Weighted Vest."
+    type: likert
+    construct: speed_importance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_ship_cost
+    prompt: "How do you feel about paying for shipping here?"
+    type: single_choice
+    construct: shipping_cost_attitude
+    required: true
+    askRationale: true
+    options:
+      - id: "free_only"
+        label: "I only buy when shipping is free."
+      - id: "small_ok"
+        label: "A small fee is fine."
+      - id: "dont_care"
+        label: "I do not mind paying for shipping."

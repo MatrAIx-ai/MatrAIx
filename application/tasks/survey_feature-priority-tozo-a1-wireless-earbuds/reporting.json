@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_single_most"
+      },
+      "distributions": [
+        {
+          "id": "q_single_most.response_by_segment",
+          "facetKey": "response",
+          "title": "Top purchase factor"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_top_factors"
+      },
+      "distributions": [
+        {
+          "id": "q_top_factors.response_by_segment",
+          "facetKey": "response",
+          "title": "Purchase factors"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_specs_confidence"
+      },
+      "distributions": [
+        {
+          "id": "q_specs_confidence.response_by_segment",
+          "facetKey": "response",
+          "title": "Spec confidence"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_trust"
+      },
+      "distributions": [
+        {
+          "id": "q_trust.response_by_segment",
+          "facetKey": "response",
+          "title": "Brand trust"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_familiarity"
+      },
+      "distributions": [
+        {
+          "id": "q_familiarity.response_by_segment",
+          "facetKey": "response",
+          "title": "Brand familiarity"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_quality"
+      },
+      "distributions": [
+        {
+          "id": "q_quality.response_by_segment",
+          "facetKey": "response",
+          "title": "Perceived quality"
+        }
+      ]
+    }
+  ]
+}

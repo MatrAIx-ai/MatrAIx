@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_discount_needed"
+      },
+      "distributions": [
+        {
+          "id": "q_discount_needed.response_by_segment",
+          "facetKey": "response",
+          "title": "Discount needed to buy"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_promo_type"
+      },
+      "distributions": [
+        {
+          "id": "q_promo_type.response_by_segment",
+          "facetKey": "response",
+          "title": "Preferred promo type"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_deal_seeking"
+      },
+      "distributions": [
+        {
+          "id": "q_deal_seeking.response_by_segment",
+          "facetKey": "response",
+          "title": "Deal seeking"
+        }
+      ]
+    }
+  ]
+}

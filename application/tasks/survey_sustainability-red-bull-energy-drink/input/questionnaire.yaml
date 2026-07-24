@@ -1,0 +1,40 @@
+schemaVersion: "1.0"
+id: sustainability_v1
+title: "Sustainability Concern Survey — Red Bull Energy Drink with 80mg Caffeine"
+description: "How much environmental and ethical factors shape the persona's view of this product. This edition asks about Red Bull Energy Drink with 80mg Caffeine from Red Bull."
+questions:
+  - id: q_eco_matters
+    prompt: "A product's environmental impact affects whether I buy it."
+    type: likert
+    construct: eco_importance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_pay_green
+    prompt: "I would pay more for a more sustainable version of the Red Bull Energy Drink."
+    type: likert
+    construct: green_premium
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_eco_factor
+    prompt: "Which sustainability factor matters most to you here?"
+    type: single_choice
+    construct: eco_factor
+    required: true
+    options:
+      - id: "materials"
+        label: "Materials used."
+      - id: "packaging"
+        label: "Packaging waste."
+      - id: "longevity"
+        label: "How long it lasts."
+      - id: "ethics"
+        label: "Ethical manufacturing."
+      - id: "none"
+        label: "None of these matter to me."
+  - id: q_eco_note
+    prompt: "What, if anything, would make you feel better about the Red Bull Energy Drink's impact?"
+    type: free_text
+    construct: eco_reassurance
+    required: true

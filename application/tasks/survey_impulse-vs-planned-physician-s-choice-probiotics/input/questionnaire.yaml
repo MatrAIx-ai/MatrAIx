@@ -1,0 +1,41 @@
+schemaVersion: "1.0"
+id: impulse_planned_v1
+title: "Impulse vs Planned Purchase Survey — Physician's CHOICE Probiotics for Women"
+description: "Whether buying this product would be an impulse or a planned decision for the persona. This edition asks about Physician's CHOICE Probiotics for Women from Physician's CHOICE."
+questions:
+  - id: q_style
+    prompt: "Buying this would most likely be..."
+    type: single_choice
+    construct: purchase_style
+    required: true
+    askRationale: true
+    options:
+      - id: "impulse"
+        label: "An impulse — I would just grab it."
+      - id: "quick"
+        label: "A quick decision after a glance."
+      - id: "considered"
+        label: "A considered decision over days."
+      - id: "researched"
+        label: "A heavily researched decision."
+  - id: q_temptation
+    prompt: "This product tempts me to buy it right now."
+    type: likert
+    construct: impulse_pull
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_trigger
+    prompt: "What would most likely trigger an impulse buy here?"
+    type: single_choice
+    construct: impulse_trigger
+    required: true
+    options:
+      - id: "discount"
+        label: "A limited-time discount."
+      - id: "low_price"
+        label: "An already low price."
+      - id: "desire"
+        label: "Simply wanting it."
+      - id: "none"
+        label: "Nothing — I would not impulse buy this."

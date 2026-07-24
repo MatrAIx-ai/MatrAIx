@@ -1,0 +1,50 @@
+schemaVersion: "1.0"
+id: feature_priority_v1
+title: "Feature Prioritization Survey — BENGOO G9000 Stereo Gaming Headset"
+description: "Which aspects of this product matter most to the persona. This edition asks about BENGOO G9000 Stereo Gaming Headset from BENGOO."
+questions:
+  - id: q_top_factors
+    prompt: "Which of these matter most to you for the BENGOO G9000 Stereo Gaming Headset? (Choose all that apply.)"
+    type: multi_choice
+    construct: purchase_factors
+    required: true
+    options:
+      - id: "price"
+        label: "Price"
+      - id: "quality"
+        label: "Build quality / durability"
+      - id: "brand"
+        label: "Brand reputation"
+      - id: "features"
+        label: "Features / specs"
+      - id: "reviews"
+        label: "Customer reviews"
+      - id: "appearance"
+        label: "Appearance / design"
+      - id: "convenience"
+        label: "Convenience / availability"
+  - id: q_single_most
+    prompt: "If you had to pick just one, what matters most?"
+    type: single_choice
+    construct: top_factor
+    required: true
+    options:
+      - id: "price"
+        label: "Price"
+      - id: "quality"
+        label: "Quality"
+      - id: "brand"
+        label: "Brand"
+      - id: "features"
+        label: "Features"
+      - id: "reviews"
+        label: "Reviews"
+      - id: "appearance"
+        label: "Appearance"
+  - id: q_specs_confidence
+    prompt: "I feel I understand the BENGOO G9000 Stereo Gaming Headset's features well enough to judge it."
+    type: likert
+    construct: spec_confidence
+    required: true
+    minValue: 1
+    maxValue: 5

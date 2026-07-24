@@ -1,0 +1,48 @@
+schemaVersion: "1.0"
+id: warranty_importance_v1
+title: "Warranty & Support Importance Survey — Koolpte 70mm 500mm Telescope"
+description: "How much warranty and after-sales support influence the persona for this product. This edition asks about Koolpte 70mm 500mm Telescope from Koolpte."
+questions:
+  - id: q_warranty_matters
+    prompt: "A solid warranty is important for a product like this."
+    type: likert
+    construct: warranty_importance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_warranty_length
+    prompt: "What warranty would make you comfortable buying?"
+    type: single_choice
+    construct: warranty_expectation
+    required: true
+    options:
+      - id: "none"
+        label: "None needed."
+      - id: "short"
+        label: "At least a few months."
+      - id: "year"
+        label: "At least a year."
+      - id: "multi_year"
+        label: "Multiple years."
+  - id: q_support_trust
+    prompt: "I would trust Koolpte to help if something went wrong."
+    type: likert
+    construct: support_trust
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_support_channel
+    prompt: "What after-sales factor reassures you most?"
+    type: single_choice
+    construct: support_factor
+    required: true
+    askRationale: true
+    options:
+      - id: "returns"
+        label: "Easy returns."
+      - id: "warranty"
+        label: "A long warranty."
+      - id: "service"
+        label: "Responsive customer service."
+      - id: "reviews"
+        label: "Others' support experiences."

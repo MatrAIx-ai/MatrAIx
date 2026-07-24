@@ -1,0 +1,48 @@
+schemaVersion: "1.0"
+id: value_for_money_v1
+title: "Value-for-Money Survey — Igloo Premium Self-Cleaning Countertop Ice Maker Machine"
+description: "Whether the persona sees this product as worth its price. This edition asks about Igloo Premium Self-Cleaning Countertop Ice Maker Machine from Igloo."
+questions:
+  - id: q_worth_it
+    prompt: "This product is worth its current price."
+    type: likert
+    construct: worth_price
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_value_tier
+    prompt: "How would you describe the value here?"
+    type: single_choice
+    construct: value_tier
+    required: true
+    askRationale: true
+    options:
+      - id: "great"
+        label: "Great value."
+      - id: "fair"
+        label: "Fair value."
+      - id: "meh"
+        label: "So-so value."
+      - id: "poor"
+        label: "Poor value."
+  - id: q_pay_premium
+    prompt: "I would pay a bit more for this if it meant better quality."
+    type: likert
+    construct: premium_tolerance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_value_driver
+    prompt: "Value here comes mostly from..."
+    type: single_choice
+    construct: value_driver
+    required: true
+    options:
+      - id: "price"
+        label: "A low price."
+      - id: "quality"
+        label: "High quality."
+      - id: "durability"
+        label: "Long-term durability."
+      - id: "brand"
+        label: "Brand assurance."

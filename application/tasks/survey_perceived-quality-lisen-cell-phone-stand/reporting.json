@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_well_made"
+      },
+      "distributions": [
+        {
+          "id": "q_well_made.response_by_segment",
+          "facetKey": "response",
+          "title": "Build quality"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_quality_signal"
+      },
+      "distributions": [
+        {
+          "id": "q_quality_signal.response_by_segment",
+          "facetKey": "response",
+          "title": "Primary quality signal"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_durable"
+      },
+      "distributions": [
+        {
+          "id": "q_durable.response_by_segment",
+          "facetKey": "response",
+          "title": "Durability"
+        }
+      ]
+    }
+  ]
+}

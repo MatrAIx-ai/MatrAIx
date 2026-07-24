@@ -1,0 +1,43 @@
+schemaVersion: "1.0"
+id: competitor_comparison_v1
+title: "Competitor Comparison Survey — Greenies Veterinarian-Recommended Adult Natural Dental Dog Treats"
+description: "How this product stacks up against alternatives in the persona's mind. This edition asks about Greenies Veterinarian-Recommended Adult Natural Dental Dog Treats from Greenies."
+questions:
+  - id: q_vs_alternatives
+    prompt: "Compared to alternatives you know, the Greenies Veterinarian-Recommended Adult Natural Dental Dog is..."
+    type: single_choice
+    construct: relative_standing
+    required: true
+    options:
+      - id: "best"
+        label: "One of the best options."
+      - id: "above_avg"
+        label: "Above average."
+      - id: "average"
+        label: "About average."
+      - id: "below_avg"
+        label: "Below average."
+      - id: "unsure"
+        label: "I do not know the alternatives well enough."
+  - id: q_would_compare
+    prompt: "Before buying, I would compare this against at least two other products."
+    type: likert
+    construct: comparison_effort
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_decider
+    prompt: "What would tip you toward this one over a competitor?"
+    type: single_choice
+    construct: comparison_decider
+    required: true
+    askRationale: true
+    options:
+      - id: "price"
+        label: "A lower price."
+      - id: "features"
+        label: "Better features."
+      - id: "brand"
+        label: "A more trusted brand."
+      - id: "reviews"
+        label: "Better reviews."

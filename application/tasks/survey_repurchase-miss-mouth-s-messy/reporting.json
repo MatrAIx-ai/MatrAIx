@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_rebuy"
+      },
+      "distributions": [
+        {
+          "id": "q_rebuy.response_by_segment",
+          "facetKey": "response",
+          "title": "Repurchase intent"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_switch_trigger"
+      },
+      "distributions": [
+        {
+          "id": "q_switch_trigger.response_by_segment",
+          "facetKey": "response",
+          "title": "Switch trigger"
+        }
+      ]
+    },
+    {
+      "match": {
+        "contextType": "question_response",
+        "key": "question.q_brand_loyalty"
+      },
+      "distributions": [
+        {
+          "id": "q_brand_loyalty.response_by_segment",
+          "facetKey": "response",
+          "title": "Brand loyalty"
+        }
+      ]
+    }
+  ]
+}
