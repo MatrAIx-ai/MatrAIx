@@ -49,6 +49,15 @@ def test_list_web_eval_tasks_includes_example_web_tasks():
     assert "web-cua-bookshop-choice" in ids
 
 
+def test_list_web_eval_tasks_includes_ikea_room_planner():
+    tasks = {task.id: task for task in list_web_eval_tasks()}
+    ikea = tasks.get("web-cua-ikea-room-planner")
+    assert ikea is not None
+    assert ikea.output_artifact == "room_plan.json"
+    assert ikea.submission_profile == "room_plan"
+    assert ikea.site_url.startswith("https://www.ikea.com/")
+
+
 def test_list_os_app_eval_tasks_includes_computer_use_only():
     tasks = list_os_app_eval_tasks()
     ids = {task.id for task in tasks}

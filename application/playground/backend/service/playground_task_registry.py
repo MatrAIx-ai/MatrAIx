@@ -107,6 +107,12 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
         output_artifact="book_interest.json",
         submission_profile="book_interest",
     ),
+    "web-cua-ikea-room-planner": PlaygroundTaskEntry(
+        application_type="web",
+        site_name="IKEA Room Planner",
+        site_url="https://www.ikea.com/us/en/home-design/room/?roomType=generic",
+        output_artifact="room_plan.json",
+        submission_profile="room_plan",
     "web-portfoliovisualizer_backtest-allocation": PlaygroundTaskEntry(
         application_type="web",
         site_name="Portfolio Visualizer",
