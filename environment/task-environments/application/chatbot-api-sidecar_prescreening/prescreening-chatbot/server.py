@@ -136,6 +136,20 @@ def _time_unit(text: str) -> str | None:
     return match.group(1).lower() if match else None
 
 
+# A unit only qualifies the reply's number when it is attached to it ("8 years
+# ago"). One that merely appears elsewhere belongs to a different phrase -- in
+# "I just turned 61 last month" the month is when the birthday fell, not the
+# unit of 61 -- and applying it would rescale the answer into a wrong verdict.
+_ATTACHED_UNIT_RE = re.compile(
+    r"\d+(?:\.\d+)?\s*-?\s*(hour|day|week|month|year)s?\b", re.IGNORECASE
+)
+
+
+def _reply_time_unit(text: str) -> str | None:
+    match = _ATTACHED_UNIT_RE.search(text)
+    return match.group(1).lower() if match else None
+
+
 def _numeric_answer(criterion, message):
     """Compare a single number in the reply against the criterion's stated
     bounds, converting compatible time/rate units. Returns 'yes' (condition
@@ -158,7 +172,7 @@ def _numeric_answer(criterion, message):
     crit_rate = _RATE_RE.search(span) or _RATE_RE.search(criterion["text"])
     reply_rate = _RATE_RE.search(message)
     crit_unit = _time_unit(span)
-    reply_unit = _time_unit(_RATE_RE.sub(" ", message))
+    reply_unit = _reply_time_unit(_RATE_RE.sub(" ", message))
 
     if crit_rate and reply_rate:
         # frequencies: convert the reply onto the criterion's per-<unit> basis
