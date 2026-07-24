@@ -730,6 +730,9 @@ class BaseEnvironment(ABC):
     async def stop(self, delete: bool):
         """Stops the environment and optionally deletes it."""
 
+    async def prepare_artifact_collection(self) -> None:
+        """Finalize in-sandbox outputs before Harbor downloads task artifacts."""
+
     async def prepare_logs_for_host(self) -> None:
         """Fix log file permissions so the host process can read them.
 
